@@ -17,6 +17,7 @@ Quelltextkonventionen:
         von außen durch getter - und setterMethoden drauf zugreifen
 
     Zustandsvariablen immer _blablabla benennen
+	Formen immer Fblablabla benennen
 
     „Neue“ Worte innerhalb eines Bezeichners beginnen mit einem großen Buchstaben
 
