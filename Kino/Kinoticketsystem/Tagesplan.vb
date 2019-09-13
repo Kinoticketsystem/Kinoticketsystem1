@@ -35,8 +35,3 @@ Public Class Tagesplan
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 End Class
-
-Public Class Vorstellung
-    Implements IVorstellung
-
-End Class
