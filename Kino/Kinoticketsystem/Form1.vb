@@ -19,6 +19,10 @@ End Interface
 Public Interface Vorstellung
 
 End Interface
+
+Public Class Kinosaal
+
+End Class
 Public Interface Testinterface
     Sub Testprozedur(ByRef a As Integer)
     Function TestFunktion(ByVal b As Integer)
