@@ -21,7 +21,9 @@ Quelltextkonventionen:
 
     „Neue“ Worte innerhalb eines Bezeichners beginnen mit einem großen Buchstaben
 
-    Klassen, Methoden und Variablen sollten „sprechend“ benannt werden, etwa mit ganzen Begriffen oder Kurzsätzen, die die Funktion des Bezeichneten deutlich machen. Methoden sollten stets danach benannt werden, was sie liefern oder was sie machen.
+    Klassen, Methoden und Variablen sollten „sprechend“ benannt werden, etwa mit ganzen Begriffen oder Kurzsätzen, die die 
+    Funktion des Bezeichneten deutlich machen. Methoden sollten stets danach benannt werden, was sie liefern oder was sie 
+    machen.
 
     defensieves Programmieren:
         erst möglichst einfach und schlicht, dann verbessern
