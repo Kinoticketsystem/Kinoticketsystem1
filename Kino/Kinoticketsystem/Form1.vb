@@ -4,17 +4,31 @@ Public Class FTagesplan
     Private _Montag As Tagesplan
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AnfangstagUndDatümerFestlegen()
+        'PositionDerDatümerFestlegen()
+        'PositionDerFilmButtonsFestlegen()
+        GrößeDerFilmButtonsFestlegen()
+    End Sub
+
+    'Private Sub PositionDerFilmButtonsFestlegen()
+    'End Sub
+
+    'Private Sub PositionDerDatümerFestlegen()
+    'End Sub
+
+    Private Sub AnfangstagUndDatümerFestlegen()
         Dim thisDate As Date = Today
         Dim Wochentag As Integer '1 = Sonntag, 2 = Montag, ...
         Wochentag = Weekday(thisDate)
 
+        'Die nächsten 6 Tage
         Dim ZweiterTag As Date = DateAdd(DateInterval.Day, 1.0, thisDate)
         Dim DritterTag As Date = DateAdd(DateInterval.Day, 2, thisDate)
         Dim VierterTag As Date = DateAdd(DateInterval.Day, 3, thisDate)
         Dim FünfterTag As Date = DateAdd(DateInterval.Day, 4, thisDate)
         Dim SechsterTag As Date = DateAdd(DateInterval.Day, 5, thisDate)
         Dim SiebterTag As Date = DateAdd(DateInterval.Day, 6, thisDate)
-
+        'Die Woche beginnt mit dem heutigen Tagen
         Select Case Wochentag
             Case 2 'Montag ist der erste Tag
                 chbMontag.Text = chbMontag.Text & thisDate.ToString(" dd.MM.")
@@ -73,6 +87,74 @@ Public Class FTagesplan
                 chbSamstag.Text = "Freitag" & SechsterTag.ToString(" dd.MM.")
                 chbSonntag.Text = "Samstag" & SiebterTag.ToString(" dd.MM.")
         End Select
+    End Sub
+
+    Private Sub GrößeDerFilmButtonsFestlegen()
+        'Größe der Spaltenüberschriften
+        Dim A As Size = chbMontag.Size
+        Dim b As Size = chbDienstag.Size
+        Dim c As Size = chbMittwoch.Size
+        Dim d As Size = chbDonnerstag.Size
+        Dim es As Size = chbFreitag.Size
+        Dim f As Size = chbSamstag.Size
+        Dim g As Size = chbSonntag.Size
+
+        'Größe der Filme bestimmen
+        Button1.Size = New Size(A.Width, 26)
+        Button2.Size = New Size(A.Width, 26)
+        Button3.Size = New Size(A.Width, 26)
+        Button4.Size = New Size(A.Width, 26)
+        Button5.Size = New Size(A.Width, 26)
+        Button6.Size = New Size(A.Width, 26)
+        Button7.Size = New Size(A.Width, 26)
+
+        Button8.Size = New Size(b.Width, 26)
+        Button9.Size = New Size(b.Width, 26)
+        Button10.Size = New Size(b.Width, 26)
+        Button11.Size = New Size(b.Width, 26)
+        Button12.Size = New Size(b.Width, 26)
+        Button13.Size = New Size(b.Width, 26)
+        Button14.Size = New Size(b.Width, 26)
+
+        Button15.Size = New Size(c.Width, 26)
+        Button16.Size = New Size(c.Width, 26)
+        Button17.Size = New Size(c.Width, 26)
+        Button18.Size = New Size(c.Width, 26)
+        Button19.Size = New Size(c.Width, 26)
+        Button20.Size = New Size(c.Width, 26)
+        Button21.Size = New Size(c.Width, 26)
+
+        Button22.Size = New Size(d.Width, 26)
+        Button23.Size = New Size(d.Width, 26)
+        Button24.Size = New Size(d.Width, 26)
+        Button25.Size = New Size(d.Width, 26)
+        Button26.Size = New Size(d.Width, 26)
+        Button27.Size = New Size(d.Width, 26)
+        Button28.Size = New Size(d.Width, 26)
+
+        Button29.Size = New Size(es.Width, 26)
+        Button30.Size = New Size(es.Width, 26)
+        Button31.Size = New Size(es.Width, 26)
+        Button32.Size = New Size(es.Width, 26)
+        Button33.Size = New Size(es.Width, 26)
+        Button34.Size = New Size(es.Width, 26)
+        Button35.Size = New Size(es.Width, 26)
+
+        Button36.Size = New Size(f.Width, 26)
+        Button37.Size = New Size(f.Width, 26)
+        Button38.Size = New Size(f.Width, 26)
+        Button39.Size = New Size(f.Width, 26)
+        Button40.Size = New Size(f.Width, 26)
+        Button41.Size = New Size(f.Width, 26)
+        Button42.Size = New Size(f.Width, 26)
+
+        Button43.Size = New Size(g.Width, 26)
+        Button44.Size = New Size(g.Width, 26)
+        Button45.Size = New Size(g.Width, 26)
+        Button46.Size = New Size(g.Width, 26)
+        Button47.Size = New Size(g.Width, 26)
+        Button48.Size = New Size(g.Width, 26)
+        Button49.Size = New Size(g.Width, 26)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cmdTagesPlanErstellen.Click
