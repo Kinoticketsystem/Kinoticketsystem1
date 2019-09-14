@@ -5,7 +5,7 @@ Public Class FTagesplan
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnfangstagUndDatümerFestlegen()
-        'PositionDerDatümerFestlegen()
+        PositionDerDatümerFestlegen()
         'PositionDerFilmButtonsFestlegen()
         GrößeDerFilmButtonsFestlegen()
     End Sub
@@ -13,8 +13,23 @@ Public Class FTagesplan
     'Private Sub PositionDerFilmButtonsFestlegen()
     'End Sub
 
-    'Private Sub PositionDerDatümerFestlegen()
-    'End Sub
+    Private Sub PositionDerDatümerFestlegen()
+        Dim A As Integer = chbMontag.Size.Width
+        Dim b As Integer = chbDienstag.Size.Width
+        Dim c As Integer = chbMittwoch.Size.Width
+        Dim d As Integer = chbDonnerstag.Size.Width
+        Dim e As Integer = chbFreitag.Size.Width
+        Dim f As Integer = chbSamstag.Size.Width
+        Dim g As Integer = chbSonntag.Size.Width
+        'x-Koordinate festlegen
+        chbDienstag.Left = 45 + 150 + A
+        chbMittwoch.Left = 150 + A + (45 * 2) + b
+        chbDonnerstag.Left = 150 + A + (45 * 3) + b + c
+        chbFreitag.Left = 150 + A + (45 * 4) + b + c + d
+        chbSamstag.Left = 150 + A + (45 * 5) + b + c + d + e
+        chbSonntag.Left = 150 + A + (45 * 6) + b + c + d + e + f
+        Me.Size = New Size(150 + A + (45 * 7) + b + c + d + e + f + g, Me.Size.Height)
+    End Sub
 
     Private Sub AnfangstagUndDatümerFestlegen()
         Dim thisDate As Date = Today
@@ -155,10 +170,6 @@ Public Class FTagesplan
         Button47.Size = New Size(g.Width, 26)
         Button48.Size = New Size(g.Width, 26)
         Button49.Size = New Size(g.Width, 26)
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cmdTagesPlanErstellen.Click
-
     End Sub
 
     Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
