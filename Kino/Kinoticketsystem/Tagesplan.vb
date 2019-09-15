@@ -34,4 +34,15 @@ Public Class Tagesplan
         _Vorstellungen(AnzahlFilmeProTag) = Nothing
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
+
+    Public Function getFilme(Tag As Integer) As ITagesplan Implements ITagesplan.getFilme
+
+        'Muss noch programmiert werden
+        Return New Tagesplan()
+    End Function
+
+    Public Function getFilm(Tag As Integer, Position As Integer) As Film Implements ITagesplan.getFilm
+        'Muss noch programmiert werden
+        Return New Film
+    End Function
 End Class

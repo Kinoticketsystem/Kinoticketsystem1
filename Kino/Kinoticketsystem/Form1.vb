@@ -17,7 +17,7 @@ Public Class FTagesplan
 
         'Anzeigen
 
-        Button1.Text = _Montag.
+        ' Button1.Text = _Montag.
     End Sub
 
     Private Sub PositionDerFilmButtonsFestlegen()
@@ -262,8 +262,8 @@ Public Interface ITagesplan
     'wird ans Ende hinzugefügt
     Sub FilmHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub FilmEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
-    Function getFilme(ByVal Tag As Integer)
-    Function getFilm(ByVal Tag As Integer, ByVal Position As Integer)
+    Function getFilme(ByVal Tag As Integer) As ITagesplan
+    Function getFilm(ByVal Tag As Integer, ByVal Position As Integer) As Film
 End Interface
 
 Public Interface IVorstellung
