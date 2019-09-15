@@ -1,17 +1,82 @@
 ﻿Imports Kinoticketsystem
 
 Public Class FTagesplan
-    Private _Montag As Tagesplan
+    Private _Montag As ITagesplan
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnfangstagUndDatümerFestlegen()
         PositionDerDatümerFestlegen()
-        'PositionDerFilmButtonsFestlegen()
+        PositionDerFilmButtonsFestlegen()
         GrößeDerFilmButtonsFestlegen()
+        WochenplanAbrufenUndAusgeben()
+
     End Sub
 
-    'Private Sub PositionDerFilmButtonsFestlegen()
-    'End Sub
+    Private Sub WochenplanAbrufenUndAusgeben()
+        'Auslesen aus einer externen Textdatei
+
+        'Anzeigen
+
+        Button1.Text = _Montag.
+    End Sub
+
+    Private Sub PositionDerFilmButtonsFestlegen()
+        Button1.Left = chbMontag.Left
+        Button2.Left = chbMontag.Left
+        Button3.Left = chbMontag.Left
+        Button4.Left = chbMontag.Left
+        Button5.Left = chbMontag.Left
+        Button6.Left = chbMontag.Left
+        Button7.Left = chbMontag.Left
+
+        Button8.Left = chbDienstag.Left
+        Button9.Left = chbDienstag.Left
+        Button10.Left = chbDienstag.Left
+        Button11.Left = chbDienstag.Left
+        Button12.Left = chbDienstag.Left
+        Button13.Left = chbDienstag.Left
+        Button14.Left = chbDienstag.Left
+
+        Button15.Left = chbMittwoch.Left
+        Button16.Left = chbMittwoch.Left
+        Button17.Left = chbMittwoch.Left
+        Button18.Left = chbMittwoch.Left
+        Button19.Left = chbMittwoch.Left
+        Button20.Left = chbMittwoch.Left
+        Button21.Left = chbMittwoch.Left
+
+        Button22.Left = chbDonnerstag.Left
+        Button23.Left = chbDonnerstag.Left
+        Button24.Left = chbDonnerstag.Left
+        Button25.Left = chbDonnerstag.Left
+        Button26.Left = chbDonnerstag.Left
+        Button27.Left = chbDonnerstag.Left
+        Button28.Left = chbDonnerstag.Left
+
+        Button29.Left = chbFreitag.Left
+        Button30.Left = chbFreitag.Left
+        Button31.Left = chbFreitag.Left
+        Button32.Left = chbFreitag.Left
+        Button33.Left = chbFreitag.Left
+        Button34.Left = chbFreitag.Left
+        Button35.Left = chbFreitag.Left
+
+        Button36.Left = chbSamstag.Left
+        Button37.Left = chbSamstag.Left
+        Button38.Left = chbSamstag.Left
+        Button39.Left = chbSamstag.Left
+        Button40.Left = chbSamstag.Left
+        Button41.Left = chbSamstag.Left
+        Button42.Left = chbSamstag.Left
+
+        Button43.Left = chbSonntag.Left
+        Button44.Left = chbSonntag.Left
+        Button45.Left = chbSonntag.Left
+        Button46.Left = chbSonntag.Left
+        Button47.Left = chbSonntag.Left
+        Button48.Left = chbSonntag.Left
+        Button49.Left = chbSonntag.Left
+    End Sub
 
     Private Sub PositionDerDatümerFestlegen()
         Dim A As Integer = chbMontag.Size.Width
@@ -197,6 +262,8 @@ Public Interface ITagesplan
     'wird ans Ende hinzugefügt
     Sub FilmHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub FilmEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
+    Function getFilme(ByVal Tag As Integer)
+    Function getFilm(ByVal Tag As Integer, ByVal Position As Integer)
 End Interface
 
 Public Interface IVorstellung
