@@ -98,7 +98,66 @@ Public Class FTagesplan
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den ersten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
-
+        Select Case _zweiterTag.getAnzahlFilme
+            Case 1
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Hide()
+                Button10.Hide()
+                Button11.Hide()
+                Button12.Hide()
+                Button13.Hide()
+                Button14.Hide()
+            Case 2
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button10.Hide()
+                Button11.Hide()
+                Button12.Hide()
+                Button13.Hide()
+                Button14.Hide()
+            Case 3
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button10.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button11.Hide()
+                Button12.Hide()
+                Button13.Hide()
+                Button14.Hide()
+            Case 4
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button10.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button11.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button12.Hide()
+                Button13.Hide()
+                Button14.Hide()
+            Case 5
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button10.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button11.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button12.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button13.Hide()
+                Button14.Hide()
+            Case 6
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button10.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button11.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button12.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button13.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button14.Hide()
+            Case 7
+                Button8.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button9.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button10.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button11.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button12.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button13.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button14.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+            Case Else
+                Throw New Exception("Die Anzahl der gespeicherten Filme für den zweiten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
+        End Select
     End Sub
 
 
