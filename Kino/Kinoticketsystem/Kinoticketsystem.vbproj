@@ -96,6 +96,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Tagesplan.vb" />
+    <Compile Include="Testklasse.vb" />
     <Compile Include="Vorstellung.vb" />
   </ItemGroup>
   <ItemGroup>
