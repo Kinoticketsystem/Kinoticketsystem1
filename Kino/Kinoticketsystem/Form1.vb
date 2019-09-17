@@ -1,21 +1,33 @@
 ﻿Imports Kinoticketsystem
 
 Public Class FTagesplan
-    Private _Montag As ITagesplan
+    Private _ersterTag As ITagesplan
+    Private _zweiterTag As ITagesplan
+    Private _dritterTag As ITagesplan
+    Private _vierterTag As ITagesplan
+    Private _fünfterTag As ITagesplan
+    Private _sechsterTag As ITagesplan
+    Private _siebterTag As ITagesplan
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        AnfangstagUndDatümerFestlegen()
-        PositionDerDatümerFestlegen()
-        PositionDerFilmButtonsFestlegenX()
-        WochenplanAbrufenUndAusgeben()
-        GrößeDerFilmButtonsFestlegen()
-
+        AnfangstagUndDatümerFestlegen() 'fertig
+        PositionDerDatümerFestlegen()   'fertig
+        PositionDerFilmButtonsFestlegenX()  'fertig
+        WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik)
+        GrößeDerFilmButtonsFestlegen()  'muss noch Y-Größe gemacht werden
+        ' PositionDerFilmButtonsFestlegenY()  'muss noch gemacht werden
 
     End Sub
 
     Private Sub WochenplanAbrufenUndAusgeben()
         'Auslesen aus einer externen Textdatei
-
+        '_ersterTag
+        '_zweiterTag
+        '_dritterTag
+        '_vierterTag
+        '_fünfterTag
+        '_sechsterTag
+        '_siebterTag
         'Anzeigen
 
         ' Button1.Text = _Montag.
@@ -24,7 +36,68 @@ Public Class FTagesplan
     End Sub
 
     Private Sub PositionDerFilmButtonsFestlegenY()
-        _Montag.getFilm(1, 1) '.getAnfangszeit
+        'Wenn die Zahl der Filme pro Tag variiert
+        'erster Tag
+        Select Case _ersterTag.getAnzahlFilme
+            Case 1
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Hide()
+                Button3.Hide()
+                Button4.Hide()
+                Button5.Hide()
+                Button6.Hide()
+                Button7.Hide()
+            Case 2
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Top = (_ersterTag.getFilm(2).getAnfangszeit()) / 3 + 70
+                Button3.Hide()
+                Button4.Hide()
+                Button5.Hide()
+                Button6.Hide()
+                Button7.Hide()
+            Case 3
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Top = (_ersterTag.getFilm(2).getAnfangszeit()) / 3 + 70
+                Button3.Top = (_ersterTag.getFilm(3).getAnfangszeit()) / 3 + 70
+                Button4.Hide()
+                Button5.Hide()
+                Button6.Hide()
+                Button7.Hide()
+            Case 4
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Top = (_ersterTag.getFilm(2).getAnfangszeit()) / 3 + 70
+                Button3.Top = (_ersterTag.getFilm(3).getAnfangszeit()) / 3 + 70
+                Button4.Top = (_ersterTag.getFilm(4).getAnfangszeit()) / 3 + 70
+                Button5.Hide()
+                Button6.Hide()
+                Button7.Hide()
+            Case 5
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Top = (_ersterTag.getFilm(2).getAnfangszeit()) / 3 + 70
+                Button3.Top = (_ersterTag.getFilm(3).getAnfangszeit()) / 3 + 70
+                Button4.Top = (_ersterTag.getFilm(4).getAnfangszeit()) / 3 + 70
+                Button5.Top = (_ersterTag.getFilm(5).getAnfangszeit()) / 3 + 70
+                Button6.Hide()
+                Button7.Hide()
+            Case 6
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Top = (_ersterTag.getFilm(2).getAnfangszeit()) / 3 + 70
+                Button3.Top = (_ersterTag.getFilm(3).getAnfangszeit()) / 3 + 70
+                Button4.Top = (_ersterTag.getFilm(4).getAnfangszeit()) / 3 + 70
+                Button5.Top = (_ersterTag.getFilm(5).getAnfangszeit()) / 3 + 70
+                Button6.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button7.Hide()
+            Case 7
+                Button1.Top = (_ersterTag.getFilm(1).getAnfangszeit()) / 3 + 70
+                Button2.Top = (_ersterTag.getFilm(2).getAnfangszeit()) / 3 + 70
+                Button3.Top = (_ersterTag.getFilm(3).getAnfangszeit()) / 3 + 70
+                Button4.Top = (_ersterTag.getFilm(4).getAnfangszeit()) / 3 + 70
+                Button5.Top = (_ersterTag.getFilm(5).getAnfangszeit()) / 3 + 70
+                Button6.Top = (_ersterTag.getFilm(6).getAnfangszeit()) / 3 + 70
+                Button7.Top = (_ersterTag.getFilm(7).getAnfangszeit()) / 3 + 70
+            Case Else
+                Throw New Exception("Die Anzahl der gespeicherten Filme für den ersten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
+        End Select
 
     End Sub
 
@@ -191,7 +264,7 @@ Public Class FTagesplan
 
         'Größe der Filme bestimmen
         'Hier muss noch ausgelesen werden, wie lange ein Film geht und dementsprechend die Größe,
-        'die standartmäßig auf 26 ist. 
+        'die standartmäßig auf 26 ist, verändert werden. 
         Button1.Size = New Size(A.Width, 26)
         Button2.Size = New Size(A.Width, 26)
         Button3.Size = New Size(A.Width, 26)
@@ -254,7 +327,7 @@ Public Class FTagesplan
 
         Select Case True
             Case chbMontag.Checked
-                _Montag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
+                _ersterTag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
             Case chbDienstag.Checked
             Case chbMittwoch.Checked
             Case chbDonnerstag.Checked
@@ -266,7 +339,7 @@ Public Class FTagesplan
 End Class
 
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird
-'Beim Erstellen müssen die Filme in der richtigen Reihenfolge übergeben werden
+'Die Start - und Laufzeit der Filme wird in den einzelnen Filmen gespeichert
 Public Interface ITagesplan
     Sub TagesplanErstellen(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
     'Es muss die Filmnummer übergeben werden (später vielleicht mal die Vorstellung mit der getauscht werden soll oder die Uhrzeit?)
@@ -274,8 +347,9 @@ Public Interface ITagesplan
     'wird ans Ende hinzugefügt
     Sub FilmHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub FilmEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
-    Function getFilme(ByVal Tag As Integer) As ITagesplan
-    Function getFilm(ByVal Tag As Integer, ByVal Position As Integer) As Film
+    Function getFilme() As Array
+    Function getFilm(ByVal Position As Integer) As Film
+    Function getAnzahlFilme() As Integer
 End Interface
 
 Public Interface IVorstellung

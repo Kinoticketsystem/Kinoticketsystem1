@@ -35,15 +35,15 @@ Public Class Tagesplan
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 
-    Public Function getFilme(Tag As Integer) As ITagesplan Implements ITagesplan.getFilme
-
-        'Muss noch programmiert werden
-        Return New Tagesplan()
+    Public Function getFilme() As Array Implements ITagesplan.getFilme
+        Throw New NotImplementedException()
     End Function
 
-    Public Function getFilm(Tag As Integer, Position As Integer) As Film Implements ITagesplan.getFilm
-        'Muss noch programmiert werden
-        'veränderung
-        Return New Film
+    Public Function getFilm(Position As Integer) As Film Implements ITagesplan.getFilm
+        Throw New NotImplementedException()
+    End Function
+
+    Public Function getAnzahlFilme() As Integer Implements ITagesplan.getAnzahlFilme
+        Throw New NotImplementedException()
     End Function
 End Class
