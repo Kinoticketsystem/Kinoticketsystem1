@@ -6,9 +6,10 @@ Public Class FTagesplan
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnfangstagUndDatümerFestlegen()
         PositionDerDatümerFestlegen()
-        PositionDerFilmButtonsFestlegen()
-        GrößeDerFilmButtonsFestlegen()
+        PositionDerFilmButtonsFestlegenX()
         WochenplanAbrufenUndAusgeben()
+        GrößeDerFilmButtonsFestlegen()
+
 
     End Sub
 
@@ -18,9 +19,18 @@ Public Class FTagesplan
         'Anzeigen
 
         ' Button1.Text = _Montag.
+        'PositionDerFilmButtonsFestlegenY()
+
     End Sub
 
-    Private Sub PositionDerFilmButtonsFestlegen()
+    Private Sub PositionDerFilmButtonsFestlegenY()
+        _Montag.getFilm(1, 1) '.getAnfangszeit
+
+    End Sub
+
+
+
+    Private Sub PositionDerFilmButtonsFestlegenX()
         Button1.Left = chbMontag.Left
         Button2.Left = chbMontag.Left
         Button3.Left = chbMontag.Left
@@ -180,6 +190,8 @@ Public Class FTagesplan
         Dim g As Size = chbSonntag.Size
 
         'Größe der Filme bestimmen
+        'Hier muss noch ausgelesen werden, wie lange ein Film geht und dementsprechend die Größe,
+        'die standartmäßig auf 26 ist. 
         Button1.Size = New Size(A.Width, 26)
         Button2.Size = New Size(A.Width, 26)
         Button3.Size = New Size(A.Width, 26)

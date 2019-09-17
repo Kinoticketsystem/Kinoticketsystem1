@@ -119,7 +119,7 @@ Partial Class FTagesplan
         Me.txtFilmnummer.Location = New System.Drawing.Point(491, 502)
         Me.txtFilmnummer.Name = "txtFilmnummer"
         Me.txtFilmnummer.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtFilmnummer.Size = New System.Drawing.Size(47, 30)
+        Me.txtFilmnummer.Size = New System.Drawing.Size(47, 26)
         Me.txtFilmnummer.TabIndex = 2
         Me.txtFilmnummer.Text = "00"
         '
@@ -127,7 +127,7 @@ Partial Class FTagesplan
         '
         Me.txtFilmname.Location = New System.Drawing.Point(269, 503)
         Me.txtFilmname.Name = "txtFilmname"
-        Me.txtFilmname.Size = New System.Drawing.Size(100, 30)
+        Me.txtFilmname.Size = New System.Drawing.Size(100, 26)
         Me.txtFilmname.TabIndex = 3
         Me.txtFilmname.Text = "Filmname"
         '
@@ -136,7 +136,7 @@ Partial Class FTagesplan
         Me.chbMontag.AutoSize = True
         Me.chbMontag.Location = New System.Drawing.Point(150, 30)
         Me.chbMontag.Name = "chbMontag"
-        Me.chbMontag.Size = New System.Drawing.Size(91, 26)
+        Me.chbMontag.Size = New System.Drawing.Size(75, 23)
         Me.chbMontag.TabIndex = 5
         Me.chbMontag.Text = "Montag"
         Me.chbMontag.UseVisualStyleBackColor = True
@@ -146,7 +146,7 @@ Partial Class FTagesplan
         Me.chbFreitag.AutoSize = True
         Me.chbFreitag.Location = New System.Drawing.Point(751, 30)
         Me.chbFreitag.Name = "chbFreitag"
-        Me.chbFreitag.Size = New System.Drawing.Size(88, 26)
+        Me.chbFreitag.Size = New System.Drawing.Size(70, 23)
         Me.chbFreitag.TabIndex = 6
         Me.chbFreitag.Text = "Freitag"
         Me.chbFreitag.UseVisualStyleBackColor = True
@@ -156,7 +156,7 @@ Partial Class FTagesplan
         Me.chbMittwoch.AutoSize = True
         Me.chbMittwoch.Location = New System.Drawing.Point(432, 30)
         Me.chbMittwoch.Name = "chbMittwoch"
-        Me.chbMittwoch.Size = New System.Drawing.Size(108, 26)
+        Me.chbMittwoch.Size = New System.Drawing.Size(86, 23)
         Me.chbMittwoch.TabIndex = 7
         Me.chbMittwoch.Text = "Mittwoch"
         Me.chbMittwoch.UseVisualStyleBackColor = True
@@ -166,7 +166,7 @@ Partial Class FTagesplan
         Me.chbDienstag.AutoSize = True
         Me.chbDienstag.Location = New System.Drawing.Point(286, 30)
         Me.chbDienstag.Name = "chbDienstag"
-        Me.chbDienstag.Size = New System.Drawing.Size(101, 26)
+        Me.chbDienstag.Size = New System.Drawing.Size(80, 23)
         Me.chbDienstag.TabIndex = 8
         Me.chbDienstag.Text = "Dienstag"
         Me.chbDienstag.UseVisualStyleBackColor = True
@@ -176,7 +176,7 @@ Partial Class FTagesplan
         Me.chbDonnerstag.AutoSize = True
         Me.chbDonnerstag.Location = New System.Drawing.Point(585, 30)
         Me.chbDonnerstag.Name = "chbDonnerstag"
-        Me.chbDonnerstag.Size = New System.Drawing.Size(121, 26)
+        Me.chbDonnerstag.Size = New System.Drawing.Size(97, 23)
         Me.chbDonnerstag.TabIndex = 9
         Me.chbDonnerstag.Text = "Donnerstag"
         Me.chbDonnerstag.UseVisualStyleBackColor = True
@@ -186,7 +186,7 @@ Partial Class FTagesplan
         Me.chb830.AutoSize = True
         Me.chb830.Location = New System.Drawing.Point(30, 70)
         Me.chb830.Name = "chb830"
-        Me.chb830.Size = New System.Drawing.Size(78, 26)
+        Me.chb830.Size = New System.Drawing.Size(63, 23)
         Me.chb830.TabIndex = 10
         Me.chb830.Text = "08:30"
         Me.chb830.UseVisualStyleBackColor = True
@@ -194,9 +194,9 @@ Partial Class FTagesplan
         'chb1830
         '
         Me.chb1830.AutoSize = True
-        Me.chb1830.Location = New System.Drawing.Point(30, 254)
+        Me.chb1830.Location = New System.Drawing.Point(30, 270)
         Me.chb1830.Name = "chb1830"
-        Me.chb1830.Size = New System.Drawing.Size(78, 26)
+        Me.chb1830.Size = New System.Drawing.Size(63, 23)
         Me.chb1830.TabIndex = 11
         Me.chb1830.Text = "18:30"
         Me.chb1830.UseVisualStyleBackColor = True
@@ -204,9 +204,9 @@ Partial Class FTagesplan
         'chb1600
         '
         Me.chb1600.AutoSize = True
-        Me.chb1600.Location = New System.Drawing.Point(30, 208)
+        Me.chb1600.Location = New System.Drawing.Point(30, 220)
         Me.chb1600.Name = "chb1600"
-        Me.chb1600.Size = New System.Drawing.Size(78, 26)
+        Me.chb1600.Size = New System.Drawing.Size(63, 23)
         Me.chb1600.TabIndex = 12
         Me.chb1600.Text = "16:00"
         Me.chb1600.UseVisualStyleBackColor = True
@@ -214,9 +214,9 @@ Partial Class FTagesplan
         'chb1330
         '
         Me.chb1330.AutoSize = True
-        Me.chb1330.Location = New System.Drawing.Point(30, 162)
+        Me.chb1330.Location = New System.Drawing.Point(30, 170)
         Me.chb1330.Name = "chb1330"
-        Me.chb1330.Size = New System.Drawing.Size(78, 26)
+        Me.chb1330.Size = New System.Drawing.Size(63, 23)
         Me.chb1330.TabIndex = 13
         Me.chb1330.Text = "13:30"
         Me.chb1330.UseVisualStyleBackColor = True
@@ -224,9 +224,9 @@ Partial Class FTagesplan
         'chb1100
         '
         Me.chb1100.AutoSize = True
-        Me.chb1100.Location = New System.Drawing.Point(30, 116)
+        Me.chb1100.Location = New System.Drawing.Point(30, 120)
         Me.chb1100.Name = "chb1100"
-        Me.chb1100.Size = New System.Drawing.Size(77, 26)
+        Me.chb1100.Size = New System.Drawing.Size(62, 23)
         Me.chb1100.TabIndex = 14
         Me.chb1100.Text = "11:00"
         Me.chb1100.UseVisualStyleBackColor = True
@@ -236,7 +236,7 @@ Partial Class FTagesplan
         Me.chbSonntag.AutoSize = True
         Me.chbSonntag.Location = New System.Drawing.Point(1026, 30)
         Me.chbSonntag.Name = "chbSonntag"
-        Me.chbSonntag.Size = New System.Drawing.Size(94, 26)
+        Me.chbSonntag.Size = New System.Drawing.Size(77, 23)
         Me.chbSonntag.TabIndex = 15
         Me.chbSonntag.Text = "Sonntag"
         Me.chbSonntag.UseVisualStyleBackColor = True
@@ -246,7 +246,7 @@ Partial Class FTagesplan
         Me.chbSamstag.AutoSize = True
         Me.chbSamstag.Location = New System.Drawing.Point(884, 30)
         Me.chbSamstag.Name = "chbSamstag"
-        Me.chbSamstag.Size = New System.Drawing.Size(97, 26)
+        Me.chbSamstag.Size = New System.Drawing.Size(79, 23)
         Me.chbSamstag.TabIndex = 16
         Me.chbSamstag.Text = "Samstag"
         Me.chbSamstag.UseVisualStyleBackColor = True
@@ -255,7 +255,7 @@ Partial Class FTagesplan
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(491, 582)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(248, 30)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(248, 26)
         Me.DateTimePicker1.TabIndex = 17
         '
         'MonthCalendar1
@@ -268,15 +268,15 @@ Partial Class FTagesplan
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(566, 503)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 30)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 26)
         Me.NumericUpDown1.TabIndex = 22
         '
         'chb2100
         '
         Me.chb2100.AutoSize = True
-        Me.chb2100.Location = New System.Drawing.Point(30, 300)
+        Me.chb2100.Location = New System.Drawing.Point(30, 320)
         Me.chb2100.Name = "chb2100"
-        Me.chb2100.Size = New System.Drawing.Size(78, 26)
+        Me.chb2100.Size = New System.Drawing.Size(63, 23)
         Me.chb2100.TabIndex = 23
         Me.chb2100.Text = "21:00"
         Me.chb2100.UseVisualStyleBackColor = True
@@ -284,9 +284,9 @@ Partial Class FTagesplan
         'chb2330
         '
         Me.chb2330.AutoSize = True
-        Me.chb2330.Location = New System.Drawing.Point(30, 346)
+        Me.chb2330.Location = New System.Drawing.Point(30, 370)
         Me.chb2330.Name = "chb2330"
-        Me.chb2330.Size = New System.Drawing.Size(78, 26)
+        Me.chb2330.Size = New System.Drawing.Size(63, 23)
         Me.chb2330.TabIndex = 24
         Me.chb2330.Text = "23:30"
         Me.chb2330.UseVisualStyleBackColor = True
@@ -301,7 +301,7 @@ Partial Class FTagesplan
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(150, 116)
+        Me.Button2.Location = New System.Drawing.Point(150, 118)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(91, 26)
         Me.Button2.TabIndex = 26
@@ -309,7 +309,7 @@ Partial Class FTagesplan
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(150, 162)
+        Me.Button3.Location = New System.Drawing.Point(150, 167)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(91, 26)
         Me.Button3.TabIndex = 27
@@ -317,7 +317,7 @@ Partial Class FTagesplan
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(150, 208)
+        Me.Button4.Location = New System.Drawing.Point(150, 217)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(91, 26)
         Me.Button4.TabIndex = 28
@@ -325,7 +325,7 @@ Partial Class FTagesplan
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(150, 254)
+        Me.Button5.Location = New System.Drawing.Point(150, 267)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(91, 26)
         Me.Button5.TabIndex = 29
@@ -333,7 +333,7 @@ Partial Class FTagesplan
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(150, 300)
+        Me.Button6.Location = New System.Drawing.Point(150, 317)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(91, 26)
         Me.Button6.TabIndex = 30
@@ -341,7 +341,7 @@ Partial Class FTagesplan
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(150, 346)
+        Me.Button7.Location = New System.Drawing.Point(150, 368)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(91, 26)
         Me.Button7.TabIndex = 31
@@ -357,7 +357,7 @@ Partial Class FTagesplan
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(286, 116)
+        Me.Button9.Location = New System.Drawing.Point(286, 118)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(101, 26)
         Me.Button9.TabIndex = 33
@@ -365,7 +365,7 @@ Partial Class FTagesplan
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(286, 162)
+        Me.Button10.Location = New System.Drawing.Point(286, 167)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(101, 26)
         Me.Button10.TabIndex = 34
@@ -373,7 +373,7 @@ Partial Class FTagesplan
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(286, 300)
+        Me.Button13.Location = New System.Drawing.Point(286, 317)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(101, 26)
         Me.Button13.TabIndex = 35
@@ -381,7 +381,7 @@ Partial Class FTagesplan
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(286, 254)
+        Me.Button12.Location = New System.Drawing.Point(286, 267)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(101, 26)
         Me.Button12.TabIndex = 36
@@ -389,7 +389,7 @@ Partial Class FTagesplan
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(286, 208)
+        Me.Button11.Location = New System.Drawing.Point(286, 217)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(101, 26)
         Me.Button11.TabIndex = 37
@@ -405,7 +405,7 @@ Partial Class FTagesplan
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(286, 346)
+        Me.Button14.Location = New System.Drawing.Point(286, 368)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(101, 26)
         Me.Button14.TabIndex = 40
@@ -413,7 +413,7 @@ Partial Class FTagesplan
         '
         'Button16
         '
-        Me.Button16.Location = New System.Drawing.Point(432, 116)
+        Me.Button16.Location = New System.Drawing.Point(432, 118)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(108, 26)
         Me.Button16.TabIndex = 41
@@ -421,7 +421,7 @@ Partial Class FTagesplan
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(432, 161)
+        Me.Button17.Location = New System.Drawing.Point(432, 166)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(108, 26)
         Me.Button17.TabIndex = 42
@@ -429,7 +429,7 @@ Partial Class FTagesplan
         '
         'Button18
         '
-        Me.Button18.Location = New System.Drawing.Point(432, 208)
+        Me.Button18.Location = New System.Drawing.Point(432, 217)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(108, 26)
         Me.Button18.TabIndex = 43
@@ -437,7 +437,7 @@ Partial Class FTagesplan
         '
         'Button19
         '
-        Me.Button19.Location = New System.Drawing.Point(432, 254)
+        Me.Button19.Location = New System.Drawing.Point(432, 267)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(108, 26)
         Me.Button19.TabIndex = 44
@@ -445,7 +445,7 @@ Partial Class FTagesplan
         '
         'Button20
         '
-        Me.Button20.Location = New System.Drawing.Point(432, 300)
+        Me.Button20.Location = New System.Drawing.Point(432, 317)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(108, 26)
         Me.Button20.TabIndex = 45
@@ -453,7 +453,7 @@ Partial Class FTagesplan
         '
         'Button21
         '
-        Me.Button21.Location = New System.Drawing.Point(432, 346)
+        Me.Button21.Location = New System.Drawing.Point(432, 368)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(108, 26)
         Me.Button21.TabIndex = 46
@@ -469,7 +469,7 @@ Partial Class FTagesplan
         '
         'Button23
         '
-        Me.Button23.Location = New System.Drawing.Point(585, 115)
+        Me.Button23.Location = New System.Drawing.Point(585, 117)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(121, 26)
         Me.Button23.TabIndex = 48
@@ -477,7 +477,7 @@ Partial Class FTagesplan
         '
         'Button24
         '
-        Me.Button24.Location = New System.Drawing.Point(585, 162)
+        Me.Button24.Location = New System.Drawing.Point(585, 167)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(121, 26)
         Me.Button24.TabIndex = 49
@@ -485,7 +485,7 @@ Partial Class FTagesplan
         '
         'Button25
         '
-        Me.Button25.Location = New System.Drawing.Point(585, 208)
+        Me.Button25.Location = New System.Drawing.Point(585, 217)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(121, 26)
         Me.Button25.TabIndex = 50
@@ -493,7 +493,7 @@ Partial Class FTagesplan
         '
         'Button26
         '
-        Me.Button26.Location = New System.Drawing.Point(585, 253)
+        Me.Button26.Location = New System.Drawing.Point(585, 266)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(121, 26)
         Me.Button26.TabIndex = 51
@@ -501,7 +501,7 @@ Partial Class FTagesplan
         '
         'Button27
         '
-        Me.Button27.Location = New System.Drawing.Point(585, 300)
+        Me.Button27.Location = New System.Drawing.Point(585, 317)
         Me.Button27.Name = "Button27"
         Me.Button27.Size = New System.Drawing.Size(121, 26)
         Me.Button27.TabIndex = 52
@@ -509,7 +509,7 @@ Partial Class FTagesplan
         '
         'Button28
         '
-        Me.Button28.Location = New System.Drawing.Point(585, 346)
+        Me.Button28.Location = New System.Drawing.Point(585, 368)
         Me.Button28.Name = "Button28"
         Me.Button28.Size = New System.Drawing.Size(121, 26)
         Me.Button28.TabIndex = 53
@@ -525,7 +525,7 @@ Partial Class FTagesplan
         '
         'Button30
         '
-        Me.Button30.Location = New System.Drawing.Point(751, 116)
+        Me.Button30.Location = New System.Drawing.Point(751, 118)
         Me.Button30.Name = "Button30"
         Me.Button30.Size = New System.Drawing.Size(88, 26)
         Me.Button30.TabIndex = 55
@@ -533,7 +533,7 @@ Partial Class FTagesplan
         '
         'Button31
         '
-        Me.Button31.Location = New System.Drawing.Point(751, 162)
+        Me.Button31.Location = New System.Drawing.Point(751, 167)
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(88, 26)
         Me.Button31.TabIndex = 56
@@ -541,7 +541,7 @@ Partial Class FTagesplan
         '
         'Button32
         '
-        Me.Button32.Location = New System.Drawing.Point(751, 208)
+        Me.Button32.Location = New System.Drawing.Point(751, 217)
         Me.Button32.Name = "Button32"
         Me.Button32.Size = New System.Drawing.Size(88, 26)
         Me.Button32.TabIndex = 57
@@ -549,7 +549,7 @@ Partial Class FTagesplan
         '
         'Button33
         '
-        Me.Button33.Location = New System.Drawing.Point(751, 254)
+        Me.Button33.Location = New System.Drawing.Point(751, 267)
         Me.Button33.Name = "Button33"
         Me.Button33.Size = New System.Drawing.Size(88, 26)
         Me.Button33.TabIndex = 58
@@ -557,7 +557,7 @@ Partial Class FTagesplan
         '
         'Button34
         '
-        Me.Button34.Location = New System.Drawing.Point(751, 300)
+        Me.Button34.Location = New System.Drawing.Point(751, 317)
         Me.Button34.Name = "Button34"
         Me.Button34.Size = New System.Drawing.Size(88, 26)
         Me.Button34.TabIndex = 59
@@ -565,7 +565,7 @@ Partial Class FTagesplan
         '
         'Button35
         '
-        Me.Button35.Location = New System.Drawing.Point(751, 346)
+        Me.Button35.Location = New System.Drawing.Point(751, 368)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(88, 26)
         Me.Button35.TabIndex = 60
@@ -581,7 +581,7 @@ Partial Class FTagesplan
         '
         'Button37
         '
-        Me.Button37.Location = New System.Drawing.Point(884, 116)
+        Me.Button37.Location = New System.Drawing.Point(884, 118)
         Me.Button37.Name = "Button37"
         Me.Button37.Size = New System.Drawing.Size(97, 26)
         Me.Button37.TabIndex = 62
@@ -589,7 +589,7 @@ Partial Class FTagesplan
         '
         'Button38
         '
-        Me.Button38.Location = New System.Drawing.Point(884, 162)
+        Me.Button38.Location = New System.Drawing.Point(884, 167)
         Me.Button38.Name = "Button38"
         Me.Button38.Size = New System.Drawing.Size(97, 26)
         Me.Button38.TabIndex = 63
@@ -597,7 +597,7 @@ Partial Class FTagesplan
         '
         'Button39
         '
-        Me.Button39.Location = New System.Drawing.Point(884, 207)
+        Me.Button39.Location = New System.Drawing.Point(884, 216)
         Me.Button39.Name = "Button39"
         Me.Button39.Size = New System.Drawing.Size(97, 26)
         Me.Button39.TabIndex = 64
@@ -605,7 +605,7 @@ Partial Class FTagesplan
         '
         'Button40
         '
-        Me.Button40.Location = New System.Drawing.Point(884, 254)
+        Me.Button40.Location = New System.Drawing.Point(884, 267)
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(97, 26)
         Me.Button40.TabIndex = 65
@@ -613,7 +613,7 @@ Partial Class FTagesplan
         '
         'Button41
         '
-        Me.Button41.Location = New System.Drawing.Point(884, 300)
+        Me.Button41.Location = New System.Drawing.Point(884, 317)
         Me.Button41.Name = "Button41"
         Me.Button41.Size = New System.Drawing.Size(97, 26)
         Me.Button41.TabIndex = 66
@@ -621,7 +621,7 @@ Partial Class FTagesplan
         '
         'Button42
         '
-        Me.Button42.Location = New System.Drawing.Point(884, 346)
+        Me.Button42.Location = New System.Drawing.Point(884, 368)
         Me.Button42.Name = "Button42"
         Me.Button42.Size = New System.Drawing.Size(97, 26)
         Me.Button42.TabIndex = 67
@@ -637,7 +637,7 @@ Partial Class FTagesplan
         '
         'Button44
         '
-        Me.Button44.Location = New System.Drawing.Point(1026, 115)
+        Me.Button44.Location = New System.Drawing.Point(1026, 117)
         Me.Button44.Name = "Button44"
         Me.Button44.Size = New System.Drawing.Size(94, 26)
         Me.Button44.TabIndex = 69
@@ -645,7 +645,7 @@ Partial Class FTagesplan
         '
         'Button45
         '
-        Me.Button45.Location = New System.Drawing.Point(1026, 162)
+        Me.Button45.Location = New System.Drawing.Point(1026, 167)
         Me.Button45.Name = "Button45"
         Me.Button45.Size = New System.Drawing.Size(94, 26)
         Me.Button45.TabIndex = 70
@@ -653,7 +653,7 @@ Partial Class FTagesplan
         '
         'Button46
         '
-        Me.Button46.Location = New System.Drawing.Point(1026, 208)
+        Me.Button46.Location = New System.Drawing.Point(1026, 217)
         Me.Button46.Name = "Button46"
         Me.Button46.Size = New System.Drawing.Size(94, 26)
         Me.Button46.TabIndex = 71
@@ -661,7 +661,7 @@ Partial Class FTagesplan
         '
         'Button47
         '
-        Me.Button47.Location = New System.Drawing.Point(1026, 254)
+        Me.Button47.Location = New System.Drawing.Point(1026, 267)
         Me.Button47.Name = "Button47"
         Me.Button47.Size = New System.Drawing.Size(94, 26)
         Me.Button47.TabIndex = 72
@@ -669,7 +669,7 @@ Partial Class FTagesplan
         '
         'Button48
         '
-        Me.Button48.Location = New System.Drawing.Point(1026, 300)
+        Me.Button48.Location = New System.Drawing.Point(1026, 317)
         Me.Button48.Name = "Button48"
         Me.Button48.Size = New System.Drawing.Size(94, 26)
         Me.Button48.TabIndex = 73
@@ -677,7 +677,7 @@ Partial Class FTagesplan
         '
         'Button49
         '
-        Me.Button49.Location = New System.Drawing.Point(1026, 345)
+        Me.Button49.Location = New System.Drawing.Point(1026, 367)
         Me.Button49.Name = "Button49"
         Me.Button49.Size = New System.Drawing.Size(94, 26)
         Me.Button49.TabIndex = 74
@@ -685,7 +685,7 @@ Partial Class FTagesplan
         '
         'FTagesplan
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 667)
         Me.Controls.Add(Me.Button49)
