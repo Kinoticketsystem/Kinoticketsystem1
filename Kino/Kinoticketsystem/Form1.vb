@@ -721,10 +721,9 @@ Public Interface ITagesplan
 End Interface
 
 Public Interface IVorstellung
-    Sub BesucherHinzufügen()
-    Sub SaalÄndern()
-    Sub FilmÄndern()
-
+    Sub BesucherHinzufügen('Arrylist?)
+    Sub SaalÄndern(Saal As String)
+    Sub FilmÄndern(Film As String)
 End Interface
 'Gabor
 Public Class Kinosaal

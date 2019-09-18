@@ -1,5 +1,6 @@
 ﻿Public Class Vorstellung
     'Attribute
+    'Implements IVorstellung, ICloneable
     Private Startzeit As Date 'Verbunden mit Datum?
     Private Endzeit As Date
     Private Besucher As ArrayList
