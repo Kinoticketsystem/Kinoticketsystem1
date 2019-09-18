@@ -30,6 +30,6 @@
 
     Public Sub Filmändern()
         Me.Film = txtFilmnummer.Text
-        MsgBox("Neuer Film:" & Film)
+        MsgBox("Neuer Film:" & txtFilmnummer.Text)
     End Sub
 End Class
