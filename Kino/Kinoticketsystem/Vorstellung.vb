@@ -29,8 +29,7 @@
     End Sub
 
     Public Sub Filmändern()
-        Me.Film =
+        Me.Film = txtFilmnummer.Text
         MsgBox("Neuer Film:" & Film)
-
     End Sub
 End Class
