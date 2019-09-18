@@ -700,6 +700,10 @@ Public Class FTagesplan
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
+
+    Private Sub Button50_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
 
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird
@@ -717,6 +721,9 @@ Public Interface ITagesplan
 End Interface
 
 Public Interface IVorstellung
+    Sub BesucherHinzufügen()
+    Sub SaalÄndern()
+    Sub FilmÄndern()
 
 End Interface
 'Gabor
@@ -738,4 +745,5 @@ Public Class Testklasse
     Public Function TestFunktion(b As Integer) As Object Implements ITestinterface.TestFunktion
         Throw New NotImplementedException()
     End Function
+
 End Class
