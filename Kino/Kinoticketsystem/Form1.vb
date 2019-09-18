@@ -463,8 +463,6 @@ Public Class FTagesplan
         End Select
     End Sub
 
-
-
     Private Sub PositionDerFilmButtonsFestlegenX()
         Button1.Left = chbMontag.Left
         Button2.Left = chbMontag.Left
@@ -721,7 +719,7 @@ Public Interface ITagesplan
 End Interface
 
 Public Interface IVorstellung
-    Sub BesucherHinzufügen('Arrylist?)
+    Sub BesucherHinzufügen() 'Arrylist?)
     Sub SaalÄndern(Saal As String)
     Sub FilmÄndern(Film As String)
 End Interface
