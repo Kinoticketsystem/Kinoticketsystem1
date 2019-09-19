@@ -687,7 +687,7 @@ Public Class FTagesplan
 
         Select Case True
             Case chbMontag.Checked
-                _ersterTag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
+      '          _ersterTag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
             Case chbDienstag.Checked
             Case chbMittwoch.Checked
             Case chbDonnerstag.Checked
@@ -720,8 +720,8 @@ End Interface
 
 Public Interface IVorstellung
     Sub BesucherHinzufügen(Besucher As Kunde)
-    Sub SaalÄndern(Saal As String)
-    Sub FilmÄndern(Film As String)
+    Sub SaalÄndern(Saal As Kinosaal)
+    Sub FilmÄndern(Film As Film)
 End Interface
 'Gabor
 Public Class Kinosaal
