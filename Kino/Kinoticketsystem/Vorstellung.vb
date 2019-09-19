@@ -1,6 +1,8 @@
-﻿Public Class Vorstellung
+﻿Imports Kinoticketsystem
+
+Public Class Vorstellung
     'Attribute
-    'Implements IVorstellung, ICloneable
+    Implements IVorstellung
     Private Startzeit As Date 'Verbunden mit Datum?
     Private Endzeit As Date
     Private Besucher As ArrayList
@@ -20,17 +22,18 @@
     End Sub
 
     'Methoden
-    Public Sub BesucherHinzufügen()
-        'Attribute des Besuchers?
-    End Sub
 
-    Public Sub Saaländern()
-        Me.Saal = Saal
-        MsgBox(Film & "läuft jetzt im Saal" & Saal)
-    End Sub
-
-    Public Sub Filmändern()
+    Public Sub FilmÄndern(Film As String) Implements IVorstellung.FilmÄndern
         Me.Film = txtFilmnummer.Text
         MsgBox("Neuer Film:" & txtFilmnummer.Text)
+    End Sub
+
+    Private Sub IVorstellung_BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
+        'Besucher.
+    End Sub
+
+    Private Sub IVorstellung_SaalÄndern(Saal As String) Implements IVorstellung.SaalÄndern
+        Me.Saal = Saal
+        MsgBox(Film & "läuft jetzt im Saal" & Saal)
     End Sub
 End Class
