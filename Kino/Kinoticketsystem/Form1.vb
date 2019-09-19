@@ -719,7 +719,7 @@ Public Interface ITagesplan
 End Interface
 
 Public Interface IVorstellung
-    Sub BesucherHinzufügen() 'Arrylist?)
+    Sub BesucherHinzufügen(Besucher As Kunde)
     Sub SaalÄndern(Saal As String)
     Sub FilmÄndern(Film As String)
 End Interface
