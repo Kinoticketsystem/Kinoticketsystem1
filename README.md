@@ -13,3 +13,4 @@ Links, falls ihr was nochmal nachschauen wollt:
 
     Interfaces https://docs.microsoft.com/de-de/dotnet/visual-basic/programming-guide/language-features/interfaces/
 https://app.simpleclub.com/de/video/p_0049?playlist=t51jvto8P4xSq9jLfHcf_wkGAztznFoP6nqcE9mhR_esItjbBlTl2lRqc9O5m3
+https://physikunterricht-online.de/jahrgang-12/grundlagen-schroedingergleichung/
