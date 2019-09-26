@@ -23,17 +23,7 @@ Public Class Vorstellung
 
     'Methoden
 
-    Public Sub FilmÄndern(Film As Film) Implements IVorstellung.FilmÄndern
-        Me.Film = Film
-    End Sub
 
-    Private Sub BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
-        _Besucher.Add(Besucher)
-    End Sub
-
-    Private Sub SaalÄndern(Saal As Kinosaal) Implements IVorstellung.SaalÄndern
-        Me.Saal = Saal
-    End Sub
 
     Public Function getAnfangszeit() As Integer 'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
         Return _Startzeit
@@ -44,15 +34,36 @@ Public Class Vorstellung
     Public Function getSaal() As Kinosaal  'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
         Return Saal
     End Function
-    Public Function getBesucher() As ArrayList  'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
+    Public Function getAlleBesucher() As ArrayList  'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
         Return _Besucher
     End Function
+    Public Function getBesucher(a As Integer) As Kunde   'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
+        Return _Besucher(a)
+    End Function
+
     Public Function getFilm() As Film 'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
         Return Film
     End Function
 
 
+    Public Sub FilmÄndern(Film As Film) Implements IVorstellung.FilmÄndern
+        Me.Film = Film
+    End Sub
 
+    Private Sub BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
+        _Besucher.Add(Besucher)
+    End Sub
+    Private Sub BesucherEntfernen(Besucher As Kunde)
+        _Besucher.RemoveAt(_Besucher.LastIndexOf(Besucher))
+    End Sub
+    Private Sub BesucherEntfernen(Nr As Integer)
+        _Besucher.RemoveAt(Nr)
+    End Sub
+
+
+    Private Sub SaalÄndern(Saal As Kinosaal) Implements IVorstellung.SaalÄndern
+        Me.Saal = Saal
+    End Sub
 
     Public Sub setAnfangszeit(a As Integer)
         _Startzeit = a
