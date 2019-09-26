@@ -9,7 +9,7 @@
         Me.Sitzplatz = Sitzplatz(AnzahlSitzplätze - 1, 2)
     End Sub
 
-    Private Sub SitzplatzBuchen(ByVal Sitzplatz As String, ByRef gewählterPlatz As Integer, ByRef name As String)
+    Public Sub SitzplatzBuchen(ByVal Sitzplatz As String, ByRef gewählterPlatz As Integer, ByRef name As String)
         Me.Sitzplatz(gewählterPlatz, 1) = name
     End Sub
 

@@ -16,6 +16,7 @@
     End Sub
 
     Public Sub neueBuchung(ByVal Kinosäle As Kinosaal, ByVal Filme As Film, ByVal Kunde As Kunde, ByVal Tagespläne As Tagesplan)
-
+        Kinosaal.SitzplatzBuchen(1, 1, Kunde._Name)
     End Sub
+
 End Class
