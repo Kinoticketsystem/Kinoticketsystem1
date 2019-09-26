@@ -24,11 +24,12 @@ Partial Class KinoGUI
     Private Sub InitializeComponent()
         Me.cmdWochenplan = New System.Windows.Forms.Button()
         Me.cmdTexterfassen = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cmdWochenplan
         '
-        Me.cmdWochenplan.Location = New System.Drawing.Point(112, 200)
+        Me.cmdWochenplan.Location = New System.Drawing.Point(212, 238)
         Me.cmdWochenplan.Name = "cmdWochenplan"
         Me.cmdWochenplan.Size = New System.Drawing.Size(189, 28)
         Me.cmdWochenplan.TabIndex = 0
@@ -37,18 +38,30 @@ Partial Class KinoGUI
         '
         'cmdTexterfassen
         '
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(515, 200)
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(649, 238)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
         Me.cmdTexterfassen.Size = New System.Drawing.Size(189, 28)
         Me.cmdTexterfassen.TabIndex = 1
         Me.cmdTexterfassen.Text = "Texterfassen Erik"
         Me.cmdTexterfassen.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(406, 146)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(229, 40)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Das wird schon"
+        '
         'KinoGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Blue
         Me.ClientSize = New System.Drawing.Size(1100, 619)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdTexterfassen)
         Me.Controls.Add(Me.cmdWochenplan)
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -56,9 +69,11 @@ Partial Class KinoGUI
         Me.Name = "KinoGUI"
         Me.Text = "Kino"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents cmdWochenplan As Button
     Friend WithEvents cmdTexterfassen As Button
+    Friend WithEvents Label1 As Label
 End Class
