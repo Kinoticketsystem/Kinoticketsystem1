@@ -21,29 +21,29 @@ Public Class Tagesplan
         'Next
     End Sub
     'Filmnummer zwischen [1 und MaximaleAnzahlFilmeProTag]
-    Public Sub FilmÄndern(Vorstellung As Vorstellung, Filmnummer As Integer) Implements ITagesplan.FilmÄndern
+    Public Sub VorstellungÄndern(Vorstellung As Vorstellung, Filmnummer As Integer) Implements ITagesplan.VorstellungÄndern
         _Vorstellungen(Filmnummer + 1) = Vorstellung
     End Sub
 
-    Public Sub FilmHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.FilmHinzufügen
+    Public Sub VorstellungHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.VorstellungHinzufügen
         _Vorstellungen(AnzahlFilmeProTag) = Vorstellung
         AnzahlFilmeProTag = AnzahlFilmeProTag + 1
     End Sub
 
-    Public Sub FilmEntfernen(vorstellung As Vorstellung, Position As Integer) Implements ITagesplan.FilmEntfernen
+    Public Sub VorstellungEntfernen(vorstellung As Vorstellung, Position As Integer) Implements ITagesplan.VorstellungEntfernen
         _Vorstellungen(AnzahlFilmeProTag) = Nothing
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 
-    Public Function getFilme() As Array Implements ITagesplan.getFilme
+    Public Function getVorstellungen() As Array Implements ITagesplan.getVorstellungen
         Throw New NotImplementedException()
     End Function
 
-    Public Function getFilm(Position As Integer) As Film Implements ITagesplan.getFilm
+    Public Function getVorstellung(Position As Integer) As Film Implements ITagesplan.getVorstellung
         Throw New NotImplementedException()
     End Function
 
-    Public Function getAnzahlFilme() As Integer Implements ITagesplan.getAnzahlFilme
+    Public Function getAnzahlVorstellungen() As Integer Implements ITagesplan.getAnzahlVorstellungen
         Throw New NotImplementedException()
     End Function
 End Class
