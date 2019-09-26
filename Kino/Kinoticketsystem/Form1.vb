@@ -684,7 +684,7 @@ Public Class FTagesplan
 
     Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
         '    _Montag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
-
+        WriteLine("FilmHinzufügen funktioniert nicht")
         Select Case True
             Case chbMontag.Checked
       '          _ersterTag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
@@ -700,6 +700,10 @@ Public Class FTagesplan
     End Sub
 
     Private Sub Button50_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub chb1330_CheckedChanged(sender As Object, e As EventArgs) Handles chb1330.CheckedChanged
 
     End Sub
 End Class
