@@ -5,7 +5,7 @@ Public Class Vorstellung
     Implements IVorstellung
     Private _Startzeit As Date 'Verbunden mit Datum?
     Private _Endzeit As Date
-    Private Besucher As ArrayList
+    Private _Besucher As ArrayList = New ArrayList()
     Private Saal As Kinosaal 'falls wir keine nummern nehmen
     Private Film As Film
 
@@ -15,7 +15,7 @@ Public Class Vorstellung
     Public Sub New(ByVal Startzeit As Date, ByVal Endzeit As Date, ByVal Besucher As ArrayList, ByVal Saal As Kinosaal, ByVal Film As Film)
         Me._Startzeit = Startzeit
         Me._Endzeit = Endzeit
-        Me.Besucher = Besucher
+        Me._Besucher = Besucher
         Me.Saal = Saal
         Me.Film = Film
 
@@ -28,10 +28,13 @@ Public Class Vorstellung
     End Sub
 
     Private Sub BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
-        'Besucher.
+        _Besucher.Add(Besucher)
     End Sub
 
     Private Sub SaalÄndern(Saal As Kinosaal) Implements IVorstellung.SaalÄndern
         Me.Saal = Saal
     End Sub
+    Public Function getAnfangszeit() As Integer 'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
+        Throw New NotImplementedException()
+    End Function
 End Class

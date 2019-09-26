@@ -1,6 +1,6 @@
 ﻿Public Class kTestklasse566556
     Public _Tagesplan As Tagesplan  = new Tagesplan()
-    Public a As Vorstellung = New Vorstellung("dfbg", 23, 12, True, 43)
+    ' Public a As Vorstellung = New Vorstellung("04:56", "04:59", New ArrayList(), New Kinosaal, New Film())
     Public b As Vorstellung
     'hallo
     Public Sub New 

@@ -718,7 +718,7 @@ Public Interface ITagesplan
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
     Function getVorstellungen() As Array
-    Function getVorstellung(ByVal Position As Integer) As Film
+    Function getVorstellung(ByVal Position As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
 End Interface
 

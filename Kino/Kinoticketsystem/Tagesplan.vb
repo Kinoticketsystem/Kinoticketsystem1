@@ -39,7 +39,7 @@ Public Class Tagesplan
         Throw New NotImplementedException()
     End Function
 
-    Public Function getVorstellung(Position As Integer) As Film Implements ITagesplan.getVorstellung
+    Public Function getVorstellung(Position As Integer) As Vorstellung Implements ITagesplan.getVorstellung
         Throw New NotImplementedException()
     End Function
 
