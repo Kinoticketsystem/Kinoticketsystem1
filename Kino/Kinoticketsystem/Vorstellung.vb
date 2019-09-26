@@ -3,7 +3,7 @@
 Public Class Vorstellung
     'Attribute
     Implements IVorstellung
-    Private _Startzeit As Date 'Verbunden mit Datum?
+    Private _Startzeit As Date
     Private _Endzeit As Date
     Private Besucher As ArrayList
     Private Saal As Kinosaal 'falls wir keine nummern nehmen
