@@ -1,7 +1,5 @@
 ﻿Public Class Film
-    Public Function getAnfangszeit() As Integer 'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
-        Throw New NotImplementedException()
-    End Function
+
     Private _Filmtitel As String
     Private _Filmlänge As Integer
     Private _Altersfreigabe As Integer
@@ -49,16 +47,17 @@
     End Sub
 
 
-    Public Sub getFilminfos(ByVal _Filmtitel As String, ByVal _Filmlänge As Integer, ByVal _Altersfreigabe As String, ByVal _3D As Boolean, ByVal _AnzahlFilmWiedergabe As String) As String
-            Dim Art As String
+    Public Function getFilminfos(ByVal _Filmtitel As String, ByVal _Filmlänge As Integer, ByVal _Altersfreigabe As String, ByVal _3D As Boolean, ByVal _AnzahlFilmWiedergabe As String) As String
+        ' Dim Art As String
         If Me._3D = True Then
-            Art = 3D
-        ElseIf Me._3D = False Then
-            Art = 2D
+            ' Art = 3D
+            Return "Der Film " & _Filmtitel & ":" & " hat eine Spieldauer von " & _Filmlänge & "min, ist ab " & _Altersfreigabe & ", wird in 3D wiedergegeben und wurde bereits " & _AnzahlFilmWiedergabe & " gespielt."
+        Else 'If Me._3D = False Then
+            ' Art = 2D
+            Return "Der Film " & _Filmtitel & ":" & " hat eine Spieldauer von " & _Filmlänge & "min, ist ab " & _Altersfreigabe & ", wird in 2D wiedergegeben und wurde bereits " & _AnzahlFilmWiedergabe & " gespielt."
         End If
 
-        txt.FilmeDaten.Text = "Der Film", _Filmtitel, ":", "hat eine Spieldauer von", _Filmlänge, " ist ab", _Altersfreigabe, "Wird in", 3D, "wiedergegeben und wurde berreits", _AnzahlFilmWiedergabe, " gespielt."
+        'txt.FilmeDaten.Text = "Der Film", _Filmtitel, ":", "hat eine Spieldauer von", _Filmlänge, " ist ab", _Altersfreigabe, "Wird in", 3D, "wiedergegeben und wurde berreits", _AnzahlFilmWiedergabe, " gespielt."
 
-
-        End Sub
+    End Function
 End Class

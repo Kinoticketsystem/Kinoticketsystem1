@@ -2,15 +2,16 @@
 
 Public Class Tagesplan
     Implements ITagesplan
-    Private _Vorstellungen(MaximaleAnzahlFilmeProTag) As Vorstellung
     Private MaximaleAnzahlFilmeProTag As Integer = 10
+    Private _Vorstellungen(MaximaleAnzahlFilmeProTag) As Vorstellung
     Private AnzahlFilmeProTag As Integer
 
+    'Es muss zusätzlich zum Konstruktor IMMER auch eine ErstellenMEthode aufgerufen werden
     Public Sub New()
         _Vorstellungen = New Vorstellung() {}
     End Sub
-    Public Sub TagesplanErstellen(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung, Vorstellung5 As Vorstellung) Implements ITagesplan.TagesplanErstellen
-        _Vorstellungen(0) = Vorstellung1
+    Public Sub TagesplanErstellen5(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung, Vorstellung5 As Vorstellung) Implements ITagesplan.TagesplanErstellen
+        _Vorstellungen(1) = Vorstellung1
         _Vorstellungen(2) = Vorstellung2
         _Vorstellungen(3) = Vorstellung3
         _Vorstellungen(4) = Vorstellung4
@@ -20,30 +21,64 @@ Public Class Tagesplan
 
         'Next
     End Sub
+    Public Sub TagesplanErstellen4(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung)
+        _Vorstellungen(1) = Vorstellung1
+        _Vorstellungen(2) = Vorstellung2
+        _Vorstellungen(3) = Vorstellung3
+        _Vorstellungen(4) = Vorstellung4
+        AnzahlFilmeProTag = 4
+        'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
+
+        'Next
+    End Sub
+    Public Sub TagesplanErstellen3(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung)
+        _Vorstellungen(1) = Vorstellung1
+        _Vorstellungen(2) = Vorstellung2
+        _Vorstellungen(3) = Vorstellung3
+        AnzahlFilmeProTag = 3
+        'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
+
+        'Next
+    End Sub
+    Public Sub TagesplanErstellen2(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung)
+        _Vorstellungen(1) = Vorstellung1
+        _Vorstellungen(2) = Vorstellung2
+        AnzahlFilmeProTag = 2
+        'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
+
+        'Next
+    End Sub
+    Public Sub TagesplanErstellen1(Vorstellung1 As Vorstellung)
+        _Vorstellungen(1) = Vorstellung1
+        AnzahlFilmeProTag = 1
+        'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
+
+        'Next
+    End Sub
     'Filmnummer zwischen [1 und MaximaleAnzahlFilmeProTag]
-    Public Sub FilmÄndern(Vorstellung As Vorstellung, Filmnummer As Integer) Implements ITagesplan.FilmÄndern
-        _Vorstellungen(Filmnummer + 1) = Vorstellung
+    Public Sub VorstellungÄndern(Vorstellung As Vorstellung, Vorstellungsnummer As Integer) Implements ITagesplan.VorstellungÄndern
+        _Vorstellungen(Vorstellungsnummer) = Vorstellung
     End Sub
 
-    Public Sub FilmHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.FilmHinzufügen
-        _Vorstellungen(AnzahlFilmeProTag) = Vorstellung
+    Public Sub VorstellungHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.VorstellungHinzufügen
+        _Vorstellungen(AnzahlFilmeProTag + 1) = Vorstellung
         AnzahlFilmeProTag = AnzahlFilmeProTag + 1
     End Sub
 
-    Public Sub FilmEntfernen(vorstellung As Vorstellung, Position As Integer) Implements ITagesplan.FilmEntfernen
-        _Vorstellungen(AnzahlFilmeProTag) = Nothing
+    Public Sub VorstellungEntfernen(vorstellung As Vorstellung, Position As Integer) Implements ITagesplan.VorstellungEntfernen
+        _Vorstellungen(Position) = Nothing
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 
-    Public Function getFilme() As Array Implements ITagesplan.getFilme
-        Throw New NotImplementedException()
+    Public Function getVorstellungen() As Array Implements ITagesplan.getVorstellungen
+        Return _Vorstellungen
     End Function
 
-    Public Function getFilm(Position As Integer) As Film Implements ITagesplan.getFilm
-        Throw New NotImplementedException()
+    Public Function getVorstellung(Position As Integer) As Vorstellung Implements ITagesplan.getVorstellung
+        Return _Vorstellungen(Position)
     End Function
 
-    Public Function getAnzahlFilme() As Integer Implements ITagesplan.getAnzahlFilme
-        Throw New NotImplementedException()
+    Public Function getAnzahlVorstellungen() As Integer Implements ITagesplan.getAnzahlVorstellungen
+        Return AnzahlFilmeProTag
     End Function
 End Class
