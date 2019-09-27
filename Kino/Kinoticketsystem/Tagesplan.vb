@@ -3,12 +3,13 @@
 Public Class Tagesplan
     Implements ITagesplan
     Private MaximaleAnzahlFilmeProTag As Integer = 10
-    Private _Vorstellungen(MaximaleAnzahlFilmeProTag) As Vorstellung
+    'Private _Vorstellungen(MaximaleAnzahlFilmeProTag) As Vorstellung 
     Private AnzahlFilmeProTag As Integer
+    Private _Vorstellungen As ArrayList = New ArrayList()
 
     'Es muss zusätzlich zum Konstruktor IMMER auch eine ErstellenMEthode aufgerufen werden
     Public Sub New()
-        _Vorstellungen = New Vorstellung() {}
+        ' _Vorstellungen = New Vorstellung() {}
     End Sub
     Public Sub TagesplanErstellen5(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung, Vorstellung5 As Vorstellung) Implements ITagesplan.TagesplanErstellen
         _Vorstellungen(1) = Vorstellung1
@@ -57,8 +58,13 @@ Public Class Tagesplan
     End Sub
     'Filmnummer zwischen [1 und MaximaleAnzahlFilmeProTag]
     Public Sub VorstellungÄndern(Vorstellung As Vorstellung, Vorstellungsnummer As Integer) Implements ITagesplan.VorstellungÄndern
-        _Vorstellungen(Vorstellungsnummer) = Vorstellung
+        If (Vorstellungsnummer <= MaximaleAnzahlFilmeProTag) And (Vorstellungsnummer > 0) Then
+            _Vorstellungen(Vorstellungsnummer) = Vorstellung
+        Else
+            Throw New Exception("Die Vorstellung die geändert werden soll, ist nicht an einer Stelle [1;maximaleAnzahlFilmeProTag]")
+        End If
     End Sub
+
 
     Public Sub VorstellungHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.VorstellungHinzufügen
         _Vorstellungen(AnzahlFilmeProTag + 1) = Vorstellung
@@ -70,7 +76,7 @@ Public Class Tagesplan
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 
-    Public Function getVorstellungen() As Array Implements ITagesplan.getVorstellungen
+    Public Function getVorstellungen() As ArrayList Implements ITagesplan.getVorstellungen
         Return _Vorstellungen
     End Function
 

@@ -717,7 +717,7 @@ Public Interface ITagesplan
     'wird ans Ende hinzugefügt
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
-    Function getVorstellungen() As Array
+    Function getVorstellungen() As ArrayList
     Function getVorstellung(ByVal Position As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
 End Interface
@@ -727,21 +727,3 @@ Public Interface IVorstellung
     Sub SaalÄndern(Saal As Kinosaal)
     Sub FilmÄndern(Film As Film)
 End Interface
-
-Public Interface ITestinterface
-    Sub Testprozedur(ByRef a As Integer)
-    Function TestFunktion(ByVal b As Integer)
-End Interface
-
-Public Class Testklasse
-    Implements ITestinterface
-
-    Public Sub Testprozedur(ByRef a As Integer) Implements ITestinterface.Testprozedur
-        Throw New NotImplementedException()
-    End Sub
-
-    Public Function TestFunktion(b As Integer) As Object Implements ITestinterface.TestFunktion
-        Throw New NotImplementedException()
-    End Function
-
-End Class

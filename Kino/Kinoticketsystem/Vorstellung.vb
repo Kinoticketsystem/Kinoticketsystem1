@@ -6,8 +6,8 @@ Public Class Vorstellung
     Private _Startzeit As Integer 'in Minuten seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
     Private _Endzeit As Integer 'in Minuten seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
     Private _Besucher As ArrayList = New ArrayList()
-    Private Saal As Kinosaal 'falls wir keine nummern nehmen
-    Private Film As Film
+    Private _Saal As Kinosaal 'falls wir keine nummern nehmen
+    Private _Film As Film
 
 
 
@@ -16,8 +16,8 @@ Public Class Vorstellung
         Me._Startzeit = Startzeit
         Me._Endzeit = Endzeit
         Me._Besucher = Besucher
-        Me.Saal = Saal
-        Me.Film = Film
+        Me._Saal = Saal
+        Me._Film = Film
 
     End Sub
 
@@ -32,7 +32,7 @@ Public Class Vorstellung
         Return _Endzeit
     End Function
     Public Function getSaal() As Kinosaal  'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
-        Return Saal
+        Return _Saal
     End Function
     Public Function getAlleBesucher() As ArrayList  'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
         Return _Besucher
@@ -42,12 +42,12 @@ Public Class Vorstellung
     End Function
 
     Public Function getFilm() As Film 'Als Minutenanzahl seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
-        Return Film
+        Return _Film
     End Function
 
 
     Public Sub FilmÄndern(Film As Film) Implements IVorstellung.FilmÄndern
-        Me.Film = Film
+        Me._Film = Film
     End Sub
 
     Private Sub BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
@@ -62,7 +62,7 @@ Public Class Vorstellung
 
 
     Private Sub SaalÄndern(Saal As Kinosaal) Implements IVorstellung.SaalÄndern
-        Me.Saal = Saal
+        Me._Saal = Saal
     End Sub
 
     Public Sub setAnfangszeit(a As Integer)

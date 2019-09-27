@@ -1,21 +1,26 @@
 ﻿Public Class Kunde
-    Public _ausgewählteVorstellung As String
-    Public _AnzahlTreuePunkte As Integer
-    Public _Name As String
+    Private _ausgewählteVorstellung As Vorstellung
+    Private _AnzahlTreuePunkte As Integer = 0
+    Private _Name As String
 
 
-    Public Sub New(ByVal _ausgewählteVorstellung As String, ByVal _AnzahlTreuePunkte As Integer, ByVal _Name As String)
-        Me._ausgewählteVorstellung = _ausgewählteVorstellung
-        Me._AnzahlTreuePunkte = _AnzahlTreuePunkte
-        Me._Name = _Name
+    Public Sub New(ByVal Name As String)
+        '  Me._ausgewählteVorstellung = ausgewählteVorstellung 'Man soll auch Kunden erstellen, ohne ihnen direkt eine Vorstellung zuweisen zu müssen
+        'Me._AnzahlTreuePunkte = AnzahlTreuePunkte ''Man soll auch Kunden erstellen, ohne ihnen direkt Treuepunkte zuweisen zu müssen
+        Me._Name = Name
     End Sub
 
-    Public Sub Filmtitelfestlegen()
-        Me._ausgewählteVorstellung = _ausgewählteVorstellung
-
+    Public Sub Vorstellungfestlegen(a As Vorstellung)
+        Me._ausgewählteVorstellung = a
     End Sub
 
-    Public Sub SetName()
-        Me._Name = _Name
+    Public Sub SetTreuepunkte(A As Integer)
+        _AnzahlTreuePunkte = A
+    End Sub
+    Public Sub ErhöheTreuepunkte(A As Integer)
+        _AnzahlTreuePunkte = _AnzahlTreuePunkte + A
+    End Sub
+    Public Sub SetName(name As String)
+        Me._Name = name
     End Sub
 End Class
