@@ -99,7 +99,7 @@ Partial Class FTagesplan
         '
         'cmdTagesPlanErstellen
         '
-        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(775, 545)
+        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(453, 511)
         Me.cmdTagesPlanErstellen.Margin = New System.Windows.Forms.Padding(4)
         Me.cmdTagesPlanErstellen.Name = "cmdTagesPlanErstellen"
         Me.cmdTagesPlanErstellen.Size = New System.Drawing.Size(185, 32)
@@ -118,7 +118,7 @@ Partial Class FTagesplan
         '
         'txtFilmnummer
         '
-        Me.txtFilmnummer.Location = New System.Drawing.Point(491, 502)
+        Me.txtFilmnummer.Location = New System.Drawing.Point(468, 672)
         Me.txtFilmnummer.Name = "txtFilmnummer"
         Me.txtFilmnummer.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtFilmnummer.Size = New System.Drawing.Size(47, 30)
@@ -127,7 +127,7 @@ Partial Class FTagesplan
         '
         'txtFilmname
         '
-        Me.txtFilmname.Location = New System.Drawing.Point(269, 503)
+        Me.txtFilmname.Location = New System.Drawing.Point(200, 555)
         Me.txtFilmname.Name = "txtFilmname"
         Me.txtFilmname.Size = New System.Drawing.Size(100, 30)
         Me.txtFilmname.TabIndex = 3
@@ -255,20 +255,20 @@ Partial Class FTagesplan
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(491, 582)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(52, 668)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(248, 30)
         Me.DateTimePicker1.TabIndex = 17
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(993, 477)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(1068, 527)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 20
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(566, 503)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(554, 672)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 30)
         Me.NumericUpDown1.TabIndex = 22
@@ -703,7 +703,7 @@ Partial Class FTagesplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1203, 691)
+        Me.ClientSize = New System.Drawing.Size(1292, 752)
         Me.Controls.Add(Me.txtNachname)
         Me.Controls.Add(Me.txtVorname)
         Me.Controls.Add(Me.Button49)

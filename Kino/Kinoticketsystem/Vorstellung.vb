@@ -13,14 +13,15 @@ Public Class Vorstellung
 
     'Konstruktor
     Public Sub New(ByVal Startzeit As Integer, ByVal Endzeit As Integer, ByVal Besucher As ArrayList, ByVal Saal As Kinosaal, ByVal Film As Film)
-        If Startzeit > 0 And Endzeit < 1080 Then 'entspricht nicht vor 8:00 und nicht länger als 2:00
+        If Startzeit >= 0 And Endzeit < 1080 Then 'entspricht nicht vor 8:00 und nicht länger als 2:00
             _Startzeit = Startzeit
             _Endzeit = Endzeit
-
         Else
             Throw New Exception("die Veranstaltung kann nicht vor 8(=0) anfangen oder länger als 2:00(=1080) gehen")
         End If
-
+        If Endzeit - Startzeit < Film.getFilmlänge Then
+            Throw New Exception("Die Veranstaltung geht kürzer als der Film lang ist, das geht nicht !!!")
+        End If
         Me._Besucher = Besucher
         Me._Saal = Saal
         Me._Film = Film

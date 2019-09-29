@@ -1,20 +1,19 @@
 ﻿Public Class Film
 
     Private _Filmtitel As String
-    Private _Filmlänge As Integer
+    Private _Filmlänge As Integer 'in Minuten
     Private _Altersfreigabe As Integer
     Private _3D As Boolean
     Private _AnzahlFilmWiedergabe As Integer
 
 
 
-    Public Sub New(ByVal _Filmtitel As String, ByVal _Filmlänge As Integer, ByVal _Altersfreigabe As Integer, ByVal _3D As Boolean, ByVal _AnzahlFilmWiedergabe As Integer)
+    Public Sub New(ByVal Filmtitel As String, ByVal Filmlänge As Integer, ByVal Altersfreigabe As Integer, ByVal __3D As Boolean)
 
-        Me._Filmtitel = _Filmtitel
-        Me._Filmlänge = _Filmlänge
-        Me._Altersfreigabe = _Altersfreigabe
-        Me._3D = _3D
-        Me._AnzahlFilmWiedergabe = _AnzahlFilmWiedergabe
+        Me._Filmtitel = Filmtitel
+        Me._Filmlänge = Filmlänge
+        Me._Altersfreigabe = Altersfreigabe
+        Me._3D = __3D
 
 
     End Sub
@@ -42,7 +41,11 @@
         End If
     End Sub
 
-    Public Sub _AnzahlFilmWiedergabeÄndern()
+    Public Function getFilmlänge() As Integer
+        Return _Filmlänge
+    End Function
+
+    Public Sub _AnzahlFilmWiedergabeerhöhen()
         Me._AnzahlFilmWiedergabe = Me._AnzahlFilmWiedergabe + 1
     End Sub
 
