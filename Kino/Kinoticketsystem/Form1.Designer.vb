@@ -24,8 +24,6 @@ Partial Class FTagesplan
     Private Sub InitializeComponent()
         Me.cmdTagesPlanErstellen = New System.Windows.Forms.Button()
         Me.cmdFilmÄndern = New System.Windows.Forms.Button()
-        Me.txtFilmnummer = New System.Windows.Forms.TextBox()
-        Me.txtFilmname = New System.Windows.Forms.TextBox()
         Me.chbMontag = New System.Windows.Forms.CheckBox()
         Me.chbFreitag = New System.Windows.Forms.CheckBox()
         Me.chbMittwoch = New System.Windows.Forms.CheckBox()
@@ -38,9 +36,7 @@ Partial Class FTagesplan
         Me.chb1100 = New System.Windows.Forms.CheckBox()
         Me.chbSonntag = New System.Windows.Forms.CheckBox()
         Me.chbSamstag = New System.Windows.Forms.CheckBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.chb2100 = New System.Windows.Forms.CheckBox()
         Me.chb2330 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -92,46 +88,26 @@ Partial Class FTagesplan
         Me.Button47 = New System.Windows.Forms.Button()
         Me.Button48 = New System.Windows.Forms.Button()
         Me.Button49 = New System.Windows.Forms.Button()
-        Me.txtVorname = New System.Windows.Forms.TextBox()
-        Me.txtNachname = New System.Windows.Forms.TextBox()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdTagesPlanErstellen
         '
-        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(453, 511)
+        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(150, 516)
         Me.cmdTagesPlanErstellen.Margin = New System.Windows.Forms.Padding(4)
         Me.cmdTagesPlanErstellen.Name = "cmdTagesPlanErstellen"
-        Me.cmdTagesPlanErstellen.Size = New System.Drawing.Size(185, 32)
+        Me.cmdTagesPlanErstellen.Size = New System.Drawing.Size(221, 32)
         Me.cmdTagesPlanErstellen.TabIndex = 0
-        Me.cmdTagesPlanErstellen.Text = "Tagesplan erstellen"
+        Me.cmdTagesPlanErstellen.Text = "neuen Tagesplan erstellen"
         Me.cmdTagesPlanErstellen.UseVisualStyleBackColor = True
         '
         'cmdFilmÄndern
         '
-        Me.cmdFilmÄndern.Location = New System.Drawing.Point(704, 440)
+        Me.cmdFilmÄndern.Location = New System.Drawing.Point(507, 528)
         Me.cmdFilmÄndern.Name = "cmdFilmÄndern"
-        Me.cmdFilmÄndern.Size = New System.Drawing.Size(277, 64)
+        Me.cmdFilmÄndern.Size = New System.Drawing.Size(185, 32)
         Me.cmdFilmÄndern.TabIndex = 1
         Me.cmdFilmÄndern.Text = "Film ändern"
         Me.cmdFilmÄndern.UseVisualStyleBackColor = True
-        '
-        'txtFilmnummer
-        '
-        Me.txtFilmnummer.Location = New System.Drawing.Point(468, 672)
-        Me.txtFilmnummer.Name = "txtFilmnummer"
-        Me.txtFilmnummer.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtFilmnummer.Size = New System.Drawing.Size(47, 30)
-        Me.txtFilmnummer.TabIndex = 2
-        Me.txtFilmnummer.Text = "00"
-        '
-        'txtFilmname
-        '
-        Me.txtFilmname.Location = New System.Drawing.Point(200, 555)
-        Me.txtFilmname.Name = "txtFilmname"
-        Me.txtFilmname.Size = New System.Drawing.Size(100, 30)
-        Me.txtFilmname.TabIndex = 3
-        Me.txtFilmname.Text = "Filmname"
         '
         'chbMontag
         '
@@ -253,25 +229,11 @@ Partial Class FTagesplan
         Me.chbSamstag.Text = "Samstag"
         Me.chbSamstag.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(52, 668)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(248, 30)
-        Me.DateTimePicker1.TabIndex = 17
-        '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(1068, 527)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(914, 456)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 20
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(554, 672)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 30)
-        Me.NumericUpDown1.TabIndex = 22
         '
         'chb2100
         '
@@ -685,27 +647,11 @@ Partial Class FTagesplan
         Me.Button49.TabIndex = 74
         Me.Button49.UseVisualStyleBackColor = True
         '
-        'txtVorname
-        '
-        Me.txtVorname.Location = New System.Drawing.Point(50, 486)
-        Me.txtVorname.Name = "txtVorname"
-        Me.txtVorname.Size = New System.Drawing.Size(100, 30)
-        Me.txtVorname.TabIndex = 75
-        '
-        'txtNachname
-        '
-        Me.txtNachname.Location = New System.Drawing.Point(50, 555)
-        Me.txtNachname.Name = "txtNachname"
-        Me.txtNachname.Size = New System.Drawing.Size(100, 30)
-        Me.txtNachname.TabIndex = 76
-        '
         'FTagesplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1292, 752)
-        Me.Controls.Add(Me.txtNachname)
-        Me.Controls.Add(Me.txtVorname)
+        Me.ClientSize = New System.Drawing.Size(1161, 689)
         Me.Controls.Add(Me.Button49)
         Me.Controls.Add(Me.Button48)
         Me.Controls.Add(Me.Button47)
@@ -757,9 +703,7 @@ Partial Class FTagesplan
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chb2330)
         Me.Controls.Add(Me.chb2100)
-        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.MonthCalendar1)
-        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.chbSamstag)
         Me.Controls.Add(Me.chbSonntag)
         Me.Controls.Add(Me.chb1100)
@@ -772,15 +716,12 @@ Partial Class FTagesplan
         Me.Controls.Add(Me.chbMittwoch)
         Me.Controls.Add(Me.chbFreitag)
         Me.Controls.Add(Me.chbMontag)
-        Me.Controls.Add(Me.txtFilmname)
-        Me.Controls.Add(Me.txtFilmnummer)
         Me.Controls.Add(Me.cmdFilmÄndern)
         Me.Controls.Add(Me.cmdTagesPlanErstellen)
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FTagesplan"
         Me.Text = "Wochenplan"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -788,8 +729,6 @@ Partial Class FTagesplan
 
     Friend WithEvents cmdTagesPlanErstellen As Button
     Friend WithEvents cmdFilmÄndern As Button
-    Friend WithEvents txtFilmnummer As TextBox
-    Friend WithEvents txtFilmname As TextBox
     Friend WithEvents chbMontag As CheckBox
     Friend WithEvents chbFreitag As CheckBox
     Friend WithEvents chbMittwoch As CheckBox
@@ -802,9 +741,7 @@ Partial Class FTagesplan
     Friend WithEvents chb1100 As CheckBox
     Friend WithEvents chbSonntag As CheckBox
     Friend WithEvents chbSamstag As CheckBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents chb2100 As CheckBox
     Friend WithEvents chb2330 As CheckBox
     Friend WithEvents Button1 As Button
@@ -856,6 +793,4 @@ Partial Class FTagesplan
     Friend WithEvents Button47 As Button
     Friend WithEvents Button48 As Button
     Friend WithEvents Button49 As Button
-    Friend WithEvents txtVorname As TextBox
-    Friend WithEvents txtNachname As TextBox
 End Class

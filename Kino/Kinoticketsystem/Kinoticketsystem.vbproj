@@ -119,6 +119,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NeueVorstellung.Designer.vb">
+      <DependentUpon>NeueVorstellung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NeueVorstellung.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tagesplan.vb" />
     <Compile Include="Testklasse.vb" />
     <Compile Include="TexterfassenTest.Designer.vb">
@@ -141,6 +147,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeueVorstellung.resx">
+      <DependentUpon>NeueVorstellung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TexterfassenTest.resx">
       <DependentUpon>TexterfassenTest.vb</DependentUpon>

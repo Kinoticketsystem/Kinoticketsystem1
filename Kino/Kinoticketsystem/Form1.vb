@@ -17,7 +17,10 @@ Public Class FTagesplan
         VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
         GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nicht wegen Null referenz, weil noch keine Veranstaltungen eingelesen und initialisiert wurden)
         PositionDerFilmButtonsFestlegenY()  'muss noch gemacht werden (eigentlich fertig, oder nicht?)
+        ButtonsInvisibleMachen()
     End Sub
+
+
 
     Private Sub WochenplanAbrufenUndAusgeben()
         'Auslesen aus einer externen Textdatei
@@ -37,7 +40,7 @@ Public Class FTagesplan
     Private Sub VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
         Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, Nothing, a)
-        Dim c As Vorstellung = New Vorstellung(126, 240, Nothing, Nothing, a)
+        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, Nothing, a)
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
         _dritterTag = New Tagesplan
@@ -908,6 +911,12 @@ Public Class FTagesplan
 
     End Sub
 
+    Private Sub ButtonsInvisibleMachen()
+        cmdTagesPlanErstellen.Hide()
+        cmdFilmÄndern.Hide()
+        'Man könnte hier noch die Position individuell anpassen
+    End Sub
+
     Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
         '    _Montag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
         WriteLine("FilmHinzufügen funktioniert nicht")
@@ -921,15 +930,96 @@ Public Class FTagesplan
         End Select
     End Sub
 
+    Private Sub filmändern()
+        'wird aufgerufen, wenn einer der Buttons geklickt wird
+
+    End Sub
+    Private Sub chbMontag_CheckedChanged(sender As Object, e As EventArgs) Handles chbMontag.CheckedChanged
+        If chbMontag.Checked Then
+            chbDienstag.Checked = False
+            chbMittwoch.Checked = False
+            chbDonnerstag.Checked = False
+            chbFreitag.Checked = False
+            chbSamstag.Checked = False
+            chbSonntag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbMontag.Left
+        End If
+    End Sub
+    Private Sub chbDienstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDienstag.CheckedChanged
+        If chbDienstag.Checked Then
+            chbMontag.Checked = False
+            chbMittwoch.Checked = False
+            chbDonnerstag.Checked = False
+            chbFreitag.Checked = False
+            chbSamstag.Checked = False
+            chbSonntag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbDienstag.Left
+        End If
+    End Sub
+    Private Sub chbMittwoch_CheckedChanged(sender As Object, e As EventArgs) Handles chbMittwoch.CheckedChanged
+        If chbMittwoch.Checked Then
+            chbDienstag.Checked = False
+            chbMontag.Checked = False
+            chbDonnerstag.Checked = False
+            chbFreitag.Checked = False
+            chbSamstag.Checked = False
+            chbSonntag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbMittwoch.Left
+        End If
+    End Sub
+    Private Sub chbDonnerstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDonnerstag.CheckedChanged
+        If chbDonnerstag.Checked Then
+            chbDienstag.Checked = False
+            chbMittwoch.Checked = False
+            chbMontag.Checked = False
+            chbFreitag.Checked = False
+            chbSamstag.Checked = False
+            chbSonntag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbDonnerstag.Left
+        End If
+    End Sub
+    Private Sub chbFreitag_CheckedChanged(sender As Object, e As EventArgs) Handles chbFreitag.CheckedChanged
+        If chbFreitag.Checked Then
+            chbDienstag.Checked = False
+            chbMittwoch.Checked = False
+            chbDonnerstag.Checked = False
+            chbMontag.Checked = False
+            chbSamstag.Checked = False
+            chbSonntag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbFreitag.Left
+        End If
+    End Sub
+    Private Sub chbSamstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSamstag.CheckedChanged
+        If chbSamstag.Checked Then
+            chbDienstag.Checked = False
+            chbMittwoch.Checked = False
+            chbDonnerstag.Checked = False
+            chbFreitag.Checked = False
+            chbMontag.Checked = False
+            chbSonntag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbSamstag.Left
+        End If
+    End Sub
+    Private Sub chbSonntag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSonntag.CheckedChanged
+        If chbSonntag.Checked Then
+            chbDienstag.Checked = False
+            chbMittwoch.Checked = False
+            chbDonnerstag.Checked = False
+            chbFreitag.Checked = False
+            chbSamstag.Checked = False
+            chbMontag.Checked = False
+            cmdTagesPlanErstellen.Show()
+            cmdTagesPlanErstellen.Left = chbSonntag.Left
+        End If
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-    End Sub
-
-    Private Sub Button50_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub chb1330_CheckedChanged(sender As Object, e As EventArgs) Handles chb1330.CheckedChanged
 
     End Sub
 End Class
