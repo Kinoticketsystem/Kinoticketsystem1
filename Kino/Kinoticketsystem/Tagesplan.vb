@@ -8,6 +8,7 @@ Public Class Tagesplan
     Private _Vorstellungen As ArrayList = New ArrayList()
 
     'Es muss zusätzlich zum Konstruktor IMMER auch eine ErstellenMEthode aufgerufen werden
+    'Es wird geprüft, ob sich die Vorstellungen überschneiden (ob sie nicht zu früh oder zu spät anfangen siehe Vorstellung)
     Public Sub New()
         ' _Vorstellungen = New Vorstellung() {}
     End Sub
@@ -18,9 +19,18 @@ Public Class Tagesplan
         _Vorstellungen(4) = Vorstellung4
         _Vorstellungen(5) = Vorstellung5
         AnzahlFilmeProTag = 5
-        'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
-
-        'Next
+        If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
+            Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
+        End If
+        If Vorstellung2.getEndzeit > Vorstellung3.getAnfangszeit Then
+            Throw New Exception("die vorstellung3 beginnt, bevor die vorstellung2 endet")
+        End If
+        If Vorstellung3.getEndzeit > Vorstellung4.getAnfangszeit Then
+            Throw New Exception("die vorstellung4 beginnt, bevor die vorstellung3 endet")
+        End If
+        If Vorstellung4.getEndzeit > Vorstellung5.getAnfangszeit Then
+            Throw New Exception("die vorstellung5 beginnt, bevor die vorstellung4 endet")
+        End If
     End Sub
     Public Sub TagesplanErstellen4(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung)
         _Vorstellungen(1) = Vorstellung1
@@ -31,6 +41,15 @@ Public Class Tagesplan
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
         'Next
+        If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
+            Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
+        End If
+        If Vorstellung2.getEndzeit > Vorstellung3.getAnfangszeit Then
+            Throw New Exception("die vorstellung3 beginnt, bevor die vorstellung2 endet")
+        End If
+        If Vorstellung3.getEndzeit > Vorstellung4.getAnfangszeit Then
+            Throw New Exception("die vorstellung4 beginnt, bevor die vorstellung3 endet")
+        End If
     End Sub
     Public Sub TagesplanErstellen3(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung)
         _Vorstellungen(1) = Vorstellung1
@@ -40,6 +59,12 @@ Public Class Tagesplan
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
         'Next
+        If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
+            Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
+        End If
+        If Vorstellung2.getEndzeit > Vorstellung3.getAnfangszeit Then
+            Throw New Exception("die vorstellung3 beginnt, bevor die vorstellung2 endet")
+        End If
     End Sub
     Public Sub TagesplanErstellen2(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung)
         _Vorstellungen(1) = Vorstellung1
@@ -48,6 +73,9 @@ Public Class Tagesplan
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
         'Next
+        If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
+            Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
+        End If
     End Sub
     Public Sub TagesplanErstellen1(Vorstellung1 As Vorstellung)
         _Vorstellungen(1) = Vorstellung1

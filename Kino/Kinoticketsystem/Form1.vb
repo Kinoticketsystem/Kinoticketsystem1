@@ -14,8 +14,8 @@ Public Class FTagesplan
         PositionDerDatümerFestlegen()   'fertig
         PositionDerFilmButtonsFestlegenX()  'fertig
         WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik)
-        GrößeDerFilmButtonsFestlegen()  'muss noch Y-Größe gemacht werden
-        ' PositionDerFilmButtonsFestlegenY()  'muss noch gemacht werden
+        GrößeDerFilmButtonsFestlegen()  'muss noch Y-Größe gemacht werden ' jetzt fertig
+        PositionDerFilmButtonsFestlegenY()  'muss noch gemacht werden (eigentlich fertig, oder nicht?)
 
     End Sub
 
@@ -625,61 +625,61 @@ Public Class FTagesplan
         'Größe der Filme bestimmen
         'Hier muss noch ausgelesen werden, wie lange ein Film geht und dementsprechend die Größe,
         'die standartmäßig auf 26 ist, verändert werden. 
-        Button1.Size = New Size(A.Width, 26)
-        Button2.Size = New Size(A.Width, 26)
-        Button3.Size = New Size(A.Width, 26)
-        Button4.Size = New Size(A.Width, 26)
-        Button5.Size = New Size(A.Width, 26)
-        Button6.Size = New Size(A.Width, 26)
-        Button7.Size = New Size(A.Width, 26)
+        Button1.Size = New Size(A.Width, (_ersterTag.getVorstellung(1).getLänge() / 3))
+        Button2.Size = New Size(A.Width, (_ersterTag.getVorstellung(2).getLänge() / 3))
+        Button3.Size = New Size(A.Width, (_ersterTag.getVorstellung(3).getLänge() / 3))
+        Button4.Size = New Size(A.Width, (_ersterTag.getVorstellung(4).getLänge() / 3))
+        Button5.Size = New Size(A.Width, (_ersterTag.getVorstellung(5).getLänge() / 3))
+        Button6.Size = New Size(A.Width, (_ersterTag.getVorstellung(6).getLänge() / 3))
+        Button7.Size = New Size(A.Width, (_ersterTag.getVorstellung(7).getLänge() / 3))
 
-        Button8.Size = New Size(b.Width, 26)
-        Button9.Size = New Size(b.Width, 26)
-        Button10.Size = New Size(b.Width, 26)
-        Button11.Size = New Size(b.Width, 26)
-        Button12.Size = New Size(b.Width, 26)
-        Button13.Size = New Size(b.Width, 26)
-        Button14.Size = New Size(b.Width, 26)
+        Button8.Size = New Size(b.Width, (_zweiterTag.getVorstellung(1).getLänge() / 3))
+        Button9.Size = New Size(b.Width, (_zweiterTag.getVorstellung(2).getLänge() / 3))
+        Button10.Size = New Size(b.Width, (_zweiterTag.getVorstellung(3).getLänge() / 3))
+        Button11.Size = New Size(b.Width, (_zweiterTag.getVorstellung(4).getLänge() / 3))
+        Button12.Size = New Size(b.Width, (_zweiterTag.getVorstellung(5).getLänge() / 3))
+        Button13.Size = New Size(b.Width, (_zweiterTag.getVorstellung(6).getLänge() / 3))
+        Button14.Size = New Size(b.Width, (_zweiterTag.getVorstellung(7).getLänge() / 3))
 
-        Button15.Size = New Size(c.Width, 26)
-        Button16.Size = New Size(c.Width, 26)
-        Button17.Size = New Size(c.Width, 26)
-        Button18.Size = New Size(c.Width, 26)
-        Button19.Size = New Size(c.Width, 26)
-        Button20.Size = New Size(c.Width, 26)
-        Button21.Size = New Size(c.Width, 26)
+        Button15.Size = New Size(c.Width, (_dritterTag.getVorstellung(1).getLänge() / 3))
+        Button16.Size = New Size(c.Width, (_dritterTag.getVorstellung(2).getLänge() / 3))
+        Button17.Size = New Size(c.Width, (_dritterTag.getVorstellung(3).getLänge() / 3))
+        Button18.Size = New Size(c.Width, (_dritterTag.getVorstellung(4).getLänge() / 3))
+        Button19.Size = New Size(c.Width, (_dritterTag.getVorstellung(5).getLänge() / 3))
+        Button20.Size = New Size(c.Width, (_dritterTag.getVorstellung(6).getLänge() / 3))
+        Button21.Size = New Size(c.Width, (_dritterTag.getVorstellung(7).getLänge() / 3))
 
-        Button22.Size = New Size(d.Width, 26)
-        Button23.Size = New Size(d.Width, 26)
-        Button24.Size = New Size(d.Width, 26)
-        Button25.Size = New Size(d.Width, 26)
-        Button26.Size = New Size(d.Width, 26)
-        Button27.Size = New Size(d.Width, 26)
-        Button28.Size = New Size(d.Width, 26)
+        Button22.Size = New Size(d.Width, (_vierterTag.getVorstellung(1).getLänge() / 3))
+        Button23.Size = New Size(d.Width, (_vierterTag.getVorstellung(2).getLänge() / 3))
+        Button24.Size = New Size(d.Width, (_vierterTag.getVorstellung(3).getLänge() / 3))
+        Button25.Size = New Size(d.Width, (_vierterTag.getVorstellung(4).getLänge() / 3))
+        Button26.Size = New Size(d.Width, (_vierterTag.getVorstellung(5).getLänge() / 3))
+        Button27.Size = New Size(d.Width, (_vierterTag.getVorstellung(6).getLänge() / 3))
+        Button28.Size = New Size(d.Width, (_vierterTag.getVorstellung(7).getLänge() / 3))
 
-        Button29.Size = New Size(es.Width, 26)
-        Button30.Size = New Size(es.Width, 26)
-        Button31.Size = New Size(es.Width, 26)
-        Button32.Size = New Size(es.Width, 26)
-        Button33.Size = New Size(es.Width, 26)
-        Button34.Size = New Size(es.Width, 26)
-        Button35.Size = New Size(es.Width, 26)
+        Button29.Size = New Size(es.Width, (_fünfterTag.getVorstellung(1).getLänge() / 3))
+        Button30.Size = New Size(es.Width, (_fünfterTag.getVorstellung(2).getLänge() / 3))
+        Button31.Size = New Size(es.Width, (_fünfterTag.getVorstellung(3).getLänge() / 3))
+        Button32.Size = New Size(es.Width, (_fünfterTag.getVorstellung(4).getLänge() / 3))
+        Button33.Size = New Size(es.Width, (_fünfterTag.getVorstellung(5).getLänge() / 3))
+        Button34.Size = New Size(es.Width, (_fünfterTag.getVorstellung(6).getLänge() / 3))
+        Button35.Size = New Size(es.Width, (_fünfterTag.getVorstellung(7).getLänge() / 3))
 
-        Button36.Size = New Size(f.Width, 26)
-        Button37.Size = New Size(f.Width, 26)
-        Button38.Size = New Size(f.Width, 26)
-        Button39.Size = New Size(f.Width, 26)
-        Button40.Size = New Size(f.Width, 26)
-        Button41.Size = New Size(f.Width, 26)
-        Button42.Size = New Size(f.Width, 26)
+        Button36.Size = New Size(f.Width, (_sechsterTag.getVorstellung(1).getLänge() / 3))
+        Button37.Size = New Size(f.Width, (_sechsterTag.getVorstellung(2).getLänge() / 3))
+        Button38.Size = New Size(f.Width, (_sechsterTag.getVorstellung(3).getLänge() / 3))
+        Button39.Size = New Size(f.Width, (_sechsterTag.getVorstellung(4).getLänge() / 3))
+        Button40.Size = New Size(f.Width, (_sechsterTag.getVorstellung(5).getLänge() / 3))
+        Button41.Size = New Size(f.Width, (_sechsterTag.getVorstellung(6).getLänge() / 3))
+        Button42.Size = New Size(f.Width, (_sechsterTag.getVorstellung(7).getLänge() / 3))
 
-        Button43.Size = New Size(g.Width, 26)
-        Button44.Size = New Size(g.Width, 26)
-        Button45.Size = New Size(g.Width, 26)
-        Button46.Size = New Size(g.Width, 26)
-        Button47.Size = New Size(g.Width, 26)
-        Button48.Size = New Size(g.Width, 26)
-        Button49.Size = New Size(g.Width, 26)
+        Button43.Size = New Size(g.Width, (_siebterTag.getVorstellung(1).getLänge() / 3))
+        Button44.Size = New Size(g.Width, (_siebterTag.getVorstellung(2).getLänge() / 3))
+        Button45.Size = New Size(g.Width, (_siebterTag.getVorstellung(3).getLänge() / 3))
+        Button46.Size = New Size(g.Width, (_siebterTag.getVorstellung(4).getLänge() / 3))
+        Button47.Size = New Size(g.Width, (_siebterTag.getVorstellung(5).getLänge() / 3))
+        Button48.Size = New Size(g.Width, (_siebterTag.getVorstellung(6).getLänge() / 3))
+        Button49.Size = New Size(g.Width, (_siebterTag.getVorstellung(7).getLänge() / 3))
     End Sub
 
     Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
@@ -721,7 +721,6 @@ Public Interface ITagesplan
     Function getVorstellung(ByVal Position As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
 End Interface
-
 Public Interface IVorstellung
     Sub BesucherHinzufügen(Besucher As Kunde)
     Sub SaalÄndern(Saal As Kinosaal)

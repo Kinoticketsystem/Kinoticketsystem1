@@ -13,8 +13,14 @@ Public Class Vorstellung
 
     'Konstruktor
     Public Sub New(ByVal Startzeit As Integer, ByVal Endzeit As Integer, ByVal Besucher As ArrayList, ByVal Saal As Kinosaal, ByVal Film As Film)
-        Me._Startzeit = Startzeit
-        Me._Endzeit = Endzeit
+        If Startzeit > 0 And Endzeit < 1080 Then 'entspricht nicht vor 8:00 und nicht länger als 2:00
+            _Startzeit = Startzeit
+            _Endzeit = Endzeit
+
+        Else
+            Throw New Exception("die Veranstaltung kann nicht vor 8(=0) anfangen oder länger als 2:00(=1080) gehen")
+        End If
+
         Me._Besucher = Besucher
         Me._Saal = Saal
         Me._Film = Film
@@ -75,4 +81,8 @@ Public Class Vorstellung
             Throw New Exception("Die Endzeit der Vorstellung wird versucht auf einen Zeitpunkt vor der Startzeit festzulegen")
         End If
     End Sub
+
+    Public Function getLänge() As Integer
+        Return (getEndzeit() - getAnfangszeit())
+    End Function
 End Class
