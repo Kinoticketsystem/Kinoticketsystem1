@@ -930,9 +930,27 @@ Public Class FTagesplan
         End Select
     End Sub
 
-    Private Sub filmändern()
+    Private Sub filmändern(Tag As Integer, Stelle As Integer, z As Vorstellung)
         'wird aufgerufen, wenn einer der Buttons geklickt wird
-
+        Select Case Tag
+            Case 1
+                Me._ersterTag.VorstellungÄndern(z, Stelle)
+            Case 2
+                _zweiterTag.VorstellungÄndern(z, Stelle)
+            Case 3
+                _dritterTag.VorstellungÄndern(z, Stelle)
+            Case 4
+                _vierterTag.VorstellungÄndern(z, Stelle)
+            Case 5
+                _fünfterTag.VorstellungÄndern(z, Stelle)
+            Case 6
+                _sechsterTag.VorstellungÄndern(z, Stelle)
+            Case 7
+                _siebterTag.VorstellungÄndern(z, Stelle)
+        End Select
+        'Buttons neu laden & ändern funktioniert nur, wenn ein bestehender Film geändert wird
+        GrößeDerFilmButtonsFestlegen()
+        PositionDerFilmButtonsFestlegenY()
     End Sub
     Private Sub chbMontag_CheckedChanged(sender As Object, e As EventArgs) Handles chbMontag.CheckedChanged
         If chbMontag.Checked Then
@@ -1020,6 +1038,14 @@ Public Class FTagesplan
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        '  Dim z As Vorstellung = New Vorstellung()
+        '  filmändern(1, 1, z)
+
+    End Sub
+
+    Private Sub cmdTagesPlanErstellen_Click(sender As Object, e As EventArgs) Handles cmdTagesPlanErstellen.Click
 
     End Sub
 End Class

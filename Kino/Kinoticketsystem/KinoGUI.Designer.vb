@@ -51,7 +51,7 @@ Partial Class KinoGUI
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(406, 146)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(229, 40)
+        Me.Label1.Size = New System.Drawing.Size(225, 38)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Das wird schon"
         '

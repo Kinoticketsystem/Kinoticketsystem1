@@ -27,19 +27,23 @@ Partial Class NeueVorstellung
         Me.lblstartuhrzeit = New System.Windows.Forms.Label()
         Me.lblEnduhrszeit = New System.Windows.Forms.Label()
         Me.txtname = New System.Windows.Forms.TextBox()
-        Me.txtStartuhrzeit = New System.Windows.Forms.TextBox()
-        Me.txtenduhrzeit = New System.Windows.Forms.TextBox()
         Me.lblFilmAuswählen = New System.Windows.Forms.Label()
         Me.cmdFilmHinZuFügen = New System.Windows.Forms.Button()
         Me.cmdBesucherHinzufügen = New System.Windows.Forms.Button()
         Me.lblBesucherAuswähler = New System.Windows.Forms.Label()
         Me.chlFilme = New System.Windows.Forms.CheckedListBox()
         Me.chlBesucherAuswählen = New System.Windows.Forms.CheckedListBox()
+        Me.lstBesucher = New System.Windows.Forms.ListBox()
+        Me.StartuhrzeitWert = New System.Windows.Forms.NumericUpDown()
+        Me.EnduhrzeitWert = New System.Windows.Forms.NumericUpDown()
+        Me.lblFilmInfos = New System.Windows.Forms.Label()
+        CType(Me.StartuhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnduhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdfertig
         '
-        Me.cmdfertig.Location = New System.Drawing.Point(554, 474)
+        Me.cmdfertig.Location = New System.Drawing.Point(524, 509)
         Me.cmdfertig.Name = "cmdfertig"
         Me.cmdfertig.Size = New System.Drawing.Size(75, 32)
         Me.cmdfertig.TabIndex = 0
@@ -60,18 +64,18 @@ Partial Class NeueVorstellung
         Me.lblstartuhrzeit.AutoSize = True
         Me.lblstartuhrzeit.Location = New System.Drawing.Point(43, 71)
         Me.lblstartuhrzeit.Name = "lblstartuhrzeit"
-        Me.lblstartuhrzeit.Size = New System.Drawing.Size(106, 22)
+        Me.lblstartuhrzeit.Size = New System.Drawing.Size(173, 22)
         Me.lblstartuhrzeit.TabIndex = 2
-        Me.lblstartuhrzeit.Text = "Startuhrzeit:"
+        Me.lblstartuhrzeit.Text = "Startuhrzeit (h, min):"
         '
         'lblEnduhrszeit
         '
         Me.lblEnduhrszeit.AutoSize = True
         Me.lblEnduhrszeit.Location = New System.Drawing.Point(43, 107)
         Me.lblEnduhrszeit.Name = "lblEnduhrszeit"
-        Me.lblEnduhrszeit.Size = New System.Drawing.Size(100, 22)
+        Me.lblEnduhrszeit.Size = New System.Drawing.Size(167, 22)
         Me.lblEnduhrszeit.TabIndex = 3
-        Me.lblEnduhrszeit.Text = "Enduhrzeit:"
+        Me.lblEnduhrszeit.Text = "Enduhrzeit (h, min):"
         '
         'txtname
         '
@@ -79,20 +83,6 @@ Partial Class NeueVorstellung
         Me.txtname.Name = "txtname"
         Me.txtname.Size = New System.Drawing.Size(197, 30)
         Me.txtname.TabIndex = 4
-        '
-        'txtStartuhrzeit
-        '
-        Me.txtStartuhrzeit.Location = New System.Drawing.Point(251, 71)
-        Me.txtStartuhrzeit.Name = "txtStartuhrzeit"
-        Me.txtStartuhrzeit.Size = New System.Drawing.Size(100, 30)
-        Me.txtStartuhrzeit.TabIndex = 5
-        '
-        'txtenduhrzeit
-        '
-        Me.txtenduhrzeit.Location = New System.Drawing.Point(251, 107)
-        Me.txtenduhrzeit.Name = "txtenduhrzeit"
-        Me.txtenduhrzeit.Size = New System.Drawing.Size(100, 30)
-        Me.txtenduhrzeit.TabIndex = 6
         '
         'lblFilmAuswählen
         '
@@ -105,7 +95,7 @@ Partial Class NeueVorstellung
         '
         'cmdFilmHinZuFügen
         '
-        Me.cmdFilmHinZuFügen.Location = New System.Drawing.Point(293, 291)
+        Me.cmdFilmHinZuFügen.Location = New System.Drawing.Point(293, 336)
         Me.cmdFilmHinZuFügen.Name = "cmdFilmHinZuFügen"
         Me.cmdFilmHinZuFügen.Size = New System.Drawing.Size(155, 32)
         Me.cmdFilmHinZuFügen.TabIndex = 9
@@ -114,7 +104,7 @@ Partial Class NeueVorstellung
         '
         'cmdBesucherHinzufügen
         '
-        Me.cmdBesucherHinzufügen.Location = New System.Drawing.Point(266, 464)
+        Me.cmdBesucherHinzufügen.Location = New System.Drawing.Point(251, 509)
         Me.cmdBesucherHinzufügen.Name = "cmdBesucherHinzufügen"
         Me.cmdBesucherHinzufügen.Size = New System.Drawing.Size(182, 32)
         Me.cmdBesucherHinzufügen.TabIndex = 12
@@ -124,7 +114,7 @@ Partial Class NeueVorstellung
         'lblBesucherAuswähler
         '
         Me.lblBesucherAuswähler.AutoSize = True
-        Me.lblBesucherAuswähler.Location = New System.Drawing.Point(43, 329)
+        Me.lblBesucherAuswähler.Location = New System.Drawing.Point(43, 374)
         Me.lblBesucherAuswähler.Name = "lblBesucherAuswähler"
         Me.lblBesucherAuswähler.Size = New System.Drawing.Size(177, 22)
         Me.lblBesucherAuswähler.TabIndex = 11
@@ -133,41 +123,77 @@ Partial Class NeueVorstellung
         'chlFilme
         '
         Me.chlFilme.FormattingEnabled = True
-        Me.chlFilme.Location = New System.Drawing.Point(251, 143)
+        Me.chlFilme.Location = New System.Drawing.Point(251, 172)
         Me.chlFilme.Name = "chlFilme"
-        Me.chlFilme.Size = New System.Drawing.Size(197, 129)
+        Me.chlFilme.Size = New System.Drawing.Size(197, 154)
         Me.chlFilme.TabIndex = 13
         '
         'chlBesucherAuswählen
         '
         Me.chlBesucherAuswählen.FormattingEnabled = True
-        Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 329)
+        Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 374)
         Me.chlBesucherAuswählen.Name = "chlBesucherAuswählen"
         Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 129)
         Me.chlBesucherAuswählen.TabIndex = 14
+        '
+        'lstBesucher
+        '
+        Me.lstBesucher.FormattingEnabled = True
+        Me.lstBesucher.ItemHeight = 22
+        Me.lstBesucher.Location = New System.Drawing.Point(454, 374)
+        Me.lstBesucher.Name = "lstBesucher"
+        Me.lstBesucher.Size = New System.Drawing.Size(145, 114)
+        Me.lstBesucher.TabIndex = 16
+        '
+        'StartuhrzeitWert
+        '
+        Me.StartuhrzeitWert.Location = New System.Drawing.Point(251, 69)
+        Me.StartuhrzeitWert.Name = "StartuhrzeitWert"
+        Me.StartuhrzeitWert.Size = New System.Drawing.Size(76, 30)
+        Me.StartuhrzeitWert.TabIndex = 17
+        '
+        'EnduhrzeitWert
+        '
+        Me.EnduhrzeitWert.Location = New System.Drawing.Point(251, 107)
+        Me.EnduhrzeitWert.Name = "EnduhrzeitWert"
+        Me.EnduhrzeitWert.Size = New System.Drawing.Size(76, 30)
+        Me.EnduhrzeitWert.TabIndex = 18
+        '
+        'lblFilmInfos
+        '
+        Me.lblFilmInfos.AutoSize = True
+        Me.lblFilmInfos.Location = New System.Drawing.Point(251, 147)
+        Me.lblFilmInfos.Name = "lblFilmInfos"
+        Me.lblFilmInfos.Size = New System.Drawing.Size(109, 22)
+        Me.lblFilmInfos.TabIndex = 19
+        Me.lblFilmInfos.Text = "Beispielfilm"
         '
         'NeueVorstellung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 518)
+        Me.ClientSize = New System.Drawing.Size(639, 565)
+        Me.Controls.Add(Me.lblFilmInfos)
+        Me.Controls.Add(Me.EnduhrzeitWert)
+        Me.Controls.Add(Me.StartuhrzeitWert)
+        Me.Controls.Add(Me.lstBesucher)
         Me.Controls.Add(Me.chlBesucherAuswählen)
         Me.Controls.Add(Me.chlFilme)
         Me.Controls.Add(Me.cmdBesucherHinzufügen)
         Me.Controls.Add(Me.lblBesucherAuswähler)
         Me.Controls.Add(Me.cmdFilmHinZuFügen)
         Me.Controls.Add(Me.lblFilmAuswählen)
-        Me.Controls.Add(Me.txtenduhrzeit)
-        Me.Controls.Add(Me.txtStartuhrzeit)
         Me.Controls.Add(Me.txtname)
         Me.Controls.Add(Me.lblEnduhrszeit)
         Me.Controls.Add(Me.lblstartuhrzeit)
         Me.Controls.Add(Me.lblname)
         Me.Controls.Add(Me.cmdfertig)
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "NeueVorstellung"
         Me.Text = "Veranstaltung ändern"
+        CType(Me.StartuhrzeitWert, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnduhrzeitWert, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,12 +204,14 @@ Partial Class NeueVorstellung
     Friend WithEvents lblstartuhrzeit As Label
     Friend WithEvents lblEnduhrszeit As Label
     Friend WithEvents txtname As TextBox
-    Friend WithEvents txtStartuhrzeit As TextBox
-    Friend WithEvents txtenduhrzeit As TextBox
     Friend WithEvents lblFilmAuswählen As Label
     Friend WithEvents cmdFilmHinZuFügen As Button
     Friend WithEvents cmdBesucherHinzufügen As Button
     Friend WithEvents lblBesucherAuswähler As Label
     Friend WithEvents chlFilme As CheckedListBox
     Friend WithEvents chlBesucherAuswählen As CheckedListBox
+    Friend WithEvents lstBesucher As ListBox
+    Friend WithEvents StartuhrzeitWert As NumericUpDown
+    Friend WithEvents EnduhrzeitWert As NumericUpDown
+    Friend WithEvents lblFilmInfos As Label
 End Class

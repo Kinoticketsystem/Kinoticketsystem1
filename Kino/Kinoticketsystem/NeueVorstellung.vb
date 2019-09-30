@@ -1,3 +1,242 @@
 ﻿Public Class NeueVorstellung
+    Private _Filmtitel As String
+    Private _Startzeit As Integer
+    Private _Endzeit As Integer
+    Private _Film As Film
+    Private _Besucher() As Kunde
 
+    Private Sub NeueVorstellung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        StartuhrzeitWert.DecimalPlaces = 2
+        StartuhrzeitWert.Value = 8
+        StartuhrzeitWert.Maximum = 24
+        StartuhrzeitWert.Minimum = 8
+        StartuhrzeitWert.Increment = 0.05
+        EnduhrzeitWert.DecimalPlaces = 2
+        EnduhrzeitWert.Value = 8
+        EnduhrzeitWert.Maximum = 24
+        EnduhrzeitWert.Minimum = 8
+        EnduhrzeitWert.Increment = 0.05
+
+    End Sub
+
+    Private Sub cmdfertig_Click(sender As Object, e As EventArgs) Handles cmdfertig.Click
+        _Filmtitel = txtname.Text
+        _Startzeit = StartuhrzeitWert.Value
+
+
+    End Sub
+
+    Private Sub StartuhrzeitWert_ValueChanged(sender As Object, e As EventArgs) Handles StartuhrzeitWert.ValueChanged
+        Dim a As Double = Math.Round(StartuhrzeitWert.Value, 1)
+        If StartuhrzeitWert.Value >= 8.6 And StartuhrzeitWert.Value < 9 Then
+            If a = 8.6 Or a = 8.7 Then
+                StartuhrzeitWert.Value = 9
+            Else
+                StartuhrzeitWert.Value = 8.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 9.6 And StartuhrzeitWert.Value < 10 Then
+            If a = 9.6 Or a = 9.7 Then
+                StartuhrzeitWert.Value = 10
+            Else
+                StartuhrzeitWert.Value = 9.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 10.6 And StartuhrzeitWert.Value < 11 Then
+            If a = 10.6 Or a = 10.7 Then
+                StartuhrzeitWert.Value = 11
+            Else
+                StartuhrzeitWert.Value = 10.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 11.6 And StartuhrzeitWert.Value < 12 Then
+            If a = 11.6 Or a = 11.7 Then
+                StartuhrzeitWert.Value = 12
+            Else
+                StartuhrzeitWert.Value = 11.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 12.6 And StartuhrzeitWert.Value < 13 Then
+            If a = 12.6 Or a = 12.7 Then
+                StartuhrzeitWert.Value = 13
+            Else
+                StartuhrzeitWert.Value = 12.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 13.6 And StartuhrzeitWert.Value < 14 Then
+            If a = 13.6 Or a = 13.7 Then
+                StartuhrzeitWert.Value = 14
+            Else
+                StartuhrzeitWert.Value = 13.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 14.6 And StartuhrzeitWert.Value < 15 Then
+            If a = 14.6 Or a = 14.7 Then
+                StartuhrzeitWert.Value = 15
+            Else
+                StartuhrzeitWert.Value = 14.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 15.6 And StartuhrzeitWert.Value < 16 Then
+            If a = 15.6 Or a = 15.7 Then
+                StartuhrzeitWert.Value = 16
+            Else
+                StartuhrzeitWert.Value = 15.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 16.6 And StartuhrzeitWert.Value < 17 Then
+            If a = 16.6 Or a = 16.7 Then
+                StartuhrzeitWert.Value = 17
+            Else
+                StartuhrzeitWert.Value = 16.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 17.6 And StartuhrzeitWert.Value < 18 Then
+            If a = 17.6 Or a = 17.7 Then
+                StartuhrzeitWert.Value = 18
+            Else
+                StartuhrzeitWert.Value = 17.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 18.6 And StartuhrzeitWert.Value < 19 Then
+            If a = 18.6 Or a = 18.7 Then
+                StartuhrzeitWert.Value = 19
+            Else
+                StartuhrzeitWert.Value = 18.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 19.6 And StartuhrzeitWert.Value < 20 Then
+            If a = 19.6 Or a = 19.7 Then
+                StartuhrzeitWert.Value = 20
+            Else
+                StartuhrzeitWert.Value = 19.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 20.6 And StartuhrzeitWert.Value < 21 Then
+            If a = 20.6 Or a = 20.7 Then
+                StartuhrzeitWert.Value = 21
+            Else
+                StartuhrzeitWert.Value = 20.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 21.6 And StartuhrzeitWert.Value < 22 Then
+            If a = 21.6 Or a = 21.7 Then
+                StartuhrzeitWert.Value = 22
+            Else
+                StartuhrzeitWert.Value = 21.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 22.6 And StartuhrzeitWert.Value < 23 Then
+            If a = 22.6 Or a = 22.7 Then
+                StartuhrzeitWert.Value = 23
+            Else
+                StartuhrzeitWert.Value = 22.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 23.6 And StartuhrzeitWert.Value < 24 Then
+            If a = 23.6 Or a = 23.7 Then
+                StartuhrzeitWert.Value = 24
+            Else
+                StartuhrzeitWert.Value = 23.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 24.6 And StartuhrzeitWert.Value < 25 Then
+            If a = 24.6 Or a = 24.7 Then
+                StartuhrzeitWert.Value = 25
+            Else
+                StartuhrzeitWert.Value = 24.55
+            End If
+        End If
+    End Sub
+
+    Private Sub EnduhrzeitWert_ValueChanged(sender As Object, e As EventArgs) Handles EnduhrzeitWert.ValueChanged
+        Dim a As Double = Math.Round(EnduhrzeitWert.Value, 1)
+        If EnduhrzeitWert.Value >= 8.6 And EnduhrzeitWert.Value < 9 Then
+            If a = 8.6 Or a = 8.7 Then
+                EnduhrzeitWert.Value = 9
+            Else
+                EnduhrzeitWert.Value = 8.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 9.6 And EnduhrzeitWert.Value < 10 Then
+            If a = 9.6 Or a = 9.7 Then
+                EnduhrzeitWert.Value = 10
+            Else
+                EnduhrzeitWert.Value = 9.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 10.6 And EnduhrzeitWert.Value < 11 Then
+            If a = 10.6 Or a = 10.7 Then
+                EnduhrzeitWert.Value = 11
+            Else
+                EnduhrzeitWert.Value = 10.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 11.6 And EnduhrzeitWert.Value < 12 Then
+            If a = 11.6 Or a = 11.7 Then
+                EnduhrzeitWert.Value = 12
+            Else
+                EnduhrzeitWert.Value = 11.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 12.6 And EnduhrzeitWert.Value < 13 Then
+            If a = 12.6 Or a = 12.7 Then
+                EnduhrzeitWert.Value = 13
+            Else
+                EnduhrzeitWert.Value = 12.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 13.6 And EnduhrzeitWert.Value < 14 Then
+            If a = 13.6 Or a = 13.7 Then
+                EnduhrzeitWert.Value = 14
+            Else
+                EnduhrzeitWert.Value = 13.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 14.6 And EnduhrzeitWert.Value < 15 Then
+            If a = 14.6 Or a = 14.7 Then
+                EnduhrzeitWert.Value = 15
+            Else
+                EnduhrzeitWert.Value = 14.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 15.6 And EnduhrzeitWert.Value < 16 Then
+            If a = 15.6 Or a = 15.7 Then
+                EnduhrzeitWert.Value = 16
+            Else
+                EnduhrzeitWert.Value = 15.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 16.6 And EnduhrzeitWert.Value < 17 Then
+            If a = 16.6 Or a = 16.7 Then
+                EnduhrzeitWert.Value = 17
+            Else
+                EnduhrzeitWert.Value = 16.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 17.6 And EnduhrzeitWert.Value < 18 Then
+            If a = 17.6 Or a = 17.7 Then
+                EnduhrzeitWert.Value = 18
+            Else
+                EnduhrzeitWert.Value = 17.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 18.6 And EnduhrzeitWert.Value < 19 Then
+            If a = 18.6 Or a = 18.7 Then
+                EnduhrzeitWert.Value = 19
+            Else
+                EnduhrzeitWert.Value = 18.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 19.6 And EnduhrzeitWert.Value < 20 Then
+            If a = 19.6 Or a = 19.7 Then
+                EnduhrzeitWert.Value = 20
+            Else
+                EnduhrzeitWert.Value = 19.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 20.6 And EnduhrzeitWert.Value < 21 Then
+            If a = 20.6 Or a = 20.7 Then
+                EnduhrzeitWert.Value = 21
+            Else
+                EnduhrzeitWert.Value = 20.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 21.6 And EnduhrzeitWert.Value < 22 Then
+            If a = 21.6 Or a = 21.7 Then
+                EnduhrzeitWert.Value = 22
+            Else
+                EnduhrzeitWert.Value = 21.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 22.6 And EnduhrzeitWert.Value < 23 Then
+            If a = 22.6 Or a = 22.7 Then
+                EnduhrzeitWert.Value = 23
+            Else
+                EnduhrzeitWert.Value = 22.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 23.6 And EnduhrzeitWert.Value < 24 Then
+            If a = 23.6 Or a = 23.7 Then
+                EnduhrzeitWert.Value = 24
+            Else
+                EnduhrzeitWert.Value = 23.55
+            End If
+        ElseIf EnduhrzeitWert.Value >= 24.6 And EnduhrzeitWert.Value < 25 Then
+            If a = 24.6 Or a = 24.7 Then
+                EnduhrzeitWert.Value = 25
+            Else
+                EnduhrzeitWert.Value = 24.55
+            End If
+        End If
+    End Sub
 End Class
