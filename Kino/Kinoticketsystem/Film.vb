@@ -63,4 +63,8 @@
         'txt.FilmeDaten.Text = "Der Film", _Filmtitel, ":", "hat eine Spieldauer von", _Filmlänge, " ist ab", _Altersfreigabe, "Wird in", 3D, "wiedergegeben und wurde berreits", _AnzahlFilmWiedergabe, " gespielt."
 
     End Function
+
+    Public Function getFilmtitel() As String
+        Return _Filmtitel
+    End Function
 End Class

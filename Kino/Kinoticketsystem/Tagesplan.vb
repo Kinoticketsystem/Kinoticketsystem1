@@ -5,6 +5,7 @@ Public Class Tagesplan
     Private MaximaleAnzahlFilmeProTag As Integer = 10
     Private _Vorstellungen(MaximaleAnzahlFilmeProTag) As Vorstellung
     Private AnzahlFilmeProTag As Integer
+    Private _Saal As Kinosaal
     ' Private _Vorstellungen As ArrayList = New ArrayList()
 
     'Es muss zusätzlich zum Konstruktor IMMER auch eine ErstellenMEthode aufgerufen werden
@@ -115,4 +116,11 @@ Public Class Tagesplan
     Public Function getAnzahlVorstellungen() As Integer Implements ITagesplan.getAnzahlVorstellungen
         Return AnzahlFilmeProTag
     End Function
+
+    Public Function getSaal() As Kinosaal Implements ITagesplan.getSaal
+        Return _Saal
+    End Function
+    Public Sub setSaal(a As Kinosaal)
+        _Saal = a
+    End Sub
 End Class

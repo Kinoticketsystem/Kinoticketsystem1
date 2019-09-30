@@ -39,8 +39,8 @@ Public Class FTagesplan
     End Sub
     Private Sub VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
-        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, Nothing, a)
-        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, Nothing, a)
+        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a)
+        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a)
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
         _dritterTag = New Tagesplan
@@ -930,7 +930,7 @@ Public Class FTagesplan
         End Select
     End Sub
 
-    Private Sub filmändern(Tag As Integer, Stelle As Integer, z As Vorstellung)
+    Public Sub filmändern(Tag As Integer, Stelle As Integer, z As Vorstellung)
         'wird aufgerufen, wenn einer der Buttons geklickt wird
         Select Case Tag
             Case 1
@@ -1040,14 +1040,51 @@ Public Class FTagesplan
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         NeueVorstellung.BringToFront()
         NeueVorstellung.Show()
-        '  Dim z As Vorstellung = New Vorstellung()
-        '  filmändern(1, 1, z)
-
+        NeueVorstellung.PositionÜbergeben(1, 1)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        NeueVorstellung.PositionÜbergeben(1, 2)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
     End Sub
 
-    Private Sub cmdTagesPlanErstellen_Click(sender As Object, e As EventArgs) Handles cmdTagesPlanErstellen.Click
-
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        NeueVorstellung.PositionÜbergeben(1, 3)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        NeueVorstellung.PositionÜbergeben(1, 4)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        NeueVorstellung.PositionÜbergeben(1, 5)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        NeueVorstellung.PositionÜbergeben(1, 6)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.Show()
+        NeueVorstellung.PositionÜbergeben(1, 7)
+        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+    End Sub
+    'Hier fehlen noch die anderen Tage ab 2.Tag
 End Class
 
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird
@@ -1067,6 +1104,7 @@ Public Interface ITagesplan
     Function getVorstellungen() As Array
     Function getVorstellung(ByVal Position As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
+    Function getSaal() As Kinosaal
 End Interface
 Public Interface IVorstellung
     Sub BesucherHinzufügen(Besucher As Kunde)
