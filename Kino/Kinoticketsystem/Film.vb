@@ -64,6 +64,10 @@
 
     End Function
 
+    Public Function getAltersfreigabe() As Integer
+        Return _Altersfreigabe
+    End Function
+
     Public Function getFilmtitel() As String
         Return _Filmtitel
     End Function

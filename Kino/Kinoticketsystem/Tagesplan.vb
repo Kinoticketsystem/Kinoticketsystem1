@@ -123,4 +123,7 @@ Public Class Tagesplan
     Public Sub setSaal(a As Kinosaal)
         _Saal = a
     End Sub
+    Public Function getFSK(Stelle As Integer) As Integer Implements ITagesplan.getFSK
+        Return _Vorstellungen(Stelle).getFilm.getAltersfreigabe
+    End Function
 End Class

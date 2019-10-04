@@ -34,7 +34,7 @@ Public Class NeueVorstellung
         _Startzeit = (StartuhrzeitWert.Value * 100) - (8 * 60) '0 ist bei 8:00
         _Endzeit = (EnduhrzeitWert.Value * 100) - (8 * 60)
         If Not (_FilmHinzugefügt) Then
-            lblFilmAuswählen.ForeColor = New Color().Red
+            lblFilmAuswählen.ForeColor = Color.Red
         Else
             'sich selber nicht hier schließen, damit danach noch ausgelesen werden kann
             Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm)

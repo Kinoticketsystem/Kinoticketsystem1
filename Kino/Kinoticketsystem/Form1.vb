@@ -18,9 +18,61 @@ Public Class FTagesplan
         GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nicht wegen Null referenz, weil noch keine Veranstaltungen eingelesen und initialisiert wurden)
         PositionDerFilmButtonsFestlegenY()  'muss noch gemacht werden (eigentlich fertig, oder nicht?)
         ButtonsInvisibleMachen()
+        FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
+
+
     End Sub
 
+    Private Sub FarbeDerButtonsFestlegen()
 
+        Button1.FlatStyle = FlatStyle.Flat 'Notwendig!!!
+        Button1.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
+        Button1.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
+
+        Button1.ForeColor = Color.White 'ganz cool, aber nicht notwendig
+        Select Case _ersterTag.getAnzahlVorstellungen
+            Case 1
+                If _ersterTag.getFSK(1) <= 0 Then
+                    Button1.BackColor = Color.White
+                ElseIf _ersterTag.getFSK(1) <= 6 Then
+                    Button1.BackColor = Color.Yellow
+
+                ElseIf _ersterTag.getFSK(1) <= 12 Then
+                    Button1.BackColor = Color.Green
+                ElseIf _ersterTag.getFSK(1) <= 16 Then
+                    Button1.BackColor = Color.Blue
+                Else
+                    Button1.BackColor = Color.Red
+                End If
+            Case 2
+                If _ersterTag.getFSK(1) <= 0 Then
+                    Button1.BackColor = Color.White
+                ElseIf _ersterTag.getFSK(1) <= 6 Then
+                    Button1.BackColor = Color.Yellow
+
+                ElseIf _ersterTag.getFSK(1) <= 12 Then
+                    Button1.BackColor = Color.Green
+                ElseIf _ersterTag.getFSK(1) <= 16 Then
+                    Button1.BackColor = Color.Blue
+                Else
+                    Button1.BackColor = Color.Red
+                End If
+
+                If _ersterTag.getFSK(2) <= 0 Then
+                    Button1.BackColor = Color.White
+                ElseIf _ersterTag.getFSK(2) <= 6 Then
+                    Button1.BackColor = Color.Yellow
+
+                ElseIf _ersterTag.getFSK(2) <= 12 Then
+                    Button1.BackColor = Color.Green
+                ElseIf _ersterTag.getFSK(2) <= 16 Then
+                    Button1.BackColor = Color.Blue
+                Else
+                    Button1.BackColor = Color.Red
+                End If
+                'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
+        End Select
+    End Sub
 
     Private Sub WochenplanAbrufenUndAusgeben()
         'Auslesen aus einer externen Textdatei
@@ -1105,6 +1157,7 @@ Public Interface ITagesplan
     Function getVorstellung(ByVal Position As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
     Function getSaal() As Kinosaal
+    Function getFSK(a As Integer) As Integer
 End Interface
 Public Interface IVorstellung
     Sub BesucherHinzufügen(Besucher As Kunde)
