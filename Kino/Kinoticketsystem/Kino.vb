@@ -13,7 +13,7 @@
         For i As Integer = 0 To AnzahlKinos - 1
 
         Next
-        '  Me._Kinosäle = Kinosäle
+        Me._Kinosäle = Kinosäle
         Me._Filme = Filme
         Me._Kunden = Kunden
         Me._Tagespläne = _Tagespläne
