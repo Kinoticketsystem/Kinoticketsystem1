@@ -1,6 +1,6 @@
 ﻿Public Class Kino
     'Attribute
-    Private _Kinosäle() As Kinosaal
+    Private _Kinosäle As Kinosaal
     Private _AnzahlKinosäle As Integer = 1
     Private _Filme As Film
     Private _Kunden As ArrayList = New ArrayList()
@@ -9,18 +9,21 @@
 
     'Konstruktur
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As Film, ByVal Kunden As ArrayList, ByVal Tagesüläne As Tagesplan)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As Film, ByVal Kunden As ArrayList, ByVal Tagespläne As Tagesplan, ByVal Kinosäle As Kinosaal)
         For i As Integer = 0 To AnzahlKinos - 1
 
         Next
         Me._Kinosäle = Kinosäle
         Me._Filme = Filme
         Me._Kunden = Kunden
-        Me._Tagespläne = _Tagespläne
+        Me._Tagespläne = Tagespläne
     End Sub
 
-    Public Sub neueBuchung(ByVal Kinosäle As Kinosaal, ByVal Filme As Film, ByVal Kunde As Kunde, ByVal Tagespläne As Tagesplan)
-        '      Kinosaal.SitzplatzBuchen(1, 1, Kunde)
+    Public Sub neueBuchung(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde)
+        Me.neueBuchung(gewählterPlatzX, gewählterPlatzY, kunde)
     End Sub
-
+    Public Sub TagesPlanAnzeigen()
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+    End Sub
 End Class
