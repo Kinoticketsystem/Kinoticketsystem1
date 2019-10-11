@@ -103,6 +103,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kinosaal.vb" />
+    <Compile Include="KinosaalGUI.Designer.vb">
+      <DependentUpon>KinosaalGUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KinosaalGUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Kunde.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KinoGUI.resx">
       <DependentUpon>KinoGUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KinosaalGUI.resx">
+      <DependentUpon>KinosaalGUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
