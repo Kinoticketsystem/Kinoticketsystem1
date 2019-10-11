@@ -13,14 +13,25 @@ Public Class FTagesplan
         AnfangstagUndDatümerFestlegen() 'fertig
         PositionDerDatümerFestlegen()   'fertig
         PositionDerFilmButtonsFestlegenX()  'fertig
-        WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik)
-        VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
-        GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nicht wegen Null referenz, weil noch keine Veranstaltungen eingelesen und initialisiert wurden)
-        PositionDerFilmButtonsFestlegenY()  'muss noch gemacht werden (eigentlich fertig, oder nicht?)
-        ButtonsInvisibleMachen()
+        ' WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik) 'nicht von hier auslesen, sondern es wird beim aufrufen mit übergeben
+        VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
+        GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
+        PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
+        ButtonsInvisibleMachen() 'das sind die Buttons die gerade nicht benutzt werden
         FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
 
 
+    End Sub
+    Public Sub InitialisiereDenWochenplan(ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
+        _ersterTag = ersterTag
+        _zweiterTag = zweiterTag
+        _dritterTag = dritterTag
+        _vierterTag = vierterTag
+        _fünfterTag = fünfterTag
+        _sechsterTag = sechsterTag
+        _siebterTag = siebterTag
+        GrößeDerFilmButtonsFestlegen()
+        PositionDerFilmButtonsFestlegenY()
     End Sub
 
     Private Sub FarbeDerButtonsFestlegen()
