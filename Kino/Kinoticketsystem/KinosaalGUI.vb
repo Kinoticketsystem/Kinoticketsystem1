@@ -108,15 +108,10 @@ Public Class KinosaalGUI
         Throw New NotImplementedException()
     End Sub
     Private Sub zeigeNurSovieleButtonsWienötig()
-        Throw New NotImplementedException()
-        Select Case _kinosaal.getX
-            Case 5
-                '....
-        End Select
-        Select Case _kinosaal.getY
-            Case 5
-                '....hide()
-        End Select
+        Throw New NotImplementedException
+
+
+
     End Sub
 
     Public Sub Aufrufen(ByRef a As Kinosaal, ByVal b As Kunde)
