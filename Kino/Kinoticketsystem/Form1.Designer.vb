@@ -102,7 +102,7 @@ Partial Class FTagesplan
         '
         'cmdFilmÄndern
         '
-        Me.cmdFilmÄndern.Location = New System.Drawing.Point(507, 528)
+        Me.cmdFilmÄndern.Location = New System.Drawing.Point(585, 420)
         Me.cmdFilmÄndern.Name = "cmdFilmÄndern"
         Me.cmdFilmÄndern.Size = New System.Drawing.Size(185, 32)
         Me.cmdFilmÄndern.TabIndex = 1
@@ -231,7 +231,7 @@ Partial Class FTagesplan
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(914, 456)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(914, 464)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 20
         '

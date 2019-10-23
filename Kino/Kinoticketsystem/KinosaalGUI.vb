@@ -10,10 +10,10 @@ Public Class KinosaalGUI
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '  zeigeNurSovieleButtonsWienötig()
         '  berechneGrößeDerForm()
-        MacheButtonsZuFlipFlopButtons()
         StandartInitialisierung()
         übertrageAnzahlAusgewähltePlätze()
         InitialisiereSitzplan()
+        'alle BUttons sind von vornherein auf FlatStyle.Popup
     End Sub
 
     Private Sub buttonsInsArray()
@@ -87,10 +87,12 @@ Public Class KinosaalGUI
         _Buttons(66) = Button67
 
 
+        'bis 
+        _Buttons(119) = Button120
     End Sub
 
-    Private Sub InitialisiereSitzplan()
-        buttonsInsArray()
+    Private Sub InitialisiereSitzplan() 'fertig (wichtig: immer dran denken button1 = (0,0)
+        buttonsInsArray() 'nicht löschen!
 
         For i As Integer = 0 To _kinosaal.getX - 1 ' überall gleich sein muss
             For j As Integer = 0 To _kinosaal.getY - 1
@@ -159,17 +161,12 @@ Public Class KinosaalGUI
         ' _kinosaal.SitzplatzBuchen(5, 10, b)
     End Sub
 
-    Private Sub MacheButtonsZuFlipFlopButtons()
-        Button1.FlatStyle = FlatStyle.Popup
-
-        Button1.FlatAppearance.CheckedBackColor = Color.Black
-    End Sub
-
     Private Sub berechneGrößeDerForm()
+        'wie viele Buttons sind drauf * breite Buttons + bisschen was = breite der Form
+        'länge der Form = ...
         Throw New NotImplementedException()
     End Sub
     Private Sub zeigeNurSovieleButtonsWienötig()
-        Throw New NotImplementedException
         If _kinosaal.getX < 8 Then
             Button106.Hide()
             '...
@@ -178,9 +175,9 @@ Public Class KinosaalGUI
                 Button91.Hide()
                 '...
                 Button105.Hide()
-            End If
-            If _kinosaal.getX < 6 Then
-                '...
+                If _kinosaal.getX < 6 Then
+                    '...
+                End If
             End If
         Else
             Throw New Exception("Zu viele Reihen (nicht mehr als 8 möglich)")
@@ -203,6 +200,8 @@ Public Class KinosaalGUI
                     Throw New Exception("Die Reihe darf nicht kürzer als mindestens 5 Sitze lang sein.")
                 End If
             End If
+        Else
+            Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
         End If
 
     End Sub

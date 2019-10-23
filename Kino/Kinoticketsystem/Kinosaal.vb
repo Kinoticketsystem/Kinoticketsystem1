@@ -61,4 +61,14 @@ Public Class Kinosaal
         End If
     End Sub
 
+    Public Function getPreis(x, y) As Double
+        Return _PreisProPlatz(x, y)
+    End Function
+    Public Sub setPreis(x As Integer, y As Integer, neuerPreis As Double)
+        If neuerPreis > 0 And neuerPreis < 100.0 Then
+            _PreisProPlatz(x, y) = neuerPreis
+        Else
+            Throw New Exception("der Preis ist kleiner 0 oder größer 100.0")
+        End If
+    End Sub
 End Class

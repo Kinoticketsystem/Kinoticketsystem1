@@ -19,18 +19,18 @@
     End Sub
 
 
-    Public Sub _FilmtitelAndern()
+    Public Sub _FilmtitelAndern(ByVal Filmtitel As String)
 
-        Me._Filmtitel = _Filmtitel
+        Me._Filmtitel = Filmtitel
 
     End Sub
 
-    Public Sub _FilmlängeÄndern()
-        Me._Filmlänge = _Filmlänge
+    Public Sub _FilmlängeÄndern(ByVal Filmlänge As Integer)
+        Me._Filmlänge = Filmlänge
     End Sub
 
-    Public Sub _AltersfreigabeÄndern()
-        Me._Altersfreigabe = _Altersfreigabe
+    Public Sub _AltersfreigabeÄndern(ByVal Altersfreigabe As Integer)
+        Me._Altersfreigabe = Altersfreigabe
     End Sub
 
     Public Sub _3DÄndern()
@@ -50,7 +50,7 @@
     End Sub
 
 
-    Public Function getFilminfos(ByVal _Filmtitel As String, ByVal _Filmlänge As Integer, ByVal _Altersfreigabe As String, ByVal _3D As Boolean, ByVal _AnzahlFilmWiedergabe As String) As String
+    Public Function getFilminfos() As String
         ' Dim Art As String
         If Me._3D = True Then
             ' Art = 3D
@@ -64,11 +64,18 @@
 
     End Function
 
+    Public Function Ist3D() As Boolean
+        Return _3D
+    End Function
+
     Public Function getAltersfreigabe() As Integer
         Return _Altersfreigabe
     End Function
 
     Public Function getFilmtitel() As String
         Return _Filmtitel
+    End Function
+    Public Function getAnzahlFilmwiedergabe() As Integer
+        Return _AnzahlFilmWiedergabe
     End Function
 End Class
