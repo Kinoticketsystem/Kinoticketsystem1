@@ -25,6 +25,7 @@ Partial Class KinoGUI
         Me.cmdWochenplan = New System.Windows.Forms.Button()
         Me.cmdTexterfassen = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdkinosaalAufrufen = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdWochenplan
@@ -55,12 +56,22 @@ Partial Class KinoGUI
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Das wird schon"
         '
+        'cmdkinosaalAufrufen
+        '
+        Me.cmdkinosaalAufrufen.Location = New System.Drawing.Point(501, 326)
+        Me.cmdkinosaalAufrufen.Name = "cmdkinosaalAufrufen"
+        Me.cmdkinosaalAufrufen.Size = New System.Drawing.Size(135, 41)
+        Me.cmdkinosaalAufrufen.TabIndex = 3
+        Me.cmdkinosaalAufrufen.Text = "Kinosaal aufrufen"
+        Me.cmdkinosaalAufrufen.UseVisualStyleBackColor = True
+        '
         'KinoGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Blue
         Me.ClientSize = New System.Drawing.Size(1100, 619)
+        Me.Controls.Add(Me.cmdkinosaalAufrufen)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdTexterfassen)
         Me.Controls.Add(Me.cmdWochenplan)
@@ -76,4 +87,5 @@ Partial Class KinoGUI
     Friend WithEvents cmdWochenplan As Button
     Friend WithEvents cmdTexterfassen As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents cmdkinosaalAufrufen As Button
 End Class

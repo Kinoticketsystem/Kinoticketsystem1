@@ -23,4 +23,7 @@
     Public Sub SetName(name As String)
         Me._Name = name
     End Sub
+
+
+
 End Class
