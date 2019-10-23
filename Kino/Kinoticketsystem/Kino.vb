@@ -6,9 +6,7 @@
     Private _Kunden As ArrayList = New ArrayList()
     Private _Tagespläne As Tagesplan
 
-
     'Konstruktur
-
     Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As Film, ByVal Kunden As ArrayList, ByVal Tagespläne As Tagesplan, ByVal Kinosäle As Kinosaal)
         For i As Integer = 0 To AnzahlKinos - 1
 
@@ -18,6 +16,7 @@
         Me._Kunden = Kunden
         Me._Tagespläne = Tagespläne
     End Sub
+    'Methoden
 
     Public Sub neueBuchung(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde)
         Me.neueBuchung(gewählterPlatzX, gewählterPlatzY, kunde)
