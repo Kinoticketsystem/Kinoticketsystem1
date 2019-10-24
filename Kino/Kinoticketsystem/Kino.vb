@@ -2,14 +2,14 @@
     'Attribute
     Private _Kinosäle() As Kinosaal 'Array, für mehrere Kinosäle 
     Private _AnzahlKinosäle As Integer
-    Private _Filme() As Film 'Array, weil mehrere Filme
+    Private _Filme As ArrayList = New ArrayList() 'Array, weil mehrere Filme
     Private _Kunden As ArrayList = New ArrayList()
     Private _Tagespläne(7) As Tagesplan
 
 
     'Konstruktur
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As Array, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal)
         _AnzahlKinosäle = AnzahlKinos
         Dim a(AnzahlKinos) As Kinosaal
         If Not (AnzahlKinos = 1) Then
@@ -50,7 +50,7 @@
     End Sub
     'Methoden
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As Array, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal, ByVal Kinosaal2 As Kinosaal)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal, ByVal Kinosaal2 As Kinosaal)
         _AnzahlKinosäle = AnzahlKinos
         If Not (AnzahlKinos = 2) Then
             Throw New Exception("Wenn man zwei Kinosaal übergibt, muss man bei AnzahlKinos auch 2 eingeben, man kann später noch mehr Kinosäle hinzufügen über methoden") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
@@ -87,7 +87,7 @@
     End Sub
 
     'get
-    Public Function getFilmtitel() As Array
+    Public Function getFilmtitel() As ArrayList
         Return _Filme
     End Function
     Public Function getKunde() As ArrayList
@@ -108,14 +108,15 @@
     Public Sub setTagesplan(ByRef Tagesplan As Array)
         Tagesplan = _Tagespläne
     End Sub
-    Public Sub setFilm(ByRef Film As Array)
+    Public Sub setFilm(ByRef Film As ArrayList)
         Film = _Filme
     End Sub
+    ' wie bei kunde
 
     Public Sub setKinosaal(ByRef Kinosaal As Array)
         Kinosaal = _Kinosäle
     End Sub
-
+    'wie bei kunde 
     Public Sub setAnzahlKinosaal(ByRef AnzahlKinosaal As Integer)
         AnzahlKinosaal = _AnzahlKinosäle
     End Sub

@@ -312,7 +312,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-        wennButtonGedrückt(Button16, 0, 15)
+        wennButtonGedrückt(Button16, 1, 0)
     End Sub
     'noch 104 mal ;-)
 End Class
