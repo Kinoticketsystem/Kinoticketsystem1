@@ -17,6 +17,8 @@
         Me._Filme = Filme
         Me._Kunden = Kunden
         Me._Tagespläne = Tagespläne
+
+
     End Sub
 
     Public Sub neueBuchung(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde)

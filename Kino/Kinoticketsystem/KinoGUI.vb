@@ -19,4 +19,13 @@
         KinosaalGUI.BringToFront()
         KinosaalGUI.Show()
     End Sub
+    Private Sub KinosaalTest_load()
+    End Sub
+
+    Private Sub cmdKinosaalTest_Click(sender As Object, e As EventArgs) Handles cmdKinosaalTest.Click
+
+        KinosaalTest.BringToFront()
+        KinosaalTest.Show()
+
+    End Sub
 End Class

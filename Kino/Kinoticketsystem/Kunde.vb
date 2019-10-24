@@ -24,6 +24,8 @@
         Me._Name = name
     End Sub
 
-
+    Public Function getName()
+        Return Me._Name
+    End Function
 
 End Class
