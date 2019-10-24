@@ -175,6 +175,9 @@
     <EmbeddedResource Include="NeueVorstellung.resx">
       <DependentUpon>NeueVorstellung.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Testklassekino.resx">
+      <DependentUpon>Testklassekino.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TexterfassenTest.resx">
       <DependentUpon>TexterfassenTest.vb</DependentUpon>
     </EmbeddedResource>

@@ -530,7 +530,7 @@ Partial Class KinosaalGUI
         Me.Button14.Location = New System.Drawing.Point(195, 678)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(40, 40)
-        Me.Button14.TabIndex = 89
+        Me.Button14.TabIndex = 88
         Me.Button14.UseVisualStyleBackColor = False
         '
         'Button15
@@ -541,7 +541,7 @@ Partial Class KinosaalGUI
         Me.Button15.Location = New System.Drawing.Point(195, 724)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(40, 40)
-        Me.Button15.TabIndex = 88
+        Me.Button15.TabIndex = 89
         Me.Button15.UseVisualStyleBackColor = False
         '
         'Button11
@@ -1492,7 +1492,7 @@ Partial Class KinosaalGUI
         'cmdFertig
         '
         Me.cmdFertig.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdFertig.Location = New System.Drawing.Point(1012, 785)
+        Me.cmdFertig.Location = New System.Drawing.Point(798, 785)
         Me.cmdFertig.Name = "cmdFertig"
         Me.cmdFertig.Size = New System.Drawing.Size(137, 40)
         Me.cmdFertig.TabIndex = 196
@@ -1504,7 +1504,7 @@ Partial Class KinosaalGUI
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Blue
-        Me.ClientSize = New System.Drawing.Size(1161, 837)
+        Me.ClientSize = New System.Drawing.Size(960, 837)
         Me.Controls.Add(Me.cmdFertig)
         Me.Controls.Add(Me.lblAnzahlAusgewähltePlätze)
         Me.Controls.Add(Me.PictureBox1)
@@ -1629,6 +1629,7 @@ Partial Class KinosaalGUI
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "KinosaalGUI"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "KinosaalGUI"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -1,6 +1,6 @@
 ﻿Public Class Testklassekino
 
-    Private _Kino As Kino = New Kino()
+    ' Private _Kino As Kino = New Kino()
 
     Private _Kinosäle() As Kinosaal 'Array, für mehrere Kinosäle 
     Private _AnzahlKinosäle As Integer = 1
@@ -27,11 +27,14 @@
         For i As Integer = 0 To _AnzahlKinosäle - 1
             b(i) = _Kinosäle(i)
         Next
-        b(_AnzahlKinosäle - 1) = a
+        '  b(_AnzahlKinosäle - 1) = a
         _Kinosäle = b
 
         ' Dim b(_AnzahlKinosäle) As Kinosaal = _Kinosäle ist nicht möglich, weil man nicht weiß, wie groß _Kinosäle ist. (Ist jetzt aber auch irrellevant)
         Console.WriteLine("dfjhghmfkjhk")
     End Sub
 
+    Private Sub Testklassekino_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -9,10 +9,11 @@ Public Class KinosaalGUI
 
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '  zeigeNurSovieleButtonsWienötig()
-        '  berechneGrößeDerForm()
         StandartInitialisierung()
         übertrageAnzahlAusgewähltePlätze()
         InitialisiereSitzplan()
+        berechneGrößeDerForm()
+
         'alle BUttons sind von vornherein auf FlatStyle.Popup
     End Sub
 
@@ -153,7 +154,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub StandartInitialisierung()
-        _kinosaal = New Kinosaal(8 * 15, New Film("", 120, 12, True), 8, 15)
+        _kinosaal = New Kinosaal(8 * 15, New Film("", 120, 12, True), 8, 15) '8*15
         _aktuellerKunde = New Kunde("Max Mustermann")
         Dim b As Kunde = New Kunde("Test")
         _kinosaal.SitzplatzBuchen(0, 1, b)  'erste Reihe zweiter Platz
@@ -164,7 +165,46 @@ Public Class KinosaalGUI
     Private Sub berechneGrößeDerForm()
         'wie viele Buttons sind drauf * breite Buttons + bisschen was = breite der Form
         'länge der Form = ...
-        Throw New NotImplementedException()
+        Select Case _kinosaal.getAnzahlReihe
+            Case 8
+                Size = New Size(Button106.Left + Button106.Width + 45, Me.Size.Height)
+            Case 7
+                Size = New Size(Button91.Left + Button91.Width + 45, Me.Size.Height)
+            Case 6
+                Size = New Size(Button76.Left + Button76.Width + 45, Me.Size.Height)
+            Case 5
+                Size = New Size(Button61.Left + Button61.Width + 45, Me.Size.Height)
+            Case 4
+                Size = New Size(Button46.Left + Button46.Width + 45, Me.Size.Height)
+            Case 3
+                Size = New Size(Button31.Left + Button31.Width + 45, Me.Size.Height)
+        End Select
+        Select Case _kinosaal.getAnzahlSitzplätze
+            Case 15
+                Size = New Size(Size.Width, Button15.Location.Y + 70)
+
+            Case 14
+                Size = New Size(Size.Width, Button14.Location.Y + 70)
+            Case 13
+                Size = New Size(Size.Width, Button13.Location.Y + 70)
+            Case 12
+                Size = New Size(Size.Width, Button12.Location.Y + 70)
+            Case 11
+                Size = New Size(Size.Width, Button11.Location.Y + 70)
+            Case 10
+                Size = New Size(Size.Width, Button10.Location.Y + 70)
+            Case 9
+                Size = New Size(Size.Width, Button9.Location.Y + 70)
+            Case 8
+                Size = New Size(Size.Width, Button8.Location.Y + 70)
+            Case 7
+                Size = New Size(Size.Width, Button7.Location.Y + 70)
+            Case 6
+                Size = New Size(Size.Width, Button6.Location.Y + 70)
+            Case 5
+                Size = New Size(Size.Width, Button5.Location.Y + 70)
+        End Select
+        cmdFertig.Location = New Point(Size.Width - cmdFertig.Width - 27, Size.Height - cmdFertig.Height - 50)
     End Sub
     Private Sub zeigeNurSovieleButtonsWienötig()
         If _kinosaal.getX < 8 Then
@@ -217,8 +257,10 @@ Public Class KinosaalGUI
         lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
         If _AnzahlAusgewähltePlätze < 1 Then
             cmdFertig.BackColor = Color.Red
+            cmdFertig.Enabled = False
         Else
             cmdFertig.BackColor = Color.Green
+            cmdFertig.Enabled = True
         End If
     End Sub
     Private Sub macheButtons2DUndEnableUndRot(ByRef a As Button)

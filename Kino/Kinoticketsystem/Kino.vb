@@ -23,9 +23,11 @@
 
         Dim b As Integer
         Dim i As Integer
+        Dim neuertext As String = Kunden(i)
+
         Do Until b = 1
             If Kunden(i) IsNot Nothing Then
-                Dim neuertext As String = Kunden(i)
+                neuertext = Kunden(i)
                 FileOpen(1, "Kunden.txt", OpenMode.Append)
                 PrintLine(1, neuertext)
                 FileClose(1)
@@ -35,12 +37,12 @@
             End If
         Loop
 
-        For j = 0 To Filme.Length - 1
-            Dim neuertext As String = Filme(j)
-            FileOpen(1, "Filme.txt", OpenMode.Append)
+        '  For j = 0 To Filme.Length - 1
+        '    neuertext = Filme(j)
+        FileOpen(1, "Filme.txt", OpenMode.Append)
             PrintLine(1, neuertext)
             FileClose(1)
-        Next
+        'Next
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Append)
         PrintLine(1, "Kinosaal 1: Anzahl Sitzplätze: " & Kinosaal.getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosaal.getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosaal.getSitzeProReihe)
