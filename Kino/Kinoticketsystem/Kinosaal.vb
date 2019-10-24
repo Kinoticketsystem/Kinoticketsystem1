@@ -49,6 +49,7 @@ Public Class Kinosaal
         Return x
     End Function
 
+
     Public Sub SitzplatzBuchen(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde)
         Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = kunde
     End Sub

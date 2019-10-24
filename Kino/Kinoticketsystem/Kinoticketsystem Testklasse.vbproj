@@ -87,20 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
-    <Compile Include="Class2.vb" />
     <Compile Include="Film.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kino.vb" />
@@ -147,6 +139,12 @@
     </Compile>
     <Compile Include="Tagesplan.vb" />
     <Compile Include="Testklasse.vb" />
+    <Compile Include="Testklassekino.Designer.vb">
+      <DependentUpon>Testklassekino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testklassekino.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TexterfassenTest.Designer.vb">
       <DependentUpon>TexterfassenTest.vb</DependentUpon>
     </Compile>
@@ -158,9 +156,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KinoGUI.resx">
       <DependentUpon>KinoGUI.vb</DependentUpon>
