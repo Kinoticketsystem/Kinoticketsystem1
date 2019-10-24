@@ -18,6 +18,9 @@
 
     End Sub
 
+    Public Sub filmtitelÄndern(filmtest As String)
+        _Filmtitel = filmtest
+    End Sub
 
     Public Sub _FilmtitelAndern(ByVal Filmtitel As String)
 
