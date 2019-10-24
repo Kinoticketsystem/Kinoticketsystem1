@@ -1,7 +1,7 @@
 ﻿Public Class Kino
     'Attribute
     Private _Kinosäle() As Kinosaal 'Array, für mehrere Kinosäle 
-    Private _AnzahlKinosäle As Integer = 1
+    Private _AnzahlKinosäle As Integer
     Private _Filme() As Film 'Array, weil mehrere Filme
     Private _Kunden As ArrayList = New ArrayList()
     Private _Tagespläne(7) As Tagesplan
@@ -73,7 +73,25 @@
     End Function
 
     'set
-    Public Sub setKunde(ByRef _Kunde As ArrayList)
+    Public Sub KundenHinzufügen(ByRef Kunde As Kunde)
+        _Kunden.Add(Kunde)
+    End Sub
+    Public Sub KundeEntfernen(ByRef Kunde As Kunde)
+        Dim a As Integer = _Kunden.BinarySearch(Kunde)
+        _Kunden.RemoveAt(a)
+    End Sub
+    Public Sub setTagesplan(ByRef Tagesplan As Array)
+        Tagesplan = _Tagespläne
+    End Sub
+    Public Sub setFilm(ByRef Film As Array)
+        Film = _Filme
+    End Sub
 
+    Public Sub setKinosaal(ByRef Kinosaal As Array)
+        Kinosaal = _Kinosäle
+    End Sub
+
+    Public Sub setAnzahlKinosaal(ByRef AnzahlKinosaal As Integer)
+        AnzahlKinosaal = _AnzahlKinosäle
     End Sub
 End Class
