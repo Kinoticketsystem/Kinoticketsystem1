@@ -2,6 +2,8 @@
 
 Public Class Kinosaal
     Private _AnzahlSitzplätze As Integer
+    Private _Anzahlreihe As Integer
+    Private _SitzeProReihe As Integer
     Private x As Integer
     Private y As Integer
     Private _Film As Film
@@ -48,7 +50,15 @@ Public Class Kinosaal
     Public Function getX()
         Return x
     End Function
-
+    Public Function getAnzahlSitzplätze()
+        Return _AnzahlSitzplätze
+    End Function
+    Public Function getAnzahlReihe()
+        Return _Anzahlreihe
+    End Function
+    Public Function getSitzeProReihe()
+        Return _SitzeProReihe
+    End Function
 
     Public Sub SitzplatzBuchen(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde)
         Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = kunde
