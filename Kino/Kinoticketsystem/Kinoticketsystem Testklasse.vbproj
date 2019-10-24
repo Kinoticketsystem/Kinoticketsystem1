@@ -139,6 +139,12 @@
     </Compile>
     <Compile Include="Tagesplan.vb" />
     <Compile Include="Testklasse.vb" />
+    <Compile Include="Testklassekino.Designer.vb">
+      <DependentUpon>Testklassekino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testklassekino.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TexterfassenTest.Designer.vb">
       <DependentUpon>TexterfassenTest.vb</DependentUpon>
     </Compile>
