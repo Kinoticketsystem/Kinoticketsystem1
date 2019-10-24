@@ -13,7 +13,7 @@ Public Class FTagesplan
         AnfangstagUndDatümerFestlegen() 'fertig
         PositionDerDatümerFestlegen()   'fertig
         PositionDerFilmButtonsFestlegenX()  'fertig
-        ' WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik) 'nicht von hier auslesen, sondern es wird beim aufrufen mit übergeben
+        'WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik) 'nicht von hier auslesen, sondern es wird beim aufrufen mit übergeben
         VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
         GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
         PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
@@ -85,21 +85,21 @@ Public Class FTagesplan
         End Select
     End Sub
 
-    Private Sub WochenplanAbrufenUndAusgeben()
-        'Auslesen aus einer externen Textdatei
-        '_ersterTag
-        '_zweiterTag
-        '_dritterTag
-        '_vierterTag
-        '_fünfterTag
-        '_sechsterTag
-        '_siebterTag
-        'Anzeigen
+    'Private Sub WochenplanAbrufenUndAusgeben() 'unnötig, wird in der Klasse Kino gemacht und dann eine andere Methode genutzt
+    'Auslesen aus einer externen Textdatei
+    '_ersterTag
+    '_zweiterTag
+    '_dritterTag
+    '_vierterTag
+    '_fünfterTag
+    '_sechsterTag
+    '_siebterTag
+    'Anzeigen
 
-        ' Button1.Text = _Montag.
-        'PositionDerFilmButtonsFestlegenY()
+    ' Button1.Text = _Montag.
+    'PositionDerFilmButtonsFestlegenY()
 
-    End Sub
+    ' End Sub
     Private Sub VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
         Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a)
@@ -1025,6 +1025,7 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdTagesPlanErstellen.Show()
             cmdTagesPlanErstellen.Left = chbMontag.Left
+
         End If
     End Sub
     Private Sub chbDienstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDienstag.CheckedChanged
@@ -1073,6 +1074,7 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdTagesPlanErstellen.Show()
             cmdTagesPlanErstellen.Left = chbFreitag.Left
+            '     MonthCalendar1.Left = chbMontag.Left
         End If
     End Sub
     Private Sub chbSamstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSamstag.CheckedChanged
@@ -1085,6 +1087,7 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdTagesPlanErstellen.Show()
             cmdTagesPlanErstellen.Left = chbSamstag.Left
+            '      MonthCalendar1.Left = chbMontag.Left
         End If
     End Sub
     Private Sub chbSonntag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSonntag.CheckedChanged
@@ -1096,7 +1099,8 @@ Public Class FTagesplan
             chbSamstag.Checked = False
             chbMontag.Checked = False
             cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbSonntag.Left
+            cmdTagesPlanErstellen.Left = Size.Width - (cmdTagesPlanErstellen.Width + 45)
+            '     MonthCalendar1.Left = chbMontag.Left
         End If
     End Sub
 
