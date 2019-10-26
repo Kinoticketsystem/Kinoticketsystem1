@@ -86,9 +86,58 @@ Public Class KinosaalGUI
         _Buttons(64) = Button65
         _Buttons(65) = Button66
         _Buttons(66) = Button67
-
-
-        'bis 
+        _Buttons(67) = Button68
+        _Buttons(68) = Button69
+        _Buttons(69) = Button70
+        _Buttons(70) = Button71
+        _Buttons(71) = Button72
+        _Buttons(72) = Button73
+        _Buttons(73) = Button74
+        _Buttons(74) = Button75
+        _Buttons(75) = Button76
+        _Buttons(76) = Button77
+        _Buttons(77) = Button78
+        _Buttons(78) = Button79
+        _Buttons(79) = Button80
+        _Buttons(80) = Button81
+        _Buttons(81) = Button82
+        _Buttons(82) = Button83
+        _Buttons(83) = Button84
+        _Buttons(84) = Button85
+        _Buttons(85) = Button86
+        _Buttons(86) = Button87
+        _Buttons(87) = Button88
+        _Buttons(88) = Button89
+        _Buttons(89) = Button90
+        _Buttons(90) = Button91
+        _Buttons(91) = Button92
+        _Buttons(92) = Button93
+        _Buttons(93) = Button94
+        _Buttons(94) = Button95
+        _Buttons(95) = Button96
+        _Buttons(96) = Button97
+        _Buttons(97) = Button98
+        _Buttons(98) = Button99
+        _Buttons(99) = Button100
+        _Buttons(100) = Button101
+        _Buttons(101) = Button102
+        _Buttons(102) = Button103
+        _Buttons(103) = Button104
+        _Buttons(104) = Button105
+        _Buttons(105) = Button106
+        _Buttons(106) = Button107
+        _Buttons(107) = Button108
+        _Buttons(108) = Button109
+        _Buttons(109) = Button110
+        _Buttons(110) = Button111
+        _Buttons(111) = Button112
+        _Buttons(112) = Button113
+        _Buttons(113) = Button114
+        _Buttons(114) = Button115
+        _Buttons(115) = Button116
+        _Buttons(116) = Button117
+        _Buttons(117) = Button118
+        _Buttons(118) = Button119
         _Buttons(119) = Button120
     End Sub
 
