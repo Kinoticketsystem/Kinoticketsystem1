@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class3.vb" />
+    <Compile Include="Class4.vb" />
     <Compile Include="Film.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>

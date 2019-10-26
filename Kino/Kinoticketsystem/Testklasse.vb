@@ -1,9 +1,11 @@
-﻿Public Class TagesplanTest
+﻿Public Class TestTagesplan
     Private _Tagesplan As Tagesplan = New Tagesplan()
-    Private _TestFilm1 As Film = New Film("TestFilm1", 120, 16, True)
-    Private BeispielVorstellungA As Vorstellung = New Vorstellung("04:56", "04:59", New ArrayList(), New Kinosaal(120, , 7, 14), TestFilm1) '?
+    Private TestFilmA As Film = New Film("TestFilmA", 120, 16, True)
+    Private TestFilmB As Film = New Film("TestFilmB", 90, 12, False)
+    Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA)
+    Private BeispielVorstellungC As Vorstellung = New Vorstellung(10, 100, New ArrayList(), TestFilmB)
+
     Private BeispielVorstellungB As Vorstellung
-    Private BeispielVorstellungC As Vorstellung = New Vorstellung("04:57", "04:58", New ArrayList(), New Kinosaal(), New Film())
     Private BeispielVorstellungAnzahlA As Integer
     Private BeispielVorstellungAnzahlB As Integer
 
@@ -35,10 +37,10 @@
     End Sub
 
     Private Sub TestVorstellungEntfernen()
-        BeispielVorstellungAnzahlA = _TestFilm1.getAnzahlFilmwiedergabe
+        BeispielVorstellungAnzahlA = TestFilmA.getAnzahlFilmwiedergabe
         _Tagesplan.VorstellungEntfernen(BeispielVorstellungA, 0)
         BeispielVorstellungB = _Tagesplan.getVorstellung(0)
-        BeispielVorstellungAnzahlB = _TestFilm1.getAnzahlFilmwiedergabe
+        BeispielVorstellungAnzahlB = TestFilmA.getAnzahlFilmwiedergabe
 
         If BeispielVorstellungA.Equals(BeispielVorstellungB) Then
             Console.WriteLine("Problem bei Tagesplan: VorstellungEntfernen")
