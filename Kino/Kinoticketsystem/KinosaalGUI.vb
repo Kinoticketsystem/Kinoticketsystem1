@@ -209,14 +209,52 @@ Public Class KinosaalGUI
     Private Sub zeigeNurSovieleButtonsWienötig()
         If _kinosaal.getX < 8 Then
             Button106.Hide()
-            '...
+            Button107.Hide()
+            Button108.Hide()
+            Button109.Hide()
+            Button110.Hide()
+            Button111.Hide()
+            Button112.Hide()
+            Button113.Hide()
+            Button114.Hide()
+            Button115.Hide()
+            Button116.Hide()
+            Button117.Hide()
+            Button118.Hide()
+            Button119.Hide()
             Button120.Hide()
             If _kinosaal.getX < 7 Then
                 Button91.Hide()
-                '...
+                Button92.Hide()
+                Button93.Hide()
+                Button94.Hide()
+                Button95.Hide()
+                Button96.Hide()
+                Button97.Hide()
+                Button98.Hide()
+                Button99.Hide()
+                Button100.Hide()
+                Button101.Hide()
+                Button102.Hide()
+                Button103.Hide()
+                Button104.Hide()
                 Button105.Hide()
                 If _kinosaal.getX < 6 Then
-                    '...
+                    Button76.Hide()
+                    Button77.Hide()
+                    Button78.Hide()
+                    Button79.Hide()
+                    Button80.Hide()
+                    Button81.Hide()
+                    Button82.Hide()
+                    Button83.Hide()
+                    Button84.Hide()
+                    Button85.Hide()
+                    Button86.Hide()
+                    Button87.Hide()
+                    Button88.Hide()
+                    Button89.Hide()
+                    Button90.Hide()
                 End If
             End If
         Else
@@ -234,14 +272,99 @@ Public Class KinosaalGUI
             Button120.Hide()
             If _kinosaal.getY < 14 Then
                 Button14.Hide()
-                Button28.Hide()
-                '..
-                If _kinosaal.getY < 5 Then
-                    Throw New Exception("Die Reihe darf nicht kürzer als mindestens 5 Sitze lang sein.")
+                Button29.Hide()
+                Button44.Hide()
+                Button59.Hide()
+                Button74.Hide()
+                Button89.Hide()
+                Button104.Hide()
+                Button119.Hide()
+                If _kinosaal.getY < 13 Then
+                    Button13.Hide()
+                    Button28.Hide()
+                    Button43.Hide()
+                    Button58.Hide()
+                    Button73.Hide()
+                    Button88.Hide()
+                    Button103.Hide()
+                    Button118.Hide()
+                    If _kinosaal.getY < 12 Then
+                        Button12.Hide()
+                        Button27.Hide()
+                        Button42.Hide()
+                        Button57.Hide()
+                        Button72.Hide()
+                        Button87.Hide()
+                        Button102.Hide()
+                        Button117.Hide()
+                        If _kinosaal.getY < 11 Then
+                            Button11.Hide()
+                            Button26.Hide()
+                            Button41.Hide()
+                            Button57.Hide()
+                            Button71.Hide()
+                            Button86.Hide()
+                            Button101.Hide()
+                            Button116.Hide()
+                            If _kinosaal.getY < 10 Then
+                                Button10.Hide()
+                                Button25.Hide()
+                                Button40.Hide()
+                                Button55.Hide()
+                                Button70.Hide()
+                                Button85.Hide()
+                                Button100.Hide()
+                                Button115.Hide()
+                                If _kinosaal.getY < 9 Then
+                                    Button9.Hide()
+                                    Button24.Hide()
+                                    Button39.Hide()
+                                    Button54.Hide()
+                                    Button69.Hide()
+                                    Button84.Hide()
+                                    Button99.Hide()
+                                    Button114.Hide()
+                                    If _kinosaal.getY < 8 Then
+                                        Button8.Hide()
+                                        Button23.Hide()
+                                        Button38.Hide()
+                                        Button53.Hide()
+                                        Button68.Hide()
+                                        Button83.Hide()
+                                        Button98.Hide()
+                                        Button113.Hide()
+                                        If _kinosaal.getY < 7 Then
+                                            Button7.Hide()
+                                            Button22.Hide()
+                                            Button37.Hide()
+                                            Button52.Hide()
+                                            Button67.Hide()
+                                            Button82.Hide()
+                                            Button97.Hide()
+                                            Button112.Hide()
+                                            If _kinosaal.getY < 6 Then
+                                                Button6.Hide()
+                                                Button21.Hide()
+                                                Button36.Hide()
+                                                Button51.Hide()
+                                                Button66.Hide()
+                                                Button81.Hide()
+                                                Button96.Hide()
+                                                Button111.Hide()
+                                                If _kinosaal.getY < 5 Then
+                                                    Throw New Exception("Die Reihe darf nicht kürzer als mindestens 5 Sitze lang sein.")
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
                 End If
             End If
         Else
-            Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
+                Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
         End If
 
     End Sub
@@ -356,5 +479,417 @@ Public Class KinosaalGUI
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         wennButtonGedrückt(Button16, 1, 0)
     End Sub
-    'noch 104 mal ;-)
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        wennButtonGedrückt(Button17, 1, 1)
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        wennButtonGedrückt(Button18, 1, 2)
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        wennButtonGedrückt(Button19, 1, 3)
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        wennButtonGedrückt(Button20, 1, 4)
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        wennButtonGedrückt(Button21, 1, 5)
+    End Sub
+
+    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+        wennButtonGedrückt(Button22, 1, 6)
+    End Sub
+
+    Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
+        wennButtonGedrückt(Button23, 1, 7)
+    End Sub
+
+    Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
+        wennButtonGedrückt(Button24, 1, 8)
+    End Sub
+
+    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+        wennButtonGedrückt(Button25, 1, 9)
+    End Sub
+
+    Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
+        wennButtonGedrückt(Button26, 1, 10)
+    End Sub
+
+    Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+        wennButtonGedrückt(Button27, 1, 11)
+    End Sub
+
+    Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+        wennButtonGedrückt(Button28, 1, 12)
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+        wennButtonGedrückt(Button29, 1, 13)
+    End Sub
+
+    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
+        wennButtonGedrückt(Button30, 1, 14)
+    End Sub
+
+    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+        wennButtonGedrückt(Button31, 2, 0)
+    End Sub
+
+    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
+        wennButtonGedrückt(Button32, 2, 1)
+    End Sub
+
+    Private Sub Button33_Click(sender As Object, e As EventArgs) Handles Button33.Click
+        wennButtonGedrückt(Button33, 2, 2)
+    End Sub
+
+    Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
+        wennButtonGedrückt(Button34, 2, 3)
+    End Sub
+
+    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+        wennButtonGedrückt(Button35, 2, 4)
+    End Sub
+
+    Private Sub Button36_Click(sender As Object, e As EventArgs) Handles Button36.Click
+        wennButtonGedrückt(Button36, 2, 5)
+    End Sub
+
+    Private Sub Button37_Click(sender As Object, e As EventArgs) Handles Button37.Click
+        wennButtonGedrückt(Button37, 2, 6)
+    End Sub
+
+    Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
+        wennButtonGedrückt(Button38, 2, 7)
+    End Sub
+
+    Private Sub Button39_Click(sender As Object, e As EventArgs) Handles Button39.Click
+        wennButtonGedrückt(Button39, 2, 8)
+    End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+    End Sub
+
+    Private Sub Button41_Click(sender As Object, e As EventArgs) Handles Button41.Click
+        wennButtonGedrückt(Button41, 2, 10)
+    End Sub
+
+    Private Sub Button42_Click(sender As Object, e As EventArgs) Handles Button42.Click
+        wennButtonGedrückt(Button42, 2, 11)
+    End Sub
+
+    Private Sub Button43_Click(sender As Object, e As EventArgs) Handles Button43.Click
+        wennButtonGedrückt(Button43, 2, 12)
+    End Sub
+
+    Private Sub Button44_Click(sender As Object, e As EventArgs) Handles Button44.Click
+        wennButtonGedrückt(Button44, 2, 13)
+    End Sub
+
+    Private Sub Button45_Click(sender As Object, e As EventArgs) Handles Button45.Click
+        wennButtonGedrückt(Button45, 2, 14)
+    End Sub
+
+    Private Sub Button46_Click(sender As Object, e As EventArgs) Handles Button46.Click
+        wennButtonGedrückt(Button46, 3, 0)
+    End Sub
+
+    Private Sub Button47_Click(sender As Object, e As EventArgs) Handles Button47.Click
+        wennButtonGedrückt(Button47, 3, 1)
+    End Sub
+
+    Private Sub Button48_Click(sender As Object, e As EventArgs) Handles Button48.Click
+        wennButtonGedrückt(Button48, 3, 2)
+    End Sub
+
+    Private Sub Button49_Click(sender As Object, e As EventArgs) Handles Button49.Click
+        wennButtonGedrückt(Button49, 3, 3)
+    End Sub
+
+    Private Sub Button50_Click(sender As Object, e As EventArgs) Handles Button50.Click
+        wennButtonGedrückt(Button50, 3, 4)
+    End Sub
+
+    Private Sub Button51_Click(sender As Object, e As EventArgs) Handles Button51.Click
+        wennButtonGedrückt(Button51, 3, 5)
+    End Sub
+
+    Private Sub Button52_Click(sender As Object, e As EventArgs) Handles Button52.Click
+        wennButtonGedrückt(Button52, 3, 6)
+    End Sub
+
+    Private Sub Button53_Click(sender As Object, e As EventArgs) Handles Button53.Click
+        wennButtonGedrückt(Button53, 3, 7)
+    End Sub
+
+    Private Sub Button54_Click(sender As Object, e As EventArgs) Handles Button54.Click
+        wennButtonGedrückt(Button54, 3, 8)
+    End Sub
+
+    Private Sub Button55_Click(sender As Object, e As EventArgs) Handles Button55.Click
+        wennButtonGedrückt(Button55, 3, 9)
+    End Sub
+
+    Private Sub Button56_Click(sender As Object, e As EventArgs) Handles Button56.Click
+        wennButtonGedrückt(Button56, 3, 10)
+    End Sub
+
+    Private Sub Button57_Click(sender As Object, e As EventArgs) Handles Button57.Click
+        wennButtonGedrückt(Button57, 3, 11)
+    End Sub
+
+    Private Sub Button58_Click(sender As Object, e As EventArgs) Handles Button58.Click
+        wennButtonGedrückt(Button58, 3, 12)
+    End Sub
+
+    Private Sub Button59_Click(sender As Object, e As EventArgs) Handles Button59.Click
+        wennButtonGedrückt(Button59, 3, 13)
+    End Sub
+
+    Private Sub Button60_Click(sender As Object, e As EventArgs) Handles Button60.Click
+        wennButtonGedrückt(Button60, 3, 14)
+    End Sub
+
+    Private Sub Button61_Click(sender As Object, e As EventArgs) Handles Button61.Click
+    End Sub
+
+    Private Sub Button62_Click(sender As Object, e As EventArgs) Handles Button62.Click
+        wennButtonGedrückt(Button62, 4, 1)
+    End Sub
+
+    Private Sub Button63_Click(sender As Object, e As EventArgs) Handles Button63.Click
+        wennButtonGedrückt(Button63, 4, 2)
+    End Sub
+
+    Private Sub Button64_Click(sender As Object, e As EventArgs) Handles Button64.Click
+        wennButtonGedrückt(Button64, 4, 3)
+    End Sub
+
+    Private Sub Button65_Click(sender As Object, e As EventArgs) Handles Button65.Click
+        wennButtonGedrückt(Button65, 4, 4)
+    End Sub
+
+    Private Sub Button66_Click(sender As Object, e As EventArgs) Handles Button66.Click
+        wennButtonGedrückt(Button66, 4, 5)
+    End Sub
+
+    Private Sub Button67_Click(sender As Object, e As EventArgs) Handles Button67.Click
+        wennButtonGedrückt(Button67, 4, 6)
+    End Sub
+
+    Private Sub Button68_Click(sender As Object, e As EventArgs) Handles Button68.Click
+        wennButtonGedrückt(Button68, 4, 7)
+    End Sub
+
+    Private Sub Button69_Click(sender As Object, e As EventArgs) Handles Button69.Click
+        wennButtonGedrückt(Button69, 4, 8)
+    End Sub
+
+    Private Sub Button70_Click(sender As Object, e As EventArgs) Handles Button70.Click
+        wennButtonGedrückt(Button70, 4, 9)
+    End Sub
+
+    Private Sub Button71_Click(sender As Object, e As EventArgs) Handles Button71.Click
+        wennButtonGedrückt(Button71, 4, 10)
+    End Sub
+
+    Private Sub Button72_Click(sender As Object, e As EventArgs) Handles Button72.Click
+        wennButtonGedrückt(Button72, 4, 11)
+    End Sub
+
+    Private Sub Button73_Click(sender As Object, e As EventArgs) Handles Button73.Click
+        wennButtonGedrückt(Button73, 4, 12)
+    End Sub
+
+    Private Sub Button74_Click(sender As Object, e As EventArgs) Handles Button74.Click
+        wennButtonGedrückt(Button74, 4, 13)
+    End Sub
+
+    Private Sub Button75_Click(sender As Object, e As EventArgs) Handles Button75.Click
+        wennButtonGedrückt(Button75, 4, 14)
+    End Sub
+
+    Private Sub Button76_Click(sender As Object, e As EventArgs) Handles Button76.Click
+        wennButtonGedrückt(Button76, 5, 0)
+    End Sub
+
+    Private Sub Button77_Click(sender As Object, e As EventArgs) Handles Button77.Click
+        wennButtonGedrückt(Button77, 5, 1)
+    End Sub
+
+    Private Sub Button78_Click(sender As Object, e As EventArgs) Handles Button78.Click
+        wennButtonGedrückt(Button78, 5, 2)
+    End Sub
+
+    Private Sub Button79_Click(sender As Object, e As EventArgs) Handles Button79.Click
+    End Sub
+
+    Private Sub Button80_Click(sender As Object, e As EventArgs) Handles Button80.Click
+        wennButtonGedrückt(Button80, 5, 4)
+    End Sub
+
+    Private Sub Button81_Click(sender As Object, e As EventArgs) Handles Button81.Click
+        wennButtonGedrückt(Button81, 5, 5)
+    End Sub
+
+    Private Sub Button82_Click(sender As Object, e As EventArgs) Handles Button82.Click
+        wennButtonGedrückt(Button82, 5, 6)
+    End Sub
+
+    Private Sub Button83_Click(sender As Object, e As EventArgs) Handles Button83.Click
+        wennButtonGedrückt(Button83, 5, 7)
+    End Sub
+
+    Private Sub Button84_Click(sender As Object, e As EventArgs) Handles Button84.Click
+        wennButtonGedrückt(Button84, 5, 8)
+    End Sub
+
+    Private Sub Button85_Click(sender As Object, e As EventArgs) Handles Button85.Click
+        wennButtonGedrückt(Button85, 5, 9)
+    End Sub
+
+    Private Sub Button86_Click(sender As Object, e As EventArgs) Handles Button86.Click
+        wennButtonGedrückt(Button86, 5, 10)
+    End Sub
+
+    Private Sub Button87_Click(sender As Object, e As EventArgs) Handles Button87.Click
+        wennButtonGedrückt(Button87, 5, 11)
+    End Sub
+
+    Private Sub Button88_Click(sender As Object, e As EventArgs) Handles Button88.Click
+        wennButtonGedrückt(Button88, 5, 12)
+    End Sub
+
+    Private Sub Button89_Click(sender As Object, e As EventArgs) Handles Button89.Click
+        wennButtonGedrückt(Button89, 5, 13)
+    End Sub
+
+    Private Sub Button90_Click(sender As Object, e As EventArgs) Handles Button90.Click
+        wennButtonGedrückt(Button90, 5, 14)
+    End Sub
+
+    Private Sub Button91_Click(sender As Object, e As EventArgs) Handles Button91.Click
+        wennButtonGedrückt(Button91, 6, 0)
+    End Sub
+
+    Private Sub Button92_Click(sender As Object, e As EventArgs) Handles Button92.Click
+        wennButtonGedrückt(Button92, 6, 1)
+    End Sub
+
+    Private Sub Button93_Click(sender As Object, e As EventArgs) Handles Button93.Click
+        wennButtonGedrückt(Button93, 6, 2)
+    End Sub
+
+    Private Sub Button94_Click(sender As Object, e As EventArgs) Handles Button94.Click
+        wennButtonGedrückt(Button94, 6, 3)
+    End Sub
+
+    Private Sub Button95_Click(sender As Object, e As EventArgs) Handles Button95.Click
+        wennButtonGedrückt(Button95, 6, 4)
+    End Sub
+
+    Private Sub Button96_Click(sender As Object, e As EventArgs) Handles Button96.Click
+        wennButtonGedrückt(Button96, 6, 5)
+    End Sub
+
+    Private Sub Button97_Click(sender As Object, e As EventArgs) Handles Button97.Click
+        wennButtonGedrückt(Button97, 6, 6)
+    End Sub
+
+    Private Sub Button98_Click(sender As Object, e As EventArgs) Handles Button98.Click
+        wennButtonGedrückt(Button98, 6, 7)
+    End Sub
+
+    Private Sub Button99_Click(sender As Object, e As EventArgs) Handles Button99.Click
+        wennButtonGedrückt(Button99, 6, 8)
+    End Sub
+
+    Private Sub Button100_Click(sender As Object, e As EventArgs) Handles Button100.Click
+        wennButtonGedrückt(Button100, 6, 9)
+    End Sub
+
+    Private Sub Button101_Click(sender As Object, e As EventArgs) Handles Button101.Click
+        wennButtonGedrückt(Button101, 6, 10)
+    End Sub
+
+    Private Sub Button102_Click(sender As Object, e As EventArgs) Handles Button102.Click
+        wennButtonGedrückt(Button102, 6, 11)
+    End Sub
+
+    Private Sub Button103_Click(sender As Object, e As EventArgs) Handles Button103.Click
+        wennButtonGedrückt(Button103, 6, 12)
+    End Sub
+
+    Private Sub Button104_Click(sender As Object, e As EventArgs) Handles Button104.Click
+        wennButtonGedrückt(Button104, 6, 13)
+    End Sub
+
+    Private Sub Button105_Click(sender As Object, e As EventArgs) Handles Button105.Click
+        wennButtonGedrückt(Button105, 6, 14)
+    End Sub
+
+    Private Sub Button106_Click(sender As Object, e As EventArgs) Handles Button106.Click
+        wennButtonGedrückt(Button106, 7, 0)
+    End Sub
+
+    Private Sub Button107_Click(sender As Object, e As EventArgs) Handles Button107.Click
+        wennButtonGedrückt(Button107, 7, 1)
+    End Sub
+
+    Private Sub Button108_Click(sender As Object, e As EventArgs) Handles Button108.Click
+        wennButtonGedrückt(Button108, 7, 2)
+    End Sub
+
+    Private Sub Button109_Click(sender As Object, e As EventArgs) Handles Button109.Click
+        wennButtonGedrückt(Button109, 7, 3)
+    End Sub
+
+    Private Sub Button110_Click(sender As Object, e As EventArgs) Handles Button110.Click
+        wennButtonGedrückt(Button110, 7, 4)
+    End Sub
+
+    Private Sub Button111_Click(sender As Object, e As EventArgs) Handles Button111.Click
+        wennButtonGedrückt(Button111, 7, 5)
+    End Sub
+
+    Private Sub Button112_Click(sender As Object, e As EventArgs) Handles Button112.Click
+        wennButtonGedrückt(Button112, 7, 6)
+    End Sub
+
+    Private Sub Button113_Click(sender As Object, e As EventArgs) Handles Button113.Click
+        wennButtonGedrückt(Button113, 7, 7)
+    End Sub
+
+    Private Sub Button114_Click(sender As Object, e As EventArgs) Handles Button114.Click
+        wennButtonGedrückt(Button114, 7, 8)
+    End Sub
+
+    Private Sub Button115_Click(sender As Object, e As EventArgs) Handles Button115.Click
+        wennButtonGedrückt(Button115, 7, 9)
+    End Sub
+
+    Private Sub Button116_Click(sender As Object, e As EventArgs) Handles Button116.Click
+        wennButtonGedrückt(Button116, 7, 10)
+    End Sub
+
+    Private Sub Button117_Click(sender As Object, e As EventArgs) Handles Button117.Click
+        wennButtonGedrückt(Button117, 7, 11)
+    End Sub
+
+    Private Sub Button118_Click(sender As Object, e As EventArgs) Handles Button118.Click
+    End Sub
+
+    Private Sub Button119_Click(sender As Object, e As EventArgs) Handles Button119.Click
+        wennButtonGedrückt(Button119, 7, 13)
+    End Sub
+
+    Private Sub Button120_Click(sender As Object, e As EventArgs) Handles Button120.Click
+        wennButtonGedrückt(Button120, 7, 14)
+    End Sub
+
 End Class
