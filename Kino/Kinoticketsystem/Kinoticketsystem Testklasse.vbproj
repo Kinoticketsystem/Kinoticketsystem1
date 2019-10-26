@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class3.vb" />
-    <Compile Include="Class4.vb" />
+    <Compile Include="TestVorstellung.vb" />
     <Compile Include="Film.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -149,7 +149,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tagesplan.vb" />
-    <Compile Include="Testklasse.vb" />
+    <Compile Include="TestTagesplan.vb" />
     <Compile Include="Testklassekino.Designer.vb">
       <DependentUpon>Testklassekino.vb</DependentUpon>
     </Compile>
