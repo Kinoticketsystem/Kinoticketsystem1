@@ -419,10 +419,11 @@ Public Class KinosaalGUI
     End Sub
 
     Public Sub Aufrufen(ByRef a As Kinosaal, ByVal b As Kunde)
+        'noch nicht fertig
         _kinosaal = a
 
         zeigeNurSovieleButtonsWienötig()
-        _aktuellerKunde = b
+        _aktuellerKunde = b 'eigentlich unnötig
     End Sub
 
     Private Sub übertrageAnzahlAusgewähltePlätze()

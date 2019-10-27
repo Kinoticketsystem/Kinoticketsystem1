@@ -32,7 +32,7 @@ Partial Class KinoGUI
         '
         'cmdWochenplan
         '
-        Me.cmdWochenplan.Location = New System.Drawing.Point(1443, 598)
+        Me.cmdWochenplan.Location = New System.Drawing.Point(980, 602)
         Me.cmdWochenplan.Name = "cmdWochenplan"
         Me.cmdWochenplan.Size = New System.Drawing.Size(193, 52)
         Me.cmdWochenplan.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class KinoGUI
         '
         'cmdTexterfassen
         '
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(427, 574)
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(32, 584)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
         Me.cmdTexterfassen.Size = New System.Drawing.Size(225, 66)
         Me.cmdTexterfassen.TabIndex = 1
@@ -54,12 +54,12 @@ Partial Class KinoGUI
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(406, 146)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 61)
+        Me.Label1.Size = New System.Drawing.Size(0, 38)
         Me.Label1.TabIndex = 2
         '
         'cmdkinosaalAufrufen
         '
-        Me.cmdkinosaalAufrufen.Location = New System.Drawing.Point(781, 574)
+        Me.cmdkinosaalAufrufen.Location = New System.Drawing.Point(386, 584)
         Me.cmdkinosaalAufrufen.Name = "cmdkinosaalAufrufen"
         Me.cmdkinosaalAufrufen.Size = New System.Drawing.Size(135, 41)
         Me.cmdkinosaalAufrufen.TabIndex = 3
@@ -68,7 +68,7 @@ Partial Class KinoGUI
         '
         'cmdKinosaalTest
         '
-        Me.cmdKinosaalTest.Location = New System.Drawing.Point(1796, 574)
+        Me.cmdKinosaalTest.Location = New System.Drawing.Point(1333, 578)
         Me.cmdKinosaalTest.Name = "cmdKinosaalTest"
         Me.cmdKinosaalTest.Size = New System.Drawing.Size(248, 53)
         Me.cmdKinosaalTest.TabIndex = 4
@@ -77,7 +77,7 @@ Partial Class KinoGUI
         '
         'cmdNeueBuchung
         '
-        Me.cmdNeueBuchung.Location = New System.Drawing.Point(1021, 565)
+        Me.cmdNeueBuchung.Location = New System.Drawing.Point(626, 575)
         Me.cmdNeueBuchung.Name = "cmdNeueBuchung"
         Me.cmdNeueBuchung.Size = New System.Drawing.Size(289, 85)
         Me.cmdNeueBuchung.TabIndex = 5
@@ -86,10 +86,10 @@ Partial Class KinoGUI
         '
         'KinoGUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 36.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SlateGray
-        Me.ClientSize = New System.Drawing.Size(2896, 1529)
+        Me.ClientSize = New System.Drawing.Size(1920, 1080)
         Me.Controls.Add(Me.cmdNeueBuchung)
         Me.Controls.Add(Me.cmdKinosaalTest)
         Me.Controls.Add(Me.cmdkinosaalAufrufen)
@@ -97,8 +97,10 @@ Partial Class KinoGUI
         Me.Controls.Add(Me.cmdTexterfassen)
         Me.Controls.Add(Me.cmdWochenplan)
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "KinoGUI"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

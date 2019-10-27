@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Kinoticketsystem.StartBild
+            Me.MainForm = Global.Kinoticketsystem.KinoGUI
         End Sub
     End Class
 End Namespace

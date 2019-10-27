@@ -82,7 +82,5 @@
         Return _AnzahlFilmWiedergabe
     End Function
 
-    Public Function getfilmlänge() As Integer
-        Return _Filmlänge
-    End Function
+
 End Class
