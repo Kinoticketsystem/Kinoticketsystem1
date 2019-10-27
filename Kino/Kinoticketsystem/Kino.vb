@@ -1,6 +1,6 @@
 ﻿Public Class Kino
     'Attribute
-    Private _Kinosäle() As Kinosaal 'Array, für mehrere Kinosäle 
+    Private _Kinosäle As ArrayList = New ArrayList() 'Array, für mehrere Kinosäle 
     Private _AnzahlKinosäle As Integer
     Private _Filme As ArrayList = New ArrayList() 'Array, weil mehrere Filme
     Private _Kunden As ArrayList = New ArrayList()
@@ -110,13 +110,29 @@
     Public Sub setTagesplan(ByRef Tagesplan As Array)
         Tagesplan = _Tagespläne
     End Sub
-    Public Sub setFilm(ByRef Film As ArrayList)
-        Film = _Filme
+    Public Sub FilmHinzufügen(ByRef Film As ArrayList)
+        _Filme.Add(Film)
     End Sub
     ' wie bei kunde
+    Public Sub FilmEntfernen(ByRef Film As ArrayList)
+        Dim a As Integer
+        Dim I As ArrayList = New ArrayList(_Filme)
+        I = _Filme.Clone
+        a = I.IndexOf(Film)
+        _Filme.RemoveAt(a)
+    End Sub
 
-    Public Sub setKinosaal(ByRef Kinosaal As Array)
-        Kinosaal = _Kinosäle
+
+    Public Sub KinosaalHinzufügen(ByRef Kinosaal As ArrayList)
+        _Kinosäle.Add(Kinosaal)
+    End Sub
+
+    Public Sub KinosaalEntfernen(ByRef Kinosaal As ArrayList)
+        Dim a As Integer
+        Dim I As ArrayList = New ArrayList(_Kinosäle)
+        I = _Kinosäle.Clone
+        a = I.IndexOf(_Kinosäle)
+        _Kinosäle.RemoveAt(a)
     End Sub
     'wie bei kunde 
     Public Sub setAnzahlKinosaal(ByRef AnzahlKinosaal As Integer)
