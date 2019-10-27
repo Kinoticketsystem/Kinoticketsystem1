@@ -28,4 +28,9 @@
         Return Me._Name
     End Function
 
+    Public Function getTreuepunkte()
+        Return Me._AnzahlTreuePunkte
+    End Function
+
+
 End Class

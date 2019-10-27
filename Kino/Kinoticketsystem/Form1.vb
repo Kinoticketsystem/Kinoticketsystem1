@@ -34,53 +34,46 @@ Public Class FTagesplan
         PositionDerFilmButtonsFestlegenY()
     End Sub
 
+    Private Sub welcheFarbe(ByVal a As Button, tag As Tagesplan, position As Integer)
+        If tag.getFSK(position) <= 0 Then
+            a.BackColor = Color.White
+        ElseIf tag.getFSK(position) <= 6 Then
+            a.BackColor = Color.Yellow
+
+        ElseIf tag.getFSK(position) <= 12 Then
+            a.BackColor = Color.Green
+        ElseIf tag.getFSK(position) <= 16 Then
+            a.BackColor = Color.Blue
+        Else
+            a.BackColor = Color.Red
+        End If
+        ButtonsSchönMachen(a)
+    End Sub
+    Private Sub ButtonsSchönMachen(a As Button)
+        a.FlatStyle = FlatStyle.Flat 'Notwendig!!!
+        a.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
+        a.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
+        a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
+    End Sub
     Private Sub FarbeDerButtonsFestlegen()
-
-        Button1.FlatStyle = FlatStyle.Flat 'Notwendig!!!
-        Button1.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
-        Button1.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
-
-        Button1.ForeColor = Color.White 'ganz cool, aber nicht notwendig
         Select Case _ersterTag.getAnzahlVorstellungen
             Case 1
-                If _ersterTag.getFSK(1) <= 0 Then
-                    Button1.BackColor = Color.White
-                ElseIf _ersterTag.getFSK(1) <= 6 Then
-                    Button1.BackColor = Color.Yellow
-
-                ElseIf _ersterTag.getFSK(1) <= 12 Then
-                    Button1.BackColor = Color.Green
-                ElseIf _ersterTag.getFSK(1) <= 16 Then
-                    Button1.BackColor = Color.Blue
-                Else
-                    Button1.BackColor = Color.Red
-                End If
+                welcheFarbe(Button1, _ersterTag, 1)
             Case 2
-                If _ersterTag.getFSK(1) <= 0 Then
-                    Button1.BackColor = Color.White
-                ElseIf _ersterTag.getFSK(1) <= 6 Then
-                    Button1.BackColor = Color.Yellow
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+            Case 3
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+            Case 4
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+                welcheFarbe(Button4, _ersterTag, 4)
+            Case 5
 
-                ElseIf _ersterTag.getFSK(1) <= 12 Then
-                    Button1.BackColor = Color.Green
-                ElseIf _ersterTag.getFSK(1) <= 16 Then
-                    Button1.BackColor = Color.Blue
-                Else
-                    Button1.BackColor = Color.Red
-                End If
 
-                If _ersterTag.getFSK(2) <= 0 Then
-                    Button1.BackColor = Color.White
-                ElseIf _ersterTag.getFSK(2) <= 6 Then
-                    Button1.BackColor = Color.Yellow
-
-                ElseIf _ersterTag.getFSK(2) <= 12 Then
-                    Button1.BackColor = Color.Green
-                ElseIf _ersterTag.getFSK(2) <= 16 Then
-                    Button1.BackColor = Color.Blue
-                Else
-                    Button1.BackColor = Color.Red
-                End If
                 'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
         End Select
     End Sub
@@ -104,6 +97,7 @@ Public Class FTagesplan
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
         Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a)
         Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a)
+        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a)
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
         _dritterTag = New Tagesplan
@@ -112,9 +106,10 @@ Public Class FTagesplan
         _sechsterTag = New Tagesplan
         _siebterTag = New Tagesplan
 
-        _ersterTag.TagesplanErstellen1(b)
+        _ersterTag.TagesplanErstellen2(b, c)
+        _ersterTag.VorstellungHinzufügen(d)
         _zweiterTag.TagesplanErstellen1(b)
-        _dritterTag.TagesplanErstellen1(b)
+        _dritterTag.TagesplanErstellen2(b, d)
         _vierterTag.TagesplanErstellen1(b)
         _fünfterTag.TagesplanErstellen2(b, c)
         _sechsterTag.TagesplanErstellen1(b)

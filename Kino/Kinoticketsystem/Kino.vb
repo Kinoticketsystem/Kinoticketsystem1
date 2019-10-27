@@ -1,6 +1,6 @@
 ﻿Public Class Kino
     'Attribute
-    Private _Kinosäle() As Kinosaal 'Array, für mehrere Kinosäle 
+    Private _Kinosäle As ArrayList = New ArrayList() 'Array, für mehrere Kinosäle () As Kinosaal '
     Private _AnzahlKinosäle As Integer
     Private _Filme As ArrayList = New ArrayList() 'Array, weil mehrere Filme
     Private _Kunden As ArrayList = New ArrayList()
@@ -11,11 +11,11 @@
 
     Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal)
         _AnzahlKinosäle = AnzahlKinos
-        Dim a(AnzahlKinos) As Kinosaal
+        'Dim a(AnzahlKinos) As Kinosaal 'für array
         If Not (AnzahlKinos = 1) Then
             Throw New Exception("Wenn man nur ein Kinosaal übergibt, muss man bei AnzahlKinos auch 1 eingeben,") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
         End If
-        _Kinosäle = a
+        _Kinosäle.Clear()
         Me._Kinosäle(0) = Kinosaal
         Me._Filme = Filme
         Me._Kunden = Kunden
@@ -74,17 +74,17 @@
         If Not (AnzahlKinos = 2) Then
             Throw New Exception("Wenn man zwei Kinosaal übergibt, muss man bei AnzahlKinos auch 2 eingeben, man kann später noch mehr Kinosäle hinzufügen über methoden") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
         End If
-        Dim a(AnzahlKinos) As Kinosaal
-        _Kinosäle = a
-        Me._Kinosäle(0) = Kinosaal
+        ' Dim a(AnzahlKinos) As Kinosaal 'für array
+        _Kinosäle.Clear()
+        _Kinosäle(0) = Kinosaal 'alternative .add
         _Kinosäle(1) = Kinosaal2
 
         Me._Filme = Filme
         Me._Kunden = Kunden
         Me._Tagespläne = Tagespläne
     End Sub
-    Public Sub neueBuchung(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde, Kinosaal As Integer)
-        _Kinosäle(Kinosaal).SitzplatzBuchen(gewählterPlatzX, gewählterPlatzY, kunde)
+    Public Sub neueBuchung(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde, Kinosaal As Kinosaal)
+        _Kinosäle(_Kinosäle.IndexOf(Kinosaal)).SitzplatzBuchen(gewählterPlatzX, gewählterPlatzY, kunde)
     End Sub
     Public Sub TagesPlanAnzeigen()
         FTagesplan.BringToFront()
@@ -92,18 +92,18 @@
     End Sub
 
 
-    Public Sub Kinosaalhinzufügen(ByVal a As Kinosaal)
-        _AnzahlKinosäle += 1
-        Dim b(_AnzahlKinosäle) As Kinosaal
-        For i As Integer = 0 To _AnzahlKinosäle - 1
-            b(i) = _Kinosäle(i)
-        Next
-        b(_AnzahlKinosäle - 1) = a
-        _Kinosäle = b
+    'Public Sub Kinosaalhinzufügen(ByVal a As Kinosaal) 'wenn array
+    '    _AnzahlKinosäle += 1
+    '    Dim b(_AnzahlKinosäle) As Kinosaal
+    '    For i As Integer = 0 To _AnzahlKinosäle - 1
+    '        b(i) = _Kinosäle(i)
+    '    Next
+    '    b(_AnzahlKinosäle - 1) = a
+    '    _Kinosäle = b
 
-        ' Dim b(_AnzahlKinosäle) As Kinosaal = _Kinosäle ist nicht möglich, weil man nicht weiß, wie groß _Kinosäle ist. (Ist jetzt aber auch irrellevant)
+    '    ' Dim b(_AnzahlKinosäle) As Kinosaal = _Kinosäle ist nicht möglich, weil man nicht weiß, wie groß _Kinosäle ist. (Ist jetzt aber auch irrellevant)
 
-    End Sub
+    'End Sub
 
     'get
     Public Function getFilmtitel() As ArrayList
@@ -127,13 +127,29 @@
     Public Sub setTagesplan(ByRef Tagesplan As Array)
         Tagesplan = _Tagespläne
     End Sub
-    Public Sub setFilm(ByRef Film As ArrayList)
-        Film = _Filme
+    Public Sub FilmHinzufügen(ByRef Film As ArrayList)
+        _Filme.Add(Film)
     End Sub
     ' wie bei kunde
+    Public Sub FilmEntfernen(ByRef Film As ArrayList)
+        Dim a As Integer
+        Dim I As ArrayList = New ArrayList(_Filme)
+        I = _Filme.Clone
+        a = I.IndexOf(Film)
+        _Filme.RemoveAt(a)
+    End Sub
 
-    Public Sub setKinosaal(ByRef Kinosaal As Array)
-        Kinosaal = _Kinosäle
+
+    Public Sub KinosaalHinzufügen(ByRef Kinosaal As ArrayList)
+        _Kinosäle.Add(Kinosaal)
+    End Sub
+
+    Public Sub KinosaalEntfernen(ByRef Kinosaal As ArrayList)
+        Dim a As Integer
+        Dim I As ArrayList = New ArrayList(_Kinosäle)
+        I = _Kinosäle.Clone
+        a = I.IndexOf(_Kinosäle)
+        _Kinosäle.RemoveAt(a)
     End Sub
     'wie bei kunde 
     Public Sub setAnzahlKinosaal(ByRef AnzahlKinosaal As Integer)

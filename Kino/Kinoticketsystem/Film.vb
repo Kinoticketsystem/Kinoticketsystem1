@@ -13,7 +13,7 @@
         Me._Filmtitel = Filmtitel
         Me._Filmlänge = Filmlänge
         Me._Altersfreigabe = Altersfreigabe
-        Me._3D = __3D
+        Me._3D = 3D
 
 
     End Sub
@@ -81,4 +81,6 @@
     Public Function getAnzahlFilmwiedergabe() As Integer
         Return _AnzahlFilmWiedergabe
     End Function
+
+
 End Class

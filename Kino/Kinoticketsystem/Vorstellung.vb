@@ -57,18 +57,18 @@ Public Class Vorstellung
         Me._Film = Film
     End Sub
 
-    Private Sub BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
+    Public Sub BesucherHinzufügen(Besucher As Kunde) Implements IVorstellung.BesucherHinzufügen
         _Besucher.Add(Besucher)
     End Sub
-    Private Sub BesucherEntfernen(Besucher As Kunde)
+    Public Sub BesucherEntfernen(Besucher As Kunde)
         _Besucher.RemoveAt(_Besucher.LastIndexOf(Besucher))
     End Sub
-    Private Sub BesucherEntfernen(Nr As Integer)
+    Public Sub BesucherEntfernen(Nr As Integer)
         _Besucher.RemoveAt(Nr)
     End Sub
 
 
-    Private Sub SaalÄndern(Saal As Kinosaal) Implements IVorstellung.SaalÄndern
+    Public Sub SaalÄndern(Saal As Kinosaal) Implements IVorstellung.SaalÄndern
         Me._Saal = Saal
     End Sub
 

@@ -61,6 +61,15 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -87,6 +96,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Class3.vb" />
+    <Compile Include="StartBild.Designer.vb">
+      <DependentUpon>StartBild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartBild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestVorstellung.vb" />
     <Compile Include="Film.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -138,7 +156,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tagesplan.vb" />
-    <Compile Include="Testklasse.vb" />
+    <Compile Include="TestTagesplan.vb" />
     <Compile Include="Testklassekino.Designer.vb">
       <DependentUpon>Testklassekino.vb</DependentUpon>
     </Compile>
@@ -175,6 +193,9 @@
     <EmbeddedResource Include="NeueVorstellung.resx">
       <DependentUpon>NeueVorstellung.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StartBild.resx">
+      <DependentUpon>StartBild.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Testklassekino.resx">
       <DependentUpon>Testklassekino.vb</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +204,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -210,6 +232,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Kinologo.png" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

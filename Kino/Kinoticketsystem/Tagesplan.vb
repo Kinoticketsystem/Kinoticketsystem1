@@ -68,15 +68,25 @@ Public Class Tagesplan
         End If
     End Sub
     Public Sub TagesplanErstellen2(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung) Implements ITagesplan.TagesplanErstellen2
-        _Vorstellungen(1) = Vorstellung1
-        _Vorstellungen(2) = Vorstellung2
+        If Vorstellung1.getAnfangszeit < Vorstellung2.getAnfangszeit Then 'so müsste man es eigentlich noch bei den anderen Tagesplanerstellen implementieren. 
+            _Vorstellungen(1) = Vorstellung1
+            _Vorstellungen(2) = Vorstellung2
+            If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
+                Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
+            End If
+        Else
+            _Vorstellungen(1) = Vorstellung2
+            _Vorstellungen(2) = Vorstellung1
+            If Vorstellung2.getEndzeit > Vorstellung1.getAnfangszeit Then
+                Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
+            End If
+        End If
+
         AnzahlFilmeProTag = 2
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
         'Next
-        If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
-            Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
-        End If
+
     End Sub
     Public Sub TagesplanErstellen1(Vorstellung1 As Vorstellung) Implements ITagesplan.TagesplanErstellen1
         _Vorstellungen(1) = Vorstellung1
