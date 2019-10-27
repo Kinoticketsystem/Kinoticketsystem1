@@ -27,22 +27,23 @@ Partial Class KinoGUI
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmdkinosaalAufrufen = New System.Windows.Forms.Button()
         Me.cmdKinosaalTest = New System.Windows.Forms.Button()
+        Me.cmdNeueBuchung = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdWochenplan
         '
-        Me.cmdWochenplan.Location = New System.Drawing.Point(212, 238)
+        Me.cmdWochenplan.Location = New System.Drawing.Point(1443, 598)
         Me.cmdWochenplan.Name = "cmdWochenplan"
-        Me.cmdWochenplan.Size = New System.Drawing.Size(189, 28)
+        Me.cmdWochenplan.Size = New System.Drawing.Size(193, 52)
         Me.cmdWochenplan.TabIndex = 0
         Me.cmdWochenplan.Text = "Wochenplan aufrufen"
         Me.cmdWochenplan.UseVisualStyleBackColor = True
         '
         'cmdTexterfassen
         '
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(649, 238)
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(427, 574)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
-        Me.cmdTexterfassen.Size = New System.Drawing.Size(189, 28)
+        Me.cmdTexterfassen.Size = New System.Drawing.Size(225, 66)
         Me.cmdTexterfassen.TabIndex = 1
         Me.cmdTexterfassen.Text = "Texterfassen Erik"
         Me.cmdTexterfassen.UseVisualStyleBackColor = True
@@ -53,13 +54,12 @@ Partial Class KinoGUI
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(406, 146)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(188, 31)
+        Me.Label1.Size = New System.Drawing.Size(0, 61)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Das wird schon"
         '
         'cmdkinosaalAufrufen
         '
-        Me.cmdkinosaalAufrufen.Location = New System.Drawing.Point(501, 326)
+        Me.cmdkinosaalAufrufen.Location = New System.Drawing.Point(781, 574)
         Me.cmdkinosaalAufrufen.Name = "cmdkinosaalAufrufen"
         Me.cmdkinosaalAufrufen.Size = New System.Drawing.Size(135, 41)
         Me.cmdkinosaalAufrufen.TabIndex = 3
@@ -68,19 +68,29 @@ Partial Class KinoGUI
         '
         'cmdKinosaalTest
         '
-        Me.cmdKinosaalTest.Location = New System.Drawing.Point(82, 444)
+        Me.cmdKinosaalTest.Location = New System.Drawing.Point(1796, 574)
         Me.cmdKinosaalTest.Name = "cmdKinosaalTest"
         Me.cmdKinosaalTest.Size = New System.Drawing.Size(248, 53)
         Me.cmdKinosaalTest.TabIndex = 4
         Me.cmdKinosaalTest.Text = "Kinosaal Test"
         Me.cmdKinosaalTest.UseVisualStyleBackColor = True
         '
+        'cmdNeueBuchung
+        '
+        Me.cmdNeueBuchung.Location = New System.Drawing.Point(1021, 565)
+        Me.cmdNeueBuchung.Name = "cmdNeueBuchung"
+        Me.cmdNeueBuchung.Size = New System.Drawing.Size(289, 85)
+        Me.cmdNeueBuchung.TabIndex = 5
+        Me.cmdNeueBuchung.Text = "NeueBuchung"
+        Me.cmdNeueBuchung.UseVisualStyleBackColor = True
+        '
         'KinoGUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 36.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Blue
-        Me.ClientSize = New System.Drawing.Size(1100, 619)
+        Me.BackColor = System.Drawing.Color.SlateGray
+        Me.ClientSize = New System.Drawing.Size(2896, 1529)
+        Me.Controls.Add(Me.cmdNeueBuchung)
         Me.Controls.Add(Me.cmdKinosaalTest)
         Me.Controls.Add(Me.cmdkinosaalAufrufen)
         Me.Controls.Add(Me.Label1)
@@ -89,7 +99,6 @@ Partial Class KinoGUI
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "KinoGUI"
-        Me.Text = "Kino"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -100,4 +109,5 @@ Partial Class KinoGUI
     Friend WithEvents Label1 As Label
     Friend WithEvents cmdkinosaalAufrufen As Button
     Friend WithEvents cmdKinosaalTest As Button
+    Friend WithEvents cmdNeueBuchung As Button
 End Class
