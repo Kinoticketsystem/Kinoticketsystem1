@@ -22,7 +22,9 @@
         Me._Tagespläne = Tagespläne
 
         Dim b As Integer
+        Dim c As Integer
         Dim i As Integer
+        Dim j As Integer
         Dim neuertext As String = Kunden(i)
 
         Do Until b = 1
@@ -37,18 +39,33 @@
             End If
         Loop
 
-        '  For j = 0 To Filme.Length - 1
-        '    neuertext = Filme(j)
-        FileOpen(1, "Filme.txt", OpenMode.Append)
-            PrintLine(1, neuertext)
-            FileClose(1)
-        'Next
+        Do Until c = 1
+            If Filme(j) IsNot Nothing Then
+                neuertext = Filme(j)
+                FileOpen(1, "Filme.txt", OpenMode.Append)
+                PrintLine(1, neuertext)
+                FileClose(1)
+                j = j + 1
+            Else
+                c = 1
+            End If
+        Loop
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Append)
         PrintLine(1, "Kinosaal 1: Anzahl Sitzplätze: " & Kinosaal.getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosaal.getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosaal.getSitzeProReihe)
         FileClose(1)
 
-
+        For i = 1 To 7
+            Dim plan As Tagesplan = _Tagespläne(i)
+            Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
+            For j = 1 To AnzahlVorstellungen
+                Dim Vorstellung As Vorstellung = plan.getVorstellung(i)
+                FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                PrintLine(1, i & ". Tag:")
+                PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit & " bis " & Vorstellung.getEndzeit & " : " & Vorstellung.getFilm.getFilmtitel & " Saal: 1")
+                FileClose(1)
+            Next
+        Next
     End Sub
     'Methoden
 
