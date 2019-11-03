@@ -208,8 +208,10 @@ Public Class KinosaalGUI
         Dim b As Kunde = New Kunde("Test")
         _kinosaal.SitzplatzBuchen(0, 1, b)  'erste Reihe zweiter Platz
         _kinosaal.SitzplatzBuchen(3, 4, b)  'vierte Reihe fünfter Platz
-        ' _kinosaal.SitzplatzBuchen(5, 10, b)
+        _kinosaal.SitzplatzBuchen(5, 10, b)
+        zeigeNurSovieleButtonsWienötig()
     End Sub
+
 
     Private Sub berechneGrößeDerForm()
         'wie viele Buttons sind drauf * breite Buttons + bisschen was = breite der Form
@@ -423,6 +425,9 @@ Public Class KinosaalGUI
         _kinosaal = a
 
         zeigeNurSovieleButtonsWienötig()
+        übertrageAnzahlAusgewähltePlätze()
+        InitialisiereSitzplan()
+        berechneGrößeDerForm()
         _aktuellerKunde = b 'eigentlich unnötig
     End Sub
 
@@ -436,7 +441,7 @@ Public Class KinosaalGUI
             cmdFertig.Enabled = True
         End If
     End Sub
-    Private Sub macheButtons2DUndEnableUndRot(ByRef a As Button)
+    Public Sub macheButtons2DUndEnableUndRot(ByRef a As Button)
         a.FlatStyle = FlatStyle.Flat
         a.FlatAppearance.BorderColor = Color.Black
         a.Enabled = False

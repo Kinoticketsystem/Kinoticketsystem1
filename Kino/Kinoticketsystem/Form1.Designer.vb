@@ -36,7 +36,6 @@ Partial Class FTagesplan
         Me.chb1100 = New System.Windows.Forms.CheckBox()
         Me.chbSonntag = New System.Windows.Forms.CheckBox()
         Me.chbSamstag = New System.Windows.Forms.CheckBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.chb2100 = New System.Windows.Forms.CheckBox()
         Me.chb2330 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -92,7 +91,7 @@ Partial Class FTagesplan
         '
         'cmdTagesPlanErstellen
         '
-        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(150, 516)
+        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(899, 476)
         Me.cmdTagesPlanErstellen.Margin = New System.Windows.Forms.Padding(4)
         Me.cmdTagesPlanErstellen.Name = "cmdTagesPlanErstellen"
         Me.cmdTagesPlanErstellen.Size = New System.Drawing.Size(221, 32)
@@ -102,7 +101,10 @@ Partial Class FTagesplan
         '
         'cmdFilmÄndern
         '
-        Me.cmdFilmÄndern.Location = New System.Drawing.Point(585, 420)
+        Me.cmdFilmÄndern.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.cmdFilmÄndern.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdFilmÄndern.ForeColor = System.Drawing.Color.Black
+        Me.cmdFilmÄndern.Location = New System.Drawing.Point(935, 437)
         Me.cmdFilmÄndern.Name = "cmdFilmÄndern"
         Me.cmdFilmÄndern.Size = New System.Drawing.Size(185, 32)
         Me.cmdFilmÄndern.TabIndex = 1
@@ -228,12 +230,6 @@ Partial Class FTagesplan
         Me.chbSamstag.TabIndex = 16
         Me.chbSamstag.Text = "Samstag"
         Me.chbSamstag.UseVisualStyleBackColor = True
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(914, 464)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 20
         '
         'chb2100
         '
@@ -651,7 +647,7 @@ Partial Class FTagesplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1161, 689)
+        Me.ClientSize = New System.Drawing.Size(1153, 517)
         Me.Controls.Add(Me.Button49)
         Me.Controls.Add(Me.Button48)
         Me.Controls.Add(Me.Button47)
@@ -703,7 +699,6 @@ Partial Class FTagesplan
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chb2330)
         Me.Controls.Add(Me.chb2100)
-        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.chbSamstag)
         Me.Controls.Add(Me.chbSonntag)
         Me.Controls.Add(Me.chb1100)
@@ -741,7 +736,6 @@ Partial Class FTagesplan
     Friend WithEvents chb1100 As CheckBox
     Friend WithEvents chbSonntag As CheckBox
     Friend WithEvents chbSamstag As CheckBox
-    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents chb2100 As CheckBox
     Friend WithEvents chb2330 As CheckBox
     Friend WithEvents Button1 As Button

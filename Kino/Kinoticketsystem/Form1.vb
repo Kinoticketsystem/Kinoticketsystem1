@@ -8,6 +8,9 @@ Public Class FTagesplan
     Private _fünfterTag As ITagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
+    Private _Aendern As Boolean
+    Private _Kinosaal As Kinosaal
+    Private _Kunde As Kunde = New Kunde("Standart")
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnfangstagUndDatümerFestlegen() 'fertig
@@ -17,7 +20,7 @@ Public Class FTagesplan
         VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
         GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
         PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
-        ButtonsInvisibleMachen() 'das sind die Buttons die gerade nicht benutzt werden
+        ' ButtonsInvisibleMachen() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
         FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
 
 
@@ -33,6 +36,13 @@ Public Class FTagesplan
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
+    Public Sub SetKinosaal(a As Kinosaal)
+        _Kinosaal = a
+
+    End Sub
+    Public Function GetKinosaal() As Kinosaal
+        Return _Kinosaal
+    End Function
 
     Private Sub welcheFarbe(ByVal a As Button, tag As Tagesplan, position As Integer)
         If tag.getFSK(position) <= 0 Then
@@ -976,16 +986,32 @@ Public Class FTagesplan
     End Sub
 
     Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
+        _Aendern = Not _Aendern
+        If _Aendern Then
+            cmdFilmÄndern.FlatStyle = FlatStyle.Flat
+            cmdFilmÄndern.FlatAppearance.BorderColor = Color.Black
+            'cmdFilmÄndern.BackColor = New Color.
+            'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
+
+        Else
+            cmdFilmÄndern.FlatStyle = FlatStyle.Popup
+            ' cmdFilmÄndern.BackColor = Color.Lime
+            cmdFilmÄndern.FlatAppearance.BorderSize = 1
+
+
+        End If
+
+
         '    _Montag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
-        WriteLine("FilmHinzufügen funktioniert nicht")
-        Select Case True
-            Case chbMontag.Checked
-      '          _ersterTag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
-            Case chbDienstag.Checked
-            Case chbMittwoch.Checked
-            Case chbDonnerstag.Checked
-            Case chbFreitag.Checked
-        End Select
+        '  Debug.WriteLine("FilmHinzufügen funktioniert nicht") 'lol funktioniert nicht
+        '  Select Case True
+        '      Case chbMontag.Checked
+        ''          _ersterTag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
+        '      Case chbDienstag.Checked
+        '      Case chbMittwoch.Checked
+        '      Case chbDonnerstag.Checked
+        '      Case chbFreitag.Checked
+        '  End Select
     End Sub
 
     Public Sub filmändern(Tag As Integer, Stelle As Integer, z As Vorstellung)
@@ -1098,52 +1124,95 @@ Public Class FTagesplan
             '     MonthCalendar1.Left = chbMontag.Left
         End If
     End Sub
+    Private Sub Geklickt(a As Integer, b As Integer)
+        Dim c As Vorstellung
+
+        If _Aendern Then
+            'ohne Infos vom Film
+            NeueVorstellung.BringToFront()
+            NeueVorstellung.Show()
+            NeueVorstellung.PositionÜbergeben(a, b)
+            'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Else
+            Select Case a
+                Case 1
+                    c = _ersterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                Case 2
+                    c = _zweiterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                Case 3
+                    c = _dritterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                Case 4
+                    c = _vierterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                Case 5
+                    c = _fünfterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                Case 6
+                    c = _sechsterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                Case 7
+                    c = _siebterTag.getVorstellung(b)
+                    KinosaalGUI.BringToFront()
+                    KinosaalGUI.Show()
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+            End Select
+        End If
+    End Sub
+    Private Sub Button1_MouseMove(sender As Object, e As EventArgs) Handles Button1.MouseMove
+        'wird aktiviert immer wenn die Maus über dem Button bewegt wird
+        'Zeige ein Bild für den Film
+        'um zu zeigen, dass es funktionert:
+        If cmdFilmÄndern.BackColor.Equals(Color.White) Then
+            cmdFilmÄndern.BackColor = Color.Red
+        Else
+            cmdFilmÄndern.BackColor = Color.White
+        End If
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 1)
+        'NeueVorstellung.BringToFront()
+        'NeueVorstellung.Show()
+        'NeueVorstellung.PositionÜbergeben(1, 1)
         'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Geklickt(1, 1)
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 2)
-        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Geklickt(1, 2)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 3)
-        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Geklickt(1, 3)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 4)
-        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Geklickt(1, 4)
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 5)
-        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Geklickt(1, 5)
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 6)
-        'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+        Geklickt(1, 6)
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        NeueVorstellung.BringToFront()
-        NeueVorstellung.Show()
-        NeueVorstellung.PositionÜbergeben(1, 7)
+        Geklickt(1, 7)
         'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
     End Sub
     'Hier fehlen noch die anderen Tage ab 2.Tag

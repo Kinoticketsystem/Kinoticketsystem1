@@ -38,7 +38,9 @@ Public Class Kinosaal
         Next
         _PreisProPlatz = b
     End Sub
-
+    Public Sub New(ByVal Vorstellung As Vorstellung)
+        Me.New(Vorstellung.getSaal.getAnzahlSitzplätze, Vorstellung.getFilm, Vorstellung.getSaal.getAnzahlReihe, Vorstellung.getSaal.getAnzahlSitzplätze)
+    End Sub
     Friend Function getKunde(i As Integer, j As Integer) As Kunde
         Return _Sitzplätze(i, j)
     End Function
