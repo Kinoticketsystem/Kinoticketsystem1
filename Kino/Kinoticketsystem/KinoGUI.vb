@@ -27,7 +27,7 @@
 
 
 
-    Private Sub cmdKinosaalTest_Click(sender As Object, e As EventArgs) Handles cmdKinosaalTest.Click
+    Private Sub cmdKinosaalTest_Click(sender As Object, e As EventArgs)
         KinosaalTest.BringToFront()
         KinosaalTest.Show()
     End Sub

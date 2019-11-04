@@ -1,27 +1,41 @@
 ﻿Public Class TexterfassenTest
-    Public Sub texterfassen()
+    Private TestFilmA As Film = New Film("TestFilmA", 120, 16, True)
+    Private testsaal1 As Kinosaal = New Kinosaal(60, TestFilmA, 10, 6)
+    Private _Tagespläne As New ArrayList
+    Private FilmListe As New ArrayList
 
 
-        FileOpen(1, "Speichertext.txt", OpenMode.Input)
-        While Not EOF(1)
-            lstTextausgabe.Items.Add(LineInput(1))
-            ' in der Listbox wird der ganze Text aus der Datei angezeigt (Zeile für Zeile ausgelesen)
-            Console.WriteLine()
-        End While
-        FileClose(1)
-    End Sub
-
-    Public Sub texteinfügen()
-        Dim neuertext As String = txtInput.Text
-        'textbox ist die, in der der einzulesende Text geschrieben wird, 
-        'dieser wird dann in der nächsten Zeile der Datei angefügt 
-
-        FileOpen(1, "test.txt", OpenMode.Append)
-        PrintLine(1, neuertext)
-        FileClose(1)
-    End Sub
-
-    Private Sub TexterfassenTest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub cmdTexterfassen_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click
+        FilmListe.Add("cool")
+        FilmListe.Add("langweilig")
+        FilmListe.Add( "ok")
+        Dim testkino As Kino = New Kino(1, FilmListe, New ArrayList(), _Tagespläne, testsaal1)
 
     End Sub
+    'Public Sub texterfassen()
+
+
+    '    FileOpen(1, "Speichertext.txt", OpenMode.Input)
+    '    While Not EOF(1)
+    '        lstTextausgabe.Items.Add(LineInput(1))
+    '        ' in der Listbox wird der ganze Text aus der Datei angezeigt (Zeile für Zeile ausgelesen)
+    '        Console.WriteLine()
+    '    End While
+    '    FileClose(1)
+    'End Sub
+
+    'Public Sub texteinfügen()
+    '    Dim neuertext As String = txtInput.Text
+    '    'textbox ist die, in der der einzulesende Text geschrieben wird, 
+    '    'dieser wird dann in der nächsten Zeile der Datei angefügt 
+
+    '    FileOpen(1, "test.txt", OpenMode.Append)
+    '    PrintLine(1, neuertext)
+    '    FileClose(1)
+    'End Sub
+
+    'Private Sub TexterfassenTest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    'End Sub
+
 End Class

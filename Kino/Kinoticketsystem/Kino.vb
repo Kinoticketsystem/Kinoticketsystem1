@@ -4,19 +4,19 @@
     Private _AnzahlKinosäle As Integer
     Private _Filme As ArrayList = New ArrayList() 'Array, weil mehrere Filme
     Private _Kunden As ArrayList = New ArrayList()
-    Private _Tagespläne(7) As Tagesplan
+    Private _Tagespläne As New ArrayList
 
 
     'Konstruktur
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosaal As Kinosaal)
         _AnzahlKinosäle = AnzahlKinos
         'Dim a(AnzahlKinos) As Kinosaal 'für array
         If Not (AnzahlKinos = 1) Then
             Throw New Exception("Wenn man nur ein Kinosaal übergibt, muss man bei AnzahlKinos auch 1 eingeben,") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
         End If
         _Kinosäle.Clear()
-        Me._Kinosäle(0) = Kinosaal
+        Me._Kinosäle.Add(Kinosaal)
         Me._Filme = Filme
         Me._Kunden = Kunden
         Me._Tagespläne = Tagespläne

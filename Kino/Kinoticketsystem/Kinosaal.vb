@@ -31,11 +31,11 @@ Public Class Kinosaal
         Me._Sitzplätze = a
         Dim b(AnzahlReihe + 1, SitzeProReihe + 1) As Double
 
-        For k = 1 To AnzahlReihe
-            For l = 1 To AnzahlReihe
-                b(k, l) = 5.0
-            Next
-        Next
+        'For k = 1 To AnzahlReihe
+        '    For l = 1 To AnzahlReihe
+        '        b(k, l) = 5.0
+        '    Next
+        'Next
         _PreisProPlatz = b
     End Sub
     Public Sub New(ByVal Vorstellung As Vorstellung)

@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29324.140
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Kinoticketsystem Testklasse", "Kinoticketsystem\Kinoticketsystem Testklasse.vbproj", "{AD1A72C8-86C6-4B9D-BE6D-451CCA324503}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDD71658-6324-4A22-B77A-836217B80197}"
+	ProjectSection(SolutionItems) = preProject
+		Kinoticketsystem\bin\Debug\Tagespläne.txt = Kinoticketsystem\bin\Debug\Tagespläne.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

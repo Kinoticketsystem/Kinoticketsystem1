@@ -26,7 +26,6 @@ Partial Class KinoGUI
         Me.cmdTexterfassen = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmdkinosaalAufrufen = New System.Windows.Forms.Button()
-        Me.cmdKinosaalTest = New System.Windows.Forms.Button()
         Me.cmdNeueBuchung = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -54,7 +53,7 @@ Partial Class KinoGUI
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(406, 146)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 38)
+        Me.Label1.Size = New System.Drawing.Size(0, 31)
         Me.Label1.TabIndex = 2
         '
         'cmdkinosaalAufrufen
@@ -65,15 +64,6 @@ Partial Class KinoGUI
         Me.cmdkinosaalAufrufen.TabIndex = 3
         Me.cmdkinosaalAufrufen.Text = "Kinosaal aufrufen"
         Me.cmdkinosaalAufrufen.UseVisualStyleBackColor = True
-        '
-        'cmdKinosaalTest
-        '
-        Me.cmdKinosaalTest.Location = New System.Drawing.Point(1333, 578)
-        Me.cmdKinosaalTest.Name = "cmdKinosaalTest"
-        Me.cmdKinosaalTest.Size = New System.Drawing.Size(248, 53)
-        Me.cmdKinosaalTest.TabIndex = 4
-        Me.cmdKinosaalTest.Text = "Kinosaal Test"
-        Me.cmdKinosaalTest.UseVisualStyleBackColor = True
         '
         'cmdNeueBuchung
         '
@@ -86,12 +76,11 @@ Partial Class KinoGUI
         '
         'KinoGUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SlateGray
-        Me.ClientSize = New System.Drawing.Size(1920, 1080)
+        Me.ClientSize = New System.Drawing.Size(1920, 1061)
         Me.Controls.Add(Me.cmdNeueBuchung)
-        Me.Controls.Add(Me.cmdKinosaalTest)
         Me.Controls.Add(Me.cmdkinosaalAufrufen)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdTexterfassen)
@@ -110,6 +99,5 @@ Partial Class KinoGUI
     Friend WithEvents cmdTexterfassen As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents cmdkinosaalAufrufen As Button
-    Friend WithEvents cmdKinosaalTest As Button
     Friend WithEvents cmdNeueBuchung As Button
 End Class
