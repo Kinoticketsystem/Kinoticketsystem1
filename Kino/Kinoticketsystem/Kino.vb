@@ -4,7 +4,7 @@
     Private _AnzahlKinosäle As Integer
     Private _Filme As ArrayList = New ArrayList() 'Array, weil mehrere Filme
     Private _Kunden As ArrayList = New ArrayList()
-    Private _Tagespläne As New ArrayList
+    Private _Tagespläne As ArrayList = New ArrayList
 
 
     'Konstruktur
@@ -21,55 +21,44 @@
         Me._Kunden = Kunden
         Me._Tagespläne = Tagespläne
 
-        Dim b As Integer
-        Dim c As Integer
         Dim i As Integer
         Dim j As Integer
-        Dim neuertext As String = Kunden(i)
+        Dim neuertext As String
 
-        Do Until b = 1
-            If Kunden(i) IsNot Nothing Then
-                neuertext = Kunden(i)
-                FileOpen(1, "Kunden.txt", OpenMode.Append)
-                PrintLine(1, neuertext)
-                FileClose(1)
-                i = i + 1
-            Else
-                b = 1
-            End If
-        Loop
+        For i = 0 To Kunden.Count - 1
+            neuertext = Kunden(i)
+            FileOpen(1, "Kunden.txt", OpenMode.Append)
+            PrintLine(1, neuertext)
+            FileClose(1)
 
-        Do Until c = 1
-            If Filme(j) IsNot Nothing Then
-                neuertext = Filme(j)
-                FileOpen(1, "Filme.txt", OpenMode.Append)
-                PrintLine(1, neuertext)
-                FileClose(1)
-                j = j + 1
-            Else
-                c = 1
-            End If
-        Loop
+        Next
+
+        For j = 0 To Filme.Count - 1
+            neuertext = Filme(j)
+            FileOpen(1, "Filme.txt", OpenMode.Append)
+            PrintLine(1, neuertext)
+            FileClose(1)
+        Next
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Append)
-        PrintLine(1, "Kinosaal 1: Anzahl Sitzplätze: " & Kinosaal.getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosaal.getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosaal.getSitzeProReihe)
+        PrintLine(1, "Kinosaal 1: Anzahl Sitzplätze: " & Kinosaal.getZ & " Anzahl der Reihen: " & Kinosaal.getX & " Sitzplätze pro Reihe: " & Kinosaal.getY)
         FileClose(1)
 
-        For i = 1 To 7
-            Dim plan As Tagesplan = _Tagespläne(i)
+        For i = 0 To Tagespläne.Count - 1
+            Dim plan As Tagesplan = Tagespläne(i)
             Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
             For j = 1 To AnzahlVorstellungen
-                Dim Vorstellung As Vorstellung = plan.getVorstellung(i)
+                Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
                 FileOpen(1, "Tagespläne.txt", OpenMode.Append)
-                PrintLine(1, i & ". Tag:")
-                PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit & " bis " & Vorstellung.getEndzeit & " : " & Vorstellung.getFilm.getFilmtitel & " Saal: 1")
+                PrintLine(1, j & ". Tag:")
+                PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
                 FileClose(1)
             Next
         Next
     End Sub
     'Methoden
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosaal As Kinosaal, ByVal Kinosaal2 As Kinosaal)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosaal As Kinosaal, ByVal Kinosaal2 As Kinosaal)
         _AnzahlKinosäle = AnzahlKinos
         If Not (AnzahlKinos = 2) Then
             Throw New Exception("Wenn man zwei Kinosaal übergibt, muss man bei AnzahlKinos auch 2 eingeben, man kann später noch mehr Kinosäle hinzufügen über methoden") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
@@ -112,7 +101,7 @@
     Public Function getKunde() As ArrayList
         Return _Kunden
     End Function
-    Public Function getTagesplan() As Array
+    Public Function getTagesplan() As ArrayList
         Return _Tagespläne
     End Function
 
@@ -124,7 +113,7 @@
         Dim a As Integer = _Kunden.BinarySearch(Kunde)
         _Kunden.RemoveAt(a)
     End Sub
-    Public Sub setTagesplan(ByRef Tagesplan As Array)
+    Public Sub setTagesplan(ByRef Tagesplan As ArrayList)
         Tagesplan = _Tagespläne
     End Sub
     Public Sub FilmHinzufügen(ByRef Film As ArrayList)

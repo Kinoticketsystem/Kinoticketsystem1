@@ -6,6 +6,7 @@ Public Class Kinosaal
     Private _SitzeProReihe As Integer
     Private x As Integer
     Private y As Integer
+    Private z As Integer
     Private _Film As Film
     Private _Sitzplätze(,) As Kunde
     Private _PreisProPlatz(,) As Double
@@ -22,6 +23,7 @@ Public Class Kinosaal
 
         x = AnzahlReihe
         y = SitzeProReihe
+        z = AnzahlSitztplätze
 
         For i As Integer = 0 To AnzahlReihe - 1
             For j As Integer = 0 To SitzeProReihe - 1
@@ -51,6 +53,9 @@ Public Class Kinosaal
 
     Public Function getX()
         Return x
+    End Function
+    Public Function getZ()
+        Return z
     End Function
     Public Function getAnzahlSitzplätze()
         Return _AnzahlSitzplätze
