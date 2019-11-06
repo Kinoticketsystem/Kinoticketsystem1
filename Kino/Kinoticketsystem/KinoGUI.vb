@@ -40,4 +40,9 @@
     Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
 
     End Sub
+
+    Private Sub cmdTestKino_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click
+        Call Testklassekino.Show()
+
+    End Sub
 End Class

@@ -3,10 +3,9 @@
 Public Class Tagesplan
     Implements ITagesplan
     Private MaximaleAnzahlFilmeProTag As Integer = 10
-    Private _Vorstellungen(MaximaleAnzahlFilmeProTag) As Vorstellung
     Private AnzahlFilmeProTag As Integer
     Private _Saal As Kinosaal
-    ' Private _Vorstellungen As ArrayList = New ArrayList()
+    Private _Vorstellungen As ArrayList = New ArrayList()
 
     'Es muss zusätzlich zum Konstruktor IMMER auch eine ErstellenMEthode aufgerufen werden
     'Es wird geprüft, ob sich die Vorstellungen überschneiden (ob sie nicht zu früh oder zu spät anfangen siehe Vorstellung)
@@ -14,11 +13,11 @@ Public Class Tagesplan
         ' _Vorstellungen = New Vorstellung() {}
     End Sub
     Public Sub TagesplanErstellen5(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung, Vorstellung5 As Vorstellung) Implements ITagesplan.TagesplanErstellen5
-        _Vorstellungen(1) = Vorstellung1
-        _Vorstellungen(2) = Vorstellung2
-        _Vorstellungen(3) = Vorstellung3
-        _Vorstellungen(4) = Vorstellung4
-        _Vorstellungen(5) = Vorstellung5
+        _Vorstellungen.Add(Vorstellung1)
+        _Vorstellungen.Add(Vorstellung2)
+        _Vorstellungen.Add(Vorstellung3)
+        _Vorstellungen.Add(Vorstellung4)
+        _Vorstellungen.Add(Vorstellung5)
         AnzahlFilmeProTag = 5
         If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
             Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
@@ -34,10 +33,10 @@ Public Class Tagesplan
         End If
     End Sub
     Public Sub TagesplanErstellen4(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung) Implements ITagesplan.TagesplanErstellen4
-        _Vorstellungen(1) = Vorstellung1
-        _Vorstellungen(2) = Vorstellung2
-        _Vorstellungen(3) = Vorstellung3
-        _Vorstellungen(4) = Vorstellung4
+        _Vorstellungen.Add(Vorstellung1)
+        _Vorstellungen.Add(Vorstellung2)
+        _Vorstellungen.Add(Vorstellung3)
+        _Vorstellungen.Add(Vorstellung4)
         AnzahlFilmeProTag = 4
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
@@ -53,9 +52,9 @@ Public Class Tagesplan
         End If
     End Sub
     Public Sub TagesplanErstellen3(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung) Implements ITagesplan.TagesplanErstellen3
-        _Vorstellungen(1) = Vorstellung1
-        _Vorstellungen(2) = Vorstellung2
-        _Vorstellungen(3) = Vorstellung3
+        _Vorstellungen.Add(Vorstellung1)
+        _Vorstellungen.Add(Vorstellung2)
+        _Vorstellungen.Add(Vorstellung3)
         AnzahlFilmeProTag = 3
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
@@ -69,14 +68,14 @@ Public Class Tagesplan
     End Sub
     Public Sub TagesplanErstellen2(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung) Implements ITagesplan.TagesplanErstellen2
         If Vorstellung1.getAnfangszeit < Vorstellung2.getAnfangszeit Then 'so müsste man es eigentlich noch bei den anderen Tagesplanerstellen implementieren. 
-            _Vorstellungen(1) = Vorstellung1
-            _Vorstellungen(2) = Vorstellung2
+            _Vorstellungen.Add(Vorstellung1)
+            _Vorstellungen.Add(Vorstellung2)
             If Vorstellung1.getEndzeit > Vorstellung2.getAnfangszeit Then
                 Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
             End If
         Else
-            _Vorstellungen(1) = Vorstellung2
-            _Vorstellungen(2) = Vorstellung1
+            _Vorstellungen.Add(Vorstellung2)
+            _Vorstellungen.Add(Vorstellung1)
             If Vorstellung2.getEndzeit > Vorstellung1.getAnfangszeit Then
                 Throw New Exception("die vorstellung2 beginnt, bevor die vorstellung endet")
             End If
@@ -89,7 +88,7 @@ Public Class Tagesplan
 
     End Sub
     Public Sub TagesplanErstellen1(Vorstellung1 As Vorstellung) Implements ITagesplan.TagesplanErstellen1
-        _Vorstellungen(1) = Vorstellung1
+        _Vorstellungen.Add(Vorstellung1)
         AnzahlFilmeProTag = 1
         'For i As Integer = 0 To MaximaleAnzahlFilmeProTag - 1
 
@@ -115,7 +114,7 @@ Public Class Tagesplan
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 
-    Public Function getVorstellungen() As Array Implements ITagesplan.getVorstellungen
+    Public Function getVorstellungen() As ArrayList Implements ITagesplan.getVorstellungen
         Return _Vorstellungen
     End Function
 
