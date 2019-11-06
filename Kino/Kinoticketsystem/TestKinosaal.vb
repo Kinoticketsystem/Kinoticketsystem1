@@ -9,11 +9,20 @@
         BeispielBesucherB = testsaal1.getKunde(4, 1)
         If Not BeispielBesucherB.Equals(BeispielBesucherA) Then
             Console.WriteLine("Problem bei Kinosaal: SitzplatzBuchen")
-        Else
-            Console.WriteLine("passt")
+
+            'Else
+            '    Console.WriteLine("passt")
+
+
         End If
     End Sub
     Private Sub TestSitzplatzStornieren()
+        testsaal1.SitzplatzStornieren(4, 1, BeispielBesucherA)
+        If testsaal1.getKunde(4, 1) IsNot Nothing Then
+            Console.WriteLine("Problem bei Kinosaal: SitzplatzStornieren")
+
+        End If
 
     End Sub
+
 End Class
