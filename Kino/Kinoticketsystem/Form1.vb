@@ -1215,10 +1215,12 @@ Public Class FTagesplan
         Geklickt(1, 7)
         'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
     End Sub
-    'Hier fehlen noch die anderen Tage ab 2.Tag
+
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Geklickt(2, 1)
     End Sub
+    'Hier fehlen noch die anderen Tage ab 2.Tag
+
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         Geklickt(2, 2)
