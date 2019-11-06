@@ -105,7 +105,7 @@ Public Class Tagesplan
 
 
     Public Sub VorstellungHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.VorstellungHinzufügen
-        _Vorstellungen(AnzahlFilmeProTag + 1) = Vorstellung
+        _Vorstellungen.Add(Vorstellung)
         AnzahlFilmeProTag = AnzahlFilmeProTag + 1
     End Sub
 
