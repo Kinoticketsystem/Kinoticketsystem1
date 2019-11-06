@@ -1232,7 +1232,7 @@ Public Interface ITagesplan
     'wird ans Ende hinzugefügt
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
-    Function getVorstellungen() As Array
+    Function getVorstellungen() As ArrayList
     Function getVorstellung(ByVal Position As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
     Function getSaal() As Kinosaal
