@@ -22,16 +22,77 @@ Partial Class Testklassekino
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.cmdNeueBUchung = New System.Windows.Forms.Button()
+        Me.cmdtestsetkinosaal = New System.Windows.Forms.Button()
+        Me.cmdTestSetFilm = New System.Windows.Forms.Button()
+        Me.cmdTestSetKunden = New System.Windows.Forms.Button()
+        Me.cmdTestSetAnzahlkinosaal = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'cmdNeueBUchung
+        '
+        Me.cmdNeueBUchung.Location = New System.Drawing.Point(423, 282)
+        Me.cmdNeueBUchung.Name = "cmdNeueBUchung"
+        Me.cmdNeueBUchung.Size = New System.Drawing.Size(307, 95)
+        Me.cmdNeueBUchung.TabIndex = 2
+        Me.cmdNeueBUchung.Text = "neue Buchung"
+        Me.cmdNeueBUchung.UseVisualStyleBackColor = True
+        '
+        'cmdtestsetkinosaal
+        '
+        Me.cmdtestsetkinosaal.Location = New System.Drawing.Point(781, 314)
+        Me.cmdtestsetkinosaal.Name = "cmdtestsetkinosaal"
+        Me.cmdtestsetkinosaal.Size = New System.Drawing.Size(137, 63)
+        Me.cmdtestsetkinosaal.TabIndex = 3
+        Me.cmdtestsetkinosaal.Text = "setkinosaal"
+        Me.cmdtestsetkinosaal.UseVisualStyleBackColor = True
+        '
+        'cmdTestSetFilm
+        '
+        Me.cmdTestSetFilm.Location = New System.Drawing.Point(1003, 314)
+        Me.cmdTestSetFilm.Name = "cmdTestSetFilm"
+        Me.cmdTestSetFilm.Size = New System.Drawing.Size(137, 63)
+        Me.cmdTestSetFilm.TabIndex = 4
+        Me.cmdTestSetFilm.Text = "setfilm"
+        Me.cmdTestSetFilm.UseVisualStyleBackColor = True
+        '
+        'cmdTestSetKunden
+        '
+        Me.cmdTestSetKunden.Location = New System.Drawing.Point(1155, 314)
+        Me.cmdTestSetKunden.Name = "cmdTestSetKunden"
+        Me.cmdTestSetKunden.Size = New System.Drawing.Size(137, 63)
+        Me.cmdTestSetKunden.TabIndex = 5
+        Me.cmdTestSetKunden.Text = "setKunden"
+        Me.cmdTestSetKunden.UseVisualStyleBackColor = True
+        '
+        'cmdTestSetAnzahlkinosaal
+        '
+        Me.cmdTestSetAnzahlkinosaal.Location = New System.Drawing.Point(1447, 342)
+        Me.cmdTestSetAnzahlkinosaal.Name = "cmdTestSetAnzahlkinosaal"
+        Me.cmdTestSetAnzahlkinosaal.Size = New System.Drawing.Size(137, 63)
+        Me.cmdTestSetAnzahlkinosaal.TabIndex = 7
+        Me.cmdTestSetAnzahlkinosaal.Text = "setAnzahlKinosaal"
+        Me.cmdTestSetAnzahlkinosaal.UseVisualStyleBackColor = True
         '
         'Testklassekino
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(2150, 779)
+        Me.Controls.Add(Me.cmdTestSetAnzahlkinosaal)
+        Me.Controls.Add(Me.cmdTestSetKunden)
+        Me.Controls.Add(Me.cmdTestSetFilm)
+        Me.Controls.Add(Me.cmdtestsetkinosaal)
+        Me.Controls.Add(Me.cmdNeueBUchung)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Testklassekino"
         Me.Text = "Testklassekino"
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents cmdNeueBUchung As Button
+    Friend WithEvents cmdtestsetkinosaal As Button
+    Friend WithEvents cmdTestSetFilm As Button
+    Friend WithEvents cmdTestSetKunden As Button
+    Friend WithEvents cmdTestSetAnzahlkinosaal As Button
 End Class
