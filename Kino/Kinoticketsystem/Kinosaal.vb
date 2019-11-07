@@ -4,9 +4,9 @@ Public Class Kinosaal
     Private _AnzahlSitzplätze As Integer
     Private _Anzahlreihe As Integer
     Private _SitzeProReihe As Integer
-    Private x As Integer
-    Private y As Integer
-    Private z As Integer
+    'Private x As Integer
+    'Private y As Integer
+    'Private z As Integer
     Private _Film As Film
     Private _Sitzplätze(,) As Kunde
     Private _PreisProPlatz(,) As Double
@@ -21,9 +21,12 @@ Public Class Kinosaal
         Me._Film = Film
         Dim a(AnzahlReihe + 1, SitzeProReihe + 1) As Kunde 'es wird später für button1 ja 0,0 übergeben
 
-        x = AnzahlReihe
-        y = SitzeProReihe
-        z = AnzahlSitztplätze
+        '  x = AnzahlReihe      'why?
+        ' y = SitzeProReihe
+        '  z = AnzahlSitztplätze 'why ??????
+        _Anzahlreihe = AnzahlReihe
+        _SitzeProReihe = SitzeProReihe
+
 
         For i As Integer = 0 To AnzahlReihe - 1
             For j As Integer = 0 To SitzeProReihe - 1
@@ -48,17 +51,17 @@ Public Class Kinosaal
     Friend Function getKunde(i As Integer, j As Integer) As Kunde
         Return _Sitzplätze(i, j)
     End Function
+    'Unnötig
+    'Public Function getY()
+    '    Return y
+    'End Function
 
-    Public Function getY()
-        Return y
-    End Function
-
-    Public Function getX()
-        Return x
-    End Function
-    Public Function getZ()
-        Return z
-    End Function
+    'Public Function getX()
+    '    Return x
+    'End Function
+    'Public Function getZ()
+    '    Return z
+    'End Function
     Public Function getAnzahlSitzplätze()
         Return _AnzahlSitzplätze
     End Function

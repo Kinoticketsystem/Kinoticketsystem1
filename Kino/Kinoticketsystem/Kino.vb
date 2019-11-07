@@ -41,7 +41,7 @@
         Next
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Append)
-        PrintLine(1, "Kinosaal 1: Anzahl Sitzplätze: " & Kinosaal.getZ & " Anzahl der Reihen: " & Kinosaal.getX & " Sitzplätze pro Reihe: " & Kinosaal.getY)
+        PrintLine(1, "Kinosaal 1: Anzahl Sitzplätze: " & Kinosaal.getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosaal.getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosaal.getSitzeProReihe)
         FileClose(1)
 
         For i = 0 To Tagespläne.Count - 1

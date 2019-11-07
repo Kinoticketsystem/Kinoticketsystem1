@@ -144,12 +144,12 @@ Public Class KinosaalGUI
     Private Sub InitialisiereSitzplan() 'fertig (wichtig: immer dran denken button1 = (0,0)
         buttonsInsArray() 'nicht löschen!
 
-        For i As Integer = 0 To _kinosaal.getX - 1 ' überall gleich sein muss
-            For j As Integer = 0 To _kinosaal.getY - 1
+        For i As Integer = 0 To _kinosaal.getAnzahlReihe - 1 ' überall gleich sein muss
+            For j As Integer = 0 To _kinosaal.getSitzeProReihe - 1
                 Dim a As Kunde = _kinosaal.getKunde(i, j) '= nothing funktioniert nicht. .hasValue müsste man erben vom System, k.P. wie und warum nicht automatisch wie bei Java ;-(
 
                 If Not (_kinosaal._leererPlatz.Equals(a)) Then
-                    macheButtons2DUndEnableUndRot(_Buttons((i * _kinosaal.getY) + j))
+                    macheButtons2DUndEnableUndRot(_Buttons((i * _kinosaal.getSitzeProReihe) + j))
                     'Select Case i
                     '    Case 0
                     '        Select Case j
@@ -258,7 +258,7 @@ Public Class KinosaalGUI
         cmdFertig.Location = New Point(Size.Width - cmdFertig.Width - 27, Size.Height - cmdFertig.Height - 50)
     End Sub
     Private Sub zeigeNurSovieleButtonsWienötig()
-        If _kinosaal.getX < 8 Then
+        If _kinosaal.getAnzahlReihe < 8 Then
             Button106.Hide()
             Button107.Hide()
             Button108.Hide()
@@ -274,7 +274,7 @@ Public Class KinosaalGUI
             Button118.Hide()
             Button119.Hide()
             Button120.Hide()
-            If _kinosaal.getX < 7 Then
+            If _kinosaal.getAnzahlReihe < 7 Then
                 Button91.Hide()
                 Button92.Hide()
                 Button93.Hide()
@@ -290,7 +290,7 @@ Public Class KinosaalGUI
                 Button103.Hide()
                 Button104.Hide()
                 Button105.Hide()
-                If _kinosaal.getX < 6 Then
+                If _kinosaal.getAnzahlReihe < 6 Then
                     Button76.Hide()
                     Button77.Hide()
                     Button78.Hide()
@@ -308,11 +308,11 @@ Public Class KinosaalGUI
                     Button90.Hide()
                 End If
             End If
-        ElseIf _kinosaal.getX > 8 Then
+        ElseIf _kinosaal.getAnzahlReihe > 8 Then
             Throw New Exception("Zu viele Reihen (nicht mehr als 8 möglich)")
         End If
 
-        If _kinosaal.getY < 15 Then
+        If _kinosaal.getSitzeProReihe < 15 Then
             Button15.Hide()
             Button30.Hide()
             Button45.Hide()
@@ -321,7 +321,7 @@ Public Class KinosaalGUI
             Button90.Hide()
             Button105.Hide()
             Button120.Hide()
-            If _kinosaal.getY < 14 Then
+            If _kinosaal.getSitzeProReihe < 14 Then
                 Button14.Hide()
                 Button29.Hide()
                 Button44.Hide()
@@ -330,7 +330,7 @@ Public Class KinosaalGUI
                 Button89.Hide()
                 Button104.Hide()
                 Button119.Hide()
-                If _kinosaal.getY < 13 Then
+                If _kinosaal.getSitzeProReihe < 13 Then
                     Button13.Hide()
                     Button28.Hide()
                     Button43.Hide()
@@ -339,7 +339,7 @@ Public Class KinosaalGUI
                     Button88.Hide()
                     Button103.Hide()
                     Button118.Hide()
-                    If _kinosaal.getY < 12 Then
+                    If _kinosaal.getSitzeProReihe < 12 Then
                         Button12.Hide()
                         Button27.Hide()
                         Button42.Hide()
@@ -348,7 +348,7 @@ Public Class KinosaalGUI
                         Button87.Hide()
                         Button102.Hide()
                         Button117.Hide()
-                        If _kinosaal.getY < 11 Then
+                        If _kinosaal.getSitzeProReihe < 11 Then
                             Button11.Hide()
                             Button26.Hide()
                             Button41.Hide()
@@ -357,7 +357,7 @@ Public Class KinosaalGUI
                             Button86.Hide()
                             Button101.Hide()
                             Button116.Hide()
-                            If _kinosaal.getY < 10 Then
+                            If _kinosaal.getSitzeProReihe < 10 Then
                                 Button10.Hide()
                                 Button25.Hide()
                                 Button40.Hide()
@@ -366,7 +366,7 @@ Public Class KinosaalGUI
                                 Button85.Hide()
                                 Button100.Hide()
                                 Button115.Hide()
-                                If _kinosaal.getY < 9 Then
+                                If _kinosaal.getSitzeProReihe < 9 Then
                                     Button9.Hide()
                                     Button24.Hide()
                                     Button39.Hide()
@@ -375,7 +375,7 @@ Public Class KinosaalGUI
                                     Button84.Hide()
                                     Button99.Hide()
                                     Button114.Hide()
-                                    If _kinosaal.getY < 8 Then
+                                    If _kinosaal.getSitzeProReihe < 8 Then
                                         Button8.Hide()
                                         Button23.Hide()
                                         Button38.Hide()
@@ -384,7 +384,7 @@ Public Class KinosaalGUI
                                         Button83.Hide()
                                         Button98.Hide()
                                         Button113.Hide()
-                                        If _kinosaal.getY < 7 Then
+                                        If _kinosaal.getSitzeProReihe < 7 Then
                                             Button7.Hide()
                                             Button22.Hide()
                                             Button37.Hide()
@@ -393,7 +393,7 @@ Public Class KinosaalGUI
                                             Button82.Hide()
                                             Button97.Hide()
                                             Button112.Hide()
-                                            If _kinosaal.getY < 6 Then
+                                            If _kinosaal.getSitzeProReihe < 6 Then
                                                 Button6.Hide()
                                                 Button21.Hide()
                                                 Button36.Hide()
@@ -402,7 +402,7 @@ Public Class KinosaalGUI
                                                 Button81.Hide()
                                                 Button96.Hide()
                                                 Button111.Hide()
-                                                If _kinosaal.getY < 5 Then
+                                                If _kinosaal.getSitzeProReihe < 5 Then
                                                     Throw New Exception("Die Reihe darf nicht kürzer als mindestens 5 Sitze lang sein.")
                                                 End If
                                             End If
@@ -414,7 +414,7 @@ Public Class KinosaalGUI
                     End If
                 End If
             End If
-        ElseIf _kinosaal.getY > 15 Then
+        ElseIf _kinosaal.getSitzeProReihe > 15 Then
             Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
         End If
 
