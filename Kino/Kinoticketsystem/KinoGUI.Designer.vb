@@ -28,6 +28,8 @@ Partial Class KinoGUI
         Me.cmdkinosaalAufrufen = New System.Windows.Forms.Button()
         Me.cmdNeueBuchung = New System.Windows.Forms.Button()
         Me.cmdTestKino = New System.Windows.Forms.Button()
+        Me.cmdTestKinio = New System.Windows.Forms.Button()
+        Me.cmdTestKinosaal = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdWochenplan
@@ -84,12 +86,32 @@ Partial Class KinoGUI
         Me.cmdTestKino.Text = "testkino"
         Me.cmdTestKino.UseVisualStyleBackColor = True
         '
+        'cmdTestKinio
+        '
+        Me.cmdTestKinio.Location = New System.Drawing.Point(212, 764)
+        Me.cmdTestKinio.Name = "cmdTestKinio"
+        Me.cmdTestKinio.Size = New System.Drawing.Size(270, 110)
+        Me.cmdTestKinio.TabIndex = 8
+        Me.cmdTestKinio.Text = "testklassekino"
+        Me.cmdTestKinio.UseVisualStyleBackColor = True
+        '
+        'cmdTestKinosaal
+        '
+        Me.cmdTestKinosaal.Location = New System.Drawing.Point(512, 764)
+        Me.cmdTestKinosaal.Name = "cmdTestKinosaal"
+        Me.cmdTestKinosaal.Size = New System.Drawing.Size(270, 110)
+        Me.cmdTestKinosaal.TabIndex = 9
+        Me.cmdTestKinosaal.Text = "testklassekinosaal"
+        Me.cmdTestKinosaal.UseVisualStyleBackColor = True
+        '
         'KinoGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SlateGray
         Me.ClientSize = New System.Drawing.Size(1284, 1005)
+        Me.Controls.Add(Me.cmdTestKinosaal)
+        Me.Controls.Add(Me.cmdTestKinio)
         Me.Controls.Add(Me.cmdTestKino)
         Me.Controls.Add(Me.cmdNeueBuchung)
         Me.Controls.Add(Me.cmdkinosaalAufrufen)
@@ -112,4 +134,6 @@ Partial Class KinoGUI
     Friend WithEvents cmdkinosaalAufrufen As Button
     Friend WithEvents cmdNeueBuchung As Button
     Friend WithEvents cmdTestKino As Button
+    Friend WithEvents cmdTestKinio As Button
+    Friend WithEvents cmdTestKinosaal As Button
 End Class

@@ -38,32 +38,36 @@ Partial Class KinosaalTest
         Me.txtKunde = New System.Windows.Forms.TextBox()
         Me.txtEingabeI = New System.Windows.Forms.TextBox()
         Me.txtEingabeKunde = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtAnzahl
         '
-        Me.txtAnzahl.Location = New System.Drawing.Point(32, 38)
+        Me.txtAnzahl.Location = New System.Drawing.Point(57, 40)
         Me.txtAnzahl.Name = "txtAnzahl"
         Me.txtAnzahl.Size = New System.Drawing.Size(248, 20)
         Me.txtAnzahl.TabIndex = 0
         '
         'txtReihe
         '
-        Me.txtReihe.Location = New System.Drawing.Point(26, 180)
+        Me.txtReihe.Location = New System.Drawing.Point(55, 137)
         Me.txtReihe.Name = "txtReihe"
         Me.txtReihe.Size = New System.Drawing.Size(246, 20)
         Me.txtReihe.TabIndex = 1
         '
         'txtSitz
         '
-        Me.txtSitz.Location = New System.Drawing.Point(26, 227)
+        Me.txtSitz.Location = New System.Drawing.Point(60, 180)
         Me.txtSitz.Name = "txtSitz"
         Me.txtSitz.Size = New System.Drawing.Size(245, 20)
         Me.txtSitz.TabIndex = 2
         '
         'txtFilm
         '
-        Me.txtFilm.Location = New System.Drawing.Point(36, 87)
+        Me.txtFilm.Location = New System.Drawing.Point(57, 83)
         Me.txtFilm.Name = "txtFilm"
         Me.txtFilm.Size = New System.Drawing.Size(244, 20)
         Me.txtFilm.TabIndex = 3
@@ -164,11 +168,51 @@ Partial Class KinosaalTest
         Me.txtEingabeKunde.Size = New System.Drawing.Size(255, 20)
         Me.txtEingabeKunde.TabIndex = 15
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(0, 43)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Anzahl"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(12, 90)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(38, 13)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "Kunde"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(10, 140)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(35, 13)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "Reihe"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 187)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(24, 13)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Sitz"
+        '
         'KinosaalTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1130, 626)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtEingabeKunde)
         Me.Controls.Add(Me.txtEingabeI)
         Me.Controls.Add(Me.txtKunde)
@@ -208,4 +252,8 @@ Partial Class KinosaalTest
     Friend WithEvents txtKunde As TextBox
     Friend WithEvents txtEingabeI As TextBox
     Friend WithEvents txtEingabeKunde As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class
