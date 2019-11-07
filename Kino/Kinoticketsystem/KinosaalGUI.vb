@@ -433,7 +433,14 @@ Public Class KinosaalGUI
 
     Private Sub übertrageAnzahlAusgewähltePlätze()
         lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
-        lblPreis.Text = "Preis: " & _Gesamtkosten
+        If _Gesamtkosten < 10 Then
+            lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+
+        Else
+            lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+
+        End If
+
         If _AnzahlAusgewähltePlätze < 1 Then
             cmdFertig.BackColor = Color.Red
             cmdFertig.Enabled = False

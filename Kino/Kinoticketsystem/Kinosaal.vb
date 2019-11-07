@@ -31,11 +31,13 @@ Public Class Kinosaal
             Next
         Next
         Me._Sitzplätze = a
-        Dim b(AnzahlReihe + 1, SitzeProReihe + 1) As Double
 
-        For k = 1 To AnzahlReihe
-            For l = 1 To SitzeProReihe
-                b(k, l) = 5.0
+        'hier ist jetzt erstmal für jeden Platz ein Standardpreis angegeben
+        Dim b(AnzahlReihe, SitzeProReihe) As Double
+
+        For k = 0 To AnzahlReihe - 1
+            For l = 0 To SitzeProReihe - 1
+                b(k, l) = 5.5
             Next
         Next
         _PreisProPlatz = b
