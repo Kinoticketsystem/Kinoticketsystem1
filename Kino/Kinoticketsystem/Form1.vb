@@ -66,26 +66,88 @@ Public Class FTagesplan
         a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
     End Sub
     Private Sub FarbeDerButtonsFestlegen()
-        Select Case _ersterTag.getAnzahlVorstellungen
-            Case 1
-                welcheFarbe(Button1, _ersterTag, 1)
-            Case 2
-                welcheFarbe(Button1, _ersterTag, 1)
-                welcheFarbe(Button2, _ersterTag, 2)
-            Case 3
-                welcheFarbe(Button1, _ersterTag, 1)
-                welcheFarbe(Button2, _ersterTag, 2)
-                welcheFarbe(Button3, _ersterTag, 3)
-            Case 4
-                welcheFarbe(Button1, _ersterTag, 1)
-                welcheFarbe(Button2, _ersterTag, 2)
-                welcheFarbe(Button3, _ersterTag, 3)
-                welcheFarbe(Button4, _ersterTag, 4)
-            Case 5
+        'Farbe für alle Buttons machen, müssen ja nicht alle angezeigt wqerden
+        'Select Case _ersterTag.getAnzahlVorstellungen
+        '    Case 1
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '    Case 2
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '        welcheFarbe(Button2, _ersterTag, 2)
+        '    Case 3
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '        welcheFarbe(Button2, _ersterTag, 2)
+        '        welcheFarbe(Button3, _ersterTag, 3)
+        '    Case 4
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '        welcheFarbe(Button2, _ersterTag, 2)
+        '        welcheFarbe(Button3, _ersterTag, 3)
+        '        welcheFarbe(Button4, _ersterTag, 4)
+        '    Case 5
+        welcheFarbe(Button1, _ersterTag, 1)
+        welcheFarbe(Button2, _ersterTag, 2)
+        welcheFarbe(Button3, _ersterTag, 3)
+        welcheFarbe(Button4, _ersterTag, 4)
+        welcheFarbe(Button5, _ersterTag, 5)
+        welcheFarbe(Button6, _ersterTag, 6)
+        welcheFarbe(Button7, _ersterTag, 7)
+
+        welcheFarbe(Button8, _zweiterTag, 1)
+        welcheFarbe(Button9, _zweiterTag, 2)
+        welcheFarbe(Button10, _zweiterTag, 3)
+        welcheFarbe(Button11, _zweiterTag, 4)
+        welcheFarbe(Button12, _zweiterTag, 5)
+        welcheFarbe(Button13, _zweiterTag, 6)
+        welcheFarbe(Button14, _zweiterTag, 7)
+
+        welcheFarbe(Button15, _dritterTag, 1)
+        welcheFarbe(Button16, _dritterTag, 2)
+        welcheFarbe(Button17, _dritterTag, 3)
+        welcheFarbe(Button18, _dritterTag, 4)
+        welcheFarbe(Button19, _dritterTag, 5)
+        welcheFarbe(Button20, _dritterTag, 6)
+        welcheFarbe(Button21, _dritterTag, 7)
+
+        welcheFarbe(Button22, _vierterTag, 1)
+        welcheFarbe(Button23, _vierterTag, 2)
+        welcheFarbe(Button24, _vierterTag, 3)
+        welcheFarbe(Button25, _vierterTag, 4)
+        welcheFarbe(Button26, _vierterTag, 5)
+        welcheFarbe(Button27, _vierterTag, 6)
+        welcheFarbe(Button28, _vierterTag, 7)
+
+        welcheFarbe(Button29, _fünfterTag, 1)
+        welcheFarbe(Button30, _fünfterTag, 2)
+        welcheFarbe(Button31, _fünfterTag, 3)
+        welcheFarbe(Button32, _fünfterTag, 4)
+        welcheFarbe(Button33, _fünfterTag, 5)
+        welcheFarbe(Button34, _fünfterTag, 6)
+        welcheFarbe(Button35, _fünfterTag, 7)
+
+        welcheFarbe(Button36, _sechsterTag, 1)
+        welcheFarbe(Button37, _sechsterTag, 2)
+        welcheFarbe(Button38, _sechsterTag, 3)
+        welcheFarbe(Button39, _sechsterTag, 4)
+        welcheFarbe(Button40, _sechsterTag, 5)
+        welcheFarbe(Button41, _sechsterTag, 6)
+        welcheFarbe(Button42, _sechsterTag, 7)
+
+        welcheFarbe(Button43, _siebterTag, 1)
+        welcheFarbe(Button44, _siebterTag, 2)
+        welcheFarbe(Button45, _siebterTag, 3)
+        welcheFarbe(Button46, _siebterTag, 4)
+        welcheFarbe(Button47, _siebterTag, 5)
+        welcheFarbe(Button48, _siebterTag, 6)
+        welcheFarbe(Button49, _siebterTag, 7)
 
 
-                'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
-        End Select
+
+
+
+
+
+
+        '        'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
+        'End Select
     End Sub
 
     'Private Sub WochenplanAbrufenUndAusgeben() 'unnötig, wird in der Klasse Kino gemacht und dann eine andere Methode genutzt
@@ -1400,9 +1462,9 @@ Public Interface ITagesplan
     Sub VorstellungÄndern(ByVal Vorstellung As Vorstellung, ByVal Filmnummer As Integer)
     'wird ans Ende hinzugefügt
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
-    Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
+    Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung)
     Function getVorstellungen() As ArrayList
-    Function getVorstellung(ByVal Position As Integer) As Vorstellung
+    Function getVorstellung(ByVal Positiom As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
     Function getSaal() As Kinosaal
     Function getFSK(a As Integer) As Integer

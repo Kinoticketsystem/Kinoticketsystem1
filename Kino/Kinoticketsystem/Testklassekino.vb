@@ -16,7 +16,7 @@
         Dim Saal1 As Kinosaal = New Kinosaal(Anzahl, TestFilm, Reihe, Sitz)
         Saal1.SitzplatzBuchen(1, 1, k)
 
-        Console.WriteLine("funktioniert")
+        MsgBox("passt§")
     End Sub
 
     Private Sub cmdtestsetkinosaal_Click(sender As Object, e As EventArgs) Handles cmdtestsetkinosaal.Click

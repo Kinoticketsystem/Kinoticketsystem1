@@ -38,7 +38,7 @@
 
     Private Sub TestVorstellungEntfernen()
         BeispielVorstellungAnzahlA = TestFilmA.getAnzahlFilmwiedergabe
-        _Tagesplan.VorstellungEntfernen(BeispielVorstellungA, 0)
+        _Tagesplan.VorstellungEntfernen(BeispielVorstellungA)
         BeispielVorstellungB = _Tagesplan.getVorstellung(0)
         BeispielVorstellungAnzahlB = TestFilmA.getAnzahlFilmwiedergabe
 
