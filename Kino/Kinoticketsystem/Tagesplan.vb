@@ -119,7 +119,8 @@ Public Class Tagesplan
     End Function
 
     Public Function getVorstellung(Position As Integer) As Vorstellung Implements ITagesplan.getVorstellung
-        Return _Vorstellungen(Position)
+        'wird von Form1 benutzt. DEshalb mussssss so, außer man möchte das bei 400 dingen ändern
+        Return _Vorstellungen(Position - 1)
     End Function
 
     Public Function getAnzahlVorstellungen() As Integer Implements ITagesplan.getAnzahlVorstellungen
