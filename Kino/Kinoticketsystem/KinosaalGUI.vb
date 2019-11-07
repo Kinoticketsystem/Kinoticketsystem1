@@ -433,6 +433,7 @@ Public Class KinosaalGUI
 
     Private Sub übertrageAnzahlAusgewähltePlätze()
         lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
+        lblPreis.Text = "Preis: " & _Gesamtkosten
         If _AnzahlAusgewähltePlätze < 1 Then
             cmdFertig.BackColor = Color.Red
             cmdFertig.Enabled = False
@@ -455,12 +456,15 @@ Public Class KinosaalGUI
             'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
             _kinosaal.SitzplatzBuchen(xReihe, y, _aktuellerKunde) 'Ist richtig so, also 0,0 für Button1
             _AnzahlAusgewähltePlätze += 1
+            _Gesamtkosten += _kinosaal.getPreis(xReihe, y)
+
         Else
             a.FlatStyle = FlatStyle.Popup
             a.BackColor = Color.Lime
             a.FlatAppearance.BorderSize = 1
             _kinosaal.SitzplatzStornieren(xReihe, y, _aktuellerKunde)
             _AnzahlAusgewähltePlätze -= 1
+            _Gesamtkosten -= _kinosaal.getPreis(xReihe, y)
         End If
         übertrageAnzahlAusgewähltePlätze()
     End Sub

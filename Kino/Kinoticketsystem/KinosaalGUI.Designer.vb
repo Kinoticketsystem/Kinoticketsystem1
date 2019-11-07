@@ -145,7 +145,7 @@ Partial Class KinosaalGUI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblAnzahlAusgewähltePlätze = New System.Windows.Forms.Label()
         Me.cmdFertig = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPreis = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -1623,17 +1623,17 @@ Partial Class KinosaalGUI
         Me.cmdFertig.Text = "Abschließen"
         Me.cmdFertig.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblPreis
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(647, 19)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 19)
-        Me.Label1.TabIndex = 197
-        Me.Label1.Text = "Preis: 0"
+        Me.lblPreis.AutoSize = True
+        Me.lblPreis.BackColor = System.Drawing.Color.White
+        Me.lblPreis.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPreis.Location = New System.Drawing.Point(647, 19)
+        Me.lblPreis.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPreis.Name = "lblPreis"
+        Me.lblPreis.Size = New System.Drawing.Size(54, 19)
+        Me.lblPreis.TabIndex = 197
+        Me.lblPreis.Text = "Preis: 0"
         '
         'KinosaalGUI
         '
@@ -1641,7 +1641,7 @@ Partial Class KinosaalGUI
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Blue
         Me.ClientSize = New System.Drawing.Size(720, 680)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblPreis)
         Me.Controls.Add(Me.cmdFertig)
         Me.Controls.Add(Me.lblAnzahlAusgewähltePlätze)
         Me.Controls.Add(Me.PictureBox1)
@@ -1898,5 +1898,5 @@ Partial Class KinosaalGUI
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblAnzahlAusgewähltePlätze As Label
     Public WithEvents cmdFertig As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPreis As Label
 End Class
