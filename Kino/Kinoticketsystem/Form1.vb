@@ -10,7 +10,7 @@ Public Class FTagesplan
     Private _siebterTag As ITagesplan
     Private _Aendern As Boolean
     Private _Kinosaal As Kinosaal
-    Private _Kunde As Kunde = New Kunde("Standart")
+    Private _Kunde As Kunde = New Kunde("Standard")
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnfangstagUndDatümerFestlegen() 'fertig
