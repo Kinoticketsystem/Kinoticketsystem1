@@ -1400,9 +1400,9 @@ Public Interface ITagesplan
     Sub VorstellungÄndern(ByVal Vorstellung As Vorstellung, ByVal Filmnummer As Integer)
     'wird ans Ende hinzugefügt
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
-    Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
+    Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung)
     Function getVorstellungen() As ArrayList
-    Function getVorstellung(ByVal Position As Integer) As Vorstellung
+    Function getVorstellung(ByVal Positiom As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
     Function getSaal() As Kinosaal
     Function getFSK(a As Integer) As Integer
