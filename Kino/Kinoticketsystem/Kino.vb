@@ -58,19 +58,55 @@
     End Sub
     'Methoden
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosaal As Kinosaal, ByVal Kinosaal2 As Kinosaal)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosäle As ArrayList)
         _AnzahlKinosäle = AnzahlKinos
         If Not (AnzahlKinos = 2) Then
             Throw New Exception("Wenn man zwei Kinosaal übergibt, muss man bei AnzahlKinos auch 2 eingeben, man kann später noch mehr Kinosäle hinzufügen über methoden") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
         End If
         ' Dim a(AnzahlKinos) As Kinosaal 'für array
         _Kinosäle.Clear()
-        _Kinosäle(0) = Kinosaal 'alternative .add
-        _Kinosäle(1) = Kinosaal2
+        _Kinosäle = Kinosäle
 
         Me._Filme = Filme
         Me._Kunden = Kunden
         Me._Tagespläne = Tagespläne
+
+        Dim i As Integer
+        Dim j As Integer
+        Dim neuertext As String
+
+        For i = 0 To Kunden.Count - 1
+            neuertext = Kunden(i)
+            FileOpen(1, "Kunden.txt", OpenMode.Append)
+            PrintLine(1, neuertext)
+            FileClose(1)
+
+        Next
+
+        For j = 0 To Filme.Count - 1
+            neuertext = Filme(j)
+            FileOpen(1, "Filme.txt", OpenMode.Append)
+            PrintLine(1, neuertext)
+            FileClose(1)
+        Next
+
+        For k = 0 To Kinosäle.Count - 1
+            FileOpen(1, "Kinosäle.txt", OpenMode.Append)
+            PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getZ & " Anzahl der Reihen: " & Kinosäle(k).getX & " Sitzplätze pro Reihe: " & Kinosäle(k).getY)
+            FileClose(1)
+        Next
+
+        For i = 0 To Tagespläne.Count - 1
+            Dim plan As Tagesplan = Tagespläne(i)
+            Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
+            For j = 1 To AnzahlVorstellungen
+                Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
+                FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                PrintLine(1, j & ". Tag:")
+                PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
+                FileClose(1)
+            Next
+        Next
     End Sub
     Public Sub neueBuchung(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde, Kinosaal As Kinosaal)
         _Kinosäle(_Kinosäle.IndexOf(Kinosaal)).SitzplatzBuchen(gewählterPlatzX, gewählterPlatzY, kunde)
