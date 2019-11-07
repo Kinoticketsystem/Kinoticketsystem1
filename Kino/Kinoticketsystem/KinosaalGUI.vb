@@ -414,8 +414,8 @@ Public Class KinosaalGUI
                     End If
                 End If
             End If
-        Else
-                Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
+        ElseIf _kinosaal.getY > 15 Then
+            Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
         End If
 
     End Sub
@@ -628,6 +628,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        wennButtonGedrückt(Button40, 2, 9)
     End Sub
 
     Private Sub Button41_Click(sender As Object, e As EventArgs) Handles Button41.Click
@@ -711,6 +712,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub Button61_Click(sender As Object, e As EventArgs) Handles Button61.Click
+        wennButtonGedrückt(Button61, 4, 0)
     End Sub
 
     Private Sub Button62_Click(sender As Object, e As EventArgs) Handles Button62.Click
@@ -782,6 +784,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub Button79_Click(sender As Object, e As EventArgs) Handles Button79.Click
+        wennButtonGedrückt(Button79, 5, 3)
     End Sub
 
     Private Sub Button80_Click(sender As Object, e As EventArgs) Handles Button80.Click
@@ -937,6 +940,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub Button118_Click(sender As Object, e As EventArgs) Handles Button118.Click
+        wennButtonGedrückt(Button118, 7, 12)
     End Sub
 
     Private Sub Button119_Click(sender As Object, e As EventArgs) Handles Button119.Click
