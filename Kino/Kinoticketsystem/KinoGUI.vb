@@ -1,4 +1,4 @@
-﻿Public Class KinoGUI
+﻿Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
     Private DASKINO As Kino
     Public alleFilme As ArrayList = New ArrayList()
     Public alleKunden As ArrayList = New ArrayList()
@@ -7,12 +7,12 @@
     Public dasMegaKino As Kino
 
 
-    Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan.Click
+    Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
     End Sub
 
-    Private Sub cmdTexterfassen_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click
+    Private Sub cmdTexterfassenErik_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click 'cmdTexterfassen nicht mehr vorhanden(Neuer Button)
         TexterfassenTest.BringToFront()
         TexterfassenTest.Visible = True
     End Sub
@@ -29,7 +29,7 @@
 
 
 
-    Private Sub cmdKinosaalTest_Click(sender As Object, e As EventArgs)
+    Private Sub cmdTestKinosaal_Click(sender As Object, e As EventArgs)
         KinosaalTest.BringToFront()
         KinosaalTest.Show()
     End Sub
@@ -70,7 +70,7 @@
         dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
     End Sub
 
-    Private Sub cmdTestKino_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click
+    Private Sub cmdTestKinotest_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click 'cmdTestkino nicht mehr vorhanden(Neuer Button)
         Call Testklassekino.Show()
 
     End Sub
