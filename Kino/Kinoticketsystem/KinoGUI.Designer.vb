@@ -189,7 +189,7 @@ Partial Class KinoGUI
         Me.lblTageseinnahmen.AutoSize = True
         Me.lblTageseinnahmen.BackColor = System.Drawing.Color.Transparent
         Me.lblTageseinnahmen.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTageseinnahmen.Location = New System.Drawing.Point(949, 30)
+        Me.lblTageseinnahmen.Location = New System.Drawing.Point(188, 30)
         Me.lblTageseinnahmen.Name = "lblTageseinnahmen"
         Me.lblTageseinnahmen.Size = New System.Drawing.Size(328, 37)
         Me.lblTageseinnahmen.TabIndex = 12

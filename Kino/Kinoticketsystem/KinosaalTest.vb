@@ -25,8 +25,8 @@
     Public Sub cmdAufrufen_Click(sender As Object, e As EventArgs) Handles cmdAufrufen.Click
         Dim i As Integer = txtEingabeI.Text
         Dim j As Integer = txtEingabeJ.Text
-        txtAusgabeX.Text = TestS.getX()
-        txtAusgabeY.Text = TestS.getY()
+        txtAusgabeX.Text = TestS.getAnzahlReihe()
+        txtAusgabeY.Text = TestS.getSitzeProReihe()
 
         Dim a As Kunde = TestS.getKunde(i, j)
         txtKunde.Text = a.getName()

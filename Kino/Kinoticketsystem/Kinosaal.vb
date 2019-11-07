@@ -10,6 +10,7 @@ Public Class Kinosaal
     Private _Film As Film
     Private _Sitzplätze(,) As Kunde
     Private _PreisProPlatz(,) As Double
+    Private _Standardpreis As Double = 5.5
     Public _leererPlatz As Kunde = New Kunde("")
 
     Public Sub New(ByVal AnzahlSitztplätze As Integer, ByVal Film As Film, ByVal AnzahlReihe As Integer, ByVal SitzeProReihe As Integer)
@@ -40,7 +41,7 @@ Public Class Kinosaal
 
         For k = 0 To AnzahlReihe - 1
             For l = 0 To SitzeProReihe - 1
-                b(k, l) = 5.5
+                b(k, l) = _Standardpreis
             Next
         Next
         _PreisProPlatz = b
@@ -96,4 +97,11 @@ Public Class Kinosaal
             Throw New Exception("der Preis ist kleiner 0 oder größer 100.0")
         End If
     End Sub
+    Public Sub setStandardPreis(x As Double)
+        _Standardpreis = x
+
+    End Sub
+    Public Function getStandardPreis() As Double
+        Return _Standardpreis
+    End Function
 End Class

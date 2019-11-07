@@ -2,15 +2,12 @@
     Private DASKINO As Kino
     Public alleFilme As ArrayList = New ArrayList()
     Public alleKunden As ArrayList = New ArrayList()
-    Public alleKinosäle As ArrayList = New ArrayList()
+    Public alleKinosäle As ArrayList = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     Public alleTagespläne As ArrayList = New ArrayList()
     Public dasMegaKino As Kino
 
 
-    Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
-        FTagesplan.BringToFront()
-        FTagesplan.Visible = True
-    End Sub
+
 
     Private Sub cmdTexterfassenErik_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click 'cmdTexterfassen nicht mehr vorhanden(Neuer Button)
         TexterfassenTest.BringToFront()
@@ -108,5 +105,51 @@
         zeit = Hour(Now)
         zeit = zeit & ":" & Minute(Now)
         lblUhrzeit.Text = zeit
+    End Sub
+    Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+        FTagesplan.SetKinosaal(alleKinosäle(0))
+        'Veranstaltungen übergeben
+        'FTagesplan.
+    End Sub
+    Private Sub cmdWochenplan2_Click(sender As Object, e As EventArgs) Handles cmdWochenplan2.Click
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+        FTagesplan.SetKinosaal(alleKinosäle(1))
+        'Veranstaltungen übergeben
+        'FTagesplan.
+    End Sub
+
+    Private Sub cmdWochenplan3_Click(sender As Object, e As EventArgs) Handles cmdWochenplan3.Click
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+        FTagesplan.SetKinosaal(alleKinosäle(2))
+        'Veranstaltungen übergeben
+        'FTagesplan.
+    End Sub
+
+    Private Sub cmdWochenplan4_Click(sender As Object, e As EventArgs) Handles cmdWochenplan4.Click
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+        FTagesplan.SetKinosaal(alleKinosäle(3))
+        'Veranstaltungen übergeben
+        'FTagesplan.
+    End Sub
+
+    Private Sub cmdWochenplan5_Click(sender As Object, e As EventArgs) Handles cmdWochenplan5.Click
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+        FTagesplan.SetKinosaal(alleKinosäle(4))
+        'Veranstaltungen übergeben
+        'FTagesplan.
+    End Sub
+
+    Private Sub cmdWochenplan6_Click(sender As Object, e As EventArgs) Handles cmdWochenplan6.Click
+        FTagesplan.BringToFront()
+        FTagesplan.Visible = True
+        FTagesplan.SetKinosaal(alleKinosäle(5))
+        'Veranstaltungen übergeben
+        'FTagesplan.
     End Sub
 End Class
