@@ -1,9 +1,9 @@
 ﻿Public Class KinoGUI
     Private DASKINO As Kino
-    Public alleFilme As ArrayList
-    Public alleKunden As ArrayList
-    Public alleKinosäle As ArrayList
-    Public alleTagespläne As ArrayList
+    Public alleFilme As ArrayList = New ArrayList()
+    Public alleKunden As ArrayList = New ArrayList()
+    Public alleKinosäle As ArrayList = New ArrayList()
+    Public alleTagespläne As ArrayList = New ArrayList()
     Public dasMegaKino As Kino
 
 
@@ -39,40 +39,40 @@
         FTagesplan.Visible = True
     End Sub
 
-    ' Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
-    '      FileOpen(1, "Filme.txt", OpenMode.Input)
-    '      While Not EOF(1)
-    '          alleFilme.Add(LineInput(1))
-    '          Console.WriteLine()
-    '      End While
-    '      FileClose(1)
-    '      FileOpen(1, "Kunden.txt", OpenMode.Input)
-    '      While Not EOF(1)
-    '          alleKunden.Add(LineInput(1))
-    '          Console.WriteLine()
-    '      End While
-    '      FileClose(1)
-    '      FileOpen(1, "Kinosäle.txt", OpenMode.Input)
-    '      While Not EOF(1)
-    '          alleKinosäle.Add(LineInput(1))
-    '          Console.WriteLine()
-    '      End While
-    '      FileClose(1)
-    '      FileOpen(1, "Tagespläne.txt", OpenMode.Input)
-    '      While Not EOF(1)
-    '          alleTagespläne.Add(LineInput(1))
-    '          Console.WriteLine()
-    '      End While
-    '      FileClose(1)
-    '      dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
-    'I  End Sub
+    Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FileOpen(1, "Filme.txt", OpenMode.Input)
+        While Not EOF(1)
+            alleFilme.Add(LineInput(1))
+            Console.WriteLine()
+        End While
+        FileClose(1)
 
-    Private Sub cmdTestKinio_Click(sender As Object, e As EventArgs) Handles cmdTestKinio.Click
-        Call Testklassekino.Show()
+        FileOpen(1, "Kunden.txt", OpenMode.Input)
+        While Not EOF(1)
+            alleKunden.Add(LineInput(1))
+            Console.WriteLine()
+        End While
+        FileClose(1)
+
+        FileOpen(1, "Kinosäle.txt", OpenMode.Input)
+        While Not EOF(1)
+            alleKinosäle.Add(LineInput(1))
+            Console.WriteLine()
+        End While
+        FileClose(1)
+
+        FileOpen(1, "Tagespläne.txt", OpenMode.Input)
+        While Not EOF(1)
+            alleTagespläne.Add(LineInput(1))
+            Console.WriteLine()
+        End While
+        FileClose(1)
+        dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
     End Sub
 
-    Private Sub cmdTestKinosaal_Click(sender As Object, e As EventArgs) Handles cmdTestKinosaal.Click
-        Call KinosaalTest.Show()
+    Private Sub cmdTestKino_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click
+        Call Testklassekino.Show()
+
     End Sub
 
 
