@@ -60,9 +60,7 @@
 
     Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosäle As ArrayList)
         _AnzahlKinosäle = AnzahlKinos
-        If Not (AnzahlKinos = 2) Then
-            Throw New Exception("Wenn man zwei Kinosaal übergibt, muss man bei AnzahlKinos auch 2 eingeben, man kann später noch mehr Kinosäle hinzufügen über methoden") 'wenn man nur eins übergeben will, weil man die anderen zum Beispiel später hinzufügen will, muss man den anderen Konstruktor nutzen (new)") 'ergibt keinen SInn für ein kino mit 2 Kinosälen, von dem man 1 übergeben will
-        End If
+
         ' Dim a(AnzahlKinos) As Kinosaal 'für array
         _Kinosäle.Clear()
         _Kinosäle = Kinosäle

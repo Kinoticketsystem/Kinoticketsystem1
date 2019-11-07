@@ -1,9 +1,9 @@
 ﻿Public Class KinoGUI
     Private DASKINO As Kino
-    Public alleFilme As ArrayList
-    Public alleKunden As ArrayList
-    Public alleKinosäle As ArrayList
-    Public alleTagespläne As ArrayList
+    Public alleFilme As ArrayList = New ArrayList()
+    Public alleKunden As ArrayList = New ArrayList()
+    Public alleKinosäle As ArrayList = New ArrayList()
+    Public alleTagespläne As ArrayList = New ArrayList()
     Public dasMegaKino As Kino
 
 
@@ -46,18 +46,21 @@
             Console.WriteLine()
         End While
         FileClose(1)
+
         FileOpen(1, "Kunden.txt", OpenMode.Input)
         While Not EOF(1)
             alleKunden.Add(LineInput(1))
             Console.WriteLine()
         End While
         FileClose(1)
+
         FileOpen(1, "Kinosäle.txt", OpenMode.Input)
         While Not EOF(1)
             alleKinosäle.Add(LineInput(1))
             Console.WriteLine()
         End While
         FileClose(1)
+
         FileOpen(1, "Tagespläne.txt", OpenMode.Input)
         While Not EOF(1)
             alleTagespläne.Add(LineInput(1))
