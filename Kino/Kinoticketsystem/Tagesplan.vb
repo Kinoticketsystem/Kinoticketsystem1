@@ -105,12 +105,14 @@ Public Class Tagesplan
 
 
     Public Sub VorstellungHinzufügen(Vorstellung As Vorstellung) Implements ITagesplan.VorstellungHinzufügen
-        _Vorstellungen(AnzahlFilmeProTag + 1) = Vorstellung
+        _Vorstellungen.Add(Vorstellung)
         AnzahlFilmeProTag = AnzahlFilmeProTag + 1
     End Sub
 
-    Public Sub VorstellungEntfernen(vorstellung As Vorstellung, Position As Integer) Implements ITagesplan.VorstellungEntfernen
-        _Vorstellungen(Position) = Nothing
+    Public Sub VorstellungEntfernen(vorstellung As Vorstellung) Implements ITagesplan.VorstellungEntfernen
+        Dim i As Integer = 0
+        i = _Vorstellungen.BinarySearch(vorstellung)
+        _Vorstellungen.RemoveAt(i)
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
 
@@ -119,6 +121,7 @@ Public Class Tagesplan
     End Function
 
     Public Function getVorstellung(Position As Integer) As Vorstellung Implements ITagesplan.getVorstellung
+
         Return _Vorstellungen(Position)
     End Function
 

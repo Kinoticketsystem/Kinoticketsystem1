@@ -308,7 +308,7 @@ Public Class KinosaalGUI
                     Button90.Hide()
                 End If
             End If
-        Else
+        ElseIf _kinosaal.getX > 8 Then
             Throw New Exception("Zu viele Reihen (nicht mehr als 8 möglich)")
         End If
 

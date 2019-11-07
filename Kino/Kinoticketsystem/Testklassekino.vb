@@ -10,18 +10,18 @@
         Dim k As Kunde = TestKunde
 
         Dim Reihe As Integer = 1
-        Dim Anzahl As String = 1
+        Dim Anzahl As String = 3
         Dim Sitz As Integer = 3
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
         Dim Saal1 As Kinosaal = New Kinosaal(Anzahl, TestFilm, Reihe, Sitz)
         Saal1.SitzplatzBuchen(1, 1, k)
 
-        Console.WriteLine("funktioniert")
+        MsgBox("passt§")
     End Sub
 
     Private Sub cmdtestsetkinosaal_Click(sender As Object, e As EventArgs) Handles cmdtestsetkinosaal.Click
         Dim Reihe As Integer = 1
-        Dim Anzahl As String = 1
+        Dim Anzahl As String = 3
         Dim Sitz As Integer = 3
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
         Dim Saal2 As Kinosaal = New Kinosaal(Anzahl, TestFilm, Reihe, Sitz)

@@ -66,26 +66,88 @@ Public Class FTagesplan
         a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
     End Sub
     Private Sub FarbeDerButtonsFestlegen()
-        Select Case _ersterTag.getAnzahlVorstellungen
-            Case 1
-                welcheFarbe(Button1, _ersterTag, 1)
-            Case 2
-                welcheFarbe(Button1, _ersterTag, 1)
-                welcheFarbe(Button2, _ersterTag, 2)
-            Case 3
-                welcheFarbe(Button1, _ersterTag, 1)
-                welcheFarbe(Button2, _ersterTag, 2)
-                welcheFarbe(Button3, _ersterTag, 3)
-            Case 4
-                welcheFarbe(Button1, _ersterTag, 1)
-                welcheFarbe(Button2, _ersterTag, 2)
-                welcheFarbe(Button3, _ersterTag, 3)
-                welcheFarbe(Button4, _ersterTag, 4)
-            Case 5
+        'Farbe für alle Buttons machen, müssen ja nicht alle angezeigt wqerden
+        'Select Case _ersterTag.getAnzahlVorstellungen
+        '    Case 1
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '    Case 2
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '        welcheFarbe(Button2, _ersterTag, 2)
+        '    Case 3
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '        welcheFarbe(Button2, _ersterTag, 2)
+        '        welcheFarbe(Button3, _ersterTag, 3)
+        '    Case 4
+        '        welcheFarbe(Button1, _ersterTag, 1)
+        '        welcheFarbe(Button2, _ersterTag, 2)
+        '        welcheFarbe(Button3, _ersterTag, 3)
+        '        welcheFarbe(Button4, _ersterTag, 4)
+        '    Case 5
+        welcheFarbe(Button1, _ersterTag, 1)
+        welcheFarbe(Button2, _ersterTag, 2)
+        welcheFarbe(Button3, _ersterTag, 3)
+        welcheFarbe(Button4, _ersterTag, 4)
+        welcheFarbe(Button5, _ersterTag, 5)
+        welcheFarbe(Button6, _ersterTag, 6)
+        welcheFarbe(Button7, _ersterTag, 7)
+
+        welcheFarbe(Button8, _zweiterTag, 1)
+        welcheFarbe(Button9, _zweiterTag, 2)
+        welcheFarbe(Button10, _zweiterTag, 3)
+        welcheFarbe(Button11, _zweiterTag, 4)
+        welcheFarbe(Button12, _zweiterTag, 5)
+        welcheFarbe(Button13, _zweiterTag, 6)
+        welcheFarbe(Button14, _zweiterTag, 7)
+
+        welcheFarbe(Button15, _dritterTag, 1)
+        welcheFarbe(Button16, _dritterTag, 2)
+        welcheFarbe(Button17, _dritterTag, 3)
+        welcheFarbe(Button18, _dritterTag, 4)
+        welcheFarbe(Button19, _dritterTag, 5)
+        welcheFarbe(Button20, _dritterTag, 6)
+        welcheFarbe(Button21, _dritterTag, 7)
+
+        welcheFarbe(Button22, _vierterTag, 1)
+        welcheFarbe(Button23, _vierterTag, 2)
+        welcheFarbe(Button24, _vierterTag, 3)
+        welcheFarbe(Button25, _vierterTag, 4)
+        welcheFarbe(Button26, _vierterTag, 5)
+        welcheFarbe(Button27, _vierterTag, 6)
+        welcheFarbe(Button28, _vierterTag, 7)
+
+        welcheFarbe(Button29, _fünfterTag, 1)
+        welcheFarbe(Button30, _fünfterTag, 2)
+        welcheFarbe(Button31, _fünfterTag, 3)
+        welcheFarbe(Button32, _fünfterTag, 4)
+        welcheFarbe(Button33, _fünfterTag, 5)
+        welcheFarbe(Button34, _fünfterTag, 6)
+        welcheFarbe(Button35, _fünfterTag, 7)
+
+        welcheFarbe(Button36, _sechsterTag, 1)
+        welcheFarbe(Button37, _sechsterTag, 2)
+        welcheFarbe(Button38, _sechsterTag, 3)
+        welcheFarbe(Button39, _sechsterTag, 4)
+        welcheFarbe(Button40, _sechsterTag, 5)
+        welcheFarbe(Button41, _sechsterTag, 6)
+        welcheFarbe(Button42, _sechsterTag, 7)
+
+        welcheFarbe(Button43, _siebterTag, 1)
+        welcheFarbe(Button44, _siebterTag, 2)
+        welcheFarbe(Button45, _siebterTag, 3)
+        welcheFarbe(Button46, _siebterTag, 4)
+        welcheFarbe(Button47, _siebterTag, 5)
+        welcheFarbe(Button48, _siebterTag, 6)
+        welcheFarbe(Button49, _siebterTag, 7)
 
 
-                'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
-        End Select
+
+
+
+
+
+
+        '        'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
+        'End Select
     End Sub
 
     'Private Sub WochenplanAbrufenUndAusgeben() 'unnötig, wird in der Klasse Kino gemacht und dann eine andere Methode genutzt
@@ -1215,173 +1277,175 @@ Public Class FTagesplan
         Geklickt(1, 7)
         'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
     End Sub
-    'Hier fehlen noch die anderen Tage ab 2.Tag
+
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Geklickt(2.1)
+        Geklickt(2, 1)
     End Sub
+    'Hier fehlen noch die anderen Tage ab 2.Tag
+
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Geklickt(2.2)
+        Geklickt(2, 2)
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Geklickt(2.3)
+        Geklickt(2, 3)
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        Geklickt(2.4)
+        Geklickt(2, 4)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Geklickt(2.5)
+        Geklickt(2, 5)
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        Geklickt(2.6)
+        Geklickt(2, 6)
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-        Geklickt(2.7)
+        Geklickt(2, 7)
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        Geklickt(3.1)
+        Geklickt(3, 1)
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-        Geklickt(3.2)
+        Geklickt(3, 2)
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        Geklickt(3.3)
+        Geklickt(3, 3)
     End Sub
 
     Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
-        Geklickt(3.4)
+        Geklickt(3, 4)
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
-        Geklickt(3.5)
+        Geklickt(3, 5)
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
-        Geklickt(3.6)
+        Geklickt(3, 6)
     End Sub
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-        Geklickt(3.7)
+        Geklickt(3, 7)
     End Sub
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
-        Geklickt(4.1)
+        Geklickt(4, 1)
     End Sub
 
     Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
-        Geklickt(4.2)
+        Geklickt(4, 2)
     End Sub
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
-        Geklickt(4.3)
+        Geklickt(4, 3)
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
-        Geklickt(4.4)
+        Geklickt(4, 4)
     End Sub
 
     Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
-        Geklickt(4.5)
+        Geklickt(4, 5)
     End Sub
 
     Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
-        Geklickt(4.6)
+        Geklickt(4, 6)
     End Sub
 
     Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
-        Geklickt(4.7)
+        Geklickt(4, 7)
     End Sub
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
-        Geklickt(5.1)
+        Geklickt(5, 1)
     End Sub
 
     Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
-        Geklickt(5.2)
+        Geklickt(5, 2)
     End Sub
 
     Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
-        Geklickt(5.3)
+        Geklickt(5, 3)
     End Sub
 
     Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
-        Geklickt(5.4)
+        Geklickt(5, 4)
     End Sub
 
     Private Sub Button33_Click(sender As Object, e As EventArgs) Handles Button33.Click
-        Geklickt(5.5)
+        Geklickt(5, 5)
     End Sub
 
     Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
-        Geklickt(5.6)
+        Geklickt(5, 6)
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
-        Geklickt(5.7)
+        Geklickt(5, 7)
     End Sub
 
     Private Sub Button36_Click(sender As Object, e As EventArgs) Handles Button36.Click
-        Geklickt(6.1)
+        Geklickt(6, 1)
     End Sub
 
     Private Sub Button37_Click(sender As Object, e As EventArgs) Handles Button37.Click
-        Geklickt(6.2)
+        Geklickt(6, 2)
     End Sub
 
     Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
-        Geklickt(6.3)
+        Geklickt(6, 3)
     End Sub
 
     Private Sub Button39_Click(sender As Object, e As EventArgs) Handles Button39.Click
-        Geklickt(6.4)
+        Geklickt(6, 4)
     End Sub
 
     Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
-        Geklickt(6.5)
+        Geklickt(6, 5)
     End Sub
 
     Private Sub Button41_Click(sender As Object, e As EventArgs) Handles Button41.Click
-        Geklickt(6.6)
+        Geklickt(6, 6)
     End Sub
 
     Private Sub Button42_Click(sender As Object, e As EventArgs) Handles Button42.Click
-        Geklickt(6.7)
+        Geklickt(6, 7)
     End Sub
 
     Private Sub Button43_Click(sender As Object, e As EventArgs) Handles Button43.Click
-        Geklickt(7.1)
+        Geklickt(7, 1)
     End Sub
 
     Private Sub Button44_Click(sender As Object, e As EventArgs) Handles Button44.Click
-        Geklickt(7.2)
+        Geklickt(7, 2)
     End Sub
 
     Private Sub Button45_Click(sender As Object, e As EventArgs) Handles Button45.Click
-        Geklickt(7.3)
+        Geklickt(7, 3)
     End Sub
 
     Private Sub Button46_Click(sender As Object, e As EventArgs) Handles Button46.Click
-        Geklickt(7.4)
+        Geklickt(7, 4)
     End Sub
 
     Private Sub Button47_Click(sender As Object, e As EventArgs) Handles Button47.Click
-        Geklickt(7.5)
+        Geklickt(7, 5)
     End Sub
 
     Private Sub Button48_Click(sender As Object, e As EventArgs) Handles Button48.Click
-        Geklickt(7.6)
+        Geklickt(7, 6)
     End Sub
 
     Private Sub Button49_Click(sender As Object, e As EventArgs) Handles Button49.Click
-        Geklickt(7.7)
+        Geklickt(7, 7)
     End Sub
 End Class
 
@@ -1398,9 +1462,9 @@ Public Interface ITagesplan
     Sub VorstellungÄndern(ByVal Vorstellung As Vorstellung, ByVal Filmnummer As Integer)
     'wird ans Ende hinzugefügt
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
-    Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung, ByVal Position As Integer)
+    Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung)
     Function getVorstellungen() As ArrayList
-    Function getVorstellung(ByVal Position As Integer) As Vorstellung
+    Function getVorstellung(ByVal Positiom As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
     Function getSaal() As Kinosaal
     Function getFSK(a As Integer) As Integer
