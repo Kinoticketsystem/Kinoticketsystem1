@@ -2,12 +2,10 @@
     Private DASKINO As Kino
     Public alleFilme As ArrayList = New ArrayList()
     Public alleKunden As ArrayList = New ArrayList()
-    Public alleKinosäle As ArrayList = New ArrayList() 'vielleicht lieber array, weil feste Größe?
+    Public alleKinosäle(_AnzahlKinos) As Kinosaal ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     Public alleTagespläne As ArrayList = New ArrayList()
     Public dasMegaKino As Kino
-
-
-
+    Private _AnzahlKinos As Integer = 6
 
     Private Sub cmdTexterfassenErik_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click 'cmdTexterfassen nicht mehr vorhanden(Neuer Button)
         TexterfassenTest.BringToFront()
@@ -73,7 +71,12 @@
 
     Private Sub FormSchönMachen()
         DatumUndUhrzeitFestlegn()
+        AnzahlFreiPlätzeBestimmen
         '....
+    End Sub
+
+    Private Sub AnzahlFreiPlätzeBestimmen()
+        alleKinosäle(0).
     End Sub
 
     Private Sub DatumUndUhrzeitFestlegn()
