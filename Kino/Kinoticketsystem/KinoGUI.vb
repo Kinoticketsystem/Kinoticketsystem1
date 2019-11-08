@@ -1,9 +1,11 @@
-﻿Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
+﻿Imports Kinoticketsystem
+
+Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
     Private DASKINO As Kino
-    Public alleFilme As ArrayList = New ArrayList()
-    Public alleKunden As ArrayList = New ArrayList()
-    Public alleKinosäle(_AnzahlKinos) As Kinosaal ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
-    Public alleTagespläne As ArrayList = New ArrayList()
+    Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
+    Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
+    Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
+    Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Public dasMegaKino As Kino
     Private _AnzahlKinos As Integer = 6
 
@@ -63,20 +65,112 @@
         'End While
         'FileClose(1)
         'dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
-
-
-
+        testInitialisierung
         FormSchönMachen()
+    End Sub
+
+    Private Sub testInitialisierung()
+        Dim a(5) As Kinosaal
+        Dim c As Film = New Film("LOL", 120, 12, True)
+        For i = 0 To 5
+            a(i) = New Kinosaal(60, c, 6, 10)
+        Next
+        a(3) = New Kinosaal(120, c, 8, 15)
+        Dim tagesplänesdv(6) As Tagesplan
+        For i = 0 To 6
+            tagesplänesdv(i) = New Tagesplan()
+        Next
+        DASKINO = New Kino(6, New ArrayList, New ArrayList, tagesplänesdv, a)
+
     End Sub
 
     Private Sub FormSchönMachen()
         DatumUndUhrzeitFestlegn()
-        AnzahlFreiPlätzeBestimmen
+        AnzahlFreiPlätzeBestimmen()
         '....
     End Sub
 
     Private Sub AnzahlFreiPlätzeBestimmen()
-        alleKinosäle(0).
+        Dim a() As Kinosaal = DASKINO.getKinosäle
+        For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
+            If a(i).getAnzahlFreiPlätze > 0 Then
+                LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
+                LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            Else
+                LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            End If
+        Next
+    End Sub
+
+    Private Sub LabelFreiPlätzeberechnen(c As Integer, frei As Integer, anzahlfreiePlätze As Integer, anzahlPlätze As Integer)
+        If frei = 0 Then
+            Select Case c
+                Case 0
+                    lblFreiePlätze1.BackColor = Color.Green
+                    lblFreiePlätze1.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 1
+                    lblFreiePlätze2.BackColor = Color.Green
+                    lblFreiePlätze2.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 2
+                    lblFreiePlätze3.BackColor = Color.Green
+                    lblFreiePlätze3.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 3
+                    lblFreiePlätze4.BackColor = Color.Green
+                    lblFreiePlätze4.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 4
+                    lblFreiePlätze5.BackColor = Color.Green
+                    lblFreiePlätze5.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 5
+                    lblFreiePlätze6.BackColor = Color.Green
+                    lblFreiePlätze6.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+            End Select
+        ElseIf frei = 2 Then
+            Select Case c
+                Case 0
+                    lblFreiePlätze1.BackColor = Color.Orange
+                    lblFreiePlätze1.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 1
+                    lblFreiePlätze2.BackColor = Color.Orange
+                    lblFreiePlätze2.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 2
+                    lblFreiePlätze3.BackColor = Color.Orange
+                    lblFreiePlätze3.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 3
+                    lblFreiePlätze4.BackColor = Color.Orange
+                    lblFreiePlätze4.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 4
+                    lblFreiePlätze5.BackColor = Color.Orange
+                    lblFreiePlätze5.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 5
+                    lblFreiePlätze6.BackColor = Color.Orange
+                    lblFreiePlätze6.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+            End Select
+        Else
+            Select Case c
+                Case 0
+                    lblFreiePlätze1.BackColor = Color.Red
+                    lblFreiePlätze1.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 1
+                    lblFreiePlätze2.BackColor = Color.Red
+                    lblFreiePlätze2.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 2
+                    lblFreiePlätze3.BackColor = Color.Red
+                    lblFreiePlätze3.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 3
+                    lblFreiePlätze4.BackColor = Color.Red
+                    lblFreiePlätze4.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 4
+                    lblFreiePlätze5.BackColor = Color.Red
+                    lblFreiePlätze5.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+                Case 5
+                    lblFreiePlätze6.BackColor = Color.Red
+                    lblFreiePlätze6.Text = anzahlfreiePlätze & " von " & anzahlPlätze & " Plätzen frei"
+            End Select
+        End If
+        If c > 5 Then
+            lblDatum.Text = "Array der Kkinosäle größer als 6, als angezeigt werden"
+        End If
     End Sub
 
     Private Sub DatumUndUhrzeitFestlegn()

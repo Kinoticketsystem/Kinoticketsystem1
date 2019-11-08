@@ -56,12 +56,16 @@
             Next
         Next
     End Sub
+
+    Public Function getKinosäle() As Array
+        Return _Kinosäle
+    End Function
     'Methoden
 
     Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosäle As Array)
         _AnzahlKinosäle = AnzahlKinos
 
-        Dim a(AnzahlKinos) As Kinosaal 'für array
+        ' Dim a(AnzahlKinos) As Kinosaal 'für array
         If Not (Kinosäle.GetLength(0) = (AnzahlKinos)) Then
             Throw New Exception(" AnzahlKinos ungleich der ANzahl der übergebenen Kinosäle im Array")
         End If
@@ -92,7 +96,7 @@
 
         For k = 0 To AnzahlKinos - 1
             FileOpen(1, "Kinosäle.txt", OpenMode.Append)
-            PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getZ & " Anzahl der Reihen: " & Kinosäle(k).getX & " Sitzplätze pro Reihe: " & Kinosäle(k).getY)
+            PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
             FileClose(1)
         Next
 

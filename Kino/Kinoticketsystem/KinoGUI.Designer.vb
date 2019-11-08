@@ -345,7 +345,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze1.BackColor = System.Drawing.Color.Green
         Me.lblFreiePlätze1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätze1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblFreiePlätze1.Location = New System.Drawing.Point(590, 306)
+        Me.lblFreiePlätze1.Location = New System.Drawing.Point(559, 308)
         Me.lblFreiePlätze1.Name = "lblFreiePlätze1"
         Me.lblFreiePlätze1.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze1.TabIndex = 25
@@ -357,7 +357,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze2.BackColor = System.Drawing.Color.Green
         Me.lblFreiePlätze2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätze2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblFreiePlätze2.Location = New System.Drawing.Point(590, 371)
+        Me.lblFreiePlätze2.Location = New System.Drawing.Point(559, 373)
         Me.lblFreiePlätze2.Name = "lblFreiePlätze2"
         Me.lblFreiePlätze2.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze2.TabIndex = 26
@@ -369,7 +369,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze3.BackColor = System.Drawing.Color.Green
         Me.lblFreiePlätze3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätze3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblFreiePlätze3.Location = New System.Drawing.Point(590, 440)
+        Me.lblFreiePlätze3.Location = New System.Drawing.Point(559, 442)
         Me.lblFreiePlätze3.Name = "lblFreiePlätze3"
         Me.lblFreiePlätze3.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze3.TabIndex = 27
@@ -381,7 +381,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze4.BackColor = System.Drawing.Color.Green
         Me.lblFreiePlätze4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätze4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblFreiePlätze4.Location = New System.Drawing.Point(590, 508)
+        Me.lblFreiePlätze4.Location = New System.Drawing.Point(559, 510)
         Me.lblFreiePlätze4.Name = "lblFreiePlätze4"
         Me.lblFreiePlätze4.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze4.TabIndex = 28
@@ -393,7 +393,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze5.BackColor = System.Drawing.Color.Green
         Me.lblFreiePlätze5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätze5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblFreiePlätze5.Location = New System.Drawing.Point(590, 577)
+        Me.lblFreiePlätze5.Location = New System.Drawing.Point(559, 579)
         Me.lblFreiePlätze5.Name = "lblFreiePlätze5"
         Me.lblFreiePlätze5.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze5.TabIndex = 29
@@ -405,7 +405,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze6.BackColor = System.Drawing.Color.Green
         Me.lblFreiePlätze6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätze6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblFreiePlätze6.Location = New System.Drawing.Point(590, 642)
+        Me.lblFreiePlätze6.Location = New System.Drawing.Point(559, 644)
         Me.lblFreiePlätze6.Name = "lblFreiePlätze6"
         Me.lblFreiePlätze6.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze6.TabIndex = 30
@@ -417,7 +417,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätzeFarbe1.BackColor = System.Drawing.Color.Lime
         Me.lblFreiePlätzeFarbe1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreiePlätzeFarbe1.ForeColor = System.Drawing.Color.Transparent
-        Me.lblFreiePlätzeFarbe1.Location = New System.Drawing.Point(663, 306)
+        Me.lblFreiePlätzeFarbe1.Location = New System.Drawing.Point(632, 308)
         Me.lblFreiePlätzeFarbe1.Name = "lblFreiePlätzeFarbe1"
         Me.lblFreiePlätzeFarbe1.Size = New System.Drawing.Size(0, 29)
         Me.lblFreiePlätzeFarbe1.TabIndex = 31

@@ -7,7 +7,7 @@ Public Class Kinosaal
     'Private x As Integer
     'Private y As Integer
     'Private z As Integer
-    Private _Film As Film
+    Private _Film As Film 'brauchen wir den eigentlich nicht, vielleicht später, aber unnötig den mit übergeben zu müssen im Konstruktor
     Private _Sitzplätze(,) As Kunde
     Private _PreisProPlatz(,) As Double
     Private _Standardpreis As Double = 5.5
@@ -15,7 +15,7 @@ Public Class Kinosaal
 
     Public Sub New(ByVal AnzahlSitztplätze As Integer, ByVal Film As Film, ByVal AnzahlReihe As Integer, ByVal SitzeProReihe As Integer)
         If AnzahlSitztplätze = AnzahlReihe * SitzeProReihe Then
-            Me._AnzahlSitzplätze = _AnzahlSitzplätze
+            Me._AnzahlSitzplätze = AnzahlSitztplätze
         Else
             Throw New Exception("Die übergebene Anzahl der Sitzplätze passt nicht zur Länge und Breite der Sitze")
         End If
@@ -78,6 +78,17 @@ Public Class Kinosaal
     Public Sub SitzplatzBuchen(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef kunde As Kunde)
         Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = kunde
     End Sub
+
+    Public Function getAnzahlFreiPlätze() As Integer
+        getAnzahlFreiPlätze = 0
+        For i = 0 To _Anzahlreihe - 1
+            For j = 0 To _SitzeProReihe - 1
+                If _Sitzplätze(i, j).Equals(_leererPlatz) Then
+                    getAnzahlFreiPlätze += 1
+                End If
+            Next
+        Next
+    End Function
 
     Public Sub SitzplatzStornieren(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef Kunde As Kunde)
         If _Sitzplätze(gewählterPlatzX, gewählterPlatzY).Equals(Kunde) Then

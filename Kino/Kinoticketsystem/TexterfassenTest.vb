@@ -4,7 +4,7 @@
     Private testsaal1 As Kinosaal = New Kinosaal(60, TestFilmA, 10, 6)
     Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA)
     Private BeispielVorstellungC As Vorstellung = New Vorstellung(120, 210, New ArrayList(), TestFilmB)
-    Private _Tagespläne As New ArrayList
+    Private _Tagespläne(1)
     Private Testplan As New Tagesplan
     Private FilmListe As New ArrayList
     Private KundenListe As New ArrayList
@@ -18,7 +18,7 @@
         KundenListe.Add("F")
         KundenListe.Add("K")
         Testplan.TagesplanErstellen2(BeispielVorstellungA, BeispielVorstellungC)
-        _Tagespläne.Add(Testplan)
+        _Tagespläne(0) = (Testplan)
         Dim testkino As Kino = New Kino(1, FilmListe, KundenListe, _Tagespläne, testsaal1)
 
     End Sub
