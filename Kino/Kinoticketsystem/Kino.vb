@@ -4,7 +4,7 @@
     Private _AnzahlKinosäle As Integer
     Private _Filme As ArrayList = New ArrayList()
     Private _Kunden As ArrayList = New ArrayList()
-    Private _Tagespläne() As Tagesplan  'ArrayList = New ArrayList ' Array weil feste Anzahl
+    Private _Tagespläne() As Tagesplan  'ArrayList = New ArrayList ' Array weil feste Anzahl '7 pro Kinosaal, muss noch gemacht werden!!!!
 
 
     'Konstruktur

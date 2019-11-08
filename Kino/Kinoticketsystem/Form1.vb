@@ -45,14 +45,16 @@ Public Class FTagesplan
     End Function
 
     Private Sub welcheFarbe(ByVal a As Button, tag As Tagesplan, position As Integer)
-        If tag.getFSK(position) <= 0 Then
+        position -= 1 'wichtig weil es in FarbeDerButtonsFestlegen der erste mit 1 und nicht mit 0 aufgerufen wird
+        Dim b As Integer = tag.getFSK(position)
+        If b <= 0 Then
             a.BackColor = Color.White
-        ElseIf tag.getFSK(position) <= 6 Then
+        ElseIf b <= 6 Then
             a.BackColor = Color.Yellow
 
-        ElseIf tag.getFSK(position) <= 12 Then
+        ElseIf b <= 12 Then
             a.BackColor = Color.Green
-        ElseIf tag.getFSK(position) <= 16 Then
+        ElseIf b <= 16 Then
             a.BackColor = Color.Blue
         Else
             a.BackColor = Color.Red
@@ -67,87 +69,288 @@ Public Class FTagesplan
     End Sub
     Private Sub FarbeDerButtonsFestlegen()
         'Farbe für alle Buttons machen, müssen ja nicht alle angezeigt wqerden
-        'Select Case _ersterTag.getAnzahlVorstellungen
-        '    Case 1
-        '        welcheFarbe(Button1, _ersterTag, 1)
-        '    Case 2
-        '        welcheFarbe(Button1, _ersterTag, 1)
-        '        welcheFarbe(Button2, _ersterTag, 2)
-        '    Case 3
-        '        welcheFarbe(Button1, _ersterTag, 1)
-        '        welcheFarbe(Button2, _ersterTag, 2)
-        '        welcheFarbe(Button3, _ersterTag, 3)
-        '    Case 4
-        '        welcheFarbe(Button1, _ersterTag, 1)
-        '        welcheFarbe(Button2, _ersterTag, 2)
-        '        welcheFarbe(Button3, _ersterTag, 3)
-        '        welcheFarbe(Button4, _ersterTag, 4)
-        '    Case 5
-        welcheFarbe(Button1, _ersterTag, 1)
-        welcheFarbe(Button2, _ersterTag, 2)
-        welcheFarbe(Button3, _ersterTag, 3)
-        welcheFarbe(Button4, _ersterTag, 4)
-        welcheFarbe(Button5, _ersterTag, 5)
-        welcheFarbe(Button6, _ersterTag, 6)
-        welcheFarbe(Button7, _ersterTag, 7)
+        'geht nicht wegen array hat ja bei den Veranstaltungen, die es nicht gibt auch kein FSK, also doch select case
+        Select Case _ersterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button1, _ersterTag, 1)
+            Case 2
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+            Case 3
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+            Case 4
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+                welcheFarbe(Button4, _ersterTag, 4)
+            Case 5
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+                welcheFarbe(Button4, _ersterTag, 4)
+                welcheFarbe(Button5, _ersterTag, 5)
+            Case 6
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+                welcheFarbe(Button4, _ersterTag, 4)
+                welcheFarbe(Button5, _ersterTag, 5)
+                welcheFarbe(Button6, _ersterTag, 6)
+            Case 7
+                welcheFarbe(Button1, _ersterTag, 1)
+                welcheFarbe(Button2, _ersterTag, 2)
+                welcheFarbe(Button3, _ersterTag, 3)
+                welcheFarbe(Button4, _ersterTag, 4)
+                welcheFarbe(Button5, _ersterTag, 5)
+                welcheFarbe(Button6, _ersterTag, 6)
+                welcheFarbe(Button7, _ersterTag, 7)
+        End Select
 
-        welcheFarbe(Button8, _zweiterTag, 1)
-        welcheFarbe(Button9, _zweiterTag, 2)
-        welcheFarbe(Button10, _zweiterTag, 3)
-        welcheFarbe(Button11, _zweiterTag, 4)
-        welcheFarbe(Button12, _zweiterTag, 5)
-        welcheFarbe(Button13, _zweiterTag, 6)
-        welcheFarbe(Button14, _zweiterTag, 7)
+        Select Case _zweiterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button8, _zweiterTag, 1)
+            Case 2
+                welcheFarbe(Button8, _zweiterTag, 1)
+                welcheFarbe(Button9, _zweiterTag, 2)
+            Case 3
+                welcheFarbe(Button8, _zweiterTag, 1)
+                welcheFarbe(Button9, _zweiterTag, 2)
+                welcheFarbe(Button10, _zweiterTag, 3)
+            Case 4
+                welcheFarbe(Button8, _zweiterTag, 1)
+                welcheFarbe(Button9, _zweiterTag, 2)
+                welcheFarbe(Button10, _zweiterTag, 3)
+                welcheFarbe(Button11, _zweiterTag, 4)
+            Case 5
+                welcheFarbe(Button8, _zweiterTag, 1)
+                welcheFarbe(Button9, _zweiterTag, 2)
+                welcheFarbe(Button10, _zweiterTag, 3)
+                welcheFarbe(Button11, _zweiterTag, 4)
+                welcheFarbe(Button12, _zweiterTag, 5)
+            Case 6
 
-        welcheFarbe(Button15, _dritterTag, 1)
-        welcheFarbe(Button16, _dritterTag, 2)
-        welcheFarbe(Button17, _dritterTag, 3)
-        welcheFarbe(Button18, _dritterTag, 4)
-        welcheFarbe(Button19, _dritterTag, 5)
-        welcheFarbe(Button20, _dritterTag, 6)
-        welcheFarbe(Button21, _dritterTag, 7)
+                welcheFarbe(Button8, _zweiterTag, 1)
+                welcheFarbe(Button9, _zweiterTag, 2)
+                welcheFarbe(Button10, _zweiterTag, 3)
+                welcheFarbe(Button11, _zweiterTag, 4)
+                welcheFarbe(Button12, _zweiterTag, 5)
+                welcheFarbe(Button13, _zweiterTag, 6)
+            Case 7
+                welcheFarbe(Button8, _zweiterTag, 1)
+                welcheFarbe(Button9, _zweiterTag, 2)
+                welcheFarbe(Button10, _zweiterTag, 3)
+                welcheFarbe(Button11, _zweiterTag, 4)
+                welcheFarbe(Button12, _zweiterTag, 5)
+                welcheFarbe(Button13, _zweiterTag, 6)
+                welcheFarbe(Button14, _zweiterTag, 7)
 
-        welcheFarbe(Button22, _vierterTag, 1)
-        welcheFarbe(Button23, _vierterTag, 2)
-        welcheFarbe(Button24, _vierterTag, 3)
-        welcheFarbe(Button25, _vierterTag, 4)
-        welcheFarbe(Button26, _vierterTag, 5)
-        welcheFarbe(Button27, _vierterTag, 6)
-        welcheFarbe(Button28, _vierterTag, 7)
+        End Select
 
-        welcheFarbe(Button29, _fünfterTag, 1)
-        welcheFarbe(Button30, _fünfterTag, 2)
-        welcheFarbe(Button31, _fünfterTag, 3)
-        welcheFarbe(Button32, _fünfterTag, 4)
-        welcheFarbe(Button33, _fünfterTag, 5)
-        welcheFarbe(Button34, _fünfterTag, 6)
-        welcheFarbe(Button35, _fünfterTag, 7)
+        Select Case _dritterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button15, _dritterTag, 1)
 
-        welcheFarbe(Button36, _sechsterTag, 1)
-        welcheFarbe(Button37, _sechsterTag, 2)
-        welcheFarbe(Button38, _sechsterTag, 3)
-        welcheFarbe(Button39, _sechsterTag, 4)
-        welcheFarbe(Button40, _sechsterTag, 5)
-        welcheFarbe(Button41, _sechsterTag, 6)
-        welcheFarbe(Button42, _sechsterTag, 7)
+            Case 2
+                welcheFarbe(Button15, _dritterTag, 1)
+                welcheFarbe(Button16, _dritterTag, 2)
+            Case 3
+                welcheFarbe(Button15, _dritterTag, 1)
+                welcheFarbe(Button16, _dritterTag, 2)
+                welcheFarbe(Button17, _dritterTag, 3)
+            Case 4
+                welcheFarbe(Button15, _dritterTag, 1)
+                welcheFarbe(Button16, _dritterTag, 2)
+                welcheFarbe(Button17, _dritterTag, 3)
+                welcheFarbe(Button18, _dritterTag, 4)
+            Case 5
 
-        welcheFarbe(Button43, _siebterTag, 1)
-        welcheFarbe(Button44, _siebterTag, 2)
-        welcheFarbe(Button45, _siebterTag, 3)
-        welcheFarbe(Button46, _siebterTag, 4)
-        welcheFarbe(Button47, _siebterTag, 5)
-        welcheFarbe(Button48, _siebterTag, 6)
-        welcheFarbe(Button49, _siebterTag, 7)
+                welcheFarbe(Button15, _dritterTag, 1)
+                welcheFarbe(Button16, _dritterTag, 2)
+                welcheFarbe(Button17, _dritterTag, 3)
+                welcheFarbe(Button18, _dritterTag, 4)
+                welcheFarbe(Button19, _dritterTag, 5)
+            Case 6
+                welcheFarbe(Button15, _dritterTag, 1)
+                welcheFarbe(Button16, _dritterTag, 2)
+                welcheFarbe(Button17, _dritterTag, 3)
+                welcheFarbe(Button18, _dritterTag, 4)
+                welcheFarbe(Button19, _dritterTag, 5)
+                welcheFarbe(Button20, _dritterTag, 6)
+            Case 7
+                welcheFarbe(Button15, _dritterTag, 1)
+                welcheFarbe(Button16, _dritterTag, 2)
+                welcheFarbe(Button17, _dritterTag, 3)
+                welcheFarbe(Button18, _dritterTag, 4)
+                welcheFarbe(Button19, _dritterTag, 5)
+                welcheFarbe(Button20, _dritterTag, 6)
+                welcheFarbe(Button21, _dritterTag, 7)
 
+        End Select
 
+        Select Case _vierterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button22, _vierterTag, 1)
+            Case 2
 
+                welcheFarbe(Button22, _vierterTag, 1)
+                welcheFarbe(Button23, _vierterTag, 2)
+            Case 3
+                welcheFarbe(Button22, _vierterTag, 1)
+                welcheFarbe(Button23, _vierterTag, 2)
+                welcheFarbe(Button24, _vierterTag, 3)
+            Case 4
 
+                welcheFarbe(Button22, _vierterTag, 1)
+                welcheFarbe(Button23, _vierterTag, 2)
+                welcheFarbe(Button24, _vierterTag, 3)
+                welcheFarbe(Button25, _vierterTag, 4)
+            Case 5
+                welcheFarbe(Button22, _vierterTag, 1)
+                welcheFarbe(Button23, _vierterTag, 2)
+                welcheFarbe(Button24, _vierterTag, 3)
+                welcheFarbe(Button25, _vierterTag, 4)
+                welcheFarbe(Button26, _vierterTag, 5)
+            Case 6
 
+                welcheFarbe(Button22, _vierterTag, 1)
+                welcheFarbe(Button23, _vierterTag, 2)
+                welcheFarbe(Button24, _vierterTag, 3)
+                welcheFarbe(Button25, _vierterTag, 4)
+                welcheFarbe(Button26, _vierterTag, 5)
+                welcheFarbe(Button27, _vierterTag, 6)
+            Case 7
+                welcheFarbe(Button22, _vierterTag, 1)
+                welcheFarbe(Button23, _vierterTag, 2)
+                welcheFarbe(Button24, _vierterTag, 3)
+                welcheFarbe(Button25, _vierterTag, 4)
+                welcheFarbe(Button26, _vierterTag, 5)
+                welcheFarbe(Button27, _vierterTag, 6)
+                welcheFarbe(Button28, _vierterTag, 7)
 
+        End Select
 
+        Select Case _fünfterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button29, _fünfterTag, 1)
+            Case 2
 
-        '        'hier muss das gleiche noch für die anderen Buttons und für die anderen Tage gemacht werden.
-        'End Select
+                welcheFarbe(Button29, _fünfterTag, 1)
+                welcheFarbe(Button30, _fünfterTag, 2)
+            Case 3
+                welcheFarbe(Button29, _fünfterTag, 1)
+                welcheFarbe(Button30, _fünfterTag, 2)
+                welcheFarbe(Button31, _fünfterTag, 3)
+            Case 4
+
+                welcheFarbe(Button29, _fünfterTag, 1)
+                welcheFarbe(Button30, _fünfterTag, 2)
+                welcheFarbe(Button31, _fünfterTag, 3)
+                welcheFarbe(Button32, _fünfterTag, 4)
+            Case 5
+                welcheFarbe(Button29, _fünfterTag, 1)
+                welcheFarbe(Button30, _fünfterTag, 2)
+                welcheFarbe(Button31, _fünfterTag, 3)
+                welcheFarbe(Button32, _fünfterTag, 4)
+                welcheFarbe(Button33, _fünfterTag, 5)
+            Case 6
+                welcheFarbe(Button29, _fünfterTag, 1)
+                welcheFarbe(Button30, _fünfterTag, 2)
+                welcheFarbe(Button31, _fünfterTag, 3)
+                welcheFarbe(Button32, _fünfterTag, 4)
+                welcheFarbe(Button33, _fünfterTag, 5)
+                welcheFarbe(Button34, _fünfterTag, 6)
+            Case 7
+                welcheFarbe(Button29, _fünfterTag, 1)
+                welcheFarbe(Button30, _fünfterTag, 2)
+                welcheFarbe(Button31, _fünfterTag, 3)
+                welcheFarbe(Button32, _fünfterTag, 4)
+                welcheFarbe(Button33, _fünfterTag, 5)
+                welcheFarbe(Button34, _fünfterTag, 6)
+                welcheFarbe(Button35, _fünfterTag, 7)
+
+        End Select
+
+        Select Case _sechsterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button36, _sechsterTag, 1)
+            Case 2
+                welcheFarbe(Button36, _sechsterTag, 1)
+                welcheFarbe(Button37, _sechsterTag, 2)
+            Case 3
+                welcheFarbe(Button36, _sechsterTag, 1)
+                welcheFarbe(Button37, _sechsterTag, 2)
+                welcheFarbe(Button38, _sechsterTag, 3)
+            Case 4
+                welcheFarbe(Button36, _sechsterTag, 1)
+                welcheFarbe(Button37, _sechsterTag, 2)
+                welcheFarbe(Button38, _sechsterTag, 3)
+                welcheFarbe(Button39, _sechsterTag, 4)
+            Case 5
+
+                welcheFarbe(Button36, _sechsterTag, 1)
+                welcheFarbe(Button37, _sechsterTag, 2)
+                welcheFarbe(Button38, _sechsterTag, 3)
+                welcheFarbe(Button39, _sechsterTag, 4)
+                welcheFarbe(Button40, _sechsterTag, 5)
+            Case 6
+                welcheFarbe(Button36, _sechsterTag, 1)
+                welcheFarbe(Button37, _sechsterTag, 2)
+                welcheFarbe(Button38, _sechsterTag, 3)
+                welcheFarbe(Button39, _sechsterTag, 4)
+                welcheFarbe(Button40, _sechsterTag, 5)
+                welcheFarbe(Button41, _sechsterTag, 6)
+            Case 7
+                welcheFarbe(Button36, _sechsterTag, 1)
+                welcheFarbe(Button37, _sechsterTag, 2)
+                welcheFarbe(Button38, _sechsterTag, 3)
+                welcheFarbe(Button39, _sechsterTag, 4)
+                welcheFarbe(Button40, _sechsterTag, 5)
+                welcheFarbe(Button41, _sechsterTag, 6)
+                welcheFarbe(Button42, _sechsterTag, 7)
+
+        End Select
+
+        Select Case _siebterTag.getAnzahlVorstellungen
+            Case 1
+                welcheFarbe(Button43, _siebterTag, 1)
+            Case 2
+
+                welcheFarbe(Button43, _siebterTag, 1)
+                welcheFarbe(Button44, _siebterTag, 2)
+            Case 3
+                welcheFarbe(Button43, _siebterTag, 1)
+                welcheFarbe(Button44, _siebterTag, 2)
+                welcheFarbe(Button45, _siebterTag, 3)
+            Case 4
+
+                welcheFarbe(Button43, _siebterTag, 1)
+                welcheFarbe(Button44, _siebterTag, 2)
+                welcheFarbe(Button45, _siebterTag, 3)
+                welcheFarbe(Button46, _siebterTag, 4)
+            Case 5
+                welcheFarbe(Button43, _siebterTag, 1)
+                welcheFarbe(Button44, _siebterTag, 2)
+                welcheFarbe(Button45, _siebterTag, 3)
+                welcheFarbe(Button46, _siebterTag, 4)
+                welcheFarbe(Button47, _siebterTag, 5)
+            Case 6
+                welcheFarbe(Button43, _siebterTag, 1)
+                welcheFarbe(Button44, _siebterTag, 2)
+                welcheFarbe(Button45, _siebterTag, 3)
+                welcheFarbe(Button46, _siebterTag, 4)
+                welcheFarbe(Button47, _siebterTag, 5)
+                welcheFarbe(Button48, _siebterTag, 6)
+            Case 7
+                welcheFarbe(Button43, _siebterTag, 1)
+                welcheFarbe(Button44, _siebterTag, 2)
+                welcheFarbe(Button45, _siebterTag, 3)
+                welcheFarbe(Button46, _siebterTag, 4)
+                welcheFarbe(Button47, _siebterTag, 5)
+                welcheFarbe(Button48, _siebterTag, 6)
+                welcheFarbe(Button49, _siebterTag, 7)
+        End Select
     End Sub
 
     'Private Sub WochenplanAbrufenUndAusgeben() 'unnötig, wird in der Klasse Kino gemacht und dann eine andere Methode genutzt

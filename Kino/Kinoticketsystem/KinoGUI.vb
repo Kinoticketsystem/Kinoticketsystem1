@@ -4,10 +4,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private DASKINO As Kino
     Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
+    Private _AnzahlKinos As Integer = 6
     Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Public dasMegaKino As Kino
-    Private _AnzahlKinos As Integer = 6
+
 
     Private Sub cmdTexterfassenErik_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click 'cmdTexterfassen nicht mehr vorhanden(Neuer Button)
         TexterfassenTest.BringToFront()
@@ -65,20 +66,23 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         'End While
         'FileClose(1)
         'dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
-        testInitialisierung
+        testInitialisierung()
+
         FormSchönMachen()
     End Sub
 
     Private Sub testInitialisierung()
         Dim a(5) As Kinosaal
-        Dim c As Film = New Film("LOL", 120, 12, True)
+        Dim c As Film = New Film("Testfilm", 120, 12, True)
         For i = 0 To 5
             a(i) = New Kinosaal(60, c, 6, 10)
         Next
         a(3) = New Kinosaal(120, c, 8, 15)
-        Dim tagesplänesdv(6) As Tagesplan
+        Dim tagesplänesdv(6) As Tagesplan 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
         For i = 0 To 6
-            tagesplänesdv(i) = New Tagesplan()
+            Dim z As Tagesplan = New Tagesplan()
+            z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c), New Vorstellung(130, 250, New ArrayList, c), New Vorstellung(260, 380, New ArrayList, c))
+            tagesplänesdv(i) = z
         Next
         DASKINO = New Kino(6, New ArrayList, New ArrayList, tagesplänesdv, a)
 
@@ -87,7 +91,32 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub FormSchönMachen()
         DatumUndUhrzeitFestlegn()
         AnzahlFreiPlätzeBestimmen()
+        nächstenFilmProKinosaalANzeigen
         '....
+    End Sub
+
+    Private Sub nächstenFilmProKinosaalANzeigen()
+        Dim a() As Tagesplan = DASKINO.getTagesplan 'pro Kinosaal 7 (wird noch umgesetzt) also später dann erst den Tag rausfinden und dann von dem Tagesplan den nächsten FIlm nehmen und wenn alle durch, dann entweder vom nächsten Tag oder Anzeigen für heute keine mehr
+        For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
+            labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
+        Next
+    End Sub
+
+    Private Sub labelNächsterFilmBerechnen(i As Integer, vorstellung As Vorstellung)
+        Select Case i
+            Case 0
+                lblFilm1.Text = vorstellung.getFilm.getFilmtitel
+            Case 1
+                lblFilm2.Text = vorstellung.getFilm.getFilmtitel
+            Case 2
+                lblFilm3.Text = vorstellung.getFilm.getFilmtitel
+            Case 3
+                lblFilm4.Text = vorstellung.getFilm.getFilmtitel
+            Case 4
+                lblFilm5.Text = vorstellung.getFilm.getFilmtitel
+            Case 5
+                lblFilm6.Text = vorstellung.getFilm.getFilmtitel
+        End Select
     End Sub
 
     Private Sub AnzahlFreiPlätzeBestimmen()
@@ -206,14 +235,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(alleKinosäle(0))
+        FTagesplan.SetKinosaal(DASKINO.getKinosäle(0))
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
     Private Sub cmdWochenplan2_Click(sender As Object, e As EventArgs) Handles cmdWochenplan2.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(alleKinosäle(1))
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(1)))
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -221,7 +250,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan3_Click(sender As Object, e As EventArgs) Handles cmdWochenplan3.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(alleKinosäle(2))
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(2)))
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -229,7 +258,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan4_Click(sender As Object, e As EventArgs) Handles cmdWochenplan4.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(alleKinosäle(3))
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle((3))))
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -237,7 +266,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan5_Click(sender As Object, e As EventArgs) Handles cmdWochenplan5.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(alleKinosäle(4))
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(4)))
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -245,7 +274,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan6_Click(sender As Object, e As EventArgs) Handles cmdWochenplan6.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(alleKinosäle(5))
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(5)))
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub

@@ -98,6 +98,8 @@ Public Class Kinosaal
         End If
     End Sub
 
+
+
     Public Function getPreis(x, y) As Double
         Return _PreisProPlatz(x, y)
     End Function

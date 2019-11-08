@@ -87,6 +87,27 @@ Public Class Tagesplan
         'Next
 
     End Sub
+
+    Public Function getNächstenFilm(jetzt As Date) As Vorstellung
+
+        Dim b As ArrayList = _Vorstellungen
+
+        getNächstenFilm = b(0)
+        Dim alleFilmeHeuteWarenSchon As Boolean = True
+        Dim A As Integer = jetzt.Hour * 60 + jetzt.Minute
+        Dim Differenz As Integer = b(0).getAnfangszeit - A
+        For i = 0 To AnzahlFilmeProTag - 1
+            If (b(i).getAnfangszeit - A) < Differenz And (b(i).getAnfangszeit - A) > 0 Then
+                getNächstenFilm = b(i)
+                Differenz = (b(i).getAnfangszeit - A)
+                alleFilmeHeuteWarenSchon = False
+            End If
+        Next
+        If alleFilmeHeuteWarenSchon Then
+            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False))
+        End If
+    End Function
+
     Public Sub TagesplanErstellen1(Vorstellung1 As Vorstellung) Implements ITagesplan.TagesplanErstellen1
         _Vorstellungen.Add(Vorstellung1)
         AnzahlFilmeProTag = 1
@@ -122,7 +143,8 @@ Public Class Tagesplan
 
     Public Function getVorstellung(Position As Integer) As Vorstellung Implements ITagesplan.getVorstellung
 
-        Return _Vorstellungen(Position)
+        Return _Vorstellungen(Position - 1) '-1 weil es so in FTagesplan aufgerufen wird Bei Position der Buttons
+
     End Function
 
     Public Function getAnzahlVorstellungen() As Integer Implements ITagesplan.getAnzahlVorstellungen
