@@ -22,6 +22,7 @@ Partial Class FTagesplan
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FTagesplan))
         Me.cmdTagesPlanErstellen = New System.Windows.Forms.Button()
         Me.cmdFilmÄndern = New System.Windows.Forms.Button()
         Me.chbMontag = New System.Windows.Forms.CheckBox()
@@ -87,6 +88,9 @@ Partial Class FTagesplan
         Me.Button47 = New System.Windows.Forms.Button()
         Me.Button48 = New System.Windows.Forms.Button()
         Me.Button49 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblTextüberFIlm = New System.Windows.Forms.Label()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdTagesPlanErstellen
@@ -643,11 +647,32 @@ Partial Class FTagesplan
         Me.Button49.TabIndex = 74
         Me.Button49.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(168, 422)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(57, 80)
+        Me.PictureBox1.TabIndex = 75
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
+        '
+        'lblTextüberFIlm
+        '
+        Me.lblTextüberFIlm.AutoSize = True
+        Me.lblTextüberFIlm.Location = New System.Drawing.Point(329, 461)
+        Me.lblTextüberFIlm.Name = "lblTextüberFIlm"
+        Me.lblTextüberFIlm.Size = New System.Drawing.Size(65, 22)
+        Me.lblTextüberFIlm.TabIndex = 76
+        Me.lblTextüberFIlm.Text = "Label1"
+        '
         'FTagesplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1153, 517)
+        Me.Controls.Add(Me.lblTextüberFIlm)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button49)
         Me.Controls.Add(Me.Button48)
         Me.Controls.Add(Me.Button47)
@@ -717,6 +742,7 @@ Partial Class FTagesplan
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FTagesplan"
         Me.Text = "Wochenplan"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -787,4 +813,6 @@ Partial Class FTagesplan
     Friend WithEvents Button47 As Button
     Friend WithEvents Button48 As Button
     Friend WithEvents Button49 As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblTextüberFIlm As Label
 End Class

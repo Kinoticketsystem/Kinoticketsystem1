@@ -1441,12 +1441,41 @@ Public Class FTagesplan
     Private Sub Button1_MouseMove(sender As Object, e As EventArgs) Handles Button1.MouseMove
         'wird aktiviert immer wenn die Maus über dem Button bewegt wird
         'Zeige ein Bild für den Film
-        'um zu zeigen, dass es funktionert:
-        If cmdFilmÄndern.BackColor.Equals(Color.White) Then
-            cmdFilmÄndern.BackColor = Color.Red
-        Else
-            cmdFilmÄndern.BackColor = Color.White
-        End If
+
+        'Dieses Bild muss natürlich FIlmabhängig sein, das heißt, so wie es jetzt ist funktioniert es nicht!!!
+
+        '     Dim BildVomFilm As Image = Image.FromFile _
+        '(System.Environment.GetFolderPath _
+        '(System.Environment.SpecialFolder.Personal) _
+        '& "\Image.jpg") '.jpg ist wichtig
+
+        Dim BildVomFilm As Image = Image.FromFile("C:\Users\KAYri\Pictures\Screenshot_2018_09_10_18_52_36.jpg") 'läuft noch nicht
+        MausüberButton(BildVomFilm, Button1, 1, 1)
+    End Sub
+
+
+    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton
+    End Sub
+
+    Private Sub mausverlässtButton()
+        PictureBox1.Hide()
+    End Sub
+
+    Private Sub MausüberButton(pic As Image, a As Button, x As Integer, y As Integer)
+        'für alle die gleiche PictureBox verwenden!
+        'eigentlich sollte das Bild gar nicht übergeben werden, sondern anhand der Position den Film und damit das passende BIld auslesen!!!
+        PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
+        PictureBox1.Show()
+
+        PictureBox1.Image = pic
+        PictureBox1.BorderStyle = BorderStyle.FixedSingle
+        Select Case x
+            Case 1
+                lblTextüberFIlm.Text = _ersterTag.getVorstellung(1).getFilm.getFilminfos()
+
+        End Select
+        'hier könnte man noch einen Text über den Film als Array machen
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
