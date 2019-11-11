@@ -2,11 +2,11 @@
 
 Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
     Private DASKINO As Kino
-    Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
-    Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
+    'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
+    'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
-    Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
-    Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
+    'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
+    'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Public dasMegaKino As Kino
 
 
@@ -16,8 +16,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     'Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    'Auslesen
-    'DASKINO=New Kino(...,....,...,..,..)
+    '    Auslesen
+    '    DASKINO = New Kino(..., ...., ..., .., ..)
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
@@ -38,6 +38,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'Dim alleFilme As ArrayList = New ArrayList()
+        'Dim alleKunden As ArrayList = New ArrayList()
+        'Dim alleKinosäle As ArrayList = New ArrayList()
+        'Dim alleKinosäle2 As ArrayList = New ArrayList()
+        'Dim alleTagespläne As ArrayList = New ArrayList()
+
         'FileOpen(1, "Filme.txt", OpenMode.Input)
         'While Not EOF(1)
         '    alleFilme.Add(LineInput(1))
@@ -58,6 +64,18 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         '    Console.WriteLine()
         'End While
         'FileClose(1)
+        'Dim Sitzplätze As Integer
+        'Dim Film As Film
+        'Dim Reihen As Integer
+        'Dim SitzeproReihe As Integer
+        'Dim ZwischenString As String
+        'For i = 0 To alleKinosäle.Count - 1
+        '    ZwischenString = alleKinosäle.Item(i)
+        '    ZwischenString.Replace("Kinosaal", "")
+        '    Dim Postion As Integer = InStr(ZwischenString, ": Anzahl Sitzplätze: ")
+        '    Sitzplätze = Mid(ZwischenString, Postion)
+        '    alleKinosäle2.Add(New Kinosaal(Sitzplätze,))
+        'Next
 
         'FileOpen(1, "Tagespläne.txt", OpenMode.Input)
         'While Not EOF(1)
@@ -66,9 +84,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         'End While
         'FileClose(1)
         'dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
-        testInitialisierung()
+        'testInitialisierung()
 
-        FormSchönMachen()
+        'FormSchönMachen()
     End Sub
 
     Private Sub testInitialisierung()
