@@ -13,13 +13,13 @@ Public Class Kinosaal
     Private _Standardpreis As Double = 5.5
     Public _leererPlatz As Kunde = New Kunde("")
 
-    Public Sub New(ByVal AnzahlSitztplätze As Integer, ByVal Film As Film, ByVal AnzahlReihe As Integer, ByVal SitzeProReihe As Integer)
+    Public Sub New(ByVal AnzahlSitztplätze As Integer, ByVal AnzahlReihe As Integer, ByVal SitzeProReihe As Integer)
         If AnzahlSitztplätze = AnzahlReihe * SitzeProReihe Then
             Me._AnzahlSitzplätze = AnzahlSitztplätze
         Else
             Throw New Exception("Die übergebene Anzahl der Sitzplätze passt nicht zur Länge und Breite der Sitze")
         End If
-        Me._Film = Film
+        'Me._Film = Film
         Dim a(AnzahlReihe + 1, SitzeProReihe + 1) As Kunde 'es wird später für button1 ja 0,0 übergeben
 
         '  x = AnzahlReihe      'why?
@@ -47,7 +47,7 @@ Public Class Kinosaal
         _PreisProPlatz = b
     End Sub
     Public Sub New(ByVal Vorstellung As Vorstellung)
-        Me.New(Vorstellung.getSaal.getAnzahlSitzplätze, Vorstellung.getFilm, Vorstellung.getSaal.getAnzahlReihe, Vorstellung.getSaal.getAnzahlSitzplätze)
+        Me.New(Vorstellung.getSaal.getAnzahlSitzplätze, Vorstellung.getSaal.getAnzahlReihe, Vorstellung.getSaal.getAnzahlSitzplätze)
     End Sub
     Friend Function getKunde(i As Integer, j As Integer) As Kunde
         Return _Sitzplätze(i, j)
