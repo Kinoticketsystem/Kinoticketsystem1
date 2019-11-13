@@ -233,11 +233,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Tagespläne.txt" />
+    <Content Include="bin\Debug\Tagespläne.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Kinologo.png" />
-    <Content Include="bin\Debug\Kunden.txt" />
-    <Content Include="bin\Debug\Filme.txt" />
-    <Content Include="bin\Debug\Kinosäle.txt" />
+    <Content Include="bin\Debug\Filme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Kinosäle.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Kunden.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

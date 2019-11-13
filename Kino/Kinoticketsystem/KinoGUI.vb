@@ -80,7 +80,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         '    Console.WriteLine()
         'End While
         'FileClose(1)
-        'dasMegaKino = New Kino(alleKinosäle.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle)
+        'dasMegaKino = New Kino(alleKinosäle2.Count, alleFilme, alleKunden, alleTagespläne, alleKinosäle2)
         'testInitialisierung()
 
         'FormSchönMachen()
