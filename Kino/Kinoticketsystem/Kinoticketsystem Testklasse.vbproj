@@ -105,7 +105,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestKinosaal.vb" />
-    <Compile Include="TestVorstellung.vb" />
+    <Compile Include="04TestVorstellung.vb" />
     <Compile Include="Film.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -128,10 +128,10 @@
     <Compile Include="KinosaalGUI.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KinosaalTest.Designer.vb">
-      <DependentUpon>KinosaalTest.vb</DependentUpon>
+    <Compile Include="01KinosaalTest.Designer.vb">
+      <DependentUpon>01KinosaalTest.vb</DependentUpon>
     </Compile>
-    <Compile Include="KinosaalTest.vb">
+    <Compile Include="01KinosaalTest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kunde.vb" />
@@ -157,11 +157,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tagesplan.vb" />
-    <Compile Include="TestTagesplan.vb" />
-    <Compile Include="Testklassekino.Designer.vb">
-      <DependentUpon>Testklassekino.vb</DependentUpon>
+    <Compile Include="03TestTagesplan.vb" />
+    <Compile Include="02Testklassekino.Designer.vb">
+      <DependentUpon>02Testklassekino.vb</DependentUpon>
     </Compile>
-    <Compile Include="Testklassekino.vb">
+    <Compile Include="02Testklassekino.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TexterfassenTest.Designer.vb">
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="KinosaalGUI.resx">
       <DependentUpon>KinosaalGUI.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KinosaalTest.resx">
-      <DependentUpon>KinosaalTest.vb</DependentUpon>
+    <EmbeddedResource Include="01KinosaalTest.resx">
+      <DependentUpon>01KinosaalTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -197,8 +197,8 @@
     <EmbeddedResource Include="StartBild.resx">
       <DependentUpon>StartBild.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Testklassekino.resx">
-      <DependentUpon>Testklassekino.vb</DependentUpon>
+    <EmbeddedResource Include="02Testklassekino.resx">
+      <DependentUpon>02Testklassekino.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TexterfassenTest.resx">
       <DependentUpon>TexterfassenTest.vb</DependentUpon>

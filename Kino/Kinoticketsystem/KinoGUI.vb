@@ -27,10 +27,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
 
 
-    Private Sub cmdTestKinosaal_Click(sender As Object, e As EventArgs)
-        KinosaalTest.BringToFront()
-        KinosaalTest.Show()
-    End Sub
+
 
     Private Sub cmdNeueBuchung_Click(sender As Object, e As EventArgs) Handles cmdNeueBuchung.Click
         FTagesplan.BringToFront()
@@ -227,10 +224,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Timer2.Enabled = False
     End Sub
 
-    Private Sub cmdTestKinotest_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click 'cmdTestkino nicht mehr vorhanden(Neuer Button)
-        Call Testklassekino.Show()
 
-    End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim zeit
@@ -295,5 +289,22 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(5)))
         'Veranstaltungen übergeben
         'FTagesplan.
+    End Sub
+
+    Private Sub cmdTestKinosaal_Click(sender As Object, e As EventArgs) Handles cmdTestKinosaal.Click
+        Call KinosaalTest.Show()
+    End Sub
+
+    Private Sub cmdTestkinotest_Click_1(sender As Object, e As EventArgs) Handles cmdTestkinotest.Click
+        Call Testklassekino.Show()
+    End Sub
+
+    Private Sub cmdTestTagesplan_Click(sender As Object, e As EventArgs) Handles cmdTestTagesplan.Click
+
+        BringToFront()
+    End Sub
+
+    Private Sub cmdTestVorstellung_Click(sender As Object, e As EventArgs) Handles cmdTestVorstellung.Click
+        'Call TestVorstellung.Show()
     End Sub
 End Class
