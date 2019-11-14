@@ -611,7 +611,7 @@ Partial Class KinoGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1284, 1005)
+        Me.ClientSize = New System.Drawing.Size(2504, 1005)
         Me.Controls.Add(Me.cmdTestVorstellung)
         Me.Controls.Add(Me.cmdTestTagesplan)
         Me.Controls.Add(Me.cmdTestKinosaal)

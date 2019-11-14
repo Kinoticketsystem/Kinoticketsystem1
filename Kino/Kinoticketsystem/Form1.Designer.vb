@@ -95,6 +95,7 @@ Partial Class FTagesplan
         '
         'cmdTagesPlanErstellen
         '
+        Me.cmdTagesPlanErstellen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(899, 476)
         Me.cmdTagesPlanErstellen.Margin = New System.Windows.Forms.Padding(4)
         Me.cmdTagesPlanErstellen.Name = "cmdTagesPlanErstellen"
@@ -107,6 +108,7 @@ Partial Class FTagesplan
         '
         Me.cmdFilmÄndern.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.cmdFilmÄndern.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdFilmÄndern.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdFilmÄndern.ForeColor = System.Drawing.Color.Black
         Me.cmdFilmÄndern.Location = New System.Drawing.Point(935, 437)
         Me.cmdFilmÄndern.Name = "cmdFilmÄndern"
@@ -118,145 +120,188 @@ Partial Class FTagesplan
         'chbMontag
         '
         Me.chbMontag.AutoSize = True
+        Me.chbMontag.BackColor = System.Drawing.Color.Transparent
+        Me.chbMontag.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbMontag.ForeColor = System.Drawing.Color.White
         Me.chbMontag.Location = New System.Drawing.Point(150, 30)
         Me.chbMontag.Name = "chbMontag"
-        Me.chbMontag.Size = New System.Drawing.Size(75, 23)
+        Me.chbMontag.Size = New System.Drawing.Size(78, 23)
         Me.chbMontag.TabIndex = 5
         Me.chbMontag.Text = "Montag"
-        Me.chbMontag.UseVisualStyleBackColor = True
+        Me.chbMontag.UseVisualStyleBackColor = False
         '
         'chbFreitag
         '
         Me.chbFreitag.AutoSize = True
+        Me.chbFreitag.BackColor = System.Drawing.Color.Transparent
+        Me.chbFreitag.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbFreitag.ForeColor = System.Drawing.Color.White
         Me.chbFreitag.Location = New System.Drawing.Point(751, 30)
         Me.chbFreitag.Name = "chbFreitag"
-        Me.chbFreitag.Size = New System.Drawing.Size(70, 23)
+        Me.chbFreitag.Size = New System.Drawing.Size(73, 23)
         Me.chbFreitag.TabIndex = 6
         Me.chbFreitag.Text = "Freitag"
-        Me.chbFreitag.UseVisualStyleBackColor = True
+        Me.chbFreitag.UseVisualStyleBackColor = False
         '
         'chbMittwoch
         '
         Me.chbMittwoch.AutoSize = True
+        Me.chbMittwoch.BackColor = System.Drawing.Color.Transparent
+        Me.chbMittwoch.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbMittwoch.ForeColor = System.Drawing.Color.White
         Me.chbMittwoch.Location = New System.Drawing.Point(432, 30)
         Me.chbMittwoch.Name = "chbMittwoch"
-        Me.chbMittwoch.Size = New System.Drawing.Size(86, 23)
+        Me.chbMittwoch.Size = New System.Drawing.Size(89, 23)
         Me.chbMittwoch.TabIndex = 7
         Me.chbMittwoch.Text = "Mittwoch"
-        Me.chbMittwoch.UseVisualStyleBackColor = True
+        Me.chbMittwoch.UseVisualStyleBackColor = False
         '
         'chbDienstag
         '
         Me.chbDienstag.AutoSize = True
+        Me.chbDienstag.BackColor = System.Drawing.Color.Transparent
+        Me.chbDienstag.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbDienstag.ForeColor = System.Drawing.Color.White
         Me.chbDienstag.Location = New System.Drawing.Point(286, 30)
         Me.chbDienstag.Name = "chbDienstag"
-        Me.chbDienstag.Size = New System.Drawing.Size(80, 23)
+        Me.chbDienstag.Size = New System.Drawing.Size(86, 23)
         Me.chbDienstag.TabIndex = 8
         Me.chbDienstag.Text = "Dienstag"
-        Me.chbDienstag.UseVisualStyleBackColor = True
+        Me.chbDienstag.UseVisualStyleBackColor = False
         '
         'chbDonnerstag
         '
         Me.chbDonnerstag.AutoSize = True
+        Me.chbDonnerstag.BackColor = System.Drawing.Color.Transparent
+        Me.chbDonnerstag.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbDonnerstag.ForeColor = System.Drawing.Color.White
         Me.chbDonnerstag.Location = New System.Drawing.Point(585, 30)
         Me.chbDonnerstag.Name = "chbDonnerstag"
-        Me.chbDonnerstag.Size = New System.Drawing.Size(97, 23)
+        Me.chbDonnerstag.Size = New System.Drawing.Size(103, 23)
         Me.chbDonnerstag.TabIndex = 9
         Me.chbDonnerstag.Text = "Donnerstag"
-        Me.chbDonnerstag.UseVisualStyleBackColor = True
+        Me.chbDonnerstag.UseVisualStyleBackColor = False
         '
         'chb830
         '
         Me.chb830.AutoSize = True
+        Me.chb830.BackColor = System.Drawing.Color.Transparent
+        Me.chb830.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb830.ForeColor = System.Drawing.Color.White
         Me.chb830.Location = New System.Drawing.Point(30, 70)
         Me.chb830.Name = "chb830"
-        Me.chb830.Size = New System.Drawing.Size(63, 23)
+        Me.chb830.Size = New System.Drawing.Size(64, 23)
         Me.chb830.TabIndex = 10
         Me.chb830.Text = "08:00"
-        Me.chb830.UseVisualStyleBackColor = True
+        Me.chb830.UseVisualStyleBackColor = False
         '
         'chb1830
         '
         Me.chb1830.AutoSize = True
+        Me.chb1830.BackColor = System.Drawing.Color.Transparent
+        Me.chb1830.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb1830.ForeColor = System.Drawing.Color.White
         Me.chb1830.Location = New System.Drawing.Point(30, 270)
         Me.chb1830.Name = "chb1830"
-        Me.chb1830.Size = New System.Drawing.Size(63, 23)
+        Me.chb1830.Size = New System.Drawing.Size(64, 23)
         Me.chb1830.TabIndex = 11
         Me.chb1830.Text = "18:00"
-        Me.chb1830.UseVisualStyleBackColor = True
+        Me.chb1830.UseVisualStyleBackColor = False
         '
         'chb1600
         '
         Me.chb1600.AutoSize = True
+        Me.chb1600.BackColor = System.Drawing.Color.Transparent
+        Me.chb1600.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb1600.ForeColor = System.Drawing.Color.White
         Me.chb1600.Location = New System.Drawing.Point(30, 220)
         Me.chb1600.Name = "chb1600"
-        Me.chb1600.Size = New System.Drawing.Size(63, 23)
+        Me.chb1600.Size = New System.Drawing.Size(64, 23)
         Me.chb1600.TabIndex = 12
         Me.chb1600.Text = "15:30"
-        Me.chb1600.UseVisualStyleBackColor = True
+        Me.chb1600.UseVisualStyleBackColor = False
         '
         'chb1330
         '
         Me.chb1330.AutoSize = True
+        Me.chb1330.BackColor = System.Drawing.Color.Transparent
+        Me.chb1330.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb1330.ForeColor = System.Drawing.Color.White
         Me.chb1330.Location = New System.Drawing.Point(30, 170)
         Me.chb1330.Name = "chb1330"
-        Me.chb1330.Size = New System.Drawing.Size(63, 23)
+        Me.chb1330.Size = New System.Drawing.Size(64, 23)
         Me.chb1330.TabIndex = 13
         Me.chb1330.Text = "13:00"
-        Me.chb1330.UseVisualStyleBackColor = True
+        Me.chb1330.UseVisualStyleBackColor = False
         '
         'chb1100
         '
         Me.chb1100.AutoSize = True
+        Me.chb1100.BackColor = System.Drawing.Color.Transparent
+        Me.chb1100.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb1100.ForeColor = System.Drawing.Color.White
         Me.chb1100.Location = New System.Drawing.Point(30, 120)
         Me.chb1100.Name = "chb1100"
-        Me.chb1100.Size = New System.Drawing.Size(63, 23)
+        Me.chb1100.Size = New System.Drawing.Size(64, 23)
         Me.chb1100.TabIndex = 14
         Me.chb1100.Text = "10:30"
-        Me.chb1100.UseVisualStyleBackColor = True
+        Me.chb1100.UseVisualStyleBackColor = False
         '
         'chbSonntag
         '
         Me.chbSonntag.AutoSize = True
+        Me.chbSonntag.BackColor = System.Drawing.Color.Transparent
+        Me.chbSonntag.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbSonntag.ForeColor = System.Drawing.Color.White
         Me.chbSonntag.Location = New System.Drawing.Point(1026, 30)
         Me.chbSonntag.Name = "chbSonntag"
-        Me.chbSonntag.Size = New System.Drawing.Size(77, 23)
+        Me.chbSonntag.Size = New System.Drawing.Size(80, 23)
         Me.chbSonntag.TabIndex = 15
         Me.chbSonntag.Text = "Sonntag"
-        Me.chbSonntag.UseVisualStyleBackColor = True
+        Me.chbSonntag.UseVisualStyleBackColor = False
         '
         'chbSamstag
         '
         Me.chbSamstag.AutoSize = True
+        Me.chbSamstag.BackColor = System.Drawing.Color.Transparent
+        Me.chbSamstag.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chbSamstag.ForeColor = System.Drawing.Color.White
         Me.chbSamstag.Location = New System.Drawing.Point(884, 30)
         Me.chbSamstag.Name = "chbSamstag"
-        Me.chbSamstag.Size = New System.Drawing.Size(79, 23)
+        Me.chbSamstag.Size = New System.Drawing.Size(83, 23)
         Me.chbSamstag.TabIndex = 16
         Me.chbSamstag.Text = "Samstag"
-        Me.chbSamstag.UseVisualStyleBackColor = True
+        Me.chbSamstag.UseVisualStyleBackColor = False
         '
         'chb2100
         '
         Me.chb2100.AutoSize = True
+        Me.chb2100.BackColor = System.Drawing.Color.Transparent
+        Me.chb2100.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb2100.ForeColor = System.Drawing.Color.White
         Me.chb2100.Location = New System.Drawing.Point(30, 320)
         Me.chb2100.Name = "chb2100"
-        Me.chb2100.Size = New System.Drawing.Size(63, 23)
+        Me.chb2100.Size = New System.Drawing.Size(64, 23)
         Me.chb2100.TabIndex = 23
         Me.chb2100.Text = "20:30"
-        Me.chb2100.UseVisualStyleBackColor = True
+        Me.chb2100.UseVisualStyleBackColor = False
         '
         'chb2330
         '
         Me.chb2330.AutoSize = True
+        Me.chb2330.BackColor = System.Drawing.Color.Transparent
+        Me.chb2330.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chb2330.ForeColor = System.Drawing.Color.White
         Me.chb2330.Location = New System.Drawing.Point(30, 370)
         Me.chb2330.Name = "chb2330"
-        Me.chb2330.Size = New System.Drawing.Size(63, 23)
+        Me.chb2330.Size = New System.Drawing.Size(64, 23)
         Me.chb2330.TabIndex = 24
         Me.chb2330.Text = "23:00"
-        Me.chb2330.UseVisualStyleBackColor = True
+        Me.chb2330.UseVisualStyleBackColor = False
         '
         'Button1
         '
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(150, 70)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(91, 26)
@@ -265,6 +310,7 @@ Partial Class FTagesplan
         '
         'Button2
         '
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(150, 118)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(91, 26)
@@ -273,6 +319,7 @@ Partial Class FTagesplan
         '
         'Button3
         '
+        Me.Button3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(150, 167)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(91, 26)
@@ -281,6 +328,7 @@ Partial Class FTagesplan
         '
         'Button4
         '
+        Me.Button4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.Location = New System.Drawing.Point(150, 217)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(91, 26)
@@ -289,6 +337,7 @@ Partial Class FTagesplan
         '
         'Button5
         '
+        Me.Button5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(150, 267)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(91, 26)
@@ -297,6 +346,7 @@ Partial Class FTagesplan
         '
         'Button6
         '
+        Me.Button6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(150, 317)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(91, 26)
@@ -305,6 +355,7 @@ Partial Class FTagesplan
         '
         'Button7
         '
+        Me.Button7.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.Location = New System.Drawing.Point(150, 368)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(91, 26)
@@ -313,6 +364,7 @@ Partial Class FTagesplan
         '
         'Button8
         '
+        Me.Button8.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.Location = New System.Drawing.Point(286, 70)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(101, 26)
@@ -321,6 +373,7 @@ Partial Class FTagesplan
         '
         'Button9
         '
+        Me.Button9.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.Location = New System.Drawing.Point(286, 118)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(101, 26)
@@ -329,6 +382,7 @@ Partial Class FTagesplan
         '
         'Button10
         '
+        Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.Location = New System.Drawing.Point(286, 167)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(101, 26)
@@ -337,6 +391,7 @@ Partial Class FTagesplan
         '
         'Button13
         '
+        Me.Button13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.Location = New System.Drawing.Point(286, 317)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(101, 26)
@@ -345,6 +400,7 @@ Partial Class FTagesplan
         '
         'Button12
         '
+        Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.Location = New System.Drawing.Point(286, 267)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(101, 26)
@@ -353,6 +409,7 @@ Partial Class FTagesplan
         '
         'Button11
         '
+        Me.Button11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.Location = New System.Drawing.Point(286, 217)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(101, 26)
@@ -361,6 +418,7 @@ Partial Class FTagesplan
         '
         'Button15
         '
+        Me.Button15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.Location = New System.Drawing.Point(432, 69)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(108, 26)
@@ -369,6 +427,7 @@ Partial Class FTagesplan
         '
         'Button14
         '
+        Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.Location = New System.Drawing.Point(286, 368)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(101, 26)
@@ -377,6 +436,7 @@ Partial Class FTagesplan
         '
         'Button16
         '
+        Me.Button16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.Location = New System.Drawing.Point(432, 118)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(108, 26)
@@ -385,6 +445,7 @@ Partial Class FTagesplan
         '
         'Button17
         '
+        Me.Button17.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.Location = New System.Drawing.Point(432, 166)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(108, 26)
@@ -393,6 +454,7 @@ Partial Class FTagesplan
         '
         'Button18
         '
+        Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.Location = New System.Drawing.Point(432, 217)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(108, 26)
@@ -401,6 +463,7 @@ Partial Class FTagesplan
         '
         'Button19
         '
+        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.Location = New System.Drawing.Point(432, 267)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(108, 26)
@@ -409,6 +472,7 @@ Partial Class FTagesplan
         '
         'Button20
         '
+        Me.Button20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button20.Location = New System.Drawing.Point(432, 317)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(108, 26)
@@ -417,6 +481,7 @@ Partial Class FTagesplan
         '
         'Button21
         '
+        Me.Button21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button21.Location = New System.Drawing.Point(432, 368)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(108, 26)
@@ -425,6 +490,7 @@ Partial Class FTagesplan
         '
         'Button22
         '
+        Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.Location = New System.Drawing.Point(585, 69)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(121, 26)
@@ -433,6 +499,7 @@ Partial Class FTagesplan
         '
         'Button23
         '
+        Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button23.Location = New System.Drawing.Point(585, 117)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(121, 26)
@@ -441,6 +508,7 @@ Partial Class FTagesplan
         '
         'Button24
         '
+        Me.Button24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button24.Location = New System.Drawing.Point(585, 167)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(121, 26)
@@ -449,6 +517,7 @@ Partial Class FTagesplan
         '
         'Button25
         '
+        Me.Button25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button25.Location = New System.Drawing.Point(585, 217)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(121, 26)
@@ -457,6 +526,7 @@ Partial Class FTagesplan
         '
         'Button26
         '
+        Me.Button26.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button26.Location = New System.Drawing.Point(585, 266)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(121, 26)
@@ -465,6 +535,7 @@ Partial Class FTagesplan
         '
         'Button27
         '
+        Me.Button27.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button27.Location = New System.Drawing.Point(585, 317)
         Me.Button27.Name = "Button27"
         Me.Button27.Size = New System.Drawing.Size(121, 26)
@@ -473,6 +544,7 @@ Partial Class FTagesplan
         '
         'Button28
         '
+        Me.Button28.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button28.Location = New System.Drawing.Point(585, 368)
         Me.Button28.Name = "Button28"
         Me.Button28.Size = New System.Drawing.Size(121, 26)
@@ -481,6 +553,7 @@ Partial Class FTagesplan
         '
         'Button29
         '
+        Me.Button29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button29.Location = New System.Drawing.Point(751, 69)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(88, 26)
@@ -489,6 +562,7 @@ Partial Class FTagesplan
         '
         'Button30
         '
+        Me.Button30.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button30.Location = New System.Drawing.Point(751, 118)
         Me.Button30.Name = "Button30"
         Me.Button30.Size = New System.Drawing.Size(88, 26)
@@ -497,6 +571,7 @@ Partial Class FTagesplan
         '
         'Button31
         '
+        Me.Button31.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button31.Location = New System.Drawing.Point(751, 167)
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(88, 26)
@@ -505,6 +580,7 @@ Partial Class FTagesplan
         '
         'Button32
         '
+        Me.Button32.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button32.Location = New System.Drawing.Point(751, 217)
         Me.Button32.Name = "Button32"
         Me.Button32.Size = New System.Drawing.Size(88, 26)
@@ -513,6 +589,7 @@ Partial Class FTagesplan
         '
         'Button33
         '
+        Me.Button33.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button33.Location = New System.Drawing.Point(751, 267)
         Me.Button33.Name = "Button33"
         Me.Button33.Size = New System.Drawing.Size(88, 26)
@@ -521,6 +598,7 @@ Partial Class FTagesplan
         '
         'Button34
         '
+        Me.Button34.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button34.Location = New System.Drawing.Point(751, 317)
         Me.Button34.Name = "Button34"
         Me.Button34.Size = New System.Drawing.Size(88, 26)
@@ -529,6 +607,7 @@ Partial Class FTagesplan
         '
         'Button35
         '
+        Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Location = New System.Drawing.Point(751, 368)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(88, 26)
@@ -537,6 +616,7 @@ Partial Class FTagesplan
         '
         'Button36
         '
+        Me.Button36.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button36.Location = New System.Drawing.Point(884, 69)
         Me.Button36.Name = "Button36"
         Me.Button36.Size = New System.Drawing.Size(97, 26)
@@ -545,6 +625,7 @@ Partial Class FTagesplan
         '
         'Button37
         '
+        Me.Button37.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button37.Location = New System.Drawing.Point(884, 118)
         Me.Button37.Name = "Button37"
         Me.Button37.Size = New System.Drawing.Size(97, 26)
@@ -553,6 +634,7 @@ Partial Class FTagesplan
         '
         'Button38
         '
+        Me.Button38.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button38.Location = New System.Drawing.Point(884, 167)
         Me.Button38.Name = "Button38"
         Me.Button38.Size = New System.Drawing.Size(97, 26)
@@ -561,6 +643,7 @@ Partial Class FTagesplan
         '
         'Button39
         '
+        Me.Button39.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button39.Location = New System.Drawing.Point(884, 216)
         Me.Button39.Name = "Button39"
         Me.Button39.Size = New System.Drawing.Size(97, 26)
@@ -569,6 +652,7 @@ Partial Class FTagesplan
         '
         'Button40
         '
+        Me.Button40.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button40.Location = New System.Drawing.Point(884, 267)
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(97, 26)
@@ -577,6 +661,7 @@ Partial Class FTagesplan
         '
         'Button41
         '
+        Me.Button41.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button41.Location = New System.Drawing.Point(884, 317)
         Me.Button41.Name = "Button41"
         Me.Button41.Size = New System.Drawing.Size(97, 26)
@@ -585,6 +670,7 @@ Partial Class FTagesplan
         '
         'Button42
         '
+        Me.Button42.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button42.Location = New System.Drawing.Point(884, 368)
         Me.Button42.Name = "Button42"
         Me.Button42.Size = New System.Drawing.Size(97, 26)
@@ -593,6 +679,7 @@ Partial Class FTagesplan
         '
         'Button43
         '
+        Me.Button43.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button43.Location = New System.Drawing.Point(1026, 70)
         Me.Button43.Name = "Button43"
         Me.Button43.Size = New System.Drawing.Size(94, 26)
@@ -601,6 +688,7 @@ Partial Class FTagesplan
         '
         'Button44
         '
+        Me.Button44.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button44.Location = New System.Drawing.Point(1026, 117)
         Me.Button44.Name = "Button44"
         Me.Button44.Size = New System.Drawing.Size(94, 26)
@@ -609,6 +697,7 @@ Partial Class FTagesplan
         '
         'Button45
         '
+        Me.Button45.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button45.Location = New System.Drawing.Point(1026, 167)
         Me.Button45.Name = "Button45"
         Me.Button45.Size = New System.Drawing.Size(94, 26)
@@ -617,6 +706,7 @@ Partial Class FTagesplan
         '
         'Button46
         '
+        Me.Button46.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button46.Location = New System.Drawing.Point(1026, 217)
         Me.Button46.Name = "Button46"
         Me.Button46.Size = New System.Drawing.Size(94, 26)
@@ -625,6 +715,7 @@ Partial Class FTagesplan
         '
         'Button47
         '
+        Me.Button47.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button47.Location = New System.Drawing.Point(1026, 267)
         Me.Button47.Name = "Button47"
         Me.Button47.Size = New System.Drawing.Size(94, 26)
@@ -633,6 +724,7 @@ Partial Class FTagesplan
         '
         'Button48
         '
+        Me.Button48.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button48.Location = New System.Drawing.Point(1026, 317)
         Me.Button48.Name = "Button48"
         Me.Button48.Size = New System.Drawing.Size(94, 26)
@@ -641,6 +733,7 @@ Partial Class FTagesplan
         '
         'Button49
         '
+        Me.Button49.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button49.Location = New System.Drawing.Point(1026, 367)
         Me.Button49.Name = "Button49"
         Me.Button49.Size = New System.Drawing.Size(94, 26)
@@ -660,9 +753,12 @@ Partial Class FTagesplan
         'lblTextüberFIlm
         '
         Me.lblTextüberFIlm.AutoSize = True
+        Me.lblTextüberFIlm.BackColor = System.Drawing.Color.Transparent
+        Me.lblTextüberFIlm.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTextüberFIlm.ForeColor = System.Drawing.Color.White
         Me.lblTextüberFIlm.Location = New System.Drawing.Point(329, 461)
         Me.lblTextüberFIlm.Name = "lblTextüberFIlm"
-        Me.lblTextüberFIlm.Size = New System.Drawing.Size(51, 19)
+        Me.lblTextüberFIlm.Size = New System.Drawing.Size(52, 19)
         Me.lblTextüberFIlm.TabIndex = 76
         Me.lblTextüberFIlm.Text = "Label1"
         '
@@ -670,6 +766,7 @@ Partial Class FTagesplan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1153, 517)
         Me.Controls.Add(Me.lblTextüberFIlm)
         Me.Controls.Add(Me.PictureBox1)
