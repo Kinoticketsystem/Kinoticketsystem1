@@ -4,7 +4,8 @@
     Private _Vorstellung As Vorstellung = New Vorstellung(0, 0, New ArrayList(), BeispielFilmC)
     Private BeispielFilmA As Film = New Film("Testfilm", 120, 16, True)
     Private BeispielFilmC As Film = New Film("Film", 90, 12, False)
-    Private BeispeilSaalA As Kinosaal = New Kinosaal(120, BeispielFilmA, 7, 14)
+    Private BeispeilSaalA As Kinosaal = New Kinosaal(120, 7, 14) 'BeispielFilmA wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
+
     Private BeispielBesucherA As Kunde = New Kunde("Testkunde1")
     Private BeispielBesucherC As Kunde = New Kunde("Testkunde2")
 

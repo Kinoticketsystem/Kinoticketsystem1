@@ -13,7 +13,7 @@
         Dim Anzahl As String = 3
         Dim Sitz As Integer = 3
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
-        Dim Saal1 As Kinosaal = New Kinosaal(Anzahl, TestFilm, Reihe, Sitz)
+        Dim Saal1 As Kinosaal = New Kinosaal(Anzahl, Reihe, Sitz) 'TestFilm wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
         Saal1.SitzplatzBuchen(1, 1, k)
 
         MsgBox("passt§")
@@ -24,7 +24,8 @@
         Dim Anzahl As String = 3
         Dim Sitz As Integer = 3
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
-        Dim Saal2 As Kinosaal = New Kinosaal(Anzahl, TestFilm, Reihe, Sitz)
+        Dim Saal2 As Kinosaal = New Kinosaal(Anzahl, Reihe, Sitz) 'TestFilm wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
+
         MsgBox("passt")
     End Sub
     'Kinosaalentfernen

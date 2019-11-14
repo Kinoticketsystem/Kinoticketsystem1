@@ -9,7 +9,7 @@
         Dim Sitz As Integer = txtSitz.Text
 
         Dim TestF As Film = New Film("Cool", 100, 12, False)
-        TestS = New Kinosaal(Anzahl, TestF, Reihe, Sitz)
+        TestS = New Kinosaal(Anzahl, Reihe, Sitz) 'den Testf film aus dem Konstruktor entfernt
         TestK = New Kunde(Kunde)
         MsgBox("passt")
     End Sub

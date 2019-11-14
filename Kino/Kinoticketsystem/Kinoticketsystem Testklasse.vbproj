@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Class3.vb" />
+    <Compile Include="05TestKunde.vb" />
     <Compile Include="StartBild.Designer.vb">
       <DependentUpon>StartBild.vb</DependentUpon>
     </Compile>

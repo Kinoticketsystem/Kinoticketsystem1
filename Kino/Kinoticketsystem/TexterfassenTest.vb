@@ -1,7 +1,8 @@
 ﻿Public Class TexterfassenTest
     Private TestFilmA As Film = New Film("TestFilmA", 120, 16, True)
     Private TestFilmB As Film = New Film("TestFilmB", 90, 12, False)
-    Private testsaal1 As Kinosaal = New Kinosaal(60, TestFilmA, 10, 6)
+    Private testsaal1 As Kinosaal = New Kinosaal(60, 10, 6) 'TestFilmA wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
+
     Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA)
     Private BeispielVorstellungC As Vorstellung = New Vorstellung(120, 210, New ArrayList(), TestFilmB)
     Private _Tagespläne(1)
