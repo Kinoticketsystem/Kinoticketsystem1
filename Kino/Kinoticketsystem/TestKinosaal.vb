@@ -2,7 +2,7 @@
     Private TestFilmA As Film = New Film("TestFilmA", 120, 16, True)
     Private BeispielBesucherA As Kunde = New Kunde("Testkunde1")
     Private BeispielBesucherB As Kunde
-    Private testsaal1 As Kinosaal = New Kinosaal(60, TestFilmA, 10, 6)
+    Private testsaal1 As Kinosaal = New Kinosaal(60, 10, 6) ' TestFilmA fehlt siehe andere Kommentare
     'Private testsaal2 As Kinosaal
     Private Sub TestSitzplatzBuchen()
         testsaal1.SitzplatzBuchen(4, 1, BeispielBesucherA)

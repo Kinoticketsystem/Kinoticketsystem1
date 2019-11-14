@@ -90,9 +90,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim a(5) As Kinosaal
         Dim c As Film = New Film("Testfilm", 120, 12, True)
         For i = 0 To 5
-            a(i) = New Kinosaal(60, c, 6, 10)
+            a(i) = New Kinosaal(60, 6, 10) 'film fehlt 
         Next
-        a(3) = New Kinosaal(120, c, 8, 15)
+        a(3) = New Kinosaal(120, 8, 15) 'film fehlt
         Dim tagesplänesdv(6) As Tagesplan 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
         For i = 0 To 6
             Dim z As Tagesplan = New Tagesplan()

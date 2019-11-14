@@ -203,7 +203,7 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub StandartInitialisierung()
-        _kinosaal = New Kinosaal(8 * 15, New Film("", 120, 12, True), 8, 15) '8*15
+        _kinosaal = New Kinosaal(8 * 15, 8, 15) '8*15 'New Film("", 120, 12, True) siehe andere Komentare
         _aktuellerKunde = New Kunde("Max Mustermann")
         Dim b As Kunde = New Kunde("Test")
         _kinosaal.SitzplatzBuchen(0, 1, b)  'erste Reihe zweiter Platz
