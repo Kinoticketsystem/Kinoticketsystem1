@@ -237,12 +237,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Kinologo.png" />
-    <Content Include="bin\Debug\Filme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\Kinosäle.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="bin\Debug\Filme.txt" />
     <Content Include="bin\Debug\Kunden.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -272,6 +267,9 @@
     <None Include="Resources\Star Wars VIII Die letzten Jedi.png" />
     <None Include="Resources\Fantastische Tierwesen.png" />
     <None Include="Resources\Midway.png" />
+    <Content Include="bin\Debug\Kinosäle.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
