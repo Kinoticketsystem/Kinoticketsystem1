@@ -177,17 +177,17 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     Private Sub FormSchönMachen()
         DatumUndUhrzeitFestlegn()
-        AnzahlFreiPlätzeBestimmen()
-        nächstenFilmProKinosaalANzeigen
+        ' AnzahlFreiPlätzeBestimmen()
+        '    nächstenFilmProKinosaalANzeigen()
         '....
     End Sub
 
-    'Private Sub nächstenFilmProKinosaalANzeigen()
-    '    Dim a() As Tagesplan = DASKINO.getTagesplan 'pro Kinosaal 7 (wird noch umgesetzt) also später dann erst den Tag rausfinden und dann von dem Tagesplan den nächsten FIlm nehmen und wenn alle durch, dann entweder vom nächsten Tag oder Anzeigen für heute keine mehr
-    '    For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
-    '        labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
-    '    Next
-    'End Sub
+    Private Sub nächstenFilmProKinosaalANzeigen()
+        Dim a() As Tagesplan = DASKINO.getTagesplan 'pro Kinosaal 7 (wird noch umgesetzt) also später dann erst den Tag rausfinden und dann von dem Tagesplan den nächsten FIlm nehmen und wenn alle durch, dann entweder vom nächsten Tag oder Anzeigen für heute keine mehr
+        For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
+            labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
+        Next
+    End Sub
 
     Private Sub labelNächsterFilmBerechnen(i As Integer, vorstellung As Vorstellung)
         Select Case i
@@ -206,18 +206,18 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         End Select
     End Sub
 
-    'Private Sub AnzahlFreiPlätzeBestimmen()
-    '    Dim a() As Kinosaal = DASKINO.getKinosäle
-    '    For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
-    '        If a(i).getAnzahlFreiPlätze > 0 Then
-    '            LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-    '        ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
-    '            LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-    '        Else
-    '            LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-    '        End If
-    '    Next
-    'End Sub
+    Private Sub AnzahlFreiPlätzeBestimmen()
+        Dim a() As Kinosaal = DASKINO.getKinosäle
+        For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
+            If a(i).getAnzahlFreiPlätze > 0 Then
+                LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
+                LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            Else
+                LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            End If
+        Next
+    End Sub
 
     Private Sub LabelFreiPlätzeberechnen(c As Integer, frei As Integer, anzahlfreiePlätze As Integer, anzahlPlätze As Integer)
         If frei = 0 Then
