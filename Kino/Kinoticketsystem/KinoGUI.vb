@@ -148,7 +148,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             alleTagespläne2.Add(New Tagesplan())
 
             'Hier muss noch geklärt werden, wie die Tagespläne richtig gespeichert werden sollen, da wir eine unendlich große Menge bekommen, aber alles in ein kleines Array gequetscht werden soll. 
-            'Da muss noch eine Lösung für gefunden werden! 
+            'Da muss noch eine Lösung für gefunden werden! --> vorrübergehende Lösung: Tagespläne als ArrayList, statt als fester Array 
 
         Next
         FileClose(1)

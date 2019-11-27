@@ -1,10 +1,12 @@
 ﻿Public Class Kino
     'Attribute
-    Private _Kinosäle() As Kinosaal ' = New ArrayList() 'Array, für mehrere Kinosäle () As Kinosaal '
+    'Private _Kinosäle() As Kinosaal ' = New ArrayList() 'Array, für mehrere Kinosäle () As Kinosaal '
+    Private _Kinosäle As ArrayList
     Private _AnzahlKinosäle As Integer
     Private _Filme As ArrayList = New ArrayList()
     Private _Kunden As ArrayList = New ArrayList()
-    Private _Tagespläne() As Tagesplan  'ArrayList = New ArrayList ' Array weil feste Anzahl '7 pro Kinosaal, muss noch gemacht werden!!!!
+    'Private _Tagespläne() As Tagesplan  'ArrayList = New ArrayList ' Array weil feste Anzahl '7 pro Kinosaal, muss noch gemacht werden!!!!
+    Private _Tagespläne As ArrayList
 
 
     ''Konstruktur
@@ -75,16 +77,16 @@
     '    Next
     'End Sub
 
-    Public Function getKinosäle() As Array
+    Public Function getKinosäle() As ArrayList
         Return _Kinosäle
     End Function
     'Methoden
 
-    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As Array, ByVal Kinosäle As Array)
+    Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosäle As ArrayList)
         _AnzahlKinosäle = AnzahlKinos
 
         ' Dim a(AnzahlKinos) As Kinosaal 'für array
-        If Not (Kinosäle.GetLength(0) = (AnzahlKinos)) Then
+        If Not (Kinosäle.Count - 1 = (AnzahlKinos)) Then
             Throw New Exception(" AnzahlKinos ungleich der ANzahl der übergebenen Kinosäle im Array")
         End If
         _Kinosäle = Kinosäle
@@ -129,7 +131,7 @@
             file3.Close()
         Next
 
-        For i = 0 To _Tagespläne.GetLength(0) - 1
+        For i = 0 To _Tagespläne.Count - 1
             Dim plan As Tagesplan = Tagespläne(i)
             Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
             Dim file4 As System.IO.StreamWriter
