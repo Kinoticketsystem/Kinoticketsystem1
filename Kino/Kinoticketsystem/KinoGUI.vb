@@ -30,8 +30,20 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
 
     Private Sub cmdNeueBuchung_Click(sender As Object, e As EventArgs) Handles cmdNeueBuchung.Click
-        FTagesplan.BringToFront()
-        FTagesplan.Visible = True
+        ' FTagesplan.BringToFront()
+        ' FTagesplan.Visible = True
+        If cmdNeueBuchung.FlatStyle = FlatStyle.Popup Then
+            cmdNeueBuchung.FlatStyle = FlatStyle.Flat
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+        Else
+            cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            cmdNeueBuchung.BackColor = Color.Lime
+            cmdNeueBuchung.FlatAppearance.BorderSize = 1
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+
+        End If
     End Sub
 
     Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -183,10 +195,10 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub nächstenFilmProKinosaalANzeigen()
-        Dim a() As Tagesplan = DASKINO.getTagesplan 'pro Kinosaal 7 (wird noch umgesetzt) also später dann erst den Tag rausfinden und dann von dem Tagesplan den nächsten FIlm nehmen und wenn alle durch, dann entweder vom nächsten Tag oder Anzeigen für heute keine mehr
-        For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
-            labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
-        Next
+        'Dim a() As Tagesplan = DASKINO.getTagesplan 'pro Kinosaal 7 (wird noch umgesetzt) also später dann erst den Tag rausfinden und dann von dem Tagesplan den nächsten FIlm nehmen und wenn alle durch, dann entweder vom nächsten Tag oder Anzeigen für heute keine mehr
+        'For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
+        '    labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
+        'Next
     End Sub
 
     Private Sub labelNächsterFilmBerechnen(i As Integer, vorstellung As Vorstellung)
@@ -207,16 +219,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub AnzahlFreiPlätzeBestimmen()
-        Dim a() As Kinosaal = DASKINO.getKinosäle
-        For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
-            If a(i).getAnzahlFreiPlätze > 0 Then
-                LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-            ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
-                LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-            Else
-                LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-            End If
-        Next
+        'Dim a() As Kinosaal = DASKINO.getKinosäle
+        'For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
+        '    If a(i).getAnzahlFreiPlätze > 0 Then
+        '        LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+        '    ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
+        '        LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+        '    Else
+        '        LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+        '    End If
+        'Next
     End Sub
 
     Private Sub LabelFreiPlätzeberechnen(c As Integer, frei As Integer, anzahlfreiePlätze As Integer, anzahlPlätze As Integer)
@@ -367,5 +379,20 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdTestVorstellung_Click(sender As Object, e As EventArgs) Handles cmdTestVorstellung.Click
         Call Form3.Show()
 
+    End Sub
+
+    Private Sub cmdBuchungStonieren_Click(sender As Object, e As EventArgs) Handles cmdBuchungStonieren.Click
+        If cmdBuchungStonieren.FlatStyle = FlatStyle.Popup Then
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+            cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+        Else
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+            cmdBuchungStonieren.BackColor = Color.Lime
+            cmdBuchungStonieren.FlatAppearance.BorderSize = 1
+            cmdNeueBuchung.FlatStyle = FlatStyle.Flat
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+
+        End If
     End Sub
 End Class

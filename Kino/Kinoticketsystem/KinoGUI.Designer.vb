@@ -97,7 +97,7 @@ Partial Class KinoGUI
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(406, 146)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 61)
+        Me.Label1.Size = New System.Drawing.Size(0, 38)
         Me.Label1.TabIndex = 2
         '
         'cmdkinosaalAufrufen
@@ -148,7 +148,7 @@ Partial Class KinoGUI
         '
         Me.txtTageseinnahmen.Location = New System.Drawing.Point(1766, 12)
         Me.txtTageseinnahmen.Name = "txtTageseinnahmen"
-        Me.txtTageseinnahmen.Size = New System.Drawing.Size(142, 44)
+        Me.txtTageseinnahmen.Size = New System.Drawing.Size(142, 30)
         Me.txtTageseinnahmen.TabIndex = 9
         Me.txtTageseinnahmen.Text = "Tageseinnahmen"
         '
@@ -159,7 +159,7 @@ Partial Class KinoGUI
         Me.lblUhrzeit.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUhrzeit.Location = New System.Drawing.Point(37, 30)
         Me.lblUhrzeit.Name = "lblUhrzeit"
-        Me.lblUhrzeit.Size = New System.Drawing.Size(195, 59)
+        Me.lblUhrzeit.Size = New System.Drawing.Size(123, 37)
         Me.lblUhrzeit.TabIndex = 10
         Me.lblUhrzeit.Text = "11:11:11"
         '
@@ -170,7 +170,7 @@ Partial Class KinoGUI
         Me.lblDatum.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDatum.Location = New System.Drawing.Point(37, 67)
         Me.lblDatum.Name = "lblDatum"
-        Me.lblDatum.Size = New System.Drawing.Size(195, 59)
+        Me.lblDatum.Size = New System.Drawing.Size(123, 37)
         Me.lblDatum.TabIndex = 11
         Me.lblDatum.Text = "11.11.19"
         '
@@ -181,7 +181,7 @@ Partial Class KinoGUI
         Me.lblTageseinnahmen.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTageseinnahmen.Location = New System.Drawing.Point(188, 30)
         Me.lblTageseinnahmen.Name = "lblTageseinnahmen"
-        Me.lblTageseinnahmen.Size = New System.Drawing.Size(523, 59)
+        Me.lblTageseinnahmen.Size = New System.Drawing.Size(328, 37)
         Me.lblTageseinnahmen.TabIndex = 12
         Me.lblTageseinnahmen.Text = "Geld in der Kasse: 12,55€"
         '
@@ -193,7 +193,7 @@ Partial Class KinoGUI
         Me.lblFilm1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFilm1.Location = New System.Drawing.Point(224, 306)
         Me.lblFilm1.Name = "lblFilm1"
-        Me.lblFilm1.Size = New System.Drawing.Size(104, 46)
+        Me.lblFilm1.Size = New System.Drawing.Size(67, 29)
         Me.lblFilm1.TabIndex = 13
         Me.lblFilm1.Text = "Film1"
         '
@@ -205,7 +205,7 @@ Partial Class KinoGUI
         Me.lblFilm2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFilm2.Location = New System.Drawing.Point(224, 371)
         Me.lblFilm2.Name = "lblFilm2"
-        Me.lblFilm2.Size = New System.Drawing.Size(104, 46)
+        Me.lblFilm2.Size = New System.Drawing.Size(67, 29)
         Me.lblFilm2.TabIndex = 14
         Me.lblFilm2.Text = "Film2"
         '
@@ -217,7 +217,7 @@ Partial Class KinoGUI
         Me.lblFilm3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFilm3.Location = New System.Drawing.Point(224, 440)
         Me.lblFilm3.Name = "lblFilm3"
-        Me.lblFilm3.Size = New System.Drawing.Size(104, 46)
+        Me.lblFilm3.Size = New System.Drawing.Size(67, 29)
         Me.lblFilm3.TabIndex = 15
         Me.lblFilm3.Text = "Film3"
         '
@@ -229,7 +229,7 @@ Partial Class KinoGUI
         Me.lblFilm4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFilm4.Location = New System.Drawing.Point(224, 508)
         Me.lblFilm4.Name = "lblFilm4"
-        Me.lblFilm4.Size = New System.Drawing.Size(104, 46)
+        Me.lblFilm4.Size = New System.Drawing.Size(67, 29)
         Me.lblFilm4.TabIndex = 16
         Me.lblFilm4.Text = "Film4"
         '
@@ -241,7 +241,7 @@ Partial Class KinoGUI
         Me.lblFilm5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFilm5.Location = New System.Drawing.Point(224, 577)
         Me.lblFilm5.Name = "lblFilm5"
-        Me.lblFilm5.Size = New System.Drawing.Size(104, 46)
+        Me.lblFilm5.Size = New System.Drawing.Size(67, 29)
         Me.lblFilm5.TabIndex = 17
         Me.lblFilm5.Text = "Film5"
         '
@@ -253,7 +253,7 @@ Partial Class KinoGUI
         Me.lblFilm6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFilm6.Location = New System.Drawing.Point(224, 642)
         Me.lblFilm6.Name = "lblFilm6"
-        Me.lblFilm6.Size = New System.Drawing.Size(104, 46)
+        Me.lblFilm6.Size = New System.Drawing.Size(67, 29)
         Me.lblFilm6.TabIndex = 18
         Me.lblFilm6.Text = "Film6"
         '
@@ -265,7 +265,7 @@ Partial Class KinoGUI
         Me.lblKinosaal1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblKinosaal1.Location = New System.Drawing.Point(408, 306)
         Me.lblKinosaal1.Name = "lblKinosaal1"
-        Me.lblKinosaal1.Size = New System.Drawing.Size(168, 46)
+        Me.lblKinosaal1.Size = New System.Drawing.Size(108, 29)
         Me.lblKinosaal1.TabIndex = 19
         Me.lblKinosaal1.Text = "Kinosaal1"
         '
@@ -277,7 +277,7 @@ Partial Class KinoGUI
         Me.lblKinosaal2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblKinosaal2.Location = New System.Drawing.Point(408, 371)
         Me.lblKinosaal2.Name = "lblKinosaal2"
-        Me.lblKinosaal2.Size = New System.Drawing.Size(168, 46)
+        Me.lblKinosaal2.Size = New System.Drawing.Size(108, 29)
         Me.lblKinosaal2.TabIndex = 20
         Me.lblKinosaal2.Text = "Kinosaal2"
         '
@@ -289,7 +289,7 @@ Partial Class KinoGUI
         Me.lblKinosaal3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblKinosaal3.Location = New System.Drawing.Point(408, 440)
         Me.lblKinosaal3.Name = "lblKinosaal3"
-        Me.lblKinosaal3.Size = New System.Drawing.Size(168, 46)
+        Me.lblKinosaal3.Size = New System.Drawing.Size(108, 29)
         Me.lblKinosaal3.TabIndex = 21
         Me.lblKinosaal3.Text = "Kinosaal3"
         '
@@ -301,7 +301,7 @@ Partial Class KinoGUI
         Me.lblKinosaal4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblKinosaal4.Location = New System.Drawing.Point(408, 508)
         Me.lblKinosaal4.Name = "lblKinosaal4"
-        Me.lblKinosaal4.Size = New System.Drawing.Size(168, 46)
+        Me.lblKinosaal4.Size = New System.Drawing.Size(108, 29)
         Me.lblKinosaal4.TabIndex = 22
         Me.lblKinosaal4.Text = "Kinosaal4"
         '
@@ -313,7 +313,7 @@ Partial Class KinoGUI
         Me.lblKinosaal5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblKinosaal5.Location = New System.Drawing.Point(408, 577)
         Me.lblKinosaal5.Name = "lblKinosaal5"
-        Me.lblKinosaal5.Size = New System.Drawing.Size(168, 46)
+        Me.lblKinosaal5.Size = New System.Drawing.Size(108, 29)
         Me.lblKinosaal5.TabIndex = 23
         Me.lblKinosaal5.Text = "Kinosaal5"
         '
@@ -325,7 +325,7 @@ Partial Class KinoGUI
         Me.lblKinosaal6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblKinosaal6.Location = New System.Drawing.Point(408, 642)
         Me.lblKinosaal6.Name = "lblKinosaal6"
-        Me.lblKinosaal6.Size = New System.Drawing.Size(168, 46)
+        Me.lblKinosaal6.Size = New System.Drawing.Size(108, 29)
         Me.lblKinosaal6.TabIndex = 24
         Me.lblKinosaal6.Text = "Kinosaal6"
         '
@@ -337,7 +337,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFreiePlätze1.Location = New System.Drawing.Point(559, 308)
         Me.lblFreiePlätze1.Name = "lblFreiePlätze1"
-        Me.lblFreiePlätze1.Size = New System.Drawing.Size(208, 46)
+        Me.lblFreiePlätze1.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze1.TabIndex = 25
         Me.lblFreiePlätze1.Text = "FreiePlätze1"
         '
@@ -349,7 +349,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFreiePlätze2.Location = New System.Drawing.Point(559, 373)
         Me.lblFreiePlätze2.Name = "lblFreiePlätze2"
-        Me.lblFreiePlätze2.Size = New System.Drawing.Size(208, 46)
+        Me.lblFreiePlätze2.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze2.TabIndex = 26
         Me.lblFreiePlätze2.Text = "FreiePlätze2"
         '
@@ -361,7 +361,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFreiePlätze3.Location = New System.Drawing.Point(559, 442)
         Me.lblFreiePlätze3.Name = "lblFreiePlätze3"
-        Me.lblFreiePlätze3.Size = New System.Drawing.Size(208, 46)
+        Me.lblFreiePlätze3.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze3.TabIndex = 27
         Me.lblFreiePlätze3.Text = "FreiePlätze3"
         '
@@ -373,7 +373,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFreiePlätze4.Location = New System.Drawing.Point(559, 510)
         Me.lblFreiePlätze4.Name = "lblFreiePlätze4"
-        Me.lblFreiePlätze4.Size = New System.Drawing.Size(208, 46)
+        Me.lblFreiePlätze4.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze4.TabIndex = 28
         Me.lblFreiePlätze4.Text = "FreiePlätze4"
         '
@@ -385,7 +385,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFreiePlätze5.Location = New System.Drawing.Point(559, 579)
         Me.lblFreiePlätze5.Name = "lblFreiePlätze5"
-        Me.lblFreiePlätze5.Size = New System.Drawing.Size(208, 46)
+        Me.lblFreiePlätze5.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze5.TabIndex = 29
         Me.lblFreiePlätze5.Text = "FreiePlätze5"
         '
@@ -397,7 +397,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätze6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFreiePlätze6.Location = New System.Drawing.Point(559, 644)
         Me.lblFreiePlätze6.Name = "lblFreiePlätze6"
-        Me.lblFreiePlätze6.Size = New System.Drawing.Size(208, 46)
+        Me.lblFreiePlätze6.Size = New System.Drawing.Size(132, 29)
         Me.lblFreiePlätze6.TabIndex = 30
         Me.lblFreiePlätze6.Text = "FreiePlätze6"
         '
@@ -409,7 +409,7 @@ Partial Class KinoGUI
         Me.lblFreiePlätzeFarbe1.ForeColor = System.Drawing.Color.Transparent
         Me.lblFreiePlätzeFarbe1.Location = New System.Drawing.Point(632, 308)
         Me.lblFreiePlätzeFarbe1.Name = "lblFreiePlätzeFarbe1"
-        Me.lblFreiePlätzeFarbe1.Size = New System.Drawing.Size(0, 46)
+        Me.lblFreiePlätzeFarbe1.Size = New System.Drawing.Size(0, 29)
         Me.lblFreiePlätzeFarbe1.TabIndex = 31
         '
         'cmdWochenplan2
@@ -578,12 +578,12 @@ Partial Class KinoGUI
         '
         'KinoGUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 36.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(2504, 1005)
+        Me.ClientSize = New System.Drawing.Size(1924, 1005)
         Me.Controls.Add(Me.cmdTestVorstellung)
         Me.Controls.Add(Me.cmdTestTagesplan)
         Me.Controls.Add(Me.cmdKundenDatenbankAufrufen)
