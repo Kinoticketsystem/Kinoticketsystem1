@@ -363,20 +363,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         'FTagesplan.
     End Sub
 
-    Private Sub cmdTestKinosaal_Click(sender As Object, e As EventArgs) Handles cmdTestKinosaal.Click
-        Call KinosaalTest.Show()
-    End Sub
-
-    Private Sub cmdTestkinotest_Click_1(sender As Object, e As EventArgs) Handles cmdTestkinotest.Click
-        Call Testklassekino.Show()
-    End Sub
-
-    Private Sub cmdTestTagesplan_Click(sender As Object, e As EventArgs) Handles cmdTestTagesplan.Click
-
-        BringToFront()
-    End Sub
 
     Private Sub cmdTestVorstellung_Click(sender As Object, e As EventArgs) Handles cmdTestVorstellung.Click
-        'Call TestVorstellung.Show()
+        Call Form3.Show()
+
     End Sub
 End Class

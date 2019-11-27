@@ -98,6 +98,12 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="05TestKunde.vb" />
+    <Compile Include="06TestForm.Designer.vb">
+      <DependentUpon>06TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="06TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StartBild.Designer.vb">
       <DependentUpon>StartBild.vb</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
     <Compile Include="Vorstellung.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="06TestForm.resx">
+      <DependentUpon>06TestForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

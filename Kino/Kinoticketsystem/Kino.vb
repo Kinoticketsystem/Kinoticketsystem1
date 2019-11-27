@@ -180,7 +180,7 @@
     Public Function getKunden() As ArrayList
         Return _Kunden
     End Function
-    Public Function getTagesplan() As Array
+    Public Function getTagesplan() As ArrayList
         Return _Tagespläne
     End Function
 
@@ -192,7 +192,7 @@
         Dim a As Integer = _Kunden.BinarySearch(Kunde)
         _Kunden.RemoveAt(a)
     End Sub
-    Public Sub setTagesplan(ByRef Tagesplan As Array)
+    Public Sub setTagesplan(ByRef Tagesplan As ArrayList)
         _Tagespläne = Tagesplan
     End Sub
 
@@ -225,15 +225,15 @@
         _Kinosäle(a) = Kinosaal
     End Sub
     'wie bei kunde 
-    Public Sub MehrereKinosäleHInzufügen(neueKinosäle As Array)
-        Dim B(_AnzahlKinosäle + neueKinosäle.Length)
-        Dim J As Integer = 0
-        For i As Integer = _AnzahlKinosäle To (neueKinosäle.Length - 1)
-            B(i) = neueKinosäle(J)
-            J += 1
-        Next
-        _AnzahlKinosäle += neueKinosäle.Length
-        _Kinosäle = B
+    'Public Sub MehrereKinosäleHInzufügen(neueKinosäle As Array)
+    '    Dim B(_AnzahlKinosäle + neueKinosäle.Length)
+    '    Dim J As Integer = 0
+    '    For i As Integer = _AnzahlKinosäle To (neueKinosäle.Length - 1)
+    '        B(i) = neueKinosäle(J)
+    '        J += 1
+    '    Next
+    '    _AnzahlKinosäle += neueKinosäle.Length
+    '    _Kinosäle = B
 
-    End Sub
+    'End Sub
 End Class

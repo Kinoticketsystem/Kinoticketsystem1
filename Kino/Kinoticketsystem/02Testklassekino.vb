@@ -3,6 +3,7 @@
     Private TestKunde As Kunde
     Private TestKinosäle As Kinosaal
     Private TestAnzahlkinosäle As Integer
+    Public TestErgebnis As Boolean
 
     Private Sub cmdNeueBUchung_Click(sender As Object, e As EventArgs) Handles cmdNeueBUchung.Click
         Dim name As String = "gabor"
@@ -15,8 +16,9 @@
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
         Dim Saal1 As Kinosaal = New Kinosaal(Anzahl, Reihe, Sitz) 'TestFilm wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
         Saal1.SitzplatzBuchen(1, 1, k)
+        TestErgebnis = True.ToString(Form3.lstAusgabe)
+        Form3.Show()
 
-        MsgBox("passt§")
     End Sub
 
     Private Sub cmdtestsetkinosaal_Click(sender As Object, e As EventArgs) Handles cmdtestsetkinosaal.Click
@@ -44,7 +46,7 @@
     Private Sub cmdTestSetKundenEntfernen_Click(sender As Object, e As EventArgs)
         Dim name As String = "gabor"
         TestKunde = New Kunde(name)
-        'wie entfernen?
+
     End Sub
 
     Private Sub cmdTestSetAnzahlkinosaal_Click(sender As Object, e As EventArgs) Handles cmdTestSetAnzahlkinosaal.Click
