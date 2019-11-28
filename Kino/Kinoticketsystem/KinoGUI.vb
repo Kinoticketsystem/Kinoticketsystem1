@@ -419,4 +419,6 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         End If
     End Sub
+
+
 End Class
