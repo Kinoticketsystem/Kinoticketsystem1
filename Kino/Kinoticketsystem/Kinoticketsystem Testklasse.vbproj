@@ -275,6 +275,9 @@
     <None Include="Resources\Fantastische Tierwesen.png" />
     <None Include="Resources\Midway.png" />
     <Content Include="bin\Debug\Tagespläne.txt" />
+    <None Include="Resources\NebenformenGUI_Hintergrund.jpg" />
+    <None Include="Resources\KinoGUI_Hintergrund.jpg" />
+    <None Include="Resources\Button_Hintergrund.jpg" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
