@@ -118,7 +118,85 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coach_Carter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coach Carter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Das_Bourne_Ultimatum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Das Bourne Ultimatum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Deadpool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deadpool 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Der_Soldat_James_Ryan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Der Soldat James Ryan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dunkirk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dunkirk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fantastische_Tierwesen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fantastische Tierwesen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gladiator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gladiator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hänsel_und_Gretel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hänsel und Gretel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ich_einfach_Unverbesserlich" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ich einfach Unverbesserlich.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ip_man" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ip man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jagt_auf_Roter_Oktober" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jagt auf Roter Oktober.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="John_Wick_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\John Wick 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jäger_des_Verlorenen_Schatzes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jäger des Verlorenen Schatzes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Karate_kid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Karate kid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kingsman_The_Golden_Circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kingsman The Golden Circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Kinologo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kinologo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Le_Mans_66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Le Mans 66.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Madagascar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Madagascar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Midway" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Midway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pacific_Rim_Uprising" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pacific Rim Uprising.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Robin_Hood" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Robin Hood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rush_Alles_für_den_Sieg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rush Alles für den Sieg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_Wars_VIII_Die_letzten_Jedi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star Wars VIII Die letzten Jedi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Fast_and_The_Furious" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Fast and The Furious.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Wolf_Of_Wall_Street" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Wolf Of Wall Street.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ziemlich_beste_Freunde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ziemlich beste Freunde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

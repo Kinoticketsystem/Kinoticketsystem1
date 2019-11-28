@@ -5,11 +5,11 @@
 
     Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA)
     Private BeispielVorstellungC As Vorstellung = New Vorstellung(120, 210, New ArrayList(), TestFilmB)
-    Private _Tagespläne(1)
+    Private _Tagespläne As ArrayList
     Private Testplan As New Tagesplan
     Private FilmListe As New ArrayList
     Private KundenListe As New ArrayList
-
+    Private KinosaalListe As New ArrayList
 
     Private Sub cmdTexterfassen_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click
         FilmListe.Add("Jaws 45")
@@ -19,8 +19,9 @@
         KundenListe.Add("F")
         KundenListe.Add("K")
         Testplan.TagesplanErstellen2(BeispielVorstellungA, BeispielVorstellungC)
-        _Tagespläne(0) = (Testplan)
-        Dim testkino As Kino = New Kino(1, FilmListe, KundenListe, _Tagespläne, testsaal1)
+        _Tagespläne.Add(Testplan)
+        KinosaalListe.Add(testsaal1)
+        Dim testkino As Kino = New Kino(1, FilmListe, KundenListe, _Tagespläne, KinosaalListe)
 
     End Sub
     'Public Sub texterfassen()

@@ -98,6 +98,12 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="05TestKunde.vb" />
+    <Compile Include="06TestForm.Designer.vb">
+      <DependentUpon>06TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="06TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StartBild.Designer.vb">
       <DependentUpon>StartBild.vb</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
     <Compile Include="Vorstellung.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="06TestForm.resx">
+      <DependentUpon>06TestForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,19 +242,39 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Tagespläne.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="bin\Debug\Filme.txt" />
+    <Content Include="bin\Debug\Kinosäle.txt" />
     <None Include="Resources\Kinologo.png" />
-    <Content Include="bin\Debug\Filme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\Kinosäle.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="bin\Debug\Kunden.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Ich einfach Unverbesserlich.png" />
+    <None Include="Resources\Le Mans 66.png" />
+    <None Include="Resources\Jäger des Verlorenen Schatzes.png" />
+    <None Include="Resources\The Wolf Of Wall Street.png" />
+    <None Include="Resources\Madagascar.png" />
+    <None Include="Resources\The Fast and The Furious.png" />
+    <None Include="Resources\Das Bourne Ultimatum.png" />
+    <None Include="Resources\Gladiator.png" />
+    <None Include="Resources\Jagt auf Roter Oktober.png" />
+    <None Include="Resources\Der Soldat James Ryan.png" />
+    <None Include="Resources\Coach Carter.png" />
+    <None Include="Resources\John Wick 3.png" />
+    <None Include="Resources\Pacific Rim Uprising.png" />
+    <None Include="Resources\Kingsman The Golden Circle.png" />
+    <None Include="Resources\Deadpool 2.png" />
+    <None Include="Resources\Robin Hood.png" />
+    <None Include="Resources\Ziemlich beste Freunde.png" />
+    <None Include="Resources\Rush Alles für den Sieg.png" />
+    <None Include="Resources\Avatar.png" />
+    <None Include="Resources\Hänsel und Gretel.png" />
+    <None Include="Resources\Dunkirk.png" />
+    <None Include="Resources\ip man.png" />
+    <None Include="Resources\Karate kid.png" />
+    <None Include="Resources\Star Wars VIII Die letzten Jedi.png" />
+    <None Include="Resources\Fantastische Tierwesen.png" />
+    <None Include="Resources\Midway.png" />
+    <Content Include="bin\Debug\Tagespläne.txt" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -31,65 +31,65 @@ Partial Class Testklassekino
         '
         'cmdNeueBUchung
         '
-        Me.cmdNeueBUchung.Location = New System.Drawing.Point(212, 147)
-        Me.cmdNeueBUchung.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmdNeueBUchung.Location = New System.Drawing.Point(424, 283)
+        Me.cmdNeueBUchung.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdNeueBUchung.Name = "cmdNeueBUchung"
-        Me.cmdNeueBUchung.Size = New System.Drawing.Size(154, 49)
+        Me.cmdNeueBUchung.Size = New System.Drawing.Size(308, 94)
         Me.cmdNeueBUchung.TabIndex = 2
         Me.cmdNeueBUchung.Text = "neue Buchung"
         Me.cmdNeueBUchung.UseVisualStyleBackColor = True
         '
         'cmdtestsetkinosaal
         '
-        Me.cmdtestsetkinosaal.Location = New System.Drawing.Point(390, 163)
-        Me.cmdtestsetkinosaal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmdtestsetkinosaal.Location = New System.Drawing.Point(780, 313)
+        Me.cmdtestsetkinosaal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdtestsetkinosaal.Name = "cmdtestsetkinosaal"
-        Me.cmdtestsetkinosaal.Size = New System.Drawing.Size(68, 33)
+        Me.cmdtestsetkinosaal.Size = New System.Drawing.Size(136, 63)
         Me.cmdtestsetkinosaal.TabIndex = 3
         Me.cmdtestsetkinosaal.Text = "setkinosaal"
         Me.cmdtestsetkinosaal.UseVisualStyleBackColor = True
         '
         'cmdTestSetFilm
         '
-        Me.cmdTestSetFilm.Location = New System.Drawing.Point(502, 163)
-        Me.cmdTestSetFilm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmdTestSetFilm.Location = New System.Drawing.Point(990, 313)
+        Me.cmdTestSetFilm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdTestSetFilm.Name = "cmdTestSetFilm"
-        Me.cmdTestSetFilm.Size = New System.Drawing.Size(68, 33)
+        Me.cmdTestSetFilm.Size = New System.Drawing.Size(136, 63)
         Me.cmdTestSetFilm.TabIndex = 4
         Me.cmdTestSetFilm.Text = "setfilm"
         Me.cmdTestSetFilm.UseVisualStyleBackColor = True
         '
         'cmdTestSetKunden
         '
-        Me.cmdTestSetKunden.Location = New System.Drawing.Point(578, 163)
-        Me.cmdTestSetKunden.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmdTestSetKunden.Location = New System.Drawing.Point(1156, 313)
+        Me.cmdTestSetKunden.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdTestSetKunden.Name = "cmdTestSetKunden"
-        Me.cmdTestSetKunden.Size = New System.Drawing.Size(68, 33)
+        Me.cmdTestSetKunden.Size = New System.Drawing.Size(136, 63)
         Me.cmdTestSetKunden.TabIndex = 5
         Me.cmdTestSetKunden.Text = "setKunden"
         Me.cmdTestSetKunden.UseVisualStyleBackColor = True
         '
         'cmdTestSetAnzahlkinosaal
         '
-        Me.cmdTestSetAnzahlkinosaal.Location = New System.Drawing.Point(724, 178)
-        Me.cmdTestSetAnzahlkinosaal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmdTestSetAnzahlkinosaal.Location = New System.Drawing.Point(1342, 313)
+        Me.cmdTestSetAnzahlkinosaal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdTestSetAnzahlkinosaal.Name = "cmdTestSetAnzahlkinosaal"
-        Me.cmdTestSetAnzahlkinosaal.Size = New System.Drawing.Size(68, 33)
+        Me.cmdTestSetAnzahlkinosaal.Size = New System.Drawing.Size(136, 63)
         Me.cmdTestSetAnzahlkinosaal.TabIndex = 7
         Me.cmdTestSetAnzahlkinosaal.Text = "setAnzahlKinosaal"
         Me.cmdTestSetAnzahlkinosaal.UseVisualStyleBackColor = True
         '
         'Testklassekino
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(821, 432)
+        Me.ClientSize = New System.Drawing.Size(2064, 749)
         Me.Controls.Add(Me.cmdTestSetAnzahlkinosaal)
         Me.Controls.Add(Me.cmdTestSetKunden)
         Me.Controls.Add(Me.cmdTestSetFilm)
         Me.Controls.Add(Me.cmdtestsetkinosaal)
         Me.Controls.Add(Me.cmdNeueBUchung)
-        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "Testklassekino"
         Me.Text = "Testklassekino"
         Me.ResumeLayout(False)

@@ -1449,8 +1449,8 @@ Public Class FTagesplan
         '(System.Environment.SpecialFolder.Personal) _
         '& "\Image.jpg") '.jpg ist wichtig
 
-        '   Dim BildVomFilm As Image = Image.FromFile("C:\Users\KAYri\Pictures\Screenshot_2018_09_10_18_52_36.jpg") 'läuft noch nicht
-        '   MausüberButton(BildVomFilm, Button1, 1, 1)
+        Dim BildVomFilm As Image = Image.FromFile("C:\Users\KAYri\source\repos\Kinoticketsystem12\Kino\Kinoticketsystem\Resources\Avatar.png") 'läuft noch nicht
+        MausüberButton(BildVomFilm, Button1, 1, 1)
     End Sub
 
 

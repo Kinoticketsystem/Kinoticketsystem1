@@ -8,8 +8,8 @@ Public Class KinosaalGUI
     Private _aktuellerKunde As Kunde
 
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        '  zeigeNurSovieleButtonsWienötig()
-        StandartInitialisierung()
+        zeigeNurSovieleButtonsWienötig()
+        ' StandartInitialisierung()
         übertrageAnzahlAusgewähltePlätze()
         InitialisiereSitzplan()
         berechneGrößeDerForm()
@@ -141,7 +141,7 @@ Public Class KinosaalGUI
         _Buttons(119) = Button120
     End Sub
 
-    Private Sub InitialisiereSitzplan() 'fertig (wichtig: immer dran denken button1 = (0,0)
+    Private Sub InitialisiereSitzplan() 'fertig (wichtig: immer dran denken button1 = (0,0))
         buttonsInsArray() 'nicht löschen!
 
         For i As Integer = 0 To _kinosaal.getAnzahlReihe - 1 ' überall gleich sein muss
@@ -421,7 +421,7 @@ Public Class KinosaalGUI
     End Sub
 
     Public Sub Aufrufen(ByRef a As Kinosaal, ByVal b As Kunde)
-        'noch nicht fertig
+        'noch nicht fertig 'eigentlich schon, oder nicht?
         _kinosaal = a
 
         zeigeNurSovieleButtonsWienötig()

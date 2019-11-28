@@ -22,6 +22,7 @@ Partial Class NeueVorstellung
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NeueVorstellung))
         Me.cmdfertig = New System.Windows.Forms.Button()
         Me.lblname = New System.Windows.Forms.Label()
         Me.lblstartuhrzeit = New System.Windows.Forms.Label()
@@ -53,54 +54,70 @@ Partial Class NeueVorstellung
         'lblname
         '
         Me.lblname.AutoSize = True
+        Me.lblname.BackColor = System.Drawing.Color.Transparent
+        Me.lblname.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblname.ForeColor = System.Drawing.Color.White
         Me.lblname.Location = New System.Drawing.Point(43, 35)
         Me.lblname.Name = "lblname"
-        Me.lblname.Size = New System.Drawing.Size(143, 22)
+        Me.lblname.Size = New System.Drawing.Size(147, 23)
         Me.lblname.TabIndex = 1
         Me.lblname.Text = "Vorstellungstitel:"
         '
         'lblstartuhrzeit
         '
         Me.lblstartuhrzeit.AutoSize = True
+        Me.lblstartuhrzeit.BackColor = System.Drawing.Color.Transparent
+        Me.lblstartuhrzeit.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblstartuhrzeit.ForeColor = System.Drawing.Color.White
         Me.lblstartuhrzeit.Location = New System.Drawing.Point(43, 71)
         Me.lblstartuhrzeit.Name = "lblstartuhrzeit"
-        Me.lblstartuhrzeit.Size = New System.Drawing.Size(173, 22)
+        Me.lblstartuhrzeit.Size = New System.Drawing.Size(176, 23)
         Me.lblstartuhrzeit.TabIndex = 2
         Me.lblstartuhrzeit.Text = "Startuhrzeit (h, min):"
         '
         'lblEnduhrszeit
         '
         Me.lblEnduhrszeit.AutoSize = True
+        Me.lblEnduhrszeit.BackColor = System.Drawing.Color.Transparent
+        Me.lblEnduhrszeit.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEnduhrszeit.ForeColor = System.Drawing.Color.White
         Me.lblEnduhrszeit.Location = New System.Drawing.Point(43, 107)
         Me.lblEnduhrszeit.Name = "lblEnduhrszeit"
-        Me.lblEnduhrszeit.Size = New System.Drawing.Size(167, 22)
+        Me.lblEnduhrszeit.Size = New System.Drawing.Size(166, 23)
         Me.lblEnduhrszeit.TabIndex = 3
         Me.lblEnduhrszeit.Text = "Enduhrzeit (h, min):"
         '
         'txtname
         '
-        Me.txtname.Location = New System.Drawing.Point(251, 35)
+        Me.txtname.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtname.Location = New System.Drawing.Point(251, 32)
         Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(197, 30)
+        Me.txtname.Size = New System.Drawing.Size(197, 31)
         Me.txtname.TabIndex = 4
         '
         'lblFilmAuswählen
         '
         Me.lblFilmAuswählen.AutoSize = True
+        Me.lblFilmAuswählen.BackColor = System.Drawing.Color.Transparent
+        Me.lblFilmAuswählen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFilmAuswählen.ForeColor = System.Drawing.Color.White
         Me.lblFilmAuswählen.Location = New System.Drawing.Point(43, 143)
         Me.lblFilmAuswählen.Name = "lblFilmAuswählen"
-        Me.lblFilmAuswählen.Size = New System.Drawing.Size(141, 22)
+        Me.lblFilmAuswählen.Size = New System.Drawing.Size(138, 23)
         Me.lblFilmAuswählen.TabIndex = 8
         Me.lblFilmAuswählen.Text = "Film auswählen:"
         '
         'cmdFilmHinZuFügen
         '
+        Me.cmdFilmHinZuFügen.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdFilmHinZuFügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdFilmHinZuFügen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdFilmHinZuFügen.Location = New System.Drawing.Point(293, 336)
         Me.cmdFilmHinZuFügen.Name = "cmdFilmHinZuFügen"
         Me.cmdFilmHinZuFügen.Size = New System.Drawing.Size(155, 32)
         Me.cmdFilmHinZuFügen.TabIndex = 9
         Me.cmdFilmHinZuFügen.Text = "Film hinzufügen"
-        Me.cmdFilmHinZuFügen.UseVisualStyleBackColor = True
+        Me.cmdFilmHinZuFügen.UseVisualStyleBackColor = False
         '
         'cmdBesucherHinzufügen
         '
@@ -114,64 +131,76 @@ Partial Class NeueVorstellung
         'lblBesucherAuswähler
         '
         Me.lblBesucherAuswähler.AutoSize = True
+        Me.lblBesucherAuswähler.BackColor = System.Drawing.Color.Transparent
+        Me.lblBesucherAuswähler.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBesucherAuswähler.ForeColor = System.Drawing.Color.White
         Me.lblBesucherAuswähler.Location = New System.Drawing.Point(43, 374)
         Me.lblBesucherAuswähler.Name = "lblBesucherAuswähler"
-        Me.lblBesucherAuswähler.Size = New System.Drawing.Size(177, 22)
+        Me.lblBesucherAuswähler.Size = New System.Drawing.Size(178, 23)
         Me.lblBesucherAuswähler.TabIndex = 11
         Me.lblBesucherAuswähler.Text = "Besucher auswählen:"
         '
         'chlFilme
         '
+        Me.chlFilme.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chlFilme.FormattingEnabled = True
-        Me.chlFilme.Location = New System.Drawing.Point(251, 172)
+        Me.chlFilme.Location = New System.Drawing.Point(251, 169)
         Me.chlFilme.Name = "chlFilme"
-        Me.chlFilme.Size = New System.Drawing.Size(197, 154)
+        Me.chlFilme.Size = New System.Drawing.Size(197, 136)
         Me.chlFilme.TabIndex = 13
         '
         'chlBesucherAuswählen
         '
+        Me.chlBesucherAuswählen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chlBesucherAuswählen.FormattingEnabled = True
         Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 374)
         Me.chlBesucherAuswählen.Name = "chlBesucherAuswählen"
-        Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 129)
+        Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 114)
         Me.chlBesucherAuswählen.TabIndex = 14
         '
         'lstBesucher
         '
+        Me.lstBesucher.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstBesucher.FormattingEnabled = True
-        Me.lstBesucher.ItemHeight = 22
+        Me.lstBesucher.ItemHeight = 19
         Me.lstBesucher.Location = New System.Drawing.Point(454, 374)
         Me.lstBesucher.Name = "lstBesucher"
-        Me.lstBesucher.Size = New System.Drawing.Size(145, 114)
+        Me.lstBesucher.Size = New System.Drawing.Size(145, 99)
         Me.lstBesucher.TabIndex = 16
         '
         'StartuhrzeitWert
         '
+        Me.StartuhrzeitWert.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartuhrzeitWert.Location = New System.Drawing.Point(251, 69)
         Me.StartuhrzeitWert.Name = "StartuhrzeitWert"
-        Me.StartuhrzeitWert.Size = New System.Drawing.Size(76, 30)
+        Me.StartuhrzeitWert.Size = New System.Drawing.Size(76, 31)
         Me.StartuhrzeitWert.TabIndex = 17
         '
         'EnduhrzeitWert
         '
-        Me.EnduhrzeitWert.Location = New System.Drawing.Point(251, 107)
+        Me.EnduhrzeitWert.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EnduhrzeitWert.Location = New System.Drawing.Point(251, 105)
         Me.EnduhrzeitWert.Name = "EnduhrzeitWert"
-        Me.EnduhrzeitWert.Size = New System.Drawing.Size(76, 30)
+        Me.EnduhrzeitWert.Size = New System.Drawing.Size(76, 31)
         Me.EnduhrzeitWert.TabIndex = 18
         '
         'lblFilmInfos
         '
         Me.lblFilmInfos.AutoSize = True
-        Me.lblFilmInfos.Location = New System.Drawing.Point(251, 147)
+        Me.lblFilmInfos.BackColor = System.Drawing.Color.Transparent
+        Me.lblFilmInfos.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFilmInfos.ForeColor = System.Drawing.Color.White
+        Me.lblFilmInfos.Location = New System.Drawing.Point(247, 143)
         Me.lblFilmInfos.Name = "lblFilmInfos"
-        Me.lblFilmInfos.Size = New System.Drawing.Size(109, 22)
+        Me.lblFilmInfos.Size = New System.Drawing.Size(105, 23)
         Me.lblFilmInfos.TabIndex = 19
         Me.lblFilmInfos.Text = "Beispielfilm"
         '
         'NeueVorstellung
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(639, 565)
         Me.Controls.Add(Me.lblFilmInfos)
         Me.Controls.Add(Me.EnduhrzeitWert)
