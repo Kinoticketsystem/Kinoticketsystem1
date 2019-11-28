@@ -30,7 +30,6 @@ Partial Class KinoGUI
         Me.cmdkinosaalAufrufen = New System.Windows.Forms.Button()
         Me.cmdNeueBuchung = New System.Windows.Forms.Button()
         Me.cmdBuchungStonieren = New System.Windows.Forms.Button()
-        Me.txtTageseinnahmen = New System.Windows.Forms.TextBox()
         Me.lblUhrzeit = New System.Windows.Forms.Label()
         Me.lblDatum = New System.Windows.Forms.Label()
         Me.lblTageseinnahmen = New System.Windows.Forms.Label()
@@ -84,12 +83,17 @@ Partial Class KinoGUI
         '
         'cmdTexterfassen
         '
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(1536, 853)
+        Me.cmdTexterfassen.BackColor = System.Drawing.Color.Transparent
+        Me.cmdTexterfassen.BackgroundImage = CType(resources.GetObject("cmdTexterfassen.BackgroundImage"), System.Drawing.Image)
+        Me.cmdTexterfassen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdTexterfassen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdTexterfassen.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(1151, 886)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
-        Me.cmdTexterfassen.Size = New System.Drawing.Size(183, 140)
+        Me.cmdTexterfassen.Size = New System.Drawing.Size(262, 66)
         Me.cmdTexterfassen.TabIndex = 1
         Me.cmdTexterfassen.Text = "Texterfassen Erik"
-        Me.cmdTexterfassen.UseVisualStyleBackColor = True
+        Me.cmdTexterfassen.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -118,7 +122,6 @@ Partial Class KinoGUI
         Me.cmdNeueBuchung.BackColor = System.Drawing.Color.White
         Me.cmdNeueBuchung.BackgroundImage = CType(resources.GetObject("cmdNeueBuchung.BackgroundImage"), System.Drawing.Image)
         Me.cmdNeueBuchung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.cmdNeueBuchung.FlatAppearance.BorderSize = 4
         Me.cmdNeueBuchung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdNeueBuchung.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdNeueBuchung.ForeColor = System.Drawing.Color.DarkGreen
@@ -135,7 +138,6 @@ Partial Class KinoGUI
         Me.cmdBuchungStonieren.BackgroundImage = CType(resources.GetObject("cmdBuchungStonieren.BackgroundImage"), System.Drawing.Image)
         Me.cmdBuchungStonieren.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdBuchungStonieren.Cursor = System.Windows.Forms.Cursors.Default
-        Me.cmdBuchungStonieren.FlatAppearance.BorderSize = 4
         Me.cmdBuchungStonieren.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdBuchungStonieren.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdBuchungStonieren.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -145,14 +147,6 @@ Partial Class KinoGUI
         Me.cmdBuchungStonieren.TabIndex = 8
         Me.cmdBuchungStonieren.Text = "BuchungStonieren"
         Me.cmdBuchungStonieren.UseVisualStyleBackColor = False
-        '
-        'txtTageseinnahmen
-        '
-        Me.txtTageseinnahmen.Location = New System.Drawing.Point(1766, 12)
-        Me.txtTageseinnahmen.Name = "txtTageseinnahmen"
-        Me.txtTageseinnahmen.Size = New System.Drawing.Size(142, 26)
-        Me.txtTageseinnahmen.TabIndex = 9
-        Me.txtTageseinnahmen.Text = "Tageseinnahmen"
         '
         'lblUhrzeit
         '
@@ -571,7 +565,7 @@ Partial Class KinoGUI
         Me.cmdTestVorstellung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestVorstellung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestVorstellung.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1010, 797)
+        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1151, 814)
         Me.cmdTestVorstellung.Name = "cmdTestVorstellung"
         Me.cmdTestVorstellung.Size = New System.Drawing.Size(262, 66)
         Me.cmdTestVorstellung.TabIndex = 45
@@ -585,7 +579,7 @@ Partial Class KinoGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1284, 1005)
+        Me.ClientSize = New System.Drawing.Size(1924, 1005)
         Me.Controls.Add(Me.cmdTestVorstellung)
         Me.Controls.Add(Me.cmdTestTagesplan)
         Me.Controls.Add(Me.cmdKundenDatenbankAufrufen)
@@ -620,7 +614,6 @@ Partial Class KinoGUI
         Me.Controls.Add(Me.lblTageseinnahmen)
         Me.Controls.Add(Me.lblDatum)
         Me.Controls.Add(Me.lblUhrzeit)
-        Me.Controls.Add(Me.txtTageseinnahmen)
         Me.Controls.Add(Me.cmdBuchungStonieren)
         Me.Controls.Add(Me.cmdNeueBuchung)
         Me.Controls.Add(Me.cmdkinosaalAufrufen)
@@ -643,7 +636,6 @@ Partial Class KinoGUI
     Friend WithEvents cmdkinosaalAufrufen As Button
     Friend WithEvents cmdNeueBuchung As Button
     Friend WithEvents cmdBuchungStonieren As Button
-    Friend WithEvents txtTageseinnahmen As TextBox
     Friend WithEvents lblUhrzeit As Label
     Friend WithEvents lblDatum As Label
     Friend WithEvents lblTageseinnahmen As Label

@@ -121,6 +121,9 @@
   <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_Hintergrund" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_Hintergrund.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Coach_Carter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coach Carter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,6 +169,9 @@
   <data name="Kingsman_The_Golden_Circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kingsman The Golden Circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KinoGUI_Hintergrund" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KinoGUI_Hintergrund.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Kinologo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kinologo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,6 +183,9 @@
   </data>
   <data name="Midway" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Midway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NebenformenGUI_Hintergrund" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NebenformenGUI_Hintergrund.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pacific_Rim_Uprising" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pacific Rim Uprising.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
