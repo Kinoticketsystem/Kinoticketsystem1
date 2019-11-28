@@ -125,7 +125,7 @@ Partial Class FTagesplan
         Me.chbMontag.ForeColor = System.Drawing.Color.White
         Me.chbMontag.Location = New System.Drawing.Point(150, 30)
         Me.chbMontag.Name = "chbMontag"
-        Me.chbMontag.Size = New System.Drawing.Size(97, 28)
+        Me.chbMontag.Size = New System.Drawing.Size(78, 23)
         Me.chbMontag.TabIndex = 5
         Me.chbMontag.Text = "Montag"
         Me.chbMontag.UseVisualStyleBackColor = False
@@ -138,7 +138,7 @@ Partial Class FTagesplan
         Me.chbFreitag.ForeColor = System.Drawing.Color.White
         Me.chbFreitag.Location = New System.Drawing.Point(751, 30)
         Me.chbFreitag.Name = "chbFreitag"
-        Me.chbFreitag.Size = New System.Drawing.Size(89, 28)
+        Me.chbFreitag.Size = New System.Drawing.Size(73, 23)
         Me.chbFreitag.TabIndex = 6
         Me.chbFreitag.Text = "Freitag"
         Me.chbFreitag.UseVisualStyleBackColor = False
@@ -151,7 +151,7 @@ Partial Class FTagesplan
         Me.chbMittwoch.ForeColor = System.Drawing.Color.White
         Me.chbMittwoch.Location = New System.Drawing.Point(432, 30)
         Me.chbMittwoch.Name = "chbMittwoch"
-        Me.chbMittwoch.Size = New System.Drawing.Size(111, 28)
+        Me.chbMittwoch.Size = New System.Drawing.Size(89, 23)
         Me.chbMittwoch.TabIndex = 7
         Me.chbMittwoch.Text = "Mittwoch"
         Me.chbMittwoch.UseVisualStyleBackColor = False
@@ -164,7 +164,7 @@ Partial Class FTagesplan
         Me.chbDienstag.ForeColor = System.Drawing.Color.White
         Me.chbDienstag.Location = New System.Drawing.Point(286, 30)
         Me.chbDienstag.Name = "chbDienstag"
-        Me.chbDienstag.Size = New System.Drawing.Size(104, 28)
+        Me.chbDienstag.Size = New System.Drawing.Size(86, 23)
         Me.chbDienstag.TabIndex = 8
         Me.chbDienstag.Text = "Dienstag"
         Me.chbDienstag.UseVisualStyleBackColor = False
@@ -177,7 +177,7 @@ Partial Class FTagesplan
         Me.chbDonnerstag.ForeColor = System.Drawing.Color.White
         Me.chbDonnerstag.Location = New System.Drawing.Point(585, 30)
         Me.chbDonnerstag.Name = "chbDonnerstag"
-        Me.chbDonnerstag.Size = New System.Drawing.Size(128, 28)
+        Me.chbDonnerstag.Size = New System.Drawing.Size(103, 23)
         Me.chbDonnerstag.TabIndex = 9
         Me.chbDonnerstag.Text = "Donnerstag"
         Me.chbDonnerstag.UseVisualStyleBackColor = False
@@ -190,7 +190,7 @@ Partial Class FTagesplan
         Me.chb830.ForeColor = System.Drawing.Color.White
         Me.chb830.Location = New System.Drawing.Point(30, 70)
         Me.chb830.Name = "chb830"
-        Me.chb830.Size = New System.Drawing.Size(77, 28)
+        Me.chb830.Size = New System.Drawing.Size(64, 23)
         Me.chb830.TabIndex = 10
         Me.chb830.Text = "08:00"
         Me.chb830.UseVisualStyleBackColor = False
@@ -203,7 +203,7 @@ Partial Class FTagesplan
         Me.chb1830.ForeColor = System.Drawing.Color.White
         Me.chb1830.Location = New System.Drawing.Point(30, 270)
         Me.chb1830.Name = "chb1830"
-        Me.chb1830.Size = New System.Drawing.Size(77, 28)
+        Me.chb1830.Size = New System.Drawing.Size(64, 23)
         Me.chb1830.TabIndex = 11
         Me.chb1830.Text = "18:00"
         Me.chb1830.UseVisualStyleBackColor = False
@@ -216,7 +216,7 @@ Partial Class FTagesplan
         Me.chb1600.ForeColor = System.Drawing.Color.White
         Me.chb1600.Location = New System.Drawing.Point(30, 220)
         Me.chb1600.Name = "chb1600"
-        Me.chb1600.Size = New System.Drawing.Size(77, 28)
+        Me.chb1600.Size = New System.Drawing.Size(64, 23)
         Me.chb1600.TabIndex = 12
         Me.chb1600.Text = "15:30"
         Me.chb1600.UseVisualStyleBackColor = False
@@ -229,7 +229,7 @@ Partial Class FTagesplan
         Me.chb1330.ForeColor = System.Drawing.Color.White
         Me.chb1330.Location = New System.Drawing.Point(30, 170)
         Me.chb1330.Name = "chb1330"
-        Me.chb1330.Size = New System.Drawing.Size(77, 28)
+        Me.chb1330.Size = New System.Drawing.Size(64, 23)
         Me.chb1330.TabIndex = 13
         Me.chb1330.Text = "13:00"
         Me.chb1330.UseVisualStyleBackColor = False
@@ -242,7 +242,7 @@ Partial Class FTagesplan
         Me.chb1100.ForeColor = System.Drawing.Color.White
         Me.chb1100.Location = New System.Drawing.Point(30, 120)
         Me.chb1100.Name = "chb1100"
-        Me.chb1100.Size = New System.Drawing.Size(77, 28)
+        Me.chb1100.Size = New System.Drawing.Size(64, 23)
         Me.chb1100.TabIndex = 14
         Me.chb1100.Text = "10:30"
         Me.chb1100.UseVisualStyleBackColor = False
@@ -255,7 +255,7 @@ Partial Class FTagesplan
         Me.chbSonntag.ForeColor = System.Drawing.Color.White
         Me.chbSonntag.Location = New System.Drawing.Point(1026, 30)
         Me.chbSonntag.Name = "chbSonntag"
-        Me.chbSonntag.Size = New System.Drawing.Size(100, 28)
+        Me.chbSonntag.Size = New System.Drawing.Size(80, 23)
         Me.chbSonntag.TabIndex = 15
         Me.chbSonntag.Text = "Sonntag"
         Me.chbSonntag.UseVisualStyleBackColor = False
@@ -268,7 +268,7 @@ Partial Class FTagesplan
         Me.chbSamstag.ForeColor = System.Drawing.Color.White
         Me.chbSamstag.Location = New System.Drawing.Point(884, 30)
         Me.chbSamstag.Name = "chbSamstag"
-        Me.chbSamstag.Size = New System.Drawing.Size(101, 28)
+        Me.chbSamstag.Size = New System.Drawing.Size(83, 23)
         Me.chbSamstag.TabIndex = 16
         Me.chbSamstag.Text = "Samstag"
         Me.chbSamstag.UseVisualStyleBackColor = False
@@ -281,7 +281,7 @@ Partial Class FTagesplan
         Me.chb2100.ForeColor = System.Drawing.Color.White
         Me.chb2100.Location = New System.Drawing.Point(30, 320)
         Me.chb2100.Name = "chb2100"
-        Me.chb2100.Size = New System.Drawing.Size(77, 28)
+        Me.chb2100.Size = New System.Drawing.Size(64, 23)
         Me.chb2100.TabIndex = 23
         Me.chb2100.Text = "20:30"
         Me.chb2100.UseVisualStyleBackColor = False
@@ -294,7 +294,7 @@ Partial Class FTagesplan
         Me.chb2330.ForeColor = System.Drawing.Color.White
         Me.chb2330.Location = New System.Drawing.Point(30, 370)
         Me.chb2330.Name = "chb2330"
-        Me.chb2330.Size = New System.Drawing.Size(77, 28)
+        Me.chb2330.Size = New System.Drawing.Size(64, 23)
         Me.chb2330.TabIndex = 24
         Me.chb2330.Text = "23:00"
         Me.chb2330.UseVisualStyleBackColor = False
@@ -742,6 +742,7 @@ Partial Class FTagesplan
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(168, 422)
@@ -760,13 +761,13 @@ Partial Class FTagesplan
         Me.lblTextüberFIlm.ForeColor = System.Drawing.Color.White
         Me.lblTextüberFIlm.Location = New System.Drawing.Point(329, 461)
         Me.lblTextüberFIlm.Name = "lblTextüberFIlm"
-        Me.lblTextüberFIlm.Size = New System.Drawing.Size(64, 24)
+        Me.lblTextüberFIlm.Size = New System.Drawing.Size(52, 19)
         Me.lblTextüberFIlm.TabIndex = 76
         Me.lblTextüberFIlm.Text = "Label1"
         '
         'FTagesplan
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1153, 517)
