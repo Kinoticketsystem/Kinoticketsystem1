@@ -86,9 +86,9 @@
         _AnzahlKinosäle = AnzahlKinos
 
         ' Dim a(AnzahlKinos) As Kinosaal 'für array
-        If Not (Kinosäle.Count - 1 = (AnzahlKinos)) Then
-            Throw New Exception(" AnzahlKinos ungleich der ANzahl der übergebenen Kinosäle im Array")
-        End If
+        'If Not (Kinosäle.Count - 1 = (AnzahlKinos)) Then
+        '    Throw New Exception(" AnzahlKinos ungleich der ANzahl der übergebenen Kinosäle im Array")
+        'End If
         _Kinosäle = Kinosäle
 
         Me._Filme = Filme

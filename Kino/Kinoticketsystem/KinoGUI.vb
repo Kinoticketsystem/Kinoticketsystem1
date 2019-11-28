@@ -44,9 +44,18 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'Dim stream1 As System.IO.FileStream 'deklariert den stream
+        'stream1 = System.IO.File.Create("Filme.txt") 'erstellt die datei 
+        'Dim stream2 As System.IO.FileStream
+        'stream2 = System.IO.File.Create("Kinosäle.txt")
+        'Dim stream3 As System.IO.FileStream
+        'stream3 = System.IO.File.Create("Kunden.txt")
+        'Dim stream4 As System.IO.FileStream
+        'stream4 = System.IO.File.Create("Tagespläne.txt")
+
         Dim leereListe As ArrayList = New ArrayList()
-        Dim alleFilme As ArrayList = New ArrayList()
-        Dim alleFilme2 As ArrayList = New ArrayList()
+        Dim alleFilme As ArrayList = New ArrayList() ' StringListe
+        Dim alleFilme2 As ArrayList = New ArrayList() ' KlassenListe 
         Dim alleKunden As ArrayList = New ArrayList()
         Dim alleKunden2 As ArrayList = New ArrayList()
         Dim alleKinosäle As ArrayList = New ArrayList()
@@ -166,7 +175,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         FormSchönMachen()
     End Sub
-
+    Private Sub reinschreiben()
+        DASKINO.getFilmtitel()
+    End Sub
     Private Sub testInitialisierung()
         'Dim a(5) As Kinosaal
         'Dim c As Film = New Film("Testfilm", 120, 12, True)
