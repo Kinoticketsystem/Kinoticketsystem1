@@ -26,9 +26,6 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
 
-
-
-
     Private Sub cmdNeueBuchung_Click(sender As Object, e As EventArgs) Handles cmdNeueBuchung.Click
         ' FTagesplan.BringToFront()
         ' FTagesplan.Visible = True
@@ -164,26 +161,42 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         Next
         FileClose(1)
-        dasMegaKino = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
+        DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
         testInitialisierung()
 
         FormSchönMachen()
     End Sub
 
     Private Sub testInitialisierung()
-        Dim a(5) As Kinosaal
+        'Dim a(5) As Kinosaal
+        'Dim c As Film = New Film("Testfilm", 120, 12, True)
+        'For i = 0 To 5
+        '    a(i) = New Kinosaal(60, 6, 10) 'film fehlt 
+        'Next
+        'a(3) = New Kinosaal(120, 8, 15) 'film fehlt
+        Dim a As ArrayList = New ArrayList
         Dim c As Film = New Film("Testfilm", 120, 12, True)
         For i = 0 To 5
-            a(i) = New Kinosaal(60, 6, 10) 'film fehlt 
+            a.add(New Kinosaal(60, 6, 10)) 'film fehlt 
         Next
         a(3) = New Kinosaal(120, 8, 15) 'film fehlt
-        Dim tagesplänesdv(6) As Tagesplan 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
+        'Dim tagesplänesdv(6) As Tagesplan 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
+        'For i = 0 To 6
+        '    Dim z As Tagesplan = New Tagesplan()
+        '    z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c), New Vorstellung(130, 250, New ArrayList, c), New Vorstellung(260, 380, New ArrayList, c))
+        '    tagesplänesdv(i) = z
+        'Next
+        Dim tagesplänesdv As ArrayList = New ArrayList 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
         For i = 0 To 6
             Dim z As Tagesplan = New Tagesplan()
             z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c), New Vorstellung(130, 250, New ArrayList, c), New Vorstellung(260, 380, New ArrayList, c))
-            tagesplänesdv(i) = z
+            tagesplänesdv.Add(z)
         Next
         DASKINO = New Kino(6, New ArrayList, New ArrayList, tagesplänesdv, a)
+
+
+        ' provisorisch geändert, um Fehler zu vermeiden 
+
 
     End Sub
 
