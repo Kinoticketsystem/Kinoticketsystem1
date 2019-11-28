@@ -26,6 +26,7 @@ Partial Class Form3
         Me.cmdTestKinosaal = New System.Windows.Forms.Button()
         Me.cmdTestkinotest = New System.Windows.Forms.Button()
         Me.lstAusgabe = New System.Windows.Forms.ListBox()
+        Me.lstAusgabeKino = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'cmdTestKinosaal
@@ -34,9 +35,10 @@ Partial Class Form3
         Me.cmdTestKinosaal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestKinosaal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestKinosaal.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestKinosaal.Location = New System.Drawing.Point(337, 185)
+        Me.cmdTestKinosaal.Location = New System.Drawing.Point(50, 11)
+        Me.cmdTestKinosaal.Margin = New System.Windows.Forms.Padding(2)
         Me.cmdTestKinosaal.Name = "cmdTestKinosaal"
-        Me.cmdTestKinosaal.Size = New System.Drawing.Size(262, 66)
+        Me.cmdTestKinosaal.Size = New System.Drawing.Size(131, 34)
         Me.cmdTestKinosaal.TabIndex = 44
         Me.cmdTestKinosaal.Text = "TestKinosaal"
         Me.cmdTestKinosaal.UseVisualStyleBackColor = True
@@ -47,9 +49,10 @@ Partial Class Form3
         Me.cmdTestkinotest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestkinotest.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestkinotest.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestkinotest.Location = New System.Drawing.Point(697, 185)
+        Me.cmdTestkinotest.Location = New System.Drawing.Point(321, 11)
+        Me.cmdTestkinotest.Margin = New System.Windows.Forms.Padding(2)
         Me.cmdTestkinotest.Name = "cmdTestkinotest"
-        Me.cmdTestkinotest.Size = New System.Drawing.Size(262, 66)
+        Me.cmdTestkinotest.Size = New System.Drawing.Size(131, 34)
         Me.cmdTestkinotest.TabIndex = 45
         Me.cmdTestkinotest.Text = "TestKino"
         Me.cmdTestkinotest.UseVisualStyleBackColor = True
@@ -57,20 +60,32 @@ Partial Class Form3
         'lstAusgabe
         '
         Me.lstAusgabe.FormattingEnabled = True
-        Me.lstAusgabe.ItemHeight = 25
-        Me.lstAusgabe.Location = New System.Drawing.Point(1224, 68)
+        Me.lstAusgabe.Location = New System.Drawing.Point(50, 70)
+        Me.lstAusgabe.Margin = New System.Windows.Forms.Padding(2)
         Me.lstAusgabe.Name = "lstAusgabe"
-        Me.lstAusgabe.Size = New System.Drawing.Size(368, 354)
+        Me.lstAusgabe.Size = New System.Drawing.Size(186, 186)
         Me.lstAusgabe.TabIndex = 46
+        '
+        'lstAusgabeKino
+        '
+        Me.lstAusgabeKino.FormattingEnabled = True
+        Me.lstAusgabeKino.Location = New System.Drawing.Point(321, 70)
+        Me.lstAusgabeKino.Margin = New System.Windows.Forms.Padding(2)
+        Me.lstAusgabeKino.Name = "lstAusgabeKino"
+        Me.lstAusgabeKino.Size = New System.Drawing.Size(186, 186)
+        Me.lstAusgabeKino.TabIndex = 47
         '
         'Form3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2540, 580)
+        Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.The_Wolf_Of_Wall_Street
+        Me.ClientSize = New System.Drawing.Size(918, 529)
+        Me.Controls.Add(Me.lstAusgabeKino)
         Me.Controls.Add(Me.lstAusgabe)
         Me.Controls.Add(Me.cmdTestkinotest)
         Me.Controls.Add(Me.cmdTestKinosaal)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.ResumeLayout(False)
@@ -80,4 +95,5 @@ Partial Class Form3
     Friend WithEvents cmdTestKinosaal As Button
     Friend WithEvents cmdTestkinotest As Button
     Friend WithEvents lstAusgabe As ListBox
+    Friend WithEvents lstAusgabeKino As ListBox
 End Class
