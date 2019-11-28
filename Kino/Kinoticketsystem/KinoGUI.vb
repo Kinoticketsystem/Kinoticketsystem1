@@ -179,6 +179,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 DASKINO.FilmHinzufügen(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
             Next
         End If
+
+        My.Computer.FileSystem.WriteAllText("Filme.txt", "", False) ' löscht den Inhalt der Datei 
+
         FileOpen(1, "Kunden.txt", OpenMode.Input)
         While Not EOF(1)
             alleKunden.Add(LineInput(1))
@@ -189,6 +192,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             alleKunden2.Add(New Kunde(alleKunden(i)))
             DASKINO.KundenHinzufügen(New Kunde(alleKunden(i)))
         Next
+
+        My.Computer.FileSystem.WriteAllText("Kunden.txt", "", False) ' löscht den Inhalt der Datei 
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Input)
         While Not EOF(1)
@@ -208,6 +213,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 DASKINO.KinosaalAmEndeHinzufügen(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
             Next
         End If
+
+        My.Computer.FileSystem.WriteAllText("Kinosäle.txt", "", False) ' löscht den Inhalt der Datei
+
         FileOpen(1, "Tagespläne.txt", OpenMode.Input)
         While Not EOF(1)
             alleTagespläne.Add(LineInput(1))
@@ -233,7 +241,10 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
             Next
         End If
+
         DASKINO.setTagesplan(alleTagespläne2)
+
+        My.Computer.FileSystem.WriteAllText("Tagespläne.txt", "", False) ' löscht den Inhalt der Datei
 
         FormSchönMachen()
     End Sub
