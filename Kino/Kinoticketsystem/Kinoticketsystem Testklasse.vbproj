@@ -98,6 +98,12 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="05TestKunde.vb" />
+    <Compile Include="06TestForm.Designer.vb">
+      <DependentUpon>06TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="06TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StartBild.Designer.vb">
       <DependentUpon>StartBild.vb</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
     <Compile Include="Vorstellung.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="06TestForm.resx">
+      <DependentUpon>06TestForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,8 +242,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Filme.txt" />
+    <Content Include="bin\Debug\Tagespläne.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Kinologo.png" />
+    <Content Include="bin\Debug\Filme.txt" />
     <Content Include="bin\Debug\Kunden.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -264,8 +276,9 @@
     <None Include="Resources\Star Wars VIII Die letzten Jedi.png" />
     <None Include="Resources\Fantastische Tierwesen.png" />
     <None Include="Resources\Midway.png" />
-    <Content Include="bin\Debug\Kinosäle.txt" />
-    <Content Include="bin\Debug\Tagespläne.txt" />
+    <Content Include="bin\Debug\Kinosäle.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
