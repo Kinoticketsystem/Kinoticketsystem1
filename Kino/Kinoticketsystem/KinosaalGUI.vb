@@ -7,6 +7,8 @@ Public Class KinosaalGUI
     Private _Gesamtkosten As Double
     Private _aktuellerKunde As Kunde
 
+
+
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         zeigeNurSovieleButtonsWienötig()
         ' StandartInitialisierung()

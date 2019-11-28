@@ -104,6 +104,12 @@
     <Compile Include="06TestForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Kunden.Designer.vb">
+      <DependentUpon>Kunden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kunden.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StartBild.Designer.vb">
       <DependentUpon>StartBild.vb</DependentUpon>
     </Compile>
@@ -194,6 +200,9 @@
     <EmbeddedResource Include="01KinosaalTest.resx">
       <DependentUpon>01KinosaalTest.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kunden.resx">
+      <DependentUpon>Kunden.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -242,8 +251,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Filme.txt" />
-    <Content Include="bin\Debug\Kinosäle.txt" />
+    <Content Include="bin\Debug\Filme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Kinosäle.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Kinologo.png" />
     <Content Include="bin\Debug\Kunden.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -274,7 +287,9 @@
     <None Include="Resources\Star Wars VIII Die letzten Jedi.png" />
     <None Include="Resources\Fantastische Tierwesen.png" />
     <None Include="Resources\Midway.png" />
-    <Content Include="bin\Debug\Tagespläne.txt" />
+    <Content Include="bin\Debug\Tagespläne.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -44,6 +44,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ' DatenAusTextDateienAuslesen
+
+        FormSchönMachen()
+    End Sub
+
+    Private Sub DatenAusTextDateienAuslesen()
         'Dim stream1 As System.IO.FileStream 'deklariert den stream
         'stream1 = System.IO.File.Create("Filme.txt") 'erstellt die datei 
         'Dim stream2 As System.IO.FileStream
@@ -75,21 +81,26 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Filmlänge As Integer
         Dim Altersfreigabe As Integer
         Dim ist3D As Boolean
-        For i = 0 To alleFilme.Count - 1
-            Dim ZwischenString As String = alleFilme.Item(i)
-            Dim Position1 As Integer = InStr(ZwischenString, ": Spieldauer: ")
-            Filmtitel = Mid(ZwischenString, 0, Position1 - 1)
-            Dim Position2 As Integer = InStrRev(ZwischenString, ": Spieldauer: ") + 13
-            Dim position3 As Integer = InStr(ZwischenString, " Altersfreigabe: ")
-            Filmlänge = Mid(ZwischenString, Position2 + 1, position3 - 1)
-            Dim position4 As Integer = InStrRev(ZwischenString, " Altersfreigabe: ") + 16
-            Dim position5 As Integer = InStr(ZwischenString, " 3D? ")
-            Altersfreigabe = Mid(position4 + 1, position5 - 1)
-            Dim position6 As Integer = InStrRev(ZwischenString, " 3D? ") + 4
-            ist3D = Mid(ZwischenString, position6)
-            alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
-        Next
 
+
+
+        If alleFilme.Count > 0 Then
+            For i = 0 To alleFilme.Count - 1
+                Dim ZwischenString As String = alleFilme.Item(i)
+                Dim Position1 As Integer = InStr(ZwischenString, ": Spieldauer: ")
+
+                Filmtitel = Mid(ZwischenString, 0, Position1 - 1)
+                Dim Position2 As Integer = InStrRev(ZwischenString, ": Spieldauer: ") + 13
+                Dim position3 As Integer = InStr(ZwischenString, " Altersfreigabe: ")
+                Filmlänge = Mid(ZwischenString, Position2 + 1, position3 - 1)
+                Dim position4 As Integer = InStrRev(ZwischenString, " Altersfreigabe: ") + 16
+                Dim position5 As Integer = InStr(ZwischenString, " 3D? ")
+                Altersfreigabe = Mid(position4 + 1, position5 - 1)
+                Dim position6 As Integer = InStrRev(ZwischenString, " 3D? ") + 4
+                ist3D = Mid(ZwischenString, position6)
+                alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
+            Next
+        End If
         FileOpen(1, "Kunden.txt", OpenMode.Input)
         While Not EOF(1)
             alleKunden.Add(LineInput(1))
@@ -172,9 +183,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FileClose(1)
         DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
         testInitialisierung()
-
-        FormSchönMachen()
     End Sub
+
     Private Sub reinschreiben()
         DASKINO.getFilmtitel()
     End Sub
@@ -418,5 +428,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
 
         End If
+    End Sub
+
+    Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
+        For i As Integer = 0 To DASKINO.getKunden().Count
+            KundenGUI.Show()
+            KundenGUI.
+            KundenGUI.txtInput.Hide()
+
+        Next
     End Sub
 End Class
