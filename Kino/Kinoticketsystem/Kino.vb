@@ -183,6 +183,9 @@
     Public Function getTagesplan() As ArrayList
         Return _Tagespläne
     End Function
+    Public Function getAnzahlKinosäle() As Integer
+        Return _AnzahlKinosäle
+    End Function
 
     'set
     Public Sub KundenHinzufügen(ByRef Kunde As Kunde)

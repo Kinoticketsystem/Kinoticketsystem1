@@ -2,12 +2,13 @@
 
 Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
     Private DASKINO As Kino
+
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
-    Public dasMegaKino As Kino
+
 
 
     Private Sub cmdTexterfassenErik_Click(sender As Object, e As EventArgs) Handles cmdTexterfassen.Click 'cmdTexterfassen nicht mehr vorhanden(Neuer Button)
@@ -44,14 +45,106 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub KinoGUI_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'Dim stream1 As System.IO.FileStream 'deklariert den stream
-        'stream1 = System.IO.File.Create("Filme.txt") 'erstellt die datei 
-        'Dim stream2 As System.IO.FileStream
-        'stream2 = System.IO.File.Create("Kinosäle.txt")
-        'Dim stream3 As System.IO.FileStream
-        'stream3 = System.IO.File.Create("Kunden.txt")
-        'Dim stream4 As System.IO.FileStream
-        'stream4 = System.IO.File.Create("Tagespläne.txt")
+
+        'For i = 0 To alleFilme.Count - 1
+        '    Dim ZwischenString As String = alleFilme.Item(i)
+        '    Dim Position1 As Integer = InStr(ZwischenString, ": Spieldauer: ")
+        '    Filmtitel = Mid(ZwischenString, 0, Position1 - 1)
+        '    Dim Position2 As Integer = InStrRev(ZwischenString, ": Spieldauer: ") + 13
+        '    Dim position3 As Integer = InStr(ZwischenString, " Altersfreigabe: ")
+        '    Filmlänge = Mid(ZwischenString, Position2 + 1, position3 - 1)
+        '    Dim position4 As Integer = InStrRev(ZwischenString, " Altersfreigabe: ") + 16
+        '    Dim position5 As Integer = InStr(ZwischenString, " 3D? ")
+        '    Altersfreigabe = Mid(position4 + 1, position5 - 1)
+        '    Dim position6 As Integer = InStrRev(ZwischenString, " 3D? ") + 4
+        '    ist3D = Mid(ZwischenString, position6)
+        '    alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
+        'Next
+
+        'FileOpen(1, "Kunden.txt", OpenMode.Input)
+        'While Not EOF(1)
+        '    alleKunden.Add(LineInput(1))
+        '    Console.WriteLine()
+        'End While
+        'FileClose(1)
+        'For i = 0 To alleKunden.Count - 1
+        '    alleKunden2.Add(New Kunde(alleKunden(i)))
+        'Next
+
+        'FileOpen(1, "Kinosäle.txt", OpenMode.Input)
+        'While Not EOF(1)
+        '    alleKinosäle.Add(LineInput(1))
+        '    Console.WriteLine()
+        'End While
+        'FileClose(1)
+        'Dim Sitzplätze As Integer
+
+        'Dim Reihen As Integer
+        'Dim SitzeproReihe As Integer
+        'For i = 0 To alleKinosäle.Count - 1
+        '    Dim ZwischenString As String = alleKinosäle.Item(i)
+        '    'ZwischenString.Replace("Kinosaal", "")
+        '    Dim Position1 As Integer = InStrRev(ZwischenString, ": Anzahl Sitzplätze: ") + 20
+        '    Dim Position2 As Integer = InStr(ZwischenString, " Anzahl Reihen: ") + 15
+        '    Sitzplätze = Mid(ZwischenString, Position1 + 1, Position2 - 1)
+        '    Dim position3 As Integer = InStrRev(ZwischenString, "Anzahl Reihen: ") + 14
+        '    Dim position4 As Integer = InStr(ZwischenString, " Sitzplätze pro Reihe: ")
+        '    Reihen = Mid(ZwischenString, position3 + 1, position4 - 1)
+        '    Dim position5 As Integer = InStrRev(ZwischenString, " Sitzplätze pro Reihe: ") + 22
+        '    SitzeproReihe = Mid(ZwischenString, position5 + 1)
+        '    alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
+        'Next
+
+        'FileOpen(1, "Tagespläne.txt", OpenMode.Input)
+        'While Not EOF(1)
+        '    alleTagespläne.Add(LineInput(1))
+        '    Console.WriteLine()
+        'End While
+        'Dim Anfangszeit As Integer
+        'Dim Endzeit As Integer
+        'Dim vorgestellterFilm As String
+        'Dim Vorstellungslänge As Integer
+        'Dim Vorstellungsfreigabe As Integer
+        'Dim Dimension As Boolean
+        'For i = 0 To alleTagespläne.Count - 1
+        '    Dim Zwischenstring As String = alleTagespläne.Item(i)
+
+        '    If Zwischenstring.Contains("Tag") Then
+
+        '    Else
+        '        Dim position1 As Integer = InStrRev(Zwischenstring, "geht von ") + 8
+        '        Dim position2 As Integer = InStr(Zwischenstring, " bis ")
+        '        Anfangszeit = Mid(Zwischenstring, position1 + 1, position2 - 1)
+        '        Dim position3 As Integer = InStrRev(Zwischenstring, "bis ") + 3
+        '        Dim position4 As Integer = InStr(Zwischenstring, ", es läuft ")
+        '        Endzeit = Mid(Zwischenstring, position3 + 1, position4 - 1)
+        '        Dim position5 As Integer = InStrRev(Zwischenstring, ", es läuft ") + 10
+        '        Dim position6 As Integer = InStr(Zwischenstring, " (")
+        '        vorgestellterFilm = Mid(Zwischenstring, position5 + 1, position6 - 1)
+        '        Dim position7 As Integer = InStrRev(Zwischenstring, " (") + 1
+        '        Dim position8 As Integer = InStr(Zwischenstring, ") ab")
+        '        Vorstellungslänge = Mid(Zwischenstring, position7 + 1, position8 - 1)
+        '        Dim position9 As Integer = InStrRev(Zwischenstring, ") ab ") + 4
+        '        Dim position10 As Integer = InStr(Zwischenstring, " 3D: ")
+        '        Vorstellungsfreigabe = Mid(Zwischenstring, position9 + 1, position10 - 1)
+        '        Dim position11 As Integer = InStrRev(Zwischenstring, " 3D: ") + 4
+        '        Dim position12 As Integer = InStr(Zwischenstring, " Saal 1")
+        '        Dimension = Mid(Zwischenstring, position11 + 1, position12 - 1)
+        '        Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
+        '        alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
+        '    End If
+
+        '    alleTagespläne2.Add(New Tagesplan())
+
+        '    'Hier muss noch geklärt werden, wie die Tagespläne richtig gespeichert werden sollen, da wir eine unendlich große Menge bekommen, aber alles in ein kleines Array gequetscht werden soll. 
+        '    'Da muss noch eine Lösung für gefunden werden! --> vorrübergehende Lösung: Tagespläne als ArrayList, statt als fester Array 
+
+        'Next
+        'FileClose(1)
+        'DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
+        'testInitialisierung()
+
+        'Einfachere Implementierung: 
 
         Dim leereListe As ArrayList = New ArrayList()
         Dim alleFilme As ArrayList = New ArrayList() ' StringListe
@@ -64,32 +157,28 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim alleTagespläne2 As ArrayList = New ArrayList()
         Dim alleVorstellungen As ArrayList = New ArrayList()
 
+        DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
+
         FileOpen(1, "Filme.txt", OpenMode.Input)
         While Not EOF(1)
             alleFilme.Add(LineInput(1))
             Console.WriteLine()
         End While
         FileClose(1)
-
         Dim Filmtitel As String
         Dim Filmlänge As Integer
         Dim Altersfreigabe As Integer
         Dim ist3D As Boolean
-        For i = 0 To alleFilme.Count - 1
-            Dim ZwischenString As String = alleFilme.Item(i)
-            Dim Position1 As Integer = InStr(ZwischenString, ": Spieldauer: ")
-            Filmtitel = Mid(ZwischenString, 0, Position1 - 1)
-            Dim Position2 As Integer = InStrRev(ZwischenString, ": Spieldauer: ") + 13
-            Dim position3 As Integer = InStr(ZwischenString, " Altersfreigabe: ")
-            Filmlänge = Mid(ZwischenString, Position2 + 1, position3 - 1)
-            Dim position4 As Integer = InStrRev(ZwischenString, " Altersfreigabe: ") + 16
-            Dim position5 As Integer = InStr(ZwischenString, " 3D? ")
-            Altersfreigabe = Mid(position4 + 1, position5 - 1)
-            Dim position6 As Integer = InStrRev(ZwischenString, " 3D? ") + 4
-            ist3D = Mid(ZwischenString, position6)
-            alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
-        Next
-
+        If alleFilme.Count >= 4 Then
+            For i = 0 To alleFilme.Count - 1
+                Filmtitel = alleFilme(i * 4 + 0)
+                Filmlänge = alleFilme(i * 4 + 1)
+                Altersfreigabe = alleFilme(i * 4 + 2)
+                ist3D = alleFilme(i * 4 + 3)
+                alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
+                DASKINO.FilmHinzufügen(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
+            Next
+        End If
         FileOpen(1, "Kunden.txt", OpenMode.Input)
         While Not EOF(1)
             alleKunden.Add(LineInput(1))
@@ -98,6 +187,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FileClose(1)
         For i = 0 To alleKunden.Count - 1
             alleKunden2.Add(New Kunde(alleKunden(i)))
+            DASKINO.KundenHinzufügen(New Kunde(alleKunden(i)))
         Next
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Input)
@@ -107,74 +197,128 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         End While
         FileClose(1)
         Dim Sitzplätze As Integer
-
         Dim Reihen As Integer
         Dim SitzeproReihe As Integer
-        For i = 0 To alleKinosäle.Count - 1
-            Dim ZwischenString As String = alleKinosäle.Item(i)
-            'ZwischenString.Replace("Kinosaal", "")
-            Dim Position1 As Integer = InStrRev(ZwischenString, ": Anzahl Sitzplätze: ") + 20
-            Dim Position2 As Integer = InStr(ZwischenString, " Anzahl Reihen: ") + 15
-            Sitzplätze = Mid(ZwischenString, Position1 + 1, Position2 - 1)
-            Dim position3 As Integer = InStrRev(ZwischenString, "Anzahl Reihen: ") + 14
-            Dim position4 As Integer = InStr(ZwischenString, " Sitzplätze pro Reihe: ")
-            Reihen = Mid(ZwischenString, position3 + 1, position4 - 1)
-            Dim position5 As Integer = InStrRev(ZwischenString, " Sitzplätze pro Reihe: ") + 22
-            SitzeproReihe = Mid(ZwischenString, position5 + 1)
-            alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
-        Next
-
+        If alleKinosäle.Count >= 4 Then
+            For i = 0 To alleFilme.Count - 1
+                Sitzplätze = alleKinosäle(i * 4 + 1)
+                Reihen = alleKinosäle(i * 4 + 2)
+                SitzeproReihe = alleFilme(i * 4 + 3)
+                alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
+                DASKINO.KinosaalAmEndeHinzufügen(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
+            Next
+        End If
         FileOpen(1, "Tagespläne.txt", OpenMode.Input)
         While Not EOF(1)
             alleTagespläne.Add(LineInput(1))
             Console.WriteLine()
         End While
+        FileClose(1)
         Dim Anfangszeit As Integer
         Dim Endzeit As Integer
         Dim vorgestellterFilm As String
         Dim Vorstellungslänge As Integer
         Dim Vorstellungsfreigabe As Integer
         Dim Dimension As Boolean
-        For i = 0 To alleTagespläne.Count - 1
-            Dim Zwischenstring As String = alleTagespläne.Item(i)
-
-            If Zwischenstring.Contains("Tag") Then
-
-            Else
-                Dim position1 As Integer = InStrRev(Zwischenstring, "geht von ") + 8
-                Dim position2 As Integer = InStr(Zwischenstring, " bis ")
-                Anfangszeit = Mid(Zwischenstring, position1 + 1, position2 - 1)
-                Dim position3 As Integer = InStrRev(Zwischenstring, "bis ") + 3
-                Dim position4 As Integer = InStr(Zwischenstring, ", es läuft ")
-                Endzeit = Mid(Zwischenstring, position3 + 1, position4 - 1)
-                Dim position5 As Integer = InStrRev(Zwischenstring, ", es läuft ") + 10
-                Dim position6 As Integer = InStr(Zwischenstring, " (")
-                vorgestellterFilm = Mid(Zwischenstring, position5 + 1, position6 - 1)
-                Dim position7 As Integer = InStrRev(Zwischenstring, " (") + 1
-                Dim position8 As Integer = InStr(Zwischenstring, ") ab")
-                Vorstellungslänge = Mid(Zwischenstring, position7 + 1, position8 - 1)
-                Dim position9 As Integer = InStrRev(Zwischenstring, ") ab ") + 4
-                Dim position10 As Integer = InStr(Zwischenstring, " 3D: ")
-                Vorstellungsfreigabe = Mid(Zwischenstring, position9 + 1, position10 - 1)
-                Dim position11 As Integer = InStrRev(Zwischenstring, " 3D: ") + 4
-                Dim position12 As Integer = InStr(Zwischenstring, " Saal 1")
-                Dimension = Mid(Zwischenstring, position11 + 1, position12 - 1)
+        If alleTagespläne.Count >= 9 Then
+            For i = 0 To alleTagespläne.Count - 1
+                Anfangszeit = alleTagespläne(i * 9 + 2)
+                Endzeit = alleTagespläne(i * 9 + 3)
+                vorgestellterFilm = alleTagespläne(i * 9 + 4)
+                Vorstellungslänge = alleTagespläne(i * 9 + 5)
+                Vorstellungsfreigabe = alleTagespläne(i * 9 + 6)
+                Dimension = alleTagespläne(i * 9 + 7)
                 Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
-                alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
-            End If
+                alleTagespläne2.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
 
-            alleTagespläne2.Add(New Tagesplan())
-
-            'Hier muss noch geklärt werden, wie die Tagespläne richtig gespeichert werden sollen, da wir eine unendlich große Menge bekommen, aber alles in ein kleines Array gequetscht werden soll. 
-            'Da muss noch eine Lösung für gefunden werden! --> vorrübergehende Lösung: Tagespläne als ArrayList, statt als fester Array 
-
-        Next
-        FileClose(1)
-        DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
-        testInitialisierung()
+            Next
+        End If
+        DASKINO.setTagesplan(alleTagespläne2)
 
         FormSchönMachen()
     End Sub
+
+
+    Private Sub KinoGUI_Closing(sender As Object, e As EventArgs) Handles Me.Load
+        'Einfügen in die Textdateien wenn das Programm beendet wird 
+        Dim titel As New ArrayList
+        Dim säle As New ArrayList
+        Dim pläne As New ArrayList
+        Dim kunden As New ArrayList
+        Dim anzahlKinos As Integer
+        titel = DASKINO.getFilmtitel
+        säle = DASKINO.getKinosäle
+        pläne = DASKINO.getTagesplan
+        kunden = DASKINO.getKunden
+        anzahlKinos = DASKINO.getAnzahlKinosäle
+        Dim neuertext As String
+        For i = 0 To kunden.Count - 1
+            neuertext = kunden(i)
+            FileOpen(1, "Kunden.txt", OpenMode.Append)
+            PrintLine(1, neuertext)
+            FileClose(1)
+            'Dim file1 As System.IO.StreamWriter
+            'file1 = My.Computer.FileSystem.OpenTextFileWriter("Kunden.txt", True)
+            'file1.WriteLine(neuertext)
+            'file1.Close()
+        Next
+        For j = 0 To titel.Count - 1
+            'neuertext = titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D
+            FileOpen(1, "Filme.txt", OpenMode.Append)
+            PrintLine(1, titel(j).getFilmtitel)
+            PrintLine(1, titel(j).getFilmlänge)
+            PrintLine(1, titel(j).getAltersfreigabe)
+            PrintLine(1, titel(j).ist3D)
+            FileClose(1)
+            'Dim file2 As System.IO.StreamWriter
+            'file2 = My.Computer.FileSystem.OpenTextFileWriter("Filme.txt", True)
+            'file2.WriteLine(titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D)
+            'file2.Close()
+        Next
+        For k = 0 To anzahlKinos - 1
+            FileOpen(1, "Kinosäle.txt", OpenMode.Append)
+            'PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
+            PrintLine(1, k)
+            PrintLine(1, säle(k).getAnzahlSitzplätze)
+            PrintLine(1, säle(k).getAnzahlReihe)
+            PrintLine(1, säle(k).getSitzeProReihe)
+            FileClose(1)
+            '    Dim file3 As System.IO.StreamWriter
+            '    file3 = My.Computer.FileSystem.OpenTextFileWriter("Kinosäle.txt", True)
+            '    file3.WriteLine("Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
+            '    file3.Close()
+        Next
+        For i = 0 To pläne.Count - 1
+            Dim plan As Tagesplan = pläne(i)
+            Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
+            'Dim file4 As System.IO.StreamWriter
+            'file4 = My.Computer.FileSystem.OpenTextFileWriter("Tagespläne.txt", True)
+            'file4.WriteLine(i + 1 & ". Tag:")
+            For j = 1 To AnzahlVorstellungen
+                Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
+                FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                PrintLine(1, i)
+                'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
+                PrintLine(1, j)
+                PrintLine(1, Vorstellung.getAnfangszeit())
+                PrintLine(1, Vorstellung.getEndzeit())
+                PrintLine(1, Vorstellung.getFilm.getFilmtitel())
+                PrintLine(1, Vorstellung.getFilm.getFilmlänge)
+                PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
+                PrintLine(1, Vorstellung.getFilm.Ist3D)
+                PrintLine(1, Vorstellung.getSaal)
+
+                FileClose(1)
+
+
+                '    'file4.WriteLine(i & ". Tag:")
+                '    file4.WriteLine("Vorstellung " & j & " geht von " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & ", es läuft " & Vorstellung.getFilm.getFilmtitel() & " (" & Vorstellung.getFilm.getFilmlänge & ") ab " & Vorstellung.getFilm.getAltersfreigabe & " 3D: " & Vorstellung.getFilm.Ist3D & " Saal 1")
+
+            Next
+            'file4.Close()
+        Next
+    End Sub
+
     Private Sub reinschreiben()
         DASKINO.getFilmtitel()
     End Sub
