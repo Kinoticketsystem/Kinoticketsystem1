@@ -1,0 +1,6 @@
+﻿Kinosaal0: Anzahl Sitzplätze: 60 Anzahl der Reihen: 6 Sitzplätze pro Reihe: 10
+Kinosaal1: Anzahl Sitzplätze: 60 Anzahl der Reihen: 6 Sitzplätze pro Reihe: 10
+Kinosaal2: Anzahl Sitzplätze: 60 Anzahl der Reihen: 6 Sitzplätze pro Reihe: 10
+Kinosaal3: Anzahl Sitzplätze: 120 Anzahl der Reihen: 8 Sitzplätze pro Reihe: 15
+Kinosaal4: Anzahl Sitzplätze: 60 Anzahl der Reihen: 6 Sitzplätze pro Reihe: 10
+Kinosaal5: Anzahl Sitzplätze: 60 Anzahl der Reihen: 6 Sitzplätze pro Reihe: 10
