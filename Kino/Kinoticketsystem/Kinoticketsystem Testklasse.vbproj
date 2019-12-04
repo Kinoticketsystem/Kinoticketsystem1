@@ -70,6 +70,9 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Kinologo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -116,7 +119,7 @@
     <Compile Include="StartBild.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestKinosaal.vb" />
+    <Compile Include="01.1TestKinosaal.vb" />
     <Compile Include="04TestVorstellung.vb" />
     <Compile Include="Film.vb" />
     <Compile Include="Form1.vb">
@@ -258,9 +261,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Kinologo.png" />
-    <Content Include="bin\Debug\Kunden.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="bin\Debug\Kunden.txt" />
     <None Include="Resources\Ich einfach Unverbesserlich.png" />
     <None Include="Resources\Le Mans 66.png" />
     <None Include="Resources\Jäger des Verlorenen Schatzes.png" />
@@ -290,6 +291,7 @@
     <Content Include="bin\Debug\Tagespläne.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Kinologo.ico" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

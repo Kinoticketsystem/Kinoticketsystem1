@@ -1,8 +1,8 @@
 ﻿Public Class Testklassekino
-    Private TestTagesplan As Tagesplan
-    Private TestKunde As Kunde
-    Private TestKinosäle As Kinosaal
-    Private TestAnzahlkinosäle As Integer
+    Public TestTagesplan As Tagesplan
+    Public TestKunde As Kunde
+    Public TestKinosäle As Kinosaal
+    Public TestAnzahlkinosäle As Integer
 
     Public Function NeueBuchung()
         Dim name As String = "gabor"
@@ -19,39 +19,43 @@
 
     End Function
 
-    Private Sub cmdtestsetkinosaal_Click(sender As Object, e As EventArgs) Handles cmdtestsetkinosaal.Click
+    Public Function Kinosaal()
         Dim Reihe As Integer = 1
         Dim Anzahl As String = 3
         Dim Sitz As Integer = 3
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
         Dim Saal2 As Kinosaal = New Kinosaal(Anzahl, Reihe, Sitz) 'TestFilm wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
 
-        MsgBox("passt")
-    End Sub
+        Return True
+    End Function
     'Kinosaalentfernen
-    Private Sub cmdTestSetFilm_Click(sender As Object, e As EventArgs) Handles cmdTestSetFilm.Click
+    Public Function SetFilm()
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
-        MsgBox("passt")
-    End Sub
+        Return True
+    End Function
     'Film entfernen
-    Private Sub cmdTestSetKunden_Click(sender As Object, e As EventArgs) Handles cmdTestSetKunden.Click
+    Public Function SetKunden()
         Dim name As String = "gabor"
         TestKunde = New Kunde(name)
         TestKunde.SetName(name)
-        MsgBox("passt")
-    End Sub
+        Return True
+    End Function
 
-    Private Sub cmdTestSetKundenEntfernen_Click(sender As Object, e As EventArgs)
+    Public Function SetKundenEntfernen()
+
         Dim name As String = "gabor"
         TestKunde = New Kunde(name)
+        Return True
+    End Function
 
-    End Sub
-
-    Private Sub cmdTestSetAnzahlkinosaal_Click(sender As Object, e As EventArgs) Handles cmdTestSetAnzahlkinosaal.Click
+    Public Function SetAnzahlKinosaal()
         Dim i As Integer = 5
         TestAnzahlkinosäle = i
         If TestAnzahlkinosäle = 5 Then
-            MsgBox("läuft")
+            Return True
+        Else
+            Return False
+
         End If
-    End Sub
+    End Function
 End Class

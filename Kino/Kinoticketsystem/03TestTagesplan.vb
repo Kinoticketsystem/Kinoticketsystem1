@@ -9,47 +9,57 @@
     Private BeispielVorstellungAnzahlA As Integer
     Private BeispielVorstellungAnzahlB As Integer
 
-    Private Sub TestVorstellungHinzufügen()
+    Public Function TestVorstellungHinzufügen()
         _Tagesplan.VorstellungHinzufügen(BeispielVorstellungA)
         BeispielVorstellungB = _Tagesplan.getVorstellung(0)
 
         If Not BeispielVorstellungA.Equals(BeispielVorstellungB) Then
-            Console.WriteLine("Problem bei Tagesplan: Vorstellunghinzufügen 1")
+            Return False
+        Else
+            Return True
         End If
 
-    End Sub
+    End Function
 
-    Private Sub TestVorstellungÄndern()
+    Public Function TestVorstellungÄndern()
         _Tagesplan.VorstellungHinzufügen(BeispielVorstellungA)
         BeispielVorstellungB = _Tagesplan.getVorstellung(1)
 
         If Not BeispielVorstellungA.Equals(BeispielVorstellungB) Then
-            Console.WriteLine("Problem bei Tagesplan: Vorstellunghinzufügen 2")
+            Return False And "Problem bei Tagesplan: Vorstellunghinzufügen 2"
+        Else
+            Return True
         End If
 
         _Tagesplan.VorstellungÄndern(BeispielVorstellungC, 1)
         BeispielVorstellungB = _Tagesplan.getVorstellung(1)
 
         If Not BeispielVorstellungC.Equals(BeispielVorstellungB) Then
-            Console.WriteLine("Problem bei Tagesplan: VorstellungÄndern")
+            Return False And "Problem bei Tagesplan: VorstellungÄndern"
+        Else
+            Return True
         End If
 
-    End Sub
+    End Function
 
-    Private Sub TestVorstellungEntfernen()
+    Public Function TestVorstellungEntfernen()
         BeispielVorstellungAnzahlA = TestFilmA.getAnzahlFilmwiedergabe
         _Tagesplan.VorstellungEntfernen(BeispielVorstellungA)
         BeispielVorstellungB = _Tagesplan.getVorstellung(0)
         BeispielVorstellungAnzahlB = TestFilmA.getAnzahlFilmwiedergabe
 
         If BeispielVorstellungA.Equals(BeispielVorstellungB) Then
-            Console.WriteLine("Problem bei Tagesplan: VorstellungEntfernen")
+            Return False And "VorstellungEntfernen fehlgeschlagen"
+        Else
+            Return True
         End If
 
         If BeispielVorstellungAnzahlA.Equals(BeispielVorstellungAnzahlB) Then
-            Console.WriteLine("Problem bei Tagesplan: VorstellungEntfernen: AnzahlFilmwiedergabe")
+            Return False And "Problem bei Tagesplan: VorstellungEntfernen: AnzahlFilmwiedergabe"
+        Else
+            Return True
         End If
 
-    End Sub
+    End Function
 
 End Class
