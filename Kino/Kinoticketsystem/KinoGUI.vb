@@ -169,7 +169,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Filmlänge As Integer
         Dim Altersfreigabe As Integer
         Dim ist3D As Boolean
-        If alleFilme.Count >= 4 Then
+        If alleFilme.Count >= 4 And alleFilme.Count Mod 4 = 0 Then
             For i = 0 To alleFilme.Count - 1
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
@@ -204,7 +204,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Sitzplätze As Integer
         Dim Reihen As Integer
         Dim SitzeproReihe As Integer
-        If alleKinosäle.Count >= 4 Then
+        If alleKinosäle.Count >= 4 And alleKinosäle.Count Mod 4 = 0 Then
             For i = 0 To alleFilme.Count - 1
                 Sitzplätze = alleKinosäle(i * 4 + 1)
                 Reihen = alleKinosäle(i * 4 + 2)
@@ -228,7 +228,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Vorstellungslänge As Integer
         Dim Vorstellungsfreigabe As Integer
         Dim Dimension As Boolean
-        If alleTagespläne.Count >= 9 Then
+        If alleTagespläne.Count >= 9 And alleTagespläne.Count Mod 9 = 0 Then
             For i = 0 To alleTagespläne.Count - 1
                 Anfangszeit = alleTagespläne(i * 9 + 2)
                 Endzeit = alleTagespläne(i * 9 + 3)
@@ -256,6 +256,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim säle As New ArrayList
         Dim pläne As New ArrayList
         Dim kunden As New ArrayList
+        Dim zwKunde As Kunde
         Dim anzahlKinos As Integer
         titel = DASKINO.getFilmtitel
         säle = DASKINO.getKinosäle
@@ -263,71 +264,80 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         kunden = DASKINO.getKunden
         anzahlKinos = DASKINO.getAnzahlKinosäle
         Dim neuertext As String
-        For i = 0 To kunden.Count - 1
-            neuertext = kunden(i)
-            FileOpen(1, "Kunden.txt", OpenMode.Append)
-            PrintLine(1, neuertext)
-            FileClose(1)
-            'Dim file1 As System.IO.StreamWriter
-            'file1 = My.Computer.FileSystem.OpenTextFileWriter("Kunden.txt", True)
-            'file1.WriteLine(neuertext)
-            'file1.Close()
-        Next
-        For j = 0 To titel.Count - 1
-            'neuertext = titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D
-            FileOpen(1, "Filme.txt", OpenMode.Append)
-            PrintLine(1, titel(j).getFilmtitel)
-            PrintLine(1, titel(j).getFilmlänge)
-            PrintLine(1, titel(j).getAltersfreigabe)
-            PrintLine(1, titel(j).ist3D)
-            FileClose(1)
-            'Dim file2 As System.IO.StreamWriter
-            'file2 = My.Computer.FileSystem.OpenTextFileWriter("Filme.txt", True)
-            'file2.WriteLine(titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D)
-            'file2.Close()
-        Next
-        For k = 0 To anzahlKinos - 1
-            FileOpen(1, "Kinosäle.txt", OpenMode.Append)
-            'PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
-            PrintLine(1, k)
-            PrintLine(1, säle(k).getAnzahlSitzplätze)
-            PrintLine(1, säle(k).getAnzahlReihe)
-            PrintLine(1, säle(k).getSitzeProReihe)
-            FileClose(1)
-            '    Dim file3 As System.IO.StreamWriter
-            '    file3 = My.Computer.FileSystem.OpenTextFileWriter("Kinosäle.txt", True)
-            '    file3.WriteLine("Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
-            '    file3.Close()
-        Next
-        For i = 0 To pläne.Count - 1
-            Dim plan As Tagesplan = pläne(i)
-            Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
-            'Dim file4 As System.IO.StreamWriter
-            'file4 = My.Computer.FileSystem.OpenTextFileWriter("Tagespläne.txt", True)
-            'file4.WriteLine(i + 1 & ". Tag:")
-            For j = 1 To AnzahlVorstellungen
-                Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
-                FileOpen(1, "Tagespläne.txt", OpenMode.Append)
-                PrintLine(1, i)
-                'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
-                PrintLine(1, j)
-                PrintLine(1, Vorstellung.getAnfangszeit())
-                PrintLine(1, Vorstellung.getEndzeit())
-                PrintLine(1, Vorstellung.getFilm.getFilmtitel())
-                PrintLine(1, Vorstellung.getFilm.getFilmlänge)
-                PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
-                PrintLine(1, Vorstellung.getFilm.Ist3D)
-                PrintLine(1, Vorstellung.getSaal)
-
+        If kunden.Count > 0 Then
+            For i = 0 To kunden.Count - 1
+                zwKunde = kunden(i)
+                neuertext = zwKunde.getName
+                FileOpen(1, "Kunden.txt", OpenMode.Append)
+                PrintLine(1, neuertext)
                 FileClose(1)
-
-
-                '    'file4.WriteLine(i & ". Tag:")
-                '    file4.WriteLine("Vorstellung " & j & " geht von " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & ", es läuft " & Vorstellung.getFilm.getFilmtitel() & " (" & Vorstellung.getFilm.getFilmlänge & ") ab " & Vorstellung.getFilm.getAltersfreigabe & " 3D: " & Vorstellung.getFilm.Ist3D & " Saal 1")
-
+                'Dim file1 As System.IO.StreamWriter
+                'file1 = My.Computer.FileSystem.OpenTextFileWriter("Kunden.txt", True)
+                'file1.WriteLine(neuertext)
+                'file1.Close()
             Next
-            'file4.Close()
-        Next
+        End If
+        If titel.Count > 0 Then
+            For j = 0 To titel.Count - 1
+                'neuertext = titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D
+                FileOpen(1, "Filme.txt", OpenMode.Append)
+                PrintLine(1, titel(j).getFilmtitel)
+                PrintLine(1, titel(j).getFilmlänge)
+                PrintLine(1, titel(j).getAltersfreigabe)
+                PrintLine(1, titel(j).ist3D)
+                FileClose(1)
+                'Dim file2 As System.IO.StreamWriter
+                'file2 = My.Computer.FileSystem.OpenTextFileWriter("Filme.txt", True)
+                'file2.WriteLine(titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D)
+                'file2.Close()
+            Next
+        End If
+        If anzahlKinos > 0 Then
+            For k = 0 To anzahlKinos - 1
+                FileOpen(1, "Kinosäle.txt", OpenMode.Append)
+                'PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
+                PrintLine(1, k)
+                PrintLine(1, säle(k).getAnzahlSitzplätze)
+                PrintLine(1, säle(k).getAnzahlReihe)
+                PrintLine(1, säle(k).getSitzeProReihe)
+                FileClose(1)
+                '    Dim file3 As System.IO.StreamWriter
+                '    file3 = My.Computer.FileSystem.OpenTextFileWriter("Kinosäle.txt", True)
+                '    file3.WriteLine("Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
+                '    file3.Close()
+            Next
+        End If
+        If pläne.Count > 0 Then
+            For i = 0 To pläne.Count - 1
+                Dim plan As Tagesplan = pläne(i)
+                Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
+                'Dim file4 As System.IO.StreamWriter
+                'file4 = My.Computer.FileSystem.OpenTextFileWriter("Tagespläne.txt", True)
+                'file4.WriteLine(i + 1 & ". Tag:")
+                For j = 1 To AnzahlVorstellungen
+                    Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
+                    FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                    PrintLine(1, i)
+                    'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
+                    PrintLine(1, j)
+                    PrintLine(1, Vorstellung.getAnfangszeit())
+                    PrintLine(1, Vorstellung.getEndzeit())
+                    PrintLine(1, Vorstellung.getFilm.getFilmtitel())
+                    PrintLine(1, Vorstellung.getFilm.getFilmlänge)
+                    PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
+                    PrintLine(1, Vorstellung.getFilm.Ist3D)
+                    PrintLine(1, Vorstellung.getSaal)
+
+                    FileClose(1)
+
+
+                    '    'file4.WriteLine(i & ". Tag:")
+                    '    file4.WriteLine("Vorstellung " & j & " geht von " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & ", es läuft " & Vorstellung.getFilm.getFilmtitel() & " (" & Vorstellung.getFilm.getFilmlänge & ") ab " & Vorstellung.getFilm.getAltersfreigabe & " 3D: " & Vorstellung.getFilm.Ist3D & " Saal 1")
+
+                Next
+                'file4.Close()
+            Next
+        End If
     End Sub
 
     Private Sub reinschreiben()
