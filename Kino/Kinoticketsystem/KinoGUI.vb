@@ -546,7 +546,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(DASKINO.getKinosäle(0))
+        ' FTagesplan.SetKinosaal(DASKINO.getKinosäle(0)) 'muss wieder auskommentiert werden, wenn es Kinosäle gibt
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -622,6 +622,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
-
+        KundenGUI.Show()
+        KundenGUI.BringToFront()
+        KundenGUI.lstSammlung.Items.Clear()
+        Dim a As ArrayList = DASKINO.getKunden
+        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+            KundenGUI.lstSammlung.Items.Add(a(i))
+        Next
     End Sub
 End Class
