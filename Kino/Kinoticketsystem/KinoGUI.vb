@@ -378,6 +378,30 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     Private Sub FormSchönMachen()
         DatumUndUhrzeitFestlegn()
+        If cmdNeueBuchung.FlatStyle = FlatStyle.Popup Then
+            cmdNeueBuchung.FlatStyle = FlatStyle.Flat
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+        Else
+            cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            cmdNeueBuchung.BackColor = Color.Lime
+            cmdNeueBuchung.FlatAppearance.BorderSize = 1
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+
+        End If
+        If cmdNeueBuchung.FlatStyle = FlatStyle.Popup Then
+            cmdNeueBuchung.FlatStyle = FlatStyle.Flat
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+        Else
+            cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            cmdNeueBuchung.BackColor = Color.Lime
+            cmdNeueBuchung.FlatAppearance.BorderSize = 1
+            cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+
+        End If
         ' AnzahlFreiPlätzeBestimmen()
         '    nächstenFilmProKinosaalANzeigen()
         '....
@@ -585,5 +609,17 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         End If
     End Sub
 
+    Private Sub cmdFilmHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinzufügen.Click
+        KundenGUI.Show()
+        KundenGUI.BringToFront()
+        KundenGUI.lstSammlung.Items.Clear()
+        Dim a As ArrayList = DASKINO.getFilmtitel()
+        For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+            KundenGUI.lstSammlung.Items.Add(a(i))
+        Next
+    End Sub
 
+    Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
+
+    End Sub
 End Class
