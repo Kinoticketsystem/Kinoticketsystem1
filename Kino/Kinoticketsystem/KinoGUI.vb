@@ -174,7 +174,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
                 Altersfreigabe = alleFilme(i * 4 + 2)
-                If alleFilme(i * 4 + 3)= "True" Then
+                If alleFilme(i * 4 + 3) = "True" Then
                     ist3D = True
                 End If
                 alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
@@ -622,6 +622,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
-
+        KundenGUI.Show()
+        KundenGUI.BringToFront()
+        KundenGUI.lstSammlung.Items.Clear()
+        Dim a As ArrayList = DASKINO.getKunden
+        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+            KundenGUI.lstSammlung.Items.Add(a(i))
+        Next
     End Sub
 End Class
