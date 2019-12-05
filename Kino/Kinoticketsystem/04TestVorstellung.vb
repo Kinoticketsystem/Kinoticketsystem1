@@ -28,7 +28,7 @@
 
     Private Sub TestBesucherHinzufügen()
         _Vorstellung.BesucherHinzufügen(BeispielBesucherA)
-        BeispielBesucherB = _Vorstellung.getBesucher(0)
+        BeispielBesucherB = _Vorstellung.getBesucher(1)
 
         If Not BeispielBesucherA.Equals(BeispielBesucherB) Then
             Console.WriteLine("Problem bei Vorstellung: BesucherHinzufügen")
@@ -38,7 +38,7 @@
 
     Private Sub TestBesucherEntfernen1()
         _Vorstellung.BesucherEntfernen(BeispielBesucherA)
-        BeispielBesucherB = _Vorstellung.getBesucher(0)
+        BeispielBesucherB = _Vorstellung.getBesucher(1)
 
         If BeispielBesucherA.Equals(BeispielBesucherB) Then
             Console.WriteLine("Problem bei Vorstellung: BesucherEntfernen1")

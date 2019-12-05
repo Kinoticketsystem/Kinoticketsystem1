@@ -11,7 +11,7 @@
 
     Public Function TestVorstellungHinzufügen()
         _Tagesplan.VorstellungHinzufügen(BeispielVorstellungA)
-        BeispielVorstellungB = _Tagesplan.getVorstellung(0)
+        BeispielVorstellungB = _Tagesplan.getVorstellung(1)
 
         If Not BeispielVorstellungA.Equals(BeispielVorstellungB) Then
             Return False
