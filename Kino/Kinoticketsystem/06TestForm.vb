@@ -18,41 +18,46 @@
         'lstAusgabe.Items.Add(c)
     End Sub
 
-    Private Sub cmdTestkinotest_Click_1(sender As Object, e As EventArgs) Handles cmdTestkinotest.Click
-        Static a As Boolean
-        Static b As Testklassekino = New Testklassekino
-        Dim Übergabe As String
+    Private Sub cmdTestkinotest_Click_1(sender As Object, e As EventArgs)
+        'Static a As Boolean
+        'Static b As Testklassekino = New Testklassekino
+        'Dim c As String
 
-        'Neue Buchung 
-        a = b.NeueBuchung
-        a.ToString(Übergabe)
-        lstAusgabeKino.Items.Add(Übergabe)
+        ''Neue Buchung 
+        'a = b.NeueBuchung
+        'c = a.ToString
+        'lstAusgabeKino.Items.Add(c)
 
 
 
     End Sub
 
-    Private Sub cmdTestAll_Click(sender As Object, e As EventArgs) Handles cmdTestAll.Click
+    Private Sub cmdTestAll_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click
         'SetFilm
         Dim a As Boolean
         Dim b As Testklassekino = New Testklassekino
-        Dim Übergabe As String
+        Dim c As String
+
+        'Neue Buchung 
+        a = b.NeueBuchung
+        c = a.ToString
+        lstAusgabeKino.Items.Add(c)
 
         a = b.SetFilm
-        a.ToString(Übergabe)
+        c = a.ToString(c)
         lstAusgabeKino.Items.Add(a)
         'SetKunden
         a = b.SetKunden
-        a.ToString(Übergabe)
-        lstAusgabeKino.Items.Add(Übergabe)
+        c = a.ToString
+        lstAusgabeKino.Items.Add(c)
         'SetKundenEntfernen
         a = b.SetKundenEntfernen
-        a.ToString(Übergabe)
-        lstAusgabeKino.Items.Add(Übergabe)
+        c = a.ToString
+        lstAusgabeKino.Items.Add(c)
         'SetAnzahlKinosaal
         a = b.SetAnzahlKinosaal
-        a.ToString(Übergabe)
-        lstAusgabeKino.Items.Add(Übergabe)
+        c = a.ToString
+        lstAusgabeKino.Items.Add(c)
 
 
 
