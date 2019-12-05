@@ -373,6 +373,7 @@ Public Class FTagesplan
         Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a)
         Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a)
         Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a)
+        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a)
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
         _dritterTag = New Tagesplan
@@ -383,6 +384,7 @@ Public Class FTagesplan
 
         _ersterTag.TagesplanErstellen2(b, c)
         _ersterTag.VorstellungHinzufügen(d)
+        _ersterTag.VorstellungHinzufügen(e)
         _zweiterTag.TagesplanErstellen1(b)
         _dritterTag.TagesplanErstellen2(b, d)
         _vierterTag.TagesplanErstellen1(b)
