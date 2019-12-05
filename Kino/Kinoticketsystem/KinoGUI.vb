@@ -520,7 +520,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
-        FTagesplan.SetKinosaal(DASKINO.getKinosäle(0))
+        ' FTagesplan.SetKinosaal(DASKINO.getKinosäle(0)) 'muss wieder auskommentiert werden, wenn es Kinosäle gibt
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
