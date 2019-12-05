@@ -174,7 +174,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
                 Altersfreigabe = alleFilme(i * 4 + 2)
-                ist3D = alleFilme(i * 4 + 3)
+                If alleFilme(i * 4 + 3).Equals("True") Then
+                    ist3D = True
+                End If
                 alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
                 DASKINO.FilmHinzufügen(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
             Next
