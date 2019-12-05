@@ -32,8 +32,8 @@
 
     End Sub
 
-    Private Sub cmdTestAll_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click
-        'SetFilm
+    Private Sub cmdTestKino_Click(sender As Object, e As EventArgs) Handles cmdTestKino.Click
+
         Dim a As Boolean
         Dim b As Testklassekino = New Testklassekino
         Dim c As String
@@ -42,7 +42,13 @@
         a = b.NeueBuchung
         c = a.ToString
         lstAusgabeKino.Items.Add(c)
+        'KInosaal
+        a = b.Kinosaal
+        c = a.ToString()
+        lstAusgabeKino.Items.Add(c)
+        'Kinosaal Etntfernen
 
+        'Set Film
         a = b.SetFilm
         c = a.ToString(c)
         lstAusgabeKino.Items.Add(a)
@@ -58,7 +64,6 @@
         a = b.SetAnzahlKinosaal
         c = a.ToString
         lstAusgabeKino.Items.Add(c)
-
 
 
 
