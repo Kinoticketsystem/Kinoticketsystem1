@@ -22,19 +22,19 @@ Partial Class KundenGUI
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstSammlung = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.cmdLöschenHinzufügen = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'lstSammlung
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 12)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(344, 420)
-        Me.ListBox1.TabIndex = 0
+        Me.lstSammlung.FormattingEnabled = True
+        Me.lstSammlung.Location = New System.Drawing.Point(12, 12)
+        Me.lstSammlung.Name = "lstSammlung"
+        Me.lstSammlung.Size = New System.Drawing.Size(344, 420)
+        Me.lstSammlung.TabIndex = 0
         '
         'Label1
         '
@@ -71,7 +71,7 @@ Partial Class KundenGUI
         Me.Controls.Add(Me.cmdLöschenHinzufügen)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lstSammlung)
         Me.Name = "KundenGUI"
         Me.Text = "Kunden"
         Me.ResumeLayout(False)
@@ -79,7 +79,7 @@ Partial Class KundenGUI
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lstSammlung As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents cmdLöschenHinzufügen As Button

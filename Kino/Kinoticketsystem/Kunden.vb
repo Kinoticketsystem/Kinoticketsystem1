@@ -4,7 +4,7 @@
     End Sub
     Public Sub KundenÜbergeben(a As ArrayList)
         For i = 0 To a.Count
-            ListBox1.Items.Add(a)
+            lstSammlung.Items.Add(a)
         Next
     End Sub
 End Class

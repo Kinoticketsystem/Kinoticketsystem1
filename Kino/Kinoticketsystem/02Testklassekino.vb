@@ -29,6 +29,9 @@
         Return True
     End Function
     'Kinosaalentfernen
+    Public Function KinosaalEntfernen()
+
+    End Function
     Public Function SetFilm()
         Dim TestFilm As Film = New Film("Indiana Jones", 120, 12, False)
         Return True
