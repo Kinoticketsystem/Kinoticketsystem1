@@ -1,7 +1,7 @@
 ﻿Imports Kinoticketsystem
 
 Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
-    Private DASKINO As Kino
+    Public DASKINO As Kino
 
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
@@ -169,7 +169,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Filmlänge As Integer
         Dim Altersfreigabe As Integer
         Dim ist3D As Boolean
-        If alleFilme.Count >= 4 And alleFilme.Count Mod 4 = 0 Then
+        If alleFilme.Count >= 4 And alleFilme.Count Mod 4 = 0 Then 'erstellt nur neue Filme aus dem Strings der Textdatei, wenn mindesten 4 Elemente in der Liste ist und die Anzahl der Elemente ein Vielfaches von 4 ist
             For i = 0 To alleFilme.Count - 1
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
