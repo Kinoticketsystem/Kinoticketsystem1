@@ -38,10 +38,10 @@ Partial Class Form3
         Me.cmdTestKinosaal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestKinosaal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestKinosaal.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestKinosaal.Location = New System.Drawing.Point(88, 113)
-        Me.cmdTestKinosaal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmdTestKinosaal.Location = New System.Drawing.Point(44, 59)
+        Me.cmdTestKinosaal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmdTestKinosaal.Name = "cmdTestKinosaal"
-        Me.cmdTestKinosaal.Size = New System.Drawing.Size(262, 65)
+        Me.cmdTestKinosaal.Size = New System.Drawing.Size(131, 34)
         Me.cmdTestKinosaal.TabIndex = 44
         Me.cmdTestKinosaal.Text = "TestKinosaal"
         Me.cmdTestKinosaal.UseVisualStyleBackColor = True
@@ -52,10 +52,10 @@ Partial Class Form3
         Me.cmdTestkinotest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestkinotest.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestkinotest.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestkinotest.Location = New System.Drawing.Point(636, 113)
-        Me.cmdTestkinotest.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmdTestkinotest.Location = New System.Drawing.Point(318, 59)
+        Me.cmdTestkinotest.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmdTestkinotest.Name = "cmdTestkinotest"
-        Me.cmdTestkinotest.Size = New System.Drawing.Size(262, 65)
+        Me.cmdTestkinotest.Size = New System.Drawing.Size(131, 34)
         Me.cmdTestkinotest.TabIndex = 45
         Me.cmdTestkinotest.Text = "TestKino"
         Me.cmdTestkinotest.UseVisualStyleBackColor = True
@@ -63,21 +63,19 @@ Partial Class Form3
         'lstAusgabe
         '
         Me.lstAusgabe.FormattingEnabled = True
-        Me.lstAusgabe.ItemHeight = 25
-        Me.lstAusgabe.Location = New System.Drawing.Point(68, 277)
-        Me.lstAusgabe.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstAusgabe.Location = New System.Drawing.Point(34, 144)
+        Me.lstAusgabe.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lstAusgabe.Name = "lstAusgabe"
-        Me.lstAusgabe.Size = New System.Drawing.Size(368, 354)
+        Me.lstAusgabe.Size = New System.Drawing.Size(186, 186)
         Me.lstAusgabe.TabIndex = 46
         '
         'lstAusgabeKino
         '
         Me.lstAusgabeKino.FormattingEnabled = True
-        Me.lstAusgabeKino.ItemHeight = 25
-        Me.lstAusgabeKino.Location = New System.Drawing.Point(600, 319)
-        Me.lstAusgabeKino.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstAusgabeKino.Location = New System.Drawing.Point(300, 166)
+        Me.lstAusgabeKino.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lstAusgabeKino.Name = "lstAusgabeKino"
-        Me.lstAusgabeKino.Size = New System.Drawing.Size(368, 354)
+        Me.lstAusgabeKino.Size = New System.Drawing.Size(186, 186)
         Me.lstAusgabeKino.TabIndex = 47
         '
         'cmdTestAll
@@ -86,10 +84,10 @@ Partial Class Form3
         Me.cmdTestAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestAll.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestAll.Location = New System.Drawing.Point(636, 195)
-        Me.cmdTestAll.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmdTestAll.Location = New System.Drawing.Point(318, 101)
+        Me.cmdTestAll.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmdTestAll.Name = "cmdTestAll"
-        Me.cmdTestAll.Size = New System.Drawing.Size(262, 65)
+        Me.cmdTestAll.Size = New System.Drawing.Size(131, 34)
         Me.cmdTestAll.TabIndex = 48
         Me.cmdTestAll.Text = "TestAll"
         Me.cmdTestAll.UseVisualStyleBackColor = True
@@ -97,11 +95,10 @@ Partial Class Form3
         'lstTagesplan
         '
         Me.lstTagesplan.FormattingEnabled = True
-        Me.lstTagesplan.ItemHeight = 25
-        Me.lstTagesplan.Location = New System.Drawing.Point(1385, 418)
-        Me.lstTagesplan.Margin = New System.Windows.Forms.Padding(4)
+        Me.lstTagesplan.Location = New System.Drawing.Point(692, 217)
+        Me.lstTagesplan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lstTagesplan.Name = "lstTagesplan"
-        Me.lstTagesplan.Size = New System.Drawing.Size(368, 354)
+        Me.lstTagesplan.Size = New System.Drawing.Size(186, 186)
         Me.lstTagesplan.TabIndex = 49
         '
         'cmdTestTagesplan
@@ -110,20 +107,20 @@ Partial Class Form3
         Me.cmdTestTagesplan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestTagesplan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestTagesplan.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestTagesplan.Location = New System.Drawing.Point(1425, 259)
-        Me.cmdTestTagesplan.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmdTestTagesplan.Location = New System.Drawing.Point(712, 135)
+        Me.cmdTestTagesplan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmdTestTagesplan.Name = "cmdTestTagesplan"
-        Me.cmdTestTagesplan.Size = New System.Drawing.Size(262, 65)
+        Me.cmdTestTagesplan.Size = New System.Drawing.Size(131, 34)
         Me.cmdTestTagesplan.TabIndex = 50
         Me.cmdTestTagesplan.Text = "TestAll"
         Me.cmdTestTagesplan.UseVisualStyleBackColor = True
         '
         'Form3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.The_Wolf_Of_Wall_Street
-        Me.ClientSize = New System.Drawing.Size(2400, 1071)
+        Me.ClientSize = New System.Drawing.Size(642, 523)
         Me.Controls.Add(Me.cmdTestTagesplan)
         Me.Controls.Add(Me.lstTagesplan)
         Me.Controls.Add(Me.cmdTestAll)
@@ -131,7 +128,7 @@ Partial Class Form3
         Me.Controls.Add(Me.lstAusgabe)
         Me.Controls.Add(Me.cmdTestkinotest)
         Me.Controls.Add(Me.cmdTestKinosaal)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.ResumeLayout(False)

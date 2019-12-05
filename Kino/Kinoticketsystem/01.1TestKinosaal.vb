@@ -9,11 +9,8 @@
         BeispielBesucherB = testsaal1.getKunde(4, 1)
         If Not BeispielBesucherB.Equals(BeispielBesucherA) Then
             Return False
-
         Else
             Return True
-
-
 
         End If
     End Function
