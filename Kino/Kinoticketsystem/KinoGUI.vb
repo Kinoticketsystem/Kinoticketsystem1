@@ -170,11 +170,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Altersfreigabe As Integer
         Dim ist3D As Boolean
         If alleFilme.Count >= 4 And alleFilme.Count Mod 4 = 0 Then 'erstellt nur neue Filme aus dem Strings der Textdatei, wenn mindesten 4 Elemente in der Liste ist und die Anzahl der Elemente ein Vielfaches von 4 ist
-            For i = 0 To alleFilme.Count - 1
+            For i = 0 To (alleFilme.Count / 4) - 1
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
                 Altersfreigabe = alleFilme(i * 4 + 2)
-                If alleFilme(i * 4 + 3).Equals("True") Then
+                If alleFilme(i * 4 + 3) = "True" Then
                     ist3D = True
                 End If
                 alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
@@ -207,7 +207,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Reihen As Integer
         Dim SitzeproReihe As Integer
         If alleKinosäle.Count >= 4 And alleKinosäle.Count Mod 4 = 0 Then
-            For i = 0 To alleFilme.Count - 1
+            For i = 0 To (alleFilme.Count / 4) - 1
                 Sitzplätze = alleKinosäle(i * 4 + 1)
                 Reihen = alleKinosäle(i * 4 + 2)
                 SitzeproReihe = alleFilme(i * 4 + 3)
@@ -231,7 +231,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Vorstellungsfreigabe As Integer
         Dim Dimension As Boolean
         If alleTagespläne.Count >= 9 And alleTagespläne.Count Mod 9 = 0 Then
-            For i = 0 To alleTagespläne.Count - 1
+            For i = 0 To (alleTagespläne.Count / 9) - 1
                 Anfangszeit = alleTagespläne(i * 9 + 2)
                 Endzeit = alleTagespläne(i * 9 + 3)
                 vorgestellterFilm = alleTagespläne(i * 9 + 4)
