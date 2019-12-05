@@ -208,4 +208,46 @@
   <data name="Ziemlich_beste_Freunde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ziemlich beste Freunde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Alita_Ballte_Angel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alita Ballte Angel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bublebee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bublebee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Der_Schuh_des_Manitu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Der Schuh des Manitu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Es_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Es 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Feuerzangenbowle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Feuerzangenbowle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fluch_der_Karibik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fluch der Karibik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Herr_der_Ringe_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Herr der Ringe 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Johnny_English_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Johnny English 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Joker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Joker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jumanji__Willkommen_im_Dschungel__DVD_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jumanji_-Willkommen-im-Dschungel-[DVD].png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lion_King" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lion King.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pretty_Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pretty Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Equilizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Equilizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_T__Raumschriff_Surprise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\(T) Raumschriff Surprise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
