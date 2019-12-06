@@ -182,7 +182,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             Next
         End If
 
-        My.Computer.FileSystem.WriteAllText("Filme.txt", "", True) ' löscht den Inhalt der Datei 
+        'My.Computer.FileSystem.WriteAllText("Filme.txt", "", True) ' löscht den Inhalt der Datei 
+        System.IO.File.WriteAllText("Filme.txt", String.Empty)
 
         FileOpen(1, "Kunden.txt", OpenMode.Input)
         While Not EOF(1)
@@ -195,7 +196,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             DASKINO.KundenHinzufügen(New Kunde(alleKunden(i)))
         Next
 
-        My.Computer.FileSystem.WriteAllText("Kunden.txt", "", True) ' löscht den Inhalt der Datei 
+        'My.Computer.FileSystem.WriteAllText("Kunden.txt", "", True) ' löscht den Inhalt der Datei 
+        System.IO.File.WriteAllText("Kunden.txt", String.Empty)
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Input)
         While Not EOF(1)
@@ -216,7 +218,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             Next
         End If
 
-        My.Computer.FileSystem.WriteAllText("Kinosäle.txt", "", True) ' löscht den Inhalt der Datei
+        'My.Computer.FileSystem.WriteAllText("Kinosäle.txt", "", True) ' löscht den Inhalt der Datei
+        System.IO.File.WriteAllText("Kinosäle.txt", String.Empty)
 
         FileOpen(1, "Tagespläne.txt", OpenMode.Input)
         While Not EOF(1)
@@ -246,7 +249,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         DASKINO.setTagesplan(alleTagespläne2)
 
-        My.Computer.FileSystem.WriteAllText("Tagespläne.txt", "", True) ' löscht den Inhalt der Datei
+        'My.Computer.FileSystem.WriteAllText("Tagespläne.txt", "", True) ' löscht den Inhalt der Datei
+        System.IO.File.WriteAllText("Tagespläne.txt", String.Empty)
 
         FormSchönMachen()
     End Sub
