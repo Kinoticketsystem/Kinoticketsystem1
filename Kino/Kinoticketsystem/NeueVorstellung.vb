@@ -296,4 +296,20 @@ Public Class NeueVorstellung
     Public Function getFilm() As Film
         Return _Film
     End Function
+
+    Private Sub lblstartuhrzeit_Click(sender As Object, e As EventArgs) Handles lblstartuhrzeit.Click
+
+    End Sub
+
+    Private Sub txtname_TextChanged(sender As Object, e As EventArgs) Handles txtname.TextChanged
+
+    End Sub
+
+    Private Sub lblname_Click(sender As Object, e As EventArgs) Handles lblname.Click
+
+    End Sub
+
+    Private Sub lblEnduhrszeit_Click(sender As Object, e As EventArgs) Handles lblEnduhrszeit.Click
+
+    End Sub
 End Class
