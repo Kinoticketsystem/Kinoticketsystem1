@@ -12,6 +12,6 @@
 
         Dim film As Film = New Film(Filmname, Filmlänge, Altersfreigabe, _3d)
         KinoGUI.DASKINO.FilmHinzufügen(film)
-        'Es muss noch in der listbox alle filntitel ausgegebn werden um zu überprüfen,m ob der neue film übergebn wurde
+        'Es muss noch in der listbox alle filntitel ausgegebn werden um zu überprüfen,m ob der neue film übergebn wurde ist bei kinogui geschrieben
     End Sub
 End Class

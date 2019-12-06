@@ -617,13 +617,13 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdFilmHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinzufügen.Click
-        Call KundenGUI.Show()
-        KundenGUI.BringToFront()
-        KundenGUI.lstSammlung.Items.Clear()
-        Dim a As ArrayList = DASKINO.getFilmtitel()
-        For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
-            KundenGUI.lstSammlung.Items.Add(a(i))
-        Next
+        Call FilmHinzufügenGUI.Show()
+        FilmHinzufügenGUI.BringToFront()
+
+        'Dim a As ArrayList = DASKINO.getFilmtitel()
+        'For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+        '    KundenGUI.lstSammlung.Items.Add(a(i))
+        'Next
     End Sub
 
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
