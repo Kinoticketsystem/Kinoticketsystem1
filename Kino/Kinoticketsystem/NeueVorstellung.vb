@@ -296,4 +296,12 @@ Public Class NeueVorstellung
     Public Function getFilm() As Film
         Return _Film
     End Function
+
+    Private Sub chlBesucherAuswählen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chlBesucherAuswählen.SelectedIndexChanged
+        lstBesucher.Items.Clear()
+        Dim A As IList = chlBesucherAuswählen.CheckedItems
+        For i = 0 To A.Count
+            lstBesucher.Items.Add(A(i).getName)
+        Next
+    End Sub
 End Class
