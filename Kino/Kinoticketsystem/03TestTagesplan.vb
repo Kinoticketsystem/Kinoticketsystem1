@@ -26,7 +26,7 @@
         BeispielVorstellungB = _Tagesplan.getVorstellung(1)
 
         If Not BeispielVorstellungA.Equals(BeispielVorstellungB) Then
-            Return False And "Problem bei Tagesplan: Vorstellunghinzufügen 2"
+            Return False
         Else
             Return True
         End If
@@ -35,7 +35,7 @@
         BeispielVorstellungB = _Tagesplan.getVorstellung(1)
 
         If Not BeispielVorstellungC.Equals(BeispielVorstellungB) Then
-            Return False And "Problem bei Tagesplan: VorstellungÄndern"
+            Return False
         Else
             Return True
         End If
@@ -43,22 +43,19 @@
     End Function
 
     Public Function TestVorstellungEntfernen()
+        BeispielVorstellungB = _Tagesplan.getVorstellung(1)
+        BeispielVorstellungAnzahlB = TestFilmA.getAnzahlFilmwiedergabe
         BeispielVorstellungAnzahlA = TestFilmA.getAnzahlFilmwiedergabe
         _Tagesplan.VorstellungEntfernen(BeispielVorstellungA)
-        BeispielVorstellungB = _Tagesplan.getVorstellung(0)
-        BeispielVorstellungAnzahlB = TestFilmA.getAnzahlFilmwiedergabe
+
 
         If BeispielVorstellungA.Equals(BeispielVorstellungB) Then
-            Return False And "VorstellungEntfernen fehlgeschlagen"
+            Return False
         Else
             Return True
         End If
 
-        If BeispielVorstellungAnzahlA.Equals(BeispielVorstellungAnzahlB) Then
-            Return False And "Problem bei Tagesplan: VorstellungEntfernen: AnzahlFilmwiedergabe"
-        Else
-            Return True
-        End If
+
 
     End Function
 
