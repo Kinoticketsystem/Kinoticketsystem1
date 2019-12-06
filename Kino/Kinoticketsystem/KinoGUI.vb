@@ -630,4 +630,20 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             KundenGUI.lstSammlung.Items.Add(a(i))
         Next
     End Sub
+
+    Private Sub cmdVorstellungErstellen_Click(sender As Object, e As EventArgs) Handles cmdVorstellungErstellen.Click
+        NeueVorstellung.Show()
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.chlBesucherAuswählen.Items.Clear()
+        Dim a As ArrayList = DASKINO.getKunden
+        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+            NeueVorstellung.chlBesucherAuswählen.Items.Add(a(i))
+        Next
+        NeueVorstellung.chlFilme.Items.Clear()
+        Dim b As ArrayList = DASKINO.getFilmtitel
+        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+            NeueVorstellung.chlBesucherAuswählen.Items.Add(a(i))
+        Next
+
+    End Sub
 End Class
