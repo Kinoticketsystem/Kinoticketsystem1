@@ -210,7 +210,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             For i = 0 To (alleFilme.Count / 4) - 1
                 Sitzplätze = alleKinosäle(i * 4 + 1)
                 Reihen = alleKinosäle(i * 4 + 2)
-                SitzeproReihe = alleFilme(i * 4 + 3)
+                SitzeproReihe = alleKinosäle(i * 4 + 3)
                 alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
                 DASKINO.KinosaalAmEndeHinzufügen(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
             Next
