@@ -617,7 +617,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdFilmHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinzufügen.Click
-        KundenGUI.Show()
+        Call KundenGUI.Show()
         KundenGUI.BringToFront()
         KundenGUI.lstSammlung.Items.Clear()
         Dim a As ArrayList = DASKINO.getFilmtitel()

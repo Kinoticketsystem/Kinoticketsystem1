@@ -107,6 +107,12 @@
     <Compile Include="06TestForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FilmHinzufügenGUI.Designer.vb">
+      <DependentUpon>FilmHinzufügenGUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilmHinzufügenGUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Kunden.Designer.vb">
       <DependentUpon>Kunden.vb</DependentUpon>
     </Compile>
@@ -190,6 +196,9 @@
   <ItemGroup>
     <EmbeddedResource Include="06TestForm.resx">
       <DependentUpon>06TestForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmHinzufügenGUI.resx">
+      <DependentUpon>FilmHinzufügenGUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
