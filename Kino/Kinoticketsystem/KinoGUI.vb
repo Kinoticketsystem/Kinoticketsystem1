@@ -236,14 +236,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Vorstellungslänge As Integer
         Dim Vorstellungsfreigabe As Integer
         Dim Dimension As Boolean
-        If alleTagespläne.Count >= 9 And alleTagespläne.Count Mod 9 = 0 Then
-            For i = 0 To ((alleTagespläne.Count / 9) - 1)
-                Anfangszeit = alleTagespläne(i * 9 + 2)
-                Endzeit = alleTagespläne(i * 9 + 3)
-                vorgestellterFilm = alleTagespläne(i * 9 + 4)
-                Vorstellungslänge = alleTagespläne(i * 9 + 5)
-                Vorstellungsfreigabe = alleTagespläne(i * 9 + 6)
-                Dimension = alleTagespläne(i * 9 + 7)
+        If alleTagespläne.Count >= 8 And alleTagespläne.Count Mod 8 = 0 Then
+            For i = 0 To ((alleTagespläne.Count / 8) - 1)
+                Anfangszeit = alleTagespläne(i * 8 + 2)
+                Endzeit = alleTagespläne(i * 8 + 3)
+                vorgestellterFilm = alleTagespläne(i * 8 + 4)
+                Vorstellungslänge = alleTagespläne(i * 8 + 5)
+                Vorstellungsfreigabe = alleTagespläne(i * 8 + 6)
+                Dimension = alleTagespläne(i * 8 + 7)
                 Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
                 alleTagespläne2.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
 
@@ -332,14 +332,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                     FileOpen(1, "Tagespläne.txt", OpenMode.Append)
                     PrintLine(1, i)
                     'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
-                    PrintLine(1, j)
+                    PrintLine(1, j & ". Vorstellung:")
                     PrintLine(1, Vorstellung.getAnfangszeit())
                     PrintLine(1, Vorstellung.getEndzeit())
                     PrintLine(1, Vorstellung.getFilm.getFilmtitel())
                     PrintLine(1, Vorstellung.getFilm.getFilmlänge)
                     PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
                     PrintLine(1, Vorstellung.getFilm.Ist3D)
-                    PrintLine(1, Vorstellung.getSaal)
+                    'PrintLine(1, Vorstellung.getSaal)
 
                     FileClose(1)
 
