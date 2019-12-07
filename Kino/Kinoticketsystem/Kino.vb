@@ -213,7 +213,9 @@
         'wird am Ende eingefügt:
         _AnzahlKinosäle += 1
         Dim b(_AnzahlKinosäle) As Kinosaal
-        _Kinosäle(_AnzahlKinosäle - 1) = Kinosaal
+        '_Kinosäle(_AnzahlKinosäle - 1) = Kinosaal
+        _Kinosäle.Add(Kinosaal)
+
     End Sub
 
     Public Sub KinosaalEntfernen(a As Integer)

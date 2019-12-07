@@ -1,24 +1,24 @@
- 0 
+1. Kinosaal:
  120 
  8 
  15 
- 1 
+2. Kinosaal:
  60 
  6 
  10 
- 2 
+3. Kinosaal:
  75 
  5 
  15 
- 3 
+4. Kinosaal:
  40 
  5 
  8 
- 4 
+5. Kinosaal:
  100 
  5 
  20 
- 5 
+6. Kinosaal:
  50 
  5 
  10 

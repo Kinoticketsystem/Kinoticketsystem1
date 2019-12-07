@@ -171,13 +171,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim ist3D As Boolean
         If alleFilme.Count >= 4 And alleFilme.Count Mod 4 = 0 Then 'erstellt nur neue Filme aus dem Strings der Textdatei, wenn mindesten 4 Elemente in der Liste ist und die Anzahl der Elemente ein Vielfaches von 4 ist
             For i = 0 To ((alleFilme.Count / 4) - 1)
+                Dim k As Integer = i
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
                 Altersfreigabe = alleFilme(i * 4 + 2)
                 If alleFilme(i * 4 + 3) = "True" Then
                     ist3D = True
+                Else
+                    ist3D = False
                 End If
-                alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
+                'alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
                 DASKINO.FilmHinzufügen(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
             Next
         End If
@@ -192,7 +195,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         End While
         FileClose(1)
         For i = 0 To alleKunden.Count - 1
-            alleKunden2.Add(New Kunde(alleKunden(i)))
+            'alleKunden2.Add(New Kunde(alleKunden(i)))
             DASKINO.KundenHinzufügen(New Kunde(alleKunden(i)))
         Next
 
@@ -213,7 +216,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 Sitzplätze = alleKinosäle(i * 4 + 1)
                 Reihen = alleKinosäle(i * 4 + 2)
                 SitzeproReihe = alleKinosäle(i * 4 + 3)
-                alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
+                'alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
                 DASKINO.KinosaalAmEndeHinzufügen(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
             Next
         End If
@@ -290,7 +293,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 PrintLine(1, titel(j).getFilmtitel)
                 PrintLine(1, titel(j).getFilmlänge)
                 PrintLine(1, titel(j).getAltersfreigabe)
-                PrintLine(1, titel(j).ist3D)
+                If titel(j).ist3D = True Then
+                    PrintLine(1, "True")
+                Else
+                    PrintLine(1, "False")
+                End If
                 FileClose(1)
                 'Dim file2 As System.IO.StreamWriter
                 'file2 = My.Computer.FileSystem.OpenTextFileWriter("Filme.txt", True)
@@ -302,7 +309,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             For k = 0 To anzahlKinos - 1
                 FileOpen(1, "Kinosäle.txt", OpenMode.Append)
                 'PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
-                PrintLine(1, k)
+                PrintLine(1, k + 1 & ". Kinosaal:")
                 PrintLine(1, säle(k).getAnzahlSitzplätze)
                 PrintLine(1, säle(k).getAnzahlReihe)
                 PrintLine(1, säle(k).getSitzeProReihe)

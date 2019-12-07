@@ -1,0 +1,80 @@
+Rush Alles Für den Sieg
+ 122 
+ 12 
+False
+Der Soldat James Ryan
+ 169 
+ 16 
+False
+Coach Carter	
+ 136 
+ 6 
+False
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+Pacific Rim 2. Uprising	
+ 110 
+ 12 
+True
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+Deadpool 2	
+ 134 
+ 16 
+True
+Robin Hood	
+ 116 
+ 12 
+True
+Midway-Für Die Freiheit	
+ 138 
+ 6 
+True
+The Fast and the Furious	
+ 103 
+ 16 
+False
+Das Bourne Ultimatum	
+ 111 
+ 12 
+False
+Gladiator	
+ 171 
+ 16 
+False
+Jagt Auf Roter Oktober	
+ 129 
+ 12 
+False
+Ziemlich beste Freunde 
+ 112 
+ 6 
+False
+Avatar	
+ 162 
+ 12 
+True
+Hänsel und Gretel: Hexenjäger	
+ 88 
+ 16 
+True
+Dunkirk	
+ 107 
+ 12 
+False
+Escape Plan	
+ 115 
+ 16 
+False
+Ip man
+ 106 
+ 18 
+False
+Karate kid	
+ 140 
+ 6 
+False
