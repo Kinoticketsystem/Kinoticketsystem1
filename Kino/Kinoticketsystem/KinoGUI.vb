@@ -157,6 +157,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim alleTagespläne2 As ArrayList = New ArrayList()
         Dim alleVorstellungen As ArrayList = New ArrayList()
 
+
         DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
 
         FileOpen(1, "Filme.txt", OpenMode.Input)
@@ -238,6 +239,17 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Dimension As Boolean
         If alleTagespläne.Count >= 8 And alleTagespläne.Count Mod 8 = 0 Then
             For i = 0 To ((alleTagespläne.Count / 8) - 1)
+                If alleTagespläne(i * 8 + 0).contains("Tag") And i > 0 Then
+
+                    Dim plan As Tagesplan = New Tagesplan
+                    For j = 0 To alleVorstellungen.Count - 1
+                        plan.VorstellungHinzufügen(alleVorstellungen(j))
+                    Next
+
+                    alleTagespläne2.Add(plan)
+                    alleVorstellungen.Clear()
+                End If
+
                 Anfangszeit = alleTagespläne(i * 8 + 2)
                 Endzeit = alleTagespläne(i * 8 + 3)
                 vorgestellterFilm = alleTagespläne(i * 8 + 4)
@@ -245,7 +257,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 Vorstellungsfreigabe = alleTagespläne(i * 8 + 6)
                 Dimension = alleTagespläne(i * 8 + 7)
                 Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
-                alleTagespläne2.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
+                alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
 
             Next
         End If
@@ -326,11 +338,19 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
                 'Dim file4 As System.IO.StreamWriter
                 'file4 = My.Computer.FileSystem.OpenTextFileWriter("Tagespläne.txt", True)
-                'file4.WriteLine(i + 1 & ". Tag:")
+                'FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                ''file4.WriteLine(i + 1 & ". Tag:")
+                'PrintLine(1, i+1 & ". Tag:")
+                'FileClose(1)
                 For j = 1 To AnzahlVorstellungen
                     Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
                     FileOpen(1, "Tagespläne.txt", OpenMode.Append)
-                    PrintLine(1, i)
+                    If j = 1 Then
+                        PrintLine(1, i & ". Tag")
+                    Else
+                        PrintLine(1, i)
+                    End If
+
                     'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
                     PrintLine(1, j & ". Vorstellung:")
                     PrintLine(1, Vorstellung.getAnfangszeit())
