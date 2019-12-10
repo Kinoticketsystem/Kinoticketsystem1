@@ -662,7 +662,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdFilmHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinzufügen.Click
-        Call FilmHinzufügenGUI.Show()
+        FilmHinzufügenGUI.Show()
         FilmHinzufügenGUI.BringToFront()
 
         'Dim a As ArrayList = DASKINO.getFilmtitel()

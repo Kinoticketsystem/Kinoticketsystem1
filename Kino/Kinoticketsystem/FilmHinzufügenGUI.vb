@@ -18,7 +18,7 @@
         'Es muss noch in der listbox alle filntitel ausgegebn werden um zu überprüfen,m ob der neue film übergebn wurde ist bei kinogui geschrieben
         Dim a As ArrayList = KinoGUI.DASKINO.getFilmtitel()
         For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1 '-1 richtig?
-            lstAlleFilme.Items.Add(a(i))
+            lstAlleFilme.Items.Add(a(i).getFilmtitel)
         Next
     End Sub
 End Class
