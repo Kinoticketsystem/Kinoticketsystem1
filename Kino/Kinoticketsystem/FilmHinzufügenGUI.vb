@@ -1,7 +1,7 @@
 ﻿Public Class FilmHinzufügenGUI
     Private Filmname As String
     Private Filmlänge As Integer
-    Private Altersfreigabe As Byte
+    Private Altersfreigabe As Integer
     Private _3d As Boolean
     Private allesDa As Boolean
     Private Sub cmdFilmHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinzufügen.Click
@@ -40,7 +40,7 @@
             Dim film As Film = New Film(Filmname, Filmlänge, Altersfreigabe, _3d)
             Dim b As ArrayList = KinoGUI.DASKINO.getFilmtitel
 
-            If b.Contains(Filmname) Then
+            If b.Contains(film) Then
                 MsgBox("Film breits in der Datenbank")
             Else
                 KinoGUI.DASKINO.FilmHinzufügen(film)
