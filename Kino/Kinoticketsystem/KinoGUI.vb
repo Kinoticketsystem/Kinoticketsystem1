@@ -364,9 +364,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                     Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
                     FileOpen(1, "Tagespläne.txt", OpenMode.Append)
                     If j = 1 Then
-                        PrintLine(1, i & ". Tag")
+                        PrintLine(1, i + 1 & ". Tag")
                     Else
-                        PrintLine(1, i)
+                        PrintLine(1, i + 1)
                     End If
 
                     'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
@@ -406,7 +406,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim a As ArrayList = New ArrayList
         Dim c As Film = New Film("Testfilm", 120, 12, True)
         For i = 0 To 5
-            a.add(New Kinosaal(60, 6, 10)) 'film fehlt 
+            a.Add(New Kinosaal(60, 6, 10)) 'film fehlt 
         Next
         a(3) = New Kinosaal(120, 8, 15) 'film fehlt
         'Dim tagesplänesdv(6) As Tagesplan 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
