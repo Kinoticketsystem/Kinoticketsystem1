@@ -29,7 +29,7 @@ Public Class NeueVorstellung
     End Sub
 
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)
-        _Tag = tag
+        _Tag = tag 'erster Tag == 1)
         _Position = Position
     End Sub
 
@@ -42,8 +42,9 @@ Public Class NeueVorstellung
         Else
             'sich selber nicht hier schließen, damit danach noch ausgelesen werden kann
             Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm, _Kinosaal)
-            FTagesplan.filmändern(_Tag, _Position, z) 'was zum teufel. wer macht denn sowas?
-            KinoGUI.DASKINO.
+            '  FTagesplan.filmändern(_Tag, _Position, z) 'was zum teufel. wer macht denn sowas?
+            Dim a As ArrayList = KinoGUI.DASKINO.getKinosäle
+            KinoGUI.DASKINO.VorstellungHinzufügen(a(_Tag - 1), _Position, z)
             Me.Close()
         End If
     End Sub

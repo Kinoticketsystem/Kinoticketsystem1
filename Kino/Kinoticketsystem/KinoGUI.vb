@@ -7,6 +7,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
     Private _WochenpläneBearbeiten As Boolean
+    Public _Buchung As Boolean = True
+
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
 
@@ -23,6 +25,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
+        Dim a As Kinosaal = New Kinosaal(120, 12, 15)
+        KinosaalGUI.Aufrufen(a)
         KinosaalGUI.BringToFront()
         KinosaalGUI.Show()
     End Sub
@@ -35,13 +39,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+            _Buchung = True
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
             cmdNeueBuchung.BackColor = Color.Lime
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
-
+            _Buchung = False
         End If
     End Sub
 
@@ -652,13 +657,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            _Buchung = False
         Else
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             cmdBuchungStonieren.BackColor = Color.Lime
             cmdBuchungStonieren.FlatAppearance.BorderSize = 1
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
-
+            _Buchung = True
         End If
     End Sub
 
