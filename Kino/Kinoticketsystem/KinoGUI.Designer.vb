@@ -60,7 +60,7 @@ Partial Class KinoGUI
         Me.cmdFilmHinzufügen = New System.Windows.Forms.Button()
         Me.cmdVorstellungErstellen = New System.Windows.Forms.Button()
         Me.cmdNeuerKinosaal = New System.Windows.Forms.Button()
-        Me.cmdTexterfassenErik = New System.Windows.Forms.Button()
+        Me.cmdWochenpläneBearbeiten = New System.Windows.Forms.Button()
         Me.cmdKundenDatenbankAufrufen = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -512,18 +512,18 @@ Partial Class KinoGUI
         Me.cmdNeuerKinosaal.Text = "Neuer Kinosaal"
         Me.cmdNeuerKinosaal.UseVisualStyleBackColor = True
         '
-        'cmdTexterfassenErik
+        'cmdWochenpläneBearbeiten
         '
-        Me.cmdTexterfassenErik.BackgroundImage = CType(resources.GetObject("cmdTexterfassenErik.BackgroundImage"), System.Drawing.Image)
-        Me.cmdTexterfassenErik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.cmdTexterfassenErik.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdTexterfassenErik.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTexterfassenErik.Location = New System.Drawing.Point(1133, 495)
-        Me.cmdTexterfassenErik.Name = "cmdTexterfassenErik"
-        Me.cmdTexterfassenErik.Size = New System.Drawing.Size(144, 66)
-        Me.cmdTexterfassenErik.TabIndex = 40
-        Me.cmdTexterfassenErik.Text = "Texterfassen"
-        Me.cmdTexterfassenErik.UseVisualStyleBackColor = True
+        Me.cmdWochenpläneBearbeiten.BackgroundImage = CType(resources.GetObject("cmdWochenpläneBearbeiten.BackgroundImage"), System.Drawing.Image)
+        Me.cmdWochenpläneBearbeiten.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdWochenpläneBearbeiten.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdWochenpläneBearbeiten.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdWochenpläneBearbeiten.Location = New System.Drawing.Point(1133, 495)
+        Me.cmdWochenpläneBearbeiten.Name = "cmdWochenpläneBearbeiten"
+        Me.cmdWochenpläneBearbeiten.Size = New System.Drawing.Size(144, 66)
+        Me.cmdWochenpläneBearbeiten.TabIndex = 40
+        Me.cmdWochenpläneBearbeiten.Text = "Wochenpläne bearbeiten"
+        Me.cmdWochenpläneBearbeiten.UseVisualStyleBackColor = True
         '
         'cmdKundenDatenbankAufrufen
         '
@@ -579,11 +579,11 @@ Partial Class KinoGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1284, 1005)
+        Me.ClientSize = New System.Drawing.Size(1924, 1043)
         Me.Controls.Add(Me.cmdTestVorstellung)
         Me.Controls.Add(Me.cmdTestTagesplan)
         Me.Controls.Add(Me.cmdKundenDatenbankAufrufen)
-        Me.Controls.Add(Me.cmdTexterfassenErik)
+        Me.Controls.Add(Me.cmdWochenpläneBearbeiten)
         Me.Controls.Add(Me.cmdNeuerKinosaal)
         Me.Controls.Add(Me.cmdVorstellungErstellen)
         Me.Controls.Add(Me.cmdFilmHinzufügen)
@@ -666,7 +666,7 @@ Partial Class KinoGUI
     Friend WithEvents cmdFilmHinzufügen As Button
     Friend WithEvents cmdVorstellungErstellen As Button
     Friend WithEvents cmdNeuerKinosaal As Button
-    Friend WithEvents cmdTexterfassenErik As Button
+    Friend WithEvents cmdWochenpläneBearbeiten As Button
     Friend WithEvents cmdKundenDatenbankAufrufen As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer

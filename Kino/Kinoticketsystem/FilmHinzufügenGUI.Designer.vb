@@ -33,6 +33,7 @@ Partial Class FilmHinzufügenGUI
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.txtAltersfreigabe = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -58,14 +59,14 @@ Partial Class FilmHinzufügenGUI
         Me.txtFilmtitel.Location = New System.Drawing.Point(157, 56)
         Me.txtFilmtitel.Name = "txtFilmtitel"
         Me.txtFilmtitel.Size = New System.Drawing.Size(100, 20)
-        Me.txtFilmtitel.TabIndex = 2
+        Me.txtFilmtitel.TabIndex = 1
         '
         'txtFilmlänge
         '
         Me.txtFilmlänge.Location = New System.Drawing.Point(157, 94)
         Me.txtFilmlänge.Name = "txtFilmlänge"
         Me.txtFilmlänge.Size = New System.Drawing.Size(100, 20)
-        Me.txtFilmlänge.TabIndex = 3
+        Me.txtFilmlänge.TabIndex = 2
         '
         'Label3
         '
@@ -78,7 +79,7 @@ Partial Class FilmHinzufügenGUI
         '
         'cmdFilmHinzufügen
         '
-        Me.cmdFilmHinzufügen.Location = New System.Drawing.Point(359, 97)
+        Me.cmdFilmHinzufügen.Location = New System.Drawing.Point(361, 112)
         Me.cmdFilmHinzufügen.Name = "cmdFilmHinzufügen"
         Me.cmdFilmHinzufügen.Size = New System.Drawing.Size(133, 23)
         Me.cmdFilmHinzufügen.TabIndex = 5
@@ -88,7 +89,7 @@ Partial Class FilmHinzufügenGUI
         'lstAlleFilme
         '
         Me.lstAlleFilme.FormattingEnabled = True
-        Me.lstAlleFilme.Location = New System.Drawing.Point(56, 218)
+        Me.lstAlleFilme.Location = New System.Drawing.Point(157, 218)
         Me.lstAlleFilme.Name = "lstAlleFilme"
         Me.lstAlleFilme.Size = New System.Drawing.Size(141, 355)
         Me.lstAlleFilme.TabIndex = 6
@@ -114,10 +115,10 @@ Partial Class FilmHinzufügenGUI
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(141, 152)
+        Me.CheckBox1.Location = New System.Drawing.Point(157, 156)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(46, 17)
-        Me.CheckBox1.TabIndex = 9
+        Me.CheckBox1.TabIndex = 4
         Me.CheckBox1.Text = "3D?"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -126,13 +127,23 @@ Partial Class FilmHinzufügenGUI
         Me.txtAltersfreigabe.Location = New System.Drawing.Point(157, 119)
         Me.txtAltersfreigabe.Name = "txtAltersfreigabe"
         Me.txtAltersfreigabe.Size = New System.Drawing.Size(100, 20)
-        Me.txtAltersfreigabe.TabIndex = 10
+        Me.txtAltersfreigabe.TabIndex = 3
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(97, 218)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(54, 13)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "Alle Filme:"
         '
         'FilmHinzufügenGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1035, 585)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAltersfreigabe)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label5)
@@ -162,4 +173,5 @@ Partial Class FilmHinzufügenGUI
     Friend WithEvents Label5 As Label
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents txtAltersfreigabe As TextBox
+    Friend WithEvents Label6 As Label
 End Class

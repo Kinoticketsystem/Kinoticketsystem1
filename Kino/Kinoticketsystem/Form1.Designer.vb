@@ -742,13 +742,14 @@ Partial Class FTagesplan
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.Image = Global.Kinoticketsystem.My.Resources.Resources.Das_Bourne_Ultimatum
         Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(168, 422)
+        Me.PictureBox1.Location = New System.Drawing.Point(171, 400)
+        Me.PictureBox1.MaximumSize = New System.Drawing.Size(57, 80)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(57, 80)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 75
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False

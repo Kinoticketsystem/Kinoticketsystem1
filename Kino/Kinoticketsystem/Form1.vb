@@ -369,10 +369,13 @@ Public Class FTagesplan
     ' End Sub
     Private Sub VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
-        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a)
-        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a)
-        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a)
-        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a)
+        Dim f As Kinosaal = New Kinosaal(120, 8, 15)
+
+        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a, f)
+        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a, f)
+        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a, f)
+        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a, f)
+
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
         _dritterTag = New Tagesplan
@@ -1450,7 +1453,11 @@ Public Class FTagesplan
         '(System.Environment.SpecialFolder.Personal) _
         '& "\Image.jpg") '.jpg ist wichtig
 
-        Dim BildVomFilm As Image = Image.FromFile("C:\Users\thiemo.rickenstorf\source\repos\Kinoticketsystem1\Kino\Kinoticketsystem\Resources\Avatar.png") 'läuft noch nicht
+        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Deadpool 2.png")
+
+        'CType(My.Resources.ResourceManager.GetObject("Deadpool 2.png"), Drawing.Image)
+
+        'Image.FromFile("C:\Users\thiemo.rickenstorf\source\repos\Kinoticketsystem1\Kino\Kinoticketsystem\Resources\Avatar.png") 'läuft noch nicht
         MausüberButton(BildVomFilm, Button1, 1, 1)
     End Sub
 

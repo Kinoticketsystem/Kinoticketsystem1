@@ -3,8 +3,8 @@
     Private TestFilmB As Film = New Film("TestFilmB", 90, 12, False)
     Private testsaal1 As Kinosaal = New Kinosaal(60, 10, 6) 'TestFilmA wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
 
-    Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA)
-    Private BeispielVorstellungC As Vorstellung = New Vorstellung(120, 210, New ArrayList(), TestFilmB)
+    Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA, testsaal1)
+    Private BeispielVorstellungC As Vorstellung = New Vorstellung(120, 210, New ArrayList(), TestFilmB, testsaal1)
     Private _Tagespläne As ArrayList
     Private Testplan As New Tagesplan
     Private FilmListe As New ArrayList
