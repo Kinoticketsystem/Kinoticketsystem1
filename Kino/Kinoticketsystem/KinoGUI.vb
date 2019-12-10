@@ -2,6 +2,7 @@
 
 Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unötig(Werden nicht gebraucht)
     Public DASKINO As Kino
+    Public _Buchung As Boolean = True
 
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
@@ -22,6 +23,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
+        Dim a As Kinosaal = New Kinosaal(120, 8, 15)
+        KinosaalGUI.Aufrufen(a)
         KinosaalGUI.BringToFront()
         KinosaalGUI.Show()
     End Sub
@@ -34,12 +37,15 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+            _Buchung = True
+
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
             cmdNeueBuchung.BackColor = Color.Lime
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+            _Buchung = False
 
         End If
     End Sub
@@ -409,8 +415,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
 
         End If
-        ' AnzahlFreiPlätzeBestimmen()
-        '    nächstenFilmProKinosaalANzeigen()
+        AnzahlFreiPlätzeBestimmen()
+        nächstenFilmProKinosaalANzeigen()
         '....
     End Sub
 
@@ -439,16 +445,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub AnzahlFreiPlätzeBestimmen()
-        'Dim a() As Kinosaal = DASKINO.getKinosäle
-        'For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
-        '    If a(i).getAnzahlFreiPlätze > 0 Then
-        '        LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-        '    ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
-        '        LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-        '    Else
-        '        LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-        '    End If
-        'Next
+        Dim a() As Kinosaal = DASKINO.getKinosäle
+        For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
+            If a(i).getAnzahlFreiPlätze > 0 Then
+                LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
+                LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            Else
+                LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            End If
+        Next
     End Sub
 
     Private Sub LabelFreiPlätzeberechnen(c As Integer, frei As Integer, anzahlfreiePlätze As Integer, anzahlPlätze As Integer)
@@ -606,12 +612,15 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            _Buchung = False
+
         Else
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             cmdBuchungStonieren.BackColor = Color.Lime
             cmdBuchungStonieren.FlatAppearance.BorderSize = 1
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            _Buchung = True
 
         End If
     End Sub
@@ -651,4 +660,6 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Next
 
     End Sub
+
+
 End Class

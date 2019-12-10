@@ -38,7 +38,6 @@ Public Class FTagesplan
     End Sub
     Public Sub SetKinosaal(a As Kinosaal)
         _Kinosaal = a
-
     End Sub
     Public Function GetKinosaal() As Kinosaal
         Return _Kinosaal
@@ -1392,7 +1391,7 @@ Public Class FTagesplan
         End If
     End Sub
     Private Sub Geklickt(a As Integer, b As Integer)
-        Dim c As Vorstellung
+        Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
 
         If _Aendern Then
             'ohne Infos vom Film
@@ -1404,39 +1403,39 @@ Public Class FTagesplan
             Select Case a
                 Case 1
                     c = _ersterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 2
                     c = _zweiterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 3
                     c = _dritterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 4
                     c = _vierterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 5
                     c = _fünfterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 6
                     c = _sechsterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 7
                     c = _siebterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
             End Select
         End If
     End Sub
