@@ -12,7 +12,7 @@ Public Class Vorstellung
 
 
     'Konstruktor
-    Public Sub New(ByVal Startzeit As Integer, ByVal Endzeit As Integer, ByVal Besucher As ArrayList, ByVal Film As Film) 'ByVal Saal As Kinosaal, 
+    Public Sub New(ByVal Startzeit As Integer, ByVal Endzeit As Integer, ByVal Besucher As ArrayList, ByVal Film As Film, ByVal Saal As Kinosaal)
         If Startzeit >= 0 And Endzeit < 1080 Then 'entspricht nicht vor 8:00 und nicht länger als 2:00
             _Startzeit = Startzeit
             _Endzeit = Endzeit
