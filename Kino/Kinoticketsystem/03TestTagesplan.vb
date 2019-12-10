@@ -2,6 +2,7 @@
     Private _Tagesplan As Tagesplan = New Tagesplan()
     Private TestFilmA As Film = New Film("TestFilmA", 120, 16, True)
     Private TestFilmB As Film = New Film("TestFilmB", 90, 12, False)
+    Private 
     Private BeispielVorstellungA As Vorstellung = New Vorstellung(0, 120, New ArrayList(), TestFilmA)
     Private BeispielVorstellungC As Vorstellung = New Vorstellung(10, 100, New ArrayList(), TestFilmB)
 
