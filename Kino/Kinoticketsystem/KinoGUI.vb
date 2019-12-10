@@ -417,7 +417,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim tagesplänesdv As ArrayList = New ArrayList 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
         For i = 0 To 6
             Dim z As Tagesplan = New Tagesplan()
-            z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c), New Vorstellung(130, 250, New ArrayList, c), New Vorstellung(260, 380, New ArrayList, c))
+            z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c, New Kinosaal(60, 6, 10)), New Vorstellung(130, 250, New ArrayList, c, New Kinosaal(60, 6, 10)), New Vorstellung(260, 380, New ArrayList, c, New Kinosaal(60, 6, 10)))
             tagesplänesdv.Add(z)
         Next
         DASKINO = New Kino(6, New ArrayList, New ArrayList, tagesplänesdv, a)
