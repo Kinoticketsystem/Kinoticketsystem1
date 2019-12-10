@@ -78,7 +78,7 @@ Partial Class FilmHinzufügenGUI
         '
         'cmdFilmHinzufügen
         '
-        Me.cmdFilmHinzufügen.Location = New System.Drawing.Point(359, 97)
+        Me.cmdFilmHinzufügen.Location = New System.Drawing.Point(361, 112)
         Me.cmdFilmHinzufügen.Name = "cmdFilmHinzufügen"
         Me.cmdFilmHinzufügen.Size = New System.Drawing.Size(133, 23)
         Me.cmdFilmHinzufügen.TabIndex = 5
@@ -88,7 +88,7 @@ Partial Class FilmHinzufügenGUI
         'lstAlleFilme
         '
         Me.lstAlleFilme.FormattingEnabled = True
-        Me.lstAlleFilme.Location = New System.Drawing.Point(56, 218)
+        Me.lstAlleFilme.Location = New System.Drawing.Point(157, 218)
         Me.lstAlleFilme.Name = "lstAlleFilme"
         Me.lstAlleFilme.Size = New System.Drawing.Size(141, 355)
         Me.lstAlleFilme.TabIndex = 6
@@ -114,7 +114,7 @@ Partial Class FilmHinzufügenGUI
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(141, 152)
+        Me.CheckBox1.Location = New System.Drawing.Point(157, 156)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(46, 17)
         Me.CheckBox1.TabIndex = 4

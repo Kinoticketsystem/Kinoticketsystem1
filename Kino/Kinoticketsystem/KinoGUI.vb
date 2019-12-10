@@ -238,9 +238,13 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Vorstellungslänge As Integer
         Dim Vorstellungsfreigabe As Integer
         Dim Dimension As Boolean
-        If alleTagespläne.Count >= 8 And alleTagespläne.Count Mod 8 = 0 Then
-            For i = 0 To ((alleTagespläne.Count / 8) - 1)
-                If alleTagespläne(i * 8 + 0).contains("Tag") And i > 0 Then
+        Dim planplätze As Integer
+        Dim planreihen As Integer
+        Dim plansitzeproreihe As Integer
+
+        If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
+            For i = 0 To ((alleTagespläne.Count / 11) - 1)
+                If alleTagespläne(i * 11 + 0).contains("Tag") And i > 0 Then
 
                     Dim plan As Tagesplan = New Tagesplan
                     For j = 0 To alleVorstellungen.Count - 1
@@ -251,14 +255,18 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                     alleVorstellungen.Clear()
                 End If
 
-                Anfangszeit = alleTagespläne(i * 8 + 2)
-                Endzeit = alleTagespläne(i * 8 + 3)
-                vorgestellterFilm = alleTagespläne(i * 8 + 4)
-                Vorstellungslänge = alleTagespläne(i * 8 + 5)
-                Vorstellungsfreigabe = alleTagespläne(i * 8 + 6)
-                Dimension = alleTagespläne(i * 8 + 7)
+                Anfangszeit = alleTagespläne(i * 11 + 2)
+                Endzeit = alleTagespläne(i * 11 + 3)
+                vorgestellterFilm = alleTagespläne(i * 11 + 4)
+                Vorstellungslänge = alleTagespläne(i * 11 + 5)
+                Vorstellungsfreigabe = alleTagespläne(i * 11 + 6)
+                Dimension = alleTagespläne(i * 11 + 7)
+                planplätze = alleTagespläne(i * 11 + 8)
+                planreihen = alleTagespläne(i * 11 + 9)
+                plansitzeproreihe = alleTagespläne(i * 11 + 10)
                 Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
-                alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
+                Dim saal As New Kinosaal(planplätze, planreihen, plansitzeproreihe)
+                alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film, saal))
 
             Next
         End If
@@ -369,8 +377,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                     PrintLine(1, Vorstellung.getFilm.getFilmlänge)
                     PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
                     PrintLine(1, Vorstellung.getFilm.Ist3D)
-                    'PrintLine(1, Vorstellung.getSaal)
-
+                    PrintLine(1, Vorstellung.getSaal.getAnzahlSitzplätze)
+                    PrintLine(1, Vorstellung.getSaal.getAnzahlReihe)
+                    PrintLine(1, Vorstellung.getSaal.getSitzeProReihe)
                     FileClose(1)
 
 
