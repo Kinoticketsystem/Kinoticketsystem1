@@ -370,10 +370,13 @@ Public Class FTagesplan
     ' End Sub
     Private Sub VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm()
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
-        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a)
-        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a)
-        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a)
-        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a)
+        Dim f As Kinosaal = New Kinosaal(120, 8, 15)
+
+        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a, f)
+        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a, f)
+        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a, f)
+        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a, f)
+
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
         _dritterTag = New Tagesplan

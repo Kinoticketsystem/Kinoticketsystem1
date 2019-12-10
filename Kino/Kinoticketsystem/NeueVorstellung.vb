@@ -9,6 +9,7 @@ Public Class NeueVorstellung
     Private _FilmHinzugefügt As Boolean = False
     Private _Tag As Integer
     Private _Position As Integer
+    Private _Kinosaal As Kinosaal
 
     Private Sub NeueVorstellung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         StartuhrzeitWert.DecimalPlaces = 2
@@ -21,6 +22,9 @@ Public Class NeueVorstellung
         EnduhrzeitWert.Maximum = 24
         EnduhrzeitWert.Minimum = 8
         EnduhrzeitWert.Increment = 0.05
+        NUDKinosaal.Maximum = 7
+        NUDKinosaal.Minimum = 1
+        NUDKinosaal.Value = 1
 
     End Sub
 
@@ -37,7 +41,7 @@ Public Class NeueVorstellung
             lblFilmAuswählen.ForeColor = Color.Red
         Else
             'sich selber nicht hier schließen, damit danach noch ausgelesen werden kann
-            Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm)
+            Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm, _Kinosaal)
             FTagesplan.filmändern(_Tag, _Position, z)
             Me.Close()
         End If
@@ -303,5 +307,11 @@ Public Class NeueVorstellung
         For i = 0 To A.Count
             lstBesucher.Items.Add(A(i).getName)
         Next
+    End Sub
+
+    Private Sub NUDKinosaal_ValueChanged(sender As Object, e As EventArgs) Handles NUDKinosaal.ValueChanged
+        Dim a As ArrayList = KinoGUI.DASKINO.getKinosäle
+        _Kinosaal = a(NUDKinosaal.Value - 1)
+
     End Sub
 End Class

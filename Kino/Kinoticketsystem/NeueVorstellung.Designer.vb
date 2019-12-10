@@ -38,13 +38,16 @@ Partial Class NeueVorstellung
         Me.StartuhrzeitWert = New System.Windows.Forms.NumericUpDown()
         Me.EnduhrzeitWert = New System.Windows.Forms.NumericUpDown()
         Me.lblFilmInfos = New System.Windows.Forms.Label()
+        Me.lblKinosaal = New System.Windows.Forms.Label()
+        Me.NUDKinosaal = New System.Windows.Forms.NumericUpDown()
         CType(Me.StartuhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnduhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NUDKinosaal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdfertig
         '
-        Me.cmdfertig.Location = New System.Drawing.Point(524, 509)
+        Me.cmdfertig.Location = New System.Drawing.Point(454, 537)
         Me.cmdfertig.Name = "cmdfertig"
         Me.cmdfertig.Size = New System.Drawing.Size(75, 32)
         Me.cmdfertig.TabIndex = 0
@@ -112,7 +115,7 @@ Partial Class NeueVorstellung
         Me.cmdFilmHinZuFügen.BackColor = System.Drawing.SystemColors.Control
         Me.cmdFilmHinZuFügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdFilmHinZuFügen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdFilmHinZuFügen.Location = New System.Drawing.Point(293, 336)
+        Me.cmdFilmHinZuFügen.Location = New System.Drawing.Point(293, 311)
         Me.cmdFilmHinZuFügen.Name = "cmdFilmHinZuFügen"
         Me.cmdFilmHinZuFügen.Size = New System.Drawing.Size(155, 32)
         Me.cmdFilmHinZuFügen.TabIndex = 9
@@ -121,7 +124,7 @@ Partial Class NeueVorstellung
         '
         'cmdBesucherHinzufügen
         '
-        Me.cmdBesucherHinzufügen.Location = New System.Drawing.Point(251, 509)
+        Me.cmdBesucherHinzufügen.Location = New System.Drawing.Point(251, 537)
         Me.cmdBesucherHinzufügen.Name = "cmdBesucherHinzufügen"
         Me.cmdBesucherHinzufügen.Size = New System.Drawing.Size(182, 32)
         Me.cmdBesucherHinzufügen.TabIndex = 12
@@ -134,7 +137,7 @@ Partial Class NeueVorstellung
         Me.lblBesucherAuswähler.BackColor = System.Drawing.Color.Transparent
         Me.lblBesucherAuswähler.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBesucherAuswähler.ForeColor = System.Drawing.Color.White
-        Me.lblBesucherAuswähler.Location = New System.Drawing.Point(43, 374)
+        Me.lblBesucherAuswähler.Location = New System.Drawing.Point(43, 417)
         Me.lblBesucherAuswähler.Name = "lblBesucherAuswähler"
         Me.lblBesucherAuswähler.Size = New System.Drawing.Size(178, 23)
         Me.lblBesucherAuswähler.TabIndex = 11
@@ -153,7 +156,7 @@ Partial Class NeueVorstellung
         '
         Me.chlBesucherAuswählen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chlBesucherAuswählen.FormattingEnabled = True
-        Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 374)
+        Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 417)
         Me.chlBesucherAuswählen.Name = "chlBesucherAuswählen"
         Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 114)
         Me.chlBesucherAuswählen.TabIndex = 14
@@ -163,9 +166,9 @@ Partial Class NeueVorstellung
         Me.lstBesucher.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstBesucher.FormattingEnabled = True
         Me.lstBesucher.ItemHeight = 19
-        Me.lstBesucher.Location = New System.Drawing.Point(454, 374)
+        Me.lstBesucher.Location = New System.Drawing.Point(454, 417)
         Me.lstBesucher.Name = "lstBesucher"
-        Me.lstBesucher.Size = New System.Drawing.Size(145, 99)
+        Me.lstBesucher.Size = New System.Drawing.Size(145, 118)
         Me.lstBesucher.TabIndex = 16
         '
         'StartuhrzeitWert
@@ -196,12 +199,34 @@ Partial Class NeueVorstellung
         Me.lblFilmInfos.TabIndex = 19
         Me.lblFilmInfos.Text = "Beispielfilm"
         '
+        'lblKinosaal
+        '
+        Me.lblKinosaal.AutoSize = True
+        Me.lblKinosaal.BackColor = System.Drawing.Color.Transparent
+        Me.lblKinosaal.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKinosaal.ForeColor = System.Drawing.Color.White
+        Me.lblKinosaal.Location = New System.Drawing.Point(43, 360)
+        Me.lblKinosaal.Name = "lblKinosaal"
+        Me.lblKinosaal.Size = New System.Drawing.Size(170, 23)
+        Me.lblKinosaal.TabIndex = 20
+        Me.lblKinosaal.Text = "Kinosaal auswählen:"
+        '
+        'NUDKinosaal
+        '
+        Me.NUDKinosaal.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NUDKinosaal.Location = New System.Drawing.Point(251, 358)
+        Me.NUDKinosaal.Name = "NUDKinosaal"
+        Me.NUDKinosaal.Size = New System.Drawing.Size(76, 31)
+        Me.NUDKinosaal.TabIndex = 21
+        '
         'NeueVorstellung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(639, 565)
+        Me.ClientSize = New System.Drawing.Size(639, 607)
+        Me.Controls.Add(Me.NUDKinosaal)
+        Me.Controls.Add(Me.lblKinosaal)
         Me.Controls.Add(Me.lblFilmInfos)
         Me.Controls.Add(Me.EnduhrzeitWert)
         Me.Controls.Add(Me.StartuhrzeitWert)
@@ -223,6 +248,7 @@ Partial Class NeueVorstellung
         Me.Text = "Veranstaltung ändern"
         CType(Me.StartuhrzeitWert, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnduhrzeitWert, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NUDKinosaal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,4 +269,6 @@ Partial Class NeueVorstellung
     Friend WithEvents StartuhrzeitWert As NumericUpDown
     Friend WithEvents EnduhrzeitWert As NumericUpDown
     Friend WithEvents lblFilmInfos As Label
+    Friend WithEvents lblKinosaal As Label
+    Friend WithEvents NUDKinosaal As NumericUpDown
 End Class
