@@ -6,6 +6,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
+    Private _WochenpläneBearbeiten As Boolean
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
 
@@ -695,5 +696,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             NeueVorstellung.chlBesucherAuswählen.Items.Add(b(i))
         Next
 
+    End Sub
+
+    Private Sub cmdWochenpläneBearbeiten_Click(sender As Object, e As EventArgs) Handles cmdWochenpläneBearbeiten.Click
+        If _WochenpläneBearbeiten Then
+            _WochenpläneBearbeiten = False
+        End If
     End Sub
 End Class
