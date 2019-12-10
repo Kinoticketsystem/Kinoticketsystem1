@@ -241,4 +241,5 @@
     '    _Kinosäle = B
 
     'End Sub
+    Public Sub VorstellungHinzufügen(tagesplan As Tagesplan, Position As Integer, )
 End Class

@@ -22,7 +22,7 @@ Public Class NeueVorstellung
         EnduhrzeitWert.Maximum = 24
         EnduhrzeitWert.Minimum = 8
         EnduhrzeitWert.Increment = 0.05
-        NUDKinosaal.Maximum = 7
+        NUDKinosaal.Maximum = 6
         NUDKinosaal.Minimum = 1
         NUDKinosaal.Value = 1
 
@@ -42,7 +42,8 @@ Public Class NeueVorstellung
         Else
             'sich selber nicht hier schließen, damit danach noch ausgelesen werden kann
             Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm, _Kinosaal)
-            FTagesplan.filmändern(_Tag, _Position, z)
+            FTagesplan.filmändern(_Tag, _Position, z) 'was zum teufel. wer macht denn sowas?
+            KinoGUI.DASKINO.
             Me.Close()
         End If
     End Sub
