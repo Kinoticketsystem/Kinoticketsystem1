@@ -58,14 +58,14 @@ Partial Class FilmHinzufügenGUI
         Me.txtFilmtitel.Location = New System.Drawing.Point(157, 56)
         Me.txtFilmtitel.Name = "txtFilmtitel"
         Me.txtFilmtitel.Size = New System.Drawing.Size(100, 20)
-        Me.txtFilmtitel.TabIndex = 2
+        Me.txtFilmtitel.TabIndex = 1
         '
         'txtFilmlänge
         '
         Me.txtFilmlänge.Location = New System.Drawing.Point(157, 94)
         Me.txtFilmlänge.Name = "txtFilmlänge"
         Me.txtFilmlänge.Size = New System.Drawing.Size(100, 20)
-        Me.txtFilmlänge.TabIndex = 3
+        Me.txtFilmlänge.TabIndex = 2
         '
         'Label3
         '
@@ -117,7 +117,7 @@ Partial Class FilmHinzufügenGUI
         Me.CheckBox1.Location = New System.Drawing.Point(141, 152)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(46, 17)
-        Me.CheckBox1.TabIndex = 9
+        Me.CheckBox1.TabIndex = 4
         Me.CheckBox1.Text = "3D?"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -126,7 +126,7 @@ Partial Class FilmHinzufügenGUI
         Me.txtAltersfreigabe.Location = New System.Drawing.Point(157, 119)
         Me.txtAltersfreigabe.Name = "txtAltersfreigabe"
         Me.txtAltersfreigabe.Size = New System.Drawing.Size(100, 20)
-        Me.txtAltersfreigabe.TabIndex = 10
+        Me.txtAltersfreigabe.TabIndex = 3
         '
         'FilmHinzufügenGUI
         '
