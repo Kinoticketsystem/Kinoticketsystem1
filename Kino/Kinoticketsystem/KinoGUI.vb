@@ -6,7 +6,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
-    Private _WochenpläneBearbeiten As Boolean
+    Public _WochenpläneBearbeiten As Boolean
     Public _Buchung As Boolean = True
 
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
@@ -606,6 +606,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(0)))
+        'so müsste es laufen, wenn 3D arraylist,  besser wäre eigentlich array!!!!
+        'Dim a As ArrayList = DASKINO.getTagesplan
+        ' Dim b As ArrayList = a(0)
+        '  FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, b(0), b(1), b(2), b(3), b(4), b(5), b(6))
         ' FTagesplan.SetKinosaal(DASKINO.getKinosäle(0)) 'muss wieder auskommentiert werden, wenn es Kinosäle gibt
         'Veranstaltungen übergeben
         'FTagesplan.
@@ -709,8 +714,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdWochenpläneBearbeiten_Click(sender As Object, e As EventArgs) Handles cmdWochenpläneBearbeiten.Click
-        If _WochenpläneBearbeiten Then
+        If cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup Then
+            _WochenpläneBearbeiten = True
+            cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderColor = Color.Black
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+        Else
             _WochenpläneBearbeiten = False
+            cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
+
         End If
     End Sub
 End Class

@@ -28,6 +28,14 @@ Public Class NeueVorstellung
 
     End Sub
 
+    Public Sub datenübergen(Filmtitel As String, besucher As ArrayList, kinosaal As Integer)
+        txtname.Text = Filmtitel
+        For i = 0 To besucher.Count - 1
+            lstBesucher.Items.Add(besucher(i))
+        Next
+        NUDKinosaal.Value = kinosaal
+    End Sub
+
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)
         _Tag = tag 'erster Tag == 1)
         _Position = Position
@@ -315,5 +323,19 @@ Public Class NeueVorstellung
         Dim a As ArrayList = KinoGUI.DASKINO.getKinosäle
         _Kinosaal = a(NUDKinosaal.Value - 1)
 
+    End Sub
+
+    Private Sub cmdBesucherNEtfernen_Click(sender As Object, e As EventArgs) Handles cmdBesucherNEtfernen.Click
+
+        Dim a As IList = lstBesucher.SelectedItems
+        If a.Count > 0 Then
+            For i = 0 To -1
+                If lstBesucher.GetSelected(i) Then
+                    lstBesucher.Items.RemoveAt(i)
+                End If
+            Next
+        Else
+            lstBesucher.Items.Clear()
+        End If
     End Sub
 End Class

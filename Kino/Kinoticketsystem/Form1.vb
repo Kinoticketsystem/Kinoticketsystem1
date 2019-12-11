@@ -8,7 +8,7 @@ Public Class FTagesplan
     Private _fünfterTag As ITagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
-    Private _Aendern As Boolean
+    Private _Aendern As Boolean = True
     Private _Kinosaal As Kinosaal
     Private _Kunde As Kunde = New Kunde("Standard")
     'Die nächsten 7 Tage werden angezeigt
@@ -20,12 +20,12 @@ Public Class FTagesplan
         VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
         GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
         PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
-        ' ButtonsInvisibleMachen() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
+        ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
         FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
 
 
     End Sub
-    Public Sub InitialisiereDenWochenplan(ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
+    Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
         _dritterTag = dritterTag
@@ -33,6 +33,7 @@ Public Class FTagesplan
         _fünfterTag = fünfterTag
         _sechsterTag = sechsterTag
         _siebterTag = siebterTag
+        _Aendern = AendernModus
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
@@ -761,7 +762,7 @@ Public Class FTagesplan
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
             Case 1
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button44.Hide()
                 Button45.Hide()
                 Button46.Hide()
@@ -769,53 +770,53 @@ Public Class FTagesplan
                 Button48.Hide()
                 Button49.Hide()
             Case 2
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button45.Hide()
                 Button46.Hide()
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 3
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button46.Hide()
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 4
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 5
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button48.Hide()
                 Button49.Hide()
             Case 6
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480
-                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button49.Hide()
             Case 7
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480
-                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480
-                Button49.Top = (_siebterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button49.Top = (_siebterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den siebter Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
@@ -1248,29 +1249,35 @@ Public Class FTagesplan
 
     End Sub
 
-    Private Sub ButtonsInvisibleMachen()
-        cmdTagesPlanErstellen.Hide()
-        cmdFilmÄndern.Hide()
+    Private Sub ButtonsInvisibleMachenJeNachModus()
+        cmdFilmeVOnEInemTagEntfernen.Hide()
+        cmdÄnderungenSpeichern.Hide()
+        If _Aendern Then
+            Me.Text = "Wochenplan - Änderungsmodus"
+        Else
+            Me.Text = "Wochenplan"
+            'werden dann grau, deshalb anders lösen
+            'chbMontag.Enabled = False
+            'chbDienstag.Enabled = False
+            'chbMittwoch.Enabled = False
+            'chbDonnerstag.Enabled = False
+            'chbFreitag.Enabled = False
+            'chbSamstag.Enabled = False
+            'chbSonntag.Enabled = False
+
+            ''
+            'chbMittwoch.ForeColor = Color.White
+            'chbMontag.ForeColor = Color.White
+            'chbDienstag.ForeColor = Color.White
+            'chbDonnerstag.ForeColor = Color.White
+            'chbFreitag.ForeColor = Color.White
+            'chbSamstag.ForeColor = Color.White
+            'chbSonntag.ForeColor = Color.White
+        End If
         'Man könnte hier noch die Position individuell anpassen
     End Sub
 
-    Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
-        _Aendern = Not _Aendern
-        If _Aendern Then
-            cmdFilmÄndern.FlatStyle = FlatStyle.Flat
-            cmdFilmÄndern.FlatAppearance.BorderColor = Color.Black
-            'cmdFilmÄndern.BackColor = New Color.
-            'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
-
-        Else
-            cmdFilmÄndern.FlatStyle = FlatStyle.Popup
-            ' cmdFilmÄndern.BackColor = Color.Lime
-            cmdFilmÄndern.FlatAppearance.BorderSize = 1
-
-
-        End If
-
-
+    Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdÄnderungenSpeichern.Click
         '    _Montag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
         '  Debug.WriteLine("FilmHinzufügen funktioniert nicht") 'lol funktioniert nicht
         '  Select Case True
@@ -1306,91 +1313,104 @@ Public Class FTagesplan
         PositionDerFilmButtonsFestlegenY()
     End Sub
     Private Sub chbMontag_CheckedChanged(sender As Object, e As EventArgs) Handles chbMontag.CheckedChanged
-        If chbMontag.Checked Then
+        If chbMontag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbMontag.Left
-
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbMontag.Left
+        Else
+            chbMontag.Checked = False
         End If
     End Sub
     Private Sub chbDienstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDienstag.CheckedChanged
-        If chbDienstag.Checked Then
+        If chbDienstag.Checked And _Aendern Then
             chbMontag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbDienstag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbDienstag.Left
+        Else
+            chbDienstag.Checked = False
         End If
     End Sub
     Private Sub chbMittwoch_CheckedChanged(sender As Object, e As EventArgs) Handles chbMittwoch.CheckedChanged
-        If chbMittwoch.Checked Then
+        If chbMittwoch.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMontag.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbMittwoch.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbMittwoch.Left
+        Else
+            chbMittwoch.Checked = False
         End If
     End Sub
     Private Sub chbDonnerstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDonnerstag.CheckedChanged
-        If chbDonnerstag.Checked Then
+        If chbDonnerstag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbMontag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbDonnerstag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbDonnerstag.Left
+        Else
+            chbDonnerstag.Checked = False
         End If
     End Sub
     Private Sub chbFreitag_CheckedChanged(sender As Object, e As EventArgs) Handles chbFreitag.CheckedChanged
-        If chbFreitag.Checked Then
+        If chbFreitag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbMontag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbFreitag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbFreitag.Left
             '     MonthCalendar1.Left = chbMontag.Left
+        Else
+            chbFreitag.Checked = False
         End If
     End Sub
     Private Sub chbSamstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSamstag.CheckedChanged
-        If chbSamstag.Checked Then
+        If chbSamstag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbMontag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbSamstag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbSamstag.Left
             '      MonthCalendar1.Left = chbMontag.Left
+        Else
+            chbSamstag.Checked = False
         End If
     End Sub
     Private Sub chbSonntag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSonntag.CheckedChanged
-        If chbSonntag.Checked Then
+        If chbSonntag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbMontag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = Size.Width - (cmdTagesPlanErstellen.Width + 45)
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = Size.Width - (cmdFilmeVOnEInemTagEntfernen.Width + 45)
             '     MonthCalendar1.Left = chbMontag.Left
+        Else
+            chbSonntag.Checked = False
         End If
     End Sub
     Private Sub Geklickt(a As Integer, b As Integer)
@@ -1462,11 +1482,12 @@ Public Class FTagesplan
 
 
     Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
-        mausverlässtButton
+        mausverlässtButton()
     End Sub
 
     Private Sub mausverlässtButton()
         PictureBox1.Hide()
+        lblTextüberFIlm.Hide()
     End Sub
 
     Private Sub Button2_MouseMove(sender As Object, e As EventArgs) Handles Button2.MouseMove
@@ -1613,148 +1634,148 @@ Public Class FTagesplan
     Private Sub Button49_MouseMove(sender As Object, e As EventArgs) Handles Button49.MouseMove
         MausüberButton(Button49, 7, 7)
     End Sub
-    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button2.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button3_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button3_MouseLeave(sender As Object, e As EventArgs) Handles Button3.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles Button4.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button5_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button5_MouseLeave(sender As Object, e As EventArgs) Handles Button5.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button6_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button6_MouseLeave(sender As Object, e As EventArgs) Handles Button6.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button7_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button7_MouseLeave(sender As Object, e As EventArgs) Handles Button7.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button8_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button8_MouseLeave(sender As Object, e As EventArgs) Handles Button8.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button9_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button9_MouseLeave(sender As Object, e As EventArgs) Handles Button9.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button10_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button10_MouseLeave(sender As Object, e As EventArgs) Handles Button10.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button11_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button11_MouseLeave(sender As Object, e As EventArgs) Handles Button11.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button12_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button12_MouseLeave(sender As Object, e As EventArgs) Handles Button12.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button13_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button13_MouseLeave(sender As Object, e As EventArgs) Handles Button13.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button14_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button14_MouseLeave(sender As Object, e As EventArgs) Handles Button14.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button15_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button15_MouseLeave(sender As Object, e As EventArgs) Handles Button15.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button16_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button16_MouseLeave(sender As Object, e As EventArgs) Handles Button16.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button17_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button17_MouseLeave(sender As Object, e As EventArgs) Handles Button17.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button18_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button18_MouseLeave(sender As Object, e As EventArgs) Handles Button18.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button19_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button19_MouseLeave(sender As Object, e As EventArgs) Handles Button19.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button20_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button20_MouseLeave(sender As Object, e As EventArgs) Handles Button20.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button21_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button21_MouseLeave(sender As Object, e As EventArgs) Handles Button21.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button22_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button22_MouseLeave(sender As Object, e As EventArgs) Handles Button22.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button23_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button23_MouseLeave(sender As Object, e As EventArgs) Handles Button23.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button24_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button24_MouseLeave(sender As Object, e As EventArgs) Handles Button24.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button25_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button25_MouseLeave(sender As Object, e As EventArgs) Handles Button25.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button26_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button26_MouseLeave(sender As Object, e As EventArgs) Handles Button26.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button27_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button27_MouseLeave(sender As Object, e As EventArgs) Handles Button27.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button28_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button28_MouseLeave(sender As Object, e As EventArgs) Handles Button28.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button29_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button29_MouseLeave(sender As Object, e As EventArgs) Handles Button29.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button30_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button30_MouseLeave(sender As Object, e As EventArgs) Handles Button30.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button31_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button31_MouseLeave(sender As Object, e As EventArgs) Handles Button31.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button32_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button32_MouseLeave(sender As Object, e As EventArgs) Handles Button32.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button33_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button33_MouseLeave(sender As Object, e As EventArgs) Handles Button33.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button34_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button34_MouseLeave(sender As Object, e As EventArgs) Handles Button34.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button35_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button35_MouseLeave(sender As Object, e As EventArgs) Handles Button35.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button36_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button36_MouseLeave(sender As Object, e As EventArgs) Handles Button36.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button37_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button37_MouseLeave(sender As Object, e As EventArgs) Handles Button37.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button38_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button38_MouseLeave(sender As Object, e As EventArgs) Handles Button38.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button39_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button39_MouseLeave(sender As Object, e As EventArgs) Handles Button39.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button40_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button40_MouseLeave(sender As Object, e As EventArgs) Handles Button40.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button41_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button41_MouseLeave(sender As Object, e As EventArgs) Handles Button41.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button42_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button42_MouseLeave(sender As Object, e As EventArgs) Handles Button42.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button43_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button43_MouseLeave(sender As Object, e As EventArgs) Handles Button43.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button44_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button44_MouseLeave(sender As Object, e As EventArgs) Handles Button44.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button45_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button45_MouseLeave(sender As Object, e As EventArgs) Handles Button45.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button46_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button46_MouseLeave(sender As Object, e As EventArgs) Handles Button46.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button47_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button47_MouseLeave(sender As Object, e As EventArgs) Handles Button47.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button48_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button48_MouseLeave(sender As Object, e As EventArgs) Handles Button48.MouseLeave
         mausverlässtButton()
     End Sub
-    Private Sub Button49_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+    Private Sub Button49_MouseLeave(sender As Object, e As EventArgs) Handles Button49.MouseLeave
         mausverlässtButton()
     End Sub
     Private Sub MausüberButton(a As Button, x As Integer, y As Integer)
@@ -1766,8 +1787,28 @@ Public Class FTagesplan
             Case 1
                 Text = _ersterTag.getVorstellung(y).getFilm.getFilminfos()
                 Filmtitel = _ersterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 2
+                Text = _zweiterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _zweiterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 3
+                Text = _dritterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _dritterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 4
+                Text = _vierterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _vierterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 5
+                Text = _fünfterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _fünfterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 6
+                Text = _sechsterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _sechsterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 7
+                Text = _siebterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _siebterTag.getVorstellung(y).getFilm.getFilmtitel
         End Select
         lblTextüberFIlm.Text = Text
+        lblTextüberFIlm.Show()
+
         Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Avatar.png")
 
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
@@ -1981,7 +2022,59 @@ Public Class FTagesplan
         Geklickt(7, 7)
     End Sub
 
+    Private Sub chb830_CheckedChanged(sender As Object, e As EventArgs) Handles chb830.CheckedChanged
+        chb830.Checked = False
+    End Sub
 
+    Private Sub chb1100_CheckedChanged(sender As Object, e As EventArgs) Handles chb1100.CheckedChanged
+        chb1100.Checked = False
+    End Sub
+
+    Private Sub chb1330_CheckedChanged(sender As Object, e As EventArgs) Handles chb1330.CheckedChanged
+        chb1330.Checked = False
+    End Sub
+
+    Private Sub chb1600_CheckedChanged(sender As Object, e As EventArgs) Handles chb1600.CheckedChanged
+        chb1600.Checked = False
+    End Sub
+
+    Private Sub chb1830_CheckedChanged(sender As Object, e As EventArgs) Handles chb1830.CheckedChanged
+        chb1830.Checked = False
+    End Sub
+
+    Private Sub chb2100_CheckedChanged(sender As Object, e As EventArgs) Handles chb2100.CheckedChanged
+        chb2100.Checked = False
+    End Sub
+
+    Private Sub chb2330_CheckedChanged(sender As Object, e As EventArgs) Handles chb2330.CheckedChanged
+        chb2330.Checked = False
+    End Sub
+
+    Private Sub lblTextüberFIlm_Click(sender As Object, e As EventArgs) Handles lblTextüberFIlm.Click
+
+    End Sub
+
+    Private Sub cmdBuchenStattändern_Click(sender As Object, e As EventArgs) Handles cmdBuchenStattändern.Click
+        If _Aendern Then
+            _Aendern = False
+            KinoGUI._WochenpläneBearbeiten = False
+            KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
+            KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
+            ButtonsInvisibleMachenJeNachModus()
+            cmdBuchenStattändern.Text = "ändern"
+        Else
+            _Aendern = True
+            KinoGUI._WochenpläneBearbeiten = True
+            KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
+            KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+            ButtonsInvisibleMachenJeNachModus()
+            cmdBuchenStattändern.Text = "buchen"
+        End If
+    End Sub
+
+    Private Sub cmdTagesPlanErstellen_Click(sender As Object, e As EventArgs) Handles cmdFilmeVOnEInemTagEntfernen.Click
+
+    End Sub
 End Class
 
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird

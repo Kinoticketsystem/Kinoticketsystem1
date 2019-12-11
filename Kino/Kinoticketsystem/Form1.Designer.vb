@@ -23,8 +23,7 @@ Partial Class FTagesplan
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FTagesplan))
-        Me.cmdTagesPlanErstellen = New System.Windows.Forms.Button()
-        Me.cmdFilmÄndern = New System.Windows.Forms.Button()
+        Me.cmdÄnderungenSpeichern = New System.Windows.Forms.Button()
         Me.chbMontag = New System.Windows.Forms.CheckBox()
         Me.chbFreitag = New System.Windows.Forms.CheckBox()
         Me.chbMittwoch = New System.Windows.Forms.CheckBox()
@@ -90,32 +89,23 @@ Partial Class FTagesplan
         Me.Button49 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTextüberFIlm = New System.Windows.Forms.Label()
+        Me.cmdFilmeVOnEInemTagEntfernen = New System.Windows.Forms.Button()
+        Me.cmdBuchenStattändern = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'cmdTagesPlanErstellen
+        'cmdÄnderungenSpeichern
         '
-        Me.cmdTagesPlanErstellen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTagesPlanErstellen.Location = New System.Drawing.Point(899, 476)
-        Me.cmdTagesPlanErstellen.Margin = New System.Windows.Forms.Padding(4)
-        Me.cmdTagesPlanErstellen.Name = "cmdTagesPlanErstellen"
-        Me.cmdTagesPlanErstellen.Size = New System.Drawing.Size(221, 32)
-        Me.cmdTagesPlanErstellen.TabIndex = 0
-        Me.cmdTagesPlanErstellen.Text = "neuen Tagesplan erstellen"
-        Me.cmdTagesPlanErstellen.UseVisualStyleBackColor = True
-        '
-        'cmdFilmÄndern
-        '
-        Me.cmdFilmÄndern.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdFilmÄndern.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdFilmÄndern.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdFilmÄndern.ForeColor = System.Drawing.Color.Black
-        Me.cmdFilmÄndern.Location = New System.Drawing.Point(935, 437)
-        Me.cmdFilmÄndern.Name = "cmdFilmÄndern"
-        Me.cmdFilmÄndern.Size = New System.Drawing.Size(185, 32)
-        Me.cmdFilmÄndern.TabIndex = 1
-        Me.cmdFilmÄndern.Text = "Film ändern"
-        Me.cmdFilmÄndern.UseVisualStyleBackColor = True
+        Me.cmdÄnderungenSpeichern.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.cmdÄnderungenSpeichern.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdÄnderungenSpeichern.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdÄnderungenSpeichern.ForeColor = System.Drawing.Color.Black
+        Me.cmdÄnderungenSpeichern.Location = New System.Drawing.Point(909, 425)
+        Me.cmdÄnderungenSpeichern.Name = "cmdÄnderungenSpeichern"
+        Me.cmdÄnderungenSpeichern.Size = New System.Drawing.Size(211, 32)
+        Me.cmdÄnderungenSpeichern.TabIndex = 1
+        Me.cmdÄnderungenSpeichern.Text = "Änderungen speichern"
+        Me.cmdÄnderungenSpeichern.UseVisualStyleBackColor = True
         '
         'chbMontag
         '
@@ -760,11 +750,37 @@ Partial Class FTagesplan
         Me.lblTextüberFIlm.BackColor = System.Drawing.Color.Transparent
         Me.lblTextüberFIlm.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTextüberFIlm.ForeColor = System.Drawing.Color.White
-        Me.lblTextüberFIlm.Location = New System.Drawing.Point(329, 461)
+        Me.lblTextüberFIlm.Location = New System.Drawing.Point(148, 454)
         Me.lblTextüberFIlm.Name = "lblTextüberFIlm"
         Me.lblTextüberFIlm.Size = New System.Drawing.Size(64, 24)
         Me.lblTextüberFIlm.TabIndex = 76
         Me.lblTextüberFIlm.Text = "Label1"
+        '
+        'cmdFilmeVOnEInemTagEntfernen
+        '
+        Me.cmdFilmeVOnEInemTagEntfernen.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.cmdFilmeVOnEInemTagEntfernen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdFilmeVOnEInemTagEntfernen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdFilmeVOnEInemTagEntfernen.ForeColor = System.Drawing.Color.Black
+        Me.cmdFilmeVOnEInemTagEntfernen.Location = New System.Drawing.Point(986, 475)
+        Me.cmdFilmeVOnEInemTagEntfernen.Name = "cmdFilmeVOnEInemTagEntfernen"
+        Me.cmdFilmeVOnEInemTagEntfernen.Size = New System.Drawing.Size(134, 32)
+        Me.cmdFilmeVOnEInemTagEntfernen.TabIndex = 77
+        Me.cmdFilmeVOnEInemTagEntfernen.Text = "Filme löschen"
+        Me.cmdFilmeVOnEInemTagEntfernen.UseVisualStyleBackColor = True
+        '
+        'cmdBuchenStattändern
+        '
+        Me.cmdBuchenStattändern.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.cmdBuchenStattändern.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdBuchenStattändern.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBuchenStattändern.ForeColor = System.Drawing.Color.Black
+        Me.cmdBuchenStattändern.Location = New System.Drawing.Point(30, 26)
+        Me.cmdBuchenStattändern.Name = "cmdBuchenStattändern"
+        Me.cmdBuchenStattändern.Size = New System.Drawing.Size(89, 32)
+        Me.cmdBuchenStattändern.TabIndex = 78
+        Me.cmdBuchenStattändern.Text = "buchen"
+        Me.cmdBuchenStattändern.UseVisualStyleBackColor = True
         '
         'FTagesplan
         '
@@ -772,6 +788,8 @@ Partial Class FTagesplan
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1153, 517)
+        Me.Controls.Add(Me.cmdBuchenStattändern)
+        Me.Controls.Add(Me.cmdFilmeVOnEInemTagEntfernen)
         Me.Controls.Add(Me.lblTextüberFIlm)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button49)
@@ -837,8 +855,7 @@ Partial Class FTagesplan
         Me.Controls.Add(Me.chbMittwoch)
         Me.Controls.Add(Me.chbFreitag)
         Me.Controls.Add(Me.chbMontag)
-        Me.Controls.Add(Me.cmdFilmÄndern)
-        Me.Controls.Add(Me.cmdTagesPlanErstellen)
+        Me.Controls.Add(Me.cmdÄnderungenSpeichern)
         Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FTagesplan"
@@ -848,9 +865,7 @@ Partial Class FTagesplan
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents cmdTagesPlanErstellen As Button
-    Friend WithEvents cmdFilmÄndern As Button
+    Friend WithEvents cmdÄnderungenSpeichern As Button
     Friend WithEvents chbMontag As CheckBox
     Friend WithEvents chbFreitag As CheckBox
     Friend WithEvents chbMittwoch As CheckBox
@@ -916,4 +931,6 @@ Partial Class FTagesplan
     Friend WithEvents Button49 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblTextüberFIlm As Label
+    Friend WithEvents cmdFilmeVOnEInemTagEntfernen As Button
+    Friend WithEvents cmdBuchenStattändern As Button
 End Class

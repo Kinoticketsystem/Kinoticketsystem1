@@ -40,6 +40,7 @@ Partial Class NeueVorstellung
         Me.lblFilmInfos = New System.Windows.Forms.Label()
         Me.lblKinosaal = New System.Windows.Forms.Label()
         Me.NUDKinosaal = New System.Windows.Forms.NumericUpDown()
+        Me.cmdBesucherNEtfernen = New System.Windows.Forms.Button()
         CType(Me.StartuhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnduhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NUDKinosaal, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,7 +48,7 @@ Partial Class NeueVorstellung
         '
         'cmdfertig
         '
-        Me.cmdfertig.Location = New System.Drawing.Point(454, 537)
+        Me.cmdfertig.Location = New System.Drawing.Point(552, 563)
         Me.cmdfertig.Name = "cmdfertig"
         Me.cmdfertig.Size = New System.Drawing.Size(75, 32)
         Me.cmdfertig.TabIndex = 0
@@ -62,7 +63,7 @@ Partial Class NeueVorstellung
         Me.lblname.ForeColor = System.Drawing.Color.White
         Me.lblname.Location = New System.Drawing.Point(43, 35)
         Me.lblname.Name = "lblname"
-        Me.lblname.Size = New System.Drawing.Size(147, 23)
+        Me.lblname.Size = New System.Drawing.Size(184, 29)
         Me.lblname.TabIndex = 1
         Me.lblname.Text = "Vorstellungstitel:"
         '
@@ -74,7 +75,7 @@ Partial Class NeueVorstellung
         Me.lblstartuhrzeit.ForeColor = System.Drawing.Color.White
         Me.lblstartuhrzeit.Location = New System.Drawing.Point(43, 71)
         Me.lblstartuhrzeit.Name = "lblstartuhrzeit"
-        Me.lblstartuhrzeit.Size = New System.Drawing.Size(176, 23)
+        Me.lblstartuhrzeit.Size = New System.Drawing.Size(221, 29)
         Me.lblstartuhrzeit.TabIndex = 2
         Me.lblstartuhrzeit.Text = "Startuhrzeit (h, min):"
         '
@@ -86,7 +87,7 @@ Partial Class NeueVorstellung
         Me.lblEnduhrszeit.ForeColor = System.Drawing.Color.White
         Me.lblEnduhrszeit.Location = New System.Drawing.Point(43, 107)
         Me.lblEnduhrszeit.Name = "lblEnduhrszeit"
-        Me.lblEnduhrszeit.Size = New System.Drawing.Size(166, 23)
+        Me.lblEnduhrszeit.Size = New System.Drawing.Size(211, 29)
         Me.lblEnduhrszeit.TabIndex = 3
         Me.lblEnduhrszeit.Text = "Enduhrzeit (h, min):"
         '
@@ -95,7 +96,7 @@ Partial Class NeueVorstellung
         Me.txtname.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtname.Location = New System.Drawing.Point(251, 32)
         Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(197, 31)
+        Me.txtname.Size = New System.Drawing.Size(197, 36)
         Me.txtname.TabIndex = 4
         '
         'lblFilmAuswählen
@@ -106,7 +107,7 @@ Partial Class NeueVorstellung
         Me.lblFilmAuswählen.ForeColor = System.Drawing.Color.White
         Me.lblFilmAuswählen.Location = New System.Drawing.Point(43, 143)
         Me.lblFilmAuswählen.Name = "lblFilmAuswählen"
-        Me.lblFilmAuswählen.Size = New System.Drawing.Size(138, 23)
+        Me.lblFilmAuswählen.Size = New System.Drawing.Size(177, 29)
         Me.lblFilmAuswählen.TabIndex = 8
         Me.lblFilmAuswählen.Text = "Film auswählen:"
         '
@@ -139,7 +140,7 @@ Partial Class NeueVorstellung
         Me.lblBesucherAuswähler.ForeColor = System.Drawing.Color.White
         Me.lblBesucherAuswähler.Location = New System.Drawing.Point(43, 417)
         Me.lblBesucherAuswähler.Name = "lblBesucherAuswähler"
-        Me.lblBesucherAuswähler.Size = New System.Drawing.Size(178, 23)
+        Me.lblBesucherAuswähler.Size = New System.Drawing.Size(226, 29)
         Me.lblBesucherAuswähler.TabIndex = 11
         Me.lblBesucherAuswähler.Text = "Besucher auswählen:"
         '
@@ -149,7 +150,7 @@ Partial Class NeueVorstellung
         Me.chlFilme.FormattingEnabled = True
         Me.chlFilme.Location = New System.Drawing.Point(251, 169)
         Me.chlFilme.Name = "chlFilme"
-        Me.chlFilme.Size = New System.Drawing.Size(197, 136)
+        Me.chlFilme.Size = New System.Drawing.Size(197, 112)
         Me.chlFilme.TabIndex = 13
         '
         'chlBesucherAuswählen
@@ -158,17 +159,17 @@ Partial Class NeueVorstellung
         Me.chlBesucherAuswählen.FormattingEnabled = True
         Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 417)
         Me.chlBesucherAuswählen.Name = "chlBesucherAuswählen"
-        Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 114)
+        Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 112)
         Me.chlBesucherAuswählen.TabIndex = 14
         '
         'lstBesucher
         '
         Me.lstBesucher.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstBesucher.FormattingEnabled = True
-        Me.lstBesucher.ItemHeight = 19
+        Me.lstBesucher.ItemHeight = 24
         Me.lstBesucher.Location = New System.Drawing.Point(454, 417)
         Me.lstBesucher.Name = "lstBesucher"
-        Me.lstBesucher.Size = New System.Drawing.Size(145, 118)
+        Me.lstBesucher.Size = New System.Drawing.Size(145, 100)
         Me.lstBesucher.TabIndex = 16
         '
         'StartuhrzeitWert
@@ -176,7 +177,7 @@ Partial Class NeueVorstellung
         Me.StartuhrzeitWert.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartuhrzeitWert.Location = New System.Drawing.Point(251, 69)
         Me.StartuhrzeitWert.Name = "StartuhrzeitWert"
-        Me.StartuhrzeitWert.Size = New System.Drawing.Size(76, 31)
+        Me.StartuhrzeitWert.Size = New System.Drawing.Size(76, 36)
         Me.StartuhrzeitWert.TabIndex = 17
         '
         'EnduhrzeitWert
@@ -184,7 +185,7 @@ Partial Class NeueVorstellung
         Me.EnduhrzeitWert.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EnduhrzeitWert.Location = New System.Drawing.Point(251, 105)
         Me.EnduhrzeitWert.Name = "EnduhrzeitWert"
-        Me.EnduhrzeitWert.Size = New System.Drawing.Size(76, 31)
+        Me.EnduhrzeitWert.Size = New System.Drawing.Size(76, 36)
         Me.EnduhrzeitWert.TabIndex = 18
         '
         'lblFilmInfos
@@ -195,7 +196,7 @@ Partial Class NeueVorstellung
         Me.lblFilmInfos.ForeColor = System.Drawing.Color.White
         Me.lblFilmInfos.Location = New System.Drawing.Point(247, 143)
         Me.lblFilmInfos.Name = "lblFilmInfos"
-        Me.lblFilmInfos.Size = New System.Drawing.Size(105, 23)
+        Me.lblFilmInfos.Size = New System.Drawing.Size(130, 29)
         Me.lblFilmInfos.TabIndex = 19
         Me.lblFilmInfos.Text = "Beispielfilm"
         '
@@ -207,7 +208,7 @@ Partial Class NeueVorstellung
         Me.lblKinosaal.ForeColor = System.Drawing.Color.White
         Me.lblKinosaal.Location = New System.Drawing.Point(43, 360)
         Me.lblKinosaal.Name = "lblKinosaal"
-        Me.lblKinosaal.Size = New System.Drawing.Size(170, 23)
+        Me.lblKinosaal.Size = New System.Drawing.Size(219, 29)
         Me.lblKinosaal.TabIndex = 20
         Me.lblKinosaal.Text = "Kinosaal auswählen:"
         '
@@ -216,15 +217,25 @@ Partial Class NeueVorstellung
         Me.NUDKinosaal.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NUDKinosaal.Location = New System.Drawing.Point(251, 358)
         Me.NUDKinosaal.Name = "NUDKinosaal"
-        Me.NUDKinosaal.Size = New System.Drawing.Size(76, 31)
+        Me.NUDKinosaal.Size = New System.Drawing.Size(76, 36)
         Me.NUDKinosaal.TabIndex = 21
+        '
+        'cmdBesucherNEtfernen
+        '
+        Me.cmdBesucherNEtfernen.Location = New System.Drawing.Point(454, 537)
+        Me.cmdBesucherNEtfernen.Name = "cmdBesucherNEtfernen"
+        Me.cmdBesucherNEtfernen.Size = New System.Drawing.Size(92, 32)
+        Me.cmdBesucherNEtfernen.TabIndex = 22
+        Me.cmdBesucherNEtfernen.Text = "entfernen"
+        Me.cmdBesucherNEtfernen.UseVisualStyleBackColor = True
         '
         'NeueVorstellung
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(639, 607)
+        Me.Controls.Add(Me.cmdBesucherNEtfernen)
         Me.Controls.Add(Me.NUDKinosaal)
         Me.Controls.Add(Me.lblKinosaal)
         Me.Controls.Add(Me.lblFilmInfos)
@@ -271,4 +282,5 @@ Partial Class NeueVorstellung
     Friend WithEvents lblFilmInfos As Label
     Friend WithEvents lblKinosaal As Label
     Friend WithEvents NUDKinosaal As NumericUpDown
+    Friend WithEvents cmdBesucherNEtfernen As Button
 End Class
