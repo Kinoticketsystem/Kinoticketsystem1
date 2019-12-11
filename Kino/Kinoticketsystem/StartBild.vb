@@ -1,4 +1,5 @@
 ﻿Public Class StartBild
+
     Dim i As Integer = 0
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -9,5 +10,8 @@
             KinoGUI.Show()
         End If
     End Sub
+
+
+
 
 End Class
