@@ -84,6 +84,7 @@ Partial Class FilmHinzufügenGUI
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.Info
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.No
         Me.Label3.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(522, 173)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -112,10 +113,10 @@ Partial Class FilmHinzufügenGUI
         '
         Me.lstAlleFilme.FormattingEnabled = True
         Me.lstAlleFilme.ItemHeight = 25
-        Me.lstAlleFilme.Location = New System.Drawing.Point(896, 581)
+        Me.lstAlleFilme.Location = New System.Drawing.Point(1380, 59)
         Me.lstAlleFilme.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.lstAlleFilme.Name = "lstAlleFilme"
-        Me.lstAlleFilme.Size = New System.Drawing.Size(400, 479)
+        Me.lstAlleFilme.Size = New System.Drawing.Size(546, 1054)
         Me.lstAlleFilme.TabIndex = 6
         '
         'Label4
@@ -168,9 +169,10 @@ Partial Class FilmHinzufügenGUI
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.SystemColors.Info
+        Me.Label6.Cursor = System.Windows.Forms.Cursors.No
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(731, 581)
+        Me.Label6.Location = New System.Drawing.Point(1195, 59)
         Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(153, 39)
