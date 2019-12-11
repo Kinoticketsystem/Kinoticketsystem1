@@ -1453,12 +1453,11 @@ Public Class FTagesplan
         '(System.Environment.SpecialFolder.Personal) _
         '& "\Image.jpg") '.jpg ist wichtig
 
-        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Deadpool 2.png")
 
         'CType(My.Resources.ResourceManager.GetObject("Deadpool 2.png"), Drawing.Image)
 
         'Image.FromFile("C:\Users\thiemo.rickenstorf\source\repos\Kinoticketsystem1\Kino\Kinoticketsystem\Resources\Avatar.png") 'läuft noch nicht
-        MausüberButton(BildVomFilm, Button1, 1, 1)
+        MausüberButton(Button1, 1, 1)
     End Sub
 
 
@@ -1470,13 +1469,16 @@ Public Class FTagesplan
         PictureBox1.Hide()
     End Sub
 
-    Private Sub MausüberButton(pic As Image, a As Button, x As Integer, y As Integer)
+    Private Sub MausüberButton(a As Button, x As Integer, y As Integer)
         'für alle die gleiche PictureBox verwenden!
         'eigentlich sollte das Bild gar nicht übergeben werden, sondern anhand der Position den Film und damit das passende BIld auslesen!!!
+        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Deadpool 2.png")
+
+
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
 
-        PictureBox1.Image = pic
+        PictureBox1.Image = BildVomFilm
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
         Select Case x
             Case 1
