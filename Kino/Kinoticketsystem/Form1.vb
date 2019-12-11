@@ -399,7 +399,7 @@ Public Class FTagesplan
         'erster Tag
         Select Case _ersterTag.getAnzahlVorstellungen
             Case 1
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button2.Hide()
                 Button3.Hide()
                 Button4.Hide()
@@ -407,59 +407,59 @@ Public Class FTagesplan
                 Button6.Hide()
                 Button7.Hide()
             Case 2
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button3.Hide()
                 Button4.Hide()
                 Button5.Hide()
                 Button6.Hide()
                 Button7.Hide()
             Case 3
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button4.Hide()
                 Button5.Hide()
                 Button6.Hide()
                 Button7.Hide()
             Case 4
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button5.Hide()
                 Button6.Hide()
                 Button7.Hide()
             Case 5
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button6.Hide()
                 Button7.Hide()
             Case 6
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button7.Hide()
             Case 7
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button7.Top = (_ersterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button7.Top = (_ersterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den ersten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _zweiterTag.getAnzahlVorstellungen
             Case 1
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
                 Button9.Hide()
                 Button10.Hide()
                 Button11.Hide()
@@ -467,59 +467,59 @@ Public Class FTagesplan
                 Button13.Hide()
                 Button14.Hide()
             Case 2
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 160
                 Button10.Hide()
                 Button11.Hide()
                 Button12.Hide()
                 Button13.Hide()
                 Button14.Hide()
             Case 3
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 160
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 160
                 Button11.Hide()
                 Button12.Hide()
                 Button13.Hide()
                 Button14.Hide()
             Case 4
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 160
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 160
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 160
                 Button12.Hide()
                 Button13.Hide()
                 Button14.Hide()
             Case 5
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button13.Hide()
                 Button14.Hide()
             Case 6
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button14.Hide()
             Case 7
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button14.Top = (_zweiterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button14.Top = (_zweiterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den zweiten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _dritterTag.getAnzahlVorstellungen
             Case 1
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button16.Hide()
                 Button17.Hide()
                 Button18.Hide()
@@ -527,59 +527,59 @@ Public Class FTagesplan
                 Button20.Hide()
                 Button21.Hide()
             Case 2
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button17.Hide()
                 Button18.Hide()
                 Button19.Hide()
                 Button20.Hide()
                 Button21.Hide()
             Case 3
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button18.Hide()
                 Button19.Hide()
                 Button20.Hide()
                 Button21.Hide()
             Case 4
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button19.Hide()
                 Button20.Hide()
                 Button21.Hide()
             Case 5
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button20.Hide()
                 Button21.Hide()
             Case 6
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button21.Hide()
             Case 7
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button21.Top = (_dritterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button21.Top = (_dritterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den dritten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _vierterTag.getAnzahlVorstellungen
             Case 1
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button23.Hide()
                 Button24.Hide()
                 Button25.Hide()
@@ -587,59 +587,59 @@ Public Class FTagesplan
                 Button27.Hide()
                 Button28.Hide()
             Case 2
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button24.Hide()
                 Button25.Hide()
                 Button26.Hide()
                 Button27.Hide()
                 Button28.Hide()
             Case 3
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button25.Hide()
                 Button26.Hide()
                 Button27.Hide()
                 Button28.Hide()
             Case 4
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button26.Hide()
                 Button27.Hide()
                 Button28.Hide()
             Case 5
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button27.Hide()
                 Button28.Hide()
             Case 6
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button28.Hide()
             Case 7
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button28.Top = (_vierterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button28.Top = (_vierterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den vierten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _fünfterTag.getAnzahlVorstellungen
             Case 1
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button30.Hide()
                 Button31.Hide()
                 Button32.Hide()
@@ -647,60 +647,60 @@ Public Class FTagesplan
                 Button34.Hide()
                 Button35.Hide()
             Case 2
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button31.Hide()
                 Button32.Hide()
                 Button33.Hide()
                 Button34.Hide()
                 Button35.Hide()
             Case 3
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button32.Hide()
                 Button33.Hide()
                 Button34.Hide()
                 Button35.Hide()
             Case 4
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button33.Hide()
                 Button34.Hide()
                 Button35.Hide()
             Case 5
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button34.Hide()
                 Button35.Hide()
             Case 6
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button35.Hide()
             Case 7
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button35.Top = (_fünfterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button35.Top = (_fünfterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den fünfter Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
         End Select
         Select Case _sechsterTag.getAnzahlVorstellungen
             Case 1
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button37.Hide()
                 Button38.Hide()
                 Button39.Hide()
@@ -708,60 +708,60 @@ Public Class FTagesplan
                 Button41.Hide()
                 Button42.Hide()
             Case 2
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button38.Hide()
                 Button39.Hide()
                 Button40.Hide()
                 Button41.Hide()
                 Button42.Hide()
             Case 3
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button39.Hide()
                 Button40.Hide()
                 Button41.Hide()
                 Button42.Hide()
             Case 4
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button40.Hide()
                 Button41.Hide()
                 Button42.Hide()
             Case 5
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button41.Hide()
                 Button42.Hide()
             Case 6
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button42.Hide()
             Case 7
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button42.Top = (_sechsterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button42.Top = (_sechsterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den sechster Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
             Case 1
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
                 Button44.Hide()
                 Button45.Hide()
                 Button46.Hide()
@@ -769,53 +769,53 @@ Public Class FTagesplan
                 Button48.Hide()
                 Button49.Hide()
             Case 2
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
                 Button45.Hide()
                 Button46.Hide()
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 3
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
                 Button46.Hide()
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 4
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 5
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480
                 Button48.Hide()
                 Button49.Hide()
             Case 6
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480
+                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480
                 Button49.Hide()
             Case 7
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button49.Top = (_siebterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480
+                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480
+                Button49.Top = (_siebterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den siebter Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
@@ -1472,19 +1472,22 @@ Public Class FTagesplan
     Private Sub MausüberButton(a As Button, x As Integer, y As Integer)
         'für alle die gleiche PictureBox verwenden!
         'eigentlich sollte das Bild gar nicht übergeben werden, sondern anhand der Position den Film und damit das passende BIld auslesen!!!
+        Dim Text As String = ""
+        Dim Filmtitel As String
+        Select Case x
+            Case 1
+                Text = _ersterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _ersterTag.getVorstellung(y).getFilm.getFilmtitel
+        End Select
+        lblTextüberFIlm.Text = Text
         Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Deadpool 2.png")
-
 
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
 
         PictureBox1.Image = BildVomFilm
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
-        Select Case x
-            Case 1
-                lblTextüberFIlm.Text = _ersterTag.getVorstellung(1).getFilm.getFilminfos()
 
-        End Select
         'hier könnte man noch einen Text über den Film als Array machen
     End Sub
 
