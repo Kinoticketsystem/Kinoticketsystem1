@@ -79,86 +79,86 @@ Karate kid
  6 
 False
 Star Wars VIII Die letzten Jedi
- 150
- 12
- True
+ 150 
+ 12 
+False
  Es 2
- 169
- 16
- false
+ 169 
+ 16 
+False
 The Wolf Of Wall Street 
-179
-16
-false
+ 179 
+ 16 
+False
 Madagascar
-83
-0
+ 83 
+ 0 
 True
 (T)Raumschiff Surprise
-83
-0
-false
+ 83 
+ 0 
+False
 The Equilizer
-132
-16
-false
+ 132 
+ 16 
+False
 Pretty Woman
-119
-16
-false
+ 119 
+ 16 
+False
 Lion King
-118
-12
-false
+ 118 
+ 12 
+False
 Jumanji Wilkommen im Dschungel
-119
-6
+ 119 
+ 6 
 True
 Jonny Englisch 3
-88
-12
+ 88 
+ 12 
 True
 Fantastische Tierwessen 
-133
-12
-false
+ 133 
+ 12 
+False
 Ich einfach Unverbesserlich
-95
-0
+ 95 
+ 0 
 True
 Jäger des Verlorenen Schatzes 
-115
-12
-false
+ 115 
+ 12 
+False
 Alita Battle Angel 
-122
-16
+ 122 
+ 16 
 True
 Feuerzangenbowle
-97
-12
-false
+ 97 
+ 12 
+False
 Der Schuh des Manitu
-100
-6
-false
+ 100 
+ 6 
+False
 Bumblebee
-114
-12
+ 114 
+ 12 
 True
 Fluch der Karibik
-143
-12
+ 143 
+ 12 
 True
 Joker
-122
-16
-false
+ 122 
+ 16 
+False
 Le Mans 66
-153
-12
+ 153 
+ 12 
 False
  Herr der Ringe
- 200
- 12
- False
+ 200 
+ 12 
+False

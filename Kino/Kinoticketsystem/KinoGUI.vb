@@ -265,7 +265,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 vorgestellterFilm = alleTagespläne(i * 11 + 4)
                 Vorstellungslänge = alleTagespläne(i * 11 + 5)
                 Vorstellungsfreigabe = alleTagespläne(i * 11 + 6)
-                Dimension = alleTagespläne(i * 11 + 7)
+                If alleTagespläne(i * 11 + 7) = "True" Then
+                    Dimension = True
+                Else
+                    Dimension = False
+                End If
                 planplätze = alleTagespläne(i * 11 + 8)
                 planreihen = alleTagespläne(i * 11 + 9)
                 plansitzeproreihe = alleTagespläne(i * 11 + 10)
