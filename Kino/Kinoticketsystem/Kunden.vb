@@ -12,5 +12,11 @@
         Next
     End Sub
 
+    Private Sub txtName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
 
+    End Sub
+
+    Private Sub cmdLöschenHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdLöschenHinzufügen.Click
+
+    End Sub
 End Class
