@@ -371,10 +371,10 @@ Public Class FTagesplan
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
         Dim f As Kinosaal = New Kinosaal(120, 8, 15)
 
-        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a, f)
-        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a, f)
-        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a, f)
-        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a, f)
+        Dim b As Vorstellung = New Vorstellung(480, 600, Nothing, a, f)
+        Dim c As Vorstellung = New Vorstellung(606, 830, Nothing, a, f)
+        Dim d As Vorstellung = New Vorstellung(840, 1080, Nothing, a, f)
+        Dim e As Vorstellung = New Vorstellung(1380, 1519, Nothing, a, f)
 
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
