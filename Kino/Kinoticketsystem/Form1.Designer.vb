@@ -408,6 +408,7 @@ Partial Class FTagesplan
         '
         'Button15
         '
+        Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.Button15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.Location = New System.Drawing.Point(432, 69)
         Me.Button15.Name = "Button15"

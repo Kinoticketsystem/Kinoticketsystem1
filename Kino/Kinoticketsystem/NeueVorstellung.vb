@@ -28,12 +28,12 @@ Public Class NeueVorstellung
 
     End Sub
 
-    Public Sub datenübergen(Filmtitel As String, besucher As ArrayList, kinosaal As Integer)
-        txtname.Text = Filmtitel
-        For i = 0 To besucher.Count - 1
-            lstBesucher.Items.Add(besucher(i))
+    Public Sub datenübergen(c As Vorstellung, Kinosaal As Integer)
+        txtname.Text = c.getFilm.getFilmtitel
+        For i = 0 To c.getAlleBesucher.Count - 1
+            lstBesucher.Items.Add(c.getBesucher(i))
         Next
-        NUDKinosaal.Value = kinosaal
+        NUDKinosaal.Value = Kinosaal
     End Sub
 
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)

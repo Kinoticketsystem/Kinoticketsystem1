@@ -10,6 +10,7 @@ Public Class FTagesplan
     Private _siebterTag As ITagesplan
     Private _Aendern As Boolean = True
     Private _Kinosaal As Kinosaal
+
     Private _Kunde As Kunde = New Kunde("Standard")
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -1312,6 +1313,433 @@ Public Class FTagesplan
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
+    Private Sub xButtonsAusWählenFürLöschen(a As Button, b As Boolean)
+        If b Then
+            a.FlatAppearance.BorderColor = Color.Red
+            a.FlatAppearance.BorderSize = 2
+        Else
+            a.FlatStyle = FlatStyle.Flat 'Notwendig!!!
+            a.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
+            a.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
+            a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
+        End If
+    End Sub
+    Private Sub yButtonsAuswählenFürLÖschen(a As Integer)
+        Select Case a
+            Case 0
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 1
+                xButtonsAusWählenFürLöschen(Button1, True)
+                xButtonsAusWählenFürLöschen(Button2, True)
+                xButtonsAusWählenFürLöschen(Button3, True)
+                xButtonsAusWählenFürLöschen(Button4, True)
+                xButtonsAusWählenFürLöschen(Button5, True)
+                xButtonsAusWählenFürLöschen(Button6, True)
+                xButtonsAusWählenFürLöschen(Button7, True)
+
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 2
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+
+                xButtonsAusWählenFürLöschen(Button8, True)
+                xButtonsAusWählenFürLöschen(Button9, True)
+                xButtonsAusWählenFürLöschen(Button10, True)
+                xButtonsAusWählenFürLöschen(Button11, True)
+                xButtonsAusWählenFürLöschen(Button12, True)
+                xButtonsAusWählenFürLöschen(Button13, True)
+                xButtonsAusWählenFürLöschen(Button14, True)
+
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 3
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+
+                xButtonsAusWählenFürLöschen(Button15, True)
+                xButtonsAusWählenFürLöschen(Button16, True)
+                xButtonsAusWählenFürLöschen(Button17, True)
+                xButtonsAusWählenFürLöschen(Button18, True)
+                xButtonsAusWählenFürLöschen(Button19, True)
+                xButtonsAusWählenFürLöschen(Button20, True)
+                xButtonsAusWählenFürLöschen(Button21, True)
+
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 4
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+
+                xButtonsAusWählenFürLöschen(Button22, True)
+                xButtonsAusWählenFürLöschen(Button23, True)
+                xButtonsAusWählenFürLöschen(Button24, True)
+                xButtonsAusWählenFürLöschen(Button25, True)
+                xButtonsAusWählenFürLöschen(Button26, True)
+                xButtonsAusWählenFürLöschen(Button27, True)
+                xButtonsAusWählenFürLöschen(Button28, True)
+
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 5
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+
+                xButtonsAusWählenFürLöschen(Button29, True)
+                xButtonsAusWählenFürLöschen(Button30, True)
+                xButtonsAusWählenFürLöschen(Button31, True)
+                xButtonsAusWählenFürLöschen(Button32, True)
+                xButtonsAusWählenFürLöschen(Button33, True)
+                xButtonsAusWählenFürLöschen(Button34, True)
+                xButtonsAusWählenFürLöschen(Button35, True)
+
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 6
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+
+                xButtonsAusWählenFürLöschen(Button36, True)
+                xButtonsAusWählenFürLöschen(Button37, True)
+                xButtonsAusWählenFürLöschen(Button38, True)
+                xButtonsAusWählenFürLöschen(Button39, True)
+                xButtonsAusWählenFürLöschen(Button40, True)
+                xButtonsAusWählenFürLöschen(Button41, True)
+                xButtonsAusWählenFürLöschen(Button42, True)
+
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 7
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+
+                xButtonsAusWählenFürLöschen(Button43, True)
+                xButtonsAusWählenFürLöschen(Button44, True)
+                xButtonsAusWählenFürLöschen(Button45, True)
+                xButtonsAusWählenFürLöschen(Button46, True)
+                xButtonsAusWählenFürLöschen(Button47, True)
+                xButtonsAusWählenFürLöschen(Button48, True)
+                xButtonsAusWählenFürLöschen(Button49, True)
+        End Select
+    End Sub
     Private Sub chbMontag_CheckedChanged(sender As Object, e As EventArgs) Handles chbMontag.CheckedChanged
         If chbMontag.Checked And _Aendern Then
             chbDienstag.Checked = False
@@ -1322,8 +1750,11 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = chbMontag.Left
+            yButtonsAuswählenFürLÖschen(1)
         Else
+            cmdFilmeVOnEInemTagEntfernen.Hide()
             chbMontag.Checked = False
+            yButtonsAuswählenFürLÖschen(0)
         End If
     End Sub
     Private Sub chbDienstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDienstag.CheckedChanged
@@ -1336,8 +1767,12 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = chbDienstag.Left
+            yButtonsAuswählenFürLÖschen(2)
         Else
             chbDienstag.Checked = False
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            yButtonsAuswählenFürLÖschen(0)
+
         End If
     End Sub
     Private Sub chbMittwoch_CheckedChanged(sender As Object, e As EventArgs) Handles chbMittwoch.CheckedChanged
@@ -1350,7 +1785,10 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = chbMittwoch.Left
+            yButtonsAuswählenFürLÖschen(3)
         Else
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            yButtonsAuswählenFürLÖschen(0)
             chbMittwoch.Checked = False
         End If
     End Sub
@@ -1364,7 +1802,10 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = chbDonnerstag.Left
+            yButtonsAuswählenFürLÖschen(4)
         Else
+            yButtonsAuswählenFürLÖschen(0)
+            cmdFilmeVOnEInemTagEntfernen.Hide()
             chbDonnerstag.Checked = False
         End If
     End Sub
@@ -1378,8 +1819,11 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = chbFreitag.Left
+            yButtonsAuswählenFürLÖschen(5)
             '     MonthCalendar1.Left = chbMontag.Left
         Else
+            yButtonsAuswählenFürLÖschen(0)
+            cmdFilmeVOnEInemTagEntfernen.Hide()
             chbFreitag.Checked = False
         End If
     End Sub
@@ -1393,8 +1837,11 @@ Public Class FTagesplan
             chbSonntag.Checked = False
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = chbSamstag.Left
+            yButtonsAuswählenFürLÖschen(6)
             '      MonthCalendar1.Left = chbMontag.Left
         Else
+            yButtonsAuswählenFürLÖschen(0)
+            cmdFilmeVOnEInemTagEntfernen.Hide()
             chbSamstag.Checked = False
         End If
     End Sub
@@ -1409,8 +1856,11 @@ Public Class FTagesplan
             cmdFilmeVOnEInemTagEntfernen.Show()
             cmdFilmeVOnEInemTagEntfernen.Left = Size.Width - (cmdFilmeVOnEInemTagEntfernen.Width + 45)
             '     MonthCalendar1.Left = chbMontag.Left
+            yButtonsAuswählenFürLÖschen(7)
         Else
+            yButtonsAuswählenFürLÖschen(0)
             chbSonntag.Checked = False
+            cmdFilmeVOnEInemTagEntfernen.Hide()
         End If
     End Sub
     Private Sub Geklickt(a As Integer, b As Integer)
@@ -1421,7 +1871,32 @@ Public Class FTagesplan
             NeueVorstellung.BringToFront()
             NeueVorstellung.Show()
             NeueVorstellung.PositionÜbergeben(a, b)
+            ' NeueVorstellung.datenübergen()
+            Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal)
             'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+            Select Case a
+                Case 1
+                    c = _ersterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 2
+                    c = _zweiterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 3
+                    c = _dritterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 4
+                    c = _vierterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 5
+                    c = _fünfterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 6
+                    c = _sechsterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 7
+                    c = _siebterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+            End Select
         Else
             Select Case a
                 Case 1
@@ -2073,7 +2548,21 @@ Public Class FTagesplan
     End Sub
 
     Private Sub cmdTagesPlanErstellen_Click(sender As Object, e As EventArgs) Handles cmdFilmeVOnEInemTagEntfernen.Click
+        MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen")
+        If (MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen") = 6) Then
+            'ja geklickt
+            Select Case True
+                Case chbMontag.Checked
+                   ' _ersterTag.
+                Case chbDienstag.Checked
+                Case chbMittwoch.Checked
+                Case chbDonnerstag.Checked
+                Case chbFreitag.Checked
+                Case chbSamstag.Checked
+                Case chbSonntag.Checked
 
+            End Select
+        End If
     End Sub
 End Class
 
