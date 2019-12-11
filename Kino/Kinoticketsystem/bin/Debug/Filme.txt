@@ -3,7 +3,7 @@ Rush Alles Für den Sieg
  12 
 False
 Der Soldat James Ryan
- 170
+ 170 
  16 
 False
 Coach Carter	
@@ -39,7 +39,7 @@ The Fast and the Furious
  16 
 False
 Das Bourne Ultimatum	
- 114
+ 114 
  12 
 False
 Gladiator	
@@ -75,11 +75,11 @@ Karate kid
  6 
 False
 Star Wars VIII Die letzten Jedi
- 152
+ 152 
  12 
 False
 Es 2
- 170
+ 170 
  16 
 False
 The Wolf Of Wall Street 
