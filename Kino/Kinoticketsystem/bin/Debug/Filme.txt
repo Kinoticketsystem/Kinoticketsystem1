@@ -1,9 +1,9 @@
 Rush Alles Für den Sieg
- 122 
+ 123 
  12 
 False
 Der Soldat James Ryan
- 169 
+ 170
  16 
 False
 Coach Carter	
@@ -15,7 +15,7 @@ John Wick: Kapitel 3
  18 
 True
 Pacific Rim 2. Uprising	
- 110 
+ 111 
  12 
 True
 Kingsman: The Golden Circle
@@ -23,7 +23,7 @@ Kingsman: The Golden Circle
  16 
 True
 Deadpool 2	
- 134 
+ 136 
  16 
 True
 Robin Hood	
@@ -31,7 +31,7 @@ Robin Hood
  12 
 True
 Midway-Für Die Freiheit	
- 138 
+ 139 
  6 
 True
 The Fast and the Furious	
@@ -39,7 +39,7 @@ The Fast and the Furious
  16 
 False
 Das Bourne Ultimatum	
- 111 
+ 114
  12 
 False
 Gladiator	
@@ -47,7 +47,7 @@ Gladiator
  16 
 False
 Jagt Auf Roter Oktober	
- 129 
+ 135 
  12 
 False
 Ziemlich beste Freunde 
@@ -59,31 +59,27 @@ Avatar
  12 
 True
 Hänsel und Gretel: Hexenjäger	
- 88 
+ 98 
  16 
 True
 Dunkirk	
- 107 
+ 106 
  12 
-False
-Escape Plan	
- 115 
- 16 
 False
 Ip man
  106 
  18 
 False
 Karate kid	
- 140 
+ 133 
  6 
 False
 Star Wars VIII Die letzten Jedi
- 150 
+ 152
  12 
 False
- Es 2
- 169 
+Es 2
+ 170
  16 
 False
 The Wolf Of Wall Street 
@@ -158,7 +154,7 @@ Le Mans 66
  153 
  12 
 False
- Herr der Ringe
+Herr der Ringe
  200 
  12 
 False
