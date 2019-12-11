@@ -1,7 +1,7 @@
 1. Tag
 1. Vorstellung
-0800
-0935
+480
+575
 Ich einfach Unverbesserlich
 95
 0
@@ -11,8 +11,8 @@ True
  15 
  1
  2. Vorstellung
- 1000
- 1140
+ 600
+700
  Der Schuh des Manitu
 100
 6
@@ -22,8 +22,8 @@ false
  15 
  1
  3. Vorstellung
- 1210
- 1402
+ 730
+ 842
  Ziemlich beste Freunde 
  112 
  6 
@@ -33,8 +33,8 @@ False
  15 
  1
  4. Vorstellung
- 1430
- 1629
+ 870
+989
  Jumanji Wilkommen im Dschungel
 119
 6
@@ -44,8 +44,8 @@ True
  15 
  1
  5. Vorstellung
- 1700
- 1950
+ 1020
+ 1190
  Der Soldat James Ryan
  169 
  16 
@@ -55,8 +55,8 @@ False
  15 
  1
  6. Vorstellung
- 2020
- 2230
+ 1220
+1350
  John Wick: Kapitel 3
  130 
  18 
@@ -66,8 +66,8 @@ True
  15 
  1
  7. Vorstellung
- 2300
- 0038
+ 1380
+1478
  Hänsel und Gretel: Hexenjäger	
  88 
  16 
@@ -77,8 +77,8 @@ True
  15 
  2. Tag
  1. Vorstellung 
- 0800
- 1013
+ 480
+ 613
  Karate kid	
  140 
  6 
@@ -88,8 +88,8 @@ False
  15 
  2
  2. Vorstellung
- 1030
- 1251
+ 630
+ 771
  Kingsman: The Golden Circle
  141 
  16 
@@ -99,8 +99,8 @@ True
  15 
  2
  3. Vorstellung
- 1320
- 1543
+ 800
+943
  Fluch der Karibik
 143
 12
@@ -110,8 +110,8 @@ True
  15 
  2
  4. Vorstellung
- 1615
- 1935
+ 975
+ 1175
  Herr der Ringe
  200
  12
@@ -121,8 +121,8 @@ True
  15 
  2
  5. Vorstellung
- 2000
- 2242
+ 1200
+ 1362
  Avatar	
  162 
  12 
@@ -132,8 +132,8 @@ True
  15 
  2
  6. Vorstellung
- 2300
- 0119
+ 1380
+ 1519
  Midway-Für Die Freiheit	
  138 
  6 
