@@ -1613,7 +1613,150 @@ Public Class FTagesplan
     Private Sub Button49_MouseMove(sender As Object, e As EventArgs) Handles Button49.MouseMove
         MausüberButton(Button49, 7, 7)
     End Sub
-
+    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button3_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button5_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button6_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button7_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button8_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button9_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button10_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button11_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button12_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button13_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button14_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button15_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button16_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button17_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button18_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button19_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button20_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button21_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button22_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button23_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button24_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button25_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button26_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button27_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button28_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button29_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button30_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button31_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button32_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button33_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button34_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button35_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button36_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button37_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button38_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button39_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button40_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button41_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button42_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button43_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button44_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button45_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button46_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button47_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button48_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button49_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        mausverlässtButton()
+    End Sub
     Private Sub MausüberButton(a As Button, x As Integer, y As Integer)
         'für alle die gleiche PictureBox verwenden!
         'eigentlich sollte das Bild gar nicht übergeben werden, sondern anhand der Position den Film und damit das passende BIld auslesen!!!
