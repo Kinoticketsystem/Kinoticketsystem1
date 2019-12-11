@@ -1480,7 +1480,7 @@ Public Class FTagesplan
                 Filmtitel = _ersterTag.getVorstellung(y).getFilm.getFilmtitel
         End Select
         lblTextüberFIlm.Text = Text
-        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Deadpool 2.png")
+        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Avatar.png")
 
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
