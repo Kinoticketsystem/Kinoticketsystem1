@@ -9,7 +9,7 @@ Public Class FTagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
     Private _Aendern As Boolean = True
-    Private _Stornieren As Boolean
+    Public _Stornieren As Boolean
     Private _Kinosaal As Kinosaal
 
     Private _Kunde As Kunde = New Kunde("Standard")
