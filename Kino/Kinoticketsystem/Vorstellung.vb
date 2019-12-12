@@ -23,7 +23,7 @@ Public Class Vorstellung
             Throw New Exception("Die Veranstaltung geht kürzer als der Film lang ist, das geht nicht !!!")
         End If
         Me._Besucher = Besucher
-        '  Me._Saal = Saal
+        Me._Saal = Saal
         Me._Film = Film
 
     End Sub
