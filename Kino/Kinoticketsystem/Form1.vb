@@ -29,7 +29,7 @@ Public Class FTagesplan
     End Sub
 
     Private Sub VeränderungenJeNachSornierenBuchen()
-        Throw New NotImplementedException()
+        'Throw New NotImplementedException()
     End Sub
 
     Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
