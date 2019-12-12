@@ -40,6 +40,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             _Buchung = True
+            FTagesplan._Stornieren = False
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
             cmdNeueBuchung.BackColor = Color.Lime
@@ -47,6 +48,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
             _Buchung = False
+            FTagesplan._Stornieren = True
         End If
     End Sub
 
@@ -248,7 +250,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim plansitzeproreihe As Integer
 
         If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
-            For i = 0 To ((alleTagespläne.Count / 11) - 1)
+            For i = 0 To (alleTagespläne.Count / 11)
+                If i = (alleTagespläne.Count / 11) Then
+                    Dim plan As Tagesplan = New Tagesplan
+                    For j = 0 To alleVorstellungen.Count - 1
+                        plan.VorstellungHinzufügen(alleVorstellungen(j))
+                    Next
+                    alleTagespläne2.Add(plan)
+                    alleVorstellungen.Clear()
+                    Exit For
+                End If
                 If alleTagespläne(i * 11 + 0).contains("Tag") And i > 0 Then
 
                     Dim plan As Tagesplan = New Tagesplan
@@ -700,11 +711,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
         KundenGUI.Show()
         KundenGUI.BringToFront()
-        KundenGUI.lstSammlung.Items.Clear()
-        Dim a As ArrayList = DASKINO.getKunden
-        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
-            KundenGUI.lstSammlung.Items.Add(a(i).getName)
-        Next
+        'KundenGUI.lstSammlung.Items.Clear()
+        'Dim a As ArrayList = DASKINO.getKunden
+        'For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+        '    KundenGUI.lstSammlung.Items.Add(a(i).getName)
+        'Next
     End Sub
 
     Private Sub cmdVorstellungErstellen_Click(sender As Object, e As EventArgs) Handles cmdVorstellungErstellen.Click

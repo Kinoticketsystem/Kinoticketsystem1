@@ -59,4 +59,10 @@
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
 
     End Sub
+
+    Private Sub cmdFilmEntfernen_Click(sender As Object, e As EventArgs) Handles cmdFilmEntfernen.Click
+        Dim i As Integer = lstAlleFilme.SelectedIndex
+        Dim f As Film = KinoGUI.DASKINO.getFilmtitel(i)
+        KinoGUI.DASKINO.FilmEntfernen(f)
+    End Sub
 End Class
