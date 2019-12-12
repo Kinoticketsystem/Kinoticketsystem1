@@ -13,6 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -274,7 +274,6 @@
     <Content Include="bin\Debug\Tagespläne.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Kinologo.ico" />
     <None Include="Resources\Der Schuh des Manitu.png" />
     <None Include="Resources\Der Soldat James Ryan.png" />
     <None Include="Resources\Dunkirk.png" />
@@ -315,6 +314,7 @@
     <None Include="Resources\Coach Carter.png" />
     <None Include="Resources\Das Bourne Ultimatum.png" />
     <None Include="Resources\Deadpool 2.png" />
+    <Content Include="Kinologo.ico" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
