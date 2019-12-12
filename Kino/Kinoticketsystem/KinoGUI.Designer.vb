@@ -87,11 +87,11 @@ Partial Class KinoGUI
         Me.cmdTexterfassen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTexterfassen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTexterfassen.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(1151, 886)
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(-2, 814)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
         Me.cmdTexterfassen.Size = New System.Drawing.Size(262, 66)
         Me.cmdTexterfassen.TabIndex = 1
-        Me.cmdTexterfassen.Text = "Texterfassen Erik"
+        Me.cmdTexterfassen.Text = "TestTexterfassen "
         Me.cmdTexterfassen.UseVisualStyleBackColor = False
         '
         'Label1
@@ -551,7 +551,7 @@ Partial Class KinoGUI
         Me.cmdTestVorstellung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestVorstellung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestVorstellung.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1151, 814)
+        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1040, 814)
         Me.cmdTestVorstellung.Name = "cmdTestVorstellung"
         Me.cmdTestVorstellung.Size = New System.Drawing.Size(262, 66)
         Me.cmdTestVorstellung.TabIndex = 45

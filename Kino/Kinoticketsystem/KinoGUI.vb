@@ -248,7 +248,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim plansitzeproreihe As Integer
 
         If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
-            For i = 0 To ((alleTagespläne.Count / 11) - 1)
+            For i = 0 To (alleTagespläne.Count / 11)
+                If i = (alleTagespläne.Count / 11) Then
+                    Dim plan As Tagesplan = New Tagesplan
+                    For j = 0 To alleVorstellungen.Count - 1
+                        plan.VorstellungHinzufügen(alleVorstellungen(j))
+                    Next
+                    alleTagespläne2.Add(plan)
+                    alleVorstellungen.Clear()
+                    Exit For
+                End If
                 If alleTagespläne(i * 11 + 0).contains("Tag") And i > 0 Then
 
                     Dim plan As Tagesplan = New Tagesplan
@@ -614,9 +623,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(0)))
         'so müsste es laufen, wenn 3D arraylist,  besser wäre eigentlich array!!!!
-        'Dim a As ArrayList = DASKINO.getTagesplan
-        ' Dim b As ArrayList = a(0)
-        '  FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, b(0), b(1), b(2), b(3), b(4), b(5), b(6))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(0), a(1), a(2), a(3), a(4), a(5), a(6))
         ' FTagesplan.SetKinosaal(DASKINO.getKinosäle(0)) 'muss wieder auskommentiert werden, wenn es Kinosäle gibt
         'Veranstaltungen übergeben
         'FTagesplan.
@@ -625,6 +634,10 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(1)))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12), a(13))
+
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub

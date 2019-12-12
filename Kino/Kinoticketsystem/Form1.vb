@@ -29,8 +29,7 @@ Public Class FTagesplan
     End Sub
 
     Private Sub VeränderungenJeNachSornierenBuchen()
-
-        Throw New NotImplementedException()
+        'Throw New NotImplementedException()
     End Sub
 
     Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
@@ -1871,22 +1870,6 @@ Public Class FTagesplan
         End If
     End Sub
     Private Sub Geklickt(a As Integer, b As Integer)
-
-
-
-
-
-
-
-        'stornieren implementieren
-
-
-
-
-
-
-
-
         Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
 
         If _Aendern Then
@@ -2566,11 +2549,7 @@ Public Class FTagesplan
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
             ButtonsInvisibleMachenJeNachModus()
-            If _Stornieren Then
-                cmdBuchenStattändern.Text = "stornieren"
-            Else
-                cmdBuchenStattändern.Text = "buchen"
-            End If
+            cmdBuchenStattändern.Text = "buchen"
         End If
     End Sub
 
