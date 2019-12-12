@@ -16,7 +16,5 @@
 
     End Sub
 
-    Private Sub cmdLöschenHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdLöschenHinzufügen.Click
 
-    End Sub
 End Class
