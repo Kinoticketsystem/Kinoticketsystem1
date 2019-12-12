@@ -35,6 +35,7 @@ Partial Class FilmHinzufügenGUI
         Me.txtAltersfreigabe = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.cmdFilmEntfernen = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -186,12 +187,28 @@ Partial Class FilmHinzufügenGUI
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Wenn es kein 3D-Film ist dann nicht ankreuzen"
         '
+        'cmdFilmEntfernen
+        '
+        Me.cmdFilmEntfernen.BackColor = System.Drawing.Color.Black
+        Me.cmdFilmEntfernen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdFilmEntfernen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdFilmEntfernen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdFilmEntfernen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdFilmEntfernen.ForeColor = System.Drawing.Color.Black
+        Me.cmdFilmEntfernen.Location = New System.Drawing.Point(107, 275)
+        Me.cmdFilmEntfernen.Name = "cmdFilmEntfernen"
+        Me.cmdFilmEntfernen.Size = New System.Drawing.Size(205, 30)
+        Me.cmdFilmEntfernen.TabIndex = 11
+        Me.cmdFilmEntfernen.Text = "Film Entfernen"
+        Me.cmdFilmEntfernen.UseVisualStyleBackColor = False
+        '
         'FilmHinzufügenGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
         Me.ClientSize = New System.Drawing.Size(880, 519)
+        Me.Controls.Add(Me.cmdFilmEntfernen)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAltersfreigabe)
@@ -225,4 +242,5 @@ Partial Class FilmHinzufügenGUI
     Friend WithEvents txtAltersfreigabe As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents cmdFilmEntfernen As Button
 End Class
