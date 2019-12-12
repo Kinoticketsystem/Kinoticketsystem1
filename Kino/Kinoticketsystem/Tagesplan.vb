@@ -136,6 +136,9 @@ Public Class Tagesplan
         _Vorstellungen.RemoveAt(i)
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub
+    Public Sub AlleVorstellungenEntfernen()
+
+    End Sub
 
     Public Function getVorstellungen() As ArrayList Implements ITagesplan.getVorstellungen
         Return _Vorstellungen
