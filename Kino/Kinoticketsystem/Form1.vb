@@ -9,6 +9,7 @@ Public Class FTagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
     Private _Aendern As Boolean = True
+    Private _Stornieren As Boolean
     Private _Kinosaal As Kinosaal
 
     Private _Kunde As Kunde = New Kunde("Standard")
@@ -23,9 +24,14 @@ Public Class FTagesplan
         PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
         ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
         FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
-
+        VeränderungenJeNachSornierenBuchen
 
     End Sub
+
+    Private Sub VeränderungenJeNachSornierenBuchen()
+        'Throw New NotImplementedException()
+    End Sub
+
     Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
