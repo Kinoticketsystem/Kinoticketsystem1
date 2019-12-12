@@ -690,11 +690,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
         KundenGUI.Show()
         KundenGUI.BringToFront()
-        KundenGUI.lstSammlung.Items.Clear()
-        Dim a As ArrayList = DASKINO.getKunden
-        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
-            KundenGUI.lstSammlung.Items.Add(a(i).getName)
-        Next
+        'KundenGUI.lstSammlung.Items.Clear()
+        'Dim a As ArrayList = DASKINO.getKunden
+        'For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+        '    KundenGUI.lstSammlung.Items.Add(a(i).getName)
+        'Next
     End Sub
 
     Private Sub cmdVorstellungErstellen_Click(sender As Object, e As EventArgs) Handles cmdVorstellungErstellen.Click
