@@ -464,8 +464,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
 
         End If
-        AnzahlFreiPlätzeBestimmen()
-        nächstenFilmProKinosaalANzeigen()
+        ' AnzahlFreiPlätzeBestimmen()
+        'nächstenFilmProKinosaalANzeigen()
         '....
     End Sub
 

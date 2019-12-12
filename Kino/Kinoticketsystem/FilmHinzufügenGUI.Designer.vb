@@ -109,9 +109,9 @@ Partial Class FilmHinzufügenGUI
         'lstAlleFilme
         '
         Me.lstAlleFilme.FormattingEnabled = True
-        Me.lstAlleFilme.Location = New System.Drawing.Point(690, 31)
+        Me.lstAlleFilme.Location = New System.Drawing.Point(557, 26)
         Me.lstAlleFilme.Name = "lstAlleFilme"
-        Me.lstAlleFilme.Size = New System.Drawing.Size(275, 550)
+        Me.lstAlleFilme.Size = New System.Drawing.Size(192, 420)
         Me.lstAlleFilme.TabIndex = 6
         '
         'Label4
@@ -166,7 +166,7 @@ Partial Class FilmHinzufügenGUI
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(598, 31)
+        Me.Label6.Location = New System.Drawing.Point(474, 26)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 19)
         Me.Label6.TabIndex = 9
@@ -191,7 +191,7 @@ Partial Class FilmHinzufügenGUI
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
-        Me.ClientSize = New System.Drawing.Size(868, 520)
+        Me.ClientSize = New System.Drawing.Size(880, 519)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAltersfreigabe)
