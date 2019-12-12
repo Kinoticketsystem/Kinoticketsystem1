@@ -12,7 +12,7 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         i = i + 1
-        If i > 6 Then
+        If i > 1 Then
             Timer1.Stop()
             KinoGUI.Show()
             Me.Close()
@@ -22,5 +22,7 @@
 
     End Sub
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) 
 
+    End Sub
 End Class
