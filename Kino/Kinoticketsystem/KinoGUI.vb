@@ -726,4 +726,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         End If
     End Sub
+
+    Private Sub cmdTestTagesplan_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
