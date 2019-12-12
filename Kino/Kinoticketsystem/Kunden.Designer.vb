@@ -53,7 +53,7 @@ Partial Class KundenGUI
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(92, 18)
+        Me.txtName.Location = New System.Drawing.Point(80, 18)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(197, 26)
         Me.txtName.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class KundenGUI
         Me.cmdLöschenHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdLöschenHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdLöschenHinzufügen.Location = New System.Drawing.Point(26, 74)
+        Me.cmdLöschenHinzufügen.Location = New System.Drawing.Point(26, 80)
         Me.cmdLöschenHinzufügen.Name = "cmdLöschenHinzufügen"
         Me.cmdLöschenHinzufügen.Size = New System.Drawing.Size(251, 29)
         Me.cmdLöschenHinzufügen.TabIndex = 3

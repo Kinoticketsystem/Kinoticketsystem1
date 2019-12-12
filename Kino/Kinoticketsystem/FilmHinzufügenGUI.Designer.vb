@@ -191,7 +191,7 @@ Partial Class FilmHinzufügenGUI
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
-        Me.ClientSize = New System.Drawing.Size(868, 520)
+        Me.ClientSize = New System.Drawing.Size(880, 519)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAltersfreigabe)
