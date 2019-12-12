@@ -254,6 +254,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                     Dim plan As Tagesplan = New Tagesplan
                     For j = 0 To alleVorstellungen.Count - 1
                         plan.VorstellungHinzufügen(alleVorstellungen(j))
+
                     Next
 
                     alleTagespläne2.Add(plan)
@@ -474,6 +475,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         'For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
         '    labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
         'Next
+        Dim a As ArrayList = DASKINO.getTagesplan
+        For i = 0 To a.Count - 1 Step 7
+            labelNächsterFilmBerechnen(i / 7, a(i).getNächstenFilm)
+        Next
+
     End Sub
 
     Private Sub labelNächsterFilmBerechnen(i As Integer, vorstellung As Vorstellung)
@@ -496,7 +502,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub AnzahlFreiPlätzeBestimmen()
         Dim a As ArrayList = DASKINO.getTagesplan
         For i = 0 To a.Count - 1 Step 7
-            If a(i).getNächstenFilm.getSaal.getAnzahlFreiPlätze > 0 Then
+            If a(i).getNächstenFilm(Now).getSaal.getAnzahlFreiPlätze > 0 Then
                 LabelFreiPlätzeberechnen(i / 7, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
             ElseIf a(i).getNächstenFilm.getSaal.getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
                 LabelFreiPlätzeberechnen(i / 7, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
