@@ -66,6 +66,7 @@ Public Class FTagesplan
         Else
             a.BackColor = Color.Red
         End If
+        a.Text = tag.getVorstellung(position).getFilm.getFilmtitel
         ButtonsSchönMachen(a)
     End Sub
     Private Sub ButtonsSchönMachen(a As Button)
@@ -2550,6 +2551,7 @@ Public Class FTagesplan
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
             ButtonsInvisibleMachenJeNachModus()
             cmdBuchenStattändern.Text = "buchen"
+
         End If
     End Sub
 
