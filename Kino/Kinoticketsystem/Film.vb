@@ -13,7 +13,7 @@
         Me._Filmtitel = Filmtitel
         Me._Filmlänge = Filmlänge
         Me._Altersfreigabe = Altersfreigabe
-        Me._3D = 3D
+        Me._3D = __3D
 
 
     End Sub
@@ -80,6 +80,13 @@
     End Function
     Public Function getAnzahlFilmwiedergabe() As Integer
         Return _AnzahlFilmWiedergabe
+    End Function
+    Public Overrides Function Equals(a As Object) As Boolean
+        If Me._Filmtitel = a.getFilmtitel And Me._3D = a.Ist3D() Then
+            Return True
+        Else
+            Return False
+        End If
     End Function
 
 

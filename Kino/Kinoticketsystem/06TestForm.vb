@@ -40,7 +40,7 @@
 
         'Neue Buchung 
         a = b.NeueBuchung
-        c = a.ToString
+        c = a.ToString()
         lstAusgabeKino.Items.Add(c)
         'KInosaal
         a = b.Kinosaal
@@ -50,19 +50,19 @@
 
         'Set Film
         a = b.SetFilm
-        c = a.ToString(c)
-        lstAusgabeKino.Items.Add(a)
+        c = a.ToString()
+        lstAusgabeKino.Items.Add(c)
         'SetKunden
         a = b.SetKunden
-        c = a.ToString
+        c = a.ToString()
         lstAusgabeKino.Items.Add(c)
         'SetKundenEntfernen
         a = b.SetKundenEntfernen
-        c = a.ToString
+        c = a.ToString()
         lstAusgabeKino.Items.Add(c)
         'SetAnzahlKinosaal
         a = b.SetAnzahlKinosaal
-        c = a.ToString
+        c = a.ToString()
         lstAusgabeKino.Items.Add(c)
 
 

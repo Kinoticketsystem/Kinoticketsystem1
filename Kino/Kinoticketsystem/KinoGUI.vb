@@ -6,6 +6,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
+    Public _WochenpläneBearbeiten As Boolean
+    Public _Buchung As Boolean = True
+
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
 
@@ -22,6 +25,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
+        Dim a As Kinosaal = New Kinosaal(120, 12, 15)
+        KinosaalGUI.Aufrufen(a)
         KinosaalGUI.BringToFront()
         KinosaalGUI.Show()
     End Sub
@@ -34,13 +39,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+            _Buchung = True
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
             cmdNeueBuchung.BackColor = Color.Lime
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
-
+            _Buchung = False
         End If
     End Sub
 
@@ -157,6 +163,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim alleTagespläne2 As ArrayList = New ArrayList()
         Dim alleVorstellungen As ArrayList = New ArrayList()
 
+
         DASKINO = New Kino(alleKinosäle2.Count, alleFilme2, alleKunden2, alleTagespläne2, alleKinosäle2)
 
         FileOpen(1, "Filme.txt", OpenMode.Input)
@@ -170,19 +177,23 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Altersfreigabe As Integer
         Dim ist3D As Boolean
         If alleFilme.Count >= 4 And alleFilme.Count Mod 4 = 0 Then 'erstellt nur neue Filme aus dem Strings der Textdatei, wenn mindesten 4 Elemente in der Liste ist und die Anzahl der Elemente ein Vielfaches von 4 ist
-            For i = 0 To (alleFilme.Count / 4) - 1
+            For i = 0 To ((alleFilme.Count / 4) - 1)
+                Dim k As Integer = i
                 Filmtitel = alleFilme(i * 4 + 0)
                 Filmlänge = alleFilme(i * 4 + 1)
                 Altersfreigabe = alleFilme(i * 4 + 2)
                 If alleFilme(i * 4 + 3) = "True" Then
                     ist3D = True
+                Else
+                    ist3D = False
                 End If
-                alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
+                'alleFilme2.Add(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
                 DASKINO.FilmHinzufügen(New Film(Filmtitel, Filmlänge, Altersfreigabe, ist3D))
             Next
         End If
 
-        My.Computer.FileSystem.WriteAllText("Filme.txt", "", False) ' löscht den Inhalt der Datei 
+        'My.Computer.FileSystem.WriteAllText("Filme.txt", "", True) ' löscht den Inhalt der Datei 
+        'System.IO.File.WriteAllText("Filme.txt", String.Empty)
 
         FileOpen(1, "Kunden.txt", OpenMode.Input)
         While Not EOF(1)
@@ -191,11 +202,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         End While
         FileClose(1)
         For i = 0 To alleKunden.Count - 1
-            alleKunden2.Add(New Kunde(alleKunden(i)))
+            'alleKunden2.Add(New Kunde(alleKunden(i)))
             DASKINO.KundenHinzufügen(New Kunde(alleKunden(i)))
         Next
 
-        My.Computer.FileSystem.WriteAllText("Kunden.txt", "", False) ' löscht den Inhalt der Datei 
+        'My.Computer.FileSystem.WriteAllText("Kunden.txt", "", True) ' löscht den Inhalt der Datei 
+        'System.IO.File.WriteAllText("Kunden.txt", String.Empty)
 
         FileOpen(1, "Kinosäle.txt", OpenMode.Input)
         While Not EOF(1)
@@ -207,16 +219,17 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Reihen As Integer
         Dim SitzeproReihe As Integer
         If alleKinosäle.Count >= 4 And alleKinosäle.Count Mod 4 = 0 Then
-            For i = 0 To (alleFilme.Count / 4) - 1
+            For i = 0 To ((alleKinosäle.Count / 4) - 1)
                 Sitzplätze = alleKinosäle(i * 4 + 1)
                 Reihen = alleKinosäle(i * 4 + 2)
-                SitzeproReihe = alleFilme(i * 4 + 3)
-                alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
+                SitzeproReihe = alleKinosäle(i * 4 + 3)
+                'alleKinosäle2.Add(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
                 DASKINO.KinosaalAmEndeHinzufügen(New Kinosaal(Sitzplätze, Reihen, SitzeproReihe))
             Next
         End If
 
-        My.Computer.FileSystem.WriteAllText("Kinosäle.txt", "", False) ' löscht den Inhalt der Datei
+        'My.Computer.FileSystem.WriteAllText("Kinosäle.txt", "", True) ' löscht den Inhalt der Datei
+        'System.IO.File.WriteAllText("Kinosäle.txt", String.Empty)
 
         FileOpen(1, "Tagespläne.txt", OpenMode.Input)
         While Not EOF(1)
@@ -230,29 +243,62 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim Vorstellungslänge As Integer
         Dim Vorstellungsfreigabe As Integer
         Dim Dimension As Boolean
-        If alleTagespläne.Count >= 9 And alleTagespläne.Count Mod 9 = 0 Then
-            For i = 0 To (alleTagespläne.Count / 9) - 1
-                Anfangszeit = alleTagespläne(i * 9 + 2)
-                Endzeit = alleTagespläne(i * 9 + 3)
-                vorgestellterFilm = alleTagespläne(i * 9 + 4)
-                Vorstellungslänge = alleTagespläne(i * 9 + 5)
-                Vorstellungsfreigabe = alleTagespläne(i * 9 + 6)
-                Dimension = alleTagespläne(i * 9 + 7)
+        Dim planplätze As Integer
+        Dim planreihen As Integer
+        Dim plansitzeproreihe As Integer
+
+        If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
+            For i = 0 To ((alleTagespläne.Count / 11) - 1)
+                If alleTagespläne(i * 11 + 0).contains("Tag") And i > 0 Then
+
+                    Dim plan As Tagesplan = New Tagesplan
+                    For j = 0 To alleVorstellungen.Count - 1
+                        plan.VorstellungHinzufügen(alleVorstellungen(j))
+                    Next
+
+                    alleTagespläne2.Add(plan)
+                    alleVorstellungen.Clear()
+                End If
+
+                Anfangszeit = alleTagespläne(i * 11 + 2)
+                Endzeit = alleTagespläne(i * 11 + 3)
+                vorgestellterFilm = alleTagespläne(i * 11 + 4)
+                Vorstellungslänge = alleTagespläne(i * 11 + 5)
+                Vorstellungsfreigabe = alleTagespläne(i * 11 + 6)
+                If alleTagespläne(i * 11 + 7) = "True" Then
+                    Dimension = True
+                Else
+                    Dimension = False
+                End If
+                planplätze = alleTagespläne(i * 11 + 8)
+                planreihen = alleTagespläne(i * 11 + 9)
+                plansitzeproreihe = alleTagespläne(i * 11 + 10)
                 Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
-                alleTagespläne2.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film))
+                Dim saal As New Kinosaal(planplätze, planreihen, plansitzeproreihe)
+                alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film, saal))
 
             Next
         End If
 
         DASKINO.setTagesplan(alleTagespläne2)
 
-        My.Computer.FileSystem.WriteAllText("Tagespläne.txt", "", False) ' löscht den Inhalt der Datei
+        'My.Computer.FileSystem.WriteAllText("Tagespläne.txt", "", True) ' löscht den Inhalt der Datei
+        'System.IO.File.WriteAllText("Tagespläne.txt", String.Empty)
 
         FormSchönMachen()
     End Sub
 
 
     Private Sub KinoGUI_Closing(sender As Object, e As EventArgs) Handles Me.Load
+
+        System.IO.File.WriteAllText("Filme.txt", String.Empty)
+        System.IO.File.WriteAllText("Kunden.txt", String.Empty)
+        System.IO.File.WriteAllText("Kinosäle.txt", String.Empty)
+        System.IO.File.WriteAllText("Tagespläne.txt", String.Empty)
+
+        ' Der Inhalt der Dateien wird erst gelöscht kurz bevor sie neu beschrieben werden, so bleibt der Inhalt im Falle eines Crashes oder bei "Throw Exceptions" bestehen
+
+
         'Einfügen in die Textdateien wenn das Programm beendet wird 
         Dim titel As New ArrayList
         Dim säle As New ArrayList
@@ -286,7 +332,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 PrintLine(1, titel(j).getFilmtitel)
                 PrintLine(1, titel(j).getFilmlänge)
                 PrintLine(1, titel(j).getAltersfreigabe)
-                PrintLine(1, titel(j).ist3D)
+                If titel(j).ist3D = True Then
+                    PrintLine(1, "True")
+                Else
+                    PrintLine(1, "False")
+                End If
                 FileClose(1)
                 'Dim file2 As System.IO.StreamWriter
                 'file2 = My.Computer.FileSystem.OpenTextFileWriter("Filme.txt", True)
@@ -298,7 +348,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             For k = 0 To anzahlKinos - 1
                 FileOpen(1, "Kinosäle.txt", OpenMode.Append)
                 'PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
-                PrintLine(1, k)
+                PrintLine(1, k + 1 & ". Kinosaal:")
                 PrintLine(1, säle(k).getAnzahlSitzplätze)
                 PrintLine(1, säle(k).getAnzahlReihe)
                 PrintLine(1, säle(k).getSitzeProReihe)
@@ -315,21 +365,30 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
                 'Dim file4 As System.IO.StreamWriter
                 'file4 = My.Computer.FileSystem.OpenTextFileWriter("Tagespläne.txt", True)
-                'file4.WriteLine(i + 1 & ". Tag:")
+                'FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                ''file4.WriteLine(i + 1 & ". Tag:")
+                'PrintLine(1, i+1 & ". Tag:")
+                'FileClose(1)
                 For j = 1 To AnzahlVorstellungen
                     Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
                     FileOpen(1, "Tagespläne.txt", OpenMode.Append)
-                    PrintLine(1, i)
+                    If j = 1 Then
+                        PrintLine(1, i + 1 & ". Tag")
+                    Else
+                        PrintLine(1, i + 1)
+                    End If
+
                     'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
-                    PrintLine(1, j)
+                    PrintLine(1, j & ". Vorstellung:")
                     PrintLine(1, Vorstellung.getAnfangszeit())
                     PrintLine(1, Vorstellung.getEndzeit())
                     PrintLine(1, Vorstellung.getFilm.getFilmtitel())
                     PrintLine(1, Vorstellung.getFilm.getFilmlänge)
                     PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
                     PrintLine(1, Vorstellung.getFilm.Ist3D)
-                    PrintLine(1, Vorstellung.getSaal)
-
+                    PrintLine(1, Vorstellung.getSaal.getAnzahlSitzplätze)
+                    PrintLine(1, Vorstellung.getSaal.getAnzahlReihe)
+                    PrintLine(1, Vorstellung.getSaal.getSitzeProReihe)
                     FileClose(1)
 
 
@@ -340,6 +399,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 'file4.Close()
             Next
         End If
+
     End Sub
 
     Private Sub reinschreiben()
@@ -355,7 +415,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim a As ArrayList = New ArrayList
         Dim c As Film = New Film("Testfilm", 120, 12, True)
         For i = 0 To 5
-            a.add(New Kinosaal(60, 6, 10)) 'film fehlt 
+            a.Add(New Kinosaal(60, 6, 10)) 'film fehlt 
         Next
         a(3) = New Kinosaal(120, 8, 15) 'film fehlt
         'Dim tagesplänesdv(6) As Tagesplan 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
@@ -367,7 +427,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim tagesplänesdv As ArrayList = New ArrayList 'wird bei Kino noch umgesetz, dass man sieben pro Kinosaal braucht
         For i = 0 To 6
             Dim z As Tagesplan = New Tagesplan()
-            z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c), New Vorstellung(130, 250, New ArrayList, c), New Vorstellung(260, 380, New ArrayList, c))
+            z.TagesplanErstellen3(New Vorstellung(0, 120, New ArrayList, c, New Kinosaal(60, 6, 10)), New Vorstellung(130, 250, New ArrayList, c, New Kinosaal(60, 6, 10)), New Vorstellung(260, 380, New ArrayList, c, New Kinosaal(60, 6, 10)))
             tagesplänesdv.Add(z)
         Next
         DASKINO = New Kino(6, New ArrayList, New ArrayList, tagesplänesdv, a)
@@ -546,6 +606,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(0)))
+        'so müsste es laufen, wenn 3D arraylist,  besser wäre eigentlich array!!!!
+        'Dim a As ArrayList = DASKINO.getTagesplan
+        ' Dim b As ArrayList = a(0)
+        '  FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, b(0), b(1), b(2), b(3), b(4), b(5), b(6))
         ' FTagesplan.SetKinosaal(DASKINO.getKinosäle(0)) 'muss wieder auskommentiert werden, wenn es Kinosäle gibt
         'Veranstaltungen übergeben
         'FTagesplan.
@@ -601,24 +666,25 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            _Buchung = False
         Else
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             cmdBuchungStonieren.BackColor = Color.Lime
             cmdBuchungStonieren.FlatAppearance.BorderSize = 1
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
-
+            _Buchung = True
         End If
     End Sub
 
     Private Sub cmdFilmHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinzufügen.Click
-        KundenGUI.Show()
-        KundenGUI.BringToFront()
-        KundenGUI.lstSammlung.Items.Clear()
-        Dim a As ArrayList = DASKINO.getFilmtitel()
-        For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
-            KundenGUI.lstSammlung.Items.Add(a(i))
-        Next
+        FilmHinzufügenGUI.Show()
+        FilmHinzufügenGUI.BringToFront()
+
+        'Dim a As ArrayList = DASKINO.getFilmtitel()
+        'For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+        '    KundenGUI.lstSammlung.Items.Add(a(i))
+        'Next
     End Sub
 
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
@@ -627,7 +693,37 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         KundenGUI.lstSammlung.Items.Clear()
         Dim a As ArrayList = DASKINO.getKunden
         For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
-            KundenGUI.lstSammlung.Items.Add(a(i))
+            KundenGUI.lstSammlung.Items.Add(a(i).getName)
         Next
+    End Sub
+
+    Private Sub cmdVorstellungErstellen_Click(sender As Object, e As EventArgs) Handles cmdVorstellungErstellen.Click
+        NeueVorstellung.Show()
+        NeueVorstellung.BringToFront()
+        NeueVorstellung.chlBesucherAuswählen.Items.Clear()
+        Dim a As ArrayList = DASKINO.getKunden
+        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+            NeueVorstellung.chlBesucherAuswählen.Items.Add(a(i).getName)
+        Next
+        NeueVorstellung.chlFilme.Items.Clear()
+        Dim b As ArrayList = DASKINO.getFilmtitel
+        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+            NeueVorstellung.chlBesucherAuswählen.Items.Add(b(i))
+        Next
+
+    End Sub
+
+    Private Sub cmdWochenpläneBearbeiten_Click(sender As Object, e As EventArgs) Handles cmdWochenpläneBearbeiten.Click
+        If cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup Then
+            _WochenpläneBearbeiten = True
+            cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderColor = Color.Black
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+        Else
+            _WochenpläneBearbeiten = False
+            cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
+
+        End If
     End Sub
 End Class

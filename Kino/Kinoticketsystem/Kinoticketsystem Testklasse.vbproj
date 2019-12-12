@@ -13,6 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -105,6 +105,12 @@
       <DependentUpon>06TestForm.vb</DependentUpon>
     </Compile>
     <Compile Include="06TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmHinzufügenGUI.Designer.vb">
+      <DependentUpon>FilmHinzufügenGUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilmHinzufügenGUI.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kunden.Designer.vb">
@@ -191,6 +197,9 @@
     <EmbeddedResource Include="06TestForm.resx">
       <DependentUpon>06TestForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FilmHinzufügenGUI.resx">
+      <DependentUpon>FilmHinzufügenGUI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -265,7 +274,6 @@
     <Content Include="bin\Debug\Tagespläne.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Kinologo.ico" />
     <None Include="Resources\Der Schuh des Manitu.png" />
     <None Include="Resources\Der Soldat James Ryan.png" />
     <None Include="Resources\Dunkirk.png" />
@@ -306,6 +314,7 @@
     <None Include="Resources\Coach Carter.png" />
     <None Include="Resources\Das Bourne Ultimatum.png" />
     <None Include="Resources\Deadpool 2.png" />
+    <Content Include="Kinologo.ico" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

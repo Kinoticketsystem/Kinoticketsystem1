@@ -80,6 +80,9 @@
     Public Function getKinosäle() As ArrayList
         Return _Kinosäle
     End Function
+    Public Function getKinosaalAnStelle(x As Integer) As Kinosaal
+        Return _Kinosäle(x)
+    End Function
     'Methoden
 
     Public Sub New(ByVal AnzahlKinos As Integer, ByVal Filme As ArrayList, ByVal Kunden As ArrayList, ByVal Tagespläne As ArrayList, ByVal Kinosäle As ArrayList)
@@ -213,7 +216,9 @@
         'wird am Ende eingefügt:
         _AnzahlKinosäle += 1
         Dim b(_AnzahlKinosäle) As Kinosaal
-        _Kinosäle(_AnzahlKinosäle - 1) = Kinosaal
+        '_Kinosäle(_AnzahlKinosäle - 1) = Kinosaal
+        _Kinosäle.Add(Kinosaal)
+
     End Sub
 
     Public Sub KinosaalEntfernen(a As Integer)
@@ -239,4 +244,8 @@
     '    _Kinosäle = B
 
     'End Sub
+    Public Sub VorstellungHinzufügen(tagesplan As Tagesplan, Position As Integer, z As Vorstellung)
+
+    End Sub
+
 End Class

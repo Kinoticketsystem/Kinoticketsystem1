@@ -104,7 +104,7 @@ Public Class Tagesplan
             End If
         Next
         If alleFilmeHeuteWarenSchon Then
-            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False))
+            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False), _Saal)
         End If
     End Function
 

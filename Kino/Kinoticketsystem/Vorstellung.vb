@@ -3,8 +3,8 @@
 Public Class Vorstellung
     'Attribute
     Implements IVorstellung
-    Private _Startzeit As Integer 'in Minuten seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
-    Private _Endzeit As Integer 'in Minuten seit 8:00, also 8:0 0 = 0; 9:00 = 60; ...
+    Private _Startzeit As Integer 'in Minuten seit 0, also 8:00 = 480; 9:00 = 560; ...
+    Private _Endzeit As Integer 'in Minuten seit 0:00, also 8:00 = 480; 9:00 = 480; ...
     Private _Besucher As ArrayList = New ArrayList()
     Private _Saal As Kinosaal 'falls wir keine nummern nehmen
     Private _Film As Film
@@ -12,12 +12,12 @@ Public Class Vorstellung
 
 
     'Konstruktor
-    Public Sub New(ByVal Startzeit As Integer, ByVal Endzeit As Integer, ByVal Besucher As ArrayList, ByVal Film As Film) 'ByVal Saal As Kinosaal, 
-        If Startzeit >= 0 And Endzeit < 1080 Then 'entspricht nicht vor 8:00 und nicht länger als 2:00
+    Public Sub New(ByVal Startzeit As Integer, ByVal Endzeit As Integer, ByVal Besucher As ArrayList, ByVal Film As Film, ByVal Saal As Kinosaal)
+        If Startzeit >= 480 And Endzeit < 1630 Then 'entspricht nicht vor 8:00 und nicht länger als 3:10
             _Startzeit = Startzeit
             _Endzeit = Endzeit
         Else
-            Throw New Exception("die Veranstaltung kann nicht vor 8(=0) anfangen oder länger als 2:00(=1080) gehen")
+            Throw New Exception("die Veranstaltung kann nicht vor 8(=480) anfangen oder länger als 3:10(=1630) gehen")
         End If
         If Endzeit - Startzeit < Film.getFilmlänge Then
             Throw New Exception("Die Veranstaltung geht kürzer als der Film lang ist, das geht nicht !!!")

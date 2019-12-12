@@ -1,7 +1,7 @@
 ﻿Public Class TestVorstellung
 
-
-    Private _Vorstellung As Vorstellung = New Vorstellung(0, 0, New ArrayList(), BeispielFilmC)
+    Private testsaal As Kinosaal = New Kinosaal(60, 50, 10)
+    Private _Vorstellung As Vorstellung = New Vorstellung(0, 0, New ArrayList(), BeispielFilmC, testsaal)
     Private BeispielFilmA As Film = New Film("Testfilm", 120, 16, True)
     Private BeispielFilmC As Film = New Film("Film", 90, 12, False)
     Private BeispeilSaalA As Kinosaal = New Kinosaal(120, 7, 14) 'BeispielFilmA wurde rausgenommen aus dem Konstruktor, weil das ni´cht mehr im Konstruktor übergeben wird
@@ -28,7 +28,7 @@
 
     Private Sub TestBesucherHinzufügen()
         _Vorstellung.BesucherHinzufügen(BeispielBesucherA)
-        BeispielBesucherB = _Vorstellung.getBesucher(0)
+        BeispielBesucherB = _Vorstellung.getBesucher(1)
 
         If Not BeispielBesucherA.Equals(BeispielBesucherB) Then
             Console.WriteLine("Problem bei Vorstellung: BesucherHinzufügen")
@@ -38,7 +38,7 @@
 
     Private Sub TestBesucherEntfernen1()
         _Vorstellung.BesucherEntfernen(BeispielBesucherA)
-        BeispielBesucherB = _Vorstellung.getBesucher(0)
+        BeispielBesucherB = _Vorstellung.getBesucher(1)
 
         If BeispielBesucherA.Equals(BeispielBesucherB) Then
             Console.WriteLine("Problem bei Vorstellung: BesucherEntfernen1")
