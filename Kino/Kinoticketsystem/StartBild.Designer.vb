@@ -71,7 +71,7 @@ Partial Class StartBild
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "StartBild"
         Me.Text = "Kinoticketsystem"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
