@@ -35,61 +35,60 @@ Partial Class FilmHinzufügenGUI
         Me.txtAltersfreigabe = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.cmdFilmEntfernen = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Info
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Cursor = System.Windows.Forms.Cursors.No
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label1.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 108)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(8, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(269, 45)
+        Me.Label1.Size = New System.Drawing.Size(140, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Vorstellungstitel:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Info
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Cursor = System.Windows.Forms.Cursors.No
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(104, 169)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(52, 88)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(173, 45)
+        Me.Label2.Size = New System.Drawing.Size(88, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Filmlänge:"
         '
         'txtFilmtitel
         '
-        Me.txtFilmtitel.Location = New System.Drawing.Point(314, 108)
-        Me.txtFilmtitel.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.txtFilmtitel.Location = New System.Drawing.Point(157, 56)
         Me.txtFilmtitel.Name = "txtFilmtitel"
-        Me.txtFilmtitel.Size = New System.Drawing.Size(196, 31)
+        Me.txtFilmtitel.Size = New System.Drawing.Size(100, 20)
         Me.txtFilmtitel.TabIndex = 1
         '
         'txtFilmlänge
         '
-        Me.txtFilmlänge.Location = New System.Drawing.Point(314, 181)
-        Me.txtFilmlänge.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.txtFilmlänge.Location = New System.Drawing.Point(157, 94)
         Me.txtFilmlänge.Name = "txtFilmlänge"
-        Me.txtFilmlänge.Size = New System.Drawing.Size(196, 31)
+        Me.txtFilmlänge.Size = New System.Drawing.Size(100, 20)
         Me.txtFilmlänge.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.Info
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Cursor = System.Windows.Forms.Cursors.No
         Me.Label3.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(522, 173)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(261, 91)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 45)
+        Me.Label3.Size = New System.Drawing.Size(57, 23)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "in min"
         '
@@ -101,10 +100,9 @@ Partial Class FilmHinzufügenGUI
         Me.cmdFilmHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdFilmHinzufügen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdFilmHinzufügen.ForeColor = System.Drawing.Color.Black
-        Me.cmdFilmHinzufügen.Location = New System.Drawing.Point(214, 429)
-        Me.cmdFilmHinzufügen.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.cmdFilmHinzufügen.Location = New System.Drawing.Point(107, 223)
         Me.cmdFilmHinzufügen.Name = "cmdFilmHinzufügen"
-        Me.cmdFilmHinzufügen.Size = New System.Drawing.Size(410, 58)
+        Me.cmdFilmHinzufügen.Size = New System.Drawing.Size(205, 30)
         Me.cmdFilmHinzufügen.TabIndex = 5
         Me.cmdFilmHinzufügen.Text = "Film Hinzufügen"
         Me.cmdFilmHinzufügen.UseVisualStyleBackColor = False
@@ -112,93 +110,105 @@ Partial Class FilmHinzufügenGUI
         'lstAlleFilme
         '
         Me.lstAlleFilme.FormattingEnabled = True
-        Me.lstAlleFilme.ItemHeight = 25
-        Me.lstAlleFilme.Location = New System.Drawing.Point(1380, 59)
-        Me.lstAlleFilme.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.lstAlleFilme.Location = New System.Drawing.Point(557, 26)
         Me.lstAlleFilme.Name = "lstAlleFilme"
-        Me.lstAlleFilme.Size = New System.Drawing.Size(546, 1054)
+        Me.lstAlleFilme.Size = New System.Drawing.Size(192, 420)
         Me.lstAlleFilme.TabIndex = 6
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.Info
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Cursor = System.Windows.Forms.Cursors.No
         Me.Label4.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(223, 304)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(112, 158)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label4.Size = New System.Drawing.Size(62, 45)
+        Me.Label4.Size = New System.Drawing.Size(32, 23)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "3D"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.Info
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Cursor = System.Windows.Forms.Cursors.No
         Me.Label5.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(41, 229)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(20, 119)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(236, 45)
+        Me.Label5.Size = New System.Drawing.Size(123, 23)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Altersfreigabe:"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(332, 312)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.CheckBox1.Location = New System.Drawing.Point(166, 162)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(67, 29)
+        Me.CheckBox1.Size = New System.Drawing.Size(37, 17)
         Me.CheckBox1.TabIndex = 4
         Me.CheckBox1.Text = "Ja"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'txtAltersfreigabe
         '
-        Me.txtAltersfreigabe.Location = New System.Drawing.Point(314, 229)
-        Me.txtAltersfreigabe.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.txtAltersfreigabe.Location = New System.Drawing.Point(157, 119)
         Me.txtAltersfreigabe.Name = "txtAltersfreigabe"
-        Me.txtAltersfreigabe.Size = New System.Drawing.Size(196, 31)
+        Me.txtAltersfreigabe.Size = New System.Drawing.Size(100, 20)
         Me.txtAltersfreigabe.TabIndex = 3
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.SystemColors.Info
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Cursor = System.Windows.Forms.Cursors.No
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(1195, 59)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(474, 26)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 39)
+        Me.Label6.Size = New System.Drawing.Size(77, 19)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Alle Filme:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.SystemColors.Info
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Cursor = System.Windows.Forms.Cursors.No
         Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Italic Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(424, 304)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(212, 158)
         Me.Label7.Name = "Label7"
         Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label7.Size = New System.Drawing.Size(609, 39)
+        Me.Label7.Size = New System.Drawing.Size(310, 19)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Wenn es kein 3D-Film ist dann nicht ankreuzen"
         '
+        'cmdFilmEntfernen
+        '
+        Me.cmdFilmEntfernen.BackColor = System.Drawing.Color.Black
+        Me.cmdFilmEntfernen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdFilmEntfernen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdFilmEntfernen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdFilmEntfernen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdFilmEntfernen.ForeColor = System.Drawing.Color.Black
+        Me.cmdFilmEntfernen.Location = New System.Drawing.Point(107, 275)
+        Me.cmdFilmEntfernen.Name = "cmdFilmEntfernen"
+        Me.cmdFilmEntfernen.Size = New System.Drawing.Size(205, 30)
+        Me.cmdFilmEntfernen.TabIndex = 11
+        Me.cmdFilmEntfernen.Text = "Film Entfernen"
+        Me.cmdFilmEntfernen.UseVisualStyleBackColor = False
+        '
         'FilmHinzufügenGUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
-        Me.ClientSize = New System.Drawing.Size(2070, 1125)
+        Me.ClientSize = New System.Drawing.Size(880, 519)
+        Me.Controls.Add(Me.cmdFilmEntfernen)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAltersfreigabe)
@@ -212,7 +222,6 @@ Partial Class FilmHinzufügenGUI
         Me.Controls.Add(Me.txtFilmtitel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "FilmHinzufügenGUI"
         Me.Text = "FilmHinzufügenGUI"
         Me.ResumeLayout(False)
@@ -233,4 +242,5 @@ Partial Class FilmHinzufügenGUI
     Friend WithEvents txtAltersfreigabe As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents cmdFilmEntfernen As Button
 End Class
