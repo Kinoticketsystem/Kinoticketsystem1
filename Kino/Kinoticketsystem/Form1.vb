@@ -51,7 +51,7 @@ Public Class FTagesplan
         _vierterTag = vierterTag
         _fünfterTag = fünfterTag
         _sechsterTag = sechsterTag
-        _siebterTag = siebterTag
+        _siebterTag = New Tagesplan() '.getVorstellungen gibt leere arrayliste dann
         _Aendern = AendernModus
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
@@ -1231,6 +1231,7 @@ Public Class FTagesplan
                 Button42.Size = New Size(f.Width, (_sechsterTag.getVorstellung(7).getLänge() / 3))
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
+
             Case 1
                 Button43.Size = New Size(g.Width, (_siebterTag.getVorstellung(1).getLänge() / 3))
             Case 2
