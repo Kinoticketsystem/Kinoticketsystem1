@@ -6,13 +6,14 @@ Public Class Tagesplan
     Private AnzahlFilmeProTag As Integer
     Private _Saal As Kinosaal
     Private _Vorstellungen As ArrayList = New ArrayList()
+    Private _Tag As Integer
 
     'Es muss zusätzlich zum Konstruktor IMMER auch eine ErstellenMEthode aufgerufen werden
     'Es wird geprüft, ob sich die Vorstellungen überschneiden (ob sie nicht zu früh oder zu spät anfangen siehe Vorstellung)
     Public Sub New()
         ' _Vorstellungen = New Vorstellung() {}
     End Sub
-    Public Sub TagesplanErstellen5(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung, Vorstellung5 As Vorstellung) Implements ITagesplan.TagesplanErstellen5
+    Public Sub TagesplanErstellen5(Tag As Integer, Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung, Vorstellung5 As Vorstellung) ' Implements ITagesplan.TagesplanErstellen5
         _Vorstellungen.Add(Vorstellung1)
         _Vorstellungen.Add(Vorstellung2)
         _Vorstellungen.Add(Vorstellung3)
@@ -31,6 +32,7 @@ Public Class Tagesplan
         If Vorstellung4.getEndzeit > Vorstellung5.getAnfangszeit Then
             Throw New Exception("die vorstellung5 beginnt, bevor die vorstellung4 endet")
         End If
+        _Tag = Tag
     End Sub
     Public Sub TagesplanErstellen4(Vorstellung1 As Vorstellung, Vorstellung2 As Vorstellung, Vorstellung3 As Vorstellung, Vorstellung4 As Vorstellung) Implements ITagesplan.TagesplanErstellen4
         _Vorstellungen.Add(Vorstellung1)
@@ -159,6 +161,9 @@ Public Class Tagesplan
     End Function
     Public Sub setSaal(a As Kinosaal)
         _Saal = a
+    End Sub
+    Public Sub setTag(tag As Integer)
+        _Tag = tag
     End Sub
     Public Function getFSK(Stelle As Integer) As Integer Implements ITagesplan.getFSK
         Return _Vorstellungen(Stelle).getFilm.getAltersfreigabe

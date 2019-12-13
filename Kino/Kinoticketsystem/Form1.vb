@@ -44,6 +44,19 @@ Public Class FTagesplan
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
+    Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
+        _ersterTag = ersterTag
+        _zweiterTag = zweiterTag
+        _dritterTag = dritterTag
+        _vierterTag = vierterTag
+        _fünfterTag = fünfterTag
+        _sechsterTag = sechsterTag
+        _siebterTag = New Tagesplan() '.getVorstellungen gibt leere arrayliste dann
+        _Aendern = AendernModus
+        GrößeDerFilmButtonsFestlegen()
+        PositionDerFilmButtonsFestlegenY()
+    End Sub
+
     Public Sub SetKinosaal(a As Kinosaal)
         _Kinosaal = a
     End Sub
@@ -66,7 +79,7 @@ Public Class FTagesplan
         Else
             a.BackColor = Color.Red
         End If
-        a.Text = tag.getVorstellung(position).getFilm.getFilmtitel
+        a.Text = tag.getVorstellung(position + 1).getFilm.getFilmtitel
         ButtonsSchönMachen(a)
     End Sub
     Private Sub ButtonsSchönMachen(a As Button)
@@ -1218,6 +1231,7 @@ Public Class FTagesplan
                 Button42.Size = New Size(f.Width, (_sechsterTag.getVorstellung(7).getLänge() / 3))
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
+
             Case 1
                 Button43.Size = New Size(g.Width, (_siebterTag.getVorstellung(1).getLänge() / 3))
             Case 2
@@ -2561,7 +2575,8 @@ Public Class FTagesplan
             'ja geklickt
             Select Case True
                 Case chbMontag.Checked
-                    '_ersterTag.
+                    _ersterTag.getVorstellungen()
+
                 Case chbDienstag.Checked
                 Case chbMittwoch.Checked
                 Case chbDonnerstag.Checked
@@ -2577,7 +2592,7 @@ End Class
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird
 'Die Start - und Laufzeit der Filme wird in den einzelnen Filmen gespeichert
 Public Interface ITagesplan
-    Sub TagesplanErstellen5(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
+    '  Sub TagesplanErstellen5(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
     Sub TagesplanErstellen4(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung)
     Sub TagesplanErstellen3(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung)
     Sub TagesplanErstellen2(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung)
