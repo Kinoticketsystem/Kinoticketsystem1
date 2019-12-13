@@ -82,11 +82,11 @@
         Return _AnzahlFilmWiedergabe
     End Function
     Public Overrides Function Equals(a As Object) As Boolean
-        If Me._Filmtitel = a.getFilmtitel And Me._3D = a.Ist3D() Then
-            Return True
-        Else
-            Return False
-        End If
+        'If Me._Filmtitel = a.getFilmtitel And Me._3D = a.Ist3D() Then
+        'Return True
+        'Else
+        'Return False
+        'End If
     End Function
 
 

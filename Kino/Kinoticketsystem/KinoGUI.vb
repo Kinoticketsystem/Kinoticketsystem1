@@ -722,14 +722,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         NeueVorstellung.Show()
         NeueVorstellung.BringToFront()
         NeueVorstellung.chlBesucherAuswählen.Items.Clear()
-        Dim a As ArrayList = DASKINO.getKunden
+        Dim a As ArrayList = DASKINO.getKunden()
         For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
             NeueVorstellung.chlBesucherAuswählen.Items.Add(a(i).getName)
         Next
         NeueVorstellung.chlFilme.Items.Clear()
-        Dim b As ArrayList = DASKINO.getFilmtitel
-        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
-            NeueVorstellung.chlBesucherAuswählen.Items.Add(b(i))
+        Dim b As ArrayList = DASKINO.getFilmtitel()
+        For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+            NeueVorstellung.chlBesucherAuswählen.Items.Add(b(i).getFilmtitel)
         Next
 
     End Sub
@@ -751,4 +751,6 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdTestTagesplan_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+
 End Class

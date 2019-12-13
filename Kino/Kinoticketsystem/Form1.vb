@@ -2561,7 +2561,7 @@ Public Class FTagesplan
             'ja geklickt
             Select Case True
                 Case chbMontag.Checked
-                    _ersterTag.
+                    '_ersterTag.
                 Case chbDienstag.Checked
                 Case chbMittwoch.Checked
                 Case chbDonnerstag.Checked
