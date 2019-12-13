@@ -66,7 +66,7 @@ Public Class FTagesplan
         Else
             a.BackColor = Color.Red
         End If
-        a.Text = tag.getVorstellung(position).getFilm.getFilmtitel
+        a.Text = tag.getVorstellung(position + 1).getFilm.getFilmtitel
         ButtonsSchönMachen(a)
     End Sub
     Private Sub ButtonsSchönMachen(a As Button)
