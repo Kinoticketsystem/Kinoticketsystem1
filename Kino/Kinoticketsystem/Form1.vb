@@ -19,12 +19,12 @@ Public Class FTagesplan
         PositionDerDatümerFestlegen()   'fertig
         PositionDerFilmButtonsFestlegenX()  'fertig
         'WochenplanAbrufenUndAusgeben()  'muss noch gemacht werden (Erik) 'nicht von hier auslesen, sondern es wird beim aufrufen mit übergeben
-        VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
-        GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
-        PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
-        ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
-        FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
-        VeränderungenJeNachSornierenBuchen
+        '  VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
+        ' GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
+        '  PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
+        ' ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
+        ' FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
+        'VeränderungenJeNachSornierenBuchen()
 
     End Sub
 
@@ -43,6 +43,8 @@ Public Class FTagesplan
         _Aendern = AendernModus
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
+        FarbeDerButtonsFestlegen()
+        VeränderungenJeNachSornierenBuchen()
     End Sub
     Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
         _ersterTag = ersterTag
@@ -51,10 +53,12 @@ Public Class FTagesplan
         _vierterTag = vierterTag
         _fünfterTag = fünfterTag
         _sechsterTag = sechsterTag
-
+        _siebterTag = New Tagesplan() '.getVorstellungen gibt leere arrayliste dann
         _Aendern = AendernModus
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
+        FarbeDerButtonsFestlegen()
+        VeränderungenJeNachSornierenBuchen()
     End Sub
 
     Public Sub SetKinosaal(a As Kinosaal)
@@ -1231,6 +1235,7 @@ Public Class FTagesplan
                 Button42.Size = New Size(f.Width, (_sechsterTag.getVorstellung(7).getLänge() / 3))
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
+
             Case 1
                 Button43.Size = New Size(g.Width, (_siebterTag.getVorstellung(1).getLänge() / 3))
             Case 2
