@@ -641,7 +641,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(1)))
         Dim a As ArrayList = DASKINO.getTagesplan
 
-        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12), a(13))
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
 
         'Veranstaltungen übergeben
         'FTagesplan.
@@ -651,6 +651,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(2)))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+
+
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -659,6 +664,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle((3))))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+
+
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -667,6 +677,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(4)))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+
+
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -675,6 +690,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(5)))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+
+
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub

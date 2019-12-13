@@ -44,6 +44,19 @@ Public Class FTagesplan
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
+    Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
+        _ersterTag = ersterTag
+        _zweiterTag = zweiterTag
+        _dritterTag = dritterTag
+        _vierterTag = vierterTag
+        _fünfterTag = fünfterTag
+        _sechsterTag = sechsterTag
+        _siebterTag = siebterTag
+        _Aendern = AendernModus
+        GrößeDerFilmButtonsFestlegen()
+        PositionDerFilmButtonsFestlegenY()
+    End Sub
+
     Public Sub SetKinosaal(a As Kinosaal)
         _Kinosaal = a
     End Sub
@@ -2578,7 +2591,7 @@ End Class
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird
 'Die Start - und Laufzeit der Filme wird in den einzelnen Filmen gespeichert
 Public Interface ITagesplan
-    Sub TagesplanErstellen5(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
+    '  Sub TagesplanErstellen5(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
     Sub TagesplanErstellen4(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung)
     Sub TagesplanErstellen3(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung)
     Sub TagesplanErstellen2(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung)
