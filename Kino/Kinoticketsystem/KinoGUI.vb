@@ -248,6 +248,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim planplätze As Integer
         Dim planreihen As Integer
         Dim plansitzeproreihe As Integer
+        Dim tag As Integer
 
         If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
             For i = 0 To (alleTagespläne.Count / 11)
@@ -267,7 +268,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                         plan.VorstellungHinzufügen(alleVorstellungen(j))
 
                     Next
-
+                    'tag = alleTagespläne(i * 11 + 0).char(0)
+                    'plan.setTag(tag)
                     alleTagespläne2.Add(plan)
                     alleVorstellungen.Clear()
                 End If
@@ -285,6 +287,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 planplätze = alleTagespläne(i * 11 + 8)
                 planreihen = alleTagespläne(i * 11 + 9)
                 plansitzeproreihe = alleTagespläne(i * 11 + 10)
+
                 Dim Film As New Film(vorgestellterFilm, Vorstellungslänge, Vorstellungsfreigabe, Dimension)
                 Dim saal As New Kinosaal(planplätze, planreihen, plansitzeproreihe)
                 alleVorstellungen.Add(New Vorstellung(Anfangszeit, Endzeit, leereListe, Film, saal))
