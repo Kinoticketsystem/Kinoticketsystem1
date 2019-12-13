@@ -65,6 +65,8 @@ Partial Class KinoGUI
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.cmdTestVorstellung = New System.Windows.Forms.Button()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdWochenplan1
@@ -558,6 +560,13 @@ Partial Class KinoGUI
         Me.cmdTestVorstellung.Text = "TestVorstellung"
         Me.cmdTestVorstellung.UseVisualStyleBackColor = True
         '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(1133, 175)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(144, 26)
+        Me.NumericUpDown1.TabIndex = 46
+        '
         'KinoGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
@@ -566,6 +575,7 @@ Partial Class KinoGUI
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1300, 1044)
+        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.cmdTestVorstellung)
         Me.Controls.Add(Me.cmdKundenDatenbankAufrufen)
         Me.Controls.Add(Me.cmdWochenpläneBearbeiten)
@@ -610,6 +620,7 @@ Partial Class KinoGUI
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "KinoGUI"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -656,4 +667,5 @@ Partial Class KinoGUI
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents cmdTestVorstellung As Button
+    Friend WithEvents NumericUpDown1 As NumericUpDown
 End Class
