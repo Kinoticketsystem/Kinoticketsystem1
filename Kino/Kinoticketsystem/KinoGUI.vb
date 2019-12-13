@@ -25,10 +25,41 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
-        Dim a As Kinosaal = New Kinosaal(120, 12, 15)
-        KinosaalGUI.Aufrufen(a)
+
+        If NumericUpDown1.Value = 1 Then
+            Dim a As Kinosaal = New Kinosaal(120, 8, 15)
+            KinosaalGUI.Aufrufen(a)
+            KinosaalGUI.BringToFront()
+            KinosaalGUI.Show()
+        ElseIf NumericUpDown1.Value = 2 Then
+            Dim a As Kinosaal = New Kinosaal(60, 6, 10)
+            KinosaalGUI.Aufrufen(a)
+            KinosaalGUI.BringToFront()
+            KinosaalGUI.Show()
+        ElseIf NumericUpDown1.Value = 3 Then
+            Dim a As Kinosaal = New Kinosaal(75, 5, 15)
+            KinosaalGUI.Aufrufen(a)
+            KinosaalGUI.BringToFront()
+            KinosaalGUI.Show()
+        ElseIf NumericUpDown1.Value = 4 Then
+            Dim a As Kinosaal = New Kinosaal(40, 5, 8)
+            KinosaalGUI.Aufrufen(a)
+            KinosaalGUI.BringToFront()
+            KinosaalGUI.Show()
+        ElseIf NumericUpDown1.Value = 5 Then
+            Dim a As Kinosaal = New Kinosaal(100, 5, 20)
+            KinosaalGUI.Aufrufen(a)
+            KinosaalGUI.BringToFront()
+            KinosaalGUI.Show()
+        ElseIf NumericUpDown1.Value = 6 Then
+            Dim a As Kinosaal = New Kinosaal(50, 5, 10)
+
+
+
+         KinosaalGUI.Aufrufen(a)
         KinosaalGUI.BringToFront()
         KinosaalGUI.Show()
+        End If
     End Sub
 
 
@@ -482,6 +513,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         ' AnzahlFreiPlätzeBestimmen()
         'nächstenFilmProKinosaalANzeigen()
         '....
+        NumericUpDown1.Maximum = 6
+        NumericUpDown1.Minimum = 1
+        NumericUpDown1.Value = 1
     End Sub
 
     Private Sub nächstenFilmProKinosaalANzeigen()
@@ -774,4 +808,6 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdTestTagesplan_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+
 End Class
