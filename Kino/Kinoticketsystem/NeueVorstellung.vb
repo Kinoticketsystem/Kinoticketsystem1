@@ -22,14 +22,22 @@ Public Class NeueVorstellung
         EnduhrzeitWert.Maximum = 24
         EnduhrzeitWert.Minimum = 8
         EnduhrzeitWert.Increment = 0.05
-        NUDKinosaal.Maximum = 7
+        NUDKinosaal.Maximum = 6
         NUDKinosaal.Minimum = 1
         NUDKinosaal.Value = 1
 
     End Sub
 
+    Public Sub datenübergen(c As Vorstellung, Kinosaal As Integer)
+        txtname.Text = c.getFilm.getFilmtitel
+        For i = 0 To c.getAlleBesucher.Count - 1
+            lstBesucher.Items.Add(c.getBesucher(i))
+        Next
+        NUDKinosaal.Value = Kinosaal
+    End Sub
+
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)
-        _Tag = tag
+        _Tag = tag 'erster Tag == 1)
         _Position = Position
     End Sub
 
@@ -42,7 +50,9 @@ Public Class NeueVorstellung
         Else
             'sich selber nicht hier schließen, damit danach noch ausgelesen werden kann
             Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm, _Kinosaal)
-            FTagesplan.filmändern(_Tag, _Position, z)
+            '  FTagesplan.filmändern(_Tag, _Position, z) 'was zum teufel. wer macht denn sowas?
+            Dim a As ArrayList = KinoGUI.DASKINO.getKinosäle
+            KinoGUI.DASKINO.VorstellungHinzufügen(a(_Tag - 1), _Position, z)
             Me.Close()
         End If
     End Sub
@@ -313,5 +323,19 @@ Public Class NeueVorstellung
         Dim a As ArrayList = KinoGUI.DASKINO.getKinosäle
         _Kinosaal = a(NUDKinosaal.Value - 1)
 
+    End Sub
+
+    Private Sub cmdBesucherNEtfernen_Click(sender As Object, e As EventArgs) Handles cmdBesucherNEtfernen.Click
+
+        Dim a As IList = lstBesucher.SelectedItems
+        If a.Count > 0 Then
+            For i = 0 To -1
+                If lstBesucher.GetSelected(i) Then
+                    lstBesucher.Items.RemoveAt(i)
+                End If
+            Next
+        Else
+            lstBesucher.Items.Clear()
+        End If
     End Sub
 End Class

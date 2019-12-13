@@ -6,7 +6,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'Public alleFilme As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     'Public alleKunden As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
     Private _AnzahlKinos As Integer = 6
-    Private _WochenpläneBearbeiten As Boolean
+    Public _WochenpläneBearbeiten As Boolean
+    Public _Buchung As Boolean = True
+
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
 
@@ -23,6 +25,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
+        Dim a As Kinosaal = New Kinosaal(120, 12, 15)
+        KinosaalGUI.Aufrufen(a)
         KinosaalGUI.BringToFront()
         KinosaalGUI.Show()
     End Sub
@@ -35,13 +39,16 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
+            _Buchung = True
+            FTagesplan._Stornieren = False
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
             cmdNeueBuchung.BackColor = Color.Lime
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
-
+            _Buchung = False
+            FTagesplan._Stornieren = True
         End If
     End Sub
 
@@ -243,12 +250,22 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim plansitzeproreihe As Integer
 
         If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
-            For i = 0 To ((alleTagespläne.Count / 11) - 1)
+            For i = 0 To (alleTagespläne.Count / 11)
+                If i = (alleTagespläne.Count / 11) Then
+                    Dim plan As Tagesplan = New Tagesplan
+                    For j = 0 To alleVorstellungen.Count - 1
+                        plan.VorstellungHinzufügen(alleVorstellungen(j))
+                    Next
+                    alleTagespläne2.Add(plan)
+                    alleVorstellungen.Clear()
+                    Exit For
+                End If
                 If alleTagespläne(i * 11 + 0).contains("Tag") And i > 0 Then
 
                     Dim plan As Tagesplan = New Tagesplan
                     For j = 0 To alleVorstellungen.Count - 1
                         plan.VorstellungHinzufügen(alleVorstellungen(j))
+
                     Next
 
                     alleTagespläne2.Add(plan)
@@ -260,7 +277,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 vorgestellterFilm = alleTagespläne(i * 11 + 4)
                 Vorstellungslänge = alleTagespläne(i * 11 + 5)
                 Vorstellungsfreigabe = alleTagespläne(i * 11 + 6)
-                Dimension = alleTagespläne(i * 11 + 7)
+                If alleTagespläne(i * 11 + 7) = "True" Then
+                    Dimension = True
+                Else
+                    Dimension = False
+                End If
                 planplätze = alleTagespläne(i * 11 + 8)
                 planreihen = alleTagespläne(i * 11 + 9)
                 plansitzeproreihe = alleTagespläne(i * 11 + 10)
@@ -456,7 +477,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         End If
         ' AnzahlFreiPlätzeBestimmen()
-        '    nächstenFilmProKinosaalANzeigen()
+        'nächstenFilmProKinosaalANzeigen()
         '....
     End Sub
 
@@ -465,6 +486,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         'For i = 0 To DASKINO.getTagesplan.GetLength(0) - 1
         '    labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
         'Next
+        Dim a As ArrayList = DASKINO.getTagesplan
+        For i = 0 To a.Count - 1 Step 7
+            labelNächsterFilmBerechnen(i / 7, a(i).getNächstenFilm)
+        Next
+
     End Sub
 
     Private Sub labelNächsterFilmBerechnen(i As Integer, vorstellung As Vorstellung)
@@ -485,18 +511,18 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub AnzahlFreiPlätzeBestimmen()
-        'Dim a() As Kinosaal = DASKINO.getKinosäle
-        'For i = 0 To DASKINO.getKinosäle().GetLength(0) - 1
-        '    If a(i).getAnzahlFreiPlätze > 0 Then
-        '        LabelFreiPlätzeberechnen(i, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-        '    ElseIf a(i).getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
-        '        LabelFreiPlätzeberechnen(i, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-        '    Else
-        '        LabelFreiPlätzeberechnen(i, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-        '    End If
-        'Next
-    End Sub
+        Dim a As ArrayList = DASKINO.getTagesplan
+        For i = 0 To a.Count - 1 Step 7
+            If a(i).getNächstenFilm(Now).getSaal.getAnzahlFreiPlätze > 0 Then
+                LabelFreiPlätzeberechnen(i / 7, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            ElseIf a(i).getNächstenFilm.getSaal.getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
+                LabelFreiPlätzeberechnen(i / 7, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            Else
+                LabelFreiPlätzeberechnen(i / 7, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+            End If
+        Next
 
+    End Sub
     Private Sub LabelFreiPlätzeberechnen(c As Integer, frei As Integer, anzahlfreiePlätze As Integer, anzahlPlätze As Integer)
         If frei = 0 Then
             Select Case c
@@ -597,6 +623,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdWochenplan_Click(sender As Object, e As EventArgs) Handles cmdWochenplan1.Click
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
+        FTagesplan.SetKinosaal((DASKINO.getKinosäle(0)))
+        'so müsste es laufen, wenn 3D arraylist,  besser wäre eigentlich array!!!!
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(0), a(1), a(2), a(3), a(4), a(5), a(6))
         ' FTagesplan.SetKinosaal(DASKINO.getKinosäle(0)) 'muss wieder auskommentiert werden, wenn es Kinosäle gibt
         'Veranstaltungen übergeben
         'FTagesplan.
@@ -605,6 +636,10 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.BringToFront()
         FTagesplan.Visible = True
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(1)))
+        Dim a As ArrayList = DASKINO.getTagesplan
+
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12), a(13))
+
         'Veranstaltungen übergeben
         'FTagesplan.
     End Sub
@@ -652,13 +687,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            _Buchung = False
         Else
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             cmdBuchungStonieren.BackColor = Color.Lime
             cmdBuchungStonieren.FlatAppearance.BorderSize = 1
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
-
+            _Buchung = True
         End If
     End Sub
 
@@ -675,11 +711,11 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
         KundenGUI.Show()
         KundenGUI.BringToFront()
-        KundenGUI.lstSammlung.Items.Clear()
-        Dim a As ArrayList = DASKINO.getKunden
-        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
-            KundenGUI.lstSammlung.Items.Add(a(i))
-        Next
+        'KundenGUI.lstSammlung.Items.Clear()
+        'Dim a As ArrayList = DASKINO.getKunden
+        'For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
+        '    KundenGUI.lstSammlung.Items.Add(a(i).getName)
+        'Next
     End Sub
 
     Private Sub cmdVorstellungErstellen_Click(sender As Object, e As EventArgs) Handles cmdVorstellungErstellen.Click
@@ -699,8 +735,20 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdWochenpläneBearbeiten_Click(sender As Object, e As EventArgs) Handles cmdWochenpläneBearbeiten.Click
-        If _WochenpläneBearbeiten Then
+        If cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup Then
+            _WochenpläneBearbeiten = True
+            cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderColor = Color.Black
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+        Else
             _WochenpläneBearbeiten = False
+            cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
+
         End If
+    End Sub
+
+    Private Sub cmdTestTagesplan_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

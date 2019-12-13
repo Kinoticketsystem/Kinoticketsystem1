@@ -31,53 +31,56 @@ Partial Class KundenGUI
         'lstSammlung
         '
         Me.lstSammlung.FormattingEnabled = True
-        Me.lstSammlung.ItemHeight = 25
-        Me.lstSammlung.Location = New System.Drawing.Point(24, 23)
-        Me.lstSammlung.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.lstSammlung.Location = New System.Drawing.Point(364, 16)
         Me.lstSammlung.Name = "lstSammlung"
-        Me.lstSammlung.Size = New System.Drawing.Size(684, 804)
+        Me.lstSammlung.Size = New System.Drawing.Size(242, 407)
         Me.lstSammlung.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(722, 31)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(22, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 36)
+        Me.Label1.Size = New System.Drawing.Size(64, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Name: "
         '
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(840, 23)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.txtName.Location = New System.Drawing.Point(80, 18)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(390, 44)
+        Me.txtName.Size = New System.Drawing.Size(197, 26)
         Me.txtName.TabIndex = 2
         '
         'cmdLöschenHinzufügen
         '
-        Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdLöschenHinzufügen.Location = New System.Drawing.Point(732, 140)
-        Me.cmdLöschenHinzufügen.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.cmdLöschenHinzufügen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdLöschenHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdLöschenHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLöschenHinzufügen.Location = New System.Drawing.Point(26, 80)
         Me.cmdLöschenHinzufügen.Name = "cmdLöschenHinzufügen"
-        Me.cmdLöschenHinzufügen.Size = New System.Drawing.Size(502, 56)
+        Me.cmdLöschenHinzufügen.Size = New System.Drawing.Size(251, 29)
         Me.cmdLöschenHinzufügen.TabIndex = 3
         Me.cmdLöschenHinzufügen.UseVisualStyleBackColor = True
         '
         'KundenGUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1258, 865)
+        Me.BackColor = System.Drawing.Color.Black
+        Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
+        Me.ClientSize = New System.Drawing.Size(629, 450)
         Me.Controls.Add(Me.cmdLöschenHinzufügen)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lstSammlung)
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "KundenGUI"
         Me.Text = "Kunden"
         Me.ResumeLayout(False)

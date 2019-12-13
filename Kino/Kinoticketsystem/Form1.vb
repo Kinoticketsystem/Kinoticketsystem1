@@ -8,8 +8,10 @@ Public Class FTagesplan
     Private _fünfterTag As ITagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
-    Private _Aendern As Boolean
+    Private _Aendern As Boolean = True
+    Public _Stornieren As Boolean
     Private _Kinosaal As Kinosaal
+
     Private _Kunde As Kunde = New Kunde("Standard")
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,12 +22,17 @@ Public Class FTagesplan
         VorübergehendeInitialisierungderVeranstaltungenAlleMitDemGleichenFIlm() 'wird später Standartinitialisierung, falls nichts übergeben wird
         GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
         PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
-        ' ButtonsInvisibleMachen() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
+        ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
         FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
-
+        VeränderungenJeNachSornierenBuchen
 
     End Sub
-    Public Sub InitialisiereDenWochenplan(ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
+
+    Private Sub VeränderungenJeNachSornierenBuchen()
+        'Throw New NotImplementedException()
+    End Sub
+
+    Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
         _dritterTag = dritterTag
@@ -33,12 +40,12 @@ Public Class FTagesplan
         _fünfterTag = fünfterTag
         _sechsterTag = sechsterTag
         _siebterTag = siebterTag
+        _Aendern = AendernModus
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
     Public Sub SetKinosaal(a As Kinosaal)
         _Kinosaal = a
-
     End Sub
     Public Function GetKinosaal() As Kinosaal
         Return _Kinosaal
@@ -59,6 +66,7 @@ Public Class FTagesplan
         Else
             a.BackColor = Color.Red
         End If
+        a.Text = tag.getVorstellung(position).getFilm.getFilmtitel
         ButtonsSchönMachen(a)
     End Sub
     Private Sub ButtonsSchönMachen(a As Button)
@@ -372,10 +380,10 @@ Public Class FTagesplan
         Dim a As Film = New Film("Star Wars 1", 120, 12, True)
         Dim f As Kinosaal = New Kinosaal(120, 8, 15)
 
-        Dim b As Vorstellung = New Vorstellung(0, 120, Nothing, a, f)
-        Dim c As Vorstellung = New Vorstellung(126, 350, Nothing, a, f)
-        Dim d As Vorstellung = New Vorstellung(360, 600, Nothing, a, f)
-        Dim e As Vorstellung = New Vorstellung(900, 1039, Nothing, a, f)
+        Dim b As Vorstellung = New Vorstellung(480, 600, Nothing, a, f)
+        Dim c As Vorstellung = New Vorstellung(606, 830, Nothing, a, f)
+        Dim d As Vorstellung = New Vorstellung(840, 1080, Nothing, a, f)
+        Dim e As Vorstellung = New Vorstellung(1380, 1519, Nothing, a, f)
 
         _ersterTag = New Tagesplan
         _zweiterTag = New Tagesplan
@@ -400,7 +408,7 @@ Public Class FTagesplan
         'erster Tag
         Select Case _ersterTag.getAnzahlVorstellungen
             Case 1
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button2.Hide()
                 Button3.Hide()
                 Button4.Hide()
@@ -408,59 +416,59 @@ Public Class FTagesplan
                 Button6.Hide()
                 Button7.Hide()
             Case 2
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button3.Hide()
                 Button4.Hide()
                 Button5.Hide()
                 Button6.Hide()
                 Button7.Hide()
             Case 3
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button4.Hide()
                 Button5.Hide()
                 Button6.Hide()
                 Button7.Hide()
             Case 4
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button5.Hide()
                 Button6.Hide()
                 Button7.Hide()
             Case 5
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button6.Hide()
                 Button7.Hide()
             Case 6
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button7.Hide()
             Case 7
-                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button7.Top = (_ersterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button1.Top = (_ersterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button2.Top = (_ersterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button3.Top = (_ersterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button4.Top = (_ersterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button7.Top = (_ersterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den ersten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _zweiterTag.getAnzahlVorstellungen
             Case 1
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
                 Button9.Hide()
                 Button10.Hide()
                 Button11.Hide()
@@ -468,59 +476,59 @@ Public Class FTagesplan
                 Button13.Hide()
                 Button14.Hide()
             Case 2
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 160
                 Button10.Hide()
                 Button11.Hide()
                 Button12.Hide()
                 Button13.Hide()
                 Button14.Hide()
             Case 3
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 160
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 160
                 Button11.Hide()
                 Button12.Hide()
                 Button13.Hide()
                 Button14.Hide()
             Case 4
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 160
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 160
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 160
                 Button12.Hide()
                 Button13.Hide()
                 Button14.Hide()
             Case 5
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button13.Hide()
                 Button14.Hide()
             Case 6
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button14.Hide()
             Case 7
-                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button14.Top = (_zweiterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button9.Top = (_zweiterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button10.Top = (_zweiterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button11.Top = (_zweiterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button12.Top = (_zweiterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button13.Top = (_zweiterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button14.Top = (_zweiterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den zweiten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _dritterTag.getAnzahlVorstellungen
             Case 1
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button16.Hide()
                 Button17.Hide()
                 Button18.Hide()
@@ -528,59 +536,59 @@ Public Class FTagesplan
                 Button20.Hide()
                 Button21.Hide()
             Case 2
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button17.Hide()
                 Button18.Hide()
                 Button19.Hide()
                 Button20.Hide()
                 Button21.Hide()
             Case 3
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button18.Hide()
                 Button19.Hide()
                 Button20.Hide()
                 Button21.Hide()
             Case 4
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button19.Hide()
                 Button20.Hide()
                 Button21.Hide()
             Case 5
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button20.Hide()
                 Button21.Hide()
             Case 6
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button21.Hide()
             Case 7
-                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button21.Top = (_dritterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button16.Top = (_dritterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button17.Top = (_dritterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button18.Top = (_dritterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button19.Top = (_dritterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button20.Top = (_dritterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button21.Top = (_dritterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den dritten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _vierterTag.getAnzahlVorstellungen
             Case 1
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button23.Hide()
                 Button24.Hide()
                 Button25.Hide()
@@ -588,59 +596,59 @@ Public Class FTagesplan
                 Button27.Hide()
                 Button28.Hide()
             Case 2
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button24.Hide()
                 Button25.Hide()
                 Button26.Hide()
                 Button27.Hide()
                 Button28.Hide()
             Case 3
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button25.Hide()
                 Button26.Hide()
                 Button27.Hide()
                 Button28.Hide()
             Case 4
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button26.Hide()
                 Button27.Hide()
                 Button28.Hide()
             Case 5
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button27.Hide()
                 Button28.Hide()
             Case 6
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button28.Hide()
             Case 7
-                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button28.Top = (_vierterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button23.Top = (_vierterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button24.Top = (_vierterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button25.Top = (_vierterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button26.Top = (_vierterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button27.Top = (_vierterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button28.Top = (_vierterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den vierten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _fünfterTag.getAnzahlVorstellungen
             Case 1
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button30.Hide()
                 Button31.Hide()
                 Button32.Hide()
@@ -648,60 +656,60 @@ Public Class FTagesplan
                 Button34.Hide()
                 Button35.Hide()
             Case 2
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button31.Hide()
                 Button32.Hide()
                 Button33.Hide()
                 Button34.Hide()
                 Button35.Hide()
             Case 3
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button32.Hide()
                 Button33.Hide()
                 Button34.Hide()
                 Button35.Hide()
             Case 4
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button33.Hide()
                 Button34.Hide()
                 Button35.Hide()
             Case 5
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button34.Hide()
                 Button35.Hide()
             Case 6
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button35.Hide()
             Case 7
-                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button35.Top = (_fünfterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button30.Top = (_fünfterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button31.Top = (_fünfterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button32.Top = (_fünfterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button33.Top = (_fünfterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button34.Top = (_fünfterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button35.Top = (_fünfterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den fünfter Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
         End Select
         Select Case _sechsterTag.getAnzahlVorstellungen
             Case 1
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button37.Hide()
                 Button38.Hide()
                 Button39.Hide()
@@ -709,60 +717,60 @@ Public Class FTagesplan
                 Button41.Hide()
                 Button42.Hide()
             Case 2
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button38.Hide()
                 Button39.Hide()
                 Button40.Hide()
                 Button41.Hide()
                 Button42.Hide()
             Case 3
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button39.Hide()
                 Button40.Hide()
                 Button41.Hide()
                 Button42.Hide()
             Case 4
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button40.Hide()
                 Button41.Hide()
                 Button42.Hide()
             Case 5
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button41.Hide()
                 Button42.Hide()
             Case 6
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button42.Hide()
             Case 7
-                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button42.Top = (_sechsterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button37.Top = (_sechsterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button38.Top = (_sechsterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button39.Top = (_sechsterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button40.Top = (_sechsterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button41.Top = (_sechsterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button42.Top = (_sechsterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den sechster Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
             Case 1
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button44.Hide()
                 Button45.Hide()
                 Button46.Hide()
@@ -770,53 +778,53 @@ Public Class FTagesplan
                 Button48.Hide()
                 Button49.Hide()
             Case 2
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button45.Hide()
                 Button46.Hide()
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 3
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button46.Hide()
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 4
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button47.Hide()
                 Button48.Hide()
                 Button49.Hide()
             Case 5
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button48.Hide()
                 Button49.Hide()
             Case 6
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button49.Hide()
             Case 7
-                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70
-                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70
-                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70
-                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70
-                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70
-                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70
-                Button49.Top = (_siebterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70
+                Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button44.Top = (_siebterTag.getVorstellung(2).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button45.Top = (_siebterTag.getVorstellung(3).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button46.Top = (_siebterTag.getVorstellung(4).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button47.Top = (_siebterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button48.Top = (_siebterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
+                Button49.Top = (_siebterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
             Case Else
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den siebter Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
 
@@ -1249,29 +1257,35 @@ Public Class FTagesplan
 
     End Sub
 
-    Private Sub ButtonsInvisibleMachen()
-        cmdTagesPlanErstellen.Hide()
-        cmdFilmÄndern.Hide()
+    Private Sub ButtonsInvisibleMachenJeNachModus()
+        cmdFilmeVOnEInemTagEntfernen.Hide()
+        cmdÄnderungenSpeichern.Hide()
+        If _Aendern Then
+            Me.Text = "Wochenplan - Änderungsmodus"
+        Else
+            Me.Text = "Wochenplan"
+            'werden dann grau, deshalb anders lösen
+            'chbMontag.Enabled = False
+            'chbDienstag.Enabled = False
+            'chbMittwoch.Enabled = False
+            'chbDonnerstag.Enabled = False
+            'chbFreitag.Enabled = False
+            'chbSamstag.Enabled = False
+            'chbSonntag.Enabled = False
+
+            ''
+            'chbMittwoch.ForeColor = Color.White
+            'chbMontag.ForeColor = Color.White
+            'chbDienstag.ForeColor = Color.White
+            'chbDonnerstag.ForeColor = Color.White
+            'chbFreitag.ForeColor = Color.White
+            'chbSamstag.ForeColor = Color.White
+            'chbSonntag.ForeColor = Color.White
+        End If
         'Man könnte hier noch die Position individuell anpassen
     End Sub
 
-    Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdFilmÄndern.Click
-        _Aendern = Not _Aendern
-        If _Aendern Then
-            cmdFilmÄndern.FlatStyle = FlatStyle.Flat
-            cmdFilmÄndern.FlatAppearance.BorderColor = Color.Black
-            'cmdFilmÄndern.BackColor = New Color.
-            'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
-
-        Else
-            cmdFilmÄndern.FlatStyle = FlatStyle.Popup
-            ' cmdFilmÄndern.BackColor = Color.Lime
-            cmdFilmÄndern.FlatAppearance.BorderSize = 1
-
-
-        End If
-
-
+    Private Sub cmdFilmÄndern_Click(sender As Object, e As EventArgs) Handles cmdÄnderungenSpeichern.Click
         '    _Montag.FilmÄndern(New Vorstellung(), txtFilmnummer.Text)
         '  Debug.WriteLine("FilmHinzufügen funktioniert nicht") 'lol funktioniert nicht
         '  Select Case True
@@ -1306,140 +1320,627 @@ Public Class FTagesplan
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
     End Sub
+    Private Sub xButtonsAusWählenFürLöschen(a As Button, b As Boolean)
+        If b Then
+            a.FlatAppearance.BorderColor = Color.Red
+            a.FlatAppearance.BorderSize = 2
+        Else
+            a.FlatStyle = FlatStyle.Flat 'Notwendig!!!
+            a.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
+            a.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
+            a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
+        End If
+    End Sub
+    Private Sub yButtonsAuswählenFürLÖschen(a As Integer)
+        Select Case a
+            Case 0
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 1
+                xButtonsAusWählenFürLöschen(Button1, True)
+                xButtonsAusWählenFürLöschen(Button2, True)
+                xButtonsAusWählenFürLöschen(Button3, True)
+                xButtonsAusWählenFürLöschen(Button4, True)
+                xButtonsAusWählenFürLöschen(Button5, True)
+                xButtonsAusWählenFürLöschen(Button6, True)
+                xButtonsAusWählenFürLöschen(Button7, True)
+
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 2
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+
+                xButtonsAusWählenFürLöschen(Button8, True)
+                xButtonsAusWählenFürLöschen(Button9, True)
+                xButtonsAusWählenFürLöschen(Button10, True)
+                xButtonsAusWählenFürLöschen(Button11, True)
+                xButtonsAusWählenFürLöschen(Button12, True)
+                xButtonsAusWählenFürLöschen(Button13, True)
+                xButtonsAusWählenFürLöschen(Button14, True)
+
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 3
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+
+                xButtonsAusWählenFürLöschen(Button15, True)
+                xButtonsAusWählenFürLöschen(Button16, True)
+                xButtonsAusWählenFürLöschen(Button17, True)
+                xButtonsAusWählenFürLöschen(Button18, True)
+                xButtonsAusWählenFürLöschen(Button19, True)
+                xButtonsAusWählenFürLöschen(Button20, True)
+                xButtonsAusWählenFürLöschen(Button21, True)
+
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 4
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+
+                xButtonsAusWählenFürLöschen(Button22, True)
+                xButtonsAusWählenFürLöschen(Button23, True)
+                xButtonsAusWählenFürLöschen(Button24, True)
+                xButtonsAusWählenFürLöschen(Button25, True)
+                xButtonsAusWählenFürLöschen(Button26, True)
+                xButtonsAusWählenFürLöschen(Button27, True)
+                xButtonsAusWählenFürLöschen(Button28, True)
+
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 5
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+
+                xButtonsAusWählenFürLöschen(Button29, True)
+                xButtonsAusWählenFürLöschen(Button30, True)
+                xButtonsAusWählenFürLöschen(Button31, True)
+                xButtonsAusWählenFürLöschen(Button32, True)
+                xButtonsAusWählenFürLöschen(Button33, True)
+                xButtonsAusWählenFürLöschen(Button34, True)
+                xButtonsAusWählenFürLöschen(Button35, True)
+
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 6
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+
+                xButtonsAusWählenFürLöschen(Button36, True)
+                xButtonsAusWählenFürLöschen(Button37, True)
+                xButtonsAusWählenFürLöschen(Button38, True)
+                xButtonsAusWählenFürLöschen(Button39, True)
+                xButtonsAusWählenFürLöschen(Button40, True)
+                xButtonsAusWählenFürLöschen(Button41, True)
+                xButtonsAusWählenFürLöschen(Button42, True)
+
+                xButtonsAusWählenFürLöschen(Button43, False)
+                xButtonsAusWählenFürLöschen(Button44, False)
+                xButtonsAusWählenFürLöschen(Button45, False)
+                xButtonsAusWählenFürLöschen(Button46, False)
+                xButtonsAusWählenFürLöschen(Button47, False)
+                xButtonsAusWählenFürLöschen(Button48, False)
+                xButtonsAusWählenFürLöschen(Button49, False)
+            Case 7
+                xButtonsAusWählenFürLöschen(Button1, False)
+                xButtonsAusWählenFürLöschen(Button2, False)
+                xButtonsAusWählenFürLöschen(Button3, False)
+                xButtonsAusWählenFürLöschen(Button4, False)
+                xButtonsAusWählenFürLöschen(Button5, False)
+                xButtonsAusWählenFürLöschen(Button6, False)
+                xButtonsAusWählenFürLöschen(Button7, False)
+                xButtonsAusWählenFürLöschen(Button8, False)
+                xButtonsAusWählenFürLöschen(Button9, False)
+                xButtonsAusWählenFürLöschen(Button10, False)
+                xButtonsAusWählenFürLöschen(Button11, False)
+                xButtonsAusWählenFürLöschen(Button12, False)
+                xButtonsAusWählenFürLöschen(Button13, False)
+                xButtonsAusWählenFürLöschen(Button14, False)
+                xButtonsAusWählenFürLöschen(Button15, False)
+                xButtonsAusWählenFürLöschen(Button16, False)
+                xButtonsAusWählenFürLöschen(Button17, False)
+                xButtonsAusWählenFürLöschen(Button18, False)
+                xButtonsAusWählenFürLöschen(Button19, False)
+                xButtonsAusWählenFürLöschen(Button20, False)
+                xButtonsAusWählenFürLöschen(Button21, False)
+                xButtonsAusWählenFürLöschen(Button22, False)
+                xButtonsAusWählenFürLöschen(Button23, False)
+                xButtonsAusWählenFürLöschen(Button24, False)
+                xButtonsAusWählenFürLöschen(Button25, False)
+                xButtonsAusWählenFürLöschen(Button26, False)
+                xButtonsAusWählenFürLöschen(Button27, False)
+                xButtonsAusWählenFürLöschen(Button28, False)
+                xButtonsAusWählenFürLöschen(Button29, False)
+                xButtonsAusWählenFürLöschen(Button30, False)
+                xButtonsAusWählenFürLöschen(Button31, False)
+                xButtonsAusWählenFürLöschen(Button32, False)
+                xButtonsAusWählenFürLöschen(Button33, False)
+                xButtonsAusWählenFürLöschen(Button34, False)
+                xButtonsAusWählenFürLöschen(Button35, False)
+                xButtonsAusWählenFürLöschen(Button36, False)
+                xButtonsAusWählenFürLöschen(Button37, False)
+                xButtonsAusWählenFürLöschen(Button38, False)
+                xButtonsAusWählenFürLöschen(Button39, False)
+                xButtonsAusWählenFürLöschen(Button40, False)
+                xButtonsAusWählenFürLöschen(Button41, False)
+                xButtonsAusWählenFürLöschen(Button42, False)
+
+                xButtonsAusWählenFürLöschen(Button43, True)
+                xButtonsAusWählenFürLöschen(Button44, True)
+                xButtonsAusWählenFürLöschen(Button45, True)
+                xButtonsAusWählenFürLöschen(Button46, True)
+                xButtonsAusWählenFürLöschen(Button47, True)
+                xButtonsAusWählenFürLöschen(Button48, True)
+                xButtonsAusWählenFürLöschen(Button49, True)
+        End Select
+    End Sub
     Private Sub chbMontag_CheckedChanged(sender As Object, e As EventArgs) Handles chbMontag.CheckedChanged
-        If chbMontag.Checked Then
+        If chbMontag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbMontag.Left
-
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbMontag.Left
+            yButtonsAuswählenFürLÖschen(1)
+        Else
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            chbMontag.Checked = False
+            yButtonsAuswählenFürLÖschen(0)
         End If
     End Sub
     Private Sub chbDienstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDienstag.CheckedChanged
-        If chbDienstag.Checked Then
+        If chbDienstag.Checked And _Aendern Then
             chbMontag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbDienstag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbDienstag.Left
+            yButtonsAuswählenFürLÖschen(2)
+        Else
+            chbDienstag.Checked = False
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            yButtonsAuswählenFürLÖschen(0)
+
         End If
     End Sub
     Private Sub chbMittwoch_CheckedChanged(sender As Object, e As EventArgs) Handles chbMittwoch.CheckedChanged
-        If chbMittwoch.Checked Then
+        If chbMittwoch.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMontag.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbMittwoch.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbMittwoch.Left
+            yButtonsAuswählenFürLÖschen(3)
+        Else
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            yButtonsAuswählenFürLÖschen(0)
+            chbMittwoch.Checked = False
         End If
     End Sub
     Private Sub chbDonnerstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbDonnerstag.CheckedChanged
-        If chbDonnerstag.Checked Then
+        If chbDonnerstag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbMontag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbDonnerstag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbDonnerstag.Left
+            yButtonsAuswählenFürLÖschen(4)
+        Else
+            yButtonsAuswählenFürLÖschen(0)
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            chbDonnerstag.Checked = False
         End If
     End Sub
     Private Sub chbFreitag_CheckedChanged(sender As Object, e As EventArgs) Handles chbFreitag.CheckedChanged
-        If chbFreitag.Checked Then
+        If chbFreitag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbMontag.Checked = False
             chbSamstag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbFreitag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbFreitag.Left
+            yButtonsAuswählenFürLÖschen(5)
             '     MonthCalendar1.Left = chbMontag.Left
+        Else
+            yButtonsAuswählenFürLÖschen(0)
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            chbFreitag.Checked = False
         End If
     End Sub
     Private Sub chbSamstag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSamstag.CheckedChanged
-        If chbSamstag.Checked Then
+        If chbSamstag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbMontag.Checked = False
             chbSonntag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = chbSamstag.Left
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = chbSamstag.Left
+            yButtonsAuswählenFürLÖschen(6)
             '      MonthCalendar1.Left = chbMontag.Left
+        Else
+            yButtonsAuswählenFürLÖschen(0)
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            chbSamstag.Checked = False
         End If
     End Sub
     Private Sub chbSonntag_CheckedChanged(sender As Object, e As EventArgs) Handles chbSonntag.CheckedChanged
-        If chbSonntag.Checked Then
+        If chbSonntag.Checked And _Aendern Then
             chbDienstag.Checked = False
             chbMittwoch.Checked = False
             chbDonnerstag.Checked = False
             chbFreitag.Checked = False
             chbSamstag.Checked = False
             chbMontag.Checked = False
-            cmdTagesPlanErstellen.Show()
-            cmdTagesPlanErstellen.Left = Size.Width - (cmdTagesPlanErstellen.Width + 45)
+            cmdFilmeVOnEInemTagEntfernen.Show()
+            cmdFilmeVOnEInemTagEntfernen.Left = Size.Width - (cmdFilmeVOnEInemTagEntfernen.Width + 45)
             '     MonthCalendar1.Left = chbMontag.Left
+            yButtonsAuswählenFürLÖschen(7)
+        Else
+            yButtonsAuswählenFürLÖschen(0)
+            chbSonntag.Checked = False
+            cmdFilmeVOnEInemTagEntfernen.Hide()
         End If
     End Sub
     Private Sub Geklickt(a As Integer, b As Integer)
-        Dim c As Vorstellung
+        Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
 
         If _Aendern Then
             'ohne Infos vom Film
             NeueVorstellung.BringToFront()
             NeueVorstellung.Show()
             NeueVorstellung.PositionÜbergeben(a, b)
+            ' NeueVorstellung.datenübergen()
+            Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal)
             'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+            Select Case a
+                Case 1
+                    c = _ersterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 2
+                    c = _zweiterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 3
+                    c = _dritterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 4
+                    c = _vierterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 5
+                    c = _fünfterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 6
+                    c = _sechsterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                Case 7
+                    c = _siebterTag.getVorstellung(b)
+                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+            End Select
         Else
             Select Case a
                 Case 1
                     c = _ersterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 2
                     c = _zweiterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 3
                     c = _dritterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 4
                     c = _vierterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 5
                     c = _fünfterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 6
                     c = _sechsterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                 Case 7
                     c = _siebterTag.getVorstellung(b)
+                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
             End Select
         End If
     End Sub
@@ -1454,36 +1955,350 @@ Public Class FTagesplan
         '(System.Environment.SpecialFolder.Personal) _
         '& "\Image.jpg") '.jpg ist wichtig
 
-        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Deadpool 2.png")
 
         'CType(My.Resources.ResourceManager.GetObject("Deadpool 2.png"), Drawing.Image)
 
         'Image.FromFile("C:\Users\thiemo.rickenstorf\source\repos\Kinoticketsystem1\Kino\Kinoticketsystem\Resources\Avatar.png") 'läuft noch nicht
-        MausüberButton(BildVomFilm, Button1, 1, 1)
+        MausüberButton(Button1, 1, 1)
     End Sub
 
 
     Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
-        mausverlässtButton
+        mausverlässtButton()
     End Sub
 
     Private Sub mausverlässtButton()
         PictureBox1.Hide()
+        lblTextüberFIlm.Hide()
     End Sub
 
-    Private Sub MausüberButton(pic As Image, a As Button, x As Integer, y As Integer)
+    Private Sub Button2_MouseMove(sender As Object, e As EventArgs) Handles Button2.MouseMove
+        MausüberButton(Button2, 1, 2)
+    End Sub
+    Private Sub Button3_MouseMove(sender As Object, e As EventArgs) Handles Button3.MouseMove
+        MausüberButton(Button3, 1, 3)
+    End Sub
+    Private Sub Button4_MouseMove(sender As Object, e As EventArgs) Handles Button4.MouseMove
+        MausüberButton(Button4, 1, 4)
+    End Sub
+    Private Sub Button5_MouseMove(sender As Object, e As EventArgs) Handles Button5.MouseMove
+        MausüberButton(Button5, 1, 5)
+    End Sub
+    Private Sub Button6_MouseMove(sender As Object, e As EventArgs) Handles Button6.MouseMove
+        MausüberButton(Button6, 1, 6)
+    End Sub
+    Private Sub Button7_MouseMove(sender As Object, e As EventArgs) Handles Button7.MouseMove
+        MausüberButton(Button7, 1, 7)
+    End Sub
+    Private Sub Button8_MouseMove(sender As Object, e As EventArgs) Handles Button8.MouseMove
+        MausüberButton(Button8, 2, 1)
+    End Sub
+    Private Sub Button9_MouseMove(sender As Object, e As EventArgs) Handles Button9.MouseMove
+        MausüberButton(Button9, 2, 2)
+    End Sub
+    Private Sub Button10_MouseMove(sender As Object, e As EventArgs) Handles Button10.MouseMove
+        MausüberButton(Button10, 2, 3)
+    End Sub
+    Private Sub Button11_MouseMove(sender As Object, e As EventArgs) Handles Button11.MouseMove
+        MausüberButton(Button11, 2, 4)
+    End Sub
+    Private Sub Button12_MouseMove(sender As Object, e As EventArgs) Handles Button12.MouseMove
+        MausüberButton(Button12, 2, 5)
+    End Sub
+    Private Sub Button13_MouseMove(sender As Object, e As EventArgs) Handles Button13.MouseMove
+        MausüberButton(Button13, 2, 6)
+    End Sub
+    Private Sub Button14_MouseMove(sender As Object, e As EventArgs) Handles Button14.MouseMove
+        MausüberButton(Button14, 2, 7)
+    End Sub
+    Private Sub Button15_MouseMove(sender As Object, e As EventArgs) Handles Button15.MouseMove
+        MausüberButton(Button15, 3, 1)
+    End Sub
+    Private Sub Button16_MouseMove(sender As Object, e As EventArgs) Handles Button16.MouseMove
+        MausüberButton(Button16, 3, 2)
+    End Sub
+    Private Sub Button17_MouseMove(sender As Object, e As EventArgs) Handles Button17.MouseMove
+        MausüberButton(Button17, 3, 3)
+    End Sub
+    Private Sub Button18_MouseMove(sender As Object, e As EventArgs) Handles Button18.MouseMove
+        MausüberButton(Button18, 3, 4)
+    End Sub
+    Private Sub Button19_MouseMove(sender As Object, e As EventArgs) Handles Button19.MouseMove
+        MausüberButton(Button19, 3, 5)
+    End Sub
+    Private Sub Button20_MouseMove(sender As Object, e As EventArgs) Handles Button20.MouseMove
+        MausüberButton(Button20, 3, 6)
+    End Sub
+    Private Sub Button21_MouseMove(sender As Object, e As EventArgs) Handles Button21.MouseMove
+        MausüberButton(Button21, 3, 7)
+    End Sub
+    Private Sub Button22_MouseMove(sender As Object, e As EventArgs) Handles Button22.MouseMove
+        MausüberButton(Button22, 4, 1)
+    End Sub
+    Private Sub Button23_MouseMove(sender As Object, e As EventArgs) Handles Button23.MouseMove
+        MausüberButton(Button23, 4, 2)
+    End Sub
+    Private Sub Button24_MouseMove(sender As Object, e As EventArgs) Handles Button24.MouseMove
+        MausüberButton(Button24, 4, 3)
+    End Sub
+    Private Sub Button25_MouseMove(sender As Object, e As EventArgs) Handles Button25.MouseMove
+        MausüberButton(Button25, 4, 4)
+    End Sub
+    Private Sub Button26_MouseMove(sender As Object, e As EventArgs) Handles Button26.MouseMove
+        MausüberButton(Button26, 4, 5)
+    End Sub
+    Private Sub Button27_MouseMove(sender As Object, e As EventArgs) Handles Button27.MouseMove
+        MausüberButton(Button27, 4, 6)
+    End Sub
+    Private Sub Button28_MouseMove(sender As Object, e As EventArgs) Handles Button28.MouseMove
+        MausüberButton(Button28, 4, 7)
+    End Sub
+    Private Sub Button29_MouseMove(sender As Object, e As EventArgs) Handles Button29.MouseMove
+        MausüberButton(Button29, 5, 1)
+    End Sub
+    Private Sub Button30_MouseMove(sender As Object, e As EventArgs) Handles Button30.MouseMove
+        MausüberButton(Button30, 5, 2)
+    End Sub
+    Private Sub Button31_MouseMove(sender As Object, e As EventArgs) Handles Button31.MouseMove
+        MausüberButton(Button31, 5, 3)
+    End Sub
+    Private Sub Button32_MouseMove(sender As Object, e As EventArgs) Handles Button32.MouseMove
+        MausüberButton(Button32, 5, 4)
+    End Sub
+    Private Sub Button33_MouseMove(sender As Object, e As EventArgs) Handles Button33.MouseMove
+        MausüberButton(Button33, 5, 5)
+    End Sub
+    Private Sub Button34_MouseMove(sender As Object, e As EventArgs) Handles Button34.MouseMove
+        MausüberButton(Button34, 5, 6)
+    End Sub
+    Private Sub Button35_MouseMove(sender As Object, e As EventArgs) Handles Button35.MouseMove
+        MausüberButton(Button35, 5, 7)
+    End Sub
+    Private Sub Button36_MouseMove(sender As Object, e As EventArgs) Handles Button36.MouseMove
+        MausüberButton(Button36, 6, 1)
+    End Sub
+    Private Sub Button37_MouseMove(sender As Object, e As EventArgs) Handles Button37.MouseMove
+        MausüberButton(Button37, 6, 2)
+    End Sub
+    Private Sub Button38_MouseMove(sender As Object, e As EventArgs) Handles Button38.MouseMove
+        MausüberButton(Button38, 6, 3)
+    End Sub
+    Private Sub Button39_MouseMove(sender As Object, e As EventArgs) Handles Button39.MouseMove
+        MausüberButton(Button39, 6, 4)
+    End Sub
+    Private Sub Button40_MouseMove(sender As Object, e As EventArgs) Handles Button40.MouseMove
+        MausüberButton(Button40, 6, 5)
+    End Sub
+    Private Sub Button41_MouseMove(sender As Object, e As EventArgs) Handles Button41.MouseMove
+        MausüberButton(Button41, 6, 6)
+    End Sub
+    Private Sub Button42_MouseMove(sender As Object, e As EventArgs) Handles Button42.MouseMove
+        MausüberButton(Button42, 6, 7)
+    End Sub
+    Private Sub Button43_MouseMove(sender As Object, e As EventArgs) Handles Button43.MouseMove
+        MausüberButton(Button43, 7, 1)
+    End Sub
+    Private Sub Button44_MouseMove(sender As Object, e As EventArgs) Handles Button44.MouseMove
+        MausüberButton(Button44, 7, 2)
+    End Sub
+    Private Sub Button45_MouseMove(sender As Object, e As EventArgs) Handles Button45.MouseMove
+        MausüberButton(Button45, 7, 3)
+    End Sub
+    Private Sub Button46_MouseMove(sender As Object, e As EventArgs) Handles Button46.MouseMove
+        MausüberButton(Button46, 7, 4)
+    End Sub
+    Private Sub Button47_MouseMove(sender As Object, e As EventArgs) Handles Button47.MouseMove
+        MausüberButton(Button47, 7, 5)
+    End Sub
+    Private Sub Button48_MouseMove(sender As Object, e As EventArgs) Handles Button48.MouseMove
+        MausüberButton(Button48, 7, 6)
+    End Sub
+    Private Sub Button49_MouseMove(sender As Object, e As EventArgs) Handles Button49.MouseMove
+        MausüberButton(Button49, 7, 7)
+    End Sub
+    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button2.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button3_MouseLeave(sender As Object, e As EventArgs) Handles Button3.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles Button4.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button5_MouseLeave(sender As Object, e As EventArgs) Handles Button5.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button6_MouseLeave(sender As Object, e As EventArgs) Handles Button6.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button7_MouseLeave(sender As Object, e As EventArgs) Handles Button7.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button8_MouseLeave(sender As Object, e As EventArgs) Handles Button8.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button9_MouseLeave(sender As Object, e As EventArgs) Handles Button9.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button10_MouseLeave(sender As Object, e As EventArgs) Handles Button10.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button11_MouseLeave(sender As Object, e As EventArgs) Handles Button11.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button12_MouseLeave(sender As Object, e As EventArgs) Handles Button12.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button13_MouseLeave(sender As Object, e As EventArgs) Handles Button13.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button14_MouseLeave(sender As Object, e As EventArgs) Handles Button14.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button15_MouseLeave(sender As Object, e As EventArgs) Handles Button15.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button16_MouseLeave(sender As Object, e As EventArgs) Handles Button16.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button17_MouseLeave(sender As Object, e As EventArgs) Handles Button17.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button18_MouseLeave(sender As Object, e As EventArgs) Handles Button18.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button19_MouseLeave(sender As Object, e As EventArgs) Handles Button19.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button20_MouseLeave(sender As Object, e As EventArgs) Handles Button20.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button21_MouseLeave(sender As Object, e As EventArgs) Handles Button21.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button22_MouseLeave(sender As Object, e As EventArgs) Handles Button22.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button23_MouseLeave(sender As Object, e As EventArgs) Handles Button23.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button24_MouseLeave(sender As Object, e As EventArgs) Handles Button24.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button25_MouseLeave(sender As Object, e As EventArgs) Handles Button25.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button26_MouseLeave(sender As Object, e As EventArgs) Handles Button26.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button27_MouseLeave(sender As Object, e As EventArgs) Handles Button27.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button28_MouseLeave(sender As Object, e As EventArgs) Handles Button28.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button29_MouseLeave(sender As Object, e As EventArgs) Handles Button29.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button30_MouseLeave(sender As Object, e As EventArgs) Handles Button30.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button31_MouseLeave(sender As Object, e As EventArgs) Handles Button31.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button32_MouseLeave(sender As Object, e As EventArgs) Handles Button32.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button33_MouseLeave(sender As Object, e As EventArgs) Handles Button33.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button34_MouseLeave(sender As Object, e As EventArgs) Handles Button34.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button35_MouseLeave(sender As Object, e As EventArgs) Handles Button35.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button36_MouseLeave(sender As Object, e As EventArgs) Handles Button36.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button37_MouseLeave(sender As Object, e As EventArgs) Handles Button37.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button38_MouseLeave(sender As Object, e As EventArgs) Handles Button38.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button39_MouseLeave(sender As Object, e As EventArgs) Handles Button39.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button40_MouseLeave(sender As Object, e As EventArgs) Handles Button40.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button41_MouseLeave(sender As Object, e As EventArgs) Handles Button41.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button42_MouseLeave(sender As Object, e As EventArgs) Handles Button42.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button43_MouseLeave(sender As Object, e As EventArgs) Handles Button43.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button44_MouseLeave(sender As Object, e As EventArgs) Handles Button44.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button45_MouseLeave(sender As Object, e As EventArgs) Handles Button45.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button46_MouseLeave(sender As Object, e As EventArgs) Handles Button46.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button47_MouseLeave(sender As Object, e As EventArgs) Handles Button47.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button48_MouseLeave(sender As Object, e As EventArgs) Handles Button48.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub Button49_MouseLeave(sender As Object, e As EventArgs) Handles Button49.MouseLeave
+        mausverlässtButton()
+    End Sub
+    Private Sub MausüberButton(a As Button, x As Integer, y As Integer)
         'für alle die gleiche PictureBox verwenden!
         'eigentlich sollte das Bild gar nicht übergeben werden, sondern anhand der Position den Film und damit das passende BIld auslesen!!!
+        Dim Text As String = ""
+        Dim Filmtitel As String
+        Select Case x
+            Case 1
+                Text = _ersterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _ersterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 2
+                Text = _zweiterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _zweiterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 3
+                Text = _dritterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _dritterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 4
+                Text = _vierterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _vierterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 5
+                Text = _fünfterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _fünfterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 6
+                Text = _sechsterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _sechsterTag.getVorstellung(y).getFilm.getFilmtitel
+            Case 7
+                Text = _siebterTag.getVorstellung(y).getFilm.getFilminfos()
+                Filmtitel = _siebterTag.getVorstellung(y).getFilm.getFilmtitel
+        End Select
+        lblTextüberFIlm.Text = Text
+        lblTextüberFIlm.Show()
+
+        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Avatar.png")
+
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
 
-        PictureBox1.Image = pic
+        PictureBox1.Image = BildVomFilm
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
-        Select Case x
-            Case 1
-                lblTextüberFIlm.Text = _ersterTag.getVorstellung(1).getFilm.getFilminfos()
 
-        End Select
         'hier könnte man noch einen Text über den Film als Array machen
     End Sub
 
@@ -1689,7 +2504,74 @@ Public Class FTagesplan
         Geklickt(7, 7)
     End Sub
 
+    Private Sub chb830_CheckedChanged(sender As Object, e As EventArgs) Handles chb830.CheckedChanged
+        chb830.Checked = False
+    End Sub
 
+    Private Sub chb1100_CheckedChanged(sender As Object, e As EventArgs) Handles chb1100.CheckedChanged
+        chb1100.Checked = False
+    End Sub
+
+    Private Sub chb1330_CheckedChanged(sender As Object, e As EventArgs) Handles chb1330.CheckedChanged
+        chb1330.Checked = False
+    End Sub
+
+    Private Sub chb1600_CheckedChanged(sender As Object, e As EventArgs) Handles chb1600.CheckedChanged
+        chb1600.Checked = False
+    End Sub
+
+    Private Sub chb1830_CheckedChanged(sender As Object, e As EventArgs) Handles chb1830.CheckedChanged
+        chb1830.Checked = False
+    End Sub
+
+    Private Sub chb2100_CheckedChanged(sender As Object, e As EventArgs) Handles chb2100.CheckedChanged
+        chb2100.Checked = False
+    End Sub
+
+    Private Sub chb2330_CheckedChanged(sender As Object, e As EventArgs) Handles chb2330.CheckedChanged
+        chb2330.Checked = False
+    End Sub
+
+    Private Sub lblTextüberFIlm_Click(sender As Object, e As EventArgs) Handles lblTextüberFIlm.Click
+
+    End Sub
+
+    Private Sub cmdBuchenStattändern_Click(sender As Object, e As EventArgs) Handles cmdBuchenStattändern.Click
+        If _Aendern Then
+            _Aendern = False
+            KinoGUI._WochenpläneBearbeiten = False
+            KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
+            KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
+            ButtonsInvisibleMachenJeNachModus()
+            cmdBuchenStattändern.Text = "ändern"
+        Else
+            _Aendern = True
+            KinoGUI._WochenpläneBearbeiten = True
+            KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
+            KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+            ButtonsInvisibleMachenJeNachModus()
+            cmdBuchenStattändern.Text = "buchen"
+
+        End If
+    End Sub
+
+    Private Sub cmdTagesPlanErstellen_Click(sender As Object, e As EventArgs) Handles cmdFilmeVOnEInemTagEntfernen.Click
+        MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen")
+        If (MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen") = 6) Then
+            'ja geklickt
+            Select Case True
+                Case chbMontag.Checked
+                    _ersterTag.
+                Case chbDienstag.Checked
+                Case chbMittwoch.Checked
+                Case chbDonnerstag.Checked
+                Case chbFreitag.Checked
+                Case chbSamstag.Checked
+                Case chbSonntag.Checked
+
+            End Select
+        End If
+    End Sub
 End Class
 
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird

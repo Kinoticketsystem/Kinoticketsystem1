@@ -422,7 +422,7 @@ Public Class KinosaalGUI
 
     End Sub
 
-    Public Sub Aufrufen(ByRef a As Kinosaal, ByVal b As Kunde)
+    Public Sub Aufrufen(ByRef a As Kinosaal)
         'noch nicht fertig 'eigentlich schon, oder nicht?
         _kinosaal = a
 
@@ -430,6 +430,20 @@ Public Class KinosaalGUI
         übertrageAnzahlAusgewähltePlätze()
         InitialisiereSitzplan()
         berechneGrößeDerForm()
+        _aktuellerKunde = New Kunde("Standard")
+    End Sub
+    'überladen, weil wenn kein Kunde übergeben wird, wird Standardkunde genommen
+    Public Sub Aufrufen(ByRef a As Kinosaal, b As Kunde)
+        'noch nicht fertig 'eigentlich schon, oder nicht?
+        _kinosaal = a
+
+        zeigeNurSovieleButtonsWienötig()
+        übertrageAnzahlAusgewähltePlätze()
+        InitialisiereSitzplan()
+        berechneGrößeDerForm()
+
+    End Sub
+    Public Sub Kundefestlegen(ByVal b As Kunde)
         _aktuellerKunde = b 'eigentlich unnötig
     End Sub
 

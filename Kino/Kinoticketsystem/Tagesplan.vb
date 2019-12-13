@@ -104,7 +104,7 @@ Public Class Tagesplan
             End If
         Next
         If alleFilmeHeuteWarenSchon Then
-            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False))
+            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False), _Saal)
         End If
     End Function
 
@@ -135,6 +135,9 @@ Public Class Tagesplan
         i = _Vorstellungen.BinarySearch(vorstellung)
         _Vorstellungen.RemoveAt(i)
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
+    End Sub
+    Public Sub AlleVorstellungenEntfernen()
+
     End Sub
 
     Public Function getVorstellungen() As ArrayList Implements ITagesplan.getVorstellungen

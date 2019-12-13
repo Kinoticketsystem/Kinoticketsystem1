@@ -1,15 +1,2607 @@
 1. Tag
-1. Vorstellung
-0800
-0935
-Ich einfach unverbesserlich 
-95
-0
-True 
+1. Vorstellung:
+ 480 
+ 575 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
  120 
  8 
  15 
- 1
- 2. Vorstellung
- 1000
- 1140
+ 1 
+2. Vorstellung:
+ 600 
+ 700 
+Der Schuh des Manitu
+ 100 
+ 6 
+False
+ 120 
+ 8 
+ 15 
+ 1 
+3. Vorstellung:
+ 730 
+ 842 
+Ziemlich beste Freunde 
+ 112 
+ 6 
+False
+ 120 
+ 8 
+ 15 
+ 1 
+4. Vorstellung:
+ 870 
+ 989 
+Jumanji Wilkommen im Dschungel
+ 119 
+ 6 
+True
+ 120 
+ 8 
+ 15 
+ 1 
+5. Vorstellung:
+ 1020 
+ 1190 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 1 
+6. Vorstellung:
+ 1220 
+ 1350 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 120 
+ 8 
+ 15 
+ 1 
+7. Vorstellung:
+ 1380 
+ 1478 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 120 
+ 8 
+ 15 
+2. Tag
+1. Vorstellung:
+ 480 
+ 613 
+Karate kid	
+ 133 
+ 6 
+False
+ 120 
+ 8 
+ 15 
+ 2 
+2. Vorstellung:
+ 630 
+ 771 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 120 
+ 8 
+ 15 
+ 2 
+3. Vorstellung:
+ 800 
+ 943 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 2 
+4. Vorstellung:
+ 975 
+ 1175 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 2 
+5. Vorstellung:
+ 1200 
+ 1362 
+Avatar	
+ 162 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 2 
+6. Vorstellung:
+ 1380 
+ 1519 
+Midway-Für Die Freiheit	
+ 139 
+ 6 
+True
+ 120 
+ 8 
+ 15 
+3. Tag
+1. Vorstellung:
+ 480 
+ 596 
+Robin Hood	
+ 116 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 3 
+2. Vorstellung:
+ 630 
+ 727 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 3 
+3. Vorstellung:
+ 760 
+ 931 
+Gladiator	
+ 171 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 3 
+4. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 3 
+5. Vorstellung:
+ 1100 
+ 1222 
+Alita Battle Angel 
+ 122 
+ 16 
+True
+ 120 
+ 8 
+ 15 
+ 3 
+6. Vorstellung:
+ 1240 
+ 1358 
+Lion King
+ 118 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 3 
+7. Vorstellung:
+ 1380 
+ 1550 
+Es 2
+ 170 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+4. Tag
+1. Vorstellung:
+ 480 
+ 599 
+Pretty Woman
+ 119 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 4 
+2. Vorstellung:
+ 630 
+ 718 
+Johnny Englisch 3
+ 88 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 4 
+3. Vorstellung:
+ 750 
+ 903 
+Le Mans 66
+ 153 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 4 
+4. Vorstellung:
+ 930 
+ 1033 
+The Fast and the Furious	
+ 103 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 4 
+5. Vorstellung:
+ 1065 
+ 1200 
+Jagd Auf Roter Oktober	
+ 135 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 4 
+6. Vorstellung:
+ 1230 
+ 1352 
+Joker
+ 122 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 4 
+7. Vorstellung:
+ 1380 
+ 1532 
+Star Wars VIII Die letzten Jedi
+ 152 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+5. Tag
+1. Vorstellung:
+ 480 
+ 613 
+Fantastische Tierwessen 
+ 133 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 5 
+2. Vorstellung:
+ 645 
+ 781 
+Coach Carter	
+ 136 
+ 6 
+False
+ 120 
+ 8 
+ 15 
+ 5 
+3. Vorstellung:
+ 810 
+ 924 
+Das Bourne Ultimatum	
+ 114 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 5 
+4. Vorstellung:
+ 960 
+ 1096 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 120 
+ 8 
+ 15 
+ 5 
+5. Vorstellung:
+ 1125 
+ 1231 
+Dunkirk	
+ 106 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 5 
+6. Vorstellung:
+ 1260 
+ 1383 
+Rush Alles Für den Sieg
+ 123 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+6. Tag
+1. Vorstellung:
+ 480 
+ 586 
+Ip man
+ 106 
+ 18 
+False
+ 120 
+ 8 
+ 15 
+ 6 
+2. Vorstellung:
+ 615 
+ 726 
+Pacific Rim 2. Uprising	
+ 111 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 6 
+3. Vorstellung:
+ 750 
+ 865 
+Jäger des Verlorenen Schatzes 
+ 115 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 6 
+4. Vorstellung:
+ 890 
+ 1022 
+The Equilizer
+ 132 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 6 
+5. Vorstellung:
+ 1050 
+ 1229 
+The Wolf Of Wall Street 
+ 179 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+ 6 
+6. Vorstellung:
+ 1260 
+ 1376 
+Robin Hood	
+ 116 
+ 12 
+True
+ 120 
+ 8 
+ 15 
+ 6 
+7. Vorstellung:
+ 1410 
+ 1529 
+Pretty Woman
+ 119 
+ 16 
+False
+ 120 
+ 8 
+ 15 
+7. Tag
+1. Vorstellung:
+ 660 
+ 772 
+Ziemlich beste Freunde 
+ 112 
+ 6 
+False
+ 120 
+ 8 
+ 15 
+ 7 
+2. Vorstellung:
+ 800 
+ 936 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 120 
+ 8 
+ 15 
+ 7 
+3. Vorstellung:
+ 960 
+ 1101 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 120 
+ 8 
+ 15 
+ 7 
+4. Vorstellung:
+ 1120 
+ 1272 
+Star Wars VIII Die letzten Jedi
+ 152 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+ 7 
+5. Vorstellung:
+ 1300 
+ 1500 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 120 
+ 8 
+ 15 
+8. Tag
+1. Vorstellung:
+ 480 
+ 563 
+(T)Raumschiff Surprise
+ 83 
+ 0 
+False
+ 60 
+ 6 
+ 10 
+ 8 
+2. Vorstellung:
+ 600 
+ 753 
+Le Mans 66
+ 153 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 8 
+3. Vorstellung:
+ 780 
+ 915 
+Jagt Auf Roter Oktober
+ 135 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 8 
+4. Vorstellung:
+ 945 
+ 1067 
+Alita Battle Angel
+ 122 
+ 16 
+True
+ 60 
+ 6 
+ 10 
+ 8 
+5. Vorstellung:
+ 1095 
+ 1259 
+Avatar
+ 162 
+ 12 
+True
+ 60 
+ 6 
+ 10 
+ 8 
+6. Vorstellung:
+ 1290 
+ 1469 
+Gladiator
+ 171 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+9. Tag
+1. Vorstellung:
+ 480 
+ 563 
+Madagascar
+ 83 
+ 0 
+True
+ 60 
+ 6 
+ 10 
+ 9 
+2. Vorstellung:
+ 590 
+ 733 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 60 
+ 6 
+ 10 
+ 9 
+3. Vorstellung:
+ 765 
+ 935 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+ 9 
+4. Vorstellung:
+ 960 
+ 1093 
+Fantastische Tierwessen 
+ 133 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 9 
+5. Vorstellung:
+ 1125 
+ 1225 
+Der Schuh des Manitu
+ 100 
+ 6 
+False
+ 60 
+ 6 
+ 10 
+ 9 
+6. Vorstellung:
+ 1260 
+ 1379 
+Jumanji Wilkommen im Dschungel
+ 119 
+ 6 
+True
+ 60 
+ 6 
+ 10 
+ 9 
+7. Vorstellung:
+ 1410 
+ 1498 
+Johnny Englisch 3
+ 88 
+ 12 
+True
+ 60 
+ 6 
+ 10 
+10. Tag
+1. Vorstellung:
+ 480 
+ 619 
+Midway-Für Die Freiheit	
+ 139 
+ 6 
+True
+ 60 
+ 6 
+ 10 
+ 10 
+2. Vorstellung:
+ 640 
+ 738 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 60 
+ 6 
+ 10 
+ 10 
+3. Vorstellung:
+ 820 
+ 917 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 10 
+4. Vorstellung:
+ 940 
+ 1062 
+Joker
+ 122 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+ 10 
+5. Vorstellung:
+ 1090 
+ 1196 
+Dunkirk	
+ 106 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 10 
+6. Vorstellung:
+ 1230 
+ 1344 
+Das Bourne Ultimatum	
+ 114 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 10 
+7. Vorstellung:
+ 1380 
+ 1550 
+Es 2
+ 170 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+11. Tag
+1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 11 
+2. Vorstellung:
+ 700 
+ 795 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
+ 60 
+ 6 
+ 10 
+ 11 
+3. Vorstellung:
+ 820 
+ 931 
+Pacific Rim 2. Uprising	
+ 111 
+ 12 
+True
+ 60 
+ 6 
+ 10 
+ 11 
+4. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 60 
+ 6 
+ 10 
+ 11 
+5. Vorstellung:
+ 1110 
+ 1243 
+Karate kid	
+ 133 
+ 6 
+False
+ 60 
+ 6 
+ 10 
+ 11 
+6. Vorstellung:
+ 1275 
+ 1411 
+Coach Carter	
+ 136 
+ 6 
+False
+ 60 
+ 6 
+ 10 
+12. Tag
+1. Vorstellung:
+ 480 
+ 621 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 60 
+ 6 
+ 10 
+ 12 
+2. Vorstellung:
+ 640 
+ 746 
+Ip man
+ 106 
+ 18 
+False
+ 60 
+ 6 
+ 10 
+ 12 
+3. Vorstellung:
+ 780 
+ 895 
+Jäger des Verlorenen Schatzes 
+ 115 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 12 
+4. Vorstellung:
+ 930 
+ 1048 
+Lion King
+ 118 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 12 
+5. Vorstellung:
+ 1080 
+ 1210 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 60 
+ 6 
+ 10 
+ 12 
+6. Vorstellung:
+ 1240 
+ 1359 
+Pretty Woman
+ 119 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+ 12 
+7. Vorstellung:
+ 1390 
+ 1526 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 60 
+ 6 
+ 10 
+13. Tag
+1. Vorstellung:
+ 660 
+ 812 
+Star Wars VIII Die letzten Jedi
+ 152 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 13 
+2. Vorstellung:
+ 840 
+ 952 
+Ziemlich beste Freunde 
+ 112 
+ 6 
+False
+ 60 
+ 6 
+ 10 
+ 13 
+3. Vorstellung:
+ 980 
+ 1103 
+Rush Alles Für den Sieg
+ 123 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 13 
+4. Vorstellung:
+ 1130 
+ 1309 
+The Wolf Of Wall Street 
+ 179 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+ 13 
+5. Vorstellung:
+ 1340 
+ 1443 
+The Fast and the Furious	
+ 103 
+ 16 
+False
+ 60 
+ 6 
+ 10 
+14. Tag
+1. Vorstellung:
+ 480 
+ 621 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 75 
+ 5 
+ 15 
+ 14 
+2. Vorstellung:
+ 640 
+ 746 
+Ip man
+ 106 
+ 18 
+False
+ 75 
+ 5 
+ 15 
+ 14 
+3. Vorstellung:
+ 780 
+ 895 
+Jäger des Verlorenen Schatzes 
+ 115 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 14 
+4. Vorstellung:
+ 930 
+ 1048 
+Lion King
+ 118 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 14 
+5. Vorstellung:
+ 1080 
+ 1210 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 75 
+ 5 
+ 15 
+ 14 
+6. Vorstellung:
+ 1240 
+ 1359 
+Pretty Woman
+ 119 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+ 14 
+7. Vorstellung:
+ 1390 
+ 1526 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 75 
+ 5 
+ 15 
+15. Tag
+1. Vorstellung:
+ 480 
+ 563 
+(T)Raumschiff Surprise
+ 83 
+ 0 
+False
+ 75 
+ 5 
+ 15 
+ 15 
+2. Vorstellung:
+ 600 
+ 753 
+Le Mans 66
+ 153 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 15 
+3. Vorstellung:
+ 780 
+ 915 
+Jagt Auf Roter Oktober
+ 135 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 15 
+4. Vorstellung:
+ 945 
+ 1067 
+Alita Battle Angel
+ 122 
+ 16 
+True
+ 75 
+ 5 
+ 15 
+ 15 
+5. Vorstellung:
+ 1095 
+ 1259 
+Avatar
+ 162 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+ 15 
+6. Vorstellung:
+ 1290 
+ 1469 
+Gladiator
+ 171 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+16. Tag
+1. Vorstellung:
+ 480 
+ 563 
+Madagascar
+ 83 
+ 0 
+True
+ 75 
+ 5 
+ 15 
+ 16 
+2. Vorstellung:
+ 590 
+ 733 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+ 16 
+3. Vorstellung:
+ 765 
+ 935 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+ 16 
+4. Vorstellung:
+ 960 
+ 1093 
+Fantastische Tierwessen 
+ 133 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 16 
+5. Vorstellung:
+ 1125 
+ 1225 
+Der Schuh des Manitu
+ 100 
+ 6 
+False
+ 75 
+ 5 
+ 15 
+ 16 
+6. Vorstellung:
+ 1260 
+ 1379 
+Jumanji Wilkommen im Dschungel
+ 119 
+ 6 
+True
+ 75 
+ 5 
+ 15 
+ 16 
+7. Vorstellung:
+ 1410 
+ 1498 
+Johnny Englisch 3
+ 88 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+17. Tag
+1. Vorstellung:
+ 480 
+ 619 
+Midway-Für Die Freiheit	
+ 139 
+ 6 
+True
+ 75 
+ 5 
+ 15 
+ 17 
+2. Vorstellung:
+ 640 
+ 738 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 75 
+ 5 
+ 15 
+ 17 
+3. Vorstellung:
+ 820 
+ 917 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 17 
+4. Vorstellung:
+ 940 
+ 1062 
+Joker
+ 122 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+ 17 
+5. Vorstellung:
+ 1090 
+ 1196 
+Dunkirk	
+ 106 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 17 
+6. Vorstellung:
+ 1230 
+ 1344 
+Das Bourne Ultimatum	
+ 114 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 17 
+7. Vorstellung:
+ 1380 
+ 1550 
+Es 2
+ 170 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+18. Tag
+1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 18 
+2. Vorstellung:
+ 700 
+ 795 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
+ 75 
+ 5 
+ 15 
+ 18 
+3. Vorstellung:
+ 820 
+ 931 
+Pacific Rim 2. Uprising	
+ 111 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+ 18 
+4. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+ 18 
+5. Vorstellung:
+ 1110 
+ 1243 
+Karate kid	
+ 133 
+ 6 
+False
+ 75 
+ 5 
+ 15 
+ 18 
+6. Vorstellung:
+ 1275 
+ 1411 
+Coach Carter	
+ 136 
+ 6 
+False
+ 75 
+ 5 
+ 15 
+19. Tag
+1. Vorstellung:
+ 660 
+ 776 
+Robin Hood	
+ 116 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+ 19 
+2. Vorstellung:
+ 800 
+ 932 
+The Equilizer
+ 132 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+ 19 
+3. Vorstellung:
+ 960 
+ 1131 
+Gladiator	
+ 171 
+ 16 
+False
+ 75 
+ 5 
+ 15 
+ 19 
+4. Vorstellung:
+ 1160 
+ 1296 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 75 
+ 5 
+ 15 
+ 19 
+5. Vorstellung:
+ 1320 
+ 1482 
+Avatar	
+ 162 
+ 12 
+True
+ 75 
+ 5 
+ 15 
+20. Tag
+1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 20 
+2. Vorstellung:
+ 700 
+ 795 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
+ 40 
+ 5 
+ 8 
+ 20 
+3. Vorstellung:
+ 820 
+ 931 
+Pacific Rim 2. Uprising	
+ 111 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+ 20 
+4. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+ 20 
+5. Vorstellung:
+ 1110 
+ 1243 
+Karate kid	
+ 133 
+ 6 
+False
+ 40 
+ 5 
+ 8 
+ 20 
+6. Vorstellung:
+ 1275 
+ 1411 
+Coach Carter	
+ 136 
+ 6 
+False
+ 40 
+ 5 
+ 8 
+21. Tag
+1. Vorstellung:
+ 480 
+ 621 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 40 
+ 5 
+ 8 
+ 21 
+2. Vorstellung:
+ 640 
+ 746 
+Ip man
+ 106 
+ 18 
+False
+ 40 
+ 5 
+ 8 
+ 21 
+3. Vorstellung:
+ 780 
+ 895 
+Jäger des Verlorenen Schatzes 
+ 115 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 21 
+4. Vorstellung:
+ 930 
+ 1048 
+Lion King
+ 118 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 21 
+5. Vorstellung:
+ 1080 
+ 1210 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 40 
+ 5 
+ 8 
+ 21 
+6. Vorstellung:
+ 1240 
+ 1359 
+Pretty Woman
+ 119 
+ 16 
+False
+ 40 
+ 5 
+ 8 
+ 21 
+7. Vorstellung:
+ 1390 
+ 1526 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 40 
+ 5 
+ 8 
+22. Tag
+1. Vorstellung:
+ 480 
+ 563 
+(T)Raumschiff Surprise
+ 83 
+ 0 
+False
+ 40 
+ 5 
+ 8 
+ 22 
+2. Vorstellung:
+ 600 
+ 753 
+Le Mans 66
+ 153 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 22 
+3. Vorstellung:
+ 780 
+ 915 
+Jagt Auf Roter Oktober
+ 135 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 22 
+4. Vorstellung:
+ 945 
+ 1067 
+Alita Battle Angel
+ 122 
+ 16 
+True
+ 40 
+ 5 
+ 8 
+ 22 
+5. Vorstellung:
+ 1095 
+ 1259 
+Avatar
+ 162 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+ 22 
+6. Vorstellung:
+ 1290 
+ 1469 
+Gladiator
+ 171 
+ 16 
+False
+ 40 
+ 5 
+ 8 
+23. Tag
+1. Vorstellung:
+ 480 
+ 563 
+Madagascar
+ 83 
+ 0 
+True
+ 40 
+ 5 
+ 8 
+ 23 
+2. Vorstellung:
+ 590 
+ 733 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+ 23 
+3. Vorstellung:
+ 765 
+ 935 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
+ 40 
+ 5 
+ 8 
+ 23 
+4. Vorstellung:
+ 960 
+ 1093 
+Fantastische Tierwessen 
+ 133 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 23 
+5. Vorstellung:
+ 1125 
+ 1225 
+Der Schuh des Manitu
+ 100 
+ 6 
+False
+ 40 
+ 5 
+ 8 
+ 23 
+6. Vorstellung:
+ 1260 
+ 1379 
+Jumanji Wilkommen im Dschungel
+ 119 
+ 6 
+True
+ 40 
+ 5 
+ 8 
+ 23 
+7. Vorstellung:
+ 1410 
+ 1498 
+Jonny Englisch 3
+ 88 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+24. Tag
+1. Vorstellung:
+ 480 
+ 619 
+Midway-Für Die Freiheit	
+ 139 
+ 6 
+True
+ 40 
+ 5 
+ 8 
+ 24 
+2. Vorstellung:
+ 640 
+ 738 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 40 
+ 5 
+ 8 
+ 24 
+3. Vorstellung:
+ 820 
+ 917 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 24 
+4. Vorstellung:
+ 940 
+ 1062 
+Joker
+ 122 
+ 16 
+False
+ 40 
+ 5 
+ 8 
+ 24 
+5. Vorstellung:
+ 1090 
+ 1196 
+Dunkirk	
+ 106 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 24 
+6. Vorstellung:
+ 1230 
+ 1344 
+Das Bourne Ultimatum	
+ 114 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 24 
+7. Vorstellung:
+ 1380 
+ 1550 
+Es 2
+ 170 
+ 16 
+False
+ 40 
+ 5 
+ 8 
+25. Tag
+1. Vorstellung:
+ 660 
+ 763 
+The Fast and the Furious
+ 103 
+ 16 
+False
+ 40 
+ 5 
+ 8 
+ 25 
+2. Vorstellung:
+ 790 
+ 873 
+Madagascar
+ 83 
+ 0 
+True
+ 40 
+ 5 
+ 8 
+ 25 
+3. Vorstellung:
+ 900 
+ 1052 
+Star Wars VIII Die letzten Jedi
+ 152 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+ 25 
+4. Vorstellung:
+ 1080 
+ 1196 
+Robin Hood	
+ 116 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+ 25 
+5. Vorstellung:
+ 1230 
+ 1342 
+Ziemlich beste Freunde 
+ 112 
+ 6 
+False
+ 40 
+ 5 
+ 8 
+ 25 
+6. Vorstellung:
+ 1370 
+ 1493 
+Rush Alles Für den Sieg
+ 123 
+ 12 
+False
+ 40 
+ 5 
+ 8 
+26. Tag
+1. Vorstellung:
+ 480 
+ 619 
+Midway-Für Die Freiheit	
+ 139 
+ 6 
+True
+ 100 
+ 5 
+ 20 
+ 26 
+2. Vorstellung:
+ 640 
+ 738 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 100 
+ 5 
+ 20 
+ 26 
+3. Vorstellung:
+ 820 
+ 917 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 26 
+4. Vorstellung:
+ 940 
+ 1062 
+Joker
+ 122 
+ 16 
+False
+ 100 
+ 5 
+ 20 
+ 26 
+5. Vorstellung:
+ 1090 
+ 1196 
+Dunkirk	
+ 106 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 26 
+6. Vorstellung:
+ 1230 
+ 1344 
+Das Bourne Ultimatum	
+ 114 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 26 
+7. Vorstellung:
+ 1380 
+ 1550 
+Es 2
+ 170 
+ 16 
+False
+ 100 
+ 5 
+ 20 
+27. Tag
+1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 27 
+2. Vorstellung:
+ 700 
+ 795 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
+ 100 
+ 5 
+ 20 
+ 27 
+3. Vorstellung:
+ 820 
+ 931 
+Pacific Rim 2. Uprising	
+ 111 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+ 27 
+4. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+ 27 
+5. Vorstellung:
+ 1110 
+ 1243 
+Karate kid	
+ 133 
+ 6 
+False
+ 100 
+ 5 
+ 20 
+ 27 
+6. Vorstellung:
+ 1275 
+ 1411 
+Coach Carter	
+ 136 
+ 6 
+False
+ 100 
+ 5 
+ 20 
+28. Tag
+1. Vorstellung:
+ 480 
+ 621 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 100 
+ 5 
+ 20 
+ 28 
+2. Vorstellung:
+ 640 
+ 746 
+Ip man
+ 106 
+ 18 
+False
+ 100 
+ 5 
+ 20 
+ 28 
+3. Vorstellung:
+ 780 
+ 895 
+Jäger des Verlorenen Schatzes 
+ 115 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 28 
+4. Vorstellung:
+ 930 
+ 1048 
+Lion King
+ 118 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 28 
+5. Vorstellung:
+ 1080 
+ 1210 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 100 
+ 5 
+ 20 
+ 28 
+6. Vorstellung:
+ 1240 
+ 1359 
+Pretty Woman
+ 119 
+ 16 
+False
+ 100 
+ 5 
+ 20 
+ 28 
+7. Vorstellung:
+ 1390 
+ 1526 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 100 
+ 5 
+ 20 
+29. Tag
+1. Vorstellung:
+ 480 
+ 563 
+(T)Raumschiff Surprise
+ 83 
+ 0 
+False
+ 100 
+ 5 
+ 20 
+ 29 
+2. Vorstellung:
+ 600 
+ 753 
+Le Mans 66
+ 153 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 29 
+3. Vorstellung:
+ 780 
+ 915 
+Jagd Auf Roter Oktober
+ 135 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 29 
+4. Vorstellung:
+ 945 
+ 1067 
+Alita Battle Angel
+ 122 
+ 16 
+True
+ 100 
+ 5 
+ 20 
+ 29 
+5. Vorstellung:
+ 1095 
+ 1259 
+Avatar
+ 162 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+ 29 
+6. Vorstellung:
+ 1290 
+ 1469 
+Gladiator
+ 171 
+ 16 
+False
+ 100 
+ 5 
+ 20 
+30. Tag
+1. Vorstellung:
+ 480 
+ 563 
+Madagascar
+ 83 
+ 0 
+True
+ 100 
+ 5 
+ 20 
+ 30 
+2. Vorstellung:
+ 590 
+ 733 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+ 30 
+3. Vorstellung:
+ 765 
+ 935 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
+ 100 
+ 5 
+ 20 
+ 30 
+4. Vorstellung:
+ 960 
+ 1093 
+Fantastische Tierwessen 
+ 133 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 30 
+5. Vorstellung:
+ 1125 
+ 1225 
+Der Schuh des Manitu
+ 100 
+ 6 
+False
+ 100 
+ 5 
+ 20 
+ 30 
+6. Vorstellung:
+ 1260 
+ 1379 
+Jumanji Wilkommen im Dschungel
+ 119 
+ 6 
+True
+ 100 
+ 5 
+ 20 
+ 30 
+7. Vorstellung:
+ 1410 
+ 1498 
+Jonny Englisch 3
+ 88 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+31. Tag
+1. Vorstellung:
+ 660 
+ 801 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 100 
+ 5 
+ 20 
+ 31 
+2. Vorstellung:
+ 830 
+ 928 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 100 
+ 5 
+ 20 
+ 31 
+3. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+ 31 
+4. Vorstellung:
+ 1100 
+ 1243 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 100 
+ 5 
+ 20 
+ 31 
+5. Vorstellung:
+ 1270 
+ 1367 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 100 
+ 5 
+ 20 
+ 31 
+6. Vorstellung:
+ 1390 
+ 1520 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 100 
+ 5 
+ 20 
+32. Tag
+1. Vorstellung:
+ 480 
+ 563 
+Madagascar
+ 83 
+ 0 
+True
+ 50 
+ 5 
+ 10 
+ 32 
+2. Vorstellung:
+ 590 
+ 733 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+ 32 
+3. Vorstellung:
+ 765 
+ 935 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+ 32 
+4. Vorstellung:
+ 960 
+ 1093 
+Fantastische Tierwessen 
+ 133 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 32 
+5. Vorstellung:
+ 1125 
+ 1225 
+Der Schuh des Manitu
+ 100 
+ 6 
+False
+ 50 
+ 5 
+ 10 
+ 32 
+6. Vorstellung:
+ 1260 
+ 1379 
+Jumanji Wilkommen im Dschungel
+ 119 
+ 6 
+True
+ 50 
+ 5 
+ 10 
+ 32 
+7. Vorstellung:
+ 1410 
+ 1498 
+Jonny Englisch 3
+ 88 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+33. Tag
+1. Vorstellung:
+ 480 
+ 619 
+Midway-Für Die Freiheit	
+ 139 
+ 6 
+True
+ 50 
+ 5 
+ 10 
+ 33 
+2. Vorstellung:
+ 640 
+ 738 
+Hänsel und Gretel: Hexenjäger	
+ 98 
+ 16 
+True
+ 50 
+ 5 
+ 10 
+ 33 
+3. Vorstellung:
+ 820 
+ 917 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 33 
+4. Vorstellung:
+ 940 
+ 1062 
+Joker
+ 122 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+ 33 
+5. Vorstellung:
+ 1090 
+ 1196 
+Dunkirk	
+ 106 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 33 
+6. Vorstellung:
+ 1230 
+ 1344 
+Das Bourne Ultimatum	
+ 114 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 33 
+7. Vorstellung:
+ 1380 
+ 1550 
+Es 2
+ 170 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+34. Tag
+1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 34 
+2. Vorstellung:
+ 700 
+ 795 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
+ 50 
+ 5 
+ 10 
+ 34 
+3. Vorstellung:
+ 820 
+ 931 
+Pacific Rim 2. Uprising	
+ 111 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+ 34 
+4. Vorstellung:
+ 960 
+ 1074 
+Bumblebee
+ 114 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+ 34 
+5. Vorstellung:
+ 1110 
+ 1243 
+Karate kid	
+ 133 
+ 6 
+False
+ 50 
+ 5 
+ 10 
+ 34 
+6. Vorstellung:
+ 1275 
+ 1411 
+Coach Carter	
+ 136 
+ 6 
+False
+ 50 
+ 5 
+ 10 
+35. Tag
+1. Vorstellung:
+ 480 
+ 621 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 50 
+ 5 
+ 10 
+ 35 
+2. Vorstellung:
+ 640 
+ 746 
+Ip man
+ 106 
+ 18 
+False
+ 50 
+ 5 
+ 10 
+ 35 
+3. Vorstellung:
+ 780 
+ 895 
+Jäger des Verlorenen Schatzes 
+ 115 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 35 
+4. Vorstellung:
+ 930 
+ 1048 
+Lion King
+ 118 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 35 
+5. Vorstellung:
+ 1080 
+ 1210 
+John Wick: Kapitel 3
+ 130 
+ 18 
+True
+ 50 
+ 5 
+ 10 
+ 35 
+6. Vorstellung:
+ 1240 
+ 1359 
+Pretty Woman
+ 119 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+ 35 
+7. Vorstellung:
+ 1390 
+ 1526 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 50 
+ 5 
+ 10 
+36. Tag
+1. Vorstellung:
+ 480 
+ 563 
+(T)Raumschiff Surprise
+ 83 
+ 0 
+False
+ 50 
+ 5 
+ 10 
+ 36 
+2. Vorstellung:
+ 600 
+ 753 
+Le Mans 66
+ 153 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 36 
+3. Vorstellung:
+ 780 
+ 915 
+Jagt Auf Roter Oktober
+ 135 
+ 12 
+False
+ 50 
+ 5 
+ 10 
+ 36 
+4. Vorstellung:
+ 945 
+ 1067 
+Alita Battle Angel
+ 122 
+ 16 
+True
+ 50 
+ 5 
+ 10 
+ 36 
+5. Vorstellung:
+ 1095 
+ 1259 
+Avatar
+ 162 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+ 36 
+6. Vorstellung:
+ 1290 
+ 1469 
+Gladiator
+ 171 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+37. Tag
+1. Vorstellung:
+ 660 
+ 839 
+The Wolf Of Wall Street 
+ 179 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+ 37 
+2. Vorstellung:
+ 870 
+ 958 
+Jonny Englisch 3
+ 88 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+ 37 
+3. Vorstellung:
+ 990 
+ 1152 
+Avatar	
+ 162 
+ 12 
+True
+ 50 
+ 5 
+ 10 
+ 37 
+4. Vorstellung:
+ 1180 
+ 1302 
+Joker
+ 122 
+ 16 
+False
+ 50 
+ 5 
+ 10 
+ 37 
+5. Vorstellung:
+ 1330 
+ 1471 
+Kingsman: The Golden Circle
+ 141 
+ 16 
+True
+ 50 
+ 5 
+ 10 

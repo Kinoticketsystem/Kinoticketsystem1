@@ -40,6 +40,7 @@ Partial Class NeueVorstellung
         Me.lblFilmInfos = New System.Windows.Forms.Label()
         Me.lblKinosaal = New System.Windows.Forms.Label()
         Me.NUDKinosaal = New System.Windows.Forms.NumericUpDown()
+        Me.cmdBesucherNEtfernen = New System.Windows.Forms.Button()
         CType(Me.StartuhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnduhrzeitWert, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NUDKinosaal, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,12 +48,16 @@ Partial Class NeueVorstellung
         '
         'cmdfertig
         '
-        Me.cmdfertig.Location = New System.Drawing.Point(454, 537)
+        Me.cmdfertig.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.cmdfertig.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdfertig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdfertig.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdfertig.Location = New System.Drawing.Point(565, 537)
         Me.cmdfertig.Name = "cmdfertig"
         Me.cmdfertig.Size = New System.Drawing.Size(75, 32)
         Me.cmdfertig.TabIndex = 0
         Me.cmdfertig.Text = "fertig"
-        Me.cmdfertig.UseVisualStyleBackColor = True
+        Me.cmdfertig.UseVisualStyleBackColor = False
         '
         'lblname
         '
@@ -112,7 +117,9 @@ Partial Class NeueVorstellung
         '
         'cmdFilmHinZuFügen
         '
-        Me.cmdFilmHinZuFügen.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdFilmHinZuFügen.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.cmdFilmHinZuFügen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdFilmHinZuFügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdFilmHinZuFügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdFilmHinZuFügen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdFilmHinZuFügen.Location = New System.Drawing.Point(293, 311)
@@ -124,12 +131,16 @@ Partial Class NeueVorstellung
         '
         'cmdBesucherHinzufügen
         '
+        Me.cmdBesucherHinzufügen.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.cmdBesucherHinzufügen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdBesucherHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdBesucherHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdBesucherHinzufügen.Location = New System.Drawing.Point(251, 537)
         Me.cmdBesucherHinzufügen.Name = "cmdBesucherHinzufügen"
         Me.cmdBesucherHinzufügen.Size = New System.Drawing.Size(182, 32)
         Me.cmdBesucherHinzufügen.TabIndex = 12
         Me.cmdBesucherHinzufügen.Text = "Besucher hinzufügen"
-        Me.cmdBesucherHinzufügen.UseVisualStyleBackColor = True
+        Me.cmdBesucherHinzufügen.UseVisualStyleBackColor = False
         '
         'lblBesucherAuswähler
         '
@@ -149,7 +160,7 @@ Partial Class NeueVorstellung
         Me.chlFilme.FormattingEnabled = True
         Me.chlFilme.Location = New System.Drawing.Point(251, 169)
         Me.chlFilme.Name = "chlFilme"
-        Me.chlFilme.Size = New System.Drawing.Size(197, 136)
+        Me.chlFilme.Size = New System.Drawing.Size(197, 70)
         Me.chlFilme.TabIndex = 13
         '
         'chlBesucherAuswählen
@@ -158,7 +169,7 @@ Partial Class NeueVorstellung
         Me.chlBesucherAuswählen.FormattingEnabled = True
         Me.chlBesucherAuswählen.Location = New System.Drawing.Point(251, 417)
         Me.chlBesucherAuswählen.Name = "chlBesucherAuswählen"
-        Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 114)
+        Me.chlBesucherAuswählen.Size = New System.Drawing.Size(197, 70)
         Me.chlBesucherAuswählen.TabIndex = 14
         '
         'lstBesucher
@@ -168,7 +179,7 @@ Partial Class NeueVorstellung
         Me.lstBesucher.ItemHeight = 19
         Me.lstBesucher.Location = New System.Drawing.Point(454, 417)
         Me.lstBesucher.Name = "lstBesucher"
-        Me.lstBesucher.Size = New System.Drawing.Size(145, 118)
+        Me.lstBesucher.Size = New System.Drawing.Size(145, 80)
         Me.lstBesucher.TabIndex = 16
         '
         'StartuhrzeitWert
@@ -219,12 +230,26 @@ Partial Class NeueVorstellung
         Me.NUDKinosaal.Size = New System.Drawing.Size(76, 31)
         Me.NUDKinosaal.TabIndex = 21
         '
+        'cmdBesucherNEtfernen
+        '
+        Me.cmdBesucherNEtfernen.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.cmdBesucherNEtfernen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdBesucherNEtfernen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdBesucherNEtfernen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdBesucherNEtfernen.Location = New System.Drawing.Point(454, 537)
+        Me.cmdBesucherNEtfernen.Name = "cmdBesucherNEtfernen"
+        Me.cmdBesucherNEtfernen.Size = New System.Drawing.Size(92, 32)
+        Me.cmdBesucherNEtfernen.TabIndex = 22
+        Me.cmdBesucherNEtfernen.Text = "entfernen"
+        Me.cmdBesucherNEtfernen.UseVisualStyleBackColor = False
+        '
         'NeueVorstellung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(639, 607)
+        Me.ClientSize = New System.Drawing.Size(793, 711)
+        Me.Controls.Add(Me.cmdBesucherNEtfernen)
         Me.Controls.Add(Me.NUDKinosaal)
         Me.Controls.Add(Me.lblKinosaal)
         Me.Controls.Add(Me.lblFilmInfos)
@@ -271,4 +296,5 @@ Partial Class NeueVorstellung
     Friend WithEvents lblFilmInfos As Label
     Friend WithEvents lblKinosaal As Label
     Friend WithEvents NUDKinosaal As NumericUpDown
+    Friend WithEvents cmdBesucherNEtfernen As Button
 End Class

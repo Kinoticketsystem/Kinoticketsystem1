@@ -29,10 +29,12 @@ Partial Class TexterfassenTest
         '
         'lstTextausgabe
         '
+        Me.lstTextausgabe.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstTextausgabe.FormattingEnabled = True
+        Me.lstTextausgabe.ItemHeight = 19
         Me.lstTextausgabe.Location = New System.Drawing.Point(36, 12)
         Me.lstTextausgabe.Name = "lstTextausgabe"
-        Me.lstTextausgabe.Size = New System.Drawing.Size(589, 355)
+        Me.lstTextausgabe.Size = New System.Drawing.Size(589, 346)
         Me.lstTextausgabe.TabIndex = 0
         '
         'cmdTexterfassen
@@ -55,6 +57,7 @@ Partial Class TexterfassenTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
         Me.ClientSize = New System.Drawing.Size(1166, 474)
         Me.Controls.Add(Me.txtInput)
         Me.Controls.Add(Me.cmdTexterfassen)

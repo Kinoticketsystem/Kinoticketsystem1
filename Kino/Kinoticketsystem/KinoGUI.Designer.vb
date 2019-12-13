@@ -64,7 +64,6 @@ Partial Class KinoGUI
         Me.cmdKundenDatenbankAufrufen = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.cmdTestTagesplan = New System.Windows.Forms.Button()
         Me.cmdTestVorstellung = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -88,11 +87,11 @@ Partial Class KinoGUI
         Me.cmdTexterfassen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTexterfassen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTexterfassen.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(1151, 886)
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(-2, 814)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
         Me.cmdTexterfassen.Size = New System.Drawing.Size(262, 66)
         Me.cmdTexterfassen.TabIndex = 1
-        Me.cmdTexterfassen.Text = "Texterfassen Erik"
+        Me.cmdTexterfassen.Text = "TestTexterfassen "
         Me.cmdTexterfassen.UseVisualStyleBackColor = False
         '
         'Label1
@@ -546,26 +545,13 @@ Partial Class KinoGUI
         'Timer2
         '
         '
-        'cmdTestTagesplan
-        '
-        Me.cmdTestTagesplan.BackgroundImage = CType(resources.GetObject("cmdTestTagesplan.BackgroundImage"), System.Drawing.Image)
-        Me.cmdTestTagesplan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.cmdTestTagesplan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdTestTagesplan.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestTagesplan.Location = New System.Drawing.Point(1133, 1008)
-        Me.cmdTestTagesplan.Name = "cmdTestTagesplan"
-        Me.cmdTestTagesplan.Size = New System.Drawing.Size(262, 66)
-        Me.cmdTestTagesplan.TabIndex = 44
-        Me.cmdTestTagesplan.Text = "TestTages"
-        Me.cmdTestTagesplan.UseVisualStyleBackColor = True
-        '
         'cmdTestVorstellung
         '
         Me.cmdTestVorstellung.BackgroundImage = CType(resources.GetObject("cmdTestVorstellung.BackgroundImage"), System.Drawing.Image)
         Me.cmdTestVorstellung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestVorstellung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestVorstellung.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1151, 814)
+        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1040, 814)
         Me.cmdTestVorstellung.Name = "cmdTestVorstellung"
         Me.cmdTestVorstellung.Size = New System.Drawing.Size(262, 66)
         Me.cmdTestVorstellung.TabIndex = 45
@@ -579,9 +565,8 @@ Partial Class KinoGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1924, 1043)
+        Me.ClientSize = New System.Drawing.Size(1300, 1044)
         Me.Controls.Add(Me.cmdTestVorstellung)
-        Me.Controls.Add(Me.cmdTestTagesplan)
         Me.Controls.Add(Me.cmdKundenDatenbankAufrufen)
         Me.Controls.Add(Me.cmdWochenpläneBearbeiten)
         Me.Controls.Add(Me.cmdNeuerKinosaal)
@@ -670,6 +655,5 @@ Partial Class KinoGUI
     Friend WithEvents cmdKundenDatenbankAufrufen As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents cmdTestTagesplan As Button
     Friend WithEvents cmdTestVorstellung As Button
 End Class
