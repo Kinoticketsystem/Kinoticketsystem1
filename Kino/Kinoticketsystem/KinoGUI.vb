@@ -653,7 +653,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(2)))
         Dim a As ArrayList = DASKINO.getTagesplan
 
-        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(13), a(14), a(15), a(16), a(17), a(18))
 
 
         'Veranstaltungen übergeben
@@ -666,7 +666,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.SetKinosaal((DASKINO.getKinosäle((3))))
         Dim a As ArrayList = DASKINO.getTagesplan
 
-        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(19), a(20), a(21), a(22), a(23), a(24))
 
 
         'Veranstaltungen übergeben
@@ -679,7 +679,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(4)))
         Dim a As ArrayList = DASKINO.getTagesplan
 
-        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(25), a(26), a(27), a(28), a(29), a(30))
 
 
         'Veranstaltungen übergeben
@@ -692,7 +692,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FTagesplan.SetKinosaal((DASKINO.getKinosäle(5)))
         Dim a As ArrayList = DASKINO.getTagesplan
 
-        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(7), a(8), a(9), a(10), a(11), a(12))
+        FTagesplan.InitialisiereDenWochenplan(_WochenpläneBearbeiten, a(31), a(32), a(33), a(34), a(35), a(36))
 
 
         'Veranstaltungen übergeben

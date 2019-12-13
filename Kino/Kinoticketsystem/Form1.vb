@@ -51,7 +51,7 @@ Public Class FTagesplan
         _vierterTag = vierterTag
         _fünfterTag = fünfterTag
         _sechsterTag = sechsterTag
-        _siebterTag = siebterTag
+
         _Aendern = AendernModus
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
