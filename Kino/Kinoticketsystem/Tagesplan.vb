@@ -97,7 +97,7 @@ Public Class Tagesplan
         getNächstenFilm = b(0)
         Dim alleFilmeHeuteWarenSchon As Boolean = True
         Dim A As Integer = jetzt.Hour * 60 + jetzt.Minute
-        Dim Differenz As Integer = b(0).getAnfangszeit - A
+        Dim Differenz As Integer = Math.Abs(b(0).getAnfangszeit - A)
         For i = 0 To AnzahlFilmeProTag - 1
             If (b(i).getAnfangszeit - A) < Differenz And (b(i).getAnfangszeit - A) > 0 Then
                 getNächstenFilm = b(i)

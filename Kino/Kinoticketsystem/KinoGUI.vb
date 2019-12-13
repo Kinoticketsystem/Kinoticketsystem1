@@ -479,7 +479,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
 
         End If
-        ' AnzahlFreiPlätzeBestimmen()
+        AnzahlFreiPlätzeBestimmen()
         'nächstenFilmProKinosaalANzeigen()
         '....
     End Sub
@@ -515,14 +515,25 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     Private Sub AnzahlFreiPlätzeBestimmen()
         Dim a As ArrayList = DASKINO.getTagesplan
-        For i = 0 To a.Count - 1 Step 7
-            If a(i).getNächstenFilm(Now).getSaal.getAnzahlFreiPlätze > 0 Then
-                LabelFreiPlätzeberechnen(i / 7, 0, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
-            ElseIf a(i).getNächstenFilm.getSaal.getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
-                LabelFreiPlätzeberechnen(i / 7, 2, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+        Dim b As Vorstellung = a(0).getNächstenFilm(TimeOfDay)
+        If b.getSaal.getAnzahlFreiPlätze > 0 Then
+            LabelFreiPlätzeberechnen(0, 0, b.getSaal.getAnzahlFreiPlätze, b.getSaal.getAnzahlSitzplätze)
+        ElseIf a(0).getNächstenFilm.getSaal.getAnzahlFreiPlätze / a(0).getAnzahlSitzplätze < 0.2 Then
+            LabelFreiPlätzeberechnen(0, 2, b.getSaal.getAnzahlFreiPlätze, b.getSaal.getAnzahlSitzplätze)
+        Else
+            LabelFreiPlätzeberechnen(0, 1, b.getSaal.getAnzahlFreiPlätze, b.getSaal.getAnzahlSitzplätze)
+        End If
+        Dim zählvariable As Integer = 1
+        For i = 7 To a.Count - 1 Step 6
+            b = a(i).getNächstenFilm(TimeOfDay)
+            If b.getSaal.getAnzahlFreiPlätze > 0 Then
+                LabelFreiPlätzeberechnen(zählvariable, 0, b.getSaal.getAnzahlFreiPlätze, b.getSaal.getAnzahlSitzplätze)
+            ElseIf b.getSaal.getAnzahlFreiPlätze / a(i).getAnzahlSitzplätze < 0.2 Then
+                LabelFreiPlätzeberechnen(zählvariable, 2, b.getSaal.getAnzahlFreiPlätze, b.getSaal.getAnzahlSitzplätze)
             Else
-                LabelFreiPlätzeberechnen(i / 7, 1, a(i).getAnzahlFreiPlätze, a(i).getAnzahlSitzplätze)
+                LabelFreiPlätzeberechnen(zählvariable, 1, b.getSaal.getAnzahlFreiPlätze, b.getSaal.getAnzahlSitzplätze)
             End If
+            zählvariable += 1
         Next
 
     End Sub
