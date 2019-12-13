@@ -2561,7 +2561,7 @@ Public Class FTagesplan
             'ja geklickt
             Select Case True
                 Case chbMontag.Checked
-                    _ersterTag.
+                    ' _ersterTag.
                 Case chbDienstag.Checked
                 Case chbMittwoch.Checked
                 Case chbDonnerstag.Checked
@@ -2577,7 +2577,7 @@ End Class
 'Ein Tagesplan, der speichert wann welcher Film gezeigt wird
 'Die Start - und Laufzeit der Filme wird in den einzelnen Filmen gespeichert
 Public Interface ITagesplan
-    Sub TagesplanErstellen5(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
+    'Sub TagesplanErstellen5(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung, ByVal Vorstellung5 As Vorstellung)
     Sub TagesplanErstellen4(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung, ByVal Vorstellung4 As Vorstellung)
     Sub TagesplanErstellen3(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung, ByVal Vorstellung3 As Vorstellung)
     Sub TagesplanErstellen2(ByVal Vorstellung1 As Vorstellung, ByVal Vorstellung2 As Vorstellung)
