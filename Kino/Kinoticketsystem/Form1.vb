@@ -25,6 +25,9 @@ Public Class FTagesplan
         ' ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
         ' FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
         'VeränderungenJeNachSornierenBuchen()
+        'PictureBox1.Show()
+        PictureBox1.Hide()
+
 
     End Sub
 
@@ -1987,6 +1990,8 @@ Public Class FTagesplan
 
     Private Sub mausverlässtButton()
         PictureBox1.Hide()
+        'PictureBox1.Image.Dispose()
+
         lblTextüberFIlm.Hide()
     End Sub
 
@@ -2282,7 +2287,8 @@ Public Class FTagesplan
         'für alle die gleiche PictureBox verwenden!
         'eigentlich sollte das Bild gar nicht übergeben werden, sondern anhand der Position den Film und damit das passende BIld auslesen!!!
         Dim Text As String = ""
-        Dim Filmtitel As String
+        Dim Filmtitel As String = ""
+
         Select Case x
             Case 1
                 Text = _ersterTag.getVorstellung(y).getFilm.getFilminfos()
@@ -2309,16 +2315,28 @@ Public Class FTagesplan
         lblTextüberFIlm.Text = Text
         lblTextüberFIlm.Show()
 
-        Dim BildVomFilm As Image = My.Resources.ResourceManager.GetObject("Avatar.png")
 
+
+
+        'PictureBox1.Hide()
+        'PictureBox1.Image.Dispose()
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
-
+        Dim BildVomFilm As Image = Nothing
+        BildVomFilm = Image.FromFile(Filmtitel & ".png")
         PictureBox1.Image = BildVomFilm
+
+
+
+
+
+        'PictureBox1.Load(My.Resources.ResourceManager.GetObject("Avatar.png"))
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
 
         'hier könnte man noch einen Text über den Film als Array machen
     End Sub
+
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'NeueVorstellung.BringToFront()

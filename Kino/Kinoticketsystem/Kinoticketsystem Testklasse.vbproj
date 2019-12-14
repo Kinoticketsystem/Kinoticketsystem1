@@ -263,17 +263,65 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Avatar.png" />
     <Content Include="bin\Debug\Filme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\Kinosäle.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Kinologo.png" />
+    <None Include="bin\Debug\Kinologo.png" />
     <Content Include="bin\Debug\Kunden.txt" />
     <Content Include="bin\Debug\Tagespläne.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="bin\Debug\Der Schuh des Manitu.png" />
+    <None Include="bin\Debug\Der Soldat James Ryan.png" />
+    <None Include="bin\Debug\Dunkirk.png" />
+    <None Include="bin\Debug\Es 2.png" />
+    <None Include="bin\Debug\Fantastische Tierwesen.png" />
+    <None Include="bin\Debug\Feuerzangenbowle.png" />
+    <None Include="bin\Debug\Fluch der Karibik.png" />
+    <None Include="bin\Debug\Gladiator.png" />
+    <None Include="bin\Debug\Hänsel und Gretel.png" />
+    <None Include="bin\Debug\Herr der Ringe.png" />
+    <None Include="bin\Debug\Ich einfach Unverbesserlich.png" />
+    <None Include="bin\Debug\ip man.png" />
+    <None Include="bin\Debug\Jäger des Verlorenen Schatzes.png" />
+    <None Include="bin\Debug\Jagd auf Roter Oktober.png" />
+    <None Include="bin\Debug\John Wick 3.png" />
+    <None Include="bin\Debug\Johnny English 3.png" />
+    <None Include="bin\Debug\Joker.png" />
+    <None Include="bin\Debug\Jumanji Willkommen im Dschungel.png" />
+    <None Include="bin\Debug\Karate kid.png" />
+    <None Include="bin\Debug\Kingsman The Golden Circle.png" />
+    <None Include="bin\Debug\Le Mans 66.png" />
+    <None Include="bin\Debug\Lion King.png" />
+    <None Include="bin\Debug\Madagascar.png" />
+    <None Include="bin\Debug\Midway.png" />
+    <None Include="bin\Debug\Pacific Rim Uprising.png" />
+    <None Include="bin\Debug\Pretty Woman.png" />
+    <None Include="bin\Debug\Robin Hood.png" />
+    <None Include="bin\Debug\Rush Alles für den Sieg.png" />
+    <None Include="bin\Debug\Star Wars VIII Die letzten Jedi.png" />
+    <None Include="bin\Debug\The Equilizer.png" />
+    <None Include="bin\Debug\The Fast and The Furious.png" />
+    <None Include="bin\Debug\The Wolf Of Wall Street.png" />
+    <None Include="bin\Debug\Ziemlich beste Freunde.png" />
+    <None Include="bin\Debug\%28T%29 Raumschriff Surprise.png" />
+    <None Include="bin\Debug\Alita Battle Angel.png" />
+    <None Include="bin\Debug\Bumblebee.png" />
+    <None Include="bin\Debug\Coach Carter.png" />
+    <None Include="bin\Debug\Das Bourne Ultimatum.png" />
+    <None Include="bin\Debug\Deadpool 2.png" />
+    <Content Include="Kinologo.ico" />
+    <None Include="Resources\Avatar.png" />
+    <None Include="Resources\%28T%29 Raumschriff Surprise.png" />
+    <None Include="Resources\Alita Ballte Angel.png" />
+    <None Include="Resources\Bublebee.png" />
+    <None Include="Resources\Coach Carter.png" />
+    <None Include="Resources\Das Bourne Ultimatum.png" />
+    <None Include="Resources\Deadpool 2.png" />
     <None Include="Resources\Der Schuh des Manitu.png" />
     <None Include="Resources\Der Soldat James Ryan.png" />
     <None Include="Resources\Dunkirk.png" />
@@ -294,6 +342,7 @@
     <None Include="Resources\Jumanji_-Willkommen-im-Dschungel-[DVD].png" />
     <None Include="Resources\Karate kid.png" />
     <None Include="Resources\Kingsman The Golden Circle.png" />
+    <None Include="Resources\Kinologo.png" />
     <None Include="Resources\Le Mans 66.png" />
     <None Include="Resources\Lion King.png" />
     <None Include="Resources\Madagascar.png" />
@@ -307,17 +356,10 @@
     <None Include="Resources\The Fast and The Furious.png" />
     <None Include="Resources\The Wolf Of Wall Street.png" />
     <None Include="Resources\Ziemlich beste Freunde.png" />
-    <None Include="Resources\%28T%29 Raumschriff Surprise.png" />
-    <None Include="Resources\Alita Ballte Angel.png" />
-    <None Include="Resources\Avatar.png" />
-    <None Include="Resources\Bublebee.png" />
-    <None Include="Resources\Coach Carter.png" />
-    <None Include="Resources\Das Bourne Ultimatum.png" />
-    <None Include="Resources\Deadpool 2.png" />
-    <Content Include="Kinologo.ico" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

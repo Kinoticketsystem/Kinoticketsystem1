@@ -34,7 +34,7 @@ Midway-Für Die Freiheit
  139 
  6 
 True
-The Fast and the Furious	
+The Fast and the Furious
  103 
  16 
 False
@@ -106,11 +106,11 @@ Lion King
  118 
  12 
 False
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
-Jonny Englisch 3
+Johnny English 3
  88 
  12 
 True
