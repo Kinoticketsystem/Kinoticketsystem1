@@ -113,6 +113,12 @@
     <Compile Include="FilmHinzufügenGUI.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KinosaalHinzufügenGUI.Designer.vb">
+      <DependentUpon>KinosaalHinzufügenGUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KinosaalHinzufügenGUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Kunden.Designer.vb">
       <DependentUpon>Kunden.vb</DependentUpon>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01KinosaalTest.resx">
       <DependentUpon>01KinosaalTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KinosaalHinzufügenGUI.resx">
+      <DependentUpon>KinosaalHinzufügenGUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kunden.resx">
       <DependentUpon>Kunden.vb</DependentUpon>

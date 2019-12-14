@@ -14,12 +14,12 @@
             KinoGUI.DASKINO.KundenHinzufügen(k)
 
         End If
-        Dim a As ArrayList = KinoGUI.DASKINO.getKunden()
+
+        Dim a As ArrayList = KinoGUI.DASKINO.getKunden
         For i As Integer = 0 To KinoGUI.DASKINO.getKunden.Count - 1
             lstSammlung.Items.Add(a(i).getName)
         Next
         MsgBox("Der Kunde wurde erfolgreich hinzugefügt")
     End Sub
-
 
 End Class

@@ -820,5 +820,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     End Sub
 
+    Private Sub cmdNeuerKinosaal_Click(sender As Object, e As EventArgs) Handles cmdNeuerKinosaal.Click
+        KinosaalHinzufügenGUI.Show()
+        KinosaalHinzufügenGUI.BringToFront()
 
+    End Sub
 End Class
