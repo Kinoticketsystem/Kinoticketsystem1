@@ -23,11 +23,22 @@ Public Class FTagesplan
         ' GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
         '  PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
         ' ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
-        ' FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
+        'FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
         'VeränderungenJeNachSornierenBuchen()
+        cmdÄnderungenSpeichern.Hide()
+        cmdFilmeVOnEInemTagEntfernen.Hide()
+        lblTextüberFIlm.Hide()
 
     End Sub
 
+    Private Sub neuladen()
+
+        GrößeDerFilmButtonsFestlegen()  'Y - Größe funktioniert nur wenn Veranstaltungen eingelesen und initialisiert wurden, weil  Null referenz
+        PositionDerFilmButtonsFestlegenY()  'eigentlich fertig, oder nicht?
+        ButtonsInvisibleMachenJeNachModus() 'das sind die Buttons die gerade nicht benutzt werden 'werden jetzt benutzt ;-)
+        FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
+        VeränderungenJeNachSornierenBuchen()
+    End Sub
     Private Sub VeränderungenJeNachSornierenBuchen()
         'Throw New NotImplementedException()
     End Sub
@@ -73,6 +84,7 @@ Public Class FTagesplan
         Dim b As Integer = tag.getFSK(position)
         If b <= 0 Then
             a.BackColor = Color.White
+
         ElseIf b <= 6 Then
             a.BackColor = Color.Yellow
 
@@ -80,6 +92,7 @@ Public Class FTagesplan
             a.BackColor = Color.Green
         ElseIf b <= 16 Then
             a.BackColor = Color.Blue
+
         Else
             a.BackColor = Color.Red
         End If
@@ -90,7 +103,8 @@ Public Class FTagesplan
         a.FlatStyle = FlatStyle.Flat 'Notwendig!!!
         a.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
         a.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
-        a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
+        a.ForeColor = Color.Black 'ganz cool, aber nicht notwendig
+        '   a.TextAlign = TextAlign.MiddleLeft
     End Sub
     Private Sub FarbeDerButtonsFestlegen()
         'Farbe für alle Buttons machen, müssen ja nicht alle angezeigt wqerden
@@ -480,10 +494,26 @@ Public Class FTagesplan
                 Button5.Top = (_ersterTag.getVorstellung(5).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button6.Top = (_ersterTag.getVorstellung(6).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button7.Top = (_ersterTag.getVorstellung(7).getAnfangszeit()) / 3 + 70 - 480 + 320
+            Case 0
+                Button1.Hide()
+                Button2.Hide()
+                Button3.Hide()
+                Button4.Hide()
+                Button5.Hide()
+                Button6.Hide()
+                Button7.Hide()
             Case Else
-                Throw New Exception("Die Anzahl der gespeicherten Filme für den ersten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
+                Throw New Exception("Die Anzahl der gespeicherten Filme für den ersten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<=x<8")
         End Select
         Select Case _zweiterTag.getAnzahlVorstellungen
+            Case 0
+                Button8.Hide()
+                Button9.Hide()
+                Button10.Hide()
+                Button11.Hide()
+                Button12.Hide()
+                Button13.Hide()
+                Button14.Hide()
             Case 1
                 Button8.Top = (_zweiterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 160
                 Button9.Hide()
@@ -544,6 +574,14 @@ Public Class FTagesplan
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den zweiten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _dritterTag.getAnzahlVorstellungen
+            Case 0
+                Button15.Hide()
+                Button16.Hide()
+                Button17.Hide()
+                Button18.Hide()
+                Button19.Hide()
+                Button20.Hide()
+                Button21.Hide()
             Case 1
                 Button15.Top = (_dritterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button16.Hide()
@@ -604,6 +642,14 @@ Public Class FTagesplan
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den dritten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _vierterTag.getAnzahlVorstellungen
+            Case 0
+                Button22.Hide()
+                Button23.Hide()
+                Button24.Hide()
+                Button25.Hide()
+                Button26.Hide()
+                Button27.Hide()
+                Button28.Hide()
             Case 1
                 Button22.Top = (_vierterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button23.Hide()
@@ -664,6 +710,14 @@ Public Class FTagesplan
                 Throw New Exception("Die Anzahl der gespeicherten Filme für den vierten Tag, entspricht nicht der Anzahl der möglichen darstellbaren Filme (0<x<8")
         End Select
         Select Case _fünfterTag.getAnzahlVorstellungen
+            Case 0
+                Button29.Hide()
+                Button30.Hide()
+                Button31.Hide()
+                Button32.Hide()
+                Button33.Hide()
+                Button34.Hide()
+                Button35.Hide()
             Case 1
                 Button29.Top = (_fünfterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button30.Hide()
@@ -725,6 +779,14 @@ Public Class FTagesplan
 
         End Select
         Select Case _sechsterTag.getAnzahlVorstellungen
+            Case 0
+                Button36.Hide()
+                Button37.Hide()
+                Button38.Hide()
+                Button39.Hide()
+                Button40.Hide()
+                Button41.Hide()
+                Button42.Hide()
             Case 1
                 Button36.Top = (_sechsterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button37.Hide()
@@ -786,6 +848,14 @@ Public Class FTagesplan
 
         End Select
         Select Case _siebterTag.getAnzahlVorstellungen
+            Case 0
+                Button43.Hide()
+                Button44.Hide()
+                Button45.Hide()
+                Button46.Hide()
+                Button47.Hide()
+                Button48.Hide()
+                Button49.Hide()
             Case 1
                 Button43.Top = (_siebterTag.getVorstellung(1).getAnfangszeit()) / 3 + 70 - 480 + 320
                 Button44.Hide()
@@ -1010,6 +1080,7 @@ Public Class FTagesplan
         'Größe der Filme bestimmen
         'Hier muss noch ausgelesen werden, wie lange ein Film geht und dementsprechend die Größe,
         'die standartmäßig auf 26 ist, verändert werden. 
+
         Select Case _ersterTag.getAnzahlVorstellungen
             Case 1
                 Button1.Size = New Size(A.Width, (_ersterTag.getVorstellung(1).getLänge() / 3))
@@ -1276,30 +1347,14 @@ Public Class FTagesplan
     End Sub
 
     Private Sub ButtonsInvisibleMachenJeNachModus()
-        cmdFilmeVOnEInemTagEntfernen.Hide()
-        cmdÄnderungenSpeichern.Hide()
         If _Aendern Then
-            Me.Text = "Wochenplan - Änderungsmodus"
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            cmdÄnderungenSpeichern.Show()
         Else
-            Me.Text = "Wochenplan"
-            'werden dann grau, deshalb anders lösen
-            'chbMontag.Enabled = False
-            'chbDienstag.Enabled = False
-            'chbMittwoch.Enabled = False
-            'chbDonnerstag.Enabled = False
-            'chbFreitag.Enabled = False
-            'chbSamstag.Enabled = False
-            'chbSonntag.Enabled = False
-
-            ''
-            'chbMittwoch.ForeColor = Color.White
-            'chbMontag.ForeColor = Color.White
-            'chbDienstag.ForeColor = Color.White
-            'chbDonnerstag.ForeColor = Color.White
-            'chbFreitag.ForeColor = Color.White
-            'chbSamstag.ForeColor = Color.White
-            'chbSonntag.ForeColor = Color.White
+            cmdFilmeVOnEInemTagEntfernen.Hide()
+            cmdÄnderungenSpeichern.Hide()
         End If
+
         'Man könnte hier noch die Position individuell anpassen
     End Sub
 
@@ -1346,7 +1401,7 @@ Public Class FTagesplan
             a.FlatStyle = FlatStyle.Flat 'Notwendig!!!
             a.FlatAppearance.BorderColor = Color.DarkCyan 'kann man machen, ohne sieht aber auch nicht schlecht aus 
             a.FlatAppearance.BorderSize = 3 'kann man machen, aber schmal sieht auch nicht schlecht aus (Standart ist ok)
-            a.ForeColor = Color.White 'ganz cool, aber nicht notwendig
+            a.ForeColor = Color.Black 'ganz cool, aber nicht notwendig
         End If
     End Sub
     Private Sub yButtonsAuswählenFürLÖschen(a As Integer)
@@ -2560,14 +2615,16 @@ Public Class FTagesplan
             KinoGUI._WochenpläneBearbeiten = False
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
-            ButtonsInvisibleMachenJeNachModus()
             cmdBuchenStattändern.Text = "ändern"
+            Me.Text = "Wochenplan"
+            ButtonsInvisibleMachenJeNachModus()
         Else
             _Aendern = True
             KinoGUI._WochenpläneBearbeiten = True
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
             ButtonsInvisibleMachenJeNachModus()
+            Me.Text = "Wochenplan - Änderungsmodus"
             cmdBuchenStattändern.Text = "buchen"
 
         End If
@@ -2577,17 +2634,29 @@ Public Class FTagesplan
         MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen")
         If (MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen") = 6) Then
             'ja geklickt
+            Dim a As ArrayList = New ArrayList
             Select Case True
                 Case chbMontag.Checked
-                    _ersterTag.getVorstellungen()
-
+                    _ersterTag.set_Vorstellungen(a)
+                    neuladen()
                 Case chbDienstag.Checked
+                    _zweiterTag.set_Vorstellungen(a)
+                    neuladen()
                 Case chbMittwoch.Checked
+                    _dritterTag.set_Vorstellungen(a)
+                    neuladen()
                 Case chbDonnerstag.Checked
+                    _vierterTag.set_Vorstellungen(a)
+                    neuladen()
                 Case chbFreitag.Checked
+                    _fünfterTag.set_Vorstellungen(a)
+                    neuladen()
                 Case chbSamstag.Checked
+                    _sechsterTag.set_Vorstellungen(a)
+                    neuladen()
                 Case chbSonntag.Checked
-
+                    _siebterTag.set_Vorstellungen(a)
+                    neuladen()
             End Select
         End If
     End Sub
@@ -2607,6 +2676,7 @@ Public Interface ITagesplan
     'wird ans Ende hinzugefügt
     Sub VorstellungHinzufügen(ByVal Vorstellung As Vorstellung)
     Sub VorstellungEntfernen(ByVal vorstellung As Vorstellung)
+    Sub set_Vorstellungen(a As ArrayList)
     Function getVorstellungen() As ArrayList
     Function getVorstellung(ByVal Positiom As Integer) As Vorstellung
     Function getAnzahlVorstellungen() As Integer
