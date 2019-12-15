@@ -63,11 +63,14 @@ Partial Class KundenGUI
         Me.cmdLöschenHinzufügen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
         Me.cmdLöschenHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdLöschenHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLöschenHinzufügen.ForeColor = System.Drawing.SystemColors.ControlText
         Me.cmdLöschenHinzufügen.Location = New System.Drawing.Point(26, 80)
         Me.cmdLöschenHinzufügen.Name = "cmdLöschenHinzufügen"
+        Me.cmdLöschenHinzufügen.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.cmdLöschenHinzufügen.Size = New System.Drawing.Size(251, 29)
         Me.cmdLöschenHinzufügen.TabIndex = 3
+        Me.cmdLöschenHinzufügen.Text = "Kunde hinzufügen "
         Me.cmdLöschenHinzufügen.UseVisualStyleBackColor = True
         '
         'KundenGUI
@@ -81,7 +84,7 @@ Partial Class KundenGUI
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lstSammlung)
-        Me.Name = "KundenGUI"
+        Me.name = "KundenGUI"
         Me.Text = "Kunden"
         Me.ResumeLayout(False)
         Me.PerformLayout()

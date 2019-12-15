@@ -90,6 +90,11 @@ Public Class Tagesplan
 
     End Sub
 
+    Public Sub set_Vorstellungen(a As ArrayList) Implements ITagesplan.set_Vorstellungen
+        _Vorstellungen = a
+        AnzahlFilmeProTag = a.Count
+    End Sub
+
     Public Function getNächstenFilm(jetzt As Date) As Vorstellung
 
         Dim b As ArrayList = _Vorstellungen

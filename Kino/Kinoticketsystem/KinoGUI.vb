@@ -56,9 +56,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
 
 
-         KinosaalGUI.Aufrufen(a)
-        KinosaalGUI.BringToFront()
-        KinosaalGUI.Show()
+            KinosaalGUI.Aufrufen(a)
+            KinosaalGUI.BringToFront()
+            KinosaalGUI.Show()
         End If
     End Sub
 
@@ -511,7 +511,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
         End If
         AnzahlFreiPlätzeBestimmen()
-        'nächstenFilmProKinosaalANzeigen()
+        nächstenFilmProKinosaalANzeigen()
         '....
         NumericUpDown1.Maximum = 6
         NumericUpDown1.Minimum = 1
@@ -525,7 +525,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         'Next
         Dim a As ArrayList = DASKINO.getTagesplan
         For i = 0 To a.Count - 1 Step 7
-            labelNächsterFilmBerechnen(i / 7, a(i).getNächstenFilm)
+            labelNächsterFilmBerechnen((i / 7), a(i).getNächstenFilm(TimeOfDay))
         Next
 
     End Sub
@@ -820,8 +820,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     End Sub
 
-    Private Sub KinoGUI_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        cmdTestVorstellung.Visible = False
-        cmdTexterfassen.Visible = False
+    Private Sub cmdNeuerKinosaal_Click(sender As Object, e As EventArgs) Handles cmdNeuerKinosaal.Click
+        KinosaalHinzufügenGUI.Show()
+        KinosaalHinzufügenGUI.BringToFront()
+
     End Sub
 End Class

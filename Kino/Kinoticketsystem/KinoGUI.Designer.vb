@@ -562,7 +562,9 @@ Partial Class KinoGUI
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(1133, 175)
+        Me.NumericUpDown1.BackColor = System.Drawing.Color.Black
+        Me.NumericUpDown1.ForeColor = System.Drawing.Color.White
+        Me.NumericUpDown1.Location = New System.Drawing.Point(1133, 171)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(144, 44)
         Me.NumericUpDown1.TabIndex = 46
