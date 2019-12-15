@@ -16,6 +16,7 @@
         End If
 
         Dim a As ArrayList = KinoGUI.DASKINO.getKunden
+
         For i As Integer = 0 To KinoGUI.DASKINO.getKunden.Count - 1
             lstSammlung.Items.Add(a(i).getName)
         Next

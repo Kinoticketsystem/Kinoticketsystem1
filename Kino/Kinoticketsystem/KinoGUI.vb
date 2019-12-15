@@ -279,7 +279,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim planplätze As Integer
         Dim planreihen As Integer
         Dim plansitzeproreihe As Integer
-        Dim tag As Integer
+
 
         If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
             For i = 0 To (alleTagespläne.Count / 11)
@@ -334,8 +334,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FormSchönMachen()
     End Sub
 
-
-    Private Sub KinoGUI_Closing(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub cmdBeenden_Click(sender As Object, e As EventArgs) Handles cmdBeenden.Click
 
         System.IO.File.WriteAllText("Filme.txt", String.Empty)
         System.IO.File.WriteAllText("Kunden.txt", String.Empty)
@@ -445,8 +444,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 'file4.Close()
             Next
         End If
-
+        Me.Close()
     End Sub
+
+    'Private Sub KinoGUIclose(sender As Object, e As EventArgs) Handles Me.Load
+
+    'End Sub
 
     Private Sub reinschreiben()
         DASKINO.getFilmtitel()
@@ -777,6 +780,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
+
         KundenGUI.Show()
         KundenGUI.BringToFront()
         'KundenGUI.lstSammlung.Items.Clear()
@@ -825,4 +829,5 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         KinosaalHinzufügenGUI.BringToFront()
 
     End Sub
+
 End Class
