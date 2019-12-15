@@ -93,9 +93,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Bublebee() As System.Drawing.Bitmap
+        Friend ReadOnly Property Bumblebee() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Bublebee", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Bumblebee", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -263,9 +263,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Jäger_des_Verlorenen_Schatzes() As System.Drawing.Bitmap
+        Friend ReadOnly Property Jagd_auf_Roter_Oktober() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Jäger_des_Verlorenen_Schatzes", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Jagd_auf_Roter_Oktober", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -273,9 +273,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Jagt_auf_Roter_Oktober() As System.Drawing.Bitmap
+        Friend ReadOnly Property Jäger_des_Verlorenen_Schatzes() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Jagt_auf_Roter_Oktober", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Jäger_des_Verlorenen_Schatzes", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
