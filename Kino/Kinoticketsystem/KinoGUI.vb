@@ -820,5 +820,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     End Sub
 
-
+    Private Sub KinoGUI_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        cmdTestVorstellung.Visible = False
+        cmdTexterfassen.Visible = False
+    End Sub
 End Class
