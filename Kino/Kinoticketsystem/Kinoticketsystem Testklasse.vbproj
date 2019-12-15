@@ -317,7 +317,7 @@
     <None Include="bin\Debug\The Fast and The Furious.png" />
     <None Include="bin\Debug\The Wolf Of Wall Street.png" />
     <None Include="bin\Debug\Ziemlich beste Freunde.png" />
-    <None Include="bin\Debug\%28T%29 Raumschiff Surprise.png" />
+    <None Include="bin\Debug\T Raumschiff Surprise.png" />
     <None Include="bin\Debug\Alita Battle Angel.png" />
     <None Include="bin\Debug\Bumblebee.png" />
     <None Include="bin\Debug\Coach Carter.png" />
@@ -365,7 +365,7 @@
     <None Include="Resources\Jumanji Willkommen im Dschungel.png" />
     <None Include="Resources\Herr der Ringe.png" />
     <None Include="Resources\Alita Battle Angel.png" />
-    <None Include="Resources\%28T%29 Raumschiff Surprise.png" />
+    <None Include="Resources\T Raumschiff Surprise.png" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

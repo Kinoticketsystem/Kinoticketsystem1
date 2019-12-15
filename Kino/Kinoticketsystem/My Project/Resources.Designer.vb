@@ -63,16 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _T__Raumschiff_Surprise() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("_T__Raumschiff_Surprise", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property Alita_Battle_Angel() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Alita_Battle_Angel", resourceCulture)
@@ -456,6 +446,16 @@ Namespace My.Resources
         Friend ReadOnly Property Star_Wars_VIII_Die_letzten_Jedi() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Star_Wars_VIII_Die_letzten_Jedi", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property T_Raumschiff_Surprise() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("T_Raumschiff_Surprise", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
