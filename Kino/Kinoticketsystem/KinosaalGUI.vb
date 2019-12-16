@@ -7,7 +7,10 @@ Public Class KinosaalGUI
     Private _Gesamtkosten As Double
     Private _aktuellerKunde As Kunde
 
-
+    'nur fürs zurückgeben (eigentlich nicht ganz sauber programmiert)
+    Private _AusKinosaal As Integer
+    Private _AusTag As Integer
+    Private _NummerDesKinosaals As Integer
 
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         zeigeNurSovieleButtonsWienötig()
@@ -433,6 +436,11 @@ Public Class KinosaalGUI
         _aktuellerKunde = New Kunde("Standard")
     End Sub
     'überladen, weil wenn kein Kunde übergeben wird, wird Standardkunde genommen
+    Public Sub VOnWoAufgerufen(kinosaal As Kinosaal, Tag As Integer, nummerdesKinosaals As Integer)
+        _AusKinosaal = KinoGUI.DASKINO.getKinosäle.IndexOf(kinosaal) + 1 'richtig mit +1?
+        _AusTag = Tag
+        _NummerDesKinosaals = nummerdesKinosaals
+    End Sub
     Public Sub Aufrufen(ByRef a As Kinosaal, b As Kunde)
         'noch nicht fertig 'eigentlich schon, oder nicht?
         _kinosaal = a
@@ -497,6 +505,14 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub cmdFertig_Click(sender As Object, e As EventArgs) Handles cmdFertig.Click
+        Dim a As ArrayList = KinoGUI.DASKINO.getTagesplan
+        If _AusKinosaal > 1 Then
+            Dim b As Tagesplan = a(_AusTag * _AusKinosaal)
+        Else
+
+        End If
+        KinoGUI.DASKINO.setTagesplanANSTelle(, _AusTag)
+
         Me.Close()
         Me.Hide()
         'Kinosaal übergeben
