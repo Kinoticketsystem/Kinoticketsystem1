@@ -111,7 +111,13 @@ Public Class Tagesplan
             End If
         Next
         If alleFilmeHeuteWarenSchon Then
-            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False), _Saal)
+            Dim df As Kinosaal = New Kinosaal(120, 8, 15)
+            For i = 0 To df.getAnzahlReihe
+                For j = 0 To df.getSitzeProReihe
+                    df.SitzplatzBuchen(i, j, New Kunde("Keine Veranstaltung"))
+                Next
+            Next
+            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False), df)
         End If
     End Function
 

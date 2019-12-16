@@ -153,7 +153,9 @@ Public Class KinosaalGUI
             For j As Integer = 0 To _kinosaal.getSitzeProReihe - 1
                 Dim a As Kunde = _kinosaal.getKunde(i, j) '= nothing funktioniert nicht. .hasValue müsste man erben vom System, k.P. wie und warum nicht automatisch wie bei Java ;-(
 
-                If Not (_kinosaal._leererPlatz.Equals(a)) Then
+                If Not (_kinosaal._leererPlatz.Equals(a)) And _Buchen Then
+                    macheButtons2DUndEnableUndRot(_Buttons((i * _kinosaal.getSitzeProReihe) + j))
+                ElseIf Not _Buchen And (_kinosaal._leererPlatz.Equals(a)) Then
                     macheButtons2DUndEnableUndRot(_Buttons((i * _kinosaal.getSitzeProReihe) + j))
                     'Select Case i
                     '    Case 0
@@ -462,22 +464,42 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub übertrageAnzahlAusgewähltePlätze()
-        lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
-        If _Gesamtkosten < 10 Then
-            lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+        If _Buchen Then
+            lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
+            If _Gesamtkosten < 10 Then
+                lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
 
+            Else
+                lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+
+            End If
+
+            If _AnzahlAusgewähltePlätze < 1 Then
+                cmdFertig.BackColor = Color.Red
+                cmdFertig.Enabled = False
+            Else
+                cmdFertig.BackColor = Color.Green
+                cmdFertig.Enabled = True
+            End If
         Else
-            lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+            lblAnzahlAusgewähltePlätze.Text = "gebuchte Plätze: " & (_kinosaal.getAnzahlSitzplätze - _kinosaal.getAnzahlFreiPlätze)
+            If _Gesamtkosten < 10 Then
+                lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
 
+            Else
+                lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+
+            End If
+
+            If _AnzahlAusgewähltePlätze < 1 Then
+                cmdFertig.BackColor = Color.Red
+                cmdFertig.Enabled = False
+            Else
+                cmdFertig.BackColor = Color.Green
+                cmdFertig.Enabled = True
+            End If
         End If
 
-        If _AnzahlAusgewähltePlätze < 1 Then
-            cmdFertig.BackColor = Color.Red
-            cmdFertig.Enabled = False
-        Else
-            cmdFertig.BackColor = Color.Green
-            cmdFertig.Enabled = True
-        End If
     End Sub
     Public Sub macheButtons2DUndEnableUndRot(ByRef a As Button)
         a.FlatStyle = FlatStyle.Flat
@@ -521,10 +543,17 @@ Public Class KinosaalGUI
 
         'es wird ja beim auswählen direkt gebucht
 
-        Me.Close()
-        Me.Hide()
-        KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2)
-        MsgBox()
+
+        If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2), 4, "Buchung abschließen") = 6) Then
+            'ja geklickt
+            Me.Close()
+            Me.Hide()
+            FTagesplan.Hide()
+            FTagesplan.Close()
+
+            KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2)
+        End If
+
         '  Kunde zu beginn auswählen, weil dann mit übergeben beim Buchen
         'KundenGUI.BringToFront()
         'KundenGUI.Show()
