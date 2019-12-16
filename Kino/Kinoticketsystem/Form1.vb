@@ -99,7 +99,11 @@ Public Class FTagesplan
         VeränderungenJeNachSornierenBuchen()
     End Sub
     Private Sub VeränderungenJeNachSornierenBuchen()
-        'Throw New NotImplementedException()
+        If _Stornieren Then
+            Me.Text = "Wochenplan - Stornieren"
+        Else
+            Text = "Wochenplan - Buchen"
+        End If
     End Sub
 
     Public Sub InitialisiereDenWochenplan(kunde1 As Kunde, NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
@@ -2045,7 +2049,7 @@ Public Class FTagesplan
 
             'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
             KundeHinzuFügen.BringToFront()
-                KundeHinzuFügen.Show()
+            KundeHinzuFügen.Show()
             KundeHinzuFügen.übergeben(a, b, Not _Stornieren)
 
 

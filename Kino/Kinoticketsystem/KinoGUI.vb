@@ -547,7 +547,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 lblFilm4.Text = vorstellung.getFilm.getFilmtitel
             Case 4
                 lblFilm5.Text = vorstellung.getFilm.getFilmtitel
-            Case 5
+            Case 5S
                 lblFilm6.Text = vorstellung.getFilm.getFilmtitel
         End Select
     End Sub
@@ -762,6 +762,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
             _Buchung = False
+            FTagesplan._Stornieren = True
         Else
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             cmdBuchungStonieren.BackColor = Color.Lime
@@ -769,6 +770,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
             _Buchung = True
+            FTagesplan._Stornieren = False
         End If
     End Sub
 
