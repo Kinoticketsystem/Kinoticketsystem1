@@ -23,4 +23,22 @@
         MsgBox("Der Kunde wurde erfolgreich hinzugefügt")
     End Sub
 
+    Private Sub cmdKundeEntfernen_Click(sender As Object, e As EventArgs) Handles cmdKundeEntfernen.Click
+        Dim i As Integer = lstSammlung.SelectedIndex
+        Dim f As Kunde = KinoGUI.DASKINO.getKunden(i)
+        KinoGUI.DASKINO.KundeEntfernen(f)
+        lstSammlung.Items.Clear()
+        Dim a As ArrayList = KinoGUI.DASKINO.getKunden()
+        For i = 0 To KinoGUI.DASKINO.getKunden.Count - 1
+            lstSammlung.Items.Add(a(i).getName)
+        Next
+    End Sub
+
+    Private Sub KundenGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lstSammlung.Items.Clear()
+        Dim a As ArrayList = KinoGUI.DASKINO.getKunden()
+        For i = 0 To KinoGUI.DASKINO.getKunden.Count - 1
+            lstSammlung.Items.Add(a(i).getName)
+        Next
+    End Sub
 End Class

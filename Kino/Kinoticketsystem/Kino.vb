@@ -195,7 +195,7 @@
         _Kunden.Add(Kunde)
     End Sub
     Public Sub KundeEntfernen(ByRef Kunde As Kunde)
-        Dim a As Integer = _Kunden.BinarySearch(Kunde)
+        Dim a As Integer = _Kunden.IndexOf(Kunde)
         _Kunden.RemoveAt(a)
     End Sub
     Public Sub setKunden(ByRef Kunden As ArrayList)

@@ -26,6 +26,8 @@ Partial Class KundenGUI
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.cmdLöschenHinzufügen = New System.Windows.Forms.Button()
+        Me.cmdKundeEntfernen = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lstSammlung
@@ -73,6 +75,31 @@ Partial Class KundenGUI
         Me.cmdLöschenHinzufügen.Text = "Kunde hinzufügen "
         Me.cmdLöschenHinzufügen.UseVisualStyleBackColor = True
         '
+        'cmdKundeEntfernen
+        '
+        Me.cmdKundeEntfernen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdKundeEntfernen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdKundeEntfernen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdKundeEntfernen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.cmdKundeEntfernen.Location = New System.Drawing.Point(26, 151)
+        Me.cmdKundeEntfernen.Name = "cmdKundeEntfernen"
+        Me.cmdKundeEntfernen.Size = New System.Drawing.Size(250, 32)
+        Me.cmdKundeEntfernen.TabIndex = 4
+        Me.cmdKundeEntfernen.Text = "Kunde entfernen"
+        Me.cmdKundeEntfernen.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 9.5!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(283, 23)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 15)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Alle Kunden:"
+        '
         'KundenGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -80,6 +107,8 @@ Partial Class KundenGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.NebenformenGUI_Hintergrund
         Me.ClientSize = New System.Drawing.Size(629, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.cmdKundeEntfernen)
         Me.Controls.Add(Me.cmdLöschenHinzufügen)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
@@ -95,4 +124,6 @@ Partial Class KundenGUI
     Friend WithEvents Label1 As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents cmdLöschenHinzufügen As Button
+    Friend WithEvents cmdKundeEntfernen As Button
+    Friend WithEvents Label2 As Label
 End Class
