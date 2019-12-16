@@ -64,9 +64,17 @@
         Dim i As Integer = lstAlleFilme.SelectedIndex
         Dim f As Film = KinoGUI.DASKINO.getFilmtitel(i)
         KinoGUI.DASKINO.FilmEntfernen(f)
+        lstAlleFilme.Items.Clear()
+        Dim a As ArrayList = KinoGUI.DASKINO.getFilmtitel()
+        For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1
+            lstAlleFilme.Items.Add(a(i).getFilmtitel)
+        Next
     End Sub
 
     Private Sub FilmHinzufügenGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim a As ArrayList = KinoGUI.DASKINO.getFilmtitel()
+        For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1
+            lstAlleFilme.Items.Add(a(i).getFilmtitel)
+        Next
     End Sub
 End Class

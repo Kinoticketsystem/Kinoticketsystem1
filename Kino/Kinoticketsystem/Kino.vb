@@ -213,7 +213,7 @@
     End Sub
     ' wie bei kunde
     Public Sub FilmEntfernen(ByRef Film As Film)
-        Dim a As Integer = _Filme.BinarySearch(Film)
+        Dim a As Integer = _Filme.IndexOf(Film)
         _Filme.RemoveAt(a)
     End Sub
 
