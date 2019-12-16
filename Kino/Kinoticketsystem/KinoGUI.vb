@@ -47,7 +47,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             KinosaalGUI.BringToFront()
             KinosaalGUI.Show()
         ElseIf NumericUpDown1.Value = 5 Then
-            Dim a As Kinosaal = New Kinosaal(100, 5, 20) '20 kann nicht sein
+            Dim a As Kinosaal = New Kinosaal(98, 7, 14)
             KinosaalGUI.Aufrufen(a)
             KinosaalGUI.BringToFront()
             KinosaalGUI.Show()
