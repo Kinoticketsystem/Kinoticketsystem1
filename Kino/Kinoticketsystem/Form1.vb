@@ -8,7 +8,8 @@ Public Class FTagesplan
     Private _fünfterTag As ITagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
-    Private _Aendern As Boolean = True
+    Private _Aendern As Boolean
+    Private _NummerDEsKinosaals As Integer
     Public _Stornieren As Boolean
     Private _Kinosaal As Kinosaal
 
@@ -43,7 +44,7 @@ Public Class FTagesplan
         'Throw New NotImplementedException()
     End Sub
 
-    Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
+    Public Sub InitialisiereDenWochenplan(NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
         _dritterTag = dritterTag
@@ -52,12 +53,13 @@ Public Class FTagesplan
         _sechsterTag = sechsterTag
         _siebterTag = siebterTag
         _Aendern = AendernModus
+        _NummerDEsKinosaals = NummerDesKinosaals
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
         FarbeDerButtonsFestlegen()
         VeränderungenJeNachSornierenBuchen()
     End Sub
-    Public Sub InitialisiereDenWochenplan(AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
+    Public Sub InitialisiereDenWochenplan(NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
         _dritterTag = dritterTag
@@ -66,6 +68,7 @@ Public Class FTagesplan
         _sechsterTag = sechsterTag
         _siebterTag = New Tagesplan() '.getVorstellungen gibt leere arrayliste dann
         _Aendern = AendernModus
+        _NummerDEsKinosaals = NummerDesKinosaals
         GrößeDerFilmButtonsFestlegen()
         PositionDerFilmButtonsFestlegenY()
         FarbeDerButtonsFestlegen()
@@ -1945,7 +1948,7 @@ Public Class FTagesplan
     End Sub
     Private Sub Geklickt(a As Integer, b As Integer)
         Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
-
+        Dim d As Kinosaal
         If _Aendern Then
             'ohne Infos vom Film
             NeueVorstellung.BringToFront()
@@ -1981,39 +1984,54 @@ Public Class FTagesplan
             Select Case a
                 Case 1
                     c = _ersterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    d = c.getSaal
+                    KinosaalGUI.Aufrufen(d, _Kunde)
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 1, _NummerDEsKinosaals)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
                 Case 2
                     c = _zweiterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    ' KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde) 'so war es vorher 'der neue Kinosaal hat die verherigen Buchungen aber nicht...
+                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 2)
+
                 Case 3
                     c = _dritterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 3)
+
                 Case 4
                     c = _vierterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 4)
+
                 Case 5
                     c = _fünfterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 5)
+
                 Case 6
                     c = _sechsterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 6)
+
                 Case 7
                     c = _siebterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde)
+                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
                     KinosaalGUI.BringToFront()
                     KinosaalGUI.Show()
+                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 7)
+
             End Select
         End If
     End Sub
@@ -2643,7 +2661,7 @@ Public Class FTagesplan
     End Sub
 
     Private Sub cmdTagesPlanErstellen_Click(sender As Object, e As EventArgs) Handles cmdFilmeVOnEInemTagEntfernen.Click
-        MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen")
+        '  MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen")
         If (MsgBox("wirklich?", 4, "Filme des ausgewählten Tages entfernen") = 6) Then
             'ja geklickt
             Dim a As ArrayList = New ArrayList

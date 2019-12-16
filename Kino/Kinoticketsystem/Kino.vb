@@ -204,6 +204,9 @@
     Public Sub setTagesplan(ByRef Tagesplan As ArrayList)
         _Tagespläne = Tagesplan
     End Sub
+    Public Sub setTagesplanANSTelle(x As Integer, b As Tagesplan)
+        _Tagespläne(x) = b
+    End Sub
 
     Public Sub FilmHinzufügen(ByRef Film As Film)
         _Filme.Add(Film)
