@@ -36,9 +36,9 @@ Partial Class StartBild
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Silver
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.Kinoticketsystem.My.Resources.Resources._720px
+        Me.PictureBox1.Image = Global.Kinoticketsystem.My.Resources.Resources._800x500
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
