@@ -761,7 +761,7 @@ True
 5. Vorstellung:
  1110 
  1243 
-Karate kid	
+Karate kid
  133 
  6 
 False
@@ -772,7 +772,7 @@ False
 6. Vorstellung:
  1275 
  1411 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -805,7 +805,7 @@ False
 3. Vorstellung:
  780 
  895 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
@@ -849,7 +849,7 @@ False
 7. Vorstellung:
  1390 
  1526 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -871,7 +871,7 @@ False
 2. Vorstellung:
  840 
  952 
-Ziemlich beste Freunde 
+Ziemlich beste Freunde
  112 
  6 
 False
@@ -893,7 +893,7 @@ False
 4. Vorstellung:
  1130 
  1309 
-The Wolf Of Wall Street 
+The Wolf Of Wall Street
  179 
  16 
 False
@@ -904,7 +904,7 @@ False
 5. Vorstellung:
  1340 
  1443 
-The Fast and the Furious	
+The Fast and the Furious
  103 
  16 
 False
