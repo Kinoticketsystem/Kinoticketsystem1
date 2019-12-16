@@ -198,6 +198,9 @@
         Dim a As Integer = _Kunden.BinarySearch(Kunde)
         _Kunden.RemoveAt(a)
     End Sub
+    Public Sub setKunden(ByRef Kunden As ArrayList)
+        _Kunden = Kunden
+    End Sub
     Public Sub setTagesplan(ByRef Tagesplan As ArrayList)
         _Tagespläne = Tagesplan
     End Sub

@@ -266,7 +266,7 @@ False
 5. Vorstellung:
  1065 
  1200 
-Jagd Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -354,7 +354,7 @@ False
 6. Vorstellung:
  1260 
  1383 
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -497,7 +497,7 @@ False
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -519,7 +519,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -596,7 +596,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen 
  133 
  12 
 False
@@ -640,7 +640,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway	
  139 
  6 
 True
@@ -651,7 +651,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -739,7 +739,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising	
  111 
  12 
 True
@@ -783,7 +783,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -827,7 +827,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -882,7 +882,7 @@ False
 3. Vorstellung:
  980 
  1103 
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -915,7 +915,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -959,7 +959,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -992,7 +992,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -1014,7 +1014,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -1091,7 +1091,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen 
  133 
  12 
 False
@@ -1135,7 +1135,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway	
  139 
  6 
 True
@@ -1146,7 +1146,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel	
  98 
  16 
 True
@@ -1234,7 +1234,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising	
  111 
  12 
 True
@@ -1355,7 +1355,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising	
  111 
  12 
 True
@@ -1399,7 +1399,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -1443,7 +1443,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -1476,7 +1476,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -1498,7 +1498,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -1575,7 +1575,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen 
  133 
  12 
 False
@@ -1619,7 +1619,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway	
  139 
  6 
 True
@@ -1630,7 +1630,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel	
  98 
  16 
 True
@@ -1751,7 +1751,7 @@ False
 6. Vorstellung:
  1370 
  1493 
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -1762,7 +1762,7 @@ False
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
@@ -1773,7 +1773,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel	
  98 
  16 
 True
@@ -1861,7 +1861,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising	
  111 
  12 
 True
@@ -1905,7 +1905,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -1949,7 +1949,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -1982,7 +1982,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -2004,7 +2004,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagd Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -2081,7 +2081,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen 
  133 
  12 
 False
@@ -2125,7 +2125,7 @@ True
 1. Vorstellung:
  660 
  801 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -2136,7 +2136,7 @@ True
 2. Vorstellung:
  830 
  928 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel	
  98 
  16 
 True
@@ -2180,7 +2180,7 @@ False
 6. Vorstellung:
  1390 
  1520 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -2224,7 +2224,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen 
  133 
  12 
 False
@@ -2268,7 +2268,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway	
  139 
  6 
 True
@@ -2279,7 +2279,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel	
  98 
  16 
 True
@@ -2367,7 +2367,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising	
  111 
  12 
 True
@@ -2411,7 +2411,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -2455,7 +2455,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -2488,7 +2488,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -2510,7 +2510,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -2598,7 +2598,7 @@ False
 5. Vorstellung:
  1330 
  1471 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True

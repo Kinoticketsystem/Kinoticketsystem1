@@ -279,7 +279,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Dim planplätze As Integer
         Dim planreihen As Integer
         Dim plansitzeproreihe As Integer
-        Dim tag As Integer
+
 
         If alleTagespläne.Count >= 11 And alleTagespläne.Count Mod 11 = 0 Then
             For i = 0 To (alleTagespläne.Count / 11)
@@ -334,8 +334,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         FormSchönMachen()
     End Sub
 
-
-    Private Sub KinoGUI_Closing(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub cmdBeenden_Click(sender As Object, e As EventArgs) Handles cmdBeenden.Click
 
         System.IO.File.WriteAllText("Filme.txt", String.Empty)
         System.IO.File.WriteAllText("Kunden.txt", String.Empty)
@@ -445,8 +444,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 'file4.Close()
             Next
         End If
-
+        Me.Close()
     End Sub
+
+    'Private Sub KinoGUIclose(sender As Object, e As EventArgs) Handles Me.Load
+
+    'End Sub
 
     Private Sub reinschreiben()
         DASKINO.getFilmtitel()
@@ -777,6 +780,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     End Sub
 
     Private Sub cmdKundenDatenbankAufrufen_Click(sender As Object, e As EventArgs) Handles cmdKundenDatenbankAufrufen.Click
+
         KundenGUI.Show()
         KundenGUI.BringToFront()
         'KundenGUI.lstSammlung.Items.Clear()
@@ -820,5 +824,123 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
 
     End Sub
 
+    Private Sub cmdNeuerKinosaal_Click(sender As Object, e As EventArgs) Handles cmdNeuerKinosaal.Click
+        KinosaalHinzufügenGUI.Show()
+        KinosaalHinzufügenGUI.BringToFront()
 
+    End Sub
+
+    Private Sub cmdÄnderungenSpeichern_Click(sender As Object, e As EventArgs) Handles cmdÄnderungenSpeichern.Click
+
+        ' Die neueingegebenen Daten werden in den Satein gespeichert, ohne dass das Programm beendet wird 
+
+        System.IO.File.WriteAllText("Filme.txt", String.Empty)
+        System.IO.File.WriteAllText("Kunden.txt", String.Empty)
+        System.IO.File.WriteAllText("Kinosäle.txt", String.Empty)
+        System.IO.File.WriteAllText("Tagespläne.txt", String.Empty)
+
+        ' Der Inhalt der Dateien wird erst gelöscht kurz bevor sie neu beschrieben werden, so bleibt der Inhalt im Falle eines Crashes oder bei "Throw Exceptions" bestehen
+
+
+        'Einfügen in die Textdateien wenn das Programm beendet wird 
+        Dim titel As New ArrayList
+        Dim säle As New ArrayList
+        Dim pläne As New ArrayList
+        Dim kunden As New ArrayList
+        Dim zwKunde As Kunde
+        Dim anzahlKinos As Integer
+        titel = DASKINO.getFilmtitel
+        säle = DASKINO.getKinosäle
+        pläne = DASKINO.getTagesplan
+        kunden = DASKINO.getKunden
+        anzahlKinos = DASKINO.getAnzahlKinosäle
+        Dim neuertext As String
+        If kunden.Count > 0 Then
+            For i = 0 To kunden.Count - 1
+                zwKunde = kunden(i)
+                neuertext = zwKunde.getName
+                FileOpen(1, "Kunden.txt", OpenMode.Append)
+                PrintLine(1, neuertext)
+                FileClose(1)
+                'Dim file1 As System.IO.StreamWriter
+                'file1 = My.Computer.FileSystem.OpenTextFileWriter("Kunden.txt", True)
+                'file1.WriteLine(neuertext)
+                'file1.Close()
+            Next
+        End If
+        If titel.Count > 0 Then
+            For j = 0 To titel.Count - 1
+                'neuertext = titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D
+                FileOpen(1, "Filme.txt", OpenMode.Append)
+                PrintLine(1, titel(j).getFilmtitel)
+                PrintLine(1, titel(j).getFilmlänge)
+                PrintLine(1, titel(j).getAltersfreigabe)
+                If titel(j).ist3D = True Then
+                    PrintLine(1, "True")
+                Else
+                    PrintLine(1, "False")
+                End If
+                FileClose(1)
+                'Dim file2 As System.IO.StreamWriter
+                'file2 = My.Computer.FileSystem.OpenTextFileWriter("Filme.txt", True)
+                'file2.WriteLine(titel(j).getFilmtitel & ": Spieldauer: " & titel(j).getFilmlänge & " Altersfreigabe: " & titel(j).getAltersfreigabe & " 3D? " & titel(j).ist3D)
+                'file2.Close()
+            Next
+        End If
+        If anzahlKinos > 0 Then
+            For k = 0 To anzahlKinos - 1
+                FileOpen(1, "Kinosäle.txt", OpenMode.Append)
+                'PrintLine(1, "Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
+                PrintLine(1, k + 1 & ". Kinosaal:")
+                PrintLine(1, säle(k).getAnzahlSitzplätze)
+                PrintLine(1, säle(k).getAnzahlReihe)
+                PrintLine(1, säle(k).getSitzeProReihe)
+                FileClose(1)
+                '    Dim file3 As System.IO.StreamWriter
+                '    file3 = My.Computer.FileSystem.OpenTextFileWriter("Kinosäle.txt", True)
+                '    file3.WriteLine("Kinosaal" & k & ": Anzahl Sitzplätze: " & Kinosäle(k).getAnzahlSitzplätze & " Anzahl der Reihen: " & Kinosäle(k).getAnzahlReihe & " Sitzplätze pro Reihe: " & Kinosäle(k).getSitzeProReihe)
+                '    file3.Close()
+            Next
+        End If
+        If pläne.Count > 0 Then
+            For i = 0 To pläne.Count - 1
+                Dim plan As Tagesplan = pläne(i)
+                Dim AnzahlVorstellungen As Integer = plan.getAnzahlVorstellungen
+                'Dim file4 As System.IO.StreamWriter
+                'file4 = My.Computer.FileSystem.OpenTextFileWriter("Tagespläne.txt", True)
+                'FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                ''file4.WriteLine(i + 1 & ". Tag:")
+                'PrintLine(1, i+1 & ". Tag:")
+                'FileClose(1)
+                For j = 1 To AnzahlVorstellungen
+                    Dim Vorstellung As Vorstellung = plan.getVorstellung(j)
+                    FileOpen(1, "Tagespläne.txt", OpenMode.Append)
+                    If j = 1 Then
+                        PrintLine(1, i + 1 & ". Tag")
+                    Else
+                        PrintLine(1, i + 1)
+                    End If
+
+                    'PrintLine(1, "Vorstellung " & j & ": " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & " : " & Vorstellung.getFilm.getFilmtitel() & " Saal: 1")
+                    PrintLine(1, j & ". Vorstellung:")
+                    PrintLine(1, Vorstellung.getAnfangszeit())
+                    PrintLine(1, Vorstellung.getEndzeit())
+                    PrintLine(1, Vorstellung.getFilm.getFilmtitel())
+                    PrintLine(1, Vorstellung.getFilm.getFilmlänge)
+                    PrintLine(1, Vorstellung.getFilm.getAltersfreigabe)
+                    PrintLine(1, Vorstellung.getFilm.Ist3D)
+                    PrintLine(1, Vorstellung.getSaal.getAnzahlSitzplätze)
+                    PrintLine(1, Vorstellung.getSaal.getAnzahlReihe)
+                    PrintLine(1, Vorstellung.getSaal.getSitzeProReihe)
+                    FileClose(1)
+
+
+                    '    'file4.WriteLine(i & ". Tag:")
+                    '    file4.WriteLine("Vorstellung " & j & " geht von " & Vorstellung.getAnfangszeit() & " bis " & Vorstellung.getEndzeit() & ", es läuft " & Vorstellung.getFilm.getFilmtitel() & " (" & Vorstellung.getFilm.getFilmlänge & ") ab " & Vorstellung.getFilm.getAltersfreigabe & " 3D: " & Vorstellung.getFilm.Ist3D & " Saal 1")
+
+                Next
+                'file4.Close()
+            Next
+        End If
+    End Sub
 End Class

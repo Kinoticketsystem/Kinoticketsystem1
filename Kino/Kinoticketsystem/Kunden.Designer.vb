@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class KundenGUI
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class KundenGUI
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lstSammlung = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -63,11 +63,14 @@ Partial Class KundenGUI
         Me.cmdLöschenHinzufügen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
         Me.cmdLöschenHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdLöschenHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Calibri", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLöschenHinzufügen.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLöschenHinzufügen.ForeColor = System.Drawing.SystemColors.ControlText
         Me.cmdLöschenHinzufügen.Location = New System.Drawing.Point(26, 80)
         Me.cmdLöschenHinzufügen.Name = "cmdLöschenHinzufügen"
+        Me.cmdLöschenHinzufügen.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.cmdLöschenHinzufügen.Size = New System.Drawing.Size(251, 29)
         Me.cmdLöschenHinzufügen.TabIndex = 3
+        Me.cmdLöschenHinzufügen.Text = "Kunde hinzufügen "
         Me.cmdLöschenHinzufügen.UseVisualStyleBackColor = True
         '
         'KundenGUI
@@ -81,7 +84,7 @@ Partial Class KundenGUI
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lstSammlung)
-        Me.Name = "KundenGUI"
+        Me.name = "KundenGUI"
         Me.Text = "Kunden"
         Me.ResumeLayout(False)
         Me.PerformLayout()
