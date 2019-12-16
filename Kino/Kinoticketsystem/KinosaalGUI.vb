@@ -7,7 +7,7 @@ Public Class KinosaalGUI
     Private _Gesamtkosten As Double
     Private _aktuellerKunde As Kunde
 
-    'nur fürs zurückgeben (eigentlich nicht ganz sauber programmiert)
+    'nur fürs zurückgeben (eigentlich nicht ganz sauber programmiert) 'brauchen wir nicht! oder!
     Private _AusKinosaal As Integer
     Private _AusTag As Integer
     Private _NummerDesKinosaals As Integer
@@ -505,16 +505,22 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub cmdFertig_Click(sender As Object, e As EventArgs) Handles cmdFertig.Click
-        Dim a As ArrayList = KinoGUI.DASKINO.getTagesplan
-        If _AusKinosaal > 1 Then
-            Dim b As Tagesplan = a(_AusTag * _AusKinosaal)
-        Else
+        'Dim a As ArrayList = KinoGUI.DASKINO.getTagesplan
+        'If _AusKinosaal > 1 Then
+        '    Dim b As Tagesplan = a(_AusTag * _AusKinosaal)
+        'Else
 
-        End If
-        KinoGUI.DASKINO.setTagesplanANSTelle(, _AusTag)
+        'End If
+        'KinoGUI.DASKINO.setTagesplanANSTelle(, _AusTag)
+
+        'es wird ja beim auswählen direkt gebucht
 
         Me.Close()
         Me.Hide()
+        '  Kunde zu beginn auswählen, weil dann mit übergeben beim Buchen
+        'KundenGUI.BringToFront()
+        'KundenGUI.Show()
+        'KundenGUI.
         'Kinosaal übergeben
     End Sub
 
