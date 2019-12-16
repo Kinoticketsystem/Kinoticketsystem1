@@ -375,6 +375,7 @@
     <None Include="Resources\Herr der Ringe.png" />
     <None Include="Resources\Alita Battle Angel.png" />
     <None Include="Resources\T Raumschiff Surprise.png" />
+    <None Include="Resources\720px.png" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
