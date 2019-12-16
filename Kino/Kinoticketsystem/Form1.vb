@@ -15,9 +15,10 @@ Public Class FTagesplan
 
     Private _Kunde As Kunde = New Kunde("Standard")
 
-    Public Sub BuchenNachdemKundeAUsgewähltWUrde(a As Integer, b As Integer, kunde As Kunde)
+    Public Sub BuchenNachdemKundeAUsgewähltWUrde(a As Integer, b As Integer, kunde As Kunde, buchen As Boolean)
         Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
         Dim d As Kinosaal
+        KinosaalGUI._Buchen = buchen
         Select Case a
             Case 1
                 c = _ersterTag.getVorstellung(b)
@@ -2041,14 +2042,13 @@ Public Class FTagesplan
                     NeueVorstellung.datenübergen(c, KinosaalNummer)
             End Select
         Else
-            If _Stornieren Then
-            Else
-                'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
-                KundeHinzuFügen.BringToFront()
-                KundeHinzuFügen.Show()
-                KundeHinzuFügen.übergeben(a, b)
 
-            End If
+            'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
+            KundeHinzuFügen.BringToFront()
+                KundeHinzuFügen.Show()
+            KundeHinzuFügen.übergeben(a, b, Not _Stornieren)
+
+
 
         End If
     End Sub

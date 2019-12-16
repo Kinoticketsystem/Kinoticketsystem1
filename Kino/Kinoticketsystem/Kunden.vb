@@ -23,4 +23,7 @@
         MsgBox("Der Kunde wurde erfolgreich hinzugefügt")
     End Sub
 
+    Private Sub KundenGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

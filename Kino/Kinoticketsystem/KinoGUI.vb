@@ -9,6 +9,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Public _WochenpläneBearbeiten As Boolean
     Public _Buchung As Boolean = True
     Public _ausgewählterKunde As Kunde
+    Public _GeldInKasse As Double = 10
     'Public alleKinosäle(_AnzahlKinos) As Kinosaal 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO ' = New ArrayList() 'vielleicht lieber array, weil feste Größe?
     'Public alleTagespläne As ArrayList = New ArrayList() 'eigentlich sollte das hier nicht extra gespeichert werden, sondern in DASKINO
 
@@ -47,7 +48,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             KinosaalGUI.BringToFront()
             KinosaalGUI.Show()
         ElseIf NumericUpDown1.Value = 5 Then
-            Dim a As Kinosaal = New Kinosaal(100, 5, 20) '20 kann nicht sein
+            Dim a As Kinosaal = New Kinosaal(98, 7, 14) '20 kann nicht sein
             KinosaalGUI.Aufrufen(a)
             KinosaalGUI.BringToFront()
             KinosaalGUI.Show()
@@ -519,6 +520,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         NumericUpDown1.Maximum = 6
         NumericUpDown1.Minimum = 1
         NumericUpDown1.Value = 1
+        lblTageseinnahmen.Text = "Geld in Kasse: " & Math.Round(_GeldInKasse, 2)
     End Sub
 
     Private Sub nächstenFilmProKinosaalANzeigen()

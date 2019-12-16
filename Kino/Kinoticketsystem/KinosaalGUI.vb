@@ -6,11 +6,12 @@ Public Class KinosaalGUI
     Private _AnzahlAusgewähltePlätze As Integer = 0
     Private _Gesamtkosten As Double
     Private _aktuellerKunde As Kunde
+    Public _Buchen As Boolean
 
     'nur fürs zurückgeben (eigentlich nicht ganz sauber programmiert) 'brauchen wir nicht! oder!
-    Private _AusKinosaal As Integer
-    Private _AusTag As Integer
-    Private _NummerDesKinosaals As Integer
+    'Private _AusKinosaal As Integer
+    'Private _AusTag As Integer
+    'Private _NummerDesKinosaals As Integer
 
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         zeigeNurSovieleButtonsWienötig()
@@ -148,7 +149,6 @@ Public Class KinosaalGUI
 
     Private Sub InitialisiereSitzplan() 'fertig (wichtig: immer dran denken button1 = (0,0))
         buttonsInsArray() 'nicht löschen!
-
         For i As Integer = 0 To _kinosaal.getAnzahlReihe - 1 ' überall gleich sein muss
             For j As Integer = 0 To _kinosaal.getSitzeProReihe - 1
                 Dim a As Kunde = _kinosaal.getKunde(i, j) '= nothing funktioniert nicht. .hasValue müsste man erben vom System, k.P. wie und warum nicht automatisch wie bei Java ;-(
@@ -357,7 +357,7 @@ Public Class KinosaalGUI
                             Button11.Hide()
                             Button26.Hide()
                             Button41.Hide()
-                            Button57.Hide()
+                            Button56.Hide()
                             Button71.Hide()
                             Button86.Hide()
                             Button101.Hide()
@@ -436,14 +436,20 @@ Public Class KinosaalGUI
         _aktuellerKunde = New Kunde("Standard")
     End Sub
     'überladen, weil wenn kein Kunde übergeben wird, wird Standardkunde genommen
-    Public Sub VOnWoAufgerufen(kinosaal As Kinosaal, Tag As Integer, nummerdesKinosaals As Integer)
-        _AusKinosaal = KinoGUI.DASKINO.getKinosäle.IndexOf(kinosaal) + 1 'richtig mit +1?
-        _AusTag = Tag
-        _NummerDesKinosaals = nummerdesKinosaals
-    End Sub
+    'Public Sub VOnWoAufgerufen(kinosaal As Kinosaal, Tag As Integer, nummerdesKinosaals As Integer)
+    '    _AusKinosaal = KinoGUI.DASKINO.getKinosäle.IndexOf(kinosaal) + 1 'richtig mit +1?
+    '    _AusTag = Tag
+    '    _NummerDesKinosaals = nummerdesKinosaals
+    'End Sub
     Public Sub Aufrufen(ByRef a As Kinosaal, b As Kunde)
         'noch nicht fertig 'eigentlich schon, oder nicht?
         _kinosaal = a
+        _aktuellerKunde = b
+        If _Buchen Then
+            Me.Text = Text & " - " & _aktuellerKunde.getName & " - " & "Buchen"
+        Else
+            Me.Text = Text & " - " & _aktuellerKunde.getName & " - " & "Stornieren"
+        End If
 
         zeigeNurSovieleButtonsWienötig()
         übertrageAnzahlAusgewähltePlätze()
@@ -517,6 +523,8 @@ Public Class KinosaalGUI
 
         Me.Close()
         Me.Hide()
+        KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2)
+        MsgBox()
         '  Kunde zu beginn auswählen, weil dann mit übergeben beim Buchen
         'KundenGUI.BringToFront()
         'KundenGUI.Show()
