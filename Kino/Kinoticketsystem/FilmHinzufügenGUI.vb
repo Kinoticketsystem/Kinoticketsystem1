@@ -65,4 +65,8 @@
         Dim f As Film = KinoGUI.DASKINO.getFilmtitel(i)
         KinoGUI.DASKINO.FilmEntfernen(f)
     End Sub
+
+    Private Sub FilmHinzufügenGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

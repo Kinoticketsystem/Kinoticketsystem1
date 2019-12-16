@@ -14,6 +14,63 @@ Public Class FTagesplan
     Private _Kinosaal As Kinosaal
 
     Private _Kunde As Kunde = New Kunde("Standard")
+
+    Public Sub BuchenNachdemKundeAUsgewähltWUrde(a As Integer, b As Integer, kunde As Kunde)
+        Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
+        Dim d As Kinosaal
+        Select Case a
+            Case 1
+                c = _ersterTag.getVorstellung(b)
+                d = c.getSaal
+                KinosaalGUI.Aufrufen(d, kunde)
+                '    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 1, _NummerDEsKinosaals)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+            Case 2
+                c = _zweiterTag.getVorstellung(b)
+                ' KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde) 'so war es vorher 'der neue Kinosaal hat die verherigen Buchungen aber nicht...
+                KinosaalGUI.Aufrufen(c.getSaal, kunde)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+                  '      KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 2)
+
+            Case 3
+                c = _dritterTag.getVorstellung(b)
+                KinosaalGUI.Aufrufen(c.getSaal, kunde)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+                     '   KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 3)
+
+            Case 4
+                c = _vierterTag.getVorstellung(b)
+                KinosaalGUI.Aufrufen(c.getSaal, kunde)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+                      '  KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 4)
+
+            Case 5
+                c = _fünfterTag.getVorstellung(b)
+                KinosaalGUI.Aufrufen(c.getSaal, kunde)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+                     '   KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 5)
+
+            Case 6
+                c = _sechsterTag.getVorstellung(b)
+                KinosaalGUI.Aufrufen(c.getSaal, kunde)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+                   '     KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 6)
+
+            Case 7
+                c = _siebterTag.getVorstellung(b)
+                KinosaalGUI.Aufrufen(c.getSaal, kunde)
+                KinosaalGUI.BringToFront()
+                KinosaalGUI.Show()
+                '       KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 7)
+
+        End Select
+    End Sub
     'Die nächsten 7 Tage werden angezeigt
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AnfangstagUndDatümerFestlegen() 'fertig
@@ -44,7 +101,7 @@ Public Class FTagesplan
         'Throw New NotImplementedException()
     End Sub
 
-    Public Sub InitialisiereDenWochenplan(NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
+    Public Sub InitialisiereDenWochenplan(kunde1 As Kunde, NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
         _dritterTag = dritterTag
@@ -58,8 +115,9 @@ Public Class FTagesplan
         PositionDerFilmButtonsFestlegenY()
         FarbeDerButtonsFestlegen()
         VeränderungenJeNachSornierenBuchen()
+        _Kunde = kunde1
     End Sub
-    Public Sub InitialisiereDenWochenplan(NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
+    Public Sub InitialisiereDenWochenplan(kunde1 As Kunde, NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan)
         _ersterTag = ersterTag
         _zweiterTag = zweiterTag
         _dritterTag = dritterTag
@@ -73,6 +131,8 @@ Public Class FTagesplan
         PositionDerFilmButtonsFestlegenY()
         FarbeDerButtonsFestlegen()
         VeränderungenJeNachSornierenBuchen()
+        _Kunde = kunde1
+
     End Sub
 
     Public Sub SetKinosaal(a As Kinosaal)
@@ -1981,58 +2041,15 @@ Public Class FTagesplan
                     NeueVorstellung.datenübergen(c, KinosaalNummer)
             End Select
         Else
-            Select Case a
-                Case 1
-                    c = _ersterTag.getVorstellung(b)
-                    d = c.getSaal
-                    KinosaalGUI.Aufrufen(d, _Kunde)
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 1, _NummerDEsKinosaals)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                Case 2
-                    c = _zweiterTag.getVorstellung(b)
-                    ' KinosaalGUI.Aufrufen(New Kinosaal(c), _Kunde) 'so war es vorher 'der neue Kinosaal hat die verherigen Buchungen aber nicht...
-                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 2)
+            If _Stornieren Then
+            Else
+                'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
+                KundeHinzuFügen.BringToFront()
+                KundeHinzuFügen.Show()
+                KundeHinzuFügen.übergeben(a, b)
 
-                Case 3
-                    c = _dritterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 3)
+            End If
 
-                Case 4
-                    c = _vierterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 4)
-
-                Case 5
-                    c = _fünfterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 5)
-
-                Case 6
-                    c = _sechsterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 6)
-
-                Case 7
-                    c = _siebterTag.getVorstellung(b)
-                    KinosaalGUI.Aufrufen(c.getSaal, _Kunde)
-                    KinosaalGUI.BringToFront()
-                    KinosaalGUI.Show()
-                    KinosaalGUI.VOnWoAufgerufen(_Kinosaal, 7)
-
-            End Select
         End If
     End Sub
     Private Sub Button1_MouseMove(sender As Object, e As EventArgs) Handles Button1.MouseMove
