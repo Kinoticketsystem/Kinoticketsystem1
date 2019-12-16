@@ -640,7 +640,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway	
+Midway
  139 
  6 
 True
@@ -684,7 +684,7 @@ False
 5. Vorstellung:
  1090 
  1196 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
@@ -695,7 +695,7 @@ False
 6. Vorstellung:
  1230 
  1344 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
@@ -739,7 +739,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
