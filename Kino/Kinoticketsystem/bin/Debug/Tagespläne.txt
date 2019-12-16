@@ -596,7 +596,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwesen 
+Fantastische Tierwesen
  133 
  12 
 False
@@ -618,7 +618,7 @@ False
 6. Vorstellung:
  1260 
  1379 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
