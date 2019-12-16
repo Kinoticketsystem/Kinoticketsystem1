@@ -1,4 +1,4 @@
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -10,15 +10,15 @@ Coach Carter
  136 
  6 
 False
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising	
  111 
  12 
 True
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -30,11 +30,11 @@ Robin Hood
  116 
  12 
 True
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
-The Fast and the Furious
+The Fast and The Furious
  103 
  16 
 False
@@ -46,7 +46,7 @@ Gladiator
  171 
  16 
 False
-Jagt Auf Roter Oktober	
+Jagd auf Roter Oktober	
  135 
  12 
 False
@@ -58,7 +58,7 @@ Avatar
  162 
  12 
 True
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -90,7 +90,7 @@ Madagascar
  83 
  0 
 True
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -114,7 +114,7 @@ Johnny English 3
  88 
  12 
 True
-Fantastische Tierwessen 
+Fantastische Tierwesen 
  133 
  12 
 False
