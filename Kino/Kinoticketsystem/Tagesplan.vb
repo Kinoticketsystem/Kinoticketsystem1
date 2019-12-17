@@ -145,7 +145,7 @@ Public Class Tagesplan
 
     Public Sub VorstellungEntfernen(vorstellung As Vorstellung) Implements ITagesplan.VorstellungEntfernen
         Dim i As Integer = 0
-        i = _Vorstellungen.BinarySearch(vorstellung)
+        i = _Vorstellungen.IndexOf(vorstellung)
         _Vorstellungen.RemoveAt(i)
         AnzahlFilmeProTag = AnzahlFilmeProTag - 1
     End Sub

@@ -141,19 +141,19 @@ True
  120 
  8 
  15 
-3. Tag
-1. Vorstellung:
+ 2 
+7. Vorstellung:
  480 
- 596 
-Robin Hood
- 116 
+ 603 
+Rush Alles für den Sieg
+ 123 
  12 
-True
+False
  120 
  8 
  15 
- 3 
-2. Vorstellung:
+3. Tag
+1. Vorstellung:
  630 
  727 
 Feuerzangenbowle
@@ -164,7 +164,7 @@ False
  8 
  15 
  3 
-3. Vorstellung:
+2. Vorstellung:
  760 
  931 
 Gladiator
@@ -175,7 +175,7 @@ False
  8 
  15 
  3 
-4. Vorstellung:
+3. Vorstellung:
  960 
  1074 
 Bumblebee
@@ -186,7 +186,7 @@ True
  8 
  15 
  3 
-5. Vorstellung:
+4. Vorstellung:
  1100 
  1222 
 Alita Battle Angel
@@ -197,7 +197,7 @@ True
  8 
  15 
  3 
-6. Vorstellung:
+5. Vorstellung:
  1240 
  1358 
 Lion King
@@ -208,12 +208,23 @@ False
  8 
  15 
  3 
-7. Vorstellung:
+6. Vorstellung:
  1380 
  1550 
 Es 2
  170 
  16 
+False
+ 120 
+ 8 
+ 15 
+ 3 
+7. Vorstellung:
+ 480 
+ 603 
+Rush Alles für den Sieg
+ 123 
+ 12 
 False
  120 
  8 
@@ -1155,28 +1166,6 @@ True
  15 
  17 
 3. Vorstellung:
- 820 
- 917 
-Feuerzangenbowle
- 97 
- 12 
-False
- 75 
- 5 
- 15 
- 17 
-4. Vorstellung:
- 940 
- 1062 
-Joker
- 122 
- 16 
-False
- 75 
- 5 
- 15 
- 17 
-5. Vorstellung:
  1090 
  1196 
 Dunkirk
@@ -1187,7 +1176,7 @@ False
  5 
  15 
  17 
-6. Vorstellung:
+4. Vorstellung:
  1230 
  1344 
 Das Bourne Ultimatum
@@ -1198,13 +1187,24 @@ False
  5 
  15 
  17 
-7. Vorstellung:
+5. Vorstellung:
  1380 
  1550 
 Es 2
  170 
  16 
 False
+ 75 
+ 5 
+ 15 
+ 17 
+6. Vorstellung:
+ 900 
+ 1030 
+John Wick 3
+ 130 
+ 18 
+True
  75 
  5 
  15 
@@ -1325,6 +1325,17 @@ True
 Avatar
  162 
  12 
+True
+ 75 
+ 5 
+ 15 
+ 19 
+6. Vorstellung:
+ 480 
+ 610 
+John Wick 3
+ 130 
+ 18 
 True
  75 
  5 
