@@ -47,7 +47,8 @@ Partial Class KinosaalHinzufügenGUI
         '
         Me.cmdKinosaalHinzufügen.BackColor = System.Drawing.SystemColors.ControlText
         Me.cmdKinosaalHinzufügen.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
-        Me.cmdKinosaalHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.cmdKinosaalHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdKinosaalHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdKinosaalHinzufügen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdKinosaalHinzufügen.Location = New System.Drawing.Point(410, 141)
         Me.cmdKinosaalHinzufügen.Name = "cmdKinosaalHinzufügen"
