@@ -2134,17 +2134,6 @@ True
  14 
 31. Tag
 1. Vorstellung:
- 660 
- 801 
-Kingsman The Golden Circle
- 141 
- 16 
-True
- 98 
- 7 
- 14 
- 31 
-2. Vorstellung:
  830 
  928 
 Hänsel und Gretel
@@ -2155,7 +2144,7 @@ True
  7 
  14 
  31 
-3. Vorstellung:
+2. Vorstellung:
  960 
  1074 
 Bumblebee
@@ -2166,7 +2155,7 @@ True
  7 
  14 
  31 
-4. Vorstellung:
+3. Vorstellung:
  1100 
  1243 
 Fluch der Karibik
@@ -2177,7 +2166,7 @@ True
  7 
  14 
  31 
-5. Vorstellung:
+4. Vorstellung:
  1270 
  1367 
 Feuerzangenbowle
@@ -2188,13 +2177,24 @@ False
  7 
  14 
  31 
-6. Vorstellung:
+5. Vorstellung:
  1390 
  1520 
 John Wick 3
  130 
  18 
 True
+ 98 
+ 7 
+ 14 
+ 31 
+6. Vorstellung:
+ 540 
+ 740 
+Herr der Ringe
+ 200 
+ 12 
+False
  98 
  7 
  14 

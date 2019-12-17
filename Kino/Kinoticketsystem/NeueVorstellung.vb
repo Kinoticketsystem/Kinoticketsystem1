@@ -328,7 +328,7 @@ Public Class NeueVorstellung
         Return _Film
     End Function
 
-    Private Sub chlBesucherAuswählen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chlBesucherAuswählen.SelectedIndexChanged
+    Private Sub chlBesucherAuswählen_SelectedIndexChanged(sender As Object, e As EventArgs)
         lstBesucher.Items.Clear()
         Dim A As IList = chlBesucherAuswählen.CheckedItems
         For i = 0 To A.Count
@@ -342,17 +342,19 @@ Public Class NeueVorstellung
 
     End Sub
 
-    Private Sub cmdBesucherNEtfernen_Click(sender As Object, e As EventArgs) Handles cmdBesucherNEtfernen.Click
 
-        Dim a As IList = lstBesucher.SelectedItems
-        If a.Count > 0 Then
-            For i = 0 To -1
-                If lstBesucher.GetSelected(i) Then
-                    lstBesucher.Items.RemoveAt(i)
-                End If
-            Next
-        Else
-            lstBesucher.Items.Clear()
-        End If
-    End Sub
+
+    'Private Sub cmdBesucherNEtfernen_Click(sender As Object, e As EventArgs)
+
+    '    Dim a As IList = lstBesucher.SelectedItems
+    '    If a.Count > 0 Then
+    '        For i = 0 To -1
+    '            If lstBesucher.GetSelected(i) Then
+    '                lstBesucher.Items.RemoveAt(i)
+    '            End If
+    '        Next
+    '    Else
+    '        lstBesucher.Items.Clear()
+    '    End If
+    'End Sub
 End Class
