@@ -62,8 +62,13 @@
                 lstAlleFilme.Items.Add(a(i).getFilmtitel)
             Next
         Else
-                MsgBox("Es sind nicht alle Parameter korrekt ausgefüllt!")
+            MsgBox("Es sind nicht alle Parameter korrekt ausgefüllt!")
         End If
+
+        Dim ausgangsdatei As String = "Kein Bild vorhanden.png"
+        Dim zieldatei As String = Filmname & ".png"
+
+        My.Computer.FileSystem.CopyFile(ausgangsdatei, zieldatei, overwrite:=True)
 
     End Sub
 

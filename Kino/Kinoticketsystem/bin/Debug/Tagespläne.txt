@@ -506,17 +506,6 @@ False
  15 
 8. Tag
 1. Vorstellung:
- 480 
- 563 
-T Raumschiff Surprise
- 83 
- 0 
-False
- 60 
- 6 
- 10 
- 8 
-2. Vorstellung:
  600 
  753 
 Le Mans 66
@@ -527,7 +516,7 @@ False
  6 
  10 
  8 
-3. Vorstellung:
+2. Vorstellung:
  780 
  915 
 Jagd auf Roter Oktober
@@ -538,7 +527,7 @@ False
  6 
  10 
  8 
-4. Vorstellung:
+3. Vorstellung:
  945 
  1067 
 Alita Battle Angel
@@ -549,7 +538,7 @@ True
  6 
  10 
  8 
-5. Vorstellung:
+4. Vorstellung:
  1095 
  1259 
 Avatar
@@ -560,13 +549,24 @@ True
  6 
  10 
  8 
-6. Vorstellung:
+5. Vorstellung:
  1290 
  1469 
 Gladiator
  171 
  16 
 False
+ 60 
+ 6 
+ 10 
+ 8 
+6. Vorstellung:
+ 480 
+ 575 
+Ich einfach Unverbesserlich
+ 95 
+ 0 
+True
  60 
  6 
  10 
@@ -792,28 +792,6 @@ False
  10 
 12. Tag
 1. Vorstellung:
- 480 
- 621 
-Kingsman The Golden Circle
- 141 
- 16 
-True
- 60 
- 6 
- 10 
- 12 
-2. Vorstellung:
- 640 
- 746 
-Ip man
- 106 
- 18 
-False
- 60 
- 6 
- 10 
- 12 
-3. Vorstellung:
  780 
  895 
 Jäger des Verlorenen Schatzes
@@ -824,7 +802,7 @@ False
  6 
  10 
  12 
-4. Vorstellung:
+2. Vorstellung:
  930 
  1048 
 Lion King
@@ -835,7 +813,7 @@ False
  6 
  10 
  12 
-5. Vorstellung:
+3. Vorstellung:
  1080 
  1210 
 John Wick 3
@@ -846,7 +824,7 @@ True
  6 
  10 
  12 
-6. Vorstellung:
+4. Vorstellung:
  1240 
  1359 
 Pretty Woman
@@ -857,13 +835,24 @@ False
  6 
  10 
  12 
-7. Vorstellung:
+5. Vorstellung:
  1390 
  1526 
 Deadpool 2
  136 
  16 
 True
+ 60 
+ 6 
+ 10 
+ 12 
+6. Vorstellung:
+ 480 
+ 650 
+Der Soldat James Ryan
+ 170 
+ 16 
+False
  60 
  6 
  10 
@@ -924,17 +913,6 @@ False
  10 
 14. Tag
 1. Vorstellung:
- 480 
- 621 
-Kingsman The Golden Circle
- 141 
- 16 
-True
- 75 
- 5 
- 15 
- 14 
-2. Vorstellung:
  640 
  746 
 Ip man
@@ -945,7 +923,7 @@ False
  5 
  15 
  14 
-3. Vorstellung:
+2. Vorstellung:
  780 
  895 
 Jäger des Verlorenen Schatzes
@@ -956,7 +934,7 @@ False
  5 
  15 
  14 
-4. Vorstellung:
+3. Vorstellung:
  930 
  1048 
 Lion King
@@ -967,7 +945,7 @@ False
  5 
  15 
  14 
-5. Vorstellung:
+4. Vorstellung:
  1080 
  1210 
 John Wick 3
@@ -978,7 +956,7 @@ True
  5 
  15 
  14 
-6. Vorstellung:
+5. Vorstellung:
  1240 
  1359 
 Pretty Woman
@@ -989,12 +967,23 @@ False
  5 
  15 
  14 
-7. Vorstellung:
+6. Vorstellung:
  1390 
  1526 
 Deadpool 2
  136 
  16 
+True
+ 75 
+ 5 
+ 15 
+ 14 
+7. Vorstellung:
+ 480 
+ 610 
+John Wick 3
+ 130 
+ 18 
 True
  75 
  5 
@@ -1332,11 +1321,11 @@ True
  19 
 6. Vorstellung:
  480 
- 610 
-John Wick 3
- 130 
- 18 
-True
+ 603 
+Rush Alles für den Sieg
+ 123 
+ 12 
+False
  75 
  5 
  15 
@@ -2612,6 +2601,17 @@ False
 Kingsman The Golden Circle
  141 
  16 
+True
+ 50 
+ 5 
+ 10 
+ 37 
+6. Vorstellung:
+ 480 
+ 600 
+toller Film
+ 120 
+ 12 
 True
  50 
  5 
