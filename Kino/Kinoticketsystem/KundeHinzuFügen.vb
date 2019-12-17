@@ -49,7 +49,7 @@
 
     Private Sub cmdSuchen_Click(sender As Object, e As EventArgs) Handles cmdSuchen.Click
 
-        CheckedListBox1.SetItemChecked(Stelle(), True)
+        CheckedListBox1.SelectedItem = Stelle()
     End Sub
     Private Function Stelle() As Integer
         Dim name As String = txtSuchen.Text
