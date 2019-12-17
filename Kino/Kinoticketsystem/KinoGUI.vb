@@ -529,9 +529,17 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         '    labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
         'Next
         Dim a As ArrayList = DASKINO.getTagesplan
-        For i = 0 To a.Count - 1 Step 7
-            labelNächsterFilmBerechnen((i / 7), a(i).getNächstenFilm(TimeOfDay))
-        Next
+
+        labelNächsterFilmBerechnen(0, a(0).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(1, a(7).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(2, a(13).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(3, a(19).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(4, a(25).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(5, a(31).getNächstenFilm(TimeOfDay))
+
+        'For i = 0 To a.Count - 1 Step 7
+        '    labelNächsterFilmBerechnen((i / 7), a(i).getNächstenFilm(TimeOfDay))
+        'Next
 
     End Sub
 
@@ -547,7 +555,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 lblFilm4.Text = vorstellung.getFilm.getFilmtitel
             Case 4
                 lblFilm5.Text = vorstellung.getFilm.getFilmtitel
-            Case 5S
+            Case 5
                 lblFilm6.Text = vorstellung.getFilm.getFilmtitel
         End Select
     End Sub
