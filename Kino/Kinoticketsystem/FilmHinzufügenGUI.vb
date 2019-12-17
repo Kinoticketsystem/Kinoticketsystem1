@@ -39,12 +39,23 @@
 
             Dim film As Film = New Film(Filmname, Filmlänge, Altersfreigabe, _3d)
             Dim b As ArrayList = KinoGUI.DASKINO.getFilmtitel
-
-            If b.Contains(film) Then
-                MsgBox("Film breits in der Datenbank")
-            Else
+            Dim ja As Boolean = False
+            For i = 0 To b.Count - 1
+                If b(i).getFilmtitel.Equals(film.getFilmtitel) And b(i).Ist3D = film.Ist3D Then
+                    MsgBox("Film breits in der Datenbank")
+                    ja = False
+                Else
+                    ja = True
+                End If
+            Next
+            If ja Then
                 KinoGUI.DASKINO.FilmHinzufügen(film)
             End If
+            'If b.Contains(film) Then
+            '    MsgBox("Film breits in der Datenbank")
+            'Else
+            '    KinoGUI.DASKINO.FilmHinzufügen(film)
+            'End If
             'Es muss noch in der listbox alle filntitel ausgegebn werden um zu überprüfen,m ob der neue film übergebn wurde ist bei kinogui geschrieben
             Dim a As ArrayList = KinoGUI.DASKINO.getFilmtitel()
             For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1
@@ -76,5 +87,19 @@
         For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1
             lstAlleFilme.Items.Add(a(i).getFilmtitel)
         Next
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked Then
+            CheckBox2.Checked = False
+
+        End If
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        If CheckBox2.Checked Then
+            CheckBox1.Checked = False
+
+        End If
     End Sub
 End Class

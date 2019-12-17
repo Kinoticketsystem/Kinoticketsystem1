@@ -69,7 +69,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         ' FTagesplan.Visible = True
         If cmdNeueBuchung.FlatStyle = FlatStyle.Popup Then
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
-            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Red
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
             _Buchung = True
             FTagesplan._Stornieren = False
@@ -78,7 +80,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdNeueBuchung.BackColor = Color.Lime
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
-            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Red
+
             _Buchung = False
             FTagesplan._Stornieren = True
         End If
@@ -529,9 +533,17 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         '    labelNächsterFilmBerechnen(i, a(i).getNächstenFilm(Now))
         'Next
         Dim a As ArrayList = DASKINO.getTagesplan
-        For i = 0 To a.Count - 1 Step 7
-            labelNächsterFilmBerechnen((i / 7), a(i).getNächstenFilm(TimeOfDay))
-        Next
+
+        labelNächsterFilmBerechnen(0, a(0).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(1, a(7).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(2, a(13).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(3, a(19).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(4, a(25).getNächstenFilm(TimeOfDay))
+        labelNächsterFilmBerechnen(5, a(31).getNächstenFilm(TimeOfDay))
+
+        'For i = 0 To a.Count - 1 Step 7
+        '    labelNächsterFilmBerechnen((i / 7), a(i).getNächstenFilm(TimeOfDay))
+        'Next
 
     End Sub
 
@@ -547,12 +559,12 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
                 lblFilm4.Text = vorstellung.getFilm.getFilmtitel
             Case 4
                 lblFilm5.Text = vorstellung.getFilm.getFilmtitel
-            Case 5S
+            Case 5
                 lblFilm6.Text = vorstellung.getFilm.getFilmtitel
         End Select
     End Sub
 
-    Private Sub AnzahlFreiPlätzeBestimmen()
+    Public Sub AnzahlFreiPlätzeBestimmen()
         Dim a As ArrayList = DASKINO.getTagesplan
         Dim b As Vorstellung = a(0).getNächstenFilm(TimeOfDay)
 
@@ -759,8 +771,10 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     Private Sub cmdBuchungStonieren_Click(sender As Object, e As EventArgs) Handles cmdBuchungStonieren.Click
         If cmdBuchungStonieren.FlatStyle = FlatStyle.Popup Then
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
-            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Red
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+
             _Buchung = False
             FTagesplan._Stornieren = True
         Else
@@ -768,7 +782,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.BackColor = Color.Lime
             cmdBuchungStonieren.FlatAppearance.BorderSize = 1
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
-            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
+            cmdNeueBuchung.FlatAppearance.BorderColor = Color.Red
+            cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
+
             _Buchung = True
             FTagesplan._Stornieren = False
         End If
