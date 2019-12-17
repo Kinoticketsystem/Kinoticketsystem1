@@ -495,6 +495,17 @@ False
  15 
 8. Tag
 1. Vorstellung:
+ 480 
+ 563 
+T Raumschiff Surprise
+ 83 
+ 0 
+False
+ 60 
+ 6 
+ 10 
+ 8 
+2. Vorstellung:
  600 
  753 
 Le Mans 66
@@ -505,7 +516,7 @@ False
  6 
  10 
  8 
-2. Vorstellung:
+3. Vorstellung:
  780 
  915 
 Jagd auf Roter Oktober
@@ -516,7 +527,7 @@ False
  6 
  10 
  8 
-3. Vorstellung:
+4. Vorstellung:
  945 
  1067 
 Alita Battle Angel
@@ -527,7 +538,7 @@ True
  6 
  10 
  8 
-4. Vorstellung:
+5. Vorstellung:
  1095 
  1259 
 Avatar
@@ -538,7 +549,7 @@ True
  6 
  10 
  8 
-5. Vorstellung:
+6. Vorstellung:
  1290 
  1469 
 Gladiator
@@ -548,19 +559,19 @@ False
  60 
  6 
  10 
- 8 
-6. Vorstellung:
+9. Tag
+1. Vorstellung:
  480 
- 575 
-Ich einfach Unverbesserlich
- 95 
+ 563 
+Madagascar
+ 83 
  0 
 True
  60 
  6 
  10 
-9. Tag
-1. Vorstellung:
+ 9 
+2. Vorstellung:
  590 
  733 
 Fluch der Karibik
@@ -571,7 +582,7 @@ True
  6 
  10 
  9 
-2. Vorstellung:
+3. Vorstellung:
  765 
  935 
 Der Soldat James Ryan
@@ -582,7 +593,7 @@ False
  6 
  10 
  9 
-3. Vorstellung:
+4. Vorstellung:
  960 
  1093 
 Fantastische Tierwesen
@@ -593,7 +604,7 @@ False
  6 
  10 
  9 
-4. Vorstellung:
+5. Vorstellung:
  1125 
  1225 
 Der Schuh des Manitu
@@ -604,7 +615,7 @@ False
  6 
  10 
  9 
-5. Vorstellung:
+6. Vorstellung:
  1260 
  1379 
 Jumanji Willkommen im Dschungel
@@ -615,23 +626,12 @@ True
  6 
  10 
  9 
-6. Vorstellung:
+7. Vorstellung:
  1410 
  1498 
 Johnny English 3
  88 
  12 
-True
- 60 
- 6 
- 10 
- 9 
-7. Vorstellung:
- 480 
- 563 
-Madagascar
- 83 
- 0 
 True
  60 
  6 
@@ -715,6 +715,17 @@ False
  10 
 11. Tag
 1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 60 
+ 6 
+ 10 
+ 11 
+2. Vorstellung:
  700 
  795 
 Ich einfach Unverbesserlich
@@ -725,7 +736,7 @@ True
  6 
  10 
  11 
-2. Vorstellung:
+3. Vorstellung:
  820 
  931 
 Pacific Rim Uprising
@@ -736,7 +747,7 @@ True
  6 
  10 
  11 
-3. Vorstellung:
+4. Vorstellung:
  960 
  1074 
 Bumblebee
@@ -747,7 +758,7 @@ True
  6 
  10 
  11 
-4. Vorstellung:
+5. Vorstellung:
  1110 
  1243 
 Karate kid
@@ -758,7 +769,7 @@ False
  6 
  10 
  11 
-5. Vorstellung:
+6. Vorstellung:
  1275 
  1411 
 Coach Carter
@@ -768,17 +779,6 @@ False
  60 
  6 
  10 
- 11 
-6. Vorstellung:
- 480 
- 650 
-Der Soldat James Ryan
- 170 
- 16 
-False
- 75 
- 5 
- 15 
 12. Tag
 1. Vorstellung:
  480 
@@ -1133,6 +1133,17 @@ True
  15 
 17. Tag
 1. Vorstellung:
+ 480 
+ 619 
+Midway
+ 139 
+ 6 
+True
+ 75 
+ 5 
+ 15 
+ 17 
+2. Vorstellung:
  640 
  738 
 Hänsel und Gretel
@@ -1143,7 +1154,7 @@ True
  5 
  15 
  17 
-2. Vorstellung:
+3. Vorstellung:
  820 
  917 
 Feuerzangenbowle
@@ -1154,7 +1165,7 @@ False
  5 
  15 
  17 
-3. Vorstellung:
+4. Vorstellung:
  940 
  1062 
 Joker
@@ -1165,7 +1176,7 @@ False
  5 
  15 
  17 
-4. Vorstellung:
+5. Vorstellung:
  1090 
  1196 
 Dunkirk
@@ -1176,7 +1187,7 @@ False
  5 
  15 
  17 
-5. Vorstellung:
+6. Vorstellung:
  1230 
  1344 
 Das Bourne Ultimatum
@@ -1187,7 +1198,7 @@ False
  5 
  15 
  17 
-6. Vorstellung:
+7. Vorstellung:
  1380 
  1550 
 Es 2
@@ -1197,19 +1208,19 @@ False
  75 
  5 
  15 
- 17 
-7. Vorstellung:
- 480 
- 616 
-Coach Carter
- 136 
- 6 
-False
- 40 
- 5 
- 8 
 18. Tag
 1. Vorstellung:
+ 480 
+ 680 
+Herr der Ringe
+ 200 
+ 12 
+False
+ 75 
+ 5 
+ 15 
+ 18 
+2. Vorstellung:
  700 
  795 
 Ich einfach Unverbesserlich
@@ -1220,7 +1231,7 @@ True
  5 
  15 
  18 
-2. Vorstellung:
+3. Vorstellung:
  820 
  931 
 Pacific Rim Uprising
@@ -1231,7 +1242,7 @@ True
  5 
  15 
  18 
-3. Vorstellung:
+4. Vorstellung:
  960 
  1074 
 Bumblebee
@@ -1242,7 +1253,7 @@ True
  5 
  15 
  18 
-4. Vorstellung:
+5. Vorstellung:
  1110 
  1243 
 Karate kid
@@ -1253,23 +1264,12 @@ False
  5 
  15 
  18 
-5. Vorstellung:
+6. Vorstellung:
  1275 
  1411 
 Coach Carter
  136 
  6 
-False
- 75 
- 5 
- 15 
- 18 
-6. Vorstellung:
- 480 
- 583 
-The Fast and The Furious
- 103 
- 16 
 False
  75 
  5 
@@ -1540,6 +1540,28 @@ False
  8 
 23. Tag
 1. Vorstellung:
+ 480 
+ 563 
+Madagascar
+ 83 
+ 0 
+True
+ 40 
+ 5 
+ 8 
+ 23 
+2. Vorstellung:
+ 590 
+ 733 
+Fluch der Karibik
+ 143 
+ 12 
+True
+ 40 
+ 5 
+ 8 
+ 23 
+3. Vorstellung:
  765 
  935 
 Der Soldat James Ryan
@@ -1550,7 +1572,7 @@ False
  5 
  8 
  23 
-2. Vorstellung:
+4. Vorstellung:
  960 
  1093 
 Fantastische Tierwesen
@@ -1561,7 +1583,7 @@ False
  5 
  8 
  23 
-3. Vorstellung:
+5. Vorstellung:
  1125 
  1225 
 Der Schuh des Manitu
@@ -1572,7 +1594,7 @@ False
  5 
  8 
  23 
-4. Vorstellung:
+6. Vorstellung:
  1260 
  1379 
 Jumanji Willkommen im Dschungel
@@ -1583,24 +1605,13 @@ True
  5 
  8 
  23 
-5. Vorstellung:
+7. Vorstellung:
  1410 
  1498 
 Johnny English 3
  88 
  12 
 True
- 40 
- 5 
- 8 
- 23 
-6. Vorstellung:
- 480 
- 612 
-The Equilizer
- 132 
- 16 
-False
  40 
  5 
  8 
@@ -1755,9 +1766,9 @@ Midway
  139 
  6 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 2. Vorstellung:
  640 
@@ -1766,9 +1777,9 @@ Hänsel und Gretel
  98 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 3. Vorstellung:
  820 
@@ -1777,9 +1788,9 @@ Feuerzangenbowle
  97 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 4. Vorstellung:
  940 
@@ -1788,9 +1799,9 @@ Joker
  122 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 5. Vorstellung:
  1090 
@@ -1799,9 +1810,9 @@ Dunkirk
  106 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 6. Vorstellung:
  1230 
@@ -1810,9 +1821,9 @@ Das Bourne Ultimatum
  114 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 7. Vorstellung:
  1380 
@@ -1821,9 +1832,9 @@ Es 2
  170 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 27. Tag
 1. Vorstellung:
  480 
@@ -1832,9 +1843,9 @@ Herr der Ringe
  200 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 2. Vorstellung:
  700 
@@ -1843,9 +1854,9 @@ Ich einfach Unverbesserlich
  95 
  0 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 3. Vorstellung:
  820 
@@ -1854,9 +1865,9 @@ Pacific Rim Uprising
  111 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 4. Vorstellung:
  960 
@@ -1865,9 +1876,9 @@ Bumblebee
  114 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 5. Vorstellung:
  1110 
@@ -1876,9 +1887,9 @@ Karate kid
  133 
  6 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 6. Vorstellung:
  1275 
@@ -1887,9 +1898,9 @@ Coach Carter
  136 
  6 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 28. Tag
 1. Vorstellung:
  480 
@@ -1898,9 +1909,9 @@ Kingsman The Golden Circle
  141 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 2. Vorstellung:
  640 
@@ -1909,9 +1920,9 @@ Ip man
  106 
  18 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 3. Vorstellung:
  780 
@@ -1920,9 +1931,9 @@ Jäger des Verlorenen Schatzes
  115 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 4. Vorstellung:
  930 
@@ -1931,9 +1942,9 @@ Lion King
  118 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 5. Vorstellung:
  1080 
@@ -1942,9 +1953,9 @@ John Wick 3
  130 
  18 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 6. Vorstellung:
  1240 
@@ -1953,9 +1964,9 @@ Pretty Woman
  119 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 7. Vorstellung:
  1390 
@@ -1964,9 +1975,9 @@ Deadpool 2
  136 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 29. Tag
 1. Vorstellung:
  480 
@@ -1975,9 +1986,9 @@ T Raumschiff Surprise
  83 
  0 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 2. Vorstellung:
  600 
@@ -1986,9 +1997,9 @@ Le Mans 66
  153 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 3. Vorstellung:
  780 
@@ -1997,9 +2008,9 @@ Jagd auf Roter Oktober
  135 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 4. Vorstellung:
  945 
@@ -2008,9 +2019,9 @@ Alita Battle Angel
  122 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 5. Vorstellung:
  1095 
@@ -2019,9 +2030,9 @@ Avatar
  162 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 6. Vorstellung:
  1290 
@@ -2030,9 +2041,9 @@ Gladiator
  171 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 30. Tag
 1. Vorstellung:
  480 
@@ -2041,9 +2052,9 @@ Madagascar
  83 
  0 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 2. Vorstellung:
  590 
@@ -2052,9 +2063,9 @@ Fluch der Karibik
  143 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 3. Vorstellung:
  765 
@@ -2063,9 +2074,9 @@ Der Soldat James Ryan
  170 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 4. Vorstellung:
  960 
@@ -2074,9 +2085,9 @@ Fantastische Tierwesen
  133 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 5. Vorstellung:
  1125 
@@ -2085,9 +2096,9 @@ Der Schuh des Manitu
  100 
  6 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 6. Vorstellung:
  1260 
@@ -2096,9 +2107,9 @@ Jumanji Willkommen im Dschungel
  119 
  6 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 7. Vorstellung:
  1410 
@@ -2107,9 +2118,9 @@ Johnny English 3
  88 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 31. Tag
 1. Vorstellung:
  660 
@@ -2118,9 +2129,9 @@ Kingsman The Golden Circle
  141 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 2. Vorstellung:
  830 
@@ -2129,9 +2140,9 @@ Hänsel und Gretel
  98 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 3. Vorstellung:
  960 
@@ -2140,9 +2151,9 @@ Bumblebee
  114 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 4. Vorstellung:
  1100 
@@ -2151,9 +2162,9 @@ Fluch der Karibik
  143 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 5. Vorstellung:
  1270 
@@ -2162,9 +2173,9 @@ Feuerzangenbowle
  97 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 6. Vorstellung:
  1390 
@@ -2173,9 +2184,9 @@ John Wick 3
  130 
  18 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 32. Tag
 1. Vorstellung:
  480 
