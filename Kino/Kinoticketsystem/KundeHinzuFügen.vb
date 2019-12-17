@@ -3,12 +3,14 @@
     Private ab As Integer
     Private bc As Integer
     Public Buchen As Boolean
+    Private _Kunden As ArrayList
+
     Private Sub KundeHinzuFügen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'die Listbox mit allen Kunden füllen
-        Dim a As ArrayList = KinoGUI.DASKINO.getKunden
+        _Kunden = KinoGUI.DASKINO.getKunden
 
         For i As Integer = 0 To KinoGUI.DASKINO.getKunden.Count - 1
-            CheckedListBox1.Items.Add(a(i).getName)
+            CheckedListBox1.Items.Add(_Kunden(i).getName)
         Next
     End Sub
 
@@ -44,4 +46,23 @@
         bc = b
         Buchen = buchenfdv
     End Sub
+
+    Private Sub cmdSuchen_Click(sender As Object, e As EventArgs) Handles cmdSuchen.Click
+
+        CheckedListBox1.SetItemChecked(Stelle(), True)
+    End Sub
+    Private Function Stelle() As Integer
+        Dim name As String = txtSuchen.Text
+
+        For i As Integer = 0 To _Kunden.Count - 1
+            If _Kunden(i).getName.Equals(name) Then
+
+                Return i
+            Else
+
+            End If
+
+        Next
+
+    End Function
 End Class
