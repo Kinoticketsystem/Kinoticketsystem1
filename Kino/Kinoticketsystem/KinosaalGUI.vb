@@ -1079,5 +1079,7 @@ Public Class KinosaalGUI
         wennButtonGedrückt(Button120, 7, 14)
     End Sub
 
-
+    Private Sub KinosaalGUI_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        KinoGUI.AnzahlFreiPlätzeBestimmen()
+    End Sub
 End Class

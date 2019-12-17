@@ -552,7 +552,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         End Select
     End Sub
 
-    Private Sub AnzahlFreiPlätzeBestimmen()
+    Public Sub AnzahlFreiPlätzeBestimmen()
         Dim a As ArrayList = DASKINO.getTagesplan
         Dim b As Vorstellung = a(0).getNächstenFilm(TimeOfDay)
 
