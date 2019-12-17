@@ -309,17 +309,17 @@
         'Next
         Select Case Kinosaalnummer
             Case 1
-                Me.getTagesplan(tag - 1).vorstellunghinzufügen(Vorstellung)
+                Me.getTagesplan(tag - 1).VorstellungHinzufügen(Vorstellung)
             Case 2
-                Me.getTagesplan(7 + tag - 1).vorstellunghinzufügen(Vorstellung)
+                Me.getTagesplan(7 + tag - 1).VorstellungHinzufügen(Vorstellung)
             Case 3
-                Me.getTagesplan(13 + tag - 1).vorstellunghinzufügen(Vorstellung)
+                Me.getTagesplan(13 + tag - 1).VorstellungHinzufügen(Vorstellung)
             Case 4
-                Me.getTagesplan(19 + tag - 1).vorstellunghinzufügen(Vorstellung)
+                Me.getTagesplan(19 + tag - 1).VorstellungHinzufügen(Vorstellung)
             Case 5
-                Me.getTagesplan(25 + tag - 1).vorstellunghinzufügen(Vorstellung)
+                Me.getTagesplan(25 + tag - 1).VorstellungHinzufügen(Vorstellung)
             Case 6
-                Me.getTagesplan(31 + tag - 1).vorstellunghinzufügen(Vorstellung)
+                Me.getTagesplan(31 + tag - 1).VorstellungHinzufügen(Vorstellung)
         End Select
 
     End Sub

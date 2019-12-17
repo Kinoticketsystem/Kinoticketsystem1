@@ -23,10 +23,12 @@ Public Class NeueVorstellung
         EnduhrzeitWert.Maximum = 24
         EnduhrzeitWert.Minimum = 8
         EnduhrzeitWert.Increment = 0.05
-        NUDKinosaal.Maximum = 6
-        NUDKinosaal.Minimum = 1
-        NUDKinosaal.Value = 1
-
+        'NUDKinosaal.Maximum = 6
+        'NUDKinosaal.Minimum = 1
+        'NUDKinosaal.Value = 1
+        'NUDTag.Maximum = 7
+        'NUDTag.Minimum = 1
+        'NUDTag.Value = 1
     End Sub
 
 

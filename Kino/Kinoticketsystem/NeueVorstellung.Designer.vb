@@ -150,7 +150,7 @@ Partial Class NeueVorstellung
         'NUDKinosaal
         '
         Me.NUDKinosaal.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NUDKinosaal.Location = New System.Drawing.Point(565, 356)
+        Me.NUDKinosaal.Location = New System.Drawing.Point(244, 356)
         Me.NUDKinosaal.Maximum = New Decimal(New Integer() {6, 0, 0, 0})
         Me.NUDKinosaal.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NUDKinosaal.Name = "NUDKinosaal"
@@ -185,7 +185,7 @@ Partial Class NeueVorstellung
         'NUDTag
         '
         Me.NUDTag.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NUDTag.Location = New System.Drawing.Point(244, 356)
+        Me.NUDTag.Location = New System.Drawing.Point(565, 356)
         Me.NUDTag.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
         Me.NUDTag.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NUDTag.Name = "NUDTag"
