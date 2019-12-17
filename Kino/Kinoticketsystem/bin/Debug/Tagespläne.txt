@@ -1201,7 +1201,7 @@ False
 7. Vorstellung:
  480 
  616 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -1596,14 +1596,14 @@ True
  23 
 6. Vorstellung:
  480 
- 591 
-Pacific Rim Uprising	
- 111 
- 12 
-True
- 98 
- 7 
- 14 
+ 612 
+The Equilizer
+ 132 
+ 16 
+False
+ 40 
+ 5 
+ 8 
 24. Tag
 1. Vorstellung:
  480 
