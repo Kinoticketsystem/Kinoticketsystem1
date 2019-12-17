@@ -377,6 +377,8 @@
     <None Include="Resources\T Raumschiff Surprise.png" />
     <None Include="Resources\720px.png" />
     <None Include="Resources\800x500.png" />
+    <None Include="Resources\Kein-Bild-vorhanden[1].jpg" />
+    <None Include="Resources\Kein_Bild_vorhanden.jpg" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
