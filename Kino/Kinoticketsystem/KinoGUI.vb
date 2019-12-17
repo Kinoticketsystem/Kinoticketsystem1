@@ -524,7 +524,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         NumericUpDown1.Maximum = 6
         NumericUpDown1.Minimum = 1
         NumericUpDown1.Value = 1
-        lblTageseinnahmen.Text = "Geld in Kasse: " & Math.Round(_GeldInKasse, 2)
+        lblTageseinnahmen.Text = "Geld in Kasse: " & Math.Round(_GeldInKasse, 2) & "€"
     End Sub
 
     Private Sub nächstenFilmProKinosaalANzeigen()
@@ -850,6 +850,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         KinosaalHinzufügenGUI.BringToFront()
 
     End Sub
+
 
     Private Sub cmdÄnderungenSpeichern_Click(sender As Object, e As EventArgs) Handles cmdÄnderungenSpeichern.Click
 

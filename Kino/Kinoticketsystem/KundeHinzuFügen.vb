@@ -67,7 +67,7 @@
 
 
     End Function
-    Private Sub txtsuchen_Change(sender As Object, e As EventArgs) Handles cmdSuchen.TextChanged
-        CheckedListBox1.SetItemChecked(Stelle(), True)
-    End Sub
+    'Private Sub txtsuchen_Change(sender As Object, e As EventArgs) Handles cmdSuchen.TextChanged
+    '    CheckedListBox1.SetItemChecked(Stelle(), True)
+    'End Sub
 End Class

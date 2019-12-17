@@ -574,24 +574,26 @@ Public Class KinosaalGUI
         'es wird ja beim auswählen direkt gebucht
         If _Buchen Then
 
-            If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2), 4, "Buchung abschließen") = 6) Then
+            If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2) & "€", 4, "Buchung abschließen") = 6) Then
                 'ja geklickt
                 Me.Close()
                 Me.Hide()
                 FTagesplan.Hide()
                 FTagesplan.Close()
 
-                KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2)
+                KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2) & "€"
+                KinoGUI._GeldInKasse += Me._Gesamtkosten
             End If
         Else
-            If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2), 4, "Stornierung abschließen") = 6) Then
+            If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2) & "€", 4, "Stornierung abschließen") = 6) Then
                 'ja geklickt
                 Me.Close()
                 Me.Hide()
                 FTagesplan.Hide()
                 FTagesplan.Close()
 
-                KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse - Me._Gesamtkosten, 2)
+                KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse - Me._Gesamtkosten, 2) & "€"
+                KinoGUI._GeldInKasse -= Me._Gesamtkosten
             End If
         End If
 
