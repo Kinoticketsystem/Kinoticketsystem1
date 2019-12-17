@@ -77,4 +77,18 @@
             lstAlleFilme.Items.Add(a(i).getFilmtitel)
         Next
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked Then
+            CheckBox2.Checked = False
+
+        End If
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        If CheckBox2.Checked Then
+            CheckBox1.Checked = False
+
+        End If
+    End Sub
 End Class
