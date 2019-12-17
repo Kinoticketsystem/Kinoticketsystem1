@@ -49,20 +49,25 @@
 
     Private Sub cmdSuchen_Click(sender As Object, e As EventArgs) Handles cmdSuchen.Click
 
-        CheckedListBox1.SetItemChecked(Stelle(), True)
+        '    CheckedListBox1.SetItemChecked(Stelle(), True)
+        CheckedListBox1.SelectedItem() = _Kunden(Stelle())
     End Sub
     Private Function Stelle() As Integer
         Dim name As String = txtSuchen.Text
+        For j = 0 To name.Count - 1
+            For i As Integer = 0 To _Kunden.Count - 1
+                If _Kunden(i).getName.chars(j).Equals(name.Chars(j)) Then
+                    Return i
+                Else
 
-        For i As Integer = 0 To _Kunden.Count - 1
-            If _Kunden(i).getName.Equals(name) Then
+                End If
 
-                Return i
-            Else
-
-            End If
-
+            Next
         Next
 
+
     End Function
+    Private Sub txtsuchen_Change(sender As Object, e As EventArgs) Handles cmdSuchen.TextChanged
+        CheckedListBox1.SetItemChecked(Stelle(), True)
+    End Sub
 End Class
