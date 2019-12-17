@@ -821,8 +821,8 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         Next
         NeueVorstellung.chlFilme.Items.Clear()
         Dim b As ArrayList = DASKINO.getFilmtitel
-        For i = 0 To DASKINO.getKunden.Count - 1 '-1 richtig?
-            NeueVorstellung.chlBesucherAuswählen.Items.Add(b(i))
+        For i = 0 To DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+            NeueVorstellung.chlFilme.Items.Add(b(i).getFilmtitel)
         Next
 
     End Sub
