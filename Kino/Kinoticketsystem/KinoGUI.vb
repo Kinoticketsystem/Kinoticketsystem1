@@ -77,7 +77,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             FTagesplan._Stornieren = False
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
-            cmdNeueBuchung.BackColor = Color.Lime
+            ' cmdNeueBuchung.BackColor = Color.Lime
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Black
@@ -500,7 +500,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
-            cmdNeueBuchung.BackColor = Color.Lime
+            cmdNeueBuchung.BackColor = Color.White
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
@@ -512,7 +512,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
         Else
             cmdNeueBuchung.FlatStyle = FlatStyle.Popup
-            cmdNeueBuchung.BackColor = Color.Lime
+            cmdNeueBuchung.BackColor = Color.White
             cmdNeueBuchung.FlatAppearance.BorderSize = 1
             cmdBuchungStonieren.FlatStyle = FlatStyle.Flat
             cmdBuchungStonieren.FlatAppearance.BorderColor = Color.Black
@@ -779,7 +779,7 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             FTagesplan._Stornieren = True
         Else
             cmdBuchungStonieren.FlatStyle = FlatStyle.Popup
-            cmdBuchungStonieren.BackColor = Color.Lime
+            'cmdBuchungStonieren.BackColor = Color.Lime
             cmdBuchungStonieren.FlatAppearance.BorderSize = 1
             cmdNeueBuchung.FlatStyle = FlatStyle.Flat
             cmdNeueBuchung.FlatAppearance.BorderColor = Color.Red
