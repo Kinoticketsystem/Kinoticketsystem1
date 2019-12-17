@@ -2412,9 +2412,12 @@ Public Class FTagesplan
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
         Dim BildVomFilm As Image = Nothing
-        If Filmtitel.Contains(vbTab) Then
-            Filmtitel.Remove(vbTab)
-        End If
+        Dim länge As Integer = Len(Filmtitel)
+
+
+        Filmtitel = Filmtitel.TrimEnd(" ", vbTab)
+
+
         BildVomFilm = Image.FromFile(Filmtitel & ".png")
         PictureBox1.Image = BildVomFilm
 
