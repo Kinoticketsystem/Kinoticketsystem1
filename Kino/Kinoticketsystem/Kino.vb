@@ -195,11 +195,17 @@
         _Kunden.Add(Kunde)
     End Sub
     Public Sub KundeEntfernen(ByRef Kunde As Kunde)
-        Dim a As Integer = _Kunden.BinarySearch(Kunde)
+        Dim a As Integer = _Kunden.IndexOf(Kunde)
         _Kunden.RemoveAt(a)
+    End Sub
+    Public Sub setKunden(ByRef Kunden As ArrayList)
+        _Kunden = Kunden
     End Sub
     Public Sub setTagesplan(ByRef Tagesplan As ArrayList)
         _Tagespläne = Tagesplan
+    End Sub
+    Public Sub setTagesplanANSTelle(x As Integer, b As Tagesplan)
+        _Tagespläne(x) = b
     End Sub
 
     Public Sub FilmHinzufügen(ByRef Film As Film)
@@ -207,7 +213,7 @@
     End Sub
     ' wie bei kunde
     Public Sub FilmEntfernen(ByRef Film As Film)
-        Dim a As Integer = _Filme.BinarySearch(Film)
+        Dim a As Integer = _Filme.IndexOf(Film)
         _Filme.RemoveAt(a)
     End Sub
 

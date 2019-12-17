@@ -113,11 +113,28 @@
     <Compile Include="FilmHinzufügenGUI.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KinosaalHinzufügenGUI.Designer.vb">
+      <DependentUpon>KinosaalHinzufügenGUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KinosaalHinzufügenGUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KundeHinzuFügen.Designer.vb">
+      <DependentUpon>KundeHinzuFügen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KundeHinzuFügen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Kunden.Designer.vb">
       <DependentUpon>Kunden.vb</DependentUpon>
     </Compile>
     <Compile Include="Kunden.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="StartBild.Designer.vb">
       <DependentUpon>StartBild.vb</DependentUpon>
@@ -160,11 +177,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -212,14 +224,20 @@
     <EmbeddedResource Include="01KinosaalTest.resx">
       <DependentUpon>01KinosaalTest.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KinosaalHinzufügenGUI.resx">
+      <DependentUpon>KinosaalHinzufügenGUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KundeHinzuFügen.resx">
+      <DependentUpon>KundeHinzuFügen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kunden.resx">
       <DependentUpon>Kunden.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NeueVorstellung.resx">
       <DependentUpon>NeueVorstellung.vb</DependentUpon>
@@ -263,17 +281,63 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Avatar.png" />
     <Content Include="bin\Debug\Filme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\Kinosäle.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Kinologo.png" />
+    <None Include="bin\Debug\Kinologo.png" />
     <Content Include="bin\Debug\Kunden.txt" />
     <Content Include="bin\Debug\Tagespläne.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="bin\Debug\Der Schuh des Manitu.png" />
+    <None Include="bin\Debug\Der Soldat James Ryan.png" />
+    <None Include="bin\Debug\Dunkirk.png" />
+    <None Include="bin\Debug\Es 2.png" />
+    <None Include="bin\Debug\Fantastische Tierwesen.png" />
+    <None Include="bin\Debug\Feuerzangenbowle.png" />
+    <None Include="bin\Debug\Fluch der Karibik.png" />
+    <None Include="bin\Debug\Gladiator.png" />
+    <None Include="bin\Debug\Hänsel und Gretel.png" />
+    <None Include="bin\Debug\Herr der Ringe.png" />
+    <None Include="bin\Debug\Ich einfach Unverbesserlich.png" />
+    <None Include="bin\Debug\Ip man.png" />
+    <None Include="bin\Debug\Jäger des Verlorenen Schatzes.png" />
+    <None Include="bin\Debug\Jagd auf Roter Oktober.png" />
+    <None Include="bin\Debug\John Wick 3.png" />
+    <None Include="bin\Debug\Johnny English 3.png" />
+    <None Include="bin\Debug\Joker.png" />
+    <None Include="bin\Debug\Jumanji Willkommen im Dschungel.png" />
+    <None Include="bin\Debug\Karate kid.png" />
+    <None Include="bin\Debug\Kingsman The Golden Circle.png" />
+    <None Include="bin\Debug\Le Mans 66.png" />
+    <None Include="bin\Debug\Lion King.png" />
+    <None Include="bin\Debug\Madagascar.png" />
+    <None Include="bin\Debug\Midway.png" />
+    <None Include="bin\Debug\Pacific Rim Uprising.png" />
+    <None Include="bin\Debug\Pretty Woman.png" />
+    <None Include="bin\Debug\Robin Hood.png" />
+    <None Include="bin\Debug\Rush Alles für den Sieg.png" />
+    <None Include="bin\Debug\Star Wars VIII Die letzten Jedi.png" />
+    <None Include="bin\Debug\The Equilizer.png" />
+    <None Include="bin\Debug\The Fast and The Furious.png" />
+    <None Include="bin\Debug\The Wolf Of Wall Street.png" />
+    <None Include="bin\Debug\Ziemlich beste Freunde.png" />
+    <None Include="bin\Debug\T Raumschiff Surprise.png" />
+    <None Include="bin\Debug\Alita Battle Angel.png" />
+    <None Include="bin\Debug\Bumblebee.png" />
+    <None Include="bin\Debug\Coach Carter.png" />
+    <None Include="bin\Debug\Das Bourne Ultimatum.png" />
+    <None Include="bin\Debug\Deadpool 2.png" />
+    <Content Include="Kinologo.ico" />
+    <None Include="Resources\Avatar.png" />
+    <None Include="Resources\Bublebee.png" />
+    <None Include="Resources\Coach Carter.png" />
+    <None Include="Resources\Das Bourne Ultimatum.png" />
+    <None Include="Resources\Deadpool 2.png" />
     <None Include="Resources\Der Schuh des Manitu.png" />
     <None Include="Resources\Der Soldat James Ryan.png" />
     <None Include="Resources\Dunkirk.png" />
@@ -283,17 +347,17 @@
     <None Include="Resources\Fluch der Karibik.png" />
     <None Include="Resources\Gladiator.png" />
     <None Include="Resources\Hänsel und Gretel.png" />
-    <None Include="Resources\Herr der Ringe 3.png" />
     <None Include="Resources\Ich einfach Unverbesserlich.png" />
     <None Include="Resources\ip man.png" />
     <None Include="Resources\Jäger des Verlorenen Schatzes.png" />
-    <None Include="Resources\Jagt auf Roter Oktober.png" />
+    <None Include="Resources\Jagd auf Roter Oktober.png" />
     <None Include="Resources\John Wick 3.png" />
     <None Include="Resources\Johnny English 3.png" />
     <None Include="Resources\Joker.png" />
-    <None Include="Resources\Jumanji_-Willkommen-im-Dschungel-[DVD].png" />
+    <None Include="Resources\Jumanji_-Willkommen-im-Dschungel.png" />
     <None Include="Resources\Karate kid.png" />
     <None Include="Resources\Kingsman The Golden Circle.png" />
+    <None Include="Resources\Kinologo.png" />
     <None Include="Resources\Le Mans 66.png" />
     <None Include="Resources\Lion King.png" />
     <None Include="Resources\Madagascar.png" />
@@ -307,17 +371,16 @@
     <None Include="Resources\The Fast and The Furious.png" />
     <None Include="Resources\The Wolf Of Wall Street.png" />
     <None Include="Resources\Ziemlich beste Freunde.png" />
-    <None Include="Resources\%28T%29 Raumschriff Surprise.png" />
-    <None Include="Resources\Alita Ballte Angel.png" />
-    <None Include="Resources\Avatar.png" />
-    <None Include="Resources\Bublebee.png" />
-    <None Include="Resources\Coach Carter.png" />
-    <None Include="Resources\Das Bourne Ultimatum.png" />
-    <None Include="Resources\Deadpool 2.png" />
-    <Content Include="Kinologo.ico" />
+    <None Include="Resources\Jumanji Willkommen im Dschungel.png" />
+    <None Include="Resources\Herr der Ringe.png" />
+    <None Include="Resources\Alita Battle Angel.png" />
+    <None Include="Resources\T Raumschiff Surprise.png" />
+    <None Include="Resources\720px.png" />
+    <None Include="Resources\800x500.png" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

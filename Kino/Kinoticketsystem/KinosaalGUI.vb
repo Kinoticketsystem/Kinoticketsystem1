@@ -6,8 +6,12 @@ Public Class KinosaalGUI
     Private _AnzahlAusgewähltePlätze As Integer = 0
     Private _Gesamtkosten As Double
     Private _aktuellerKunde As Kunde
+    Public _Buchen As Boolean
 
-
+    'nur fürs zurückgeben (eigentlich nicht ganz sauber programmiert) 'brauchen wir nicht! oder!
+    'Private _AusKinosaal As Integer
+    'Private _AusTag As Integer
+    'Private _NummerDesKinosaals As Integer
 
     Private Sub KinosaalGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         zeigeNurSovieleButtonsWienötig()
@@ -143,14 +147,23 @@ Public Class KinosaalGUI
         _Buttons(119) = Button120
     End Sub
 
+    Public Sub FehlerMitFalscherPersonBuchen()
+        MsgBox("Die Plätze, die versucht wurden zu stornieren, wurden von einer anderen Person gebucht.", 0, "Stornierung kann nicht abgeschlossen werden")
+        Me.Hide()
+        Me.Close()
+
+
+    End Sub
+
     Private Sub InitialisiereSitzplan() 'fertig (wichtig: immer dran denken button1 = (0,0))
         buttonsInsArray() 'nicht löschen!
-
         For i As Integer = 0 To _kinosaal.getAnzahlReihe - 1 ' überall gleich sein muss
             For j As Integer = 0 To _kinosaal.getSitzeProReihe - 1
                 Dim a As Kunde = _kinosaal.getKunde(i, j) '= nothing funktioniert nicht. .hasValue müsste man erben vom System, k.P. wie und warum nicht automatisch wie bei Java ;-(
 
-                If Not (_kinosaal._leererPlatz.Equals(a)) Then
+                If Not (_kinosaal._leererPlatz.Equals(a)) And _Buchen Then
+                    macheButtons2DUndEnableUndRot(_Buttons((i * _kinosaal.getSitzeProReihe) + j))
+                ElseIf Not _Buchen And (_kinosaal._leererPlatz.Equals(a)) Then
                     macheButtons2DUndEnableUndRot(_Buttons((i * _kinosaal.getSitzeProReihe) + j))
                     'Select Case i
                     '    Case 0
@@ -354,7 +367,7 @@ Public Class KinosaalGUI
                             Button11.Hide()
                             Button26.Hide()
                             Button41.Hide()
-                            Button57.Hide()
+                            Button56.Hide()
                             Button71.Hide()
                             Button86.Hide()
                             Button101.Hide()
@@ -433,9 +446,20 @@ Public Class KinosaalGUI
         _aktuellerKunde = New Kunde("Standard")
     End Sub
     'überladen, weil wenn kein Kunde übergeben wird, wird Standardkunde genommen
+    'Public Sub VOnWoAufgerufen(kinosaal As Kinosaal, Tag As Integer, nummerdesKinosaals As Integer)
+    '    _AusKinosaal = KinoGUI.DASKINO.getKinosäle.IndexOf(kinosaal) + 1 'richtig mit +1?
+    '    _AusTag = Tag
+    '    _NummerDesKinosaals = nummerdesKinosaals
+    'End Sub
     Public Sub Aufrufen(ByRef a As Kinosaal, b As Kunde)
         'noch nicht fertig 'eigentlich schon, oder nicht?
         _kinosaal = a
+        _aktuellerKunde = b
+        If _Buchen Then
+            Me.Text = Text & " - " & _aktuellerKunde.getName & " - " & "Buchen"
+        Else
+            Me.Text = Text & " - " & _aktuellerKunde.getName & " - " & "Stornieren"
+        End If
 
         zeigeNurSovieleButtonsWienötig()
         übertrageAnzahlAusgewähltePlätze()
@@ -444,26 +468,47 @@ Public Class KinosaalGUI
 
     End Sub
     Public Sub Kundefestlegen(ByVal b As Kunde)
-        _aktuellerKunde = b 'eigentlich unnötig
+        _aktuellerKunde = b
     End Sub
 
     Private Sub übertrageAnzahlAusgewähltePlätze()
-        lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
-        If _Gesamtkosten < 10 Then
-            lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+        If _Buchen Then
+            lblAnzahlAusgewähltePlätze.Text = "ausgewählte Plätze: " & _AnzahlAusgewähltePlätze
+            If _Gesamtkosten < 10 Then
+                lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
 
+            Else
+                lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+
+            End If
+
+            If _AnzahlAusgewähltePlätze < 1 Then
+                cmdFertig.BackColor = Color.Red
+                cmdFertig.Enabled = False
+            Else
+                cmdFertig.BackColor = Color.Green
+                cmdFertig.Enabled = True
+            End If
         Else
-            lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+            lblAnzahlAusgewähltePlätze.Text = "gebuchte Plätze: " & (_kinosaal.getAnzahlSitzplätze - _kinosaal.getAnzahlFreiPlätze)
+            lblPreis.Text = "Betrag zurückgeben: "
+            If _Gesamtkosten < 10 Then
+                lblPreis.Text = "Preis: 0" & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
 
+            Else
+                lblPreis.Text = "Preis: " & Math.Round(_Gesamtkosten, 2).ToString("0.00") & "€"
+
+            End If
+
+            If _AnzahlAusgewähltePlätze < 1 Then
+                cmdFertig.BackColor = Color.Red
+                cmdFertig.Enabled = False
+            Else
+                cmdFertig.BackColor = Color.Green
+                cmdFertig.Enabled = True
+            End If
         End If
 
-        If _AnzahlAusgewähltePlätze < 1 Then
-            cmdFertig.BackColor = Color.Red
-            cmdFertig.Enabled = False
-        Else
-            cmdFertig.BackColor = Color.Green
-            cmdFertig.Enabled = True
-        End If
     End Sub
     Public Sub macheButtons2DUndEnableUndRot(ByRef a As Button)
         a.FlatStyle = FlatStyle.Flat
@@ -472,23 +517,44 @@ Public Class KinosaalGUI
         a.BackColor = Color.Red
     End Sub
     Private Sub wennButtonGedrückt(ByRef a As Button, ByVal xReihe As Integer, ByVal y As Integer) 'X ist Reihe
-        If a.FlatStyle = FlatStyle.Popup Then
-            a.FlatStyle = FlatStyle.Flat
-            a.FlatAppearance.BorderColor = Color.Black
-            a.BackColor = Color.Orange
-            'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
-            _kinosaal.SitzplatzBuchen(xReihe, y, _aktuellerKunde) 'Ist richtig so, also 0,0 für Button1
-            _AnzahlAusgewähltePlätze += 1
-            _Gesamtkosten += _kinosaal.getPreis(xReihe, y)
+        If _Buchen Then
+            If a.FlatStyle = FlatStyle.Popup Then
+                a.FlatStyle = FlatStyle.Flat
+                a.FlatAppearance.BorderColor = Color.Black
+                a.BackColor = Color.Orange
+                'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
+                _kinosaal.SitzplatzBuchen(xReihe, y, _aktuellerKunde) 'Ist richtig so, also 0,0 für Button1
+                _AnzahlAusgewähltePlätze += 1
+                _Gesamtkosten += _kinosaal.getPreis(xReihe, y)
 
+            Else
+                a.FlatStyle = FlatStyle.Popup
+                a.BackColor = Color.Lime
+                a.FlatAppearance.BorderSize = 1
+                _kinosaal.SitzplatzStornieren(xReihe, y, _aktuellerKunde)
+                _AnzahlAusgewähltePlätze -= 1
+                _Gesamtkosten -= _kinosaal.getPreis(xReihe, y)
+            End If
         Else
-            a.FlatStyle = FlatStyle.Popup
-            a.BackColor = Color.Lime
-            a.FlatAppearance.BorderSize = 1
-            _kinosaal.SitzplatzStornieren(xReihe, y, _aktuellerKunde)
-            _AnzahlAusgewähltePlätze -= 1
-            _Gesamtkosten -= _kinosaal.getPreis(xReihe, y)
+            If a.FlatStyle = FlatStyle.Popup Then
+                a.FlatStyle = FlatStyle.Flat
+                a.FlatAppearance.BorderColor = Color.Black
+                a.BackColor = Color.Orange
+                'a.FlatAppearance.MouseDownBackColor = Color.Red 'BorderSize = 3
+                _kinosaal.SitzplatzStornieren(xReihe, y, _aktuellerKunde) 'Ist richtig so, also 0,0 für Button1
+                _AnzahlAusgewähltePlätze += 1
+                _Gesamtkosten += _kinosaal.getPreis(xReihe, y)
+
+            Else
+                a.FlatStyle = FlatStyle.Popup
+                a.BackColor = Color.Lime
+                a.FlatAppearance.BorderSize = 1
+                _kinosaal.SitzplatzBuchen(xReihe, y, _aktuellerKunde)
+                _AnzahlAusgewähltePlätze -= 1
+                _Gesamtkosten -= _kinosaal.getPreis(xReihe, y)
+            End If
         End If
+
         übertrageAnzahlAusgewähltePlätze()
     End Sub
 
@@ -497,8 +563,43 @@ Public Class KinosaalGUI
     End Sub
 
     Private Sub cmdFertig_Click(sender As Object, e As EventArgs) Handles cmdFertig.Click
-        Me.Close()
-        Me.Hide()
+        'Dim a As ArrayList = KinoGUI.DASKINO.getTagesplan
+        'If _AusKinosaal > 1 Then
+        '    Dim b As Tagesplan = a(_AusTag * _AusKinosaal)
+        'Else
+
+        'End If
+        'KinoGUI.DASKINO.setTagesplanANSTelle(, _AusTag)
+
+        'es wird ja beim auswählen direkt gebucht
+        If _Buchen Then
+
+            If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2), 4, "Buchung abschließen") = 6) Then
+                'ja geklickt
+                Me.Close()
+                Me.Hide()
+                FTagesplan.Hide()
+                FTagesplan.Close()
+
+                KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2)
+            End If
+        Else
+            If (MsgBox("Betrag: " & Math.Round(_Gesamtkosten, 2), 4, "Stornierung abschließen") = 6) Then
+                'ja geklickt
+                Me.Close()
+                Me.Hide()
+                FTagesplan.Hide()
+                FTagesplan.Close()
+
+                KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse - Me._Gesamtkosten, 2)
+            End If
+        End If
+
+
+        '  Kunde zu beginn auswählen, weil dann mit übergeben beim Buchen
+        'KundenGUI.BringToFront()
+        'KundenGUI.Show()
+        'KundenGUI.
         'Kinosaal übergeben
     End Sub
 

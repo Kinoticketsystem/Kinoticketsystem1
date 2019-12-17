@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _T__Raumschriff_Surprise() As System.Drawing.Bitmap
+        Friend ReadOnly Property _720px() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("_T__Raumschriff_Surprise", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_720px", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -73,9 +73,19 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Alita_Ballte_Angel() As System.Drawing.Bitmap
+        Friend ReadOnly Property _800x500() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Alita_Ballte_Angel", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_800x500", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Alita_Battle_Angel() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Alita_Battle_Angel", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -93,9 +103,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Bublebee() As System.Drawing.Bitmap
+        Friend ReadOnly Property Bumblebee() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Bublebee", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Bumblebee", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -233,9 +243,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Herr_der_Ringe_3() As System.Drawing.Bitmap
+        Friend ReadOnly Property Herr_der_Ringe() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Herr_der_Ringe_3", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Herr_der_Ringe", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -253,9 +263,19 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property ip_man() As System.Drawing.Bitmap
+        Friend ReadOnly Property Ip_man() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("ip_man", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Ip_man", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Jagd_auf_Roter_Oktober() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Jagd_auf_Roter_Oktober", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -266,16 +286,6 @@ Namespace My.Resources
         Friend ReadOnly Property Jäger_des_Verlorenen_Schatzes() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Jäger_des_Verlorenen_Schatzes", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Jagt_auf_Roter_Oktober() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Jagt_auf_Roter_Oktober", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -313,9 +323,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Jumanji__Willkommen_im_Dschungel__DVD_() As System.Drawing.Bitmap
+        Friend ReadOnly Property Jumanji_Willkommen_im_Dschungel() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Jumanji__Willkommen_im_Dschungel__DVD_", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Jumanji_Willkommen_im_Dschungel", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -456,6 +466,16 @@ Namespace My.Resources
         Friend ReadOnly Property Star_Wars_VIII_Die_letzten_Jedi() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Star_Wars_VIII_Die_letzten_Jedi", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property T_Raumschiff_Surprise() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("T_Raumschiff_Surprise", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

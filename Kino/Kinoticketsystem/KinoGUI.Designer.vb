@@ -65,6 +65,10 @@ Partial Class KinoGUI
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.cmdTestVorstellung = New System.Windows.Forms.Button()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.cmdBeenden = New System.Windows.Forms.Button()
+        Me.cmdÄnderungenSpeichern = New System.Windows.Forms.Button()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdWochenplan1
@@ -87,7 +91,7 @@ Partial Class KinoGUI
         Me.cmdTexterfassen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTexterfassen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTexterfassen.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTexterfassen.Location = New System.Drawing.Point(-2, 814)
+        Me.cmdTexterfassen.Location = New System.Drawing.Point(1982, 812)
         Me.cmdTexterfassen.Name = "cmdTexterfassen"
         Me.cmdTexterfassen.Size = New System.Drawing.Size(262, 66)
         Me.cmdTexterfassen.TabIndex = 1
@@ -551,12 +555,48 @@ Partial Class KinoGUI
         Me.cmdTestVorstellung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdTestVorstellung.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdTestVorstellung.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1040, 814)
+        Me.cmdTestVorstellung.Location = New System.Drawing.Point(1982, 918)
         Me.cmdTestVorstellung.Name = "cmdTestVorstellung"
         Me.cmdTestVorstellung.Size = New System.Drawing.Size(262, 66)
         Me.cmdTestVorstellung.TabIndex = 45
         Me.cmdTestVorstellung.Text = "TestVorstellung"
         Me.cmdTestVorstellung.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.BackColor = System.Drawing.Color.Black
+        Me.NumericUpDown1.ForeColor = System.Drawing.Color.White
+        Me.NumericUpDown1.Location = New System.Drawing.Point(1133, 171)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(144, 26)
+        Me.NumericUpDown1.TabIndex = 46
+        '
+        'cmdBeenden
+        '
+        Me.cmdBeenden.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdBeenden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdBeenden.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdBeenden.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBeenden.Image = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdBeenden.Location = New System.Drawing.Point(21, 717)
+        Me.cmdBeenden.Name = "cmdBeenden"
+        Me.cmdBeenden.Size = New System.Drawing.Size(139, 60)
+        Me.cmdBeenden.TabIndex = 47
+        Me.cmdBeenden.Text = " Speichern und Beenden "
+        Me.cmdBeenden.UseVisualStyleBackColor = True
+        '
+        'cmdÄnderungenSpeichern
+        '
+        Me.cmdÄnderungenSpeichern.BackgroundImage = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
+        Me.cmdÄnderungenSpeichern.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdÄnderungenSpeichern.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdÄnderungenSpeichern.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdÄnderungenSpeichern.Location = New System.Drawing.Point(23, 596)
+        Me.cmdÄnderungenSpeichern.Name = "cmdÄnderungenSpeichern"
+        Me.cmdÄnderungenSpeichern.Size = New System.Drawing.Size(137, 69)
+        Me.cmdÄnderungenSpeichern.TabIndex = 48
+        Me.cmdÄnderungenSpeichern.Text = "Änderungen speichern"
+        Me.cmdÄnderungenSpeichern.UseVisualStyleBackColor = True
         '
         'KinoGUI
         '
@@ -565,7 +605,10 @@ Partial Class KinoGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1300, 1044)
+        Me.ClientSize = New System.Drawing.Size(1924, 1061)
+        Me.Controls.Add(Me.cmdÄnderungenSpeichern)
+        Me.Controls.Add(Me.cmdBeenden)
+        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.cmdTestVorstellung)
         Me.Controls.Add(Me.cmdKundenDatenbankAufrufen)
         Me.Controls.Add(Me.cmdWochenpläneBearbeiten)
@@ -610,6 +653,7 @@ Partial Class KinoGUI
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "KinoGUI"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -656,4 +700,7 @@ Partial Class KinoGUI
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents cmdTestVorstellung As Button
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents cmdBeenden As Button
+    Friend WithEvents cmdÄnderungenSpeichern As Button
 End Class

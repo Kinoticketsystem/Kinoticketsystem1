@@ -47,7 +47,7 @@ Public Class Kinosaal
         _PreisProPlatz = b
     End Sub
     Public Sub New(ByVal Vorstellung As Vorstellung)
-        Me.New(Vorstellung.getSaal.getAnzahlSitzplätze, Vorstellung.getSaal.getAnzahlReihe, Vorstellung.getSaal.getAnzahlSitzplätze)
+        Me.New(Vorstellung.getSaal.getAnzahlSitzplätze, Vorstellung.getSaal.getAnzahlReihe, Vorstellung.getSaal.getSitzeProReihe)
     End Sub
     Friend Function getKunde(i As Integer, j As Integer) As Kunde
         Return _Sitzplätze(i, j)
@@ -63,6 +63,9 @@ Public Class Kinosaal
     'Public Function getZ()
     '    Return z
     'End Function
+    Public Function getBuchungen()
+        Return _Sitzplätze
+    End Function
     Public Function getAnzahlSitzplätze()
         Return _AnzahlSitzplätze
     End Function
@@ -91,10 +94,11 @@ Public Class Kinosaal
     End Function
 
     Public Sub SitzplatzStornieren(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef Kunde As Kunde)
-        If _Sitzplätze(gewählterPlatzX, gewählterPlatzY).Equals(Kunde) Then
-            Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = Nothing
+        If _Sitzplätze(gewählterPlatzX, gewählterPlatzY).getName.Equals(Kunde.getName) Then
+            Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = _leererPlatz
         Else
-            Throw New Exception("Es wurde beim Sitzplanstornieren versucht einen Sitzplatz zu stornieren, der vorher von dem übergebenen Kunden nicht gebucht wurde!")
+            KinosaalGUI.FehlerMitFalscherPersonBuchen
+            '   Throw New Exception("Es wurde beim Sitzplanstornieren versucht einen Sitzplatz zu stornieren, der vorher von dem übergebenen Kunden nicht gebucht wurde!")
         End If
     End Sub
 

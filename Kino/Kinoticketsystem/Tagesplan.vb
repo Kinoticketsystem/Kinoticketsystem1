@@ -90,6 +90,11 @@ Public Class Tagesplan
 
     End Sub
 
+    Public Sub set_Vorstellungen(a As ArrayList) Implements ITagesplan.set_Vorstellungen
+        _Vorstellungen = a
+        AnzahlFilmeProTag = a.Count
+    End Sub
+
     Public Function getNächstenFilm(jetzt As Date) As Vorstellung
 
         Dim b As ArrayList = _Vorstellungen
@@ -97,7 +102,7 @@ Public Class Tagesplan
         getNächstenFilm = b(0)
         Dim alleFilmeHeuteWarenSchon As Boolean = True
         Dim A As Integer = jetzt.Hour * 60 + jetzt.Minute
-        Dim Differenz As Integer = b(0).getAnfangszeit - A
+        Dim Differenz As Integer = Math.Abs(b(0).getAnfangszeit - A)
         For i = 0 To AnzahlFilmeProTag - 1
             If (b(i).getAnfangszeit - A) < Differenz And (b(i).getAnfangszeit - A) > 0 Then
                 getNächstenFilm = b(i)
@@ -106,7 +111,13 @@ Public Class Tagesplan
             End If
         Next
         If alleFilmeHeuteWarenSchon Then
-            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False), _Saal)
+            Dim df As Kinosaal = New Kinosaal(120, 8, 15)
+            For i = 0 To df.getAnzahlReihe
+                For j = 0 To df.getSitzeProReihe
+                    df.SitzplatzBuchen(i, j, New Kunde("Keine Veranstaltung"))
+                Next
+            Next
+            Return New Vorstellung(1070, 1079, New ArrayList, New Film("heute keine Filme mehr", 5, 0, False), df)
         End If
     End Function
 

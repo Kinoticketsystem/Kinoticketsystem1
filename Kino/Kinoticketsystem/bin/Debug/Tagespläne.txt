@@ -24,7 +24,7 @@ False
 3. Vorstellung:
  730 
  842 
-Ziemlich beste Freunde 
+Ziemlich beste Freunde
  112 
  6 
 False
@@ -35,7 +35,7 @@ False
 4. Vorstellung:
  870 
  989 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
@@ -57,7 +57,7 @@ False
 6. Vorstellung:
  1220 
  1350 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -68,7 +68,7 @@ True
 7. Vorstellung:
  1380 
  1478 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -79,7 +79,7 @@ True
 1. Vorstellung:
  480 
  613 
-Karate kid	
+Karate kid
  133 
  6 
 False
@@ -90,7 +90,7 @@ False
 2. Vorstellung:
  630 
  771 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -123,7 +123,7 @@ False
 5. Vorstellung:
  1200 
  1362 
-Avatar	
+Avatar
  162 
  12 
 True
@@ -134,7 +134,7 @@ True
 6. Vorstellung:
  1380 
  1519 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
@@ -145,7 +145,7 @@ True
 1. Vorstellung:
  480 
  596 
-Robin Hood	
+Robin Hood
  116 
  12 
 True
@@ -167,7 +167,7 @@ False
 3. Vorstellung:
  760 
  931 
-Gladiator	
+Gladiator
  171 
  16 
 False
@@ -189,7 +189,7 @@ True
 5. Vorstellung:
  1100 
  1222 
-Alita Battle Angel 
+Alita Battle Angel
  122 
  16 
 True
@@ -233,7 +233,7 @@ False
 2. Vorstellung:
  630 
  718 
-Johnny Englisch 3
+Johnny English 3
  88 
  12 
 True
@@ -255,7 +255,7 @@ False
 4. Vorstellung:
  930 
  1033 
-The Fast and the Furious	
+The Fast and the Furious
  103 
  16 
 False
@@ -266,7 +266,7 @@ False
 5. Vorstellung:
  1065 
  1200 
-Jagd Auf Roter Oktober	
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -299,7 +299,7 @@ False
 1. Vorstellung:
  480 
  613 
-Fantastische Tierwessen 
+Fantastische Tierwesen
  133 
  12 
 False
@@ -310,7 +310,7 @@ False
 2. Vorstellung:
  645 
  781 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -321,7 +321,7 @@ False
 3. Vorstellung:
  810 
  924 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
@@ -332,7 +332,7 @@ False
 4. Vorstellung:
  960 
  1096 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -343,7 +343,7 @@ True
 5. Vorstellung:
  1125 
  1231 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
@@ -354,7 +354,7 @@ False
 6. Vorstellung:
  1260 
  1383 
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -376,7 +376,7 @@ False
 2. Vorstellung:
  615 
  726 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
@@ -387,7 +387,7 @@ True
 3. Vorstellung:
  750 
  865 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
@@ -409,7 +409,7 @@ False
 5. Vorstellung:
  1050 
  1229 
-The Wolf Of Wall Street 
+The Wolf Of Wall Street
  179 
  16 
 False
@@ -420,7 +420,7 @@ False
 6. Vorstellung:
  1260 
  1376 
-Robin Hood	
+Robin Hood
  116 
  12 
 True
@@ -442,7 +442,7 @@ False
 1. Vorstellung:
  660 
  772 
-Ziemlich beste Freunde 
+Ziemlich beste Freunde
  112 
  6 
 False
@@ -453,7 +453,7 @@ False
 2. Vorstellung:
  800 
  936 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -464,7 +464,7 @@ True
 3. Vorstellung:
  960 
  1101 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -497,7 +497,7 @@ False
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -519,7 +519,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -596,7 +596,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen
  133 
  12 
 False
@@ -618,7 +618,7 @@ False
 6. Vorstellung:
  1260 
  1379 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
@@ -629,7 +629,7 @@ True
 7. Vorstellung:
  1410 
  1498 
-Johnny Englisch 3
+Johnny English 3
  88 
  12 
 True
@@ -640,7 +640,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
@@ -651,7 +651,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -684,7 +684,7 @@ False
 5. Vorstellung:
  1090 
  1196 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
@@ -695,7 +695,7 @@ False
 6. Vorstellung:
  1230 
  1344 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
@@ -739,7 +739,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
@@ -761,7 +761,7 @@ True
 5. Vorstellung:
  1110 
  1243 
-Karate kid	
+Karate kid
  133 
  6 
 False
@@ -772,7 +772,7 @@ False
 6. Vorstellung:
  1275 
  1411 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -783,7 +783,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -805,7 +805,7 @@ False
 3. Vorstellung:
  780 
  895 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
@@ -827,7 +827,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -849,7 +849,7 @@ False
 7. Vorstellung:
  1390 
  1526 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -871,7 +871,7 @@ False
 2. Vorstellung:
  840 
  952 
-Ziemlich beste Freunde 
+Ziemlich beste Freunde
  112 
  6 
 False
@@ -882,7 +882,7 @@ False
 3. Vorstellung:
  980 
  1103 
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -893,7 +893,7 @@ False
 4. Vorstellung:
  1130 
  1309 
-The Wolf Of Wall Street 
+The Wolf Of Wall Street
  179 
  16 
 False
@@ -904,7 +904,7 @@ False
 5. Vorstellung:
  1340 
  1443 
-The Fast and the Furious	
+The Fast and the Furious
  103 
  16 
 False
@@ -915,7 +915,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -937,7 +937,7 @@ False
 3. Vorstellung:
  780 
  895 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
@@ -959,7 +959,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -981,7 +981,7 @@ False
 7. Vorstellung:
  1390 
  1526 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -992,7 +992,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -1014,7 +1014,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -1091,7 +1091,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen
  133 
  12 
 False
@@ -1113,7 +1113,7 @@ False
 6. Vorstellung:
  1260 
  1379 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
@@ -1124,7 +1124,7 @@ True
 7. Vorstellung:
  1410 
  1498 
-Johnny Englisch 3
+Johnny English 3
  88 
  12 
 True
@@ -1135,7 +1135,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
@@ -1146,7 +1146,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -1179,7 +1179,7 @@ False
 5. Vorstellung:
  1090 
  1196 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
@@ -1190,7 +1190,7 @@ False
 6. Vorstellung:
  1230 
  1344 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
@@ -1234,7 +1234,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
@@ -1256,7 +1256,7 @@ True
 5. Vorstellung:
  1110 
  1243 
-Karate kid	
+Karate kid
  133 
  6 
 False
@@ -1267,7 +1267,7 @@ False
 6. Vorstellung:
  1275 
  1411 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -1278,7 +1278,7 @@ False
 1. Vorstellung:
  660 
  776 
-Robin Hood	
+Robin Hood
  116 
  12 
 True
@@ -1300,7 +1300,7 @@ False
 3. Vorstellung:
  960 
  1131 
-Gladiator	
+Gladiator
  171 
  16 
 False
@@ -1311,7 +1311,7 @@ False
 4. Vorstellung:
  1160 
  1296 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -1322,7 +1322,7 @@ True
 5. Vorstellung:
  1320 
  1482 
-Avatar	
+Avatar
  162 
  12 
 True
@@ -1355,7 +1355,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
@@ -1377,7 +1377,7 @@ True
 5. Vorstellung:
  1110 
  1243 
-Karate kid	
+Karate kid
  133 
  6 
 False
@@ -1388,7 +1388,7 @@ False
 6. Vorstellung:
  1275 
  1411 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -1399,7 +1399,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -1421,7 +1421,7 @@ False
 3. Vorstellung:
  780 
  895 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
@@ -1443,7 +1443,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -1465,7 +1465,7 @@ False
 7. Vorstellung:
  1390 
  1526 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -1476,7 +1476,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -1498,7 +1498,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -1575,7 +1575,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen
  133 
  12 
 False
@@ -1597,7 +1597,7 @@ False
 6. Vorstellung:
  1260 
  1379 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
@@ -1608,7 +1608,7 @@ True
 7. Vorstellung:
  1410 
  1498 
-Jonny Englisch 3
+Johnny English 3
  88 
  12 
 True
@@ -1619,7 +1619,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
@@ -1630,7 +1630,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -1663,7 +1663,7 @@ False
 5. Vorstellung:
  1090 
  1196 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
@@ -1674,7 +1674,7 @@ False
 6. Vorstellung:
  1230 
  1344 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
@@ -1729,7 +1729,7 @@ False
 4. Vorstellung:
  1080 
  1196 
-Robin Hood	
+Robin Hood
  116 
  12 
 True
@@ -1740,7 +1740,7 @@ True
 5. Vorstellung:
  1230 
  1342 
-Ziemlich beste Freunde 
+Ziemlich beste Freunde
  112 
  6 
 False
@@ -1751,7 +1751,7 @@ False
 6. Vorstellung:
  1370 
  1493 
-Rush Alles Für den Sieg
+Rush Alles für den Sieg
  123 
  12 
 False
@@ -1762,24 +1762,24 @@ False
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 3. Vorstellung:
  820 
@@ -1788,9 +1788,9 @@ Feuerzangenbowle
  97 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 4. Vorstellung:
  940 
@@ -1799,31 +1799,31 @@ Joker
  122 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 5. Vorstellung:
  1090 
  1196 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 6. Vorstellung:
  1230 
  1344 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  26 
 7. Vorstellung:
  1380 
@@ -1832,9 +1832,9 @@ Es 2
  170 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 27. Tag
 1. Vorstellung:
  480 
@@ -1843,9 +1843,9 @@ Herr der Ringe
  200 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 2. Vorstellung:
  700 
@@ -1854,20 +1854,20 @@ Ich einfach Unverbesserlich
  95 
  0 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 4. Vorstellung:
  960 
@@ -1876,42 +1876,42 @@ Bumblebee
  114 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 5. Vorstellung:
  1110 
  1243 
-Karate kid	
+Karate kid
  133 
  6 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  27 
 6. Vorstellung:
  1275 
  1411 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 28. Tag
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 2. Vorstellung:
  640 
@@ -1920,20 +1920,20 @@ Ip man
  106 
  18 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 3. Vorstellung:
  780 
  895 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 4. Vorstellung:
  930 
@@ -1942,20 +1942,20 @@ Lion King
  118 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 6. Vorstellung:
  1240 
@@ -1964,31 +1964,31 @@ Pretty Woman
  119 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  28 
 7. Vorstellung:
  1390 
  1526 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 29. Tag
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 2. Vorstellung:
  600 
@@ -1997,20 +1997,20 @@ Le Mans 66
  153 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 3. Vorstellung:
  780 
  915 
-Jagd Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 4. Vorstellung:
  945 
@@ -2019,9 +2019,9 @@ Alita Battle Angel
  122 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 5. Vorstellung:
  1095 
@@ -2030,9 +2030,9 @@ Avatar
  162 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  29 
 6. Vorstellung:
  1290 
@@ -2041,9 +2041,9 @@ Gladiator
  171 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 30. Tag
 1. Vorstellung:
  480 
@@ -2052,9 +2052,9 @@ Madagascar
  83 
  0 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 2. Vorstellung:
  590 
@@ -2063,9 +2063,9 @@ Fluch der Karibik
  143 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 3. Vorstellung:
  765 
@@ -2074,20 +2074,20 @@ Der Soldat James Ryan
  170 
  16 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen
  133 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 5. Vorstellung:
  1125 
@@ -2096,53 +2096,53 @@ Der Schuh des Manitu
  100 
  6 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 6. Vorstellung:
  1260 
  1379 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  30 
 7. Vorstellung:
  1410 
  1498 
-Jonny Englisch 3
+Johnny English 3
  88 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 31. Tag
 1. Vorstellung:
  660 
  801 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 2. Vorstellung:
  830 
  928 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 3. Vorstellung:
  960 
@@ -2151,9 +2151,9 @@ Bumblebee
  114 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 4. Vorstellung:
  1100 
@@ -2162,9 +2162,9 @@ Fluch der Karibik
  143 
  12 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 5. Vorstellung:
  1270 
@@ -2173,20 +2173,20 @@ Feuerzangenbowle
  97 
  12 
 False
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
  31 
 6. Vorstellung:
  1390 
  1520 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
- 100 
- 5 
- 20 
+ 98 
+ 7 
+ 14 
 32. Tag
 1. Vorstellung:
  480 
@@ -2224,7 +2224,7 @@ False
 4. Vorstellung:
  960 
  1093 
-Fantastische Tierwessen 
+Fantastische Tierwesen
  133 
  12 
 False
@@ -2246,7 +2246,7 @@ False
 6. Vorstellung:
  1260 
  1379 
-Jumanji Wilkommen im Dschungel
+Jumanji Willkommen im Dschungel
  119 
  6 
 True
@@ -2257,7 +2257,7 @@ True
 7. Vorstellung:
  1410 
  1498 
-Jonny Englisch 3
+Johnny English 3
  88 
  12 
 True
@@ -2268,7 +2268,7 @@ True
 1. Vorstellung:
  480 
  619 
-Midway-Für Die Freiheit	
+Midway
  139 
  6 
 True
@@ -2279,7 +2279,7 @@ True
 2. Vorstellung:
  640 
  738 
-Hänsel und Gretel: Hexenjäger	
+Hänsel und Gretel
  98 
  16 
 True
@@ -2312,7 +2312,7 @@ False
 5. Vorstellung:
  1090 
  1196 
-Dunkirk	
+Dunkirk
  106 
  12 
 False
@@ -2323,7 +2323,7 @@ False
 6. Vorstellung:
  1230 
  1344 
-Das Bourne Ultimatum	
+Das Bourne Ultimatum
  114 
  12 
 False
@@ -2367,7 +2367,7 @@ True
 3. Vorstellung:
  820 
  931 
-Pacific Rim 2. Uprising	
+Pacific Rim Uprising
  111 
  12 
 True
@@ -2389,7 +2389,7 @@ True
 5. Vorstellung:
  1110 
  1243 
-Karate kid	
+Karate kid
  133 
  6 
 False
@@ -2400,7 +2400,7 @@ False
 6. Vorstellung:
  1275 
  1411 
-Coach Carter	
+Coach Carter
  136 
  6 
 False
@@ -2411,7 +2411,7 @@ False
 1. Vorstellung:
  480 
  621 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
@@ -2433,7 +2433,7 @@ False
 3. Vorstellung:
  780 
  895 
-Jäger des Verlorenen Schatzes 
+Jäger des Verlorenen Schatzes
  115 
  12 
 False
@@ -2455,7 +2455,7 @@ False
 5. Vorstellung:
  1080 
  1210 
-John Wick: Kapitel 3
+John Wick 3
  130 
  18 
 True
@@ -2477,7 +2477,7 @@ False
 7. Vorstellung:
  1390 
  1526 
-Deadpool 2	
+Deadpool 2
  136 
  16 
 True
@@ -2488,7 +2488,7 @@ True
 1. Vorstellung:
  480 
  563 
-(T)Raumschiff Surprise
+T Raumschiff Surprise
  83 
  0 
 False
@@ -2510,7 +2510,7 @@ False
 3. Vorstellung:
  780 
  915 
-Jagt Auf Roter Oktober
+Jagd auf Roter Oktober
  135 
  12 
 False
@@ -2554,7 +2554,7 @@ False
 1. Vorstellung:
  660 
  839 
-The Wolf Of Wall Street 
+The Wolf Of Wall Street
  179 
  16 
 False
@@ -2565,7 +2565,7 @@ False
 2. Vorstellung:
  870 
  958 
-Jonny Englisch 3
+Johnny English 3
  88 
  12 
 True
@@ -2576,7 +2576,7 @@ True
 3. Vorstellung:
  990 
  1152 
-Avatar	
+Avatar
  162 
  12 
 True
@@ -2598,7 +2598,7 @@ False
 5. Vorstellung:
  1330 
  1471 
-Kingsman: The Golden Circle
+Kingsman The Golden Circle
  141 
  16 
 True
