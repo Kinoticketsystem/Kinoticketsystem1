@@ -290,28 +290,32 @@ Public Class NeueVorstellung
     End Sub
 
     Private Sub cmdFilmHinZuFügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinZuFügen.Click
-
         Dim i As Integer = chlFilme.SelectedIndex
-        _Film = KinoGUI.DASKINO.getFilmtitel(i)
-        lblFilmlänge.Text = _Film.getFilmlänge & " min"
-        'Dim ausgewählterFilm As Film = New Film("", 89, 12, True)
-        Dim nachkommastellen As Integer
-        Dim vorkommastellen As Integer
-        nachkommastellen = StartuhrzeitWert.Value - Math.Truncate(StartuhrzeitWert.Value)
-        vorkommastellen = Math.Truncate(StartuhrzeitWert.Value)
-        _Startzeit = vorkommastellen * 60 + nachkommastellen * 100
-        _Endzeit = _Startzeit + _Film.getFilmlänge
-        EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
+        If i >= 0 Then
+
+            _Film = KinoGUI.DASKINO.getFilmtitel(i)
+            lblFilmlänge.Text = _Film.getFilmlänge & " min"
+            'Dim ausgewählterFilm As Film = New Film("", 89, 12, True)
+            Dim nachkommastellen As Integer
+            Dim vorkommastellen As Integer
+            nachkommastellen = StartuhrzeitWert.Value - Math.Truncate(StartuhrzeitWert.Value)
+            vorkommastellen = Math.Truncate(StartuhrzeitWert.Value)
+            _Startzeit = vorkommastellen * 60 + nachkommastellen * 100
+            _Endzeit = _Startzeit + _Film.getFilmlänge
+            EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
 
 
 
-        'If (EnduhrzeitWert.Value - StartuhrzeitWert.Value) < ausgewählterFilm.getFilmlänge / 100 Then
-        '    EnduhrzeitWert.Value = ausgewählterFilm.getFilmlänge / 100 + StartuhrzeitWert.Value
-        'End If
-        'If txtname.Text = "" Then
-        '    txtname.Text = ausgewählterFilm.getFilmtitel
-        'End If
-        _FilmHinzugefügt = True
+            'If (EnduhrzeitWert.Value - StartuhrzeitWert.Value) < ausgewählterFilm.getFilmlänge / 100 Then
+            '    EnduhrzeitWert.Value = ausgewählterFilm.getFilmlänge / 100 + StartuhrzeitWert.Value
+            'End If
+            'If txtname.Text = "" Then
+            '    txtname.Text = ausgewählterFilm.getFilmtitel
+            'End If
+            _FilmHinzugefügt = True
+        Else
+            MsgBox("Bitte Film auswählen")
+        End If
     End Sub
 
     Public Function getStartzeit() As Integer
