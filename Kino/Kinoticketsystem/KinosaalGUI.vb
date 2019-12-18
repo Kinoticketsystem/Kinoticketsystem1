@@ -524,7 +524,7 @@ Public Class KinosaalGUI
         Me.Close()
         Me.Hide()
         KinoGUI.lblTageseinnahmen.Text = "Geld in der Kasse: " & Math.Round(KinoGUI._GeldInKasse + Me._Gesamtkosten, 2)
-        MsgBox()
+        MsgBox("Alles fertig")
         '  Kunde zu beginn auswählen, weil dann mit übergeben beim Buchen
         'KundenGUI.BringToFront()
         'KundenGUI.Show()
