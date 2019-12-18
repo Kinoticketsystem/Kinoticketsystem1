@@ -17,14 +17,14 @@
         If txtFilmlänge.Text = "" Then
             allesDa = False
             'MsgBox("Filmlänge ausfüllen")
-        Else
+        ElseIf IsNumeric(txtFilmlänge.text) Then
             Filmlänge = txtFilmlänge.Text
             allesDa = True
         End If
         If txtAltersfreigabe.Text = "" Then
             allesDa = False
             'MsgBox("Altersfreigabe ausfüllen")
-        Else
+        ElseIf IsNumeric(txtAltersfreigabe.Text) Then
 
             Altersfreigabe = txtAltersfreigabe.Text
         End If
