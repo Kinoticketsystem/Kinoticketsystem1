@@ -15,13 +15,13 @@ Public Class NeueVorstellung
     Private Sub NeueVorstellung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         StartuhrzeitWert.DecimalPlaces = 2
         StartuhrzeitWert.Value = 8
-        StartuhrzeitWert.Maximum = 24
-        StartuhrzeitWert.Minimum = 0
+        StartuhrzeitWert.Maximum = 27
+        StartuhrzeitWert.Minimum = 8
         StartuhrzeitWert.Increment = 0.05
         EnduhrzeitWert.DecimalPlaces = 2
         EnduhrzeitWert.Value = 8
-        EnduhrzeitWert.Maximum = 24
-        EnduhrzeitWert.Minimum = 0
+        EnduhrzeitWert.Maximum = 27
+        EnduhrzeitWert.Minimum = 8
         EnduhrzeitWert.Increment = 0.05
         'NUDKinosaal.Maximum = 6
         'NUDKinosaal.Minimum = 1
@@ -46,16 +46,16 @@ Public Class NeueVorstellung
         _Film = c.getFilm
         _Startzeit = Startzeit
         _Endzeit = _Startzeit + c.getLänge
-        If _Startzeit <= 1440 And _Endzeit <= 1440 Then
-            StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
+        'If _Startzeit <= 1440 And _Endzeit <= 1440 Then
+        StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
             EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
-        ElseIf _Startzeit <= 1440 And _Endzeit > 1440 Then
-            StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
-            EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
-        Else
-            StartuhrzeitWert.Value = (_Startzeit \ 60 + (_Startzeit Mod 60) / 100) - 24
-            EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
-        End If
+        'ElseIf _Startzeit <= 1440 And _Endzeit > 1440 Then
+        '    StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
+        '    EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
+        'Else
+        '    StartuhrzeitWert.Value = (_Startzeit \ 60 + (_Startzeit Mod 60) / 100) - 24
+        '    EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
+        'End If
 
     End Sub
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)
