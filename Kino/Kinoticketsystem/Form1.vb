@@ -98,13 +98,7 @@ Public Class FTagesplan
         FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
         VeränderungenJeNachSornierenBuchen()
     End Sub
-    Private Sub VeränderungenJeNachSornierenBuchen()
-        If _Stornieren Then
-            Me.Text = "Wochenplan - Stornieren"
-        Else
-            Text = "Wochenplan - Buchen"
-        End If
-    End Sub
+
 
     Public Sub InitialisiereDenWochenplan(kunde1 As Kunde, NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
         _ersterTag = ersterTag
@@ -2665,7 +2659,13 @@ Public Class FTagesplan
     Private Sub lblTextüberFIlm_Click(sender As Object, e As EventArgs) Handles lblTextüberFIlm.Click
 
     End Sub
-
+    Private Sub VeränderungenJeNachSornierenBuchen()
+        If _Stornieren Then
+            Me.Text = "Wochenplan - Stornieren"
+        Else
+            Text = "Wochenplan - Buchen"
+        End If
+    End Sub
     Private Sub cmdBuchenStattändern_Click(sender As Object, e As EventArgs) Handles cmdBuchenStattändern.Click
         If _Aendern Then
             _Aendern = False
@@ -2675,6 +2675,7 @@ Public Class FTagesplan
             cmdBuchenStattändern.Text = "ändern"
             Me.Text = "Wochenplan"
             ButtonsInvisibleMachenJeNachModus()
+            VeränderungenJeNachSornierenBuchen()
         Else
             _Aendern = True
             KinoGUI._WochenpläneBearbeiten = True
@@ -2683,6 +2684,12 @@ Public Class FTagesplan
             ButtonsInvisibleMachenJeNachModus()
             Me.Text = "Wochenplan - Änderungsmodus"
             cmdBuchenStattändern.Text = "buchen"
+            If _Stornieren Then
+                cmdBuchenStattändern.Text = "stornieren"
+            Else
+                cmdBuchenStattändern.Text = "buchen"
+            End If
+            VeränderungenJeNachSornierenBuchen()
 
         End If
     End Sub
