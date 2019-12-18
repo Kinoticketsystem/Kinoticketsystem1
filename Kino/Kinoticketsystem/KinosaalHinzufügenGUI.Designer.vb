@@ -33,14 +33,14 @@ Partial Class KinosaalHinzufügenGUI
         '
         Me.txtAnzahlReihe.Location = New System.Drawing.Point(61, 128)
         Me.txtAnzahlReihe.Name = "txtAnzahlReihe"
-        Me.txtAnzahlReihe.Size = New System.Drawing.Size(243, 20)
+        Me.txtAnzahlReihe.Size = New System.Drawing.Size(278, 20)
         Me.txtAnzahlReihe.TabIndex = 0
         '
         'txtSitzeproReihe
         '
         Me.txtSitzeproReihe.Location = New System.Drawing.Point(60, 213)
         Me.txtSitzeproReihe.Name = "txtSitzeproReihe"
-        Me.txtSitzeproReihe.Size = New System.Drawing.Size(244, 20)
+        Me.txtSitzeproReihe.Size = New System.Drawing.Size(279, 20)
         Me.txtSitzeproReihe.TabIndex = 1
         '
         'cmdKinosaalHinzufügen
@@ -50,9 +50,9 @@ Partial Class KinosaalHinzufügenGUI
         Me.cmdKinosaalHinzufügen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdKinosaalHinzufügen.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdKinosaalHinzufügen.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKinosaalHinzufügen.Location = New System.Drawing.Point(410, 141)
+        Me.cmdKinosaalHinzufügen.Location = New System.Drawing.Point(60, 270)
         Me.cmdKinosaalHinzufügen.Name = "cmdKinosaalHinzufügen"
-        Me.cmdKinosaalHinzufügen.Size = New System.Drawing.Size(196, 32)
+        Me.cmdKinosaalHinzufügen.Size = New System.Drawing.Size(279, 32)
         Me.cmdKinosaalHinzufügen.TabIndex = 2
         Me.cmdKinosaalHinzufügen.Text = "Kinosaal hinzufügen"
         Me.cmdKinosaalHinzufügen.UseVisualStyleBackColor = False
@@ -60,20 +60,26 @@ Partial Class KinosaalHinzufügenGUI
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(58, 94)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 13)
+        Me.Label1.Size = New System.Drawing.Size(195, 19)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Anzahl der Reihen "
+        Me.Label1.Text = "Anzahl der Reihen (max. 8) "
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(58, 171)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(57, 181)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(154, 13)
+        Me.Label2.Size = New System.Drawing.Size(282, 19)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Anzahl der Sitze in einer Reihe "
+        Me.Label2.Text = "Anzahl der Sitze in einer Reihe (max. 15)"
         '
         'KinosaalHinzufügenGUI
         '
