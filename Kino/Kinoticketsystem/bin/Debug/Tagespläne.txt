@@ -889,17 +889,6 @@ False
  60 
  6 
  10 
- 13 
-5. Vorstellung:
- 660 
- 774 
-Das Bourne Ultimatum	
- 114 
- 12 
-False
- 60 
- 6 
- 10 
 14. Tag
 1. Vorstellung:
  480 

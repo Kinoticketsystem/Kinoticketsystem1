@@ -253,6 +253,26 @@
     Public Sub VorstellungHinzufügen(tagesplan As Tagesplan, Position As Integer, z As Vorstellung)
 
     End Sub
+    Public Sub VorstellungLöschen(ByRef tag As Integer, ByRef vorstellung As Vorstellung, ByRef Kinosaalnummer As Integer)
+        Dim VorstellungendesTages As ArrayList = New ArrayList
+
+        Select Case Kinosaalnummer
+            Case 1
+                Me.getTagesplan(tag - 1).vorstellungentfernen(vorstellung)
+            Case 2
+                Me.getTagesplan(7 + tag - 1).vorstellungentfernen(vorstellung)
+            Case 3
+                Me.getTagesplan(13 + tag - 1).vorstellungentfernen(vorstellung)
+            Case 4
+                Me.getTagesplan(19 + tag - 1).vorstellungentfernen(vorstellung)
+            Case 5
+                Me.getTagesplan(25 + tag - 1).vorstellungentfernen(vorstellung)
+            Case 6
+                Me.getTagesplan(31 + tag - 1).vorstellungentfernen(vorstellung)
+        End Select
+
+
+    End Sub
     Public Sub VorstellungEinfügen(ByRef tag As Integer, ByRef Vorstellung As Vorstellung, ByRef Kinosaalnummer As Integer)
         Dim VorstellungendesTages As ArrayList = New ArrayList
 

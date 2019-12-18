@@ -12,6 +12,7 @@ Public Class FTagesplan
     Private _NummerDEsKinosaals As Integer
     Public _Stornieren As Boolean
     Private _Kinosaal As Kinosaal
+    Private _Löschmodus As Boolean
 
     Private _Kunde As Kunde = New Kunde("Standard")
 
@@ -85,6 +86,8 @@ Public Class FTagesplan
         'FarbeDerButtonsFestlegen() 'muss noch für fast alle Buttons gemacht werden
         'VeränderungenJeNachSornierenBuchen()
         cmdÄnderungenSpeichern.Hide()
+        cmdLöschmodus.Hide()
+        _Löschmodus = False
         cmdFilmeVOnEInemTagEntfernen.Hide()
         lblTextüberFIlm.Hide()
         PictureBox1.Hide()
@@ -2011,59 +2014,88 @@ Public Class FTagesplan
         Dim Startzeit As Integer
         If _Aendern Then
             'ohne Infos vom Film
-            NeueVorstellung.BringToFront()
-            NeueVorstellung.Show()
-            NeueVorstellung.chlFilme.Items.Clear()
-            Dim f As ArrayList = KinoGUI.DASKINO.getFilmtitel
-            For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1 '-1 richtig?
-                NeueVorstellung.chlFilme.Items.Add(f(i).getFilmtitel)
-            Next
+
             'NeueVorstellung.PositionÜbergeben(a, b)
+            If _Löschmodus = True Then
+                NeueVorstellung.chlBesucherAuswählen.Items.Clear()
 
-            NeueVorstellung.chlBesucherAuswählen.Items.Clear()
+                ' NeueVorstellung.datenübergen()
+                Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal) + 1
+                'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+                Select Case a
+                    Case 1
+                        c = _ersterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                    Case 2
+                        c = _zweiterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                    Case 3
+                        c = _dritterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                    Case 4
+                        c = _vierterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                    Case 5
+                        c = _fünfterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                    Case 6
+                        c = _sechsterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                    Case 7
+                        c = _siebterTag.getVorstellung(b)
+                        KinoGUI.DASKINO.VorstellungLöschen(a, c, KinosaalNummer)
+                End Select
+                Me.Close()
+            Else
+                NeueVorstellung.BringToFront()
+                NeueVorstellung.Show()
+                NeueVorstellung.chlFilme.Items.Clear()
+                Dim f As ArrayList = KinoGUI.DASKINO.getFilmtitel
+                For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+                    NeueVorstellung.chlFilme.Items.Add(f(i).getFilmtitel)
+                Next
+                NeueVorstellung.chlBesucherAuswählen.Items.Clear()
 
-            ' NeueVorstellung.datenübergen()
-            Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal) + 1
-            'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
-            Select Case a
-                Case 1
-                    c = _ersterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-                Case 2
-                    c = _zweiterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-                Case 3
-                    c = _dritterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-                Case 4
-                    c = _vierterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-                Case 5
-                    c = _fünfterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-                Case 6
-                    c = _sechsterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-                Case 7
-                    c = _siebterTag.getVorstellung(b)
-                    Startzeit = c.getAnfangszeit
-                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
-            End Select
+                ' NeueVorstellung.datenübergen()
+                Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal) + 1
+                'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
+                Select Case a
+                    Case 1
+                        c = _ersterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                    Case 2
+                        c = _zweiterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                    Case 3
+                        c = _dritterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                    Case 4
+                        c = _vierterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                    Case 5
+                        c = _fünfterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                    Case 6
+                        c = _sechsterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                    Case 7
+                        c = _siebterTag.getVorstellung(b)
+                        Startzeit = c.getAnfangszeit
+                        NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
+                End Select
+            End If
         Else
 
-            'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
-            KundeHinzuFügen.BringToFront()
+                'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
+                KundeHinzuFügen.BringToFront()
             KundeHinzuFügen.Show()
             KundeHinzuFügen.übergeben(a, b, Not _Stornieren)
-
-
-
         End If
     End Sub
     Private Sub Button1_MouseMove(sender As Object, e As EventArgs) Handles Button1.MouseMove
@@ -2685,6 +2717,8 @@ Public Class FTagesplan
     Private Sub cmdBuchenStattändern_Click(sender As Object, e As EventArgs) Handles cmdBuchenStattändern.Click
         If _Aendern Then
             _Aendern = False
+            _Löschmodus = False
+            cmdLöschmodus.Hide()
             KinoGUI._WochenpläneBearbeiten = False
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
@@ -2693,6 +2727,7 @@ Public Class FTagesplan
             ButtonsInvisibleMachenJeNachModus()
         Else
             _Aendern = True
+            cmdLöschmodus.Show()
             KinoGUI._WochenpläneBearbeiten = True
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
@@ -2737,6 +2772,18 @@ Public Class FTagesplan
                     _siebterTag.set_Vorstellungen(a)
                     neuladen()
             End Select
+        End If
+    End Sub
+
+    Private Sub cmdLöschmodus_Click(sender As Object, e As EventArgs) Handles cmdLöschmodus.Click
+        If cmdLöschmodus.FlatStyle = FlatStyle.Popup Then
+            _Löschmodus = True
+            cmdLöschmodus.FlatStyle = FlatStyle.Flat
+            cmdLöschmodus.FlatAppearance.BorderColor = Color.Green
+        Else
+            _Löschmodus = False
+            cmdLöschmodus.FlatStyle = FlatStyle.Popup
+            cmdLöschmodus.FlatAppearance.BorderColor = Color.Red
         End If
     End Sub
 End Class
