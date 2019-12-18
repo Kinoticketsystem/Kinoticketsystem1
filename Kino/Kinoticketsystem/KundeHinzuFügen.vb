@@ -67,6 +67,13 @@
 
 
     End Function
+
+    Private Sub cmdKundenHinzufügen_Click(sender As Object, e As EventArgs) Handles cmdKundenHinzufügen.Click
+        KundenGUI.Show()
+        KundenGUI.BringToFront()
+    End Sub
+
+
     'Private Sub txtsuchen_Change(sender As Object, e As EventArgs) Handles cmdSuchen.TextChanged
     '    CheckedListBox1.SetItemChecked(Stelle(), True)
     'End Sub
