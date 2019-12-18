@@ -253,5 +253,74 @@
     Public Sub VorstellungHinzufügen(tagesplan As Tagesplan, Position As Integer, z As Vorstellung)
 
     End Sub
+    Public Sub VorstellungEinfügen(ByRef tag As Integer, ByRef Vorstellung As Vorstellung, ByRef Kinosaalnummer As Integer)
+        Dim VorstellungendesTages As ArrayList = New ArrayList
 
+        Select Case Kinosaalnummer
+            Case 1
+                VorstellungendesTages = Me.getTagesplan(tag - 1).getVorstellungen
+            Case 2
+                VorstellungendesTages = Me.getTagesplan(7 + tag - 1).getVorstellungen
+            Case 3
+                VorstellungendesTages = Me.getTagesplan(13 + tag - 1).getVorstellungen
+            Case 4
+                VorstellungendesTages = Me.getTagesplan(19 + tag - 1).getVorstellungen
+            Case 5
+                VorstellungendesTages = Me.getTagesplan(25 + tag - 1).getVorstellungen
+            Case 6
+                VorstellungendesTages = Me.getTagesplan(31 + tag - 1).getVorstellungen
+        End Select
+
+        Dim werdenEntfernt1 As ArrayList = New ArrayList
+        Dim werdenEntfernt2 As ArrayList = New ArrayList
+
+        For i = 0 To VorstellungendesTages.Count - 1
+            If Vorstellung.getEndzeit >= VorstellungendesTages(i).getEndzeit And Vorstellung.getAnfangszeit <= VorstellungendesTages(i).getAnfangszeit Then
+                werdenEntfernt1.Add(i)
+                werdenEntfernt2.Add(VorstellungendesTages(i))
+            ElseIf Vorstellung.getAnfangszeit <= VorstellungendesTages(i).getAnfangszeit And Vorstellung.getEndzeit >= VorstellungendesTages(i).getAnfangszeit Then
+                werdenEntfernt1.Add(i)
+                werdenEntfernt2.Add(VorstellungendesTages(i))
+            ElseIf Vorstellung.getEndzeit >= VorstellungendesTages(i).getEndzeit And Vorstellung.getAnfangszeit <= VorstellungendesTages(i).getEndzeit Then
+                werdenEntfernt1.Add(i)
+                werdenEntfernt2.Add(VorstellungendesTages(i))
+            End If
+        Next
+
+        For i = 0 To werdenEntfernt2.Count - 1
+            Select Case Kinosaalnummer
+                Case 1
+                    VorstellungendesTages = Me.getTagesplan(tag - 1).VorstellungEntfernen(werdenEntfernt2(i))
+                Case 2
+                    VorstellungendesTages = Me.getTagesplan(7 + tag - 1).VorstellungEntfernen(werdenEntfernt2(i))
+                Case 3
+                    VorstellungendesTages = Me.getTagesplan(13 + tag - 1).VorstellungEntfernen(werdenEntfernt2(i))
+                Case 4
+                    VorstellungendesTages = Me.getTagesplan(19 + tag - 1).VorstellungEntfernen(werdenEntfernt2(i))
+                Case 5
+                    VorstellungendesTages = Me.getTagesplan(25 + tag - 1).VorstellungEntfernen(werdenEntfernt2(i))
+                Case 6
+                    VorstellungendesTages = Me.getTagesplan(31 + tag - 1).VorstellungEntfernen(werdenEntfernt2(i))
+            End Select
+        Next
+
+        'For i = 0 To werdenEntfernt1.Count - 1
+        '    Me.getTagesplan(tag - 1).VorstellungEntfernen(VorstellungendesTages(werdenEntfernt1(i)))
+        'Next
+        Select Case Kinosaalnummer
+            Case 1
+                Me.getTagesplan(tag - 1).VorstellungHinzufügen(Vorstellung)
+            Case 2
+                Me.getTagesplan(7 + tag - 1).VorstellungHinzufügen(Vorstellung)
+            Case 3
+                Me.getTagesplan(13 + tag - 1).VorstellungHinzufügen(Vorstellung)
+            Case 4
+                Me.getTagesplan(19 + tag - 1).VorstellungHinzufügen(Vorstellung)
+            Case 5
+                Me.getTagesplan(25 + tag - 1).VorstellungHinzufügen(Vorstellung)
+            Case 6
+                Me.getTagesplan(31 + tag - 1).VorstellungHinzufügen(Vorstellung)
+        End Select
+
+    End Sub
 End Class

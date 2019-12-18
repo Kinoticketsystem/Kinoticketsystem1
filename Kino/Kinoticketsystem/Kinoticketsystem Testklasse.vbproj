@@ -285,6 +285,7 @@
     <Content Include="bin\Debug\Filme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="bin\Debug\Kein Bild vorhanden.png" />
     <Content Include="bin\Debug\Kinosäle.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -377,6 +378,9 @@
     <None Include="Resources\T Raumschiff Surprise.png" />
     <None Include="Resources\720px.png" />
     <None Include="Resources\800x500.png" />
+    <None Include="Resources\Kein-Bild-vorhanden[1].jpg" />
+    <None Include="Resources\Kein_Bild_vorhanden.jpg" />
+    <Content Include="Resources\Kein Bild vorhanden.png" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

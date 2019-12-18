@@ -99,7 +99,11 @@ Public Class FTagesplan
         VeränderungenJeNachSornierenBuchen()
     End Sub
     Private Sub VeränderungenJeNachSornierenBuchen()
-        'Throw New NotImplementedException()
+        If _Stornieren Then
+            Me.Text = "Wochenplan - Stornieren"
+        Else
+            Text = "Wochenplan - Buchen"
+        End If
     End Sub
 
     Public Sub InitialisiereDenWochenplan(kunde1 As Kunde, NummerDesKinosaals As Integer, AendernModus As Boolean, ByRef ersterTag As ITagesplan, ByRef zweiterTag As ITagesplan, ByRef dritterTag As ITagesplan, ByRef vierterTag As ITagesplan, ByRef fünfterTag As ITagesplan, ByRef sechsterTag As ITagesplan, ByRef siebterTag As ITagesplan)
@@ -2045,7 +2049,7 @@ Public Class FTagesplan
 
             'hier wird Kunde aufgerufen und ausgewählt und dann erst von dieser Form das folgende:
             KundeHinzuFügen.BringToFront()
-                KundeHinzuFügen.Show()
+            KundeHinzuFügen.Show()
             KundeHinzuFügen.übergeben(a, b, Not _Stornieren)
 
 
@@ -2408,6 +2412,12 @@ Public Class FTagesplan
         PictureBox1.Location = New Point(a.Location.X + a.Size.Width, a.Location.Y)
         PictureBox1.Show()
         Dim BildVomFilm As Image = Nothing
+        Dim länge As Integer = Len(Filmtitel)
+
+
+        Filmtitel = Filmtitel.TrimEnd(" ", vbTab)
+
+
         BildVomFilm = Image.FromFile(Filmtitel & ".png")
         PictureBox1.Image = BildVomFilm
 

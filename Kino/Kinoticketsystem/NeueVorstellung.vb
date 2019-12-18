@@ -10,6 +10,7 @@ Public Class NeueVorstellung
     Private _Tag As Integer
     Private _Position As Integer
     Private _Kinosaal As Kinosaal
+    Private _Kinosaalnummer As Integer
 
     Private Sub NeueVorstellung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         StartuhrzeitWert.DecimalPlaces = 2
@@ -22,11 +23,14 @@ Public Class NeueVorstellung
         EnduhrzeitWert.Maximum = 24
         EnduhrzeitWert.Minimum = 8
         EnduhrzeitWert.Increment = 0.05
-        NUDKinosaal.Maximum = 6
-        NUDKinosaal.Minimum = 1
-        NUDKinosaal.Value = 1
-
+        'NUDKinosaal.Maximum = 6
+        'NUDKinosaal.Minimum = 1
+        'NUDKinosaal.Value = 1
+        'NUDTag.Maximum = 7
+        'NUDTag.Minimum = 1
+        'NUDTag.Value = 1
     End Sub
+
 
     Public Sub datenübergen(c As Vorstellung, Kinosaal As Integer)
         txtname.Text = c.getFilm.getFilmtitel
@@ -37,14 +41,17 @@ Public Class NeueVorstellung
     End Sub
 
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)
-        _Tag = tag 'erster Tag == 1)
+        _Tag = tag
         _Position = Position
     End Sub
 
+
     Private Sub cmdfertig_Click(sender As Object, e As EventArgs) Handles cmdfertig.Click
-        _Filmtitel = txtname.Text
-        _Startzeit = (StartuhrzeitWert.Value * 100) - (8 * 60) '0 ist bei 8:00
-        _Endzeit = (EnduhrzeitWert.Value * 100) - (8 * 60)
+        '_Filmtitel = txtname.Text
+        '_Startzeit = (StartuhrzeitWert.Value * 100) - (8 * 60) '0 ist bei 8:00
+        '_Endzeit = (EnduhrzeitWert.Value * 100) - (8 * 60)
+        _Tag = NUDTag.Value
+        _Kinosaalnummer = NUDKinosaal.Value
         If Not (_FilmHinzugefügt) Then
             lblFilmAuswählen.ForeColor = Color.Red
         Else
@@ -52,9 +59,11 @@ Public Class NeueVorstellung
             Dim z As Vorstellung = New Vorstellung(getStartzeit, getEndzeit, getBesucher, getFilm, _Kinosaal)
             '  FTagesplan.filmändern(_Tag, _Position, z) 'was zum teufel. wer macht denn sowas?
             Dim a As ArrayList = KinoGUI.DASKINO.getKinosäle
-            KinoGUI.DASKINO.VorstellungHinzufügen(a(_Tag - 1), _Position, z)
+            'KinoGUI.DASKINO.VorstellungHinzufügen(a(_Tag - 1), _Position, z)
+            KinoGUI.DASKINO.VorstellungEinfügen(_Tag, z, _Kinosaalnummer)
             Me.Close()
         End If
+
     End Sub
 
     Private Sub StartuhrzeitWert_ValueChanged(sender As Object, e As EventArgs) Handles StartuhrzeitWert.ValueChanged
@@ -282,16 +291,26 @@ Public Class NeueVorstellung
 
     Private Sub cmdFilmHinZuFügen_Click(sender As Object, e As EventArgs) Handles cmdFilmHinZuFügen.Click
 
+        Dim i As Integer = chlFilme.SelectedIndex
+        _Film = KinoGUI.DASKINO.getFilmtitel(i)
+        lblFilmlänge.Text = _Film.getFilmlänge & " min"
+        'Dim ausgewählterFilm As Film = New Film("", 89, 12, True)
+        Dim nachkommastellen As Integer
+        Dim vorkommastellen As Integer
+        nachkommastellen = StartuhrzeitWert.Value - Math.Truncate(StartuhrzeitWert.Value)
+        vorkommastellen = Math.Truncate(StartuhrzeitWert.Value)
+        _Startzeit = vorkommastellen * 60 + nachkommastellen * 100
+        _Endzeit = _Startzeit + _Film.getFilmlänge
+        EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
 
 
-        Dim ausgewählterFilm As Film = New Film("", 89, 12, True)
-        '
-        If (EnduhrzeitWert.Value - StartuhrzeitWert.Value) < ausgewählterFilm.getFilmlänge / 100 Then
-            EnduhrzeitWert.Value = ausgewählterFilm.getFilmlänge / 100 + StartuhrzeitWert.Value
-        End If
-        If txtname.Text = "" Then
-            txtname.Text = ausgewählterFilm.getFilmtitel
-        End If
+
+        'If (EnduhrzeitWert.Value - StartuhrzeitWert.Value) < ausgewählterFilm.getFilmlänge / 100 Then
+        '    EnduhrzeitWert.Value = ausgewählterFilm.getFilmlänge / 100 + StartuhrzeitWert.Value
+        'End If
+        'If txtname.Text = "" Then
+        '    txtname.Text = ausgewählterFilm.getFilmtitel
+        'End If
         _FilmHinzugefügt = True
     End Sub
 
@@ -311,7 +330,7 @@ Public Class NeueVorstellung
         Return _Film
     End Function
 
-    Private Sub chlBesucherAuswählen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chlBesucherAuswählen.SelectedIndexChanged
+    Private Sub chlBesucherAuswählen_SelectedIndexChanged(sender As Object, e As EventArgs)
         lstBesucher.Items.Clear()
         Dim A As IList = chlBesucherAuswählen.CheckedItems
         For i = 0 To A.Count
@@ -325,17 +344,19 @@ Public Class NeueVorstellung
 
     End Sub
 
-    Private Sub cmdBesucherNEtfernen_Click(sender As Object, e As EventArgs) Handles cmdBesucherNEtfernen.Click
 
-        Dim a As IList = lstBesucher.SelectedItems
-        If a.Count > 0 Then
-            For i = 0 To -1
-                If lstBesucher.GetSelected(i) Then
-                    lstBesucher.Items.RemoveAt(i)
-                End If
-            Next
-        Else
-            lstBesucher.Items.Clear()
-        End If
-    End Sub
+
+    'Private Sub cmdBesucherNEtfernen_Click(sender As Object, e As EventArgs)
+
+    '    Dim a As IList = lstBesucher.SelectedItems
+    '    If a.Count > 0 Then
+    '        For i = 0 To -1
+    '            If lstBesucher.GetSelected(i) Then
+    '                lstBesucher.Items.RemoveAt(i)
+    '            End If
+    '        Next
+    '    Else
+    '        lstBesucher.Items.Clear()
+    '    End If
+    'End Sub
 End Class

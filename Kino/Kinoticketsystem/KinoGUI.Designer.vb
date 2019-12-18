@@ -486,7 +486,7 @@ Partial Class KinoGUI
         Me.cmdFilmHinzufügen.Name = "cmdFilmHinzufügen"
         Me.cmdFilmHinzufügen.Size = New System.Drawing.Size(144, 66)
         Me.cmdFilmHinzufügen.TabIndex = 37
-        Me.cmdFilmHinzufügen.Text = "Film Hinzufügen"
+        Me.cmdFilmHinzufügen.Text = "Film hinzufügen"
         Me.cmdFilmHinzufügen.UseVisualStyleBackColor = True
         '
         'cmdVorstellungErstellen
@@ -499,7 +499,7 @@ Partial Class KinoGUI
         Me.cmdVorstellungErstellen.Name = "cmdVorstellungErstellen"
         Me.cmdVorstellungErstellen.Size = New System.Drawing.Size(144, 66)
         Me.cmdVorstellungErstellen.TabIndex = 38
-        Me.cmdVorstellungErstellen.Text = "Vortstellung Erstellen"
+        Me.cmdVorstellungErstellen.Text = "Vorstellung erstellen"
         Me.cmdVorstellungErstellen.UseVisualStyleBackColor = True
         '
         'cmdNeuerKinosaal
@@ -577,7 +577,6 @@ Partial Class KinoGUI
         Me.cmdBeenden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.cmdBeenden.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdBeenden.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdBeenden.Image = Global.Kinoticketsystem.My.Resources.Resources.Button_Hintergrund
         Me.cmdBeenden.Location = New System.Drawing.Point(21, 717)
         Me.cmdBeenden.Name = "cmdBeenden"
         Me.cmdBeenden.Size = New System.Drawing.Size(139, 60)

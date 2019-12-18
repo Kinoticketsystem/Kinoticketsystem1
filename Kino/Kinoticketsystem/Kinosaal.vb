@@ -94,10 +94,11 @@ Public Class Kinosaal
     End Function
 
     Public Sub SitzplatzStornieren(ByRef gewählterPlatzX As Integer, ByRef gewählterPlatzY As Integer, ByRef Kunde As Kunde)
-        If _Sitzplätze(gewählterPlatzX, gewählterPlatzY).Equals(Kunde) Then
-            Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = Nothing
+        If _Sitzplätze(gewählterPlatzX, gewählterPlatzY).getName.Equals(Kunde.getName) Then
+            Me._Sitzplätze(gewählterPlatzX, gewählterPlatzY) = _leererPlatz
         Else
-            Throw New Exception("Es wurde beim Sitzplanstornieren versucht einen Sitzplatz zu stornieren, der vorher von dem übergebenen Kunden nicht gebucht wurde!")
+            KinosaalGUI.FehlerMitFalscherPersonBuchen
+            '   Throw New Exception("Es wurde beim Sitzplanstornieren versucht einen Sitzplatz zu stornieren, der vorher von dem übergebenen Kunden nicht gebucht wurde!")
         End If
     End Sub
 
