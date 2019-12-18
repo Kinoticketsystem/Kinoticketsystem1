@@ -71,7 +71,7 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Kinologo.ico</ApplicationIcon>
+    <ApplicationIcon>Logo exe.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -333,6 +333,7 @@
     <None Include="bin\Debug\Coach Carter.png" />
     <None Include="bin\Debug\Das Bourne Ultimatum.png" />
     <None Include="bin\Debug\Deadpool 2.png" />
+    <Content Include="favicon.ico" />
     <Content Include="Kinologo.ico" />
     <None Include="Resources\Avatar.png" />
     <None Include="Resources\Bublebee.png" />
@@ -377,9 +378,11 @@
     <None Include="Resources\Alita Battle Angel.png" />
     <None Include="Resources\T Raumschiff Surprise.png" />
     <None Include="Resources\720px.png" />
-    <None Include="Resources\800x500.png" />
     <None Include="Resources\Kein-Bild-vorhanden[1].jpg" />
     <None Include="Resources\Kein_Bild_vorhanden.jpg" />
+    <None Include="Resources\800x500.png" />
+    <None Include="Resources\800x500 neu .png" />
+    <Content Include="Logo exe.ico" />
     <Content Include="Resources\Kein Bild vorhanden.png" />
     <Content Include="Speichertext.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

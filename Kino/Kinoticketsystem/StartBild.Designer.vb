@@ -38,7 +38,7 @@ Partial Class StartBild
         Me.PictureBox1.BackColor = System.Drawing.Color.Silver
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.Kinoticketsystem.My.Resources.Resources._800x500
+        Me.PictureBox1.Image = Global.Kinoticketsystem.My.Resources.Resources._800x500_neu
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
@@ -55,7 +55,7 @@ Partial Class StartBild
         Me.ClientSize = New System.Drawing.Size(2098, 1477)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "StartBild"
         Me.Text = "Kinoticketsystem"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _800x500_neu() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_800x500_neu", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Alita_Battle_Angel() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Alita_Battle_Angel", resourceCulture)
