@@ -158,7 +158,3 @@ Herr der Ringe
  200 
  12 
 False
-test
- 145 
- 0 
-True
