@@ -15,12 +15,12 @@ Public Class NeueVorstellung
     Private Sub NeueVorstellung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         StartuhrzeitWert.DecimalPlaces = 2
         StartuhrzeitWert.Value = 8
-        StartuhrzeitWert.Maximum = 24
+        StartuhrzeitWert.Maximum = 27
         StartuhrzeitWert.Minimum = 0
         StartuhrzeitWert.Increment = 0.05
         EnduhrzeitWert.DecimalPlaces = 2
         EnduhrzeitWert.Value = 8
-        EnduhrzeitWert.Maximum = 24
+        EnduhrzeitWert.Maximum = 27
         EnduhrzeitWert.Minimum = 0
         EnduhrzeitWert.Increment = 0.05
         'NUDKinosaal.Maximum = 6
@@ -188,6 +188,18 @@ Public Class NeueVorstellung
             Else
                 StartuhrzeitWert.Value = 24.55
             End If
+        ElseIf StartuhrzeitWert.Value >= 25.6 And StartuhrzeitWert.Value < 26 Then
+            If a = 25.6 Or a = 25.7 Then
+                StartuhrzeitWert.Value = 26
+            Else
+                StartuhrzeitWert.Value = 25.55
+            End If
+        ElseIf StartuhrzeitWert.Value >= 26.6 And StartuhrzeitWert.Value < 27 Then
+            If a = 26.6 Or a = 26.7 Then
+                StartuhrzeitWert.Value = 27
+            Else
+                StartuhrzeitWert.Value = 26.55
+            End If
         End If
     End Sub
 
@@ -301,6 +313,18 @@ Public Class NeueVorstellung
                     EnduhrzeitWert.Value = 25
                 Else
                     EnduhrzeitWert.Value = 24.55
+                End If
+            ElseIf EnduhrzeitWert.Value >= 25.6 And EnduhrzeitWert.Value < 26 Then
+                If a = 25.6 Or a = 25.7 Then
+                    EnduhrzeitWert.Value = 26
+                Else
+                    EnduhrzeitWert.Value = 25.55
+                End If
+            ElseIf EnduhrzeitWert.Value >= 26.6 And EnduhrzeitWert.Value < 27 Then
+                If a = 26.6 Or a = 26.7 Then
+                    EnduhrzeitWert.Value = 27
+                Else
+                    EnduhrzeitWert.Value = 26.55
                 End If
             End If
         End If
