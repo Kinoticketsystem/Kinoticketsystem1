@@ -46,6 +46,10 @@ Public Class NeueVorstellung
         _Film = c.getFilm
         _Startzeit = Startzeit
         _Endzeit = _Startzeit + c.getLänge
+        If _Endzeit > 1620 Then
+            MsgBox("Die Vorstellung endet zu spät")
+            Exit Sub
+        End If
         'If _Startzeit <= 1440 And _Endzeit <= 1440 Then
         StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
         EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
@@ -320,6 +324,10 @@ Public Class NeueVorstellung
             vorkommastellen = Math.Truncate(StartuhrzeitWert.Value)
             _Startzeit = vorkommastellen * 60 + nachkommastellen * 100
             _Endzeit = _Startzeit + _Film.getFilmlänge
+            If _Endzeit > 1620 Then
+                MsgBox("Die Vorstellung endet zu spät")
+                Exit Sub
+            End If
             EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
 
 
