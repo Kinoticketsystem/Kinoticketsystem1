@@ -32,8 +32,9 @@
             allesDa = False
             'MsgBox("Altersfreigabe ausfüllen")
         ElseIf IsNumeric(txtAltersfreigabe.Text) Then
-
-            Altersfreigabe = txtAltersfreigabe.Text
+            If txtAltersfreigabe.Text <= 150 And txtAltersfreigabe.Text > 0 Then
+                Altersfreigabe = txtAltersfreigabe.Text
+            End If
         End If
         If CheckBox1.Checked Then
             _3d = True
