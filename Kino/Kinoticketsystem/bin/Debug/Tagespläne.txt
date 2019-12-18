@@ -374,28 +374,6 @@ False
  15 
  6 
 2. Vorstellung:
- 615 
- 726 
-Pacific Rim Uprising
- 111 
- 12 
-True
- 120 
- 8 
- 15 
- 6 
-3. Vorstellung:
- 750 
- 865 
-Jäger des Verlorenen Schatzes
- 115 
- 12 
-False
- 120 
- 8 
- 15 
- 6 
-4. Vorstellung:
  890 
  1022 
 The Equilizer
@@ -406,7 +384,7 @@ False
  8 
  15 
  6 
-5. Vorstellung:
+3. Vorstellung:
  1050 
  1229 
 The Wolf Of Wall Street
@@ -417,7 +395,7 @@ False
  8 
  15 
  6 
-6. Vorstellung:
+4. Vorstellung:
  1260 
  1376 
 Robin Hood
@@ -428,13 +406,24 @@ True
  8 
  15 
  6 
-7. Vorstellung:
+5. Vorstellung:
  1410 
  1529 
 Pretty Woman
  119 
  16 
 False
+ 120 
+ 8 
+ 15 
+ 6 
+6. Vorstellung:
+ 660 
+ 771 
+Pacific Rim Uprising	
+ 111 
+ 12 
+True
  120 
  8 
  15 
@@ -858,17 +847,6 @@ True
  10 
 13. Tag
 1. Vorstellung:
- 660 
- 812 
-Star Wars VIII Die letzten Jedi
- 152 
- 12 
-False
- 60 
- 6 
- 10 
- 13 
-2. Vorstellung:
  840 
  952 
 Ziemlich beste Freunde
@@ -879,7 +857,7 @@ False
  6 
  10 
  13 
-3. Vorstellung:
+2. Vorstellung:
  980 
  1103 
 Rush Alles für den Sieg
@@ -890,7 +868,7 @@ False
  6 
  10 
  13 
-4. Vorstellung:
+3. Vorstellung:
  1130 
  1309 
 The Wolf Of Wall Street
@@ -901,12 +879,23 @@ False
  6 
  10 
  13 
-5. Vorstellung:
+4. Vorstellung:
  1340 
  1443 
 The Fast and the Furious
  103 
  16 
+False
+ 60 
+ 6 
+ 10 
+ 13 
+5. Vorstellung:
+ 660 
+ 774 
+Das Bourne Ultimatum	
+ 114 
+ 12 
 False
  60 
  6 
@@ -1387,14 +1376,14 @@ False
  20 
 6. Vorstellung:
  480 
- 602 
-Alita Battle Angel 
- 122 
- 16 
-True
- 40 
+ 577 
+Feuerzangenbowle
+ 97 
+ 12 
+False
+ 75 
  5 
- 8 
+ 15 
 21. Tag
 1. Vorstellung:
  480 
@@ -2189,28 +2178,6 @@ True
  14 
 32. Tag
 1. Vorstellung:
- 480 
- 563 
-Madagascar
- 83 
- 0 
-True
- 50 
- 5 
- 10 
- 32 
-2. Vorstellung:
- 590 
- 733 
-Fluch der Karibik
- 143 
- 12 
-True
- 50 
- 5 
- 10 
- 32 
-3. Vorstellung:
  765 
  935 
 Der Soldat James Ryan
@@ -2221,7 +2188,7 @@ False
  5 
  10 
  32 
-4. Vorstellung:
+2. Vorstellung:
  960 
  1093 
 Fantastische Tierwesen
@@ -2232,7 +2199,7 @@ False
  5 
  10 
  32 
-5. Vorstellung:
+3. Vorstellung:
  1125 
  1225 
 Der Schuh des Manitu
@@ -2243,7 +2210,7 @@ False
  5 
  10 
  32 
-6. Vorstellung:
+4. Vorstellung:
  1260 
  1379 
 Jumanji Willkommen im Dschungel
@@ -2254,7 +2221,7 @@ True
  5 
  10 
  32 
-7. Vorstellung:
+5. Vorstellung:
  1410 
  1498 
 Johnny English 3
@@ -2264,6 +2231,17 @@ True
  50 
  5 
  10 
+ 32 
+6. Vorstellung:
+ 480 
+ 616 
+Deadpool 2	
+ 136 
+ 16 
+True
+ 98 
+ 7 
+ 14 
 33. Tag
 1. Vorstellung:
  480 

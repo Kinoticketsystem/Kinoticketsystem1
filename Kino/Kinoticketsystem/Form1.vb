@@ -2014,36 +2014,52 @@ Public Class FTagesplan
     Private Sub Geklickt(a As Integer, b As Integer)
         Dim c As Vorstellung 'Man kann den Kinosaal aus den Vorstellung am Tag nehmen, oder dadurch, dass er im Wochenplan eh schon gespeichert ist, diesen nehmen (weniger Fehleranfällig)
         Dim d As Kinosaal
+        Dim Startzeit As Integer
         If _Aendern Then
             'ohne Infos vom Film
             NeueVorstellung.BringToFront()
             NeueVorstellung.Show()
-            NeueVorstellung.PositionÜbergeben(a, b)
+            NeueVorstellung.chlFilme.Items.Clear()
+            Dim f As ArrayList = KinoGUI.DASKINO.getFilmtitel
+            For i = 0 To KinoGUI.DASKINO.getFilmtitel.Count - 1 '-1 richtig?
+                NeueVorstellung.chlFilme.Items.Add(f(i).getFilmtitel)
+            Next
+            'NeueVorstellung.PositionÜbergeben(a, b)
+
+            NeueVorstellung.chlBesucherAuswählen.Items.Clear()
+
             ' NeueVorstellung.datenübergen()
-            Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal)
+            Dim KinosaalNummer As Integer = KinoGUI.DASKINO.getKinosäle.IndexOf(_Kinosaal) + 1
             'Die andere Form ruft die Methode Filmändern auf, die den Film ändert
             Select Case a
                 Case 1
                     c = _ersterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
                 Case 2
                     c = _zweiterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
                 Case 3
                     c = _dritterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
                 Case 4
                     c = _vierterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
                 Case 5
                     c = _fünfterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
                 Case 6
                     c = _sechsterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
                 Case 7
                     c = _siebterTag.getVorstellung(b)
-                    NeueVorstellung.datenübergen(c, KinosaalNummer)
+                    Startzeit = c.getAnfangszeit
+                    NeueVorstellung.übergabe(c, KinosaalNummer, Startzeit, a)
             End Select
         Else
 

@@ -16,12 +16,12 @@ Public Class NeueVorstellung
         StartuhrzeitWert.DecimalPlaces = 2
         StartuhrzeitWert.Value = 8
         StartuhrzeitWert.Maximum = 24
-        StartuhrzeitWert.Minimum = 8
+        StartuhrzeitWert.Minimum = 0
         StartuhrzeitWert.Increment = 0.05
         EnduhrzeitWert.DecimalPlaces = 2
         EnduhrzeitWert.Value = 8
         EnduhrzeitWert.Maximum = 24
-        EnduhrzeitWert.Minimum = 8
+        EnduhrzeitWert.Minimum = 0
         EnduhrzeitWert.Increment = 0.05
         'NUDKinosaal.Maximum = 6
         'NUDKinosaal.Minimum = 1
@@ -38,8 +38,26 @@ Public Class NeueVorstellung
             lstBesucher.Items.Add(c.getBesucher(i))
         Next
         NUDKinosaal.Value = Kinosaal
-    End Sub
 
+    End Sub
+    Public Sub übergabe(c As Vorstellung, Kinosaal As Integer, Startzeit As Integer, Tag As Integer)
+        NUDKinosaal.Value = Kinosaal
+        NUDTag.Value = Tag
+        _Film = c.getFilm
+        _Startzeit = Startzeit
+        _Endzeit = _Startzeit + c.getLänge
+        If _Startzeit <= 1440 And _Endzeit <= 1440 Then
+            StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
+            EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
+        ElseIf _Startzeit <= 1440 And _Endzeit > 1440 Then
+            StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
+            EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
+        Else
+            StartuhrzeitWert.Value = (_Startzeit \ 60 + (_Startzeit Mod 60) / 100) - 24
+            EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
+        End If
+
+    End Sub
     Public Sub PositionÜbergeben(tag As Integer, Position As Integer)
         _Tag = tag
         _Position = Position
