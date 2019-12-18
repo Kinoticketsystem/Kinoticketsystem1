@@ -26,12 +26,14 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
     'End Sub
 
     Private Sub cmdkinosaalAufrufen_Click(sender As Object, e As EventArgs) Handles cmdkinosaalAufrufen.Click
+        KinosaalGUI._Buchen = True
 
         If NumericUpDown1.Value = 1 Then
             Dim a As Kinosaal = New Kinosaal(120, 8, 15)
             KinosaalGUI.Aufrufen(a)
             KinosaalGUI.BringToFront()
             KinosaalGUI.Show()
+
         ElseIf NumericUpDown1.Value = 2 Then
             Dim a As Kinosaal = New Kinosaal(60, 6, 10)
             KinosaalGUI.Aufrufen(a)
@@ -61,6 +63,9 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
             KinosaalGUI.BringToFront()
             KinosaalGUI.Show()
         End If
+        KinosaalGUI.cmdFertig.Hide()
+        KinosaalGUI.lblAnzahlAusgewähltePlätze.Hide()
+        KinosaalGUI.lblPreis.Hide()
     End Sub
 
 

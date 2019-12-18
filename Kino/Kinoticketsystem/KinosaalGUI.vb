@@ -432,7 +432,9 @@ Public Class KinosaalGUI
         ElseIf _kinosaal.getSitzeProReihe > 15 Then
             Throw New Exception("Die Reihe darf nicht länger als max 15 Sitze lang sein")
         End If
-
+        cmdFertig.Show()
+        lblAnzahlAusgewähltePlätze.Show()
+        lblPreis.Show()
     End Sub
 
     Public Sub Aufrufen(ByRef a As Kinosaal)
