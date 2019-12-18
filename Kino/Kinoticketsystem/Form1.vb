@@ -8,7 +8,7 @@ Public Class FTagesplan
     Private _fünfterTag As ITagesplan
     Private _sechsterTag As ITagesplan
     Private _siebterTag As ITagesplan
-    Private _Aendern As Boolean
+    Public _Aendern As Boolean
     Private _NummerDEsKinosaals As Integer
     Public _Stornieren As Boolean
     Private _Kinosaal As Kinosaal
@@ -1411,7 +1411,7 @@ Public Class FTagesplan
 
     End Sub
 
-    Private Sub ButtonsInvisibleMachenJeNachModus()
+    Public Sub ButtonsInvisibleMachenJeNachModus()
         If _Aendern Then
             cmdFilmeVOnEInemTagEntfernen.Hide()
             cmdÄnderungenSpeichern.Show()
@@ -2707,12 +2707,17 @@ Public Class FTagesplan
     Private Sub lblTextüberFIlm_Click(sender As Object, e As EventArgs) Handles lblTextüberFIlm.Click
 
     End Sub
-    Private Sub VeränderungenJeNachSornierenBuchen()
-        If _Stornieren Then
-            Me.Text = "Wochenplan - Stornieren"
+    Public Sub VeränderungenJeNachSornierenBuchen()
+        If _Aendern Then
+            Me.Text = "Wochenplan - Änderungsmodus"
         Else
-            Text = "Wochenplan - Buchen"
+            If _Stornieren Then
+                Me.Text = "Wochenplan - Stornieren"
+            Else
+                Text = "Wochenplan - Buchen"
+            End If
         End If
+
     End Sub
     Private Sub cmdBuchenStattändern_Click(sender As Object, e As EventArgs) Handles cmdBuchenStattändern.Click
         If _Aendern Then
@@ -2730,10 +2735,10 @@ Public Class FTagesplan
             cmdLöschmodus.Show()
             KinoGUI._WochenpläneBearbeiten = True
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
-            KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+            ' KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
             ButtonsInvisibleMachenJeNachModus()
             Me.Text = "Wochenplan - Änderungsmodus"
-            cmdBuchenStattändern.Text = "buchen"
+            ' cmdBuchenStattändern.Text = "buchen"
             If _Stornieren Then
                 cmdBuchenStattändern.Text = "stornieren"
             Else

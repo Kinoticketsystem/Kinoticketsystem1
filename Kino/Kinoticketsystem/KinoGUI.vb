@@ -836,13 +836,25 @@ Public Class KinoGUI 'Label1, txtTageseinnahmen und lblFreiePlätzeFarbe1 Unöti
         If cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup Then
             _WochenpläneBearbeiten = True
             cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Flat
-            cmdWochenpläneBearbeiten.FlatAppearance.BorderColor = Color.Black
-            cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+            cmdWochenpläneBearbeiten.FlatAppearance.BorderColor = Color.Red
+            ' cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 3
+            FTagesplan._Aendern = True
+            FTagesplan.ButtonsInvisibleMachenJeNachModus()
+            FTagesplan.Text = "Wochenplan - Änderungsmodus"
+            FTagesplan.cmdBuchenStattändern.Text = "buchen"
+            If FTagesplan._Stornieren Then
+                FTagesplan.cmdBuchenStattändern.Text = "stornieren"
+            Else
+                FTagesplan.cmdBuchenStattändern.Text = "buchen"
+            End If
         Else
             _WochenpläneBearbeiten = False
             cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
             cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
-
+            FTagesplan._Aendern = False
+            FTagesplan.cmdBuchenStattändern.Text = "ändern"
+            FTagesplan.VeränderungenJeNachSornierenBuchen()
+            FTagesplan.ButtonsInvisibleMachenJeNachModus()
         End If
     End Sub
 
