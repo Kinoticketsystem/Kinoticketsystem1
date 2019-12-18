@@ -148,7 +148,7 @@ Partial Class KinoGUI
         Me.cmdBuchungStonieren.Name = "cmdBuchungStonieren"
         Me.cmdBuchungStonieren.Size = New System.Drawing.Size(375, 66)
         Me.cmdBuchungStonieren.TabIndex = 8
-        Me.cmdBuchungStonieren.Text = "BuchungStonieren"
+        Me.cmdBuchungStonieren.Text = "BuchungStornieren"
         Me.cmdBuchungStonieren.UseVisualStyleBackColor = False
         '
         'lblUhrzeit
@@ -604,7 +604,7 @@ Partial Class KinoGUI
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1924, 1061)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.cmdÄnderungenSpeichern)
         Me.Controls.Add(Me.cmdBeenden)
         Me.Controls.Add(Me.NumericUpDown1)
