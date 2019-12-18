@@ -48,7 +48,7 @@ Public Class NeueVorstellung
         _Endzeit = _Startzeit + c.getLänge
         'If _Startzeit <= 1440 And _Endzeit <= 1440 Then
         StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
-            EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
+        EnduhrzeitWert.Value = StartuhrzeitWert.Value + _Film.getFilmlänge \ 60 + (_Film.getFilmlänge Mod 60) / 100
         'ElseIf _Startzeit <= 1440 And _Endzeit > 1440 Then
         '    StartuhrzeitWert.Value = _Startzeit \ 60 + (_Startzeit Mod 60) / 100
         '    EnduhrzeitWert.Value = (_Endzeit \ 60 + (_Endzeit Mod 60) / 100) - 24
