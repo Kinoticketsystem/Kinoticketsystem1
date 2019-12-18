@@ -889,17 +889,6 @@ False
  60 
  6 
  10 
- 13 
-5. Vorstellung:
- 480 
- 616 
-Deadpool 2	
- 136 
- 16 
-True
- 60 
- 6 
- 10 
 14. Tag
 1. Vorstellung:
  480 
@@ -1310,11 +1299,11 @@ True
  19 
 5. Vorstellung:
  1320 
- 1482 
-Avatar
- 162 
- 12 
-True
+ 1423 
+The Fast and The Furious
+ 103 
+ 16 
+False
  75 
  5 
  15 

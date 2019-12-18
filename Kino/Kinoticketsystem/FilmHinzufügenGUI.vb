@@ -17,9 +17,13 @@
         If txtFilmlänge.Text = "" Then
             allesDa = False
             'MsgBox("Filmlänge ausfüllen")
-        ElseIf IsNumeric(txtFilmlänge.text) And txtFilmlänge.Text <= 500 And txtFilmlänge.Text > 0 Then
-            Filmlänge = txtFilmlänge.Text
-            allesDa = True
+        ElseIf IsNumeric(txtFilmlänge.text) Then
+            If txtFilmlänge.Text <= 500 And txtFilmlänge.Text > 0 Then
+                Filmlänge = txtFilmlänge.Text
+                allesDa = True
+            Else
+                allesDa = False
+            End If
         Else
             allesDa = False
             MsgBox("Es muss eine Filmlänge von maximal 500 Minuten eingegeben werden")
