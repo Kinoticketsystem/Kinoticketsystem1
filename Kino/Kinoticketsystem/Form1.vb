@@ -2673,9 +2673,8 @@ Public Class FTagesplan
             KinoGUI.cmdWochenpläneBearbeiten.FlatStyle = FlatStyle.Popup
             KinoGUI.cmdWochenpläneBearbeiten.FlatAppearance.BorderSize = 1
             cmdBuchenStattändern.Text = "ändern"
-            Me.Text = "Wochenplan"
-            ButtonsInvisibleMachenJeNachModus()
             VeränderungenJeNachSornierenBuchen()
+            ButtonsInvisibleMachenJeNachModus()
         Else
             _Aendern = True
             KinoGUI._WochenpläneBearbeiten = True
@@ -2689,7 +2688,7 @@ Public Class FTagesplan
             Else
                 cmdBuchenStattändern.Text = "buchen"
             End If
-            VeränderungenJeNachSornierenBuchen()
+
 
         End If
     End Sub
